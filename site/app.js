@@ -77,6 +77,8 @@
     if (a.toDateString() === b.toDateString()) return `${mon(a)} ${a.getDate()}`;
     return a.getMonth() === b.getMonth() ? `${mon(a)} ${a.getDate()}–${b.getDate()}` : `${mon(a)} ${a.getDate()} – ${mon(b)} ${b.getDate()}`;
   };
+  // HOME / AWAY badge from a team's point of view
+  const haBadge = (isHome) => `<span class="ha ${isHome ? 'h' : 'a'}">${isHome ? 'Home' : 'Away'}</span>`;
   const involves = (s, id) => String(s.home) === String(id) || String(s.away) === String(id);
   const isUpcoming = (s) => !s.final && localDate(s.end || s.start) >= new Date(Date.now() - 3 * 36e5);
 
@@ -675,10 +677,10 @@
         const my = p ? (home ? x.homeScore : x.awayScore) : x.awayScore, op = p ? (home ? x.awayScore : x.homeScore) : x.homeScore;
         const r = p ? (my > op ? 'W' : my < op ? 'L' : 'T') : '';
         const g = x.hasDetail ? gameById.get(x.id) : null;
-        inner = `<div class="d">${d} · Final${g?.comeback ? ' · <span class="cbk">Comeback</span>' : ''}</div><div class="o">${logo(o)}${who}<span class="res ${r}">${r ? r + ' ' : ''}${my}–${op}</span></div><div class="r">${esc(x.location || '')}</div>
+        inner = `<div class="d">${p ? haBadge(home) : ''}${d} · Final${g?.comeback ? ' · <span class="cbk">Comeback</span>' : ''}</div><div class="o">${logo(o)}${who}<span class="res ${r}">${r ? r + ' ' : ''}${my}–${op}</span></div><div class="r">${esc(x.location || '')}</div>
           ${g ? `<div class="cta">${miniFlow(g, p || x.away)}<span>Game flow &amp; summary <b>→</b></span></div>` : ''}`;
       } else {
-        inner = `<div class="d">${d} · ${tm(x.start)}</div><div class="o">${logo(o)}${who}</div><div class="r">${esc(x.location || '')}${o.stub ? '' : ` · opp ${o.w}-${o.l}-${o.t}`}</div>`;
+        inner = `<div class="d">${p ? haBadge(home) : ''}${d} · ${tm(x.start)}</div><div class="o">${logo(o)}${who}</div><div class="r">${esc(x.location || '')}${o.stub ? '' : ` · opp ${o.w}-${o.l}-${o.t}`}</div>`;
       }
       return x.final && x.hasDetail ? `<a class="nx" href="#/game/${x.id}">${inner}</a>` : `<div class="nx">${inner}</div>`;
     }).join('')}</div>`;
@@ -1236,9 +1238,15 @@
     const rec = (r) => `${r.W}-${r.L}-${r.T}`;
     const pctS = (x) => (x == null ? '—' : `${Math.round(x * 100)}%`);
     const rk = (r) => (r ? `<em class="rk">${ordinal(r)}</em>` : '');
-    const upOpps = [...new Map(S.schedule.filter((s) => isUpcoming(s) && involves(s, me)).map((s) => { const o = String(s.home) === me ? String(s.away) : String(s.home); return [o, s]; })).entries()].filter(([o]) => teamById.has(o)).slice(0, 4);
+    // next meeting with each upcoming opponent (first occurrence wins — we play most teams more than once)
+    const upOpps = [];
+    for (const s of S.schedule.filter((x) => isUpcoming(x) && involves(x, me)).sort((a, b) => a.start.localeCompare(b.start))) {
+      const o = String(s.home) === me ? String(s.away) : String(s.home);
+      if (teamById.has(o) && !upOpps.some(([k]) => k === o)) upOpps.push([o, s]);
+      if (upOpps.length === 4) break;
+    }
     const opts = [...S.teams].sort((a, b) => a.name.localeCompare(b.name)).map((o) => `<option value="${o.id}" ${o.id === t.id ? 'selected' : ''}>${o.id === me ? `Self-scout: ${esc(o.name)}` : esc(o.name)}</option>`).join('');
-    const chips = `${upOpps.map(([o, s]) => `<a class="wkchip ${o === t.id ? 'on' : ''}" href="#/scout/${o}">${esc(team(o).short)} · ${dt(s.start)}</a>`).join('')}<a class="wkchip ${d.self ? 'on' : ''}" href="#/scout/${me}">Self-scout</a>`;
+    const chips = `${upOpps.map(([o, s]) => `<a class="wkchip ${o === t.id ? 'on' : ''}" href="#/scout/${o}">${esc(team(o).short)} · ${dt(s.start)} · ${String(s.home) === me ? 'H' : 'A'}</a>`).join('')}<a class="wkchip ${d.self ? 'on' : ''}" href="#/scout/${me}">Self-scout</a>`;
     const tile = (l, v, s = '') => `<div class="st"><span class="l">${l}</span><span class="v">${v}</span><span class="s">${s}</span></div>`;
     const lastRes = t.results.filter((r) => weekKey(r.date) === d.lastWk), lwRec = rec(lastRes.reduce((a, r) => { a[r.r]++; return a; }, { W: 0, L: 0, T: 0 }));
     after(() => {
@@ -1264,7 +1272,8 @@
     const nextHtml = d.nextMeet
       ? (() => {
         const rink = d.rinkFor(d.nextMeet), rt = d.rinkRec(t.id, rink), ru = d.rinkRec(me, rink);
-        return `<div class="note"><b>Next meeting:</b> ${dt(d.nextMeet.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(d.nextMeet.start)} · ${esc(rink || '')}${rt || ru ? ` — at this rink: ${esc(t.short)} ${rt ? rec(rt) : 'no games'}, ${esc(my.short)} ${ru ? rec(ru) : 'no games'}` : ''}</div>`;
+        const weHome = String(d.nextMeet.home) === me, them = weHome ? t.away : t.home, us = weHome ? my.home : my.away;
+        return `<div class="note nextmeet"><b>Next meeting:</b> ${haBadge(weHome)} ${dt(d.nextMeet.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(d.nextMeet.start)} · ${esc(rink || '')}<br><b>Situational:</b> ${esc(t.short)} ${weHome ? 'on the road' : 'at home'} ${them.w}-${them.l}-${them.t} · ${esc(my.short)} ${weHome ? 'at home' : 'on the road'} ${us.w}-${us.l}-${us.t}${rt || ru ? `<br><b>At this rink:</b> ${esc(t.short)} ${rt ? rec(rt) : 'no games'} · ${esc(my.short)} ${ru ? rec(ru) : 'no games'}` : ''}</div>`;
       })() : '';
     const threats = d.byPts.slice(0, 8).map((p) => {
       const lw = d.lwPts(p);
@@ -1276,7 +1285,7 @@
     const kv = (rows) => `<div class="kv">${rows.map(([k, v]) => `<div><span>${k}</span><b>${v}</b></div>`).join('')}</div>`;
 
     return `
-      <div class="ptitle"><div><div class="k">Scouting report · ${d.self ? 'self-scout' : d.nextMeet ? 'next opponent' : 'opponent'} · ${n} GP</div>
+      <div class="ptitle"><div><div class="k">Scouting report · ${d.self ? 'self-scout' : d.nextMeet ? `next opponent · ${esc(my.short)} ${String(d.nextMeet.home) === me ? 'home' : 'away'}` : 'opponent'} · ${n} GP</div>
         <h1 class="sc-h1">${logo(t)}${esc(t.name)}</h1>
         <div class="s">${ordinal(t.rank)} · ${rec({ W: t.w, L: t.l, T: t.t })} · last 5 ${esc(t.last5 || '–')}</div></div>
         <select id="sc-pick" aria-label="Scout a team">${opts}</select></div>
@@ -1411,7 +1420,7 @@
     }
     if (next) {
       const home = String(next.home) === me.id, o = team(home ? next.away : next.home);
-      nextHtml = `<span class="tb-item tb-next"><span class="k">Next</span><b>${dt(next.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(next.start)}</b> ${home ? 'vs' : '@'} ${esc(o.short)}<span class="tb-loc"> · ${esc(next.location || '')}</span><span class="tb-days">${days(next)}</span></span>${o.stub ? '' : `<a class="tb-item tb-scout" href="#/scout/${o.id}">Scout ${esc(o.short)} →</a>`}`;
+      nextHtml = `<span class="tb-item tb-next"><span class="k">Next</span>${haBadge(home)}<b>${dt(next.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(next.start)}</b> ${home ? 'vs' : '@'} ${esc(o.short)}<span class="tb-loc"> · ${esc(next.location || '')}</span><span class="tb-days">${days(next)}</span></span>${o.stub ? '' : `<a class="tb-item tb-scout" href="#/scout/${o.id}">Scout ${esc(o.short)} →</a>`}`;
     }
     const opts = [...S.teams].sort((a, b) => a.rank - b.rank).map((t) =>
       `<button class="topt ${t.id === me.id ? 'on' : ''}" role="option" aria-selected="${t.id === me.id}" data-id="${t.id}">${logo(t)}<span class="tn2">${esc(t.name)}</span><span class="tr">${t.w}-${t.l}-${t.t}</span></button>`).join('');

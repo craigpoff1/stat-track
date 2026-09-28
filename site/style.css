@@ -380,3 +380,10 @@ em.rk{font:700 11px var(--cond);font-style:normal;letter-spacing:.1em;color:var(
 .tb-scout{color:var(--us)!important;font-weight:700;letter-spacing:.08em}
 .tb-scout:hover{background:var(--panel)}
 @media (max-width:720px){.tb-scout{display:none}.sc-h1 .logo{width:34px;height:34px}}
+
+/* ---------- home / away badge ---------- */
+.ha{display:inline-block;font:800 10px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;padding:3px 6px 2px;margin-right:8px;vertical-align:1px;border:1px solid}
+.ha.h{color:#111;background:var(--us);border-color:var(--us)}
+.ha.a{color:#8DB8FF;border-color:#3E8EF7;background:rgba(62,142,247,.1)}
+.tb-item .ha{margin-right:0}
+.nextmeet{line-height:1.9}
