@@ -2,8 +2,8 @@ name: Update stats and deploy
 
 on:
   schedule:
-    # Every 2 hours. Games are mostly weekends; off-days are cheap no-ops.
-    - cron: '17 */2 * * *'
+    # Daily at 09:17 UTC (3:17 AM Mountain), after the previous day's games are posted.
+    - cron: '17 9 * * *'
   workflow_dispatch:
     inputs:
       refetch_all:

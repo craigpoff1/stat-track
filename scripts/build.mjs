@@ -275,8 +275,8 @@ const scheduleOut = schedule.map((s) => ({
   hasDetail: gameSummaries.some((g) => g.id === s.id),
 }));
 
-// Published data policy (owner decision 2026-09-27): individual penalty minutes and
-// individual goalie stats are kept in data/ but NOT published — team-level only.
+// Published data policy: the site is password-protected (stats.enc.json), so individual penalty
+// minutes and goalie stats are included (owner decision 2026-09-28).
 const out = {
   meta: {
     updatedAt: new Date().toISOString(),
@@ -291,12 +291,9 @@ const out = {
     regulationMinutes: config.regulationMinutes,
   },
   teams: standings,
-  players: [...players.values()].map(({ pim, log, ...p }) => ({ ...p, log: log.map(({ pim: _, ...l }) => l) })),
-  games: gameSummaries.map(({ goalies: _, ...g }) => ({
-    ...g,
-    skaters: g.skaters.map(({ pim, ...r }) => r),
-    events: g.events.map((e) => (e.type === 'penalty' ? { type: e.type, period: e.period, time: e.time, side: e.side, teamId: e.teamId, minutes: e.minutes, infraction: e.infraction } : e)),
-  })),
+  players: [...players.values()],
+  goalies: [...goalies.values()],
+  games: gameSummaries,
   schedule: scheduleOut,
   dataWarnings,
 };

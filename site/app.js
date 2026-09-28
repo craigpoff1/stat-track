@@ -4,7 +4,7 @@
 
   let S; // stats.json
   const $app = document.getElementById('app');
-  const teamById = new Map(), playerById = new Map(), gameById = new Map();
+  const teamById = new Map(), playerById = new Map(), gameById = new Map(), goalieById = new Map();
 
   // Short display names / 3-letter codes for this division; anything else falls back to derived values.
   const SHORT = { 402384: 'Stars', 402387: 'Crusaders', 402390: 'Riggers', 402385: 'Bandits', 402392: 'Young Kings', 402391: 'Spartans', 402388: 'MOB', 402386: 'Knights', 402389: 'Rebels', 402383: 'Saints' };
@@ -60,6 +60,7 @@
   // so the text is escaped once for the tooltip and once more for the attribute.
   const tip = (title, body) => `data-tip="${esc(`<b>${esc(title)}</b>${esc(body)}`)}"`;
   const playerLink = (id, name) => (id && playerById.has(id) ? `<a class="lnk" href="#/player/${id}">${esc(name)}</a>` : esc(name));
+  const mmss = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
   const L5 = (s) => `<span class="l5">${[...(s || '')].map((c) => `<i class="${c}">${c}</i>`).join('')}</span>`;
   const tn = (t) => `<span class="tn">${logo(t)}<span class="full">${teamLink(t)}</span><span class="cd">${teamLink(t, t.code)}</span></span>`;
   const panel = (title, body, { meta = '', gold = false, reveal = true } = {}) =>
@@ -293,7 +294,7 @@
       s += `<path d="${path(them)}" fill="none" stroke="${col[them]}" stroke-width="2" stroke-linejoin="round"/>
             <path d="${path(us)}" fill="none" stroke="${col[us]}" stroke-width="2.5" stroke-linejoin="round"/></g>`;
       for (const e of g.ev) {
-        if (e.type === 'penalty') { s += `<rect class="fev${on}" data-x="${x(e.t)}" x="${x(e.t) - 1}" y="${H - m.b - 6}" width="2" height="6" fill="var(--ink3)" ${tip(`${e.time} P${e.period} · Penalty`, `${team(e.teamId).short} · ${e.infraction || ''}`)}/>`; continue; }
+        if (e.type === 'penalty') { s += `<rect class="fev${on}" data-x="${x(e.t)}" x="${x(e.t) - 1}" y="${H - m.b - 6}" width="2" height="6" fill="var(--ink3)" ${tip(`${e.time} P${e.period} · Penalty`, `${e.player?.name ? e.player.name + ', ' : ''}${team(e.teamId).short} · ${e.infraction || ''} (${e.minutes} min)`)}/>`; continue; }
         const n = e.side === 'home' ? e.score[0] : e.score[1];
         s += `<g class="fev${on}" data-x="${x(e.t)}" data-side="${e.side}" ${tip(`${e.time} P${e.period} · ${code.away} ${e.score[1]}–${e.score[0]} ${code.home}`, `${e.scorer.name} (${team(e.teamId).short})${e.moment && e.moment !== 'Opening goal' ? ' · ' + e.moment : ''}${e.tags.length ? ' · ' + e.tags.join(', ') : ''}`)}><circle cx="${x(e.t)}" cy="${y(n)}" r="11" class="hit"/><circle class="fdot" cx="${x(e.t)}" cy="${y(n)}" r="4.5" fill="${col[e.side]}" stroke="var(--panel)" stroke-width="2"/></g>`;
       }
@@ -621,6 +622,20 @@
     </section>`;
   }
 
+  const GOALIE_NOTE = 'Goalie minutes and shots come from the league’s goalie reports, which are sometimes incomplete — treat SV% and GAA as approximate. W-L-T goes to the goalie with the most minutes.';
+  const goalieCols = (showTeam) => [
+    { key: 'name', label: 'Goalie', cls: 'l', val: (g) => g.name, desc: false, html: (g) => `${playerLink(g.id, g.name)}<span class="sub2">#${esc(g.number)}</span>` },
+    ...(showTeam ? [{ key: 'team', label: 'Team', cls: 'l', val: (g) => team(g.teamId).short, desc: false, html: (g) => { const t = team(g.teamId); return `<span class="tn">${logo(t)}<span class="full">${esc(t.short)}</span><span class="cd">${esc(t.code)}</span></span>`; } }] : []),
+    { key: 'gp', label: 'GP', val: (g) => g.gp },
+    { key: 'rec', label: 'W-L-T', cls: 'hm', val: (g) => g.w * 2 + g.t, html: (g) => `${g.w}-${g.l}-${g.t}` },
+    { key: 'min', label: 'MIN', cls: 'hm', val: (g) => g.seconds, html: (g) => g.minutes },
+    { key: 'sa', label: 'SA', val: (g) => g.shots, title: 'Shots against' },
+    { key: 'ga', label: 'GA', val: (g) => g.ga },
+    { key: 'sv', label: 'SV%', val: (g) => g.svPct, html: (g) => `<span class="pts" style="font-size:16px">${rate(g.svPct)}</span>` },
+    { key: 'gaa', label: 'GAA', val: (g) => g.gaa, html: (g) => (g.gaa == null ? '—' : g.gaa.toFixed(2)), title: 'Goals against per full game' },
+    { key: 'so', label: 'SO', cls: 'hm', val: (g) => g.so, title: 'Shutouts' },
+  ];
+
   function standingsCols(full) {
     return [
       { key: 'rank', label: '#', cls: 'rkc', val: (t) => t.rank, desc: false },
@@ -764,7 +779,9 @@
         { key: 'gwg', label: 'GWG', cls: 'hm', val: (p) => p.gwg, title: 'Game-winning goals (as recorded by the league)' },
         { key: 'mpg', label: 'MPG', cls: 'hm', val: (p) => p.multiPointGames, title: 'Multi-point games' },
         { key: 'strk', label: 'STRK', val: (p) => p.pointStreak.current, html: (p) => p.pointStreak.current || '–', title: 'Current point streak' },
+        { key: 'pim', label: 'PIM', cls: 'hm', val: (p) => p.pim, title: 'Penalty minutes' },
       ], { key: 'pts', rowCls: (p) => (favs.has(p.id) || String(p.teamId) === myTeamId() ? 'me' : ''), rowAttrs: (p) => `data-team="${esc(p.teamId)}" data-name="${esc(p.name.toLowerCase())}"` });
+      sortable($('#goalies'), S.goalies || [], goalieCols(true), { key: 'min', rowCls: (g) => (String(g.teamId) === myTeamId() ? 'me' : '') });
       const sel = $('#sk-team'), q = $('#sk-q');
       sel.addEventListener('change', () => { f.team = sel.value; store.set('skaterFilter', f); apply(); });
       q.addEventListener('input', () => { f.q = q.value; store.set('skaterFilter', f); apply(); });
@@ -775,7 +792,8 @@
       <div class="ptitle"><div><div class="k">${esc(S.meta.division)} · skaters</div><h1>Scoring leaders</h1><div class="s" id="sk-count"></div></div></div>
       ${favs.size ? `<div style="margin-bottom:18px">${panel('Following', `<div class="pb"><div class="leaders">${leaderRows([...favs].map((id) => playerById.get(id)).sort((a, b) => b.pts - a.pts), () => true)}</div></div>`, { gold: true, meta: 'Players you follow · any team' })}</div>` : ''}
       <div style="margin-bottom:18px">${panel('Points leaders', `<div class="pb"><div class="leaders">${leaderRows(S.skaters.slice(0, 12), (p) => favs.has(p.id) || String(p.teamId) === myTeamId())}</div></div>`, { meta: 'Top 12 in the division' })}</div>
-      <div style="margin-bottom:18px">${panel('All skaters', `<div class="controls"><select id="sk-team" aria-label="Filter by team"><option value="">All teams</option>${opts}</select><input type="search" id="sk-q" placeholder="Search players" aria-label="Search players" value="${esc(f.q)}"></div><div class="tw"><table id="skaters"></table></div><div class="note">MPG = multi-point games · STRK = current point streak · GWG as recorded by the league.</div>`, { gold: true, reveal: false })}</div>`;
+      <div style="margin-bottom:18px">${panel('All skaters', `<div class="controls"><select id="sk-team" aria-label="Filter by team"><option value="">All teams</option>${opts}</select><input type="search" id="sk-q" placeholder="Search players" aria-label="Search players" value="${esc(f.q)}"></div><div class="tw"><table id="skaters"></table></div><div class="note">MPG = multi-point games · STRK = current point streak · GWG as recorded by the league.</div>`, { gold: true, reveal: false })}</div>
+      <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="goalies"></table></div><div class="note">${GOALIE_NOTE}</div>`, { meta: `${(S.goalies || []).length} goalies` })}</div>`;
   }
 
   function viewSchedule() {
@@ -864,7 +882,9 @@
         { key: 'ppgp', label: 'P/GP', cls: 'hm', val: (p) => p.ptsPerGame, html: (p) => p.ptsPerGame.toFixed(2) },
         { key: 'ppg', label: 'PPG', cls: 'hm', val: (p) => p.ppg }, { key: 'gwg', label: 'GWG', cls: 'hm', val: (p) => p.gwg },
         { key: 'strk', label: 'STRK', cls: 'hm', val: (p) => p.pointStreak.current, html: (p) => p.pointStreak.current || '–' },
+        { key: 'pim', label: 'PIM', val: (p) => p.pim, title: 'Penalty minutes' },
       ], { key: 'pts', rowCls: (p) => (favs.has(p.id) ? 'me' : '') });
+      sortable($('#tgoal'), (S.goalies || []).filter((g) => String(g.teamId) === String(id)), goalieCols(false), { key: 'min' });
       sortable($('#h2h'), [...h2h.values()], [
         { key: 'opp', label: 'Opponent', cls: 'l', val: (o) => team(o.id).name, desc: false, html: (o) => tn(team(o.id)) },
         { key: 'gp', label: 'GP', val: (o) => o.gp },
@@ -898,7 +918,8 @@
         ${panel('By period', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { meta: `${t.gp} GP` })}
       </div>
       <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div id="net-ctl" class="net-ctl"></div><div class="chart" id="net"></div></div><div class="note">A line joins a passer and a scorer on the same goal. Hover a player to see only their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>
-      <div id="roster-anchor" style="margin-bottom:18px">${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team SV% ${rate(t.svPct)} · PIM ${t.pim}` })}</div>
+      <div id="roster-anchor" style="margin-bottom:18px">${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team PIM ${t.pim}` })}</div>
+      <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="tgoal"></table></div><div class="note">Team save % ${rate(t.svPct)} (from shots on goal). ${GOALIE_NOTE}</div>`)}</div>
       <div style="margin-bottom:18px">${panel('Results', gameCards(sched.filter((s) => s.final).reverse(), id), { meta: `${t.w}-${t.l}-${t.t}` })}</div>
       <div class="grid g-6-6">
         ${panel('By weekend', '<div class="tw"><table id="wk"></table></div>')}
@@ -948,16 +969,27 @@
           <div><div class="sub">Game log · points</div>
             <div class="legend"><span><i style="background:var(--us)"></i>Goals</span><span><i style="background:var(--blue)"></i>Assists</span></div>
             <div class="chart" id="elog"></div></div>
-          <div><div class="sub">Log</div><div class="tw"><table class="gl"><thead><tr><th class="l">Date</th><th class="l">Opp</th><th>Result</th><th>G</th><th>A</th><th>PTS</th></tr></thead><tbody>
-            ${p.log.slice().reverse().map((g) => `<tr><td class="l"><a class="lnk" href="#/game/${g.gameId}">${dt(g.date)}</a></td><td class="l">${g.home ? 'vs' : '@'} ${esc(team(g.opp).code)}</td><td>${result(g.gameId, p.teamId)}</td><td>${g.g}</td><td>${g.a}</td><td class="pts" style="font-size:16px">${g.pts}${g.gwg ? '<span class="chip gwg">GWG</span>' : ''}</td></tr>`).join('')}
+          <div><div class="sub">Log</div><div class="tw"><table class="gl"><thead><tr><th class="l">Date</th><th class="l">Opp</th><th>Result</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody>
+            ${p.log.slice().reverse().map((g) => `<tr><td class="l"><a class="lnk" href="#/game/${g.gameId}">${dt(g.date)}</a></td><td class="l">${g.home ? 'vs' : '@'} ${esc(team(g.opp).code)}</td><td>${result(g.gameId, p.teamId)}</td><td>${g.g}</td><td>${g.a}</td><td class="pts" style="font-size:16px">${g.pts}${g.gwg ? '<span class="chip gwg">GWG</span>' : ''}</td><td>${g.pim || 0}</td></tr>`).join('')}
           </tbody></table></div>
-          <div class="warn" style="border-color:var(--us)">Point streak ${p.pointStreak.current} (best ${p.pointStreak.best}) · ${p.multiPointGames} multi-point games · ${p.ppg + p.ppa} power-play points · ${p.firstGoals} opening goals</div></div>
+          <div class="warn" style="border-color:var(--us)">Point streak ${p.pointStreak.current} (best ${p.pointStreak.best}) · ${p.multiPointGames} multi-point games · ${p.ppg + p.ppa} power-play points · ${p.firstGoals} opening goals · ${p.pim} PIM</div></div>
         </div>
       </section>
       <div class="grid g-7-5">
         ${panel(`${esc(first)}'s season`, `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals</span><span><i style="background:var(--blue)"></i>Assists</span></div><div class="chart" id="pwk"></div></div>`, { gold: true, meta: 'Points by weekend' })}
         ${panel('Firsts &amp; milestones', `<div class="pb">${firstsList(p.firsts.slice().reverse())}</div>`, { meta: `${p.firsts.length}` })}
-      </div>`;
+      </div>
+      ${goalieById.has(id) ? goaliePanel(goalieById.get(id)) : ''}`;
+  }
+
+  function goaliePanel(gl) {
+    const tiles = [['GP', gl.gp], ['W-L-T', `${gl.w}-${gl.l}-${gl.t}`], ['Shots against', gl.shots], ['Save %', rate(gl.svPct)], ['GAA', gl.gaa == null ? '—' : gl.gaa.toFixed(2)], ['Shutouts', gl.so]];
+    return `<div style="margin-bottom:18px">${panel('In goal', `
+      <div class="stats">${tiles.map(([l, v]) => `<div class="st"><span class="l">${l}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>
+      <div class="pb"><div class="tw"><table class="gl"><thead><tr><th class="l">Date</th><th class="l">Opp</th><th>Dec</th><th>MIN</th><th>SA</th><th>GA</th><th>SV%</th></tr></thead><tbody>
+        ${gl.log.slice().reverse().map((l) => `<tr><td class="l"><a class="lnk" href="#/game/${l.gameId}">${dt(l.date)}</a></td><td class="l">${l.home ? 'vs' : '@'} ${esc(team(l.opp).code)}</td><td>${l.decision ? `<span class="rb ${l.decision}">${l.decision}</span>` : '–'}</td><td>${mmss(l.seconds)}</td><td>${l.shots}</td><td>${l.ga}</td><td>${l.shots ? rate(l.saves / l.shots) : '—'}</td></tr>`).join('')}
+      </tbody></table></div></div>
+      <div class="note">${GOALIE_NOTE}</div>`, { gold: true, meta: `${gl.minutes} minutes` })}</div>`;
   }
 
   function viewGame(id) {
@@ -971,7 +1003,8 @@
     const rec = (t) => (t.stub ? '' : `${t.w}-${t.l}-${t.t} · `);
     const flags = g.warnings.filter((w) => !/goalie/i.test(w));
     const box = (teamId) => g.skaters.filter((r) => String(r.teamId) === String(teamId)).sort((x, y) => (y.g + y.a) - (x.g + x.a) || y.g - x.g);
-    const boxTable = (t) => `<div class="tw"><table class="gl"><thead><tr><th>#</th><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th></tr></thead><tbody>${box(t.id).map((r) => `<tr><td>${esc(r.number)}</td><td class="l">${playerLink(r.playerId, r.name)}</td><td>${r.g}</td><td>${r.a}</td><td class="pts" style="font-size:16px">${r.g + r.a}</td></tr>`).join('')}</tbody></table></div>`;
+    const boxTable = (t) => `<div class="tw"><table class="gl"><thead><tr><th>#</th><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody>${box(t.id).map((r) => `<tr><td>${esc(r.number)}</td><td class="l">${playerLink(r.playerId, r.name)}</td><td>${r.g}</td><td>${r.a}</td><td class="pts" style="font-size:16px">${r.g + r.a}</td><td>${r.pim || 0}</td></tr>`).join('')}</tbody></table></div>
+      ${(g.goalies || []).some((x) => String(x.teamId) === String(t.id)) ? `<div class="sub" style="margin-top:14px">In goal</div><div class="tw"><table class="gl"><thead><tr><th class="l">Goalie</th><th>MIN</th><th>SA</th><th>GA</th><th>SV</th><th>SV%</th></tr></thead><tbody>${g.goalies.filter((x) => String(x.teamId) === String(t.id)).map((x) => `<tr><td class="l">${playerLink(x.playerId, x.name)}</td><td>${mmss(x.seconds)}</td><td>${x.shots}</td><td>${x.ga}</td><td>${Math.max(0, x.saves)}</td><td>${x.shots ? rate(Math.max(0, x.saves) / x.shots) : '—'}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
     const plabel = (l) => (/^\d+$/.test(l) ? 'P' + l : l);
     const focus = involves({ home: g.home.id, away: g.away.id }, myTeamId()) ? myTeamId() : g.home.id;
     const fu = String(focus) === String(g.away.id) ? a : h, fo = fu === h ? a : h;
@@ -1006,7 +1039,7 @@
             <ol class="evs">${g.ev.map((e) => {
               const t = team(e.teamId), home = e.side === 'home';
               if (e.type === 'goal') return `<li class="ev"><span class="pn">${esc(plabel(e.period))}</span><span class="tc">${esc(e.time)}</span><span class="who"><b>${playerLink(e.playerId, e.scorer.name)}</b>${e.tags.map((x) => `<span class="chip ${x === 'GWG' ? 'gwg' : ''}">${esc(x)}</span>`).join('')}${e.moment && e.moment !== 'Opening goal' ? `<span class="chip mo">${esc(e.moment)}</span>` : ''}<span>${esc(t.code)} ·${e.assists.length ? 'A: ' + e.assists.map((x) => playerLink(x.playerId, x.name)).join(', ') : 'Unassisted'}</span></span><span class="scr" style="color:${home ? 'var(--us)' : 'var(--red)'}">${e.score[1]}–${e.score[0]}</span></li>`;
-              return `<li class="ev pen"><span class="pn">${esc(plabel(e.period))}</span><span class="tc">${esc(e.time)}</span><span class="who"><b>${esc(t.short)} penalty · ${e.minutes} min</b><span>${esc(e.infraction || '')}</span></span><span class="scr" style="color:var(--ink3);font-size:12px">PEN</span></li>`;
+              return `<li class="ev pen"><span class="pn">${esc(plabel(e.period))}</span><span class="tc">${esc(e.time)}</span><span class="who"><b>${e.player?.name ? playerLink(e.playerId, e.player.name) : esc(t.short) + ' penalty'} · ${e.minutes} min</b><span>${esc(t.code)} · ${esc(e.infraction || '')}</span></span><span class="scr" style="color:var(--ink3);font-size:12px">PEN</span></li>`;
             }).join('') || '<li class="empty">No events recorded</li>'}</ol>
           </div>
         </div>
@@ -1149,6 +1182,7 @@
       teamById.set(t.id, t);
     }
     for (const p of S.players) playerById.set(p.id, p);
+    for (const g of S.goalies || []) goalieById.set(g.id, g);
     // game clock: sheet times count down within each period
     const clock = (period, time) => {
       const pn = /^\d+$/.test(period) ? Number(period) : 4;
