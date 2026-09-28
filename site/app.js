@@ -508,11 +508,18 @@
       const pos = new Map(nodes.map((p, i) => { const a = -Math.PI / 2 + (i / nodes.length) * Math.PI * 2; return [p.id, { x: cx + R * Math.cos(a), y: cy + R * Math.sin(a), a }]; }));
       const mxI = Math.max(1, ...involvement.values());
       let s = `<svg width="${w}" height="${H}" role="img" aria-label="Assist connections between teammates">`;
+      let badges = '';
       [...P].sort((a, b) => a.n - b.n).forEach((p, i) => {
         const A = pos.get(p.a), Bp = pos.get(p.b); if (!A || !Bp) return;
         const mx = (A.x + Bp.x) / 2, my = (A.y + Bp.y) / 2, qx = mx + (cx - mx) * 0.55, qy = my + (cy - my) * 0.55, st = style(p.n);
+        // count badge at the curve's midpoint (quadratic bezier at t = 0.5)
+        const bx = 0.25 * A.x + 0.5 * qx + 0.25 * Bp.x, by = 0.25 * A.y + 0.5 * qy + 0.25 * Bp.y;
+        badges += `<g class="fade lbadge n${Math.min(p.n, 2)} ${active?.links.has(p.k) ? 'hl' : ''}" style="transition-delay:${320 + i * 20}ms" data-k="${p.k}" data-a="${p.a}" data-b="${p.b}" ${tip(names([p.a, p.b]), `${p.n} goal${p.n > 1 ? 's' : ''} together · ${p.detail.join(' · ')}`)}>
+          <circle cx="${bx}" cy="${by}" r="${p.n >= 10 ? 10 : 8.5}" fill="var(--panel)" stroke="${st.c}" stroke-width="1.5"/>
+          <text x="${bx}" y="${by + 4}" text-anchor="middle" style="font-size:11px;font-weight:800;fill:${p.n >= 3 ? 'var(--us)' : 'var(--ink)'}">${p.n}</text></g>`;
         s += `<path class="fade link ${active?.links.has(p.k) ? 'hl' : ''}" style="transition-delay:${200 + i * 20}ms" data-k="${p.k}" data-a="${p.a}" data-b="${p.b}" d="M${A.x},${A.y}Q${qx},${qy} ${Bp.x},${Bp.y}" fill="none" stroke="${st.c}" stroke-width="${st.w}" stroke-opacity="${st.o}" stroke-linecap="round" ${tip(`${names([p.a, p.b])}`, `${p.n} goal${p.n > 1 ? 's' : ''} together · ${p.detail.join(' · ')}`)}/>`;
       });
+      s += badges;
       nodes.forEach((p) => {
         const Pp = pos.get(p.id), r = 5 + 9 * ((involvement.get(p.id) || 0) / mxI), right = Math.cos(Pp.a) >= 0;
         const lx = Pp.x + Math.cos(Pp.a) * (r + 8), ly = Pp.y + Math.sin(Pp.a) * (r + 8) + 4;
@@ -526,7 +533,7 @@
     const apply = (f) => {
       active = f;
       el.classList.toggle('focus', !!f);
-      el.querySelectorAll('.link').forEach((l) => l.classList.toggle('hl', !!f && f.links.has(l.dataset.k)));
+      el.querySelectorAll('.link, .lbadge').forEach((l) => l.classList.toggle('hl', !!f && f.links.has(l.dataset.k)));
       el.querySelectorAll('.node').forEach((n) => n.classList.toggle('hl', !!f && f.nodes.has(n.dataset.id)));
       if (controls) {
         controls.querySelectorAll('.qf').forEach((b) => b.classList.toggle('on', b.dataset.f === (f ? f.id : '')));
@@ -536,14 +543,18 @@
     // hover a player: fade links that don't touch them (temporarily overrides a filter)
     el.addEventListener('pointerover', (e) => {
       const n = e.target.closest?.('.node'); if (!n) return;
-      el.querySelectorAll('.link').forEach((l) => (l.style.opacity = l.dataset.a === n.dataset.id || l.dataset.b === n.dataset.id ? '1' : '.06'));
+      el.querySelectorAll('.link, .lbadge').forEach((l) => {
+        const on = l.dataset.a === n.dataset.id || l.dataset.b === n.dataset.id;
+        l.style.opacity = on ? '1' : l.classList.contains('lbadge') ? '0' : '.06';
+      });
     });
-    el.addEventListener('pointerout', (e) => { if (e.target.closest?.('.node')) el.querySelectorAll('.link').forEach((l) => (l.style.opacity = '')); });
+    el.addEventListener('pointerout', (e) => { if (e.target.closest?.('.node')) el.querySelectorAll('.link, .lbadge').forEach((l) => (l.style.opacity = '')); });
     if (controls && nodes.length) {
       const present = [1, 2, 3].filter((t) => P.some((p) => tier(p.n) === t));
       const sample = (t) => { const st = style(t === 3 ? 3 : t); return `<svg width="26" height="10" aria-hidden="true"><line x1="1" x2="25" y1="5" y2="5" stroke="${st.c}" stroke-width="${st.w}" stroke-opacity="${st.o}" stroke-linecap="round"/></svg>`; };
       controls.innerHTML = `
         <div class="legend net-legend">${present.map((t) => `<span>${sample(t)}${t === 3 ? '3+ goals together' : t === 2 ? '2 goals together' : '1 goal together'}</span>`).join('')}
+          <span><svg width="20" height="18" aria-hidden="true"><circle cx="10" cy="9" r="7.5" fill="var(--panel)" stroke="var(--us)" stroke-width="1.5"/><text x="10" y="12.5" text-anchor="middle" style="font:800 10px var(--cond);fill:var(--us)">4</text></svg>Number on a line = goals together</span>
           <span><svg width="26" height="14" aria-hidden="true"><circle cx="5" cy="7" r="3.5" fill="var(--panel2)" stroke="var(--ink2)" stroke-width="1.5"/><circle cx="18" cy="7" r="6" fill="var(--panel2)" stroke="var(--ink2)" stroke-width="1.5"/></svg>Bigger = part of more assisted goals</span></div>
         <div class="qfs"><button class="qf on" data-f="">Everyone</button>${filters.map((f) => `<button class="qf" data-f="${f.id}">${esc(f.label)}</button>`).join('')}</div>
         <div class="qcap"></div>`;

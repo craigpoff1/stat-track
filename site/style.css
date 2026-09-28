@@ -338,3 +338,9 @@ a.tb-item:hover{background:var(--panel)}
   .tb-item{padding:0 12px;font-size:13px}
   .tmenu{left:-16px}
 }
+/* linemates count badges: 2+ always, singles only when that line is in focus */
+.net .lbadge{transition:opacity .25s}
+.net .lbadge text{font-family:var(--cond)}
+.in .chart .lbadge.n1:not(.hl){opacity:0}
+.net.focus .lbadge:not(.hl){opacity:0}
+.net.focus .lbadge.hl{opacity:1}
