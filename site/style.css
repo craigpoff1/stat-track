@@ -392,3 +392,21 @@ em.rk{font:700 11px var(--cond);font-style:normal;letter-spacing:.1em;color:var(
 .wkchip.on .hl-h,.wkchip.on .hl-a{box-shadow:0 0 0 1px #111}
 .tb-item .ha{margin-right:0}
 .nextmeet{line-height:1.9}
+
+/* ---------- weekend groups (schedule / results) ---------- */
+.wkgroups{display:flex;flex-direction:column}
+.wkgrp{border-bottom:1px solid var(--line)}
+.wkgrp:last-child{border-bottom:0}
+.wkgrp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;flex-wrap:wrap;gap:4px 12px;padding:12px 16px;background:var(--panel2);border-left:3px solid var(--line2);transition:background .15s,border-color .15s}
+.wkgrp>summary::-webkit-details-marker{display:none}
+.wkgrp>summary::before{content:'';width:0;height:0;border:5px solid transparent;border-left-color:var(--ink3);margin-right:-2px;transition:transform .15s}
+.wkgrp[open]>summary{border-left-color:var(--us)}
+.wkgrp[open]>summary::before{transform:rotate(90deg) translateX(2px)}
+.wkgrp>summary:hover{background:#142034}
+.wk-t{font:800 italic 20px/1 var(--cond);text-transform:uppercase;letter-spacing:.02em}
+.wk-rec{font:800 14px/1 var(--cond);letter-spacing:.08em;color:#111;background:var(--us);padding:3px 7px 2px}
+.wk-m{font:600 12px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);flex:1;min-width:0}
+.wk-l{margin-left:auto;font:700 12px var(--cond);letter-spacing:.12em;text-transform:uppercase}
+.wk-day{font:700 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--us);padding:12px 16px 2px}
+.wkgrp .next{border-top:0}
+@media (max-width:720px){.wk-r{display:none}.wk-t{font-size:18px}}

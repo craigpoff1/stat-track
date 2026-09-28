@@ -798,18 +798,53 @@
       <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="goalies"></table></div><div class="note">${GOALIE_NOTE}</div>`, { meta: `${(S.goalies || []).length} goalies` })}</div>`;
   }
 
+  // Games grouped into weekend blocks (collapsible), split by day inside. `perspective` adds that
+  // team's weekend record + home/away badges; the first `open` weekends start expanded.
+  function weekendGroups(items, perspective, { open = 2, newestFirst = false } = {}) {
+    if (!items.length) return '<div class="empty">No games</div>';
+    const byWk = new Map();
+    for (const s of items) { const k = weekKey(s.start); (byWk.get(k) || byWk.set(k, []).get(k)).push(s); }
+    const keys = [...byWk.keys()].sort();
+    if (newestFirst) keys.reverse();
+    const dayKey = (s) => s.start.slice(0, 10);
+    let opened = 0;
+    return `<div class="wkgroups">${keys.map((k) => {
+      const gs = byWk.get(k).sort((a, b) => a.start.localeCompare(b.start));
+      // one-off makeup games (1-2 games, all-teams view) stay open but don't use up an 'open' slot
+      const small = !perspective && gs.length <= 2;
+      const isOpen = small ? opened < open : opened++ < open;
+      const rinks = [...new Set(gs.map((s) => s.location).filter(Boolean))];
+      const fin = gs.filter((s) => s.final);
+      let rec = '';
+      if (perspective && fin.length) {
+        const r = { W: 0, L: 0, T: 0 };
+        for (const s of fin) { const h = String(s.home) === String(perspective), my = h ? s.homeScore : s.awayScore, op = h ? s.awayScore : s.homeScore; r[my > op ? 'W' : my < op ? 'L' : 'T']++; }
+        rec = `<span class="wk-rec">${r.W}-${r.L}-${r.T}</span>`;
+      }
+      const days = [...new Set(gs.map(dayKey))];
+      const status = fin.length === gs.length ? 'Final' : fin.length ? `${fin.length}/${gs.length} final` : '';
+      const title = days.length === 1 ? dt(days[0], { weekday: 'short', month: 'short', day: 'numeric' }) : weekLabel(k);
+      return `<details class="wkgrp ${small ? 'wk-small' : ''}" ${isOpen ? 'open' : ''}>
+        <summary><span class="wk-t">${esc(title)}</span>${rec}
+          <span class="wk-m">${gs.length} game${gs.length === 1 ? '' : 's'}${status ? ` · ${status}` : ''}<span class="wk-r"> · ${esc(rinks.slice(0, 2).join(' · '))}${rinks.length > 2 ? ` +${rinks.length - 2}` : ''}</span></span>
+          <a class="lnk wk-l" href="#/weekend/${k}" title="Weekend recap">Recap →</a></summary>
+        ${days.map((d) => `<div class="wk-day">${dt(d, { weekday: 'long', month: 'short', day: 'numeric' })}</div>${gameCards(gs.filter((s) => dayKey(s) === d), perspective)}`).join('')}
+      </details>`;
+    }).join('')}</div>`;
+  }
+
   function viewSchedule() {
     const sel = String(store.get('schedTeam2', '') || '');
     const items = S.schedule.filter((s) => !sel || involves(s, sel));
-    const past = items.filter((s) => s.final).reverse();
+    const past = items.filter((s) => s.final);
     const next = items.filter(isUpcoming);
     after(() => $('#sc-team').addEventListener('change', (e) => { store.set('schedTeam2', e.target.value); render(); }));
     const opts = [...S.teams].sort((a, b) => a.name.localeCompare(b.name)).map((t) => `<option value="${t.id}" ${sel === String(t.id) ? 'selected' : ''}>${esc(t.name)}</option>`).join('');
     return `
       <div class="ptitle"><div><div class="k">${esc(S.meta.season)} · ${esc(S.meta.division)}</div><h1>Schedule</h1><div class="s">${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final</div></div>
         <select id="sc-team" aria-label="Filter by team"><option value="">All teams</option>${opts}</select></div>
-      <div style="margin-bottom:18px">${panel('Upcoming', gameCards(next, sel || null), { gold: true, meta: `${next.length} games` })}</div>
-      <div style="margin-bottom:18px">${panel('Results', gameCards(past, sel || null), { meta: `${past.length} games` })}</div>`;
+      <div style="margin-bottom:18px">${panel('Upcoming', weekendGroups(next, sel || null, { open: 2 }), { gold: true, meta: `${next.length} games · ${new Set(next.map((s) => weekKey(s.start))).size} weekends` })}</div>
+      <div style="margin-bottom:18px">${panel('Results', weekendGroups(past, sel || null, { open: 1, newestFirst: true }), { meta: `${past.length} games` })}</div>`;
   }
 
   // One team's weekend: record, goals, and each kid's firsts/milestones grouped into one line.
@@ -922,7 +957,7 @@
       <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div id="net-ctl" class="net-ctl"></div><div class="chart" id="net"></div></div><div class="note">A line joins a passer and a scorer on the same goal. Hover a player to see only their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>
       <div id="roster-anchor" style="margin-bottom:18px">${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team PIM ${t.pim}` })}</div>
       <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="tgoal"></table></div><div class="note">Team save % ${rate(t.svPct)} (from shots on goal). ${GOALIE_NOTE}</div>`)}</div>
-      <div style="margin-bottom:18px">${panel('Results', gameCards(sched.filter((s) => s.final).reverse(), id), { meta: `${t.w}-${t.l}-${t.t}` })}</div>
+      <div style="margin-bottom:18px">${panel('Results', weekendGroups(sched.filter((s) => s.final), id, { open: 1, newestFirst: true }), { meta: `${t.w}-${t.l}-${t.t}` })}</div>
       <div class="grid g-6-6">
         ${panel('By weekend', '<div class="tw"><table id="wk"></table></div>')}
         ${panel('Head to head', '<div class="tw"><table id="h2h"></table></div>')}
