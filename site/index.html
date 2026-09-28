@@ -4,24 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#05080E">
   <title>2019 Major Stats</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏒</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M4 4h24l-5 24H4z' fill='%23F5B72E'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap top-inner">
-      <a href="#/" class="brand"><span class="puck"></span><span><strong id="brand-division">Stats</strong><small id="brand-season"></small></span></a>
-      <nav id="nav">
-        <a href="#/">Home</a>
+  <div class="ticker" aria-label="Latest finals"><div class="tag">HSL <span style="font-weight:600">FINALS</span></div><div class="rail"><div class="track" id="ticker"></div></div></div>
+  <div class="wrap">
+    <header class="mast">
+      <a href="#/" class="brand"><span id="brand-league">HSL</span> <span>/</span> <span id="brand-division">2019 Major</span><small id="upd"></small></a>
+      <nav class="nav" id="nav">
+        <a href="#/">Scoreboard</a>
         <a href="#/standings">Standings</a>
-        <a href="#/skaters">Skaters</a>
+        <a href="#/skaters">Leaders</a>
         <a href="#/schedule">Schedule</a>
+        <a href="#/team/mine" id="nav-mine">My team</a>
       </nav>
-    </div>
-  </header>
-  <main id="app" class="wrap"><p class="muted">Loading stats…</p></main>
-  <footer class="wrap foot" id="foot"></footer>
+    </header>
+    <main id="app"><div class="loading">Loading stats…</div></main>
+    <footer id="foot"></footer>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
