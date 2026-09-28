@@ -1220,11 +1220,84 @@
     document.getElementById('upd').textContent = `${S.meta.league} · ${S.meta.season} · Updated ${new Date(S.meta.updatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
     document.title = `${S.meta.division} · ${S.meta.league}`;
     const so = S.meta.scoreOnlyGames?.length;
-    document.getElementById('foot').innerHTML = `Unofficial stats built from the <a class="lnk" href="${esc(S.meta.sourceUrl)}" target="_blank" rel="noopener">${esc(S.meta.league)}</a> published game sheets · ${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final${so ? ` · ${so} counted from the final score only (no game sheet yet)` : ''}.`;
+    document.getElementById('foot').innerHTML = `Unofficial stats built from the <a class="lnk" href="${esc(S.meta.sourceUrl)}" target="_blank" rel="noopener">${esc(S.meta.league)}</a> published game sheets · ${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final${so ? ` · ${so} counted from the final score only (no game sheet yet)` : ''}.${savedKey() ? ' · <a class="lnk" href="#" id="lock">Lock this device</a>' : ''}`;
   }
 
-  fetch('data/stats.json', { cache: 'no-cache' })
-    .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  // ------------------------------------------------------------ password gate
+  // The published stats are AES-GCM encrypted (scripts/crypto.mjs). The derived key — never the
+  // password — can be remembered on this device; the salt is fixed so it survives rebuilds.
+  const b64d = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+  const b64e = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf)));
+  const KEY_STORE = 'st:siteKey';
+  async function deriveKey(password, env) {
+    const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey({ name: 'PBKDF2', hash: 'SHA-256', salt: new TextEncoder().encode(env.salt), iterations: env.iterations },
+      base, { name: 'AES-GCM', length: 256 }, true, ['decrypt']);
+  }
+  async function decryptWith(key, env) {
+    const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64d(env.iv) }, key, b64d(env.ct));
+    return JSON.parse(new TextDecoder().decode(pt));
+  }
+  const savedKey = () => { try { return localStorage.getItem(KEY_STORE) || sessionStorage.getItem(KEY_STORE); } catch { return null; } };
+  const saveKey = async (key, remember) => {
+    const raw = b64e(await crypto.subtle.exportKey('raw', key));
+    try { (remember ? localStorage : sessionStorage).setItem(KEY_STORE, raw); } catch { /* private mode: unlock each visit */ }
+  };
+  const forgetKey = () => { try { localStorage.removeItem(KEY_STORE); sessionStorage.removeItem(KEY_STORE); } catch { /* ignore */ } };
+
+  async function unlock(env) {
+    const cached = savedKey();
+    if (cached) {
+      try {
+        const key = await crypto.subtle.importKey('raw', b64d(cached), 'AES-GCM', false, ['decrypt']);
+        return await decryptWith(key, env);
+      } catch { forgetKey(); } // password changed since this device unlocked
+    }
+    document.body.classList.add('locked');
+    $app.innerHTML = `
+      <section class="gate panel">
+        <div class="ph"><h2 class="gold">Team access</h2><span class="meta">${esc(document.title)}</span></div>
+        <form class="gate-f" id="gate" autocomplete="on">
+          <p>These stats are shared with team families. Enter the team password to continue.</p>
+          <label class="gate-l" for="gate-pw">Password</label>
+          <input id="gate-pw" type="password" autocomplete="current-password" required autofocus>
+          <label class="gate-r"><input type="checkbox" id="gate-rem" checked> Remember this device</label>
+          <button class="btn on" type="submit" id="gate-go">Unlock</button>
+          <div class="gate-err" id="gate-err" role="alert"></div>
+        </form>
+      </section>`;
+    return new Promise((resolve) => {
+      const f = document.getElementById('gate'), pw = document.getElementById('gate-pw'), go = document.getElementById('gate-go'), err = document.getElementById('gate-err');
+      pw.focus();
+      f.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        go.disabled = true; go.textContent = 'Unlocking…'; err.textContent = '';
+        try {
+          const key = await deriveKey(pw.value, env);
+          const data = await decryptWith(key, env);
+          await saveKey(key, document.getElementById('gate-rem').checked);
+          document.body.classList.remove('locked');
+          resolve(data);
+        } catch {
+          go.disabled = false; go.textContent = 'Unlock';
+          err.textContent = 'That password didn’t work. Check with your team manager.';
+          f.classList.remove('shake'); void f.offsetWidth; f.classList.add('shake');
+          pw.select();
+        }
+      });
+    });
+  }
+
+  async function loadStats() {
+    const enc = await fetch('data/stats.enc.json', { cache: 'no-cache' });
+    if (enc.ok) return unlock(await enc.json());
+    const r = await fetch('data/stats.json', { cache: 'no-cache' }); // local dev build (no password)
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }
+  window.addEventListener('click', (e) => { if (e.target.closest('#lock')) { e.preventDefault(); forgetKey(); location.reload(); } });
+
+  loadStats()
     .then((data) => {
       S = data;
       prepare();

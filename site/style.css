@@ -344,3 +344,19 @@ a.tb-item:hover{background:var(--panel)}
 .in .chart .lbadge.n1:not(.hl){opacity:0}
 .net.focus .lbadge:not(.hl){opacity:0}
 .net.focus .lbadge.hl{opacity:1}
+
+/* ---------- password gate ---------- */
+body.locked .teambar,body.locked .nav,body.locked #foot{display:none}
+.gate{max-width:460px;margin:40px auto 60px}
+.gate-f{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.gate-f p{color:var(--ink2);font-size:14px;margin-bottom:6px}
+.gate-l{font:700 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
+.gate-f input[type=password]{font:600 16px var(--sans);color:var(--ink);background:var(--panel2);border:1px solid var(--line2);padding:11px 12px;border-radius:0}
+.gate-f input[type=password]:focus{outline:2px solid var(--us);outline-offset:0}
+.gate-r{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink2);cursor:pointer}
+.gate-r input{accent-color:var(--us)}
+.gate-f .btn{justify-content:center;padding:12px}
+.gate-f .btn:disabled{opacity:.7;cursor:wait}
+.gate-err{min-height:18px;font-size:13px;color:#FF8A70}
+.shake{animation:shake .35s}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}

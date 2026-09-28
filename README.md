@@ -36,6 +36,20 @@ Individual penalty minutes, penalty names, and individual goalie stats are still
 in `data/games/*.json` (for private questions), but `scripts/build.mjs` strips them from
 `site/data/stats.json`. Team save % excludes games where the sheet records fewer shots than goals.
 
+## Password
+
+The published stats file is encrypted (AES-256-GCM, key from PBKDF2-SHA256 with 600k rounds). The
+site asks for the team password and decrypts in the browser; "Remember this device" stores the
+derived key (not the password) in localStorage. The Action reads the password from the
+`SITE_PASSWORD` repository secret and refuses to publish unencrypted if it's missing.
+
+- Set or change the password: `gh secret set SITE_PASSWORD`, then run the workflow. Changing it
+  signs every device out.
+- Local dev without a password writes plain `site/data/stats.json`; with `SITE_PASSWORD=...` it
+  writes `stats.enc.json` like CI.
+- This hides the stats, not the page shell (HTML/JS/CSS stay public). Keep the repo private too,
+  since `data/` holds the raw scraped game files.
+
 ## Configuration
 
 `scripts/config.mjs` holds the season, division and "my team" IDs. To track another division, change `divisionId` / `divisionName` (IDs are in the league site's URLs).

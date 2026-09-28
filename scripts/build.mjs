@@ -2,6 +2,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { config } from './config.mjs';
+import { encryptJson } from './crypto.mjs';
 
 const DATA = path.resolve('data');
 const OUT = path.resolve('site/data');
@@ -308,6 +309,18 @@ if (finals && gameSummaries.length === 0) {
 }
 
 await fs.mkdir(OUT, { recursive: true });
-await fs.writeFile(path.join(OUT, 'stats.json'), JSON.stringify(out));
+// With SITE_PASSWORD set, publish only the encrypted file. CI must never publish plaintext.
+const password = process.env.SITE_PASSWORD;
+const plainFile = path.join(OUT, 'stats.json'), encFile = path.join(OUT, 'stats.enc.json');
+if (password) {
+  await fs.writeFile(encFile, JSON.stringify(await encryptJson(JSON.stringify(out), password)));
+  await fs.rm(plainFile, { force: true });
+} else if (process.env.CI) {
+  console.error('SITE_PASSWORD is not set — refusing to publish unencrypted stats.');
+  process.exit(1);
+} else {
+  await fs.writeFile(plainFile, JSON.stringify(out)); // local dev only
+  await fs.rm(encFile, { force: true });
+}
 console.log(`built: ${standings.length} teams, ${players.size} players, ${goalies.size} goalies, ${gameSummaries.length} games, ${dataWarnings.length} data warnings`);
 for (const t of standings) console.log(`  ${String(t.rank).padStart(2)} ${t.name.padEnd(28)} ${t.gp} ${t.w}-${t.l}-${t.t} ${String(t.pts).padStart(2)}pts GF ${t.gf} GA ${t.ga} PIM ${t.pim}`);

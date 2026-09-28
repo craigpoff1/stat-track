@@ -46,8 +46,10 @@ jobs:
       - name: Scrape league site
         run: node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }}
 
-      - name: Build stats
+      - name: Build stats (encrypted)
         run: node scripts/build.mjs
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 
       - name: Commit data changes
         run: |
