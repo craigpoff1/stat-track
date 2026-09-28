@@ -30,21 +30,6 @@
    "label": "3",
    "home": 1,
    "away": 3
-  },
-  {
-   "label": "1",
-   "home": 3,
-   "away": 18
-  },
-  {
-   "label": "2",
-   "home": 1,
-   "away": 22
-  },
-  {
-   "label": "3",
-   "home": 1,
-   "away": 7
   }
  ],
  "events": [
@@ -679,6 +664,24 @@
   }
  ],
  "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 18
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 22
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 7
+  }
+ ],
  "start": "2026-09-26T19:00:00",
- "gameNumber": 189
+ "gameNumber": 189,
+ "fetchedAt": "2026-09-28T01:38:01.330Z"
 }

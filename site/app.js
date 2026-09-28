@@ -42,8 +42,8 @@
     return link ? `<a class="team-cell" href="#/team/${t.id}">${img}<span>${name}</span></a>` : `<span class="team-cell">${img}<span>${name}</span></span>`;
   }
   const shortName = (n) => n.replace(/\s+(Hockey Academy|Hockey Club|Hockey|Academy)$/i, '');
-  const playerLink = (id, name) => (id && goalieById.has(id) ? `<a href="#/goalie/${id}">${esc(name)}</a>`
-    : id && playerById.has(id) ? `<a href="#/player/${id}">${esc(name)}</a>` : esc(name));
+  const playerLink = (id, name) => (id && playerById.has(id) && !playerById.get(id).isGoalie ? `<a href="#/player/${id}">${esc(name)}</a>`
+    : id && goalieById.has(id) ? `<a href="#/goalie/${id}">${esc(name)}</a>` : esc(name));
   const form = (s) => `<span class="form">${[...(s || '')].map((r) => `<span class="${r}">${r}</span>`).join('')}</span>`;
 
   // ------------------------------------------------------------ sortable tables
@@ -167,6 +167,7 @@
     return `<li>${d}${vs}<div class="score">${score}</div></li>`;
   }
   const gameList = (items, perspective) => (items.length ? `<ul class="games">${items.map((s) => gameRow(s, perspective)).join('')}</ul>` : '<p class="empty">No games.</p>');
+  const isUpcoming = (s) => !s.final && localDate(s.end || s.start) >= new Date(Date.now() - 3 * 36e5);
   const involves = (s, id) => String(s.home) === String(id) || String(s.away) === String(id);
 
   // ------------------------------------------------------------ views
@@ -174,9 +175,9 @@
     const my = team(myTeamId());
     const mySched = S.schedule.filter((s) => involves(s, myTeamId()));
     const played = mySched.filter((s) => s.final);
-    const upcoming = mySched.filter((s) => !s.final);
+    const upcoming = mySched.filter(isUpcoming);
     const skaters = S.players.filter((p) => !p.isGoalie || p.pts > 0);
-    const goalieMin = Math.max(1, Math.floor(S.meta.gamesPlayed / (S.teams.length / 2) * 0.4 * S.meta.regulationMinutes));
+    const goalieMin = S.teams.length ? Math.max(1, Math.floor(S.meta.gamesPlayed / (S.teams.length / 2) * 0.4 * S.meta.regulationMinutes)) : 1;
     const qualifiedG = S.goalies.filter((g) => g.minutes >= goalieMin);
     const favs = [...favPlayers()].map((id) => playerById.get(id)).filter(Boolean);
 
@@ -251,8 +252,8 @@
       { key: 'tsh', label: 'TSH', title: 'Times shorthanded' }, { key: 'ppga', label: 'PPGA' },
       { key: 'pkPct', label: 'PK%', cls: 'strong', fmt: (t) => pct100(t.pkPct) },
       { key: 'shg', label: 'SHG' }, { key: 'shga', label: 'SHGA' },
-      { key: 'sf', label: 'SF', title: 'Shots for (from goalie reports — approximate)' },
-      { key: 'sa', label: 'SA', title: 'Shots against (from goalie reports — approximate)' },
+      { key: 'sf', label: 'SF', title: 'Shots for' },
+      { key: 'sa', label: 'SA', title: 'Shots against' },
     ];
     const rc = (t) => (String(t.id) === String(myTeamId()) ? 'mine' : '');
     return `
@@ -297,7 +298,7 @@
     const sel = store.get('schedTeam', String(myTeamId()));
     const items = S.schedule.filter((s) => !sel || involves(s, sel));
     const past = items.filter((s) => s.final).reverse();
-    const next = items.filter((s) => !s.final);
+    const next = items.filter(isUpcoming);
     setTimeout(() => bind('#sc-team', 'change', (e) => { store.set('schedTeam', e.target.value); render(); }));
     return `
       <div class="page-head"><div><h1>Schedule</h1><div class="sub">${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games played</div></div></div>
@@ -339,7 +340,7 @@
       <section class="card"><div class="card-head"><h2>Goalies</h2></div>${sortable('team-g-' + id, goalieCols({ showTeam: false }), gs, { sort: { key: 'minutes', desc: true } })}</section>
       <div class="grid g2">
         <section class="card"><div class="card-head"><h2>Results</h2></div>${gameList(sched.filter((s) => s.final).reverse(), id)}</section>
-        <section class="card"><div class="card-head"><h2>Upcoming</h2></div>${gameList(sched.filter((s) => !s.final).slice(0, 8), id)}</section>
+        <section class="card"><div class="card-head"><h2>Upcoming</h2></div>${gameList(sched.filter(isUpcoming).slice(0, 8), id)}</section>
       </div>
       <section class="card"><div class="card-head"><h2>Head to head</h2></div>
         ${sortable('h2h-' + id, [
@@ -364,7 +365,7 @@
       <div class="page-head">
         ${t?.logo ? `<img src="${esc(t.logo)}" alt="">` : ''}
         <div><h1>#${esc(p.number)} ${esc(p.name)}</h1><div class="sub">${teamCell(p.teamId)}</div></div>
-        <div style="margin-left:auto"><button class="star ${isFav ? 'on' : ''}" id="fav">${isFav ? '★ Following' : '☆ Follow'}</button></div>
+        <div style="margin-left:auto">${goalieById.has(id) ? `<a class="star" href="#/goalie/${id}">Goalie stats</a> ` : ''}<button class="star ${isFav ? 'on' : ''}" id="fav">${isFav ? '★ Following' : '☆ Follow'}</button></div>
       </div>
       <section class="card"><div class="tiles">
         ${tile(p.gp, 'Games')}${tile(p.g, 'Goals')}${tile(p.a, 'Assists')}${tile(p.pts, 'Points')}${tile(num(p.ptsPerGame), 'Points / game')}
@@ -415,7 +416,9 @@
     const cols = [...g.periods.map((p) => p.label), 'T'];
     const periodTable = `<div class="tw"><table><thead><tr><th class="l">Team</th>${cols.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>
       ${[['away', as], ['home', hs]].map(([s, side]) => `<tr><td class="l">${teamCell(side.id, { short: true })}</td>${g.periods.map((p) => `<td>${p[s]}</td>`).join('')}<td class="strong">${side.score}</td></tr>`).join('')}
-      </tbody></table></div>`;
+      </tbody></table></div>${g.shotsByPeriod?.length ? `<div class="tw" style="margin-top:12px"><table><thead><tr><th class="l">Shots</th>${g.shotsByPeriod.map((p) => `<th>${esc(p.label)}</th>`).join('')}<th>T</th></tr></thead><tbody>
+      ${[['away', as], ['home', hs]].map(([s, side]) => `<tr><td class="l">${teamCell(side.id, { short: true })}</td>${g.shotsByPeriod.map((p) => `<td>${p[s]}</td>`).join('')}<td class="strong">${g.shotsByPeriod.reduce((n, p) => n + p[s], 0)}</td></tr>`).join('')}
+      </tbody></table></div>` : ''}`;
     let lastPer = null;
     const tl = g.events.map((e) => {
       const per = e.period !== lastPer ? `<li class="per">${/^\d+$/.test(e.period) ? 'Period ' + e.period : esc(e.period)}</li>` : '';
@@ -504,7 +507,7 @@
       document.getElementById('brand-season').textContent = `${S.meta.league} · ${S.meta.season}`;
       document.title = `${S.meta.division} Stats`;
       const updated = new Date(S.meta.updatedAt).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
-      document.getElementById('foot').innerHTML = `Updated ${esc(updated)} · ${S.meta.gamesPlayed} games · Source: <a href="${esc(S.meta.sourceUrl)}" target="_blank" rel="noopener">${esc(S.meta.league)}</a>. Unofficial — built from the league's published game sheets.`;
+      document.getElementById('foot').innerHTML = `Updated ${esc(updated)} · ${S.meta.gamesPlayed} games · Source: <a href="${esc(S.meta.sourceUrl)}" target="_blank" rel="noopener">${esc(S.meta.league)}</a>. Unofficial — built from the league's published game sheets.${S.meta.scoreOnlyGames?.length ? ` ${S.meta.scoreOnlyGames.length} game(s) counted from the final score only (no game sheet yet).` : ''}`;
       window.addEventListener('hashchange', render);
       render();
     })

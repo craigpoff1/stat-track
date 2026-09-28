@@ -47,7 +47,7 @@ function player(row, teamId, teamName) {
       id: row.playerId, name: row.name, number: row.number, teamId, team: teamName,
       gp: 0, g: 0, a: 0, pts: 0, pim: 0,
       ppg: 0, ppa: 0, shg: 0, sha: 0, gwg: 0, firstGoals: 0,
-      isGoalie: false,
+      isGoalie: false, goalieGames: 0,
       log: [],
     });
   }
@@ -66,6 +66,14 @@ function goalie(row, teamId, teamName) {
     });
   }
   return goalies.get(row.playerId);
+}
+
+function addResult(t, s, gf, ga, oppId, gameId, date) {
+  const r = gf > ga ? 'W' : gf < ga ? 'L' : 'T';
+  t.gp++; t.gf += gf; t.ga += ga;
+  t[r.toLowerCase()]++; t[s][r.toLowerCase()]++;
+  t.pts += r === 'W' ? 2 : r === 'T' ? 1 : 0;
+  t.results.push({ gameId, date, r, gf, ga, opp: oppId, home: s === 'home' });
 }
 
 const gameSummaries = [];
@@ -95,20 +103,21 @@ for (const g of games) {
 
   // --- team results
   for (const s of ['home', 'away']) {
-    const t = side[s], gf = g[s].score, ga = g[other(s)].score;
-    const r = gf > ga ? 'W' : gf < ga ? 'L' : 'T';
-    t.gp++; t.gf += gf; t.ga += ga;
-    t[r.toLowerCase()]++; t[s][r.toLowerCase()]++;
-    t.pts += r === 'W' ? 2 : r === 'T' ? 1 : 0;
-    t.results.push({ gameId: g.id, date, r, gf, ga, opp: side[other(s)].id, home: s === 'home' });
+    const t = side[s];
+    addResult(t, s, g[s].score, g[other(s)].score, side[other(s)].id, g.id, date);
     for (const p of g.periods) {
       t.gfByPeriod[p.label] = (t.gfByPeriod[p.label] || 0) + p[s];
       t.gaByPeriod[p.label] = (t.gaByPeriod[p.label] || 0) + p[other(s)];
     }
     t.pim += g.skaters.filter((x) => x.side === s).reduce((n, x) => n + x.pim, 0);
-    // Shots against = shots faced by this side's goalies; shots for = opponent goalies' shots faced.
-    t.sa += g.goalies.filter((x) => x.side === s).reduce((n, x) => n + x.shots, 0);
-    t.sf += g.goalies.filter((x) => x.side === other(s)).reduce((n, x) => n + x.shots, 0);
+    // Shots: the "Shots" by-period table when present; goalie reports are far less complete.
+    if (g.shotsByPeriod?.length) {
+      t.sf += g.shotsByPeriod.reduce((n, p) => n + p[s], 0);
+      t.sa += g.shotsByPeriod.reduce((n, p) => n + p[other(s)], 0);
+    } else {
+      t.sa += g.goalies.filter((x) => x.side === s).reduce((n, x) => n + x.shots, 0);
+      t.sf += g.goalies.filter((x) => x.side === other(s)).reduce((n, x) => n + x.shots, 0);
+    }
   }
   for (const e of g.events) {
     if (e.type === 'penalty' && isPowerPlayPenalty(e)) {
@@ -156,16 +165,17 @@ for (const g of games) {
     const gs = g.goalies.filter((x) => x.side === s && x.playerId);
     if (!gs.length) continue;
     const t = side[s];
-    const starter = gs.reduce((a, b) => (b.seconds > a.seconds ? b : a));
+    // No decision when the sheet shows no goalie minutes at all.
+    const starter = gs.some((x) => x.seconds > 0) ? gs.reduce((a, b) => (b.seconds > a.seconds ? b : a)) : null;
     for (const row of gs) {
       const gl = goalie(row, t.id, t.name);
-      gl.gp++; gl.seconds += row.seconds; gl.ga += row.ga; gl.shots += row.shots; gl.saves += row.saves;
+      gl.gp++; gl.seconds += row.seconds; gl.ga += row.ga; gl.shots += row.shots; gl.saves += Math.max(0, row.saves);
       const r = row === starter ? (g[s].score > g[other(s)].score ? 'W' : g[s].score < g[other(s)].score ? 'L' : 'T') : null;
       if (r) gl[r.toLowerCase()]++;
       if (row === starter && g[other(s)].score === 0) gl.so++;
-      gl.log.push({ gameId: g.id, date, opp: side[other(s)].id, home: s === 'home', seconds: row.seconds, ga: row.ga, shots: row.shots, saves: row.saves, decision: r });
+      gl.log.push({ gameId: g.id, date, opp: side[other(s)].id, home: s === 'home', seconds: row.seconds, ga: row.ga, shots: row.shots, saves: Math.max(0, row.saves), decision: r });
       const p = players.get(row.playerId);
-      if (p) p.isGoalie = true;
+      if (p) p.goalieGames = (p.goalieGames || 0) + 1;
     }
   }
 
@@ -173,6 +183,7 @@ for (const g of games) {
     id: g.id, gameNumber: g.gameNumber, date: g.start, rink: g.rink,
     home: { id: side.home.id, score: g.home.score }, away: { id: side.away.id, score: g.away.score },
     periods: g.periods,
+    shotsByPeriod: g.shotsByPeriod || [],
     events: g.events.map((e) => ({
       ...e,
       teamId: side[e.side].id,
@@ -183,6 +194,27 @@ for (const g of games) {
     goalies: g.goalies.map(({ side: s, playerId, number, name, seconds, ga, shots, saves }) => ({ teamId: side[s].id, playerId, number, name, seconds, ga, shots, saves })),
     warnings: g.warnings,
   });
+}
+
+// Final games with no usable game sheet (forfeit, late sheet, parse failure) still count in
+// the standings from the calendar score, so our table never silently drifts from the league's.
+const detailIds = new Set(gameSummaries.map((g) => g.id));
+const scoreOnly = [];
+for (const s of schedule.filter((x) => x.final && !detailIds.has(x.id))) {
+  const h = teamIdByName.get(s.home), a = teamIdByName.get(s.away);
+  if (!h || !a) { dataWarnings.push({ gameId: s.id, message: `not counted: unknown team ${s.home} / ${s.away}` }); continue; }
+  const date = s.start.slice(0, 10);
+  addResult(teams.get(h), 'home', s.homeScore, s.awayScore, a, s.id, date);
+  addResult(teams.get(a), 'away', s.awayScore, s.homeScore, h, s.id, date);
+  for (const t of [teams.get(h), teams.get(a)]) t.results.sort((x, y) => x.date.localeCompare(y.date));
+  scoreOnly.push(s.id);
+  dataWarnings.push({ gameId: s.id, message: 'counted from the calendar score only — no game sheet available' });
+}
+
+// A kid who took one turn in net is still a skater; only pure goalies are hidden from skater lists.
+for (const p of players.values()) {
+  p.goalieGames = p.goalieGames || 0;
+  p.isGoalie = p.goalieGames > 0 && p.goalieGames >= p.gp;
 }
 
 // ---------------------------------------------------------------- derived stats
@@ -230,7 +262,7 @@ const standings = [...teams.values()].sort((a, b) =>
 standings.forEach((t, i) => (t.rank = i + 1));
 
 const scheduleOut = schedule.map((s) => ({
-  id: s.id, gameNumber: s.gameNumber, start: s.start, location: s.location,
+  id: s.id, gameNumber: s.gameNumber, start: s.start, end: s.end, location: s.location,
   home: teamIdByName.get(s.home) || s.home, away: teamIdByName.get(s.away) || s.away,
   final: s.final, homeScore: s.homeScore, awayScore: s.awayScore,
   hasDetail: gameSummaries.some((g) => g.id === s.id),
@@ -244,7 +276,8 @@ const out = {
     division: config.divisionName,
     myTeamId: String(config.myTeamId),
     sourceUrl: `${config.baseUrl}/division/0/${config.divisionId}/masterschedule`,
-    gamesPlayed: gameSummaries.length,
+    gamesPlayed: gameSummaries.length + scoreOnly.length,
+    scoreOnlyGames: scoreOnly,
     gamesScheduled: schedule.length,
     regulationMinutes: config.regulationMinutes,
   },
@@ -255,6 +288,13 @@ const out = {
   schedule: scheduleOut,
   dataWarnings,
 };
+
+// Never deploy a hollowed-out season: if the schedule has finals but we built nothing, fail.
+const finals = schedule.filter((x) => x.final).length;
+if (finals && gameSummaries.length === 0) {
+  console.error(`Refusing to build: ${finals} final games in the schedule but 0 usable game sheets.`);
+  process.exit(1);
+}
 
 await fs.mkdir(OUT, { recursive: true });
 await fs.writeFile(path.join(OUT, 'stats.json'), JSON.stringify(out));

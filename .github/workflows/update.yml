@@ -12,7 +12,7 @@ on:
         default: false
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/**', '.github/workflows/**']
+    paths: ['site/**', 'scripts/**', 'test/**', '.github/workflows/**']
 
 permissions:
   contents: write   # commit refreshed data back to the repo
@@ -26,6 +26,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -38,6 +39,9 @@ jobs:
           cache: npm
 
       - run: npm ci
+
+      - name: Parser regression tests
+        run: npm test
 
       - name: Scrape league site
         run: node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }}
@@ -54,7 +58,8 @@ jobs:
             echo "No new game data."
           else
             git commit -m "Update game data"
-            git push
+            # Rebase over any push that landed while this run was scraping.
+            git pull --rebase && git push || (sleep 5 && git pull --rebase && git push)
           fi
 
       - uses: actions/configure-pages@v5

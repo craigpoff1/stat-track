@@ -135,15 +135,24 @@ export function parseGame(html, id, { regulationMinutes = 45 } = {}) {
     });
   });
 
-  // --- scoring by period ("Team | 1 | 2 | 3 | T")
+  // --- by-period tables. Two share the "Team | 1 | 2 | 3 | T" shape: "Scoring" and "Shots".
+  game.shotsByPeriod = [];
   $('table').each((_, table) => {
     const heads = headerCells($, table);
     if (heads[0] !== 'Team' || !heads.includes('T')) return;
+    const title = clean($(table).closest('.card-title-container').find('h1.card-title-table').first().text()).toLowerCase();
+    const target = title === 'scoring' ? game.periods : title === 'shots' ? game.shotsByPeriod : null;
+    if (!target) { warnings.push(`unrecognized by-period table "${title}"`); return; }
     const labels = heads.slice(1, heads.indexOf('T'));
-    const rows = $(table).find('tbody tr').map((_, tr) =>
-      [$(tr).find('td').map((_, td) => clean($(td).text())).get().filter(Boolean)]).get();
+    const rows = {};
+    $(table).find('tbody tr').each((_, tr) => {
+      const cells = $(tr).find('td').map((_, td) => clean($(td).text())).get().filter(Boolean);
+      const s = cells[0] === game.home.name ? 'home' : cells[0] === game.away.name ? 'away' : null;
+      if (s) rows[s] = cells;
+    });
+    if (!rows.home || !rows.away) { warnings.push(`${title} table rows don't match team names`); return; }
     labels.forEach((label, i) => {
-      game.periods.push({ label, home: Number(rows[0]?.[i + 1] ?? 0), away: Number(rows[1]?.[i + 1] ?? 0) });
+      target.push({ label, home: Number(rows.home[i + 1] ?? 0), away: Number(rows.away[i + 1] ?? 0) });
     });
   });
 
@@ -180,10 +189,22 @@ export function parseGame(html, id, { regulationMinutes = 45 } = {}) {
     }
   });
 
+  // --- structural checks. Throw rather than return a degraded game: a markup change on the
+  // league site must fail the run loudly, not overwrite good data with nulls.
+  const missing = [];
+  if (!game.status) missing.push('status');
+  for (const s of ['home', 'away']) {
+    if (!game[s].name) missing.push(`${s} name`);
+    if (!game[s].teamId) missing.push(`${s} teamId`);
+    if (game[s].score == null) missing.push(`${s} score`);
+  }
+  if (missing.length) throw new Error(`page structure not recognized (missing ${missing.join(', ')})`);
+
   // --- consistency checks against the official final
   for (const side of ['home', 'away']) {
     const final = game[side].score;
-    if (final == null) continue;
+    const per = game.periods.reduce((n, p) => n + p[side], 0);
+    if (game.periods.length && per !== final) warnings.push(`${side}: periods sum to ${per}, final is ${final}`);
     const box = game.skaters.filter((s) => s.side === side).reduce((n, s) => n + s.g, 0);
     const tl = game.events.filter((e) => e.type === 'goal' && e.side === side).length;
     if (tl !== final) warnings.push(`${side}: timeline has ${tl} goals, final is ${final}`);

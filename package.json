@@ -6,7 +6,8 @@
     "scrape": "node scripts/scrape.mjs",
     "build": "node scripts/build.mjs",
     "update": "node scripts/scrape.mjs && node scripts/build.mjs",
-    "serve": "python -m http.server 8765 --directory site"
+    "serve": "python -m http.server 8765 --directory site",
+    "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0"

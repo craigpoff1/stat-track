@@ -724,6 +724,8 @@
  "warnings": [
   "away: goalie minutes total 44"
  ],
+ "shotsByPeriod": [],
  "start": "2026-09-27T09:30:00",
- "gameNumber": 196
+ "gameNumber": 196,
+ "fetchedAt": "2026-09-28T01:38:03.224Z"
 }

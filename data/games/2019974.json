@@ -30,21 +30,6 @@
    "label": "3",
    "home": 0,
    "away": 6
-  },
-  {
-   "label": "1",
-   "home": 5,
-   "away": 18
-  },
-  {
-   "label": "2",
-   "home": 2,
-   "away": 13
-  },
-  {
-   "label": "3",
-   "home": 1,
-   "away": 13
   }
  ],
  "events": [
@@ -761,6 +746,24 @@
  ],
  "goalies": [],
  "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 5,
+   "away": 18
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 13
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 13
+  }
+ ],
  "start": "2026-09-27T11:00:00",
- "gameNumber": 202
+ "gameNumber": 202,
+ "fetchedAt": "2026-09-28T01:38:04.216Z"
 }
