@@ -193,9 +193,12 @@ for (const g of games) {
     if (secSum === 0) {
       if (gs.length === 1) { secs = [regSec]; notes.push({ kind: 'assumed', text: 'Minutes left blank — assumed the full game' }); }
       else { minutesOk = false; notes.push({ kind: 'excluded', text: `Minutes left blank for ${gs.length} goalies — split unknown, left out of GAA and no win/loss credited` }); }
-    } else if (regulation && Math.abs(secSum - regSec) > 60) {
+    } else if (regulation && secSum - regSec > 60) {
+      // too many minutes: usually a mid-game change entered loosely — counted as entered (owner call)
+      notes.push({ kind: 'assumed', text: `Minutes add up to ${Math.round(secSum / 60)} in a ${regSec / 60}-minute game (likely a mid-game change) — counted as entered` });
+    } else if (regulation && regSec - secSum > 60) {
       minutesOk = false;
-      notes.push({ kind: 'excluded', text: `Minutes add up to ${Math.round(secSum / 60)} in a ${regSec / 60}-minute game (likely a mid-game change) — left out of GAA` });
+      notes.push({ kind: 'excluded', text: `Minutes add up to only ${Math.round(secSum / 60)} in a ${regSec / 60}-minute game — left out of GAA` });
     }
     // decision: most minutes, only when minutes can be trusted to rank goalies (a single goalie always can)
     const canDecide = gs.length === 1 || secSum > 0;
