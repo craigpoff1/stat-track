@@ -251,3 +251,52 @@ td.l .sub2{display:block;font-size:12px;color:var(--ink3);font-weight:400}
 .chart .link{transition:opacity .15s}
 .chart .node{cursor:pointer}
 @media (max-width:520px){.wkstats{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- game discoverability + flow replay ---------- */
+.fev{opacity:0;transition:opacity .2s}
+.fev.on{opacity:1}
+.fev .fdot{transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .38s cubic-bezier(.3,1.7,.5,1)}
+.fev.on .fdot{transform:none}
+.fc-head{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:3 3;transition:opacity .3s}
+.fc-ro{fill:var(--ink);font-family:var(--cond)}
+.nx .cta{display:flex;align-items:center;gap:10px;margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font:700 12px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.nx .cta .mini{flex:1;height:26px;min-width:0}
+.nx .cta b{color:var(--us);display:inline-block;transition:transform .15s}
+a.nx:hover .cta{color:var(--ink)}
+a.nx:hover .cta b{transform:translateX(3px)}
+.cbk{color:#8DB8FF}
+.feat-body{display:grid;grid-template-columns:260px 1fr}
+.feat-score{padding:18px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.fs-row{display:flex;align-items:center;gap:10px}
+.fs-row .logo{width:36px;height:36px}
+.fs-row .nm{font:800 italic 24px/1 var(--cond);text-transform:uppercase;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fs-row .sc{font:800 44px/1 var(--cond)}
+.fs-row.lo .nm,.fs-row.lo .sc{color:var(--ink3)}
+.fs-res{font:700 13px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.fs-res .res{font-size:13px;margin:0}
+.feat-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.feat-chart{padding:14px 16px;min-width:0}
+.btn.sm{padding:5px 9px;font-size:12px}
+.sub-row{display:flex;align-items:center;justify-content:space-between}
+@media (max-width:760px){.feat-body{grid-template-columns:1fr}.feat-score{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* ---------- goal timing ---------- */
+.chart .gv.dn{transform-origin:top}
+.ins{list-style:none;margin-top:10px;display:grid;gap:6px;font-size:13px;color:var(--ink2)}
+.ins li{padding-left:12px;border-left:2px solid var(--line2)}
+.ins b{color:var(--ink);font-weight:600}
+
+/* ---------- linemates ---------- */
+.net-legend{align-items:center}
+.net-legend span{display:inline-flex;align-items:center;gap:6px}
+.net-legend svg{flex:none}
+.qfs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 8px}
+.qf{font:700 12px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:7px 11px;background:transparent;color:var(--ink2);border:1px solid var(--line2);cursor:pointer;transition:all .15s}
+.qf:hover{border-color:var(--us);color:var(--ink)}
+.qf.on{background:var(--us);border-color:var(--us);color:#111}
+.qcap{font-size:13px;color:var(--ink2);min-height:20px;line-height:1.5}
+.qcap b{color:var(--ink);font-weight:600}
+.net .link,.net .node{transition:opacity .25s}
+.net.focus .link:not(.hl){opacity:.06}
+.net.focus .node:not(.hl){opacity:.28}
+.net.focus .node.hl circle:not(.hit){stroke:var(--us)}

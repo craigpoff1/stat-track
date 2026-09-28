@@ -261,34 +261,91 @@
     });
   }
 
-  function flowChart(el, g) {
+  // Game flow: running score across game time. Plays like a replay the first time it scrolls into view —
+  // lines draw left to right behind a playhead, goals pop in as it passes them, the score readout ticks up.
+  // focus = the team drawn in gold (defaults to home).
+  function flowChart(el, g, { focus = g.home.id } = {}) {
     const PER = (S.meta.regulationMinutes || 45) / 3 * 60, nPer = Math.max(3, g.periods.length), T = PER * nPer;
     const goals = g.ev.filter((e) => e.type === 'goal');
+    const us = String(focus) === String(g.away.id) ? 'away' : 'home', them = us === 'home' ? 'away' : 'home';
+    const col = { [us]: 'var(--us)', [them]: 'var(--red)' };
+    const code = { home: team(g.home.id).code, away: team(g.away.id).code };
+    const uid = `fc${g.id}${Math.random().toString(36).slice(2, 7)}`;
+    let state = RM ? 'done' : 'idle', geo = null, raf = 0;
     mount(el, (w) => {
-      const H = 170, m = { l: 22, r: 30, t: 10, b: 34 }, x = lin(0, T, m.l, w - m.r);
+      const H = 190, m = { l: 22, r: 30, t: 24, b: 34 }, x = lin(0, T, m.l, w - m.r);
+      geo = { w, m, H };
       const mx = ticks(Math.max(1, g.home.score, g.away.score), 3).at(-1), y = lin(0, mx, H - m.b, m.t);
       const path = (side) => { let d = `M${x(0)},${y(0)}`, n = 0; for (const e of goals) if (e.side === side) d += `H${x(e.t)}V${y(++n)}`; return d + `H${x(T)}`; };
-      let s = `<svg width="${w}" height="${H}" role="img" aria-label="Running score through the game">`;
+      const done = state === 'done', on = done ? ' on' : '';
+      let s = `<svg width="${w}" height="${H}" role="img" aria-label="Running score through the game">
+        <defs><clipPath id="${uid}"><rect class="fc-clip" x="0" y="0" width="${done ? w : m.l}" height="${H}"/></clipPath></defs>`;
       for (const v of ticks(mx, 3)) s += `<line class="gr" x1="${m.l}" x2="${w - m.r}" y1="${y(v)}" y2="${y(v)}"/><text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end" style="font-size:11px;fill:var(--ink3)">${v}</text>`;
       for (let p = 1; p <= nPer; p++) s += `${p > 1 ? `<line class="ax" x1="${x((p - 1) * PER)}" x2="${x((p - 1) * PER)}" y1="${m.t}" y2="${H - m.b}"/>` : ''}<text x="${x((p - 0.5) * PER)}" y="${H - m.b + 18}" text-anchor="middle" style="font-size:12px">${p <= 3 ? 'P' + p : 'OT'}</text>`;
+      s += `<g clip-path="url(#${uid})">`;
       // power-play windows: from the penalty to its expiry (or period end), tinted for the team with the advantage
       for (const e of g.ev) {
         if (e.type !== 'penalty' || !e.minutes || e.minutes > 5 || !e.regulation) continue;
         const pEnd = Number(e.period) * PER, x0 = x(e.t), x1 = x(Math.min(pEnd, e.t + e.minutes * 60));
-        const adv = team(e.side === 'home' ? g.away.id : g.home.id);
-        s += `<rect class="fade" x="${x0}" y="${m.t}" width="${Math.max(1, x1 - x0)}" height="${H - m.b - m.t}" fill="${e.side === 'home' ? 'var(--red)' : 'var(--us)'}" fill-opacity=".09" ${tip(`${adv.short} power play`, `${e.time} P${e.period} · ${team(e.teamId).short} ${e.infraction || 'penalty'} (${e.minutes} min)`)}/>`;
+        const advSide = e.side === 'home' ? 'away' : 'home';
+        s += `<rect x="${x0}" y="${m.t}" width="${Math.max(1, x1 - x0)}" height="${H - m.b - m.t}" fill="${col[advSide]}" fill-opacity=".1" ${tip(`${team(g[advSide].id).short} power play`, `${e.time} P${e.period} · ${team(e.teamId).short} ${e.infraction || 'penalty'} (${e.minutes} min)`)}/>`;
       }
-      const len = w * 2;
-      s += `<path class="draw" style="--len:${len}" d="${path('away')}" fill="none" stroke="var(--red)" stroke-width="2" stroke-linejoin="round"/>
-            <path class="draw" style="--len:${len}" d="${path('home')}" fill="none" stroke="var(--us)" stroke-width="2.5" stroke-linejoin="round"/>`;
+      s += `<path d="${path(them)}" fill="none" stroke="${col[them]}" stroke-width="2" stroke-linejoin="round"/>
+            <path d="${path(us)}" fill="none" stroke="${col[us]}" stroke-width="2.5" stroke-linejoin="round"/></g>`;
       for (const e of g.ev) {
-        if (e.type === 'penalty') { s += `<rect x="${x(e.t) - 1}" y="${H - m.b - 6}" width="2" height="6" fill="var(--ink3)" ${tip(`${e.time} P${e.period} · Penalty`, `${team(e.teamId).short} · ${e.infraction || ''}`)}/>`; continue; }
+        if (e.type === 'penalty') { s += `<rect class="fev${on}" data-x="${x(e.t)}" x="${x(e.t) - 1}" y="${H - m.b - 6}" width="2" height="6" fill="var(--ink3)" ${tip(`${e.time} P${e.period} · Penalty`, `${team(e.teamId).short} · ${e.infraction || ''}`)}/>`; continue; }
         const n = e.side === 'home' ? e.score[0] : e.score[1];
-        s += `<g class="fade" ${tip(`${e.time} P${e.period} · ${e.score[1]}–${e.score[0]}`, `${e.scorer.name} (${team(e.teamId).short})${e.tags.length ? ' · ' + e.tags.join(', ') : ''}`)}><circle cx="${x(e.t)}" cy="${y(n)}" r="11" class="hit"/><circle cx="${x(e.t)}" cy="${y(n)}" r="4" fill="${e.side === 'home' ? 'var(--us)' : 'var(--red)'}" stroke="var(--panel)" stroke-width="2"/></g>`;
+        s += `<g class="fev${on}" data-x="${x(e.t)}" data-side="${e.side}" ${tip(`${e.time} P${e.period} · ${code.away} ${e.score[1]}–${e.score[0]} ${code.home}`, `${e.scorer.name} (${team(e.teamId).short})${e.moment && e.moment !== 'Opening goal' ? ' · ' + e.moment : ''}${e.tags.length ? ' · ' + e.tags.join(', ') : ''}`)}><circle cx="${x(e.t)}" cy="${y(n)}" r="11" class="hit"/><circle class="fdot" cx="${x(e.t)}" cy="${y(n)}" r="4.5" fill="${col[e.side]}" stroke="var(--panel)" stroke-width="2"/></g>`;
       }
-      s += `<text x="${w - m.r + 6}" y="${y(g.home.score) + 4}" class="t-us" style="font-size:14px">${g.home.score}</text><text x="${w - m.r + 6}" y="${y(g.away.score) + 4}" class="t-strong" style="font-size:14px">${g.away.score}</text>`;
+      s += `<line class="fc-head" x1="${m.l}" x2="${m.l}" y1="${m.t - 4}" y2="${H - m.b}" style="opacity:${done ? 0 : 1}"/>
+        <text class="fc-ro" x="${m.l + 2}" y="12" style="font-size:13px;font-weight:700;letter-spacing:.06em">${code.away} <tspan class="fc-a">${done ? g.away.score : 0}</tspan> – <tspan class="fc-h">${done ? g.home.score : 0}</tspan> ${code.home}<tspan class="fc-clk" style="fill:var(--ink3);font-weight:600"> ${done ? '· FINAL' : ''}</tspan></text>
+        <g class="fev${on}" data-x="${w - m.r}"><text x="${w - m.r + 6}" y="${y(g[us].score) + 4}" class="t-us" style="font-size:14px">${g[us].score}</text><text x="${w - m.r + 6}" y="${y(g[them].score) + 4}" class="t-strong" style="font-size:14px">${g[them].score}</text></g>`;
       return s + '</svg>';
     });
+    function frame(k) {
+      const svg = el.querySelector('svg'); if (!svg || !geo) return;
+      const { w, m } = geo, xs = m.l + k * (w - m.l - m.r);
+      svg.querySelector('.fc-clip').setAttribute('width', k >= 1 ? w : xs);
+      const head = svg.querySelector('.fc-head');
+      head.setAttribute('x1', xs); head.setAttribute('x2', xs); head.style.opacity = k >= 1 ? 0 : 1;
+      let h = 0, a = 0;
+      svg.querySelectorAll('.fev').forEach((n) => {
+        const hit = +n.dataset.x <= xs + 0.5 || k >= 1;
+        n.classList.toggle('on', hit);
+        if (hit && n.dataset.side) n.dataset.side === 'home' ? h++ : a++;
+      });
+      svg.querySelector('.fc-h').textContent = h; svg.querySelector('.fc-a').textContent = a;
+      const secs = k * T, p = Math.min(nPer, Math.floor(secs / PER) + 1), left = Math.max(0, PER - (secs - (p - 1) * PER));
+      svg.querySelector('.fc-clk').textContent = k >= 1 ? ' · FINAL' : ` · ${p <= 3 ? 'P' + p : 'OT'} ${Math.floor(left / 60)}:${String(Math.floor(left % 60)).padStart(2, '0')}`;
+    }
+    function play() {
+      if (RM) { state = 'done'; frame(1); return; }
+      cancelAnimationFrame(raf);
+      state = 'playing';
+      const D = 2800, t0 = performance.now();
+      const step = (now) => {
+        const k = Math.min(1, (now - t0) / D);
+        frame(k);
+        if (k < 1) raf = requestAnimationFrame(step); else state = 'done';
+      };
+      raf = requestAnimationFrame(step);
+    }
+    if (state === 'idle') {
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((ents) => { if (ents.some((e) => e.isIntersecting)) { io.disconnect(); play(); } }, { threshold: 0.45 });
+        io.observe(el);
+      } else play();
+    }
+    return { play };
+  }
+
+  // Tiny static game-flow sparkline for result cards.
+  function miniFlow(g, focus) {
+    const PER = (S.meta.regulationMinutes || 45) / 3 * 60, T = PER * Math.max(3, g.periods.length), W = 120, H = 30;
+    const us = String(focus) === String(g.away.id) ? 'away' : 'home', them = us === 'home' ? 'away' : 'home';
+    const mx = Math.max(1, g.home.score, g.away.score), goals = g.ev.filter((e) => e.type === 'goal');
+    const path = (side) => { let d = `M0,${H - 2}`, n = 0; for (const e of goals) if (e.side === side) d += `H${(e.t / T) * W}V${H - 2 - (++n / mx) * (H - 5)}`; return d + `H${W}`; };
+    return `<svg class="mini" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><path d="${path(them)}" fill="none" stroke="var(--red)" stroke-width="1.5" vector-effect="non-scaling-stroke"/><path d="${path(us)}" fill="none" stroke="var(--us)" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`;
   }
 
   // Season progression: cumulative GF (gold) vs GA (red) by game, weekend bands, W/L strip.
@@ -331,85 +388,172 @@
     });
   }
 
-  // Goal timing heatmap: 3 regulation periods x 5 three-minute buckets. rows: [{ label, color, goals: [event] }]
-  function heatmap(el, rows) {
-    const PER = (S.meta.regulationMinutes || 45) / 3 * 60, B = 5, bucket = PER / B;
-    const grid = rows.map((r) => {
+  // When goals happen: each period split into five 3-minute stretches. Goals scored rise above the
+  // centre line, goals allowed hang below it. Plain-language takeaways are written to `notes`.
+  // up/down: { label, color, goals: [event] }; down is optional (division view).
+  function timingChart(el, { up, down = null, notes = null }) {
+    const PER = (S.meta.regulationMinutes || 45) / 3 * 60, B = 5, bucket = PER / B, mins = Math.round(bucket / 60);
+    const count = (goals) => {
       const c = Array(3 * B).fill(0);
-      for (const e of r.goals) {
+      for (const e of goals) {
         if (!e.regulation || e.badClock) continue;
-        const pn = Number(e.period) - 1, within = e.t - pn * PER;
-        c[pn * B + Math.min(B - 1, Math.floor(within / bucket))]++;
+        const pn = Number(e.period) - 1;
+        c[pn * B + Math.min(B - 1, Math.floor((e.t - pn * PER) / bucket))]++;
       }
-      return { ...r, c, n: c.reduce((a, b) => a + b, 0) };
-    });
+      return c;
+    };
+    const U = count(up.goals), D = down ? count(down.goals) : null;
+    const range = (i) => { const b = i % B; return `P${Math.floor(i / B) + 1}, ${b * mins}–${(b + 1) * mins} min`; };
     mount(el, (w) => {
-      const lab = 78, top = 22, rh = 40, cw = (w - lab) / (3 * B), H = top + rows.length * (rh + 6);
-      let s = `<svg width="${w}" height="${H}" role="img" aria-label="When goals are scored, by period and minute">`;
-      for (let p = 0; p < 3; p++) s += `<text x="${lab + cw * (p * B + B / 2)}" y="12" text-anchor="middle" class="t-strong" style="font-size:13px">P${p + 1} <tspan style="fill:var(--ink3);font-weight:600;font-size:11px">0–${Math.round(PER / 60)}'</tspan></text>`;
-      grid.forEach((r, ri) => {
-        const y = top + ri * (rh + 6), mx = Math.max(1, ...r.c);
-        s += `<text x="0" y="${y + rh / 2 - 2}" class="t-strong" style="font-size:13px">${esc(r.label)}</text><text x="0" y="${y + rh / 2 + 13}" style="font-size:11px;fill:var(--ink3)">${r.n} goals</text>`;
-        r.c.forEach((v, i) => {
-          const p = Math.floor(i / B), b = i % B, x = lab + cw * i + 1;
-          const a = v ? 0.14 + 0.86 * (v / mx) : 0;
-          const m0 = Math.round((b * bucket) / 60), m1 = Math.round(((b + 1) * bucket) / 60);
-          s += `<g class="fade" style="transition-delay:${i * 18}ms" ${tip(`${r.label} · P${p + 1}, minutes ${m0}–${m1}`, `${v} goal${v === 1 ? '' : 's'}`)}>
-            <rect x="${x}" y="${y}" width="${cw - 2}" height="${rh}" fill="${v ? r.color : 'var(--panel2)'}" fill-opacity="${v ? a : 1}"/>
-            ${v ? `<text x="${x + (cw - 2) / 2}" y="${y + rh / 2 + 5}" text-anchor="middle" style="font-size:13px;font-weight:700;fill:${a > 0.55 ? '#0B0B0B' : 'var(--ink)'}">${v}</text>` : ''}</g>`;
-        });
-      });
-      for (let p = 1; p < 3; p++) s += `<line x1="${lab + cw * p * B}" x2="${lab + cw * p * B}" y1="${top - 4}" y2="${H}" style="stroke:var(--bg);stroke-width:3"/>`;
+      const gap = 14, m = { l: 4, r: 4, t: 18, b: 34 }, cw = (w - m.l - m.r - gap * 2) / (3 * B);
+      const hUp = down ? 78 : 120, hDn = down ? 78 : 0, base = m.t + hUp, H = base + hDn + m.b;
+      const mx = Math.max(1, ...U, ...(D || [0])), sy = (v) => (v / mx) * (hUp - 14);
+      const bx = (i) => m.l + Math.floor(i / B) * gap + i * cw;
+      let s = `<svg width="${w}" height="${H}" role="img" aria-label="When goals are scored, in 3-minute stretches of each period">`;
+      for (let p = 0; p < 3; p++) {
+        const x0 = bx(p * B), x1 = x0 + cw * B;
+        s += `<rect x="${x0}" y="${m.t - 6}" width="${cw * B}" height="${hUp + hDn + 12}" fill="var(--panel2)" opacity=".55"/>
+          <text x="${(x0 + x1) / 2}" y="${H - m.b + 18}" text-anchor="middle" class="t-strong" style="font-size:14px">P${p + 1}</text>
+          <text x="${x0 + 2}" y="${H - m.b + 30}" style="font-size:10px;fill:var(--ink3)">START</text>
+          <text x="${x1 - 2}" y="${H - m.b + 30}" text-anchor="end" style="font-size:10px;fill:var(--ink3)">END</text>`;
+      }
+      s += `<line x1="${m.l}" x2="${w - m.r}" y1="${base}" y2="${base}" style="stroke:var(--ink3);opacity:.7"/>`;
+      const bar = (v, i, dir, color, label) => {
+        if (!v) return '';
+        const x = bx(i) + 2, bw = Math.max(2, cw - 4), hh = sy(v);
+        const d = dir > 0 ? vbar(x, base - 1, base - 1 - hh, bw, 2) : `M${x},${base + 1}V${base + 1 + hh - 2}Q${x},${base + 1 + hh} ${x + 2},${base + 1 + hh}H${x + bw - 2}Q${x + bw},${base + 1 + hh} ${x + bw},${base + 1 + hh - 2}V${base + 1}Z`;
+        const ty = dir > 0 ? base - hh - 6 : base + hh + 15;
+        return `<g ${tip(`${label} · ${range(i)}`, `${v} goal${v === 1 ? '' : 's'}`)}><rect class="hit" x="${bx(i)}" y="${dir > 0 ? m.t : base}" width="${cw}" height="${dir > 0 ? hUp : hDn}"/>
+          <path class="gv ${dir < 0 ? 'dn' : ''}" style="transition-delay:${i * 30}ms" fill="${color}" d="${d}"/>
+          ${cw >= 14 ? `<text class="fade t-strong" x="${x + bw / 2}" y="${ty}" text-anchor="middle" style="font-size:12px">${v}</text>` : ''}</g>`;
+      };
+      U.forEach((v, i) => (s += bar(v, i, 1, up.color, up.label)));
+      if (D) D.forEach((v, i) => (s += bar(v, i, -1, down.color, down.label)));
       return s + '</svg>';
     });
+    if (notes) {
+      const tot = (c) => c.reduce((a, b) => a + b, 0);
+      const per = (c) => [0, 1, 2].map((p) => c.slice(p * B, p * B + B).reduce((a, b) => a + b, 0));
+      const late = (c) => [0, 1, 2].reduce((n, p) => n + c[p * B + B - 1], 0);
+      const early = (c) => [0, 1, 2].reduce((n, p) => n + c[p * B], 0);
+      const peak = (c) => { const v = Math.max(...c), i = c.indexOf(v), b = i % B; return v ? `P${Math.floor(i / B) + 1}, minutes ${b * mins}–${(b + 1) * mins} (${v} goal${v === 1 ? '' : 's'})` : '—'; };
+      const best = (c) => { const p = per(c), v = Math.max(...p); return p.map((x, i) => (x === v ? 'P' + (i + 1) : null)).filter(Boolean).join(' & '); };
+      const lines = [];
+      if (tot(U)) {
+        lines.push(`<b>${esc(up.label)} most:</b> ${esc(peak(U))}`);
+        lines.push(`<b>By period:</b> ${per(U).map((v, i) => `P${i + 1} ${v}`).join(' · ')} — strongest ${best(U)}`);
+        lines.push(`<b>First 3 min of a period:</b> ${early(U)} · <b>last 3 min:</b> ${late(U)}`);
+      }
+      if (D && tot(D)) lines.push(`<b>${esc(down.label)} most:</b> ${esc(peak(D))} · by period ${per(D).map((v, i) => `P${i + 1} ${v}`).join(' · ')}`);
+      notes.innerHTML = lines.length ? `<ul class="ins">${lines.map((l) => `<li>${l}</li>`).join('')}</ul>` : '';
+    }
   }
 
   // Linemates: who sets up whom on one team, from goal/assist pairs. Circle layout, curved links.
-  function networkChart(el, teamId) {
-    const pairs = new Map(), involvement = new Map();
+  // Link width/colour = goals the pair combined on; node size = assisted goals the player was part of.
+  // `controls` gets a legend + quick-filter chips that spotlight part of the graph.
+  function networkChart(el, teamId, { controls = null } = {}) {
+    const pairs = new Map(), involvement = new Map(), passes = new Map(), finishes = new Map();
     let goals = 0, assisted = 0;
+    const first = (id) => playerById.get(id)?.name.split(' ')[0] || '?';
     for (const g of S.games) for (const e of g.ev) {
       if (e.type !== 'goal' || String(e.teamId) !== String(teamId) || !e.playerId) continue;
       goals++;
-      const as = e.assists.filter((a) => a.playerId);
-      if (as.length) assisted++;
+      const as = e.assists.filter((a) => a.playerId && a.playerId !== e.playerId);
+      if (as.length) { assisted++; finishes.set(e.playerId, (finishes.get(e.playerId) || 0) + 1); }
       for (const a of as) {
-        const k = [a.playerId, e.playerId].sort().join('|');
-        const p = pairs.get(k) || { a: [a.playerId, e.playerId].sort()[0], b: [a.playerId, e.playerId].sort()[1], n: 0, detail: [] };
-        p.n++; p.detail.push(`${playerById.get(a.playerId)?.name.split(' ')[0]} → ${e.scorer.name.split(' ')[0]}`);
+        const [lo, hi] = [a.playerId, e.playerId].sort(), k = `${lo}|${hi}`;
+        const p = pairs.get(k) || { k, a: lo, b: hi, n: 0, detail: [] };
+        p.n++; p.detail.push(`${first(a.playerId)} → ${first(e.playerId)}`);
         pairs.set(k, p);
+        passes.set(a.playerId, (passes.get(a.playerId) || 0) + 1);
         for (const id of [a.playerId, e.playerId]) involvement.set(id, (involvement.get(id) || 0) + 1);
       }
     }
+    const P = [...pairs.values()];
     const nodes = [...involvement.keys()].map((id) => playerById.get(id)).filter(Boolean).sort((a, b) => (Number(a.number) || 0) - (Number(b.number) || 0));
+    const linksOf = (id) => P.filter((p) => p.a === id || p.b === id);
+    const degree = new Map(nodes.map((n) => [n.id, linksOf(n.id).length]));
+    const tier = (n) => (n >= 3 ? 3 : n);
+    const style = (n) => ({ w: [0, 1.6, 3.4, 5.6][tier(n)], c: n >= 3 ? 'var(--us)' : 'var(--blue)', o: [0, 0.45, 0.7, 0.9][tier(n)] });
+
+    // quick filters: each spotlights a set of players + links
+    const top = (map) => { const v = Math.max(0, ...map.values()); return v ? { v, ids: [...map].filter(([, x]) => x === v).map(([id]) => id) } : null; };
+    const names = (ids) => ids.map((id) => playerById.get(id)?.name).filter(Boolean).join(' & ');
+    const filters = [];
+    const duo = P.length ? Math.max(...P.map((p) => p.n)) : 0;
+    if (duo > 1) {
+      const best = P.filter((p) => p.n === duo);
+      filters.push({ id: 'duo', label: 'Top duo', nodes: new Set(best.flatMap((p) => [p.a, p.b])), links: new Set(best.map((p) => p.k)),
+        caption: best.map((p) => `<b>${esc(names([p.a, p.b]))}</b> — ${p.n} goals together`).join('<br>') });
+    }
+    const conn = top(degree);
+    if (conn) filters.push({ id: 'conn', label: 'Most connected', nodes: new Set(conn.ids.flatMap((id) => [id, ...linksOf(id).flatMap((p) => [p.a, p.b])])), links: new Set(conn.ids.flatMap((id) => linksOf(id).map((p) => p.k))),
+      caption: `<b>${esc(names(conn.ids))}</b> — ${conn.ids.length > 1 ? 'each have' : 'has'} combined with ${conn.v} different teammate${conn.v === 1 ? '' : 's'}` });
+    const pm = top(passes);
+    if (pm) filters.push({ id: 'pm', label: 'Top playmaker', nodes: new Set(pm.ids.flatMap((id) => [id, ...linksOf(id).flatMap((p) => [p.a, p.b])])), links: new Set(pm.ids.flatMap((id) => linksOf(id).map((p) => p.k))),
+      caption: `<b>${esc(names(pm.ids))}</b> — set up ${pm.v} goal${pm.v > 1 ? 's' : ''} for teammates` });
+    const fin = top(finishes);
+    if (fin) filters.push({ id: 'fin', label: 'Top finisher', nodes: new Set(fin.ids.flatMap((id) => [id, ...linksOf(id).flatMap((p) => [p.a, p.b])])), links: new Set(fin.ids.flatMap((id) => linksOf(id).map((p) => p.k))),
+      caption: `<b>${esc(names(fin.ids))}</b> — scored ${fin.v} goal${fin.v > 1 ? 's' : ''} off a teammate's pass` });
+    const favs = [...favPlayers()].filter((id) => involvement.has(id));
+    if (favs.length) filters.push({ id: 'fav', label: 'Following', nodes: new Set(favs.flatMap((id) => [id, ...linksOf(id).flatMap((p) => [p.a, p.b])])), links: new Set(favs.flatMap((id) => linksOf(id).map((p) => p.k))),
+      caption: favs.map((id) => `<b>${esc(playerById.get(id).name)}</b> — linked with ${degree.get(id)} teammate${degree.get(id) === 1 ? '' : 's'}`).join('<br>') });
+    let active = null;
+
+    el.classList.add('net');
     mount(el, (w) => {
       if (!nodes.length) return '<div class="empty">No assisted goals yet</div>';
       const H = Math.min(440, Math.max(300, w * 0.8)), cx = w / 2, cy = H / 2, R = Math.min(w, H) / 2 - 58;
       const pos = new Map(nodes.map((p, i) => { const a = -Math.PI / 2 + (i / nodes.length) * Math.PI * 2; return [p.id, { x: cx + R * Math.cos(a), y: cy + R * Math.sin(a), a }]; }));
-      const mxN = Math.max(1, ...[...pairs.values()].map((p) => p.n)), mxI = Math.max(1, ...involvement.values());
+      const mxI = Math.max(1, ...involvement.values());
       let s = `<svg width="${w}" height="${H}" role="img" aria-label="Assist connections between teammates">`;
-      [...pairs.values()].sort((a, b) => a.n - b.n).forEach((p, i) => {
-        const A = pos.get(p.a), B = pos.get(p.b); if (!A || !B) return;
-        const mx = (A.x + B.x) / 2, my = (A.y + B.y) / 2, qx = mx + (cx - mx) * 0.55, qy = my + (cy - my) * 0.55;
-        const k = p.n / mxN;
-        s += `<path class="fade link" style="transition-delay:${200 + i * 20}ms" data-a="${p.a}" data-b="${p.b}" d="M${A.x},${A.y}Q${qx},${qy} ${B.x},${B.y}" fill="none" stroke="${k > 0.6 ? 'var(--us)' : 'var(--blue)'}" stroke-width="${1.5 + 5 * k}" stroke-opacity="${0.35 + 0.5 * k}" stroke-linecap="round" ${tip(`${p.n} goal${p.n > 1 ? 's' : ''} together`, p.detail.join(' · '))}/>`;
+      [...P].sort((a, b) => a.n - b.n).forEach((p, i) => {
+        const A = pos.get(p.a), Bp = pos.get(p.b); if (!A || !Bp) return;
+        const mx = (A.x + Bp.x) / 2, my = (A.y + Bp.y) / 2, qx = mx + (cx - mx) * 0.55, qy = my + (cy - my) * 0.55, st = style(p.n);
+        s += `<path class="fade link ${active?.links.has(p.k) ? 'hl' : ''}" style="transition-delay:${200 + i * 20}ms" data-k="${p.k}" data-a="${p.a}" data-b="${p.b}" d="M${A.x},${A.y}Q${qx},${qy} ${Bp.x},${Bp.y}" fill="none" stroke="${st.c}" stroke-width="${st.w}" stroke-opacity="${st.o}" stroke-linecap="round" ${tip(`${names([p.a, p.b])}`, `${p.n} goal${p.n > 1 ? 's' : ''} together · ${p.detail.join(' · ')}`)}/>`;
       });
       nodes.forEach((p) => {
-        const P = pos.get(p.id), r = 5 + 9 * ((involvement.get(p.id) || 0) / mxI), right = Math.cos(P.a) >= 0;
-        const lx = P.x + Math.cos(P.a) * (r + 8), ly = P.y + Math.sin(P.a) * (r + 8) + 4;
-        s += `<a href="#/player/${p.id}"><g class="node" data-id="${p.id}" ${tip(p.name, `${p.g} G · ${p.a} A · in ${involvement.get(p.id)} assisted goal${involvement.get(p.id) > 1 ? 's' : ''}`)}>
-          <circle cx="${P.x}" cy="${P.y}" r="${r + 6}" class="hit"/>
-          <circle cx="${P.x}" cy="${P.y}" r="${r}" fill="var(--panel2)" stroke="var(--us)" stroke-width="2"/>
-          <text x="${lx}" y="${ly}" text-anchor="${Math.abs(Math.cos(P.a)) < 0.25 ? 'middle' : right ? 'start' : 'end'}" style="font-size:12px">${esc(p.name.split(' ')[0])} <tspan style="fill:var(--ink3)">#${esc(p.number)}</tspan></text></g></a>`;
+        const Pp = pos.get(p.id), r = 5 + 9 * ((involvement.get(p.id) || 0) / mxI), right = Math.cos(Pp.a) >= 0;
+        const lx = Pp.x + Math.cos(Pp.a) * (r + 8), ly = Pp.y + Math.sin(Pp.a) * (r + 8) + 4;
+        s += `<a href="#/player/${p.id}"><g class="node ${active?.nodes.has(p.id) ? 'hl' : ''}" data-id="${p.id}" ${tip(p.name, `${p.g} G · ${p.a} A · set up ${passes.get(p.id) || 0}, finished ${finishes.get(p.id) || 0} · ${degree.get(p.id)} linemate${degree.get(p.id) === 1 ? '' : 's'}`)}>
+          <circle cx="${Pp.x}" cy="${Pp.y}" r="${r + 6}" class="hit"/>
+          <circle cx="${Pp.x}" cy="${Pp.y}" r="${r}" fill="var(--panel2)" stroke="var(--ink2)" stroke-width="2"/>
+          <text x="${lx}" y="${ly}" text-anchor="${Math.abs(Math.cos(Pp.a)) < 0.25 ? 'middle' : right ? 'start' : 'end'}" style="font-size:12px">${esc(p.name.split(' ')[0])} <tspan style="fill:var(--ink3)">#${esc(p.number)}</tspan></text></g></a>`;
       });
       return s + '</svg>';
     });
-    // hover a player: fade links that don't touch them
+    const apply = (f) => {
+      active = f;
+      el.classList.toggle('focus', !!f);
+      el.querySelectorAll('.link').forEach((l) => l.classList.toggle('hl', !!f && f.links.has(l.dataset.k)));
+      el.querySelectorAll('.node').forEach((n) => n.classList.toggle('hl', !!f && f.nodes.has(n.dataset.id)));
+      if (controls) {
+        controls.querySelectorAll('.qf').forEach((b) => b.classList.toggle('on', b.dataset.f === (f ? f.id : '')));
+        controls.querySelector('.qcap').innerHTML = f ? f.caption : 'Pick a filter to spotlight part of the chart, or hover a player.';
+      }
+    };
+    // hover a player: fade links that don't touch them (temporarily overrides a filter)
     el.addEventListener('pointerover', (e) => {
       const n = e.target.closest?.('.node'); if (!n) return;
-      el.querySelectorAll('.link').forEach((l) => (l.style.opacity = l.dataset.a === n.dataset.id || l.dataset.b === n.dataset.id ? '1' : '.08'));
+      el.querySelectorAll('.link').forEach((l) => (l.style.opacity = l.dataset.a === n.dataset.id || l.dataset.b === n.dataset.id ? '1' : '.06'));
     });
     el.addEventListener('pointerout', (e) => { if (e.target.closest?.('.node')) el.querySelectorAll('.link').forEach((l) => (l.style.opacity = '')); });
+    if (controls && nodes.length) {
+      const present = [1, 2, 3].filter((t) => P.some((p) => tier(p.n) === t));
+      const sample = (t) => { const st = style(t === 3 ? 3 : t); return `<svg width="26" height="10" aria-hidden="true"><line x1="1" x2="25" y1="5" y2="5" stroke="${st.c}" stroke-width="${st.w}" stroke-opacity="${st.o}" stroke-linecap="round"/></svg>`; };
+      controls.innerHTML = `
+        <div class="legend net-legend">${present.map((t) => `<span>${sample(t)}${t === 3 ? '3+ goals together' : t === 2 ? '2 goals together' : '1 goal together'}</span>`).join('')}
+          <span><svg width="26" height="14" aria-hidden="true"><circle cx="5" cy="7" r="3.5" fill="var(--panel2)" stroke="var(--ink2)" stroke-width="1.5"/><circle cx="18" cy="7" r="6" fill="var(--panel2)" stroke="var(--ink2)" stroke-width="1.5"/></svg>Bigger = part of more assisted goals</span></div>
+        <div class="qfs"><button class="qf on" data-f="">Everyone</button>${filters.map((f) => `<button class="qf" data-f="${f.id}">${esc(f.label)}</button>`).join('')}</div>
+        <div class="qcap"></div>`;
+      controls.addEventListener('click', (e) => {
+        const b = e.target.closest('.qf'); if (!b) return;
+        const f = filters.find((x) => x.id === b.dataset.f) || null;
+        apply(active && f && active.id === f.id ? null : f);
+      });
+      apply(null);
+    }
     return { goals, assisted };
   }
 
@@ -504,7 +648,9 @@
       if (x.final) {
         const my = p ? (home ? x.homeScore : x.awayScore) : x.awayScore, op = p ? (home ? x.awayScore : x.homeScore) : x.homeScore;
         const r = p ? (my > op ? 'W' : my < op ? 'L' : 'T') : '';
-        inner = `<div class="d">${d} · Final</div><div class="o">${logo(o)}${who}<span class="res ${r}">${r ? r + ' ' : ''}${my}–${op}</span></div><div class="r">${esc(x.location || '')}</div>`;
+        const g = x.hasDetail ? gameById.get(x.id) : null;
+        inner = `<div class="d">${d} · Final${g?.comeback ? ' · <span class="cbk">Comeback</span>' : ''}</div><div class="o">${logo(o)}${who}<span class="res ${r}">${r ? r + ' ' : ''}${my}–${op}</span></div><div class="r">${esc(x.location || '')}</div>
+          ${g ? `<div class="cta">${miniFlow(g, p || x.away)}<span>Game flow &amp; summary <b>→</b></span></div>` : ''}`;
       } else {
         inner = `<div class="d">${d} · ${tm(x.start)}</div><div class="o">${logo(o)}${who}</div><div class="r">${esc(x.location || '')}${o.stub ? '' : ` · opp ${o.w}-${o.l}-${o.t}`}</div>`;
       }
@@ -520,10 +666,34 @@
   }
 
   // ------------------------------------------------------------ views
+  // Featured game: the big animated game-flow chart with a clear way into the full summary.
+  function featuredGame(g, focusId, title) {
+    const us = String(focusId) === String(g.away.id) ? 'away' : 'home', them = us === 'home' ? 'away' : 'home';
+    const U = team(g[us].id), O = team(g[them].id), r = g[us].score > g[them].score ? 'W' : g[us].score < g[them].score ? 'L' : 'T';
+    const moments = g.ev.filter((e) => e.type === 'goal' && e.side === us && e.moment && e.moment !== 'Opening goal').length;
+    after(() => {
+      const fc = flowChart($('#feat-flow'), g, { focus: focusId });
+      $('#feat-replay').addEventListener('click', (e) => { e.preventDefault(); fc.play(); });
+    });
+    return `<section class="panel feat" data-reveal style="margin-bottom:18px">
+      <div class="ph"><h2 class="gold">${title}</h2><span class="meta">${dt(g.date, { weekday: 'short', month: 'short', day: 'numeric' })} · ${esc(g.rink)}</span></div>
+      <div class="feat-body">
+        <div class="feat-score">
+          <div class="fs-row">${logo(U)}<span class="nm">${esc(U.short)}</span><span class="sc">${g[us].score}</span></div>
+          <div class="fs-row lo">${logo(O)}<span class="nm">${esc(O.short)}</span><span class="sc">${g[them].score}</span></div>
+          <div class="fs-res"><span class="res ${r}">${r === 'W' ? 'Win' : r === 'L' ? 'Loss' : 'Tie'}</span>${g.comeback === us ? ' · comeback' : ''}${moments ? ` · ${moments} tying/go-ahead goal${moments > 1 ? 's' : ''}` : ''}</div>
+          <div class="feat-act"><a class="btn on" href="#/game/${g.id}">Full game summary →</a><button class="btn" id="feat-replay">↻ Replay</button></div>
+        </div>
+        <div class="feat-chart"><div class="legend"><span><i style="background:var(--us)"></i>${esc(U.short)}</span><span><i style="background:var(--red)"></i>${esc(O.short)}</span><span><i style="background:var(--ink3);opacity:.5"></i>Power play</span></div><div class="chart" id="feat-flow"></div></div>
+      </div>
+    </section>`;
+  }
+
   function viewHome() {
     const me = team(myTeamId());
     const mySched = S.schedule.filter((s) => involves(s, me.id));
     const played = mySched.filter((s) => s.final).slice(-4).reverse();
+    const latest = mySched.filter((s) => s.final && s.hasDetail).map((s) => gameById.get(s.id)).filter(Boolean).at(-1);
     const upcoming = mySched.filter(isUpcoming);
     const favs = favPlayers();
     const followed = [...favs].map((id) => playerById.get(id)).sort((a, b) => b.pts - a.pts);
@@ -535,6 +705,7 @@
     });
     return `
       ${hero(me)}
+      ${latest ? featuredGame(latest, me.id, `Last game · ${esc(me.short)}`) : ''}
       <div class="grid g-7-5">
         ${panel('Standings', '<div class="tw"><table id="standings"></table></div>', { meta: 'Tap a column to sort' })}
         ${panel('Goal differential', '<div class="pb"><div class="chart" id="gd"></div></div>', { meta: 'GF − GA' })}
@@ -555,11 +726,7 @@
       sortable($('#standings'), S.teams, standingsCols(true), { key: 'rank', dir: 1, rowCls: mineRow });
       gdChart($('#gd'), myTeamId());
       stChart($('#st'), myTeamId());
-      const me = team(myTeamId());
-      heatmap($('#heat'), [
-        { label: 'Division', color: 'var(--blue)', goals: S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal')) },
-        { label: me.short, color: 'var(--us)', goals: S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal' && String(e.teamId) === me.id)) },
-      ]);
+      timingChart($('#heat'), { up: { label: 'Goals scored', color: 'var(--blue)', goals: S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal')) }, notes: $('#heat-notes') });
       sortable($('#special'), S.teams, [
         { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
         { key: 'ppg', label: 'PPG', val: (t) => t.ppg }, { key: 'ppo', label: 'PPO', val: (t) => t.ppo, title: 'Power-play opportunities' },
@@ -587,7 +754,7 @@
       </div>
       <div style="margin-bottom:18px">${panel('Special teams &amp; shots', '<div class="tw"><table id="special"></table></div><div class="note">PP chances are counted from opponent minor/major penalties on the game sheet. Team save % leaves out sheets where shots weren\'t tracked.</div>')}</div>
       <div style="margin-bottom:18px">${panel('Goals by period', '<div class="tw"><table id="periods"></table></div>')}</div>
-      <div style="margin-bottom:18px">${panel('When goals happen', '<div class="pb"><div class="chart" id="heat"></div></div><div class="note">Every regulation goal in the division, by period and 3-minute stretch. Darker = more goals.</div>', { meta: 'Division-wide' })}</div>`;
+      <div style="margin-bottom:18px">${panel('When goals happen', '<div class="pb"><div class="legend"><span><i style="background:var(--blue)"></i>Goals in each 3-minute stretch</span></div><div class="chart" id="heat"></div><div id="heat-notes"></div></div>', { meta: 'Whole division · regulation' })}</div>`;
   }
 
   function viewSkaters() {
@@ -687,11 +854,12 @@
     }
     after(() => {
       progChart($('#prog'), t);
-      heatmap($('#heat'), [
-        { label: 'Scored', color: 'var(--us)', goals: teamGoals(true) },
-        { label: 'Allowed', color: 'var(--red)', goals: teamGoals(false) },
-      ]);
-      const net = networkChart($('#net'), id);
+      timingChart($('#heat'), {
+        up: { label: 'Scored', color: 'var(--us)', goals: teamGoals(true) },
+        down: { label: 'Allowed', color: 'var(--red)', goals: teamGoals(false) },
+        notes: $('#heat-notes'),
+      });
+      const net = networkChart($('#net'), id, { controls: $('#net-ctl') });
       const nm = $('#net-meta'); if (nm) nm.textContent = net.goals ? `${net.assisted} of ${net.goals} goals assisted` : '';
       sortable($('#wk'), [...wk.values()], [
         { key: 'id', label: 'Weekend', cls: 'l', val: (o) => o.id, desc: false, html: (o) => `<a class="lnk" href="#/weekend/${o.id}">${esc(weekLabel(o.id))}</a>` },
@@ -707,10 +875,10 @@
       ${hero(t, { action })}
       <div style="margin-bottom:18px">${panel('Season progression', `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals for (running)</span><span><i style="background:var(--red)"></i>Goals against (running)</span><span><i style="background:var(--us);height:8px"></i>W</span><span><i style="background:#5A2A22;height:8px"></i>L</span></div><div class="chart" id="prog"></div></div>`, { gold: true, meta: `${t.gp} GP · by weekend` })}</div>
       <div class="grid g-7-5">
-        ${panel('When goals happen', '<div class="pb"><div class="chart" id="heat"></div></div><div class="note">Regulation goals by period and 3-minute stretch. Darker = more goals.</div>', { meta: 'Scored vs allowed' })}
+        ${panel('When goals happen', '<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Scored (up)</span><span><i style="background:var(--red)"></i>Allowed (down)</span></div><div class="chart" id="heat"></div><div id="heat-notes"></div></div>', { meta: '3-minute stretches' })}
         ${panel('By weekend', '<div class="tw"><table id="wk"></table></div>')}
       </div>
-      <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div class="chart" id="net"></div></div><div class="note">Lines join a passer and scorer on the same goal — thicker means more goals together. Hover a player to see just their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>
+      <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div id="net-ctl" class="net-ctl"></div><div class="chart" id="net"></div></div><div class="note">A line joins a passer and a scorer on the same goal. Hover a player to see only their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>
       <div class="grid g-5-7">
         ${panel('By period', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { gold: true, meta: `${t.gp} GP` })}
         ${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team SV% ${rate(t.svPct)} · PIM ${t.pim}` })}
@@ -787,7 +955,12 @@
     const box = (teamId) => g.skaters.filter((r) => String(r.teamId) === String(teamId)).sort((x, y) => (y.g + y.a) - (x.g + x.a) || y.g - x.g);
     const boxTable = (t) => `<div class="tw"><table class="gl"><thead><tr><th>#</th><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th></tr></thead><tbody>${box(t.id).map((r) => `<tr><td>${esc(r.number)}</td><td class="l">${playerLink(r.playerId, r.name)}</td><td>${r.g}</td><td>${r.a}</td><td class="pts" style="font-size:16px">${r.g + r.a}</td></tr>`).join('')}</tbody></table></div>`;
     const plabel = (l) => (/^\d+$/.test(l) ? 'P' + l : l);
-    after(() => flowChart($('#flow'), g));
+    const focus = involves({ home: g.home.id, away: g.away.id }, myTeamId()) ? myTeamId() : g.home.id;
+    const fu = String(focus) === String(g.away.id) ? a : h, fo = fu === h ? a : h;
+    after(() => {
+      const fc = flowChart($('#flow'), g, { focus });
+      $('#flow-replay').addEventListener('click', () => fc.play());
+    });
     return `
       <section class="panel" data-reveal style="margin-bottom:18px">
         <div class="ph"><h2>Game summary</h2><span class="meta">${g.gameNumber ? `Game ${esc(g.gameNumber)} · ` : ''}${esc(g.rink)}</span></div>
@@ -798,8 +971,8 @@
         </div>
         <div class="game-body">
           <div>
-            <div class="sub">Game flow</div>
-            <div class="legend"><span><i style="background:var(--red)"></i>${esc(a.short)}</span><span><i style="background:var(--us)"></i>${esc(h.short)}</span><span><i style="background:var(--ink3);height:2px;vertical-align:3px"></i>Penalty</span></div>
+            <div class="sub sub-row">Game flow <button class="btn sm" id="flow-replay">↻ Replay</button></div>
+            <div class="legend"><span><i style="background:var(--us)"></i>${esc(fu.short)}</span><span><i style="background:var(--red)"></i>${esc(fo.short)}</span><span><i style="background:var(--ink3);opacity:.5"></i>Power play</span><span><i style="background:var(--ink3);height:6px;width:2px"></i>Penalty</span></div>
             <div class="chart" id="flow"></div>
             <div class="tw"><table class="per" style="margin-top:14px"><thead><tr><th class="l">Team</th>${g.periods.map((p) => `<th>${esc(plabel(p.label))}</th>`).join('')}<th>T</th><th>SOG</th></tr></thead><tbody>
               ${[[a, 'away'], [h, 'home']].map(([t, s]) => `<tr><td class="l"><span class="tn">${logo(t)}${esc(t.code)}</span></td>${g.periods.map((p) => `<td>${p[s]}</td>`).join('')}<td class="tot">${g[s].score}</td><td>${shots(s) ?? '—'}</td></tr>`).join('')}
