@@ -1090,12 +1090,274 @@
       <div style="margin-bottom:18px">${panel('All games', gameCards(items, null), { meta: `${items.length} games` })}</div>`;
   }
 
+  // ------------------------------------------------------------ scouting report
+  // Built live in the browser for any team from stats.json. "Keys to the game" are rules that only
+  // fire on a clear signal and always show their evidence; every section shows its sample size.
+  function scoutData(id) {
+    const t = teamById.get(String(id)), me = myTeamId(), self = String(id) === me;
+    const PER = (S.meta.regulationMinutes || 45) / 3 * 60, bucket = PER / 5;
+    const sideOf = (g) => (String(g.home.id) === String(id) ? 'home' : 'away');
+    const oppOf = (s) => (s === 'home' ? 'away' : 'home');
+    const games = S.games.filter((g) => String(g.home.id) === String(id) || String(g.away.id) === String(id));
+    const rankOf = (fn, dir = 'desc') => { const v = fn(t); if (v == null) return null; return 1 + S.teams.filter((o) => fn(o) != null && (dir === 'desc' ? fn(o) > v : fn(o) < v)).length; };
+    const avgOf = (fn) => { const xs = S.teams.map(fn).filter((v) => v != null && Number.isFinite(v)); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; };
+    const perGame = (k) => (o) => (o.gp ? o[k] / o.gp : null);
+
+    // players: skaters by goals (reliance) and points (threats)
+    const skaters = S.players.filter((p) => String(p.teamId) === String(id) && (!p.isGoalie || p.pts > 0));
+    const byPts = [...skaters].sort((a, b) => b.pts - a.pts || b.g - a.g);
+    const byG = [...skaters].sort((a, b) => b.g - a.g || b.pts - a.pts);
+    const top2 = byG.slice(0, 2), top2Share = t.gf ? top2.reduce((n, p) => n + p.g, 0) / t.gf : 0;
+    const scorers = skaters.filter((p) => p.g > 0).length;
+    const lastWk = t.results.length ? weekKey(t.results.at(-1).date) : null;
+    const lwPts = (p) => p.log.filter((l) => weekKey(l.date) === lastWk).reduce((n, l) => n + l.pts, 0);
+    // duos from goal/assist pairs
+    const pairs = new Map();
+    for (const g of games) for (const e of g.ev) {
+      if (e.type !== 'goal' || String(e.teamId) !== String(id) || !e.playerId) continue;
+      for (const a of e.assists) {
+        if (!a.playerId || a.playerId === e.playerId) continue;
+        const k = [a.playerId, e.playerId].sort().join('|');
+        pairs.set(k, (pairs.get(k) || 0) + 1);
+      }
+    }
+    const duos = [...pairs].map(([k, n]) => ({ ids: k.split('|'), n })).sort((a, b) => b.n - a.n).filter((d) => d.n >= 2).slice(0, 3);
+
+    // timing: early (first 3 min of a period) and late (last 3 min) goals, for and against
+    const tb = { gfEarly: 0, gfLate: 0, gaEarly: 0, gaLate: 0, n: 0 };
+    for (const g of games) for (const e of g.ev) {
+      if (e.type !== 'goal' || !e.regulation || e.badClock) continue;
+      const within = e.t - (Number(e.period) - 1) * PER, mine = String(e.teamId) === String(id);
+      const early = within < bucket, late = within >= PER - bucket;
+      if (mine) { if (early) tb.gfEarly++; if (late) tb.gfLate++; } else { if (early) tb.gaEarly++; if (late) tb.gaLate++; }
+    }
+    const periods = [...new Set([...Object.keys(t.gfByPeriod), ...Object.keys(t.gaByPeriod)])].filter((p) => /^\d+$/.test(p)).sort();
+
+    // discipline
+    const pens = games.flatMap((g) => g.ev.filter((e) => e.type === 'penalty' && e.side === sideOf(g)));
+    const infractions = [...pens.reduce((m, e) => m.set(e.infraction || 'Other', (m.get(e.infraction || 'Other') || 0) + 1), new Map())].sort((a, b) => b[1] - a[1]);
+    const penPlayers = skaters.filter((p) => p.pim > 0).sort((a, b) => b.pim - a.pim).slice(0, 3);
+    const penByPeriod = periods.map((p) => [p, pens.filter((e) => String(e.period) === p).length]);
+
+    // game script
+    const script = { first: { W: 0, L: 0, T: 0 }, trailFirst: { W: 0, L: 0, T: 0 }, oneGoal: { W: 0, L: 0, T: 0 }, blowW: 0, blowL: 0, comebacks: 0, blownLeads: 0, p3: 0, n: 0, big: null, worst: null };
+    for (const g of games) {
+      const s = sideOf(g), o = oppOf(s), gf = g[s].score, ga = g[o].score, r = gf > ga ? 'W' : gf < ga ? 'L' : 'T';
+      script.n++;
+      const fg = g.ev.find((e) => e.type === 'goal');
+      if (fg) script[fg.side === s ? 'first' : 'trailFirst'][r]++;
+      if (Math.abs(gf - ga) === 1) script.oneGoal[r]++;
+      if (gf - ga >= 5) script.blowW++;
+      if (ga - gf >= 5) script.blowL++;
+      if (g.comeback === s) script.comebacks++;
+      if (g.comeback === o) script.blownLeads++;
+      const p3 = g.periods.find((p) => p.label === '3'); if (p3) script.p3 += p3[s] - p3[o];
+      if (!script.big || gf - ga > script.big.m) script.big = { m: gf - ga, g, gf, ga };
+      if (!script.worst || gf - ga < script.worst.m) script.worst = { m: gf - ga, g, gf, ga };
+    }
+
+    // shots: only games whose sheet has a shots table
+    const sg = games.filter((g) => g.shotsByPeriod?.length);
+    const sh = sg.reduce((a, g) => { const s = sideOf(g), o = oppOf(s); a.sf += g.shotsByPeriod.reduce((n, p) => n + p[s], 0); a.sa += g.shotsByPeriod.reduce((n, p) => n + p[o], 0); a.gf += g[s].score; a.ga += g[o].score; return a; }, { sf: 0, sa: 0, gf: 0, ga: 0 });
+    const shootPct = sh.sf ? sh.gf / sh.sf : null;
+    const teamShootPct = (o) => { const gs = S.games.filter((g) => (String(g.home.id) === o.id || String(g.away.id) === o.id) && g.shotsByPeriod?.length); let sf = 0, gf = 0; for (const g of gs) { const s = String(g.home.id) === o.id ? 'home' : 'away'; sf += g.shotsByPeriod.reduce((n, p) => n + p[s], 0); gf += g[s].score; } return sf ? gf / sf : null; };
+
+    // goalies
+    const gls = (S.goalies || []).filter((g) => String(g.teamId) === String(id)).sort((a, b) => b.seconds - a.seconds);
+    const glSec = gls.reduce((n, g) => n + g.seconds, 0);
+
+    // common opponents + history vs my team
+    const res = (teamId, oppId) => teamById.get(String(teamId))?.results.filter((r) => String(r.opp) === String(oppId)) || [];
+    const sum = (rs) => rs.reduce((a, r) => { a[r.r]++; a.gf += r.gf; a.ga += r.ga; return a; }, { W: 0, L: 0, T: 0, gf: 0, ga: 0 });
+    const common = self ? [] : S.teams.filter((o) => o.id !== String(id) && o.id !== me).map((o) => ({ o, them: sum(res(id, o.id)), us: sum(res(me, o.id)) }))
+      .filter((c) => c.them.W + c.them.L + c.them.T && c.us.W + c.us.L + c.us.T);
+    const h2h = self ? [] : S.schedule.filter((s) => s.final && involves(s, id) && involves(s, me));
+    const nextMeet = self ? null : S.schedule.find((s) => isUpcoming(s) && involves(s, id) && involves(s, me));
+    const nextGame = S.schedule.find((s) => isUpcoming(s) && involves(s, id));
+    const rinkFor = (s) => s?.location || null;
+    const rinkRec = (teamId, rink) => { const r = sum((teamById.get(String(teamId))?.results || []).filter((x) => S.schedule.find((s) => s.id === x.gameId)?.location === rink)); return r.W + r.L + r.T ? r : null; };
+
+    return {
+      t, self, me, games, byPts, byG, top2, top2Share, scorers, lastWk, lwPts, duos, tb, periods, pens, infractions, penPlayers, penByPeriod,
+      script, sg, sh, shootPct, gls, glSec, common, h2h, nextMeet, nextGame, rinkFor, rinkRec,
+      ranks: {
+        gfpg: rankOf((o) => o.gfPerGame), gapg: rankOf((o) => o.gaPerGame, 'asc'), pp: rankOf((o) => o.ppPct), pk: rankOf((o) => o.pkPct),
+        pim: rankOf(perGame('pim')), sv: rankOf((o) => o.svPct), sapg: rankOf(perGame('sa'), 'asc'), shoot: rankOf(teamShootPct),
+      },
+      avg: { pim: avgOf(perGame('pim')), sapg: avgOf(perGame('sa')), sv: avgOf((o) => o.svPct), pp: avgOf((o) => o.ppPct), pk: avgOf((o) => o.pkPct), shoot: avgOf(teamShootPct) },
+    };
+  }
+
+  // Keys to the game: each rule needs a clear signal (and enough games) before it says anything.
+  function scoutKeys(d) {
+    const { t, self } = d, We = self ? 'We' : 'They', we = self ? 'we' : 'they', our = self ? 'our' : 'their', n = t.gp;
+    const keys = [];
+    const add = (score, title, evidence) => keys.push({ score, title, evidence });
+    const nm = (p) => `#${p.number} ${p.name}`;
+    const pctS = (x) => `${Math.round(x * 100)}%`;
+    if (n < 2) return keys;
+    if (t.gf >= 8 && d.top2Share >= 0.5) add(d.top2Share, `Top-heavy scoring — ${self ? 'teams will key on' : 'key on'} ${d.top2.map(nm).join(' and ')}`, `${pctS(d.top2Share)} of ${our} ${t.gf} goals come from those two.`);
+    else if (t.gf >= 8 && d.scorers >= 7) add(0.45, `Balanced scoring — ${d.scorers} different goal scorers`, `No player has more than ${pctS(d.byG[0].g / t.gf)} of ${our} goals.`);
+    for (const p of d.periods) {
+      const ga = t.gaByPeriod[p] || 0, gf = t.gfByPeriod[p] || 0;
+      if (t.ga >= 6 && ga / t.ga >= 0.45) add(ga / t.ga, `${self ? 'We leak' : 'Leaky'} in period ${p}`, `${ga} of ${t.ga} goals against came in P${p}.`);
+      if (t.gf >= 6 && gf / t.gf >= 0.45) add(gf / t.gf - 0.05, `${We} do most damage in period ${p}`, `${gf} of ${t.gf} goals for came in P${p}.`);
+    }
+    if (t.ga >= 5 && d.tb.gaLate / t.ga >= 0.3) add(d.tb.gaLate / t.ga, `Vulnerable late in periods`, `${d.tb.gaLate} of ${t.ga} goals against came in the last 3 minutes of a period.`);
+    if (t.gf >= 5 && d.tb.gfEarly / t.gf >= 0.3) add(d.tb.gfEarly / t.gf - 0.05, `Fast starters`, `${d.tb.gfEarly} of ${t.gf} goals came in the first 3 minutes of a period.`);
+    const pimpg = t.pim / n;
+    if (d.avg.pim && pimpg >= d.avg.pim * 1.25 && d.ranks.pim <= 3) add(0.6 + (pimpg / d.avg.pim - 1) * 0.3, `${self ? 'We take too many penalties' : 'Penalty-prone — expect power plays'}`, `${pimpg.toFixed(1)} PIM per game (${ordinal(d.ranks.pim)} most; division average ${d.avg.pim.toFixed(1)}).${d.infractions[0] ? ` Most common: ${d.infractions[0][0]} (${d.infractions[0][1]}).` : ''}`);
+    if (t.ppo >= 5 && t.ppPct >= 0.3 && d.ranks.pp <= 3) add(0.55 + t.ppPct * 0.3, `Dangerous power play${self ? '' : ' — stay out of the box'}`, `${t.ppg} of ${t.ppo} (${pctS(t.ppPct)}), ${ordinal(d.ranks.pp)} in the division.`);
+    if (t.tsh >= 5 && t.pkPct != null && t.pkPct <= 0.7) add(0.55 + (0.7 - t.pkPct), `Weak penalty kill`, `Killed ${t.tsh - t.ppga} of ${t.tsh} (${pctS(t.pkPct)}), ${ordinal(d.ranks.pk)} in the division.`);
+    if (t.svPct != null && d.avg.sv && t.svPct <= d.avg.sv - 0.05 && d.ranks.sv >= S.teams.length - 2) add(0.6 + (d.avg.sv - t.svPct), self ? `Our save % is among the lowest` : `Shoot early and often`, `Team save % ${rate(t.svPct)} (${ordinal(d.ranks.sv)}; division average ${rate(d.avg.sv)}).`);
+    if (t.svPct != null && d.avg.sv && t.svPct >= d.avg.sv + 0.05 && d.ranks.sv <= 2) add(0.5 + (t.svPct - d.avg.sv), self ? `Strong in net` : `Hot goaltending — need quality chances`, `Team save % ${rate(t.svPct)} (${ordinal(d.ranks.sv)} in the division).`);
+    if (d.sg.length >= 2 && d.sh.sa / d.sg.length >= (d.avg.sapg || 0) * 1.25) add(0.5, `${We} give up a lot of shots`, `${(d.sh.sa / d.sg.length).toFixed(1)} shots against per game (division average ${(d.avg.sapg || 0).toFixed(1)}).`);
+    if (d.script.comebacks >= 2) add(0.55, `${We} don't quit — ${d.script.comebacks} comeback wins`, `Won ${d.script.comebacks} games after trailing.`);
+    const tf = d.script.trailFirst, tfn = tf.W + tf.L + tf.T;
+    if (tfn >= 2 && tf.W + tf.T === 0) add(0.55, `The first goal matters`, `${We}'re 0-${tf.L} when the other team scores first.`);
+    const hot = d.byPts.map((p) => ({ p, v: d.lwPts(p) })).filter((x) => x.v >= 5).sort((a, b) => b.v - a.v)[0];
+    if (hot) add(0.5 + hot.v / 40, `Hot hand: ${nm(hot.p)}`, `${hot.v} points last weekend.`);
+    if (d.duos[0] && d.duos[0].n >= 3) add(0.45 + d.duos[0].n / 40, `${self ? 'Our top connection:' : 'Watch the'} ${d.duos[0].ids.map((i) => playerById.get(i)?.name.split(' ')[0]).join('–')}${self ? '' : ' connection'}`, `Combined on ${d.duos[0].n} goals.`);
+    return keys.sort((a, b) => b.score - a.score).slice(0, 5);
+  }
+
+  function viewScout(id) {
+    const me = myTeamId();
+    if (!id) {
+      const nx = S.schedule.find((s) => isUpcoming(s) && involves(s, me));
+      const target = nx ? (String(nx.home) === me ? nx.away : nx.home) : S.teams.find((t) => t.id !== me)?.id;
+      location.replace(`#/scout/${teamById.has(String(target)) ? target : me}`);
+      return '';
+    }
+    const t = teamById.get(String(id));
+    if (!t) return notFound();
+    const d = scoutData(id), keys = scoutKeys(d), my = team(me), n = t.gp;
+    const We = d.self ? 'We' : 'They';
+    const rec = (r) => `${r.W}-${r.L}-${r.T}`;
+    const pctS = (x) => (x == null ? '—' : `${Math.round(x * 100)}%`);
+    const rk = (r) => (r ? `<em class="rk">${ordinal(r)}</em>` : '');
+    const upOpps = [...new Map(S.schedule.filter((s) => isUpcoming(s) && involves(s, me)).map((s) => { const o = String(s.home) === me ? String(s.away) : String(s.home); return [o, s]; })).entries()].filter(([o]) => teamById.has(o)).slice(0, 4);
+    const opts = [...S.teams].sort((a, b) => a.name.localeCompare(b.name)).map((o) => `<option value="${o.id}" ${o.id === t.id ? 'selected' : ''}>${o.id === me ? `Self-scout: ${esc(o.name)}` : esc(o.name)}</option>`).join('');
+    const chips = `${upOpps.map(([o, s]) => `<a class="wkchip ${o === t.id ? 'on' : ''}" href="#/scout/${o}">${esc(team(o).short)} · ${dt(s.start)}</a>`).join('')}<a class="wkchip ${d.self ? 'on' : ''}" href="#/scout/${me}">Self-scout</a>`;
+    const tile = (l, v, s = '') => `<div class="st"><span class="l">${l}</span><span class="v">${v}</span><span class="s">${s}</span></div>`;
+    const lastRes = t.results.filter((r) => weekKey(r.date) === d.lastWk), lwRec = rec(lastRes.reduce((a, r) => { a[r.r]++; return a; }, { W: 0, L: 0, T: 0 }));
+    after(() => {
+      $('#sc-pick').addEventListener('change', (e) => { location.hash = `#/scout/${e.target.value}`; });
+      periodChart($('#sc-per'), t);
+      timingChart($('#sc-time'), {
+        up: { label: 'Scored', color: d.self ? 'var(--us)' : 'var(--blue)', goals: d.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal' && String(e.teamId) === t.id)) },
+        down: { label: 'Allowed', color: 'var(--red)', goals: d.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal' && String(e.teamId) !== t.id)) },
+        notes: $('#sc-time-notes'),
+      });
+      if (!d.self && d.common.length) sortable($('#sc-common'), d.common.map((c) => ({ ...c, id: c.o.id })), [
+        { key: 'opp', label: 'Opponent', cls: 'l', val: (c) => c.o.name, desc: false, html: (c) => tn(c.o) },
+        { key: 'them', label: esc(t.short), val: (c) => c.them.gf - c.them.ga, html: (c) => `<span class="rb ${c.them.W > c.them.L ? 'W' : c.them.L > c.them.W ? 'L' : 'T'}">${rec(c.them)}</span>${c.them.gf}–${c.them.ga}` },
+        { key: 'us', label: esc(my.short), val: (c) => c.us.gf - c.us.ga, html: (c) => `<span class="rb ${c.us.W > c.us.L ? 'W' : c.us.L > c.us.W ? 'L' : 'T'}">${rec(c.us)}</span>${c.us.gf}–${c.us.ga}` },
+        { key: 'edge', label: 'Edge', val: (c) => (c.us.gf - c.us.ga) - (c.them.gf - c.them.ga), html: (c) => { const e = (c.us.gf - c.us.ga) - (c.them.gf - c.them.ga); return `<span class="${e > 0 ? 'pos' : e < 0 ? 'neg' : ''}">${e > 0 ? esc(my.short) : e < 0 ? esc(t.short) : 'Even'} ${e ? sign(Math.abs(e)) : ''}</span>`; }, title: 'Goal-differential difference against that opponent' },
+      ], { key: 'edge' });
+    });
+
+    // --- sections
+    const keysHtml = keys.length
+      ? `<ol class="keys">${keys.map((k) => `<li><b>${esc(k.title)}</b><span>${esc(k.evidence)}</span></li>`).join('')}</ol>`
+      : `<div class="empty">${n < 2 ? 'Not enough games yet for reliable keys' : 'Nothing stands out yet — a well-rounded team so far'}</div>`;
+    const nextHtml = d.nextMeet
+      ? (() => {
+        const rink = d.rinkFor(d.nextMeet), rt = d.rinkRec(t.id, rink), ru = d.rinkRec(me, rink);
+        return `<div class="note"><b>Next meeting:</b> ${dt(d.nextMeet.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(d.nextMeet.start)} · ${esc(rink || '')}${rt || ru ? ` — at this rink: ${esc(t.short)} ${rt ? rec(rt) : 'no games'}, ${esc(my.short)} ${ru ? rec(ru) : 'no games'}` : ''}</div>`;
+      })() : '';
+    const threats = d.byPts.slice(0, 8).map((p) => {
+      const lw = d.lwPts(p);
+      return `<tr><td class="l">${playerLink(p.id, p.name)}<span class="sub2">#${esc(p.number)}</span></td><td>${p.g}</td><td>${p.a}</td><td class="pts" style="font-size:16px">${p.pts}</td><td class="hm">${p.ptsPerGame.toFixed(2)}</td><td class="hm">${p.ppg}</td><td>${lw ? `${lw}${lw >= 5 ? '<span class="chip gwg">HOT</span>' : ''}` : '–'}</td></tr>`;
+    }).join('');
+    const gSec = (g) => (d.glSec ? Math.round((g.seconds / d.glSec) * 100) : 0);
+    const goalieRows = d.gls.map((g) => `<tr><td class="l">${playerLink(g.id, g.name)}<span class="sub2">#${esc(g.number)}</span></td><td>${g.gp}</td><td>${gSec(g)}%</td><td>${g.w}-${g.l}-${g.t}</td><td>${rate(g.svPct)}</td><td>${g.gaa == null ? '—' : g.gaa.toFixed(2)}</td></tr>`).join('');
+    const sc = d.script;
+    const kv = (rows) => `<div class="kv">${rows.map(([k, v]) => `<div><span>${k}</span><b>${v}</b></div>`).join('')}</div>`;
+
+    return `
+      <div class="ptitle"><div><div class="k">Scouting report · ${d.self ? 'self-scout' : d.nextMeet ? 'next opponent' : 'opponent'} · ${n} GP</div>
+        <h1 class="sc-h1">${logo(t)}${esc(t.name)}</h1>
+        <div class="s">${ordinal(t.rank)} · ${rec({ W: t.w, L: t.l, T: t.t })} · last 5 ${esc(t.last5 || '–')}</div></div>
+        <select id="sc-pick" aria-label="Scout a team">${opts}</select></div>
+      <div class="wkbar">${chips}</div>
+
+      <div style="margin-bottom:18px">${panel('Keys to the game', `<div class="pb">${keysHtml}</div>${nextHtml}`, { gold: true, meta: `Based on ${n} game${n === 1 ? '' : 's'}` })}</div>
+
+      <div style="margin-bottom:18px">${panel('Snapshot', `<div class="stats">
+        ${tile('Record', rec({ W: t.w, L: t.l, T: t.t }), `${ordinal(t.rank)} in division`)}
+        ${tile('GF / game', t.gfPerGame.toFixed(1), rk(d.ranks.gfpg) + ' offense')}
+        ${tile('GA / game', t.gaPerGame.toFixed(1), rk(d.ranks.gapg) + ' defense')}
+        ${tile('Last weekend', lwRec, d.lastWk ? esc(weekLabel(d.lastWk)) : '')}
+        ${tile('Power play', pctS(t.ppPct), `${t.ppg}/${t.ppo} · ${rk(d.ranks.pp)}`)}
+        ${tile('Penalty kill', pctS(t.pkPct), `${t.tsh - t.ppga}/${t.tsh} · ${rk(d.ranks.pk)}`)}
+      </div>`)}</div>
+
+      ${!d.self ? `<div class="grid g-6-6">
+        ${panel(`History vs ${esc(my.short)}`, d.h2h.length ? gameCards(d.h2h, me) : `<div class="empty">Haven't played ${esc(my.short)} yet</div>`, { meta: d.h2h.length ? `${d.h2h.length} game${d.h2h.length > 1 ? 's' : ''}` : '' })}
+        ${panel('Common opponents', d.common.length ? '<div class="tw"><table id="sc-common"></table></div><div class="note">Same opponent, both teams’ results. Edge = which team did better against them, by goal differential.</div>' : '<div class="empty">No common opponents yet</div>', { meta: `${d.common.length} teams` })}
+      </div>` : ''}
+
+      <div class="grid g-7-5">
+        ${panel('Who to key on', `<div class="tw"><table class="gl"><thead><tr><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th><th class="hm">P/GP</th><th class="hm">PPG</th><th>Last wknd</th></tr></thead><tbody>${threats}</tbody></table></div>
+          <div class="pb">${kv([
+            ['Top two goal scorers', `${pctS(d.top2Share)} of goals`],
+            ['Different goal scorers', d.scorers],
+            ...d.duos.map((x) => [`Duo: ${x.ids.map((i) => esc(playerById.get(i)?.name || '?')).join(' + ')}`, `${x.n} goals together`]),
+          ])}</div>`, { gold: true, meta: 'By points' })}
+        ${panel('Goalies', `<div class="tw"><table class="gl"><thead><tr><th class="l">Goalie</th><th>GP</th><th>Share</th><th>W-L-T</th><th>SV%</th><th>GAA</th></tr></thead><tbody>${goalieRows || '<tr><td class="l empty" colspan="6">No goalie data</td></tr>'}</tbody></table></div>
+          <div class="pb">${kv([
+            ['Team save %', `${rate(t.svPct)} ${rk(d.ranks.sv)}`],
+            ['Shots against / game', d.sg.length ? `${(d.sh.sa / d.sg.length).toFixed(1)} ${rk(d.ranks.sapg)}` : '—'],
+            ['Goals against, last 3 min of periods', `${d.tb.gaLate} of ${t.ga}`],
+            ...d.periods.map((p) => [`Goals against in P${p}`, t.gaByPeriod[p] || 0]),
+          ])}</div><div class="note">Share = portion of goalie minutes. ${GOALIE_NOTE}</div>`, { meta: `${d.gls.length} goalie${d.gls.length === 1 ? '' : 's'}` })}
+      </div>
+
+      <div class="grid g-7-5">
+        ${panel('When goals happen', `<div class="pb"><div class="legend"><span><i style="background:${d.self ? 'var(--us)' : 'var(--blue)'}"></i>Scored (up)</span><span><i style="background:var(--red)"></i>Allowed (down)</span></div><div class="chart" id="sc-time"></div><div id="sc-time-notes"></div></div>`, { meta: `${n} GP · 3-minute stretches` })}
+        ${panel('Best &amp; worst periods', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Against</span><span><i style="background:var(--us)"></i>For</span></div><div class="chart" id="sc-per"></div></div>`, { meta: `${n} GP` })}
+      </div>
+
+      <div class="grid g-6-6">
+        ${panel('Discipline &amp; special teams', `<div class="pb">${kv([
+          ['PIM per game', `${(t.pim / Math.max(1, n)).toFixed(1)} ${rk(d.ranks.pim)} <small>avg ${d.avg.pim ? d.avg.pim.toFixed(1) : '—'}</small>`],
+          ['Times shorthanded / game', (t.tsh / Math.max(1, n)).toFixed(1)],
+          ['Power play', `${pctS(t.ppPct)} (${t.ppg}/${t.ppo}) ${rk(d.ranks.pp)}`],
+          ['Penalty kill', `${pctS(t.pkPct)} (${t.tsh - t.ppga}/${t.tsh}) ${rk(d.ranks.pk)}`],
+          ['Shorthanded goals for / against', `${t.shg} / ${t.shga}`],
+          ...d.infractions.slice(0, 3).map(([k, v]) => [`Infraction: ${esc(k)}`, v]),
+          ...d.penPlayers.map((p) => [`Most PIM: ${esc(p.name)} #${esc(p.number)}`, `${p.pim} min`]),
+          ['Penalties by period', d.penByPeriod.map(([p, v]) => `P${p} ${v}`).join(' · ') || '—'],
+        ])}</div>`, { meta: `${d.pens.length} penalties` })}
+        ${panel('Game script', `<div class="pb">${kv([
+          ['Scoring first', rec(sc.first)],
+          ['When opponent scores first', rec(sc.trailFirst)],
+          ['One-goal games', rec(sc.oneGoal)],
+          ['Blowouts (5+ goals) won / lost', `${sc.blowW} / ${sc.blowL}`],
+          ['Comeback wins', sc.comebacks],
+          ['Leads lost', sc.blownLeads],
+          ['3rd-period goal differential', sign(sc.p3)],
+          ...(sc.big ? [['Biggest win', sc.big.m > 0 ? `<a class="lnk" href="#/game/${sc.big.g.id}">${sc.big.gf}–${sc.big.ga} vs ${esc(team(sc.big.g[sc.big.g.home.id === t.id ? 'away' : 'home'].id).short)}</a>` : '—']] : []),
+          ...(sc.worst ? [['Toughest loss', sc.worst.m < 0 ? `<a class="lnk" href="#/game/${sc.worst.g.id}">${sc.worst.gf}–${sc.worst.ga} vs ${esc(team(sc.worst.g[sc.worst.g.home.id === t.id ? 'away' : 'home'].id).short)}</a>` : '—']] : []),
+        ])}</div>`, { meta: `${sc.n} game sheets` })}
+      </div>
+
+      <div style="margin-bottom:18px">${panel('Shots', `<div class="stats wkstats">
+        ${tile('Shots for / game', d.sg.length ? (d.sh.sf / d.sg.length).toFixed(1) : '—')}
+        ${tile('Shots against / game', d.sg.length ? (d.sh.sa / d.sg.length).toFixed(1) : '—')}
+        ${tile('Shooting %', pctS(d.shootPct), `${rk(d.ranks.shoot)} · avg ${pctS(d.avg.shoot)}`)}
+        ${tile('Save %', rate(t.svPct), rk(d.ranks.sv))}
+      </div><div class="note">From the ${d.sg.length} game sheet${d.sg.length === 1 ? '' : 's'} that recorded shots. ${We === 'They' ? 'High shooting % = they finish their chances; high shots = they generate volume.' : ''}</div>`)}</div>`;
+  }
+
   const notFound = () => `<div class="ptitle"><div><div class="k">404</div><h1>Not found</h1><div class="s"><a class="lnk" href="#/">Back to the scoreboard</a></div></div></div>`;
 
   // ------------------------------------------------------------ router
   const routes = [
     [/^\/?$/, () => viewTeam(myTeamId())], [/^\/standings$/, viewStandings], [/^\/skaters$/, viewSkaters], [/^\/schedule$/, viewSchedule],
     [/^\/weekends?$/, () => viewWeekend()], [/^\/weekend\/(\d{4}-\d{2}-\d{2})$/, viewWeekend],
+    [/^\/scout$/, () => viewScout()], [/^\/scout\/(\d+)$/, viewScout],
     [/^\/team\/(\w+)$/, viewTeam], [/^\/player\/(\d+)$/, viewPlayer], [/^\/game\/(\d+)$/, viewGame],
   ];
   let lastPath = null;
@@ -1149,7 +1411,7 @@
     }
     if (next) {
       const home = String(next.home) === me.id, o = team(home ? next.away : next.home);
-      nextHtml = `<span class="tb-item tb-next"><span class="k">Next</span><b>${dt(next.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(next.start)}</b> ${home ? 'vs' : '@'} ${esc(o.short)}<span class="tb-loc"> · ${esc(next.location || '')}</span><span class="tb-days">${days(next)}</span></span>`;
+      nextHtml = `<span class="tb-item tb-next"><span class="k">Next</span><b>${dt(next.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(next.start)}</b> ${home ? 'vs' : '@'} ${esc(o.short)}<span class="tb-loc"> · ${esc(next.location || '')}</span><span class="tb-days">${days(next)}</span></span>${o.stub ? '' : `<a class="tb-item tb-scout" href="#/scout/${o.id}">Scout ${esc(o.short)} →</a>`}`;
     }
     const opts = [...S.teams].sort((a, b) => a.rank - b.rank).map((t) =>
       `<button class="topt ${t.id === me.id ? 'on' : ''}" role="option" aria-selected="${t.id === me.id}" data-id="${t.id}">${logo(t)}<span class="tn2">${esc(t.name)}</span><span class="tr">${t.w}-${t.l}-${t.t}</span></button>`).join('');

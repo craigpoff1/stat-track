@@ -360,3 +360,23 @@ body.locked .teambar,body.locked .nav,body.locked #foot{display:none}
 .gate-err{min-height:18px;font-size:13px;color:#FF8A70}
 .shake{animation:shake .35s}
 @keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+
+/* ---------- scouting report ---------- */
+.sc-h1{display:flex;align-items:center;gap:12px}
+.sc-h1 .logo{width:44px;height:44px;flex:none}
+.keys{list-style:none;counter-reset:k;display:grid;gap:10px}
+.keys li{counter-increment:k;display:grid;grid-template-columns:30px 1fr;column-gap:10px;padding:10px 12px;background:var(--panel2);border-left:3px solid var(--us)}
+.keys li::before{content:counter(k);grid-row:span 2;font:800 italic 26px/1 var(--cond);color:var(--us)}
+.keys b{font:800 italic 18px/1.15 var(--cond);letter-spacing:.02em;text-transform:uppercase}
+.keys span{font-size:13px;color:var(--ink2);margin-top:3px}
+.kv{display:grid;gap:0}
+.kv>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.kv>div:last-child{border-bottom:0}
+.kv span{color:var(--ink2);min-width:0}
+.kv b{font:700 16px var(--cond);letter-spacing:.03em;text-align:right;white-space:nowrap}
+.kv small{font:600 11px var(--cond);color:var(--ink3);letter-spacing:.08em;margin-left:4px}
+em.rk{font:700 11px var(--cond);font-style:normal;letter-spacing:.1em;color:var(--us);margin-left:4px;text-transform:uppercase}
+.st em.rk{margin-left:0}
+.tb-scout{color:var(--us)!important;font-weight:700;letter-spacing:.08em}
+.tb-scout:hover{background:var(--panel)}
+@media (max-width:720px){.tb-scout{display:none}.sc-h1 .logo{width:34px;height:34px}}
