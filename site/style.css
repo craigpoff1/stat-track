@@ -410,3 +410,17 @@ em.rk{font:700 11px var(--cond);font-style:normal;letter-spacing:.1em;color:var(
 .wk-day{font:700 12px var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--us);padding:12px 16px 2px}
 .wkgrp .next{border-top:0}
 @media (max-width:720px){.wk-r{display:none}.wk-t{font-size:18px}}
+
+/* ---------- goalie data notes ---------- */
+.dq{display:inline-flex;align-items:center;justify-content:center;vertical-align:-2px;margin-left:6px;padding:2px;background:none;border:0;color:#F2A93B;cursor:help;border-radius:50%;transition:color .15s,background .15s}
+.dq:hover,.dq:focus-visible{color:var(--us);background:rgba(245,183,46,.12)}
+.tip.wide{max-width:340px}
+small.part{display:inline-block;margin-left:5px;font:700 10px var(--cond);letter-spacing:.06em;color:#F2A93B;vertical-align:1px}
+tr.flagged td:first-child{box-shadow:inset 3px 0 0 #F2A93B}
+td.x{color:var(--ink3);text-decoration:line-through;text-decoration-color:rgba(163,174,192,.5)}
+.dnotes{margin-top:12px;padding:10px 12px;background:rgba(242,169,59,.07);border-left:2px solid #F2A93B;font-size:13px;color:var(--ink2)}
+.dnotes .sub{color:#F2A93B;margin-bottom:6px}
+.dnotes ul{list-style:none;display:grid;gap:5px}
+.dnotes .s{margin-top:8px;font-size:12px;color:var(--ink3)}
+.dnotes.sm{margin-top:8px}
+.dnotes.sm b{color:#F2A93B;font-weight:600}

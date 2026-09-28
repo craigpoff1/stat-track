@@ -58,7 +58,7 @@
   const teamLink = (t, label = t.name) => (t.stub ? esc(label) : `<a class="lnk" href="#/team/${t.id}">${esc(label)}</a>`);
   // Tooltip attribute. The browser un-escapes attribute values and the tooltip sets innerHTML,
   // so the text is escaped once for the tooltip and once more for the attribute.
-  const tip = (title, body) => `data-tip="${esc(`<b>${esc(title)}</b>${esc(body)}`)}"`;
+  const tip = (title, body) => `data-tip="${esc(`<b>${esc(title)}</b>${esc(body).split('\n').join('<br>')}`)}"`;
   const playerLink = (id, name) => (id && playerById.has(id) ? `<a class="lnk" href="#/player/${id}">${esc(name)}</a>` : esc(name));
   const mmss = (sec) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
   const L5 = (s) => `<span class="l5">${[...(s || '')].map((c) => `<i class="${c}">${c}</i>`).join('')}</span>`;
@@ -110,7 +110,15 @@
     };
     document.addEventListener('pointerover', (e) => { const t = e.target.closest?.('[data-tip]'); if (!t) return; tip.innerHTML = t.dataset.tip; tip.classList.add('on'); move(e); });
     document.addEventListener('pointermove', (e) => { if (tip.classList.contains('on')) move(e); });
-    document.addEventListener('pointerout', (e) => { const t = e.target.closest?.('[data-tip]'); if (t && !t.contains(e.relatedTarget)) tip.classList.remove('on'); });
+    let pinned = false;
+    document.addEventListener('pointerout', (e) => { if (pinned) return; const t = e.target.closest?.('[data-tip]'); if (t && !t.contains(e.relatedTarget)) tip.classList.remove('on'); });
+    document.addEventListener('click', (e) => {
+      const t = e.target.closest?.('.dq[data-tip]');
+      if (!t) { if (pinned) { pinned = false; tip.classList.remove('on'); } return; }
+      e.preventDefault(); e.stopPropagation();
+      pinned = true; tip.innerHTML = t.dataset.tip; tip.classList.add('on'); tip.classList.add('wide');
+      const r = t.getBoundingClientRect(); move({ clientX: Math.min(r.right, innerWidth - 20), clientY: r.top });
+    }, true);
     window.addEventListener('hashchange', () => tip.classList.remove('on'));
   }
   // Sortable table with FLIP row motion. cols: [{ key, label, val(row), html?(row), cls?, desc?:false, sort?:false, title? }]
@@ -624,17 +632,24 @@
     </section>`;
   }
 
-  const GOALIE_NOTE = 'Goalie minutes and shots come from the league’s goalie reports, which are sometimes incomplete — treat SV% and GAA as approximate. W-L-T goes to the goalie with the most minutes.';
+  // ⓘ icon for goalies whose numbers had sheet problems: which games, and what was left out or assumed
+  const dqIcon = (title, lines) => `<button type="button" class="dq" aria-label="Data notes" ${tip(title, lines.join('\n'))}><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="7.2" y="6.6" width="1.6" height="5" rx=".6" fill="currentColor"/><circle cx="8" cy="4.4" r="1" fill="currentColor"/></svg></button>`;
+  const goalieFlag = (g) => (g.flags?.length ? dqIcon(`Data notes — ${g.name}`, [
+    `Save % from ${g.gpSv} of ${g.gp} games · GAA from ${g.gpGaa} of ${g.gp}`,
+    ...g.flags.map((f) => `• ${dt(f.date)} vs ${team(f.opp).short}: ${f.notes.join('; ')}`),
+  ]) : '');
+  const partial = (n, of) => (n < of ? `<small class="part" title="Based on ${n} of ${of} games">${n}/${of}</small>` : '');
+  const GOALIE_NOTE = 'Goalie lines are volunteer-entered and checked against each game sheet: games where goals against don’t match the score, shots don’t match the shots table, or minutes are missing are left out of save % and GAA (tap ⓘ for which games). W-L-T goes to the goalie with the most minutes.';
   const goalieCols = (showTeam) => [
-    { key: 'name', label: 'Goalie', cls: 'l', val: (g) => g.name, desc: false, html: (g) => `${playerLink(g.id, g.name)}<span class="sub2">#${esc(g.number)}</span>` },
+    { key: 'name', label: 'Goalie', cls: 'l', val: (g) => g.name, desc: false, html: (g) => `${playerLink(g.id, g.name)}${goalieFlag(g)}<span class="sub2">#${esc(g.number)}</span>` },
     ...(showTeam ? [{ key: 'team', label: 'Team', cls: 'l', val: (g) => team(g.teamId).short, desc: false, html: (g) => { const t = team(g.teamId); return `<span class="tn">${logo(t)}<span class="full">${esc(t.short)}</span><span class="cd">${esc(t.code)}</span></span>`; } }] : []),
     { key: 'gp', label: 'GP', val: (g) => g.gp },
     { key: 'rec', label: 'W-L-T', cls: 'hm', val: (g) => g.w * 2 + g.t, html: (g) => `${g.w}-${g.l}-${g.t}` },
     { key: 'min', label: 'MIN', cls: 'hm', val: (g) => g.seconds, html: (g) => g.minutes },
     { key: 'sa', label: 'SA', val: (g) => g.shots, title: 'Shots against' },
     { key: 'ga', label: 'GA', val: (g) => g.ga },
-    { key: 'sv', label: 'SV%', val: (g) => g.svPct, html: (g) => `<span class="pts" style="font-size:16px">${rate(g.svPct)}</span>` },
-    { key: 'gaa', label: 'GAA', val: (g) => g.gaa, html: (g) => (g.gaa == null ? '—' : g.gaa.toFixed(2)), title: 'Goals against per full game' },
+    { key: 'sv', label: 'SV%', val: (g) => g.svPct, html: (g) => `<span class="pts" style="font-size:16px">${rate(g.svPct)}</span>${partial(g.gpSv, g.gp)}` },
+    { key: 'gaa', label: 'GAA', val: (g) => g.gaa, html: (g) => `${g.gaa == null ? '—' : g.gaa.toFixed(2)}${partial(g.gpGaa, g.gp)}`, title: 'Goals against per full game' },
     { key: 'so', label: 'SO', cls: 'hm', val: (g) => g.so, title: 'Shutouts' },
   ];
 
@@ -1020,12 +1035,13 @@
   }
 
   function goaliePanel(gl) {
-    const tiles = [['GP', gl.gp], ['W-L-T', `${gl.w}-${gl.l}-${gl.t}`], ['Shots against', gl.shots], ['Save %', rate(gl.svPct)], ['GAA', gl.gaa == null ? '—' : gl.gaa.toFixed(2)], ['Shutouts', gl.so]];
+    const tiles = [['GP', gl.gp, ''], ['W-L-T', `${gl.w}-${gl.l}-${gl.t}`, ''], ['Shots against', gl.shots, gl.gpSv < gl.gp ? `in ${gl.gpSv} of ${gl.gp} games` : ''], ['Save %', rate(gl.svPct), gl.gpSv < gl.gp ? `from ${gl.gpSv} of ${gl.gp} games` : ''], ['GAA', gl.gaa == null ? '—' : gl.gaa.toFixed(2), gl.gpGaa < gl.gp ? `from ${gl.gpGaa} of ${gl.gp} games` : ''], ['Shutouts', gl.so, '']];
     return `<div style="margin-bottom:18px">${panel('In goal', `
-      <div class="stats">${tiles.map(([l, v]) => `<div class="st"><span class="l">${l}</span><span class="v">${esc(v)}</span></div>`).join('')}</div>
+      <div class="stats">${tiles.map(([l, v, sub]) => `<div class="st"><span class="l">${l}</span><span class="v">${esc(v)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</div>`).join('')}</div>
       <div class="pb"><div class="tw"><table class="gl"><thead><tr><th class="l">Date</th><th class="l">Opp</th><th>Dec</th><th>MIN</th><th>SA</th><th>GA</th><th>SV%</th></tr></thead><tbody>
-        ${gl.log.slice().reverse().map((l) => `<tr><td class="l"><a class="lnk" href="#/game/${l.gameId}">${dt(l.date)}</a></td><td class="l">${l.home ? 'vs' : '@'} ${esc(team(l.opp).code)}</td><td>${l.decision ? `<span class="rb ${l.decision}">${l.decision}</span>` : '–'}</td><td>${mmss(l.seconds)}</td><td>${l.shots}</td><td>${l.ga}</td><td>${l.shots ? rate(l.saves / l.shots) : '—'}</td></tr>`).join('')}
-      </tbody></table></div></div>
+        ${gl.log.slice().reverse().map((l) => `<tr class="${l.notes?.length ? 'flagged' : ''}"><td class="l"><a class="lnk" href="#/game/${l.gameId}">${dt(l.date)}</a>${l.notes?.length ? dqIcon(`${dt(l.date)} vs ${team(l.opp).short}`, l.notes) : ''}</td><td class="l">${l.home ? 'vs' : '@'} ${esc(team(l.opp).code)}</td><td>${l.decision ? `<span class="rb ${l.decision}">${l.decision}</span>` : '–'}</td><td>${l.rawSeconds === 0 && l.seconds ? `<span title="Assumed full game">${mmss(l.seconds)}*</span>` : l.rawSeconds === 0 ? '—' : mmss(l.seconds)}</td><td class="${l.usedSv ? '' : 'x'}">${l.shots}</td><td>${l.ga}</td><td class="${l.usedSv ? '' : 'x'}">${l.shots ? rate(l.saves / l.shots) : '—'}</td></tr>`).join('')}
+      </tbody></table></div>
+      ${gl.flags?.length ? `<div class="dnotes"><div class="sub">Data notes</div><ul>${gl.flags.slice().reverse().map((f) => `<li><a class="lnk" href="#/game/${f.gameId}">${dt(f.date)} vs ${esc(team(f.opp).short)}</a> — ${f.notes.map(esc).join('; ')}</li>`).join('')}</ul><div class="s">Greyed numbers are shown as entered but left out of the totals. * = assumed.</div></div>` : ''}</div>
       <div class="note">${GOALIE_NOTE}</div>`, { gold: true, meta: `${gl.minutes} minutes` })}</div>`;
   }
 
@@ -1041,7 +1057,7 @@
     const flags = g.warnings.filter((w) => !/goalie/i.test(w));
     const box = (teamId) => g.skaters.filter((r) => String(r.teamId) === String(teamId)).sort((x, y) => (y.g + y.a) - (x.g + x.a) || y.g - x.g);
     const boxTable = (t) => `<div class="tw"><table class="gl"><thead><tr><th>#</th><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody>${box(t.id).map((r) => `<tr><td>${esc(r.number)}</td><td class="l">${playerLink(r.playerId, r.name)}</td><td>${r.g}</td><td>${r.a}</td><td class="pts" style="font-size:16px">${r.g + r.a}</td><td>${r.pim || 0}</td></tr>`).join('')}</tbody></table></div>
-      ${(g.goalies || []).some((x) => String(x.teamId) === String(t.id)) ? `<div class="sub" style="margin-top:14px">In goal</div><div class="tw"><table class="gl"><thead><tr><th class="l">Goalie</th><th>MIN</th><th>SA</th><th>GA</th><th>SV</th><th>SV%</th></tr></thead><tbody>${g.goalies.filter((x) => String(x.teamId) === String(t.id)).map((x) => `<tr><td class="l">${playerLink(x.playerId, x.name)}</td><td>${mmss(x.seconds)}</td><td>${x.shots}</td><td>${x.ga}</td><td>${Math.max(0, x.saves)}</td><td>${x.shots ? rate(Math.max(0, x.saves) / x.shots) : '—'}</td></tr>`).join('')}</tbody></table></div>` : ''}`;
+      ${(g.goalies || []).some((x) => String(x.teamId) === String(t.id)) ? `<div class="sub" style="margin-top:14px">In goal</div><div class="tw"><table class="gl"><thead><tr><th class="l">Goalie</th><th>MIN</th><th>SA</th><th>GA</th><th>SV</th><th>SV%</th></tr></thead><tbody>${g.goalies.filter((x) => String(x.teamId) === String(t.id)).map((x) => `<tr><td class="l">${playerLink(x.playerId, x.name)}</td><td>${mmss(x.seconds)}</td><td>${x.shots}</td><td>${x.ga}</td><td>${Math.max(0, x.saves)}</td><td>${x.shots ? rate(Math.max(0, x.saves) / x.shots) : '—'}</td></tr>`).join('')}</tbody></table></div>${g.goalieNotes?.[t.id]?.length ? `<div class="dnotes sm"><b>Goalie sheet issues:</b> ${g.goalieNotes[t.id].map(esc).join('; ')}</div>` : ''}` : ''}`;
     const plabel = (l) => (/^\d+$/.test(l) ? 'P' + l : l);
     const focus = involves({ home: g.home.id, away: g.away.id }, myTeamId()) ? myTeamId() : g.home.id;
     const fu = String(focus) === String(g.away.id) ? a : h, fo = fu === h ? a : h;
@@ -1315,7 +1331,7 @@
       return `<tr><td class="l">${playerLink(p.id, p.name)}<span class="sub2">#${esc(p.number)}</span></td><td>${p.g}</td><td>${p.a}</td><td class="pts" style="font-size:16px">${p.pts}</td><td class="hm">${p.ptsPerGame.toFixed(2)}</td><td class="hm">${p.ppg}</td><td>${lw ? `${lw}${lw >= 5 ? '<span class="chip gwg">HOT</span>' : ''}` : '–'}</td></tr>`;
     }).join('');
     const gSec = (g) => (d.glSec ? Math.round((g.seconds / d.glSec) * 100) : 0);
-    const goalieRows = d.gls.map((g) => `<tr><td class="l">${playerLink(g.id, g.name)}<span class="sub2">#${esc(g.number)}</span></td><td>${g.gp}</td><td>${gSec(g)}%</td><td>${g.w}-${g.l}-${g.t}</td><td>${rate(g.svPct)}</td><td>${g.gaa == null ? '—' : g.gaa.toFixed(2)}</td></tr>`).join('');
+    const goalieRows = d.gls.map((g) => `<tr><td class="l">${playerLink(g.id, g.name)}${goalieFlag(g)}<span class="sub2">#${esc(g.number)}</span></td><td>${g.gp}</td><td>${gSec(g)}%</td><td>${g.w}-${g.l}-${g.t}</td><td>${rate(g.svPct)}${partial(g.gpSv, g.gp)}</td><td>${g.gaa == null ? '—' : g.gaa.toFixed(2)}${partial(g.gpGaa, g.gp)}</td></tr>`).join('');
     const sc = d.script;
     const kv = (rows) => `<div class="kv">${rows.map(([k, v]) => `<div><span>${k}</span><b>${v}</b></div>`).join('')}</div>`;
 

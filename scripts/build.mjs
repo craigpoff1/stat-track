@@ -65,6 +65,7 @@ function goalie(row, teamId, teamName) {
     goalies.set(row.playerId, {
       id: row.playerId, name: row.name, number: row.number, teamId, team: teamName,
       gp: 0, seconds: 0, ga: 0, shots: 0, saves: 0, w: 0, l: 0, t: 0, so: 0, log: [],
+      gpSv: 0, gpGaa: 0, gaaGa: 0, gaaSec: 0, flags: [], // see goalie-sheet checks below
     });
   }
   return goalies.get(row.playerId);
@@ -166,23 +167,58 @@ for (const g of games) {
     }
   }
 
-  // --- goalies. Decision goes to the goalie with the most ice time.
+  // --- goalies. Volunteer-entered goalie lines are checked against the rest of the sheet before
+  // they count: goals against must match the score, shots must roughly match the shots table,
+  // and minutes must be usable. Anything left out or assumed is recorded per game (gl.flags).
+  const goalieNotes = {};
   for (const s of ['home', 'away']) {
     const gs = g.goalies.filter((x) => x.side === s && x.playerId);
     if (!gs.length) continue;
-    const t = side[s];
-    // No decision when the sheet shows no goalie minutes at all.
-    const starter = gs.some((x) => x.seconds > 0) ? gs.reduce((a, b) => (b.seconds > a.seconds ? b : a)) : null;
-    for (const row of gs) {
+    const t = side[s], o = other(s), oppName = side[o].name, oppScore = g[o].score;
+    const gaSum = gs.reduce((n, x) => n + x.ga, 0), saSum = gs.reduce((n, x) => n + x.shots, 0), secSum = gs.reduce((n, x) => n + x.seconds, 0);
+    const shotsTable = g.shotsByPeriod?.length ? g.shotsByPeriod.reduce((n, p) => n + p[o], 0) : null;
+    const regulation = g.periods.length <= 3;
+    const notes = []; // { text, kind: 'excluded' | 'assumed' | 'flag' }
+
+    const gaOk = gaSum === oppScore;
+    if (!gaOk) notes.push({ kind: 'excluded', text: `Goalie goals-against add up to ${gaSum}, but ${oppName} scored ${oppScore} — left out of save % and GAA` });
+    let svOk = gaOk;
+    if (gaOk) {
+      if (saSum < gaSum) { svOk = false; notes.push({ kind: 'excluded', text: `Fewer shots (${saSum}) than goals (${gaSum}) recorded — left out of save %` }); }
+      else if (shotsTable != null && Math.abs(saSum - shotsTable) > Math.max(3, 0.25 * shotsTable)) { svOk = false; notes.push({ kind: 'excluded', text: `Goalie shots (${saSum}) don't match the sheet's shots table (${shotsTable}) — left out of save %` }); }
+      else if (saSum === 0 && shotsTable == null) { svOk = false; notes.push({ kind: 'excluded', text: 'No shots recorded for this game — left out of save %' }); }
+    }
+    // minutes: blank for one goalie -> assume the full game; blank for two -> split unknown
+    let secs = gs.map((x) => x.seconds), minutesOk = true;
+    if (secSum === 0) {
+      if (gs.length === 1) { secs = [regSec]; notes.push({ kind: 'assumed', text: 'Minutes left blank — assumed the full game' }); }
+      else { minutesOk = false; notes.push({ kind: 'excluded', text: `Minutes left blank for ${gs.length} goalies — split unknown, left out of GAA and no win/loss credited` }); }
+    } else if (regulation && Math.abs(secSum - regSec) > 60) {
+      minutesOk = false;
+      notes.push({ kind: 'excluded', text: `Minutes add up to ${Math.round(secSum / 60)} in a ${regSec / 60}-minute game (likely a mid-game change) — left out of GAA` });
+    }
+    // decision: most minutes, only when minutes can be trusted to rank goalies (a single goalie always can)
+    const canDecide = gs.length === 1 || secSum > 0;
+    const starterIdx = canDecide ? secs.indexOf(Math.max(...secs)) : -1;
+    const result = g[s].score > oppScore ? 'W' : g[s].score < oppScore ? 'L' : 'T';
+    goalieNotes[t.id] = notes.map((n) => n.text);
+
+    gs.forEach((row, i) => {
       const gl = goalie(row, t.id, t.name);
-      gl.gp++; gl.seconds += row.seconds; gl.ga += row.ga; gl.shots += row.shots; gl.saves += Math.max(0, row.saves);
-      const r = row === starter ? (g[s].score > g[other(s)].score ? 'W' : g[s].score < g[other(s)].score ? 'L' : 'T') : null;
+      const isStarter = i === starterIdx;
+      gl.gp++;
+      gl.seconds += secs[i];
+      if (gaOk) gl.ga += row.ga;
+      if (svOk) { gl.gpSv++; gl.shots += row.shots; gl.saves += Math.max(0, row.saves); }
+      if (gaOk && minutesOk) { gl.gpGaa++; gl.gaaGa += row.ga; gl.gaaSec += secs[i]; }
+      const r = isStarter ? result : null;
       if (r) gl[r.toLowerCase()]++;
-      if (row === starter && g[other(s)].score === 0) gl.so++;
-      gl.log.push({ gameId: g.id, date, opp: side[other(s)].id, home: s === 'home', seconds: row.seconds, ga: row.ga, shots: row.shots, saves: Math.max(0, row.saves), decision: r });
+      if (isStarter && oppScore === 0) gl.so++;
+      if (notes.length) gl.flags.push({ gameId: g.id, date, opp: side[o].id, notes: notes.map((n) => n.text), kinds: [...new Set(notes.map((n) => n.kind))] });
+      gl.log.push({ gameId: g.id, date, opp: side[o].id, home: s === 'home', seconds: secs[i], rawSeconds: row.seconds, ga: row.ga, shots: row.shots, saves: Math.max(0, row.saves), decision: r, usedSv: svOk, usedGaa: gaOk && minutesOk, notes: notes.map((n) => n.text) });
       const p = players.get(row.playerId);
       if (p) p.goalieGames = (p.goalieGames || 0) + 1;
-    }
+    });
   }
 
   gameSummaries.push({
@@ -198,6 +234,7 @@ for (const g of games) {
     })),
     skaters: g.skaters.map(({ side: s, playerId, number, name, g: goals, a, pim }) => ({ teamId: side[s].id, playerId, number, name, g: goals, a, pim })),
     goalies: g.goalies.map(({ side: s, playerId, number, name, seconds, ga, shots, saves }) => ({ teamId: side[s].id, playerId, number, name, seconds, ga, shots, saves })),
+    goalieNotes,
     warnings: g.warnings,
   });
 }
@@ -260,7 +297,7 @@ for (const p of players.values()) {
 
 for (const gl of goalies.values()) {
   gl.svPct = round(gl.shots ? gl.saves / gl.shots : null);
-  gl.gaa = round(gl.seconds ? (gl.ga * regSec) / gl.seconds : null, 2);
+  gl.gaa = round(gl.gaaSec ? (gl.gaaGa * regSec) / gl.gaaSec : null, 2);
   gl.minutes = Math.round(gl.seconds / 60);
 }
 
