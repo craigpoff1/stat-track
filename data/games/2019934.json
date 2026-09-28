@@ -1,0 +1,633 @@
+{
+ "id": "2019934",
+ "dateText": "Saturday, September 26, 2026 @ 9:30 a.m.",
+ "rink": "Viking Carena Complex",
+ "status": "Final",
+ "home": {
+  "name": "MOB Hockey",
+  "teamId": "402388",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/20299e0a-3462-42fa-97f9-a52c826508c8_MOB Hockey.png",
+  "score": 3
+ },
+ "away": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402391",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/90f85aab-1980-4034-adc8-0f06d76702a3_Spartan Hockey Academy.png",
+  "score": 5
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 2
+  },
+  {
+   "label": "1",
+   "home": 5,
+   "away": 8
+  },
+  {
+   "label": "2",
+   "home": 3,
+   "away": 11
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 8
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:33",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": null,
+    "name": "Hank Heal"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:47",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "96",
+    "name": "Brooks Jones"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:12",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": null,
+    "name": "Wyatt May"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:42",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "21",
+    "name": "Carson Snooks"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:29",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": null,
+    "name": "Sterling Fyten"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:11",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": null,
+    "name": "Sterling Fyten"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:04",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": null,
+    "name": "Wyatt May"
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": "Sterling Fyten"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:53",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": null,
+    "name": "Sterling Fyten"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:07",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": null,
+    "name": "Jace Piche"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:58",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "16",
+    "name": "Jack Harris"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:32",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "9",
+    "name": "Hayes Leinberger"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:11",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "19",
+    "name": "Irus Rorke"
+   },
+   "assists": [
+    {
+     "number": "6",
+     "name": "Keir Kendall"
+    },
+    {
+     "number": "89",
+     "name": "Weston MacKinnon"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:47",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": null,
+    "name": "Sterling Fyten"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:23",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "29",
+    "name": "Chase Myers"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5062637",
+   "number": "29",
+   "name": "Chase Myers",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5061887",
+   "number": "19",
+   "name": "Irus Rorke",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5060768",
+   "number": "16",
+   "name": "Jack Harris",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5061893",
+   "number": "98",
+   "name": "Dawson Moore",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5061456",
+   "number": "96",
+   "name": "Brooks Jones",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5061452",
+   "number": "92",
+   "name": "Hayes Ward",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5061497",
+   "number": "9",
+   "name": "Hayes Leinberger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5061568",
+   "number": "89",
+   "name": "Weston MacKinnon",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5061462",
+   "number": "88",
+   "name": "Kanon Durdle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5061891",
+   "number": "71",
+   "name": "Zane Janvier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5062640",
+   "number": "6",
+   "name": "Keir Kendall",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5062431",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5062647",
+   "number": "21",
+   "name": "Carson Snooks",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5062433",
+   "number": "17",
+   "name": "Grayson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5060762",
+   "number": "12",
+   "name": "Wyatt Kaliszewski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5062419",
+   "number": "11",
+   "name": "Tanner Corrigan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5060665",
+   "number": "10",
+   "name": "Weston Vansickle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5060863",
+   "number": null,
+   "name": "Sterling Fyten",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5062447",
+   "number": null,
+   "name": "Jace Piche",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5062613",
+   "number": null,
+   "name": "Wyatt May",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5060823",
+   "number": null,
+   "name": "Pryce Park",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5060825",
+   "number": null,
+   "name": "Matteo Park",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5060903",
+   "number": null,
+   "name": "Fischer Lewko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5061158",
+   "number": null,
+   "name": "Lochlan Evans",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5061252",
+   "number": null,
+   "name": "Hank Heal",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5061479",
+   "number": null,
+   "name": "Niko Doenz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5061584",
+   "number": null,
+   "name": "Noah Auger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5061650",
+   "number": null,
+   "name": "Nash Gavin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5061653",
+   "number": null,
+   "name": "Hayes Gavin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5062443",
+   "number": null,
+   "name": "Oscar LaGarde",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5062451",
+   "number": null,
+   "name": "Eli Koscianski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5062455",
+   "number": null,
+   "name": "Lucas Balfour",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402391",
+   "playerId": "5062715",
+   "number": null,
+   "name": "Jack Gaulton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402388",
+   "playerId": "5062431",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  }
+ ],
+ "warnings": [],
+ "start": "2026-09-26T09:30:00",
+ "gameNumber": 162
+}

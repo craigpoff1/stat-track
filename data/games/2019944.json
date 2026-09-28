@@ -1,0 +1,640 @@
+{
+ "id": "2019944",
+ "dateText": "Saturday, September 26, 2026 @ 12:45 p.m.",
+ "rink": "Viking Carena Complex",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402391",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/90f85aab-1980-4034-adc8-0f06d76702a3_Spartan Hockey Academy.png",
+  "score": 2
+ },
+ "away": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "402390",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/b5fda34c-1619-4945-9848-0c7306bd5f27_Riggers Hockey Academy.png",
+  "score": 7
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 1
+  },
+  {
+   "label": "1",
+   "home": 3,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 3,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:22",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Kasen Leard"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:38",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:38",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "2",
+    "name": "Wyatt May"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:38",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "7",
+    "name": "Hayes Gavin"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:26",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Logan Rumley"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Kasen Leard"
+    },
+    {
+     "number": "91",
+     "name": "Noah Kaiser"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:26",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Logan Rumley"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Kasen Leard"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:05",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:22",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Lucas Balfour"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:11",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:55",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Hayes Gavin"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:50",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Sterling Fyten"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:13",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "82",
+    "name": "Avery Sahnan"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:36",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Pryce Park"
+   },
+   "minutes": 2,
+   "infraction": "Holding Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:35",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Logan Rumley"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Kasen Leard"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062455",
+   "number": "82",
+   "name": "Lucas Balfour",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061653",
+   "number": "7",
+   "name": "Hayes Gavin",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061252",
+   "number": "96",
+   "name": "Hank Heal",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062443",
+   "number": "8",
+   "name": "Oscar LaGarde",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061479",
+   "number": "71",
+   "name": "Niko Doenz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5060903",
+   "number": "68",
+   "name": "Fischer Lewko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062715",
+   "number": "44",
+   "name": "Jack Gaulton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061584",
+   "number": "35",
+   "name": "Noah Auger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062451",
+   "number": "32",
+   "name": "Eli Koscianski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061158",
+   "number": "29",
+   "name": "Lochlan Evans",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062613",
+   "number": "2",
+   "name": "Wyatt May",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5060823",
+   "number": "19",
+   "name": "Pryce Park",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061650",
+   "number": "18",
+   "name": "Nash Gavin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062447",
+   "number": "17",
+   "name": "Jace Piche",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5060863",
+   "number": "11",
+   "name": "Sterling Fyten",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060616",
+   "number": "19",
+   "name": "Logan Rumley",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5061434",
+   "number": "13",
+   "name": "Kash Bala",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060460",
+   "number": "91",
+   "name": "Noah Kaiser",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060625",
+   "number": "17",
+   "name": "Kasen Leard",
+   "g": 1,
+   "a": 3,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5061429",
+   "number": "98",
+   "name": "Cabot Doucet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060463",
+   "number": "9",
+   "name": "Hayes Kaiser",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060624",
+   "number": "89",
+   "name": "Spencer Priddle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5062392",
+   "number": "88",
+   "name": "Braxton Wagner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5061438",
+   "number": "82",
+   "name": "Avery Sahnan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060644",
+   "number": "8",
+   "name": "Jones Brezinski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5061436",
+   "number": "77",
+   "name": "Henry Olineck",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060614",
+   "number": "71",
+   "name": "Owen Yuskow",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5062510",
+   "number": "41",
+   "name": "Edward Szabo",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060629",
+   "number": "29",
+   "name": "Oliver Rook",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5060618",
+   "number": "20",
+   "name": "Merrick Pobuda",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5062409",
+   "number": "11",
+   "name": "Brody Wilkes",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5062516",
+   "number": "1",
+   "name": "Ryan Roth",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062451",
+   "number": "32",
+   "name": "Eli Koscianski",
+   "seconds": 480,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402390",
+   "playerId": "5062516",
+   "number": "1",
+   "name": "Ryan Roth",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 8"
+ ],
+ "start": "2026-09-26T12:45:00",
+ "gameNumber": 172
+}

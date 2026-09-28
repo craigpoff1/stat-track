@@ -1,0 +1,565 @@
+{
+ "id": "2019953",
+ "dateText": "Saturday, September 26, 2026 @ 3:45 p.m.",
+ "rink": "Viking Carena Complex",
+ "status": "Final",
+ "home": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402385",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/388dc9f4-4c10-4318-91bf-cbcf3d9492c3_HC Calgary Bandits.png",
+  "score": 5
+ },
+ "away": {
+  "name": "Capital City Knights",
+  "teamId": "402386",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/c439e010-e73d-46da-bbd4-3cb9a8d15405_Capital City Knights.jpg",
+  "score": 0
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 0
+  },
+  {
+   "label": "1",
+   "home": 7,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 6,
+   "away": 7
+  },
+  {
+   "label": "3",
+   "home": 6,
+   "away": 7
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:13",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "19",
+    "name": "Landon Iuliano"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Beau Pestun"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:24",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "61",
+    "name": "Prym Rozwadowski"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:08",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "59",
+    "name": "Kobe Voyer"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Beau Pestun"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:59",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "87",
+    "name": "Kleve Rozwadowski"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:22",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "67",
+    "name": "Kaden O'Connell"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:53",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Wyatt Hamilton"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:03",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "45",
+    "name": "Manakveer Grewal"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Wyatt Hamilton"
+    },
+    {
+     "number": "16",
+     "name": "Huxley Copeland"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:35",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "87",
+    "name": "Kleve Rozwadowski"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:55",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "23",
+    "name": "Amirah Khangura"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:55",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "8",
+    "name": "Easton Herbert"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5061236",
+   "number": "87",
+   "name": "Kleve Rozwadowski",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5062860",
+   "number": "59",
+   "name": "Kobe Voyer",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5061822",
+   "number": "45",
+   "name": "Manakveer Grewal",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5060778",
+   "number": "19",
+   "name": "Landon Iuliano",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5062058",
+   "number": "10",
+   "name": "Wyatt Hamilton",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5060809",
+   "number": "8",
+   "name": "Liam Desy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5062318",
+   "number": "61",
+   "name": "Prym Rozwadowski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5062156",
+   "number": "60",
+   "name": "Cooper Pilgrim",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5060571",
+   "number": "42",
+   "name": "Maisie Futers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5062701",
+   "number": "4",
+   "name": "Ryder O'Reilly",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5061272",
+   "number": "32",
+   "name": "Carter Thompson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5062052",
+   "number": "29",
+   "name": "Beau Pestun",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5061720",
+   "number": "23",
+   "name": "Amirah Khangura",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5060805",
+   "number": "21",
+   "name": "Leo Renaud",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5061616",
+   "number": "16",
+   "name": "Huxley Copeland",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402385",
+   "playerId": "5061506",
+   "number": "12",
+   "name": "Abbas Karachiwala",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5061958",
+   "number": "98",
+   "name": "Kaden Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5060465",
+   "number": "88",
+   "name": "Kashton Fedun",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5062524",
+   "number": "8",
+   "name": "Easton Herbert",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5061703",
+   "number": "7",
+   "name": "Sawyer Seeney",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5062412",
+   "number": "67",
+   "name": "Kaden O'Connell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5060517",
+   "number": "6",
+   "name": "Milo Melenberg",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5061109",
+   "number": "40",
+   "name": "Colton Schellenberg",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5061586",
+   "number": "39",
+   "name": "Blake Brassard",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5062625",
+   "number": "31",
+   "name": "Baron Wilson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5061498",
+   "number": "29",
+   "name": "Ryler Rask",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5062961",
+   "number": "25",
+   "name": "Sadie King",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5060538",
+   "number": "22",
+   "name": "Samuel Montgomery",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5062407",
+   "number": "18",
+   "name": "Luka Thiessen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5061619",
+   "number": "17",
+   "name": "Lauren Sawatzky",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5061475",
+   "number": "16",
+   "name": "miles priestner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402386",
+   "playerId": "5061198",
+   "number": "13",
+   "name": "DYLAN SPURGEON",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "start": "2026-09-26T15:45:00",
+ "gameNumber": 181
+}

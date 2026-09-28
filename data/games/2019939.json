@@ -1,0 +1,739 @@
+{
+ "id": "2019939",
+ "dateText": "Saturday, September 26, 2026 @ 11:00 a.m.",
+ "rink": "Viking Carena Complex",
+ "status": "Final",
+ "home": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402389",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e4190762-7ba9-4471-81f8-e1bd679cd552_Rebels Hockey Academy.png",
+  "score": 5
+ },
+ "away": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402385",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/388dc9f4-4c10-4318-91bf-cbcf3d9492c3_HC Calgary Bandits.png",
+  "score": 9
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 2
+  },
+  {
+   "label": "1",
+   "home": 12,
+   "away": 10
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 20
+  },
+  {
+   "label": "3",
+   "home": 17,
+   "away": 8
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:38",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:19",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Nolan Stewart"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:00",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "19",
+    "name": "Landon Iuliano"
+   },
+   "assists": [
+    {
+     "number": "4",
+     "name": "Ryder O'Reilly"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:10",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "29",
+    "name": "Beau Pestun"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Wyatt Hamilton"
+    },
+    {
+     "number": "16",
+     "name": "Huxley Copeland"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:50",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "87",
+    "name": "Kleve Rozwadowski"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:10",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "87",
+    "name": "Kolton Hessler"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:40",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "assists": [
+    {
+     "number": "4",
+     "name": "Ryan Bailey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:26",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "19",
+    "name": "Landon Iuliano"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Abbas Karachiwala"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:00",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Nolan Stewart"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:37",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "87",
+    "name": "Kolton Hessler"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:07",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:16",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "16",
+    "name": "Huxley Copeland"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:24",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "87",
+    "name": "Kleve Rozwadowski"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:14",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "59",
+    "name": "Kobe Voyer"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Landon Iuliano"
+    },
+    {
+     "number": "45",
+     "name": "Manakveer Grewal"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:22",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "66",
+    "name": "Rayland Gordon"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:32",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "29",
+    "name": "Beau Pestun"
+   },
+   "assists": [
+    {
+     "number": "87",
+     "name": "Kleve Rozwadowski"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:09",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Nolan Stewart"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:58",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "12",
+    "name": "Abbas Karachiwala"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:48",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "assists": [
+    {
+     "number": "27",
+     "name": "Weston McLaughlin"
+    },
+    {
+     "number": "89",
+     "name": "Emerson Fowler"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:55",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Kyler Moore"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:33",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Nash Bauer"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:51",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "minutes": 2,
+   "infraction": "Bench / Too Many Players"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:52",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "4",
+    "name": "Ryder O'Reilly"
+   },
+   "assists": [
+    {
+     "number": "59",
+     "name": "Kobe Voyer"
+    },
+    {
+     "number": "42",
+     "name": "Maisie Futers"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061024",
+   "number": "98",
+   "name": "Kyler Moore",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062976",
+   "number": "4",
+   "name": "Ryan Bailey",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061989",
+   "number": "9",
+   "name": "Nolan Stewart",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062953",
+   "number": "89",
+   "name": "Emerson Fowler",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5060693",
+   "number": "87",
+   "name": "Kolton Hessler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062975",
+   "number": "77",
+   "name": "Novik Master",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061884",
+   "number": "7",
+   "name": "Shea Chapman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062968",
+   "number": "67",
+   "name": "Reid Whiteway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062807",
+   "number": "66",
+   "name": "Rayland Gordon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061995",
+   "number": "36",
+   "name": "Mila MacLean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5060990",
+   "number": "29",
+   "name": "Nash Bauer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061992",
+   "number": "27",
+   "name": "Weston McLaughlin",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062967",
+   "number": "13",
+   "name": "Bowen Neurauter",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061236",
+   "number": "87",
+   "name": "Kleve Rozwadowski",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062052",
+   "number": "29",
+   "name": "Beau Pestun",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5060778",
+   "number": "19",
+   "name": "Landon Iuliano",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062860",
+   "number": "59",
+   "name": "Kobe Voyer",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062701",
+   "number": "4",
+   "name": "Ryder O'Reilly",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061616",
+   "number": "16",
+   "name": "Huxley Copeland",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5060809",
+   "number": "8",
+   "name": "Liam Desy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062318",
+   "number": "61",
+   "name": "Prym Rozwadowski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062156",
+   "number": "60",
+   "name": "Cooper Pilgrim",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061822",
+   "number": "45",
+   "name": "Manakveer Grewal",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5060571",
+   "number": "42",
+   "name": "Maisie Futers",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061272",
+   "number": "32",
+   "name": "Carter Thompson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061720",
+   "number": "23",
+   "name": "Amirah Khangura",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5060805",
+   "number": "21",
+   "name": "Leo Renaud",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061506",
+   "number": "12",
+   "name": "Abbas Karachiwala",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062058",
+   "number": "10",
+   "name": "Wyatt Hamilton",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "start": "2026-09-26T11:00:00",
+ "gameNumber": 167
+}

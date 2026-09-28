@@ -1,0 +1,684 @@
+{
+ "id": "2019961",
+ "dateText": "Saturday, September 26, 2026 @ 7:00 p.m.",
+ "rink": "North County Recreation Complex",
+ "status": "Final",
+ "home": {
+  "name": "Saints Pro Hockey Academy",
+  "teamId": "402383",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/4a596d15-bb5b-4be5-970f-3b1d406dfe79_Saints Pro Hockey Academy.png",
+  "score": 1
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "402387",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/7c6c2a27-5023-4ba3-92d6-57e3541fbeaa_Calgary Crusaders.png",
+  "score": 11
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 3
+  },
+  {
+   "label": "1",
+   "home": 3,
+   "away": 18
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 22
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 7
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:30",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Rylan Geeraert"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:17",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Owen Brito"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:41",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Bodie Patterson"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:44",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "34",
+    "name": "Owen Brito"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:33",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:12",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [
+    {
+     "number": "20",
+     "name": "Finnley Nitchie"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:15",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "18",
+    "name": "Isaac Pannekoek"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:58",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [
+    {
+     "number": "20",
+     "name": "Finnley Nitchie"
+    },
+    {
+     "number": "18",
+     "name": "Isaac Pannekoek"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:55",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "16",
+    "name": "Owen Roberts"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:26",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Bodie Patterson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:03",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:11",
+   "side": "home",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Xavier Fedun"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:19",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:15",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "13",
+    "name": "Walker Snell"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5060777",
+   "number": "11",
+   "name": "Xavier Fedun",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5062686",
+   "number": "98",
+   "name": "Jre Pincemin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061581",
+   "number": "93",
+   "name": "Hudson Epp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5060785",
+   "number": "88",
+   "name": "Kaleb Chartrand",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061599",
+   "number": "87",
+   "name": "Liam Eisenkrein",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5062157",
+   "number": "86",
+   "name": "Kayden Catimbang",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061631",
+   "number": "8",
+   "name": "Everett Amiel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5062450",
+   "number": "71",
+   "name": "Matteo Sorochan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5062682",
+   "number": "7",
+   "name": "Ramsay Sinclair",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061139",
+   "number": "5",
+   "name": "Colt Yaceyko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061966",
+   "number": "47",
+   "name": "Archie Kemp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061075",
+   "number": "40",
+   "name": "Madeleine Melanson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061135",
+   "number": "37",
+   "name": "Bellamy Tkachuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061902",
+   "number": "29",
+   "name": "Jacob Damiza",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5062651",
+   "number": "20",
+   "name": "Knox Meidinger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061764",
+   "number": "19",
+   "name": "Bash Beech",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5062446",
+   "number": "16",
+   "name": "Aidan Tasko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061521",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5062662",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061453",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5062646",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060830",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060496",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060840",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061804",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061597",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060783",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061611",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060486",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061499",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060673",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061968",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061196",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061455",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061075",
+   "number": "40",
+   "name": "Madeleine Melanson",
+   "seconds": 2700,
+   "ga": 11,
+   "shots": 47,
+   "saves": 36
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061455",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 1350,
+   "ga": 0,
+   "shots": 3,
+   "saves": 3
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060486",
+   "number": "31",
+   "name": "Colton Butt",
+   "seconds": 1350,
+   "ga": 1,
+   "shots": 2,
+   "saves": 1
+  }
+ ],
+ "warnings": [],
+ "start": "2026-09-26T19:00:00",
+ "gameNumber": 189
+}

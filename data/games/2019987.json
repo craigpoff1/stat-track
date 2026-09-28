@@ -1,0 +1,722 @@
+{
+ "id": "2019987",
+ "dateText": "Sunday, September 27, 2026 @ 2:45 p.m.",
+ "rink": "North County Recreation Complex",
+ "status": "Final",
+ "home": {
+  "name": "Young Kings Hockey",
+  "teamId": "402392",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/4e595bc0-9a33-4549-83e4-cfb247d8ff45_Young Kings Hockey.png",
+  "score": 2
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "402387",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/7c6c2a27-5023-4ba3-92d6-57e3541fbeaa_Calgary Crusaders.png",
+  "score": 7
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 4
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:07",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "34",
+    "name": "Owen Brito"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "13:48",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:19",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "17",
+    "name": "Hudson Nate"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:39",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "88",
+    "name": "Drake Gemmill"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:47",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "16",
+    "name": "Owen Roberts"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:41",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "19",
+    "name": "Sawyer Carlson"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:04",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "98",
+    "name": "Mason MacDonald"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:05",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:35",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "22",
+    "name": "Bo Norton"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:33",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:46",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "9",
+    "name": "Evan Goldie"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:09",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "20",
+    "name": "Colson Smith"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:53",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "13",
+    "name": "Walker Snell"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:23",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "19",
+    "name": "Sawyer Carlson"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:15",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Rylan Geeraert"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:34",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "17",
+    "name": "Denver Gagnon"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:08",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "13",
+    "name": "Brooks Hurt"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Sawyer Carlson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:32",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "88",
+    "name": "Drake Gemmill"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:09",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "98",
+    "name": "Mason MacDonald"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:46",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5062508",
+   "number": "88",
+   "name": "Drake Gemmill",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060632",
+   "number": "13",
+   "name": "Brooks Hurt",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060622",
+   "number": "98",
+   "name": "Colten Gauer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5062441",
+   "number": "96",
+   "name": "Caden Conway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061440",
+   "number": "9",
+   "name": "Evan Goldie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5062509",
+   "number": "8",
+   "name": "Brooks Bohner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061894",
+   "number": "79",
+   "name": "Hayes Conway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061431",
+   "number": "71",
+   "name": "Bostin Murray",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5062430",
+   "number": "7",
+   "name": "Brady Cox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061405",
+   "number": "37",
+   "name": "Mason Odland",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060620",
+   "number": "34",
+   "name": "Brody Berezan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061115",
+   "number": "29",
+   "name": "Dominik Brkic",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061707",
+   "number": "23",
+   "name": "Paisley Goodstriker-Chalifoux",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060457",
+   "number": "22",
+   "name": "Bo Norton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061548",
+   "number": "20",
+   "name": "Colson Smith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060655",
+   "number": "19",
+   "name": "Sawyer Carlson",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061404",
+   "number": "17",
+   "name": "Hudson Nate",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5062662",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061521",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061611",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060830",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060496",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061453",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060840",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061804",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061597",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060783",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060486",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061499",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5060673",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5062646",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061968",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061196",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061455",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060620",
+   "number": "34",
+   "name": "Brody Berezan",
+   "seconds": 2700,
+   "ga": 7,
+   "shots": 20,
+   "saves": 13
+  },
+  {
+   "side": "away",
+   "teamId": "402387",
+   "playerId": "5061455",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 2700,
+   "ga": 2,
+   "shots": 10,
+   "saves": 8
+  }
+ ],
+ "warnings": [],
+ "start": "2026-09-27T14:45:00",
+ "gameNumber": 215
+}

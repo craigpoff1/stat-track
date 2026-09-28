@@ -1,0 +1,16 @@
+{
+  "name": "stat-track",
+  "version": "1.0.0",
+  "description": "Unofficial HSL 2019 Major stats",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "build": "node scripts/build.mjs",
+    "update": "node scripts/scrape.mjs && node scripts/build.mjs",
+    "serve": "python -m http.server 8765 --directory site"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "private": true,
+  "type": "module"
+}

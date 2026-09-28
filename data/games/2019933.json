@@ -1,0 +1,716 @@
+{
+ "id": "2019933",
+ "dateText": "Saturday, September 26, 2026 @ 9:00 a.m.",
+ "rink": "North County Recreation Complex",
+ "status": "Final",
+ "home": {
+  "name": "Young Kings Hockey",
+  "teamId": "402392",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/4e595bc0-9a33-4549-83e4-cfb247d8ff45_Young Kings Hockey.png",
+  "score": 16
+ },
+ "away": {
+  "name": "Saints Pro Hockey Academy",
+  "teamId": "402383",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/4a596d15-bb5b-4be5-970f-3b1d406dfe79_Saints Pro Hockey Academy.png",
+  "score": 0
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 4,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 8,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:17",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "13",
+    "name": "Brooks Hurt"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Colten Gauer"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:19",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "13",
+    "name": "Brooks Hurt"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Sawyer Carlson"
+    },
+    {
+     "number": "98",
+     "name": "Colten Gauer"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:46",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "13",
+    "name": "Brooks Hurt"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:12",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "13",
+    "name": "Brooks Hurt"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:10",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "20",
+    "name": "Colson Smith"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:18",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "19",
+    "name": "Sawyer Carlson"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Brady Cox"
+    },
+    {
+     "number": "13",
+     "name": "Brooks Hurt"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:19",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "13",
+    "name": "Brooks Hurt"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Colten Gauer"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:01",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "71",
+    "name": "Bostin Murray"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Drake Gemmill"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:32",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "71",
+    "name": "Bostin Murray"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Evan Goldie"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:39",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "71",
+    "name": "Bostin Murray"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Drake Gemmill"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:12",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "20",
+    "name": "Colson Smith"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:41",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "19",
+    "name": "Sawyer Carlson"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Colten Gauer"
+    },
+    {
+     "number": "13",
+     "name": "Brooks Hurt"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:55",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "88",
+    "name": "Drake Gemmill"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Brooks Bohner"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:37",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "98",
+    "name": "Colten Gauer"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Sawyer Carlson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:31",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "88",
+    "name": "Drake Gemmill"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Dominik Brkic"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:30",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "20",
+    "name": "Colson Smith"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:30",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "13",
+    "name": "Brooks Hurt"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Sawyer Carlson"
+    },
+    {
+     "number": "98",
+     "name": "Colten Gauer"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060632",
+   "number": "13",
+   "name": "Brooks Hurt",
+   "g": 6,
+   "a": 2,
+   "pts": 8,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061431",
+   "number": "71",
+   "name": "Bostin Murray",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5062508",
+   "number": "88",
+   "name": "Drake Gemmill",
+   "g": 2,
+   "a": 2,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061548",
+   "number": "20",
+   "name": "Colson Smith",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060655",
+   "number": "19",
+   "name": "Sawyer Carlson",
+   "g": 2,
+   "a": 3,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060622",
+   "number": "98",
+   "name": "Colten Gauer",
+   "g": 1,
+   "a": 5,
+   "pts": 6,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5062441",
+   "number": "96",
+   "name": "Caden Conway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061440",
+   "number": "9",
+   "name": "Evan Goldie",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5062509",
+   "number": "8",
+   "name": "Brooks Bohner",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061894",
+   "number": "79",
+   "name": "Hayes Conway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5062430",
+   "number": "7",
+   "name": "Brady Cox",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061405",
+   "number": "37",
+   "name": "Mason Odland",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060620",
+   "number": "34",
+   "name": "Brody Berezan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061115",
+   "number": "29",
+   "name": "Dominik Brkic",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061707",
+   "number": "23",
+   "name": "Paisley Goodstriker-Chalifoux",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5060457",
+   "number": "22",
+   "name": "Bo Norton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402392",
+   "playerId": "5061404",
+   "number": "17",
+   "name": "Hudson Nate",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5062686",
+   "number": "98",
+   "name": "Jre Pincemin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061581",
+   "number": "93",
+   "name": "Hudson Epp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5060785",
+   "number": "88",
+   "name": "Kaleb Chartrand",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061599",
+   "number": "87",
+   "name": "Liam Eisenkrein",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5062157",
+   "number": "86",
+   "name": "Kayden Catimbang",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061631",
+   "number": "8",
+   "name": "Everett Amiel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5062450",
+   "number": "71",
+   "name": "Matteo Sorochan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5062682",
+   "number": "7",
+   "name": "Ramsay Sinclair",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061139",
+   "number": "5",
+   "name": "Colt Yaceyko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061966",
+   "number": "47",
+   "name": "Archie Kemp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061075",
+   "number": "40",
+   "name": "Madeleine Melanson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061135",
+   "number": "37",
+   "name": "Bellamy Tkachuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061902",
+   "number": "29",
+   "name": "Jacob Damiza",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5062651",
+   "number": "20",
+   "name": "Knox Meidinger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5061764",
+   "number": "19",
+   "name": "Bash Beech",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5062446",
+   "number": "16",
+   "name": "Aidan Tasko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402383",
+   "playerId": "5060777",
+   "number": "11",
+   "name": "Xavier Fedun",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "start": "2026-09-26T09:00:00",
+ "gameNumber": 161
+}

@@ -1,0 +1,811 @@
+{
+ "id": "2019957",
+ "dateText": "Saturday, September 26, 2026 @ 5:15 p.m.",
+ "rink": "Viking Carena Complex",
+ "status": "Final",
+ "home": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "402390",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/b5fda34c-1619-4945-9848-0c7306bd5f27_Riggers Hockey Academy.png",
+  "score": 12
+ },
+ "away": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402389",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e4190762-7ba9-4471-81f8-e1bd679cd552_Rebels Hockey Academy.png",
+  "score": 8
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 6,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "1",
+   "home": 10,
+   "away": 10
+  },
+  {
+   "label": "2",
+   "home": 23,
+   "away": 21
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 4
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "20:00",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "assists": [
+    {
+     "number": "77",
+     "name": "Henry Olineck"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:58",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "77",
+    "name": "Henry Olineck"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:52",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:10",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:39",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "20",
+    "name": "Merrick Pobuda"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:37",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Hayes Kaiser"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:00",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "assists": [
+    {
+     "number": "66",
+     "name": "Rayland Gordon"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:00",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:48",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "88",
+    "name": "Braxton Wagner"
+   },
+   "assists": [
+    {
+     "number": "41",
+     "name": "Edward Szabo"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:48",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Bowen Neurauter"
+   },
+   "assists": [
+    {
+     "number": "4",
+     "name": "Ryan Bailey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:02",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "88",
+    "name": "Braxton Wagner"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:52",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "88",
+    "name": "Braxton Wagner"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:13",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Bowen Neurauter"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Kyler Moore"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:01",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Owen Yuskow"
+   },
+   "assists": [
+    {
+     "number": "91",
+     "name": "Noah Kaiser"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:28",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Owen Yuskow"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:10",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Bowen Neurauter"
+   },
+   "assists": [
+    {
+     "number": "67",
+     "name": "Reid Whiteway"
+    },
+    {
+     "number": "4",
+     "name": "Ryan Bailey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:02",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Owen Yuskow"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:02",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:02",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:39",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:27",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:42",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:31",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Logan Rumley"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:57",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Bowen Neurauter"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:55",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "88",
+    "name": "Braxton Wagner"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:52",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Jones Brezinski"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:52",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "assists": [
+    {
+     "number": "4",
+     "name": "Ryan Bailey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:52",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:51",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Oliver Rook"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060460",
+   "number": "91",
+   "name": "Noah Kaiser",
+   "g": 4,
+   "a": 1,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5062392",
+   "number": "88",
+   "name": "Braxton Wagner",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060614",
+   "number": "71",
+   "name": "Owen Yuskow",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5061436",
+   "number": "77",
+   "name": "Henry Olineck",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5061434",
+   "number": "13",
+   "name": "Kash Bala",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5061429",
+   "number": "98",
+   "name": "Cabot Doucet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060463",
+   "number": "9",
+   "name": "Hayes Kaiser",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060624",
+   "number": "89",
+   "name": "Spencer Priddle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5061438",
+   "number": "82",
+   "name": "Avery Sahnan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060644",
+   "number": "8",
+   "name": "Jones Brezinski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5062510",
+   "number": "41",
+   "name": "Edward Szabo",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060629",
+   "number": "29",
+   "name": "Oliver Rook",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060618",
+   "number": "20",
+   "name": "Merrick Pobuda",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060616",
+   "number": "19",
+   "name": "Logan Rumley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5060625",
+   "number": "17",
+   "name": "Kasen Leard",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402390",
+   "playerId": "5062409",
+   "number": "11",
+   "name": "Brody Wilkes",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062976",
+   "number": "4",
+   "name": "Ryan Bailey",
+   "g": 4,
+   "a": 3,
+   "pts": 7,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062967",
+   "number": "13",
+   "name": "Bowen Neurauter",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061024",
+   "number": "98",
+   "name": "Kyler Moore",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061989",
+   "number": "9",
+   "name": "Nolan Stewart",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062953",
+   "number": "89",
+   "name": "Emerson Fowler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5060693",
+   "number": "87",
+   "name": "Kolton Hessler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062975",
+   "number": "77",
+   "name": "Novik Master",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061884",
+   "number": "7",
+   "name": "Shea Chapman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062968",
+   "number": "67",
+   "name": "Reid Whiteway",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062807",
+   "number": "66",
+   "name": "Rayland Gordon",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061995",
+   "number": "36",
+   "name": "Mila MacLean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061996",
+   "number": "3",
+   "name": "Rowen Sivorot",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5060990",
+   "number": "29",
+   "name": "Nash Bauer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061992",
+   "number": "27",
+   "name": "Weston McLaughlin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "start": "2026-09-26T17:15:00",
+ "gameNumber": 185
+}

@@ -1,0 +1,65 @@
+name: Update stats and deploy
+
+on:
+  schedule:
+    # Every 2 hours. Games are mostly weekends; off-days are cheap no-ops.
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      refetch_all:
+        description: 'Re-fetch every final game (not just new/recent ones)'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ['site/**', 'scripts/**', '.github/workflows/**']
+
+permissions:
+  contents: write   # commit refreshed data back to the repo
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Scrape league site
+        run: node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }}
+
+      - name: Build stats
+        run: node scripts/build.mjs
+
+      - name: Commit data changes
+        run: |
+          git config user.name "stat-track bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No new game data."
+          else
+            git commit -m "Update game data"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
