@@ -64,6 +64,18 @@
   const tn = (t) => `<span class="tn">${logo(t)}<span class="full">${teamLink(t)}</span><span class="cd">${teamLink(t, t.code)}</span></span>`;
   const panel = (title, body, { meta = '', gold = false, reveal = true } = {}) =>
     `<section class="panel" ${reveal ? 'data-reveal' : ''}><div class="ph"><h2 class="${gold ? 'gold' : ''}">${title}</h2><span class="meta">${meta}</span></div>${body}</section>`;
+  // Monday-start week key; HSL games are Fri-Sun so a week is a tournament weekend.
+  const weekKey = (date) => {
+    const d = localDate(date); d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+  const weekLabel = (k) => {
+    const w = S.weekends.get(k); if (!w) return k;
+    const a = localDate(w.first), b = localDate(w.last);
+    const mon = (d) => d.toLocaleDateString('en-CA', { month: 'short' });
+    if (a.toDateString() === b.toDateString()) return `${mon(a)} ${a.getDate()}`;
+    return a.getMonth() === b.getMonth() ? `${mon(a)} ${a.getDate()}–${b.getDate()}` : `${mon(a)} ${a.getDate()} – ${mon(b)} ${b.getDate()}`;
+  };
   const involves = (s, id) => String(s.home) === String(id) || String(s.away) === String(id);
   const isUpcoming = (s) => !s.final && localDate(s.end || s.start) >= new Date(Date.now() - 3 * 36e5);
 
@@ -259,6 +271,13 @@
       let s = `<svg width="${w}" height="${H}" role="img" aria-label="Running score through the game">`;
       for (const v of ticks(mx, 3)) s += `<line class="gr" x1="${m.l}" x2="${w - m.r}" y1="${y(v)}" y2="${y(v)}"/><text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end" style="font-size:11px;fill:var(--ink3)">${v}</text>`;
       for (let p = 1; p <= nPer; p++) s += `${p > 1 ? `<line class="ax" x1="${x((p - 1) * PER)}" x2="${x((p - 1) * PER)}" y1="${m.t}" y2="${H - m.b}"/>` : ''}<text x="${x((p - 0.5) * PER)}" y="${H - m.b + 18}" text-anchor="middle" style="font-size:12px">${p <= 3 ? 'P' + p : 'OT'}</text>`;
+      // power-play windows: from the penalty to its expiry (or period end), tinted for the team with the advantage
+      for (const e of g.ev) {
+        if (e.type !== 'penalty' || !e.minutes || e.minutes > 5 || !e.regulation) continue;
+        const pEnd = Number(e.period) * PER, x0 = x(e.t), x1 = x(Math.min(pEnd, e.t + e.minutes * 60));
+        const adv = team(e.side === 'home' ? g.away.id : g.home.id);
+        s += `<rect class="fade" x="${x0}" y="${m.t}" width="${Math.max(1, x1 - x0)}" height="${H - m.b - m.t}" fill="${e.side === 'home' ? 'var(--red)' : 'var(--us)'}" fill-opacity=".09" ${tip(`${adv.short} power play`, `${e.time} P${e.period} · ${team(e.teamId).short} ${e.infraction || 'penalty'} (${e.minutes} min)`)}/>`;
+      }
       const len = w * 2;
       s += `<path class="draw" style="--len:${len}" d="${path('away')}" fill="none" stroke="var(--red)" stroke-width="2" stroke-linejoin="round"/>
             <path class="draw" style="--len:${len}" d="${path('home')}" fill="none" stroke="var(--us)" stroke-width="2.5" stroke-linejoin="round"/>`;
@@ -271,6 +290,162 @@
       return s + '</svg>';
     });
   }
+
+  // Season progression: cumulative GF (gold) vs GA (red) by game, weekend bands, W/L strip.
+  function progChart(el, t) {
+    const R = t.results;
+    mount(el, (w) => {
+      if (!R.length) return '<div class="empty">No games yet</div>';
+      const H = 240, m = { l: 30, r: 36, t: 14, b: 58 }, n = R.length, step = (w - m.l - m.r) / n;
+      let gf = 0, ga = 0;
+      const pts = R.map((r) => ({ ...r, cf: (gf += r.gf), ca: (ga += r.ga), wk: weekKey(r.date) }));
+      const mx = ticks(Math.max(1, gf, ga), 4).at(-1), y = lin(0, mx, H - m.b, m.t), x = (i) => m.l + step * (i + 0.5);
+      let s = `<svg width="${w}" height="${H}" role="img" aria-label="${esc(t.short)} cumulative goals for and against">`;
+      for (const v of ticks(mx, 4)) s += `<line class="gr" x1="${m.l}" x2="${w - m.r}" y1="${y(v)}" y2="${y(v)}"/><text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end" style="font-size:11px;fill:var(--ink3)">${v}</text>`;
+      // weekend groups
+      let start = 0;
+      pts.forEach((p, i) => {
+        const last = i === n - 1 || pts[i + 1].wk !== p.wk;
+        if (!last) return;
+        const x0 = m.l + step * start, x1 = m.l + step * (i + 1), wk = pts.slice(start, i + 1);
+        const rec = ['W', 'L', 'T'].map((r) => wk.filter((q) => q.r === r).length);
+        if (start > 0) s += `<line class="ax" x1="${x0}" x2="${x0}" y1="${m.t}" y2="${H - m.b + 30}"/>`;
+        s += `<text x="${(x0 + x1) / 2}" y="${H - m.b + 44}" text-anchor="middle" style="font-size:11px;fill:var(--ink2)">${esc(weekLabel(p.wk).toUpperCase())}</text>
+              <text x="${(x0 + x1) / 2}" y="${H - m.b + 56}" text-anchor="middle" style="font-size:10px;fill:var(--ink3)">${rec[0]}-${rec[1]}-${rec[2]}</text>`;
+        start = i + 1;
+      });
+      const line = (k) => pts.map((p, i) => `${i ? 'L' : 'M'}${x(i)},${y(p[k])}`).join('');
+      const len = w * 2;
+      s += `<path class="draw" style="--len:${len}" d="M${m.l},${y(0)}L${line('ca').slice(1)}" fill="none" stroke="var(--red)" stroke-width="2" stroke-linejoin="round"/>
+            <path class="draw" style="--len:${len}" d="M${m.l},${y(0)}L${line('cf').slice(1)}" fill="none" stroke="var(--us)" stroke-width="2.5" stroke-linejoin="round"/>`;
+      pts.forEach((p, i) => {
+        const o = team(p.opp);
+        s += `<g class="fade" ${tip(`${dt(p.date)} ${p.home ? 'vs' : '@'} ${o.short}`, `${p.r} ${p.gf}–${p.ga} · season ${p.cf} GF, ${p.ca} GA`)}>
+          <rect class="hit" x="${m.l + step * i}" y="${m.t}" width="${step}" height="${H - m.b - m.t + 24}"/>
+          <circle cx="${x(i)}" cy="${y(p.cf)}" r="3.5" fill="var(--us)"/><circle cx="${x(i)}" cy="${y(p.ca)}" r="3" fill="var(--red)"/>
+          <rect x="${m.l + step * i + 1.5}" y="${H - m.b + 10}" width="${Math.max(2, step - 3)}" height="12" fill="${p.r === 'W' ? 'var(--us)' : p.r === 'L' ? '#5A2A22' : 'var(--line2)'}"/>
+          ${step >= 16 ? `<text x="${x(i)}" y="${H - m.b + 20}" text-anchor="middle" style="font-size:9px;fill:${p.r === 'W' ? '#111' : 'var(--ink)'};font-weight:800">${p.r}</text>` : ''}</g>`;
+      });
+      s += `<text x="${w - m.r + 6}" y="${y(gf) + 4}" class="t-us" style="font-size:14px">${gf}</text><text x="${w - m.r + 6}" y="${y(ga) + 4}" class="t-strong" style="font-size:14px">${ga}</text>`;
+      return s + '</svg>';
+    });
+  }
+
+  // Goal timing heatmap: 3 regulation periods x 5 three-minute buckets. rows: [{ label, color, goals: [event] }]
+  function heatmap(el, rows) {
+    const PER = (S.meta.regulationMinutes || 45) / 3 * 60, B = 5, bucket = PER / B;
+    const grid = rows.map((r) => {
+      const c = Array(3 * B).fill(0);
+      for (const e of r.goals) {
+        if (!e.regulation || e.badClock) continue;
+        const pn = Number(e.period) - 1, within = e.t - pn * PER;
+        c[pn * B + Math.min(B - 1, Math.floor(within / bucket))]++;
+      }
+      return { ...r, c, n: c.reduce((a, b) => a + b, 0) };
+    });
+    mount(el, (w) => {
+      const lab = 78, top = 22, rh = 40, cw = (w - lab) / (3 * B), H = top + rows.length * (rh + 6);
+      let s = `<svg width="${w}" height="${H}" role="img" aria-label="When goals are scored, by period and minute">`;
+      for (let p = 0; p < 3; p++) s += `<text x="${lab + cw * (p * B + B / 2)}" y="12" text-anchor="middle" class="t-strong" style="font-size:13px">P${p + 1} <tspan style="fill:var(--ink3);font-weight:600;font-size:11px">0–${Math.round(PER / 60)}'</tspan></text>`;
+      grid.forEach((r, ri) => {
+        const y = top + ri * (rh + 6), mx = Math.max(1, ...r.c);
+        s += `<text x="0" y="${y + rh / 2 - 2}" class="t-strong" style="font-size:13px">${esc(r.label)}</text><text x="0" y="${y + rh / 2 + 13}" style="font-size:11px;fill:var(--ink3)">${r.n} goals</text>`;
+        r.c.forEach((v, i) => {
+          const p = Math.floor(i / B), b = i % B, x = lab + cw * i + 1;
+          const a = v ? 0.14 + 0.86 * (v / mx) : 0;
+          const m0 = Math.round((b * bucket) / 60), m1 = Math.round(((b + 1) * bucket) / 60);
+          s += `<g class="fade" style="transition-delay:${i * 18}ms" ${tip(`${r.label} · P${p + 1}, minutes ${m0}–${m1}`, `${v} goal${v === 1 ? '' : 's'}`)}>
+            <rect x="${x}" y="${y}" width="${cw - 2}" height="${rh}" fill="${v ? r.color : 'var(--panel2)'}" fill-opacity="${v ? a : 1}"/>
+            ${v ? `<text x="${x + (cw - 2) / 2}" y="${y + rh / 2 + 5}" text-anchor="middle" style="font-size:13px;font-weight:700;fill:${a > 0.55 ? '#0B0B0B' : 'var(--ink)'}">${v}</text>` : ''}</g>`;
+        });
+      });
+      for (let p = 1; p < 3; p++) s += `<line x1="${lab + cw * p * B}" x2="${lab + cw * p * B}" y1="${top - 4}" y2="${H}" style="stroke:var(--bg);stroke-width:3"/>`;
+      return s + '</svg>';
+    });
+  }
+
+  // Linemates: who sets up whom on one team, from goal/assist pairs. Circle layout, curved links.
+  function networkChart(el, teamId) {
+    const pairs = new Map(), involvement = new Map();
+    let goals = 0, assisted = 0;
+    for (const g of S.games) for (const e of g.ev) {
+      if (e.type !== 'goal' || String(e.teamId) !== String(teamId) || !e.playerId) continue;
+      goals++;
+      const as = e.assists.filter((a) => a.playerId);
+      if (as.length) assisted++;
+      for (const a of as) {
+        const k = [a.playerId, e.playerId].sort().join('|');
+        const p = pairs.get(k) || { a: [a.playerId, e.playerId].sort()[0], b: [a.playerId, e.playerId].sort()[1], n: 0, detail: [] };
+        p.n++; p.detail.push(`${playerById.get(a.playerId)?.name.split(' ')[0]} → ${e.scorer.name.split(' ')[0]}`);
+        pairs.set(k, p);
+        for (const id of [a.playerId, e.playerId]) involvement.set(id, (involvement.get(id) || 0) + 1);
+      }
+    }
+    const nodes = [...involvement.keys()].map((id) => playerById.get(id)).filter(Boolean).sort((a, b) => (Number(a.number) || 0) - (Number(b.number) || 0));
+    mount(el, (w) => {
+      if (!nodes.length) return '<div class="empty">No assisted goals yet</div>';
+      const H = Math.min(440, Math.max(300, w * 0.8)), cx = w / 2, cy = H / 2, R = Math.min(w, H) / 2 - 58;
+      const pos = new Map(nodes.map((p, i) => { const a = -Math.PI / 2 + (i / nodes.length) * Math.PI * 2; return [p.id, { x: cx + R * Math.cos(a), y: cy + R * Math.sin(a), a }]; }));
+      const mxN = Math.max(1, ...[...pairs.values()].map((p) => p.n)), mxI = Math.max(1, ...involvement.values());
+      let s = `<svg width="${w}" height="${H}" role="img" aria-label="Assist connections between teammates">`;
+      [...pairs.values()].sort((a, b) => a.n - b.n).forEach((p, i) => {
+        const A = pos.get(p.a), B = pos.get(p.b); if (!A || !B) return;
+        const mx = (A.x + B.x) / 2, my = (A.y + B.y) / 2, qx = mx + (cx - mx) * 0.55, qy = my + (cy - my) * 0.55;
+        const k = p.n / mxN;
+        s += `<path class="fade link" style="transition-delay:${200 + i * 20}ms" data-a="${p.a}" data-b="${p.b}" d="M${A.x},${A.y}Q${qx},${qy} ${B.x},${B.y}" fill="none" stroke="${k > 0.6 ? 'var(--us)' : 'var(--blue)'}" stroke-width="${1.5 + 5 * k}" stroke-opacity="${0.35 + 0.5 * k}" stroke-linecap="round" ${tip(`${p.n} goal${p.n > 1 ? 's' : ''} together`, p.detail.join(' · '))}/>`;
+      });
+      nodes.forEach((p) => {
+        const P = pos.get(p.id), r = 5 + 9 * ((involvement.get(p.id) || 0) / mxI), right = Math.cos(P.a) >= 0;
+        const lx = P.x + Math.cos(P.a) * (r + 8), ly = P.y + Math.sin(P.a) * (r + 8) + 4;
+        s += `<a href="#/player/${p.id}"><g class="node" data-id="${p.id}" ${tip(p.name, `${p.g} G · ${p.a} A · in ${involvement.get(p.id)} assisted goal${involvement.get(p.id) > 1 ? 's' : ''}`)}>
+          <circle cx="${P.x}" cy="${P.y}" r="${r + 6}" class="hit"/>
+          <circle cx="${P.x}" cy="${P.y}" r="${r}" fill="var(--panel2)" stroke="var(--us)" stroke-width="2"/>
+          <text x="${lx}" y="${ly}" text-anchor="${Math.abs(Math.cos(P.a)) < 0.25 ? 'middle' : right ? 'start' : 'end'}" style="font-size:12px">${esc(p.name.split(' ')[0])} <tspan style="fill:var(--ink3)">#${esc(p.number)}</tspan></text></g></a>`;
+      });
+      return s + '</svg>';
+    });
+    // hover a player: fade links that don't touch them
+    el.addEventListener('pointerover', (e) => {
+      const n = e.target.closest?.('.node'); if (!n) return;
+      el.querySelectorAll('.link').forEach((l) => (l.style.opacity = l.dataset.a === n.dataset.id || l.dataset.b === n.dataset.id ? '1' : '.08'));
+    });
+    el.addEventListener('pointerout', (e) => { if (e.target.closest?.('.node')) el.querySelectorAll('.link').forEach((l) => (l.style.opacity = '')); });
+    return { goals, assisted };
+  }
+
+  // A player's season by weekend: stacked goals/assists per weekend, running total above.
+  function weekendChart(el, p) {
+    const by = new Map();
+    for (const l of p.log) {
+      const k = weekKey(l.date), w = by.get(k) || { k, g: 0, a: 0, gp: 0 };
+      w.g += l.g; w.a += l.a; w.gp++; by.set(k, w);
+    }
+    const W = [...by.values()].sort((a, b) => a.k.localeCompare(b.k));
+    mount(el, (w) => {
+      if (!W.length) return '<div class="empty">No games yet</div>';
+      const H = 200, m = { l: 24, r: 8, t: 26, b: 40 }, step = (w - m.l - m.r) / Math.max(W.length, 4), bw = Math.min(46, step * 0.55);
+      const mx = Math.max(4, ...W.map((x) => x.g + x.a)), y = lin(0, mx, H - m.b, m.t);
+      let s = `<svg width="${w}" height="${H}" role="img" aria-label="${esc(p.name)} points by weekend">`;
+      for (const v of ticks(mx, 4)) s += `<line class="gr" x1="${m.l}" x2="${w - m.r}" y1="${y(v)}" y2="${y(v)}"/><text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end" style="font-size:11px;fill:var(--ink3)">${v}</text>`;
+      let run = 0;
+      W.forEach((x, i) => {
+        run += x.g + x.a;
+        const bx = m.l + step * i + step / 2 - bw / 2, yg = y(x.g), yt = y(x.g + x.a);
+        s += `<g ${tip(`Weekend of ${weekLabel(x.k)}`, `${x.gp} games · ${x.g} G · ${x.a} A · ${run} season points`)}>
+          <rect class="hit" x="${m.l + step * i}" y="${m.t}" width="${step}" height="${H - m.t - m.b}"/>
+          ${x.g ? `<path class="gv" style="transition-delay:${i * 70}ms" fill="var(--us)" d="${x.a ? `M${bx},${H - m.b}V${yg}H${bx + bw}V${H - m.b}Z` : vbar(bx, H - m.b, yg, bw)}"/>` : ''}
+          ${x.a ? `<path class="gv" style="transition-delay:${i * 70 + 60}ms" fill="var(--blue)" d="${vbar(bx, x.g ? yg - 2 : H - m.b, yt, bw)}"/>` : ''}
+          <text class="fade t-strong" x="${bx + bw / 2}" y="${(x.g + x.a ? yt : H - m.b) - 6}" text-anchor="middle" style="font-size:15px">${x.g + x.a}</text>
+          <text x="${bx + bw / 2}" y="${H - m.b + 16}" text-anchor="middle" style="font-size:12px">${esc(weekLabel(x.k).toUpperCase())}</text>
+          <text x="${bx + bw / 2}" y="${H - m.b + 30}" text-anchor="middle" style="font-size:10px;fill:var(--ink3)">${x.gp} GP · ${run} total</text></g>`;
+      });
+      return s + `<line class="ax" x1="${m.l}" x2="${w - m.r}" y1="${H - m.b}" y2="${H - m.b}"/></svg>`;
+    });
+  }
+
+  const firstsList = (items, { showPlayer = false } = {}) => (items.length
+    ? `<ol class="evs">${items.map((f) => `<li class="ev moment"><span class="pn">${f.kind === 'first' ? '★' : '◆'}</span><span class="tc">${dt(f.date)}</span><span class="who"><b>${showPlayer ? `${playerLink(f.player.id, f.player.name)} · ` : ''}${esc(f.label)}</b><span>${f.gameId ? `<a class="lnk" href="#/game/${f.gameId}">vs ${esc(team(f.opp).short)}</a>` : ''}</span></span><span></span></li>`).join('')}</ol>`
+    : '<div class="empty">Nothing yet — it\'s early</div>');
 
   // ------------------------------------------------------------ shared blocks
   function hero(t, { action = '' } = {}) {
@@ -370,7 +545,7 @@
       </div>
       ${followed.length ? `<div style="margin-bottom:18px">${panel('Following', `<div class="pb"><div class="leaders">${leaderRows(followed, () => true)}</div></div>`, { gold: true, meta: 'Players you follow' })}</div>` : ''}
       <div style="margin-bottom:18px">${panel('Points leaders', `<div class="pb"><div class="leaders">${leaderRows(S.skaters.slice(0, 12), (p) => favs.has(p.id) || String(p.teamId) === me.id)}</div></div>`, { meta: '<a class="lnk" href="#/skaters">All skaters →</a>' })}</div>
-      <div style="margin-bottom:18px">${panel(`Last results · ${esc(me.short)}`, gameCards(played, me.id), { meta: `<a class="lnk" href="#/team/${me.id}">Team page →</a>` })}</div>
+      <div style="margin-bottom:18px">${panel(`Last results · ${esc(me.short)}`, gameCards(played, me.id), { meta: `<a class="lnk" href="#/weekend">Weekend recap →</a>` })}</div>
       <div style="margin-bottom:18px">${panel(`Up next · ${esc(me.short)}`, gameCards(upcoming.slice(0, 4), me.id), { gold: true, meta: `${upcoming.length} remaining` })}</div>`;
   }
 
@@ -380,6 +555,11 @@
       sortable($('#standings'), S.teams, standingsCols(true), { key: 'rank', dir: 1, rowCls: mineRow });
       gdChart($('#gd'), myTeamId());
       stChart($('#st'), myTeamId());
+      const me = team(myTeamId());
+      heatmap($('#heat'), [
+        { label: 'Division', color: 'var(--blue)', goals: S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal')) },
+        { label: me.short, color: 'var(--us)', goals: S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal' && String(e.teamId) === me.id)) },
+      ]);
       sortable($('#special'), S.teams, [
         { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
         { key: 'ppg', label: 'PPG', val: (t) => t.ppg }, { key: 'ppo', label: 'PPO', val: (t) => t.ppo, title: 'Power-play opportunities' },
@@ -406,7 +586,8 @@
         ${panel('Special teams', '<div class="pb"><div class="chart" id="st"></div></div>', { meta: 'PP% × PK%' })}
       </div>
       <div style="margin-bottom:18px">${panel('Special teams &amp; shots', '<div class="tw"><table id="special"></table></div><div class="note">PP chances are counted from opponent minor/major penalties on the game sheet. Team save % leaves out sheets where shots weren\'t tracked.</div>')}</div>
-      <div style="margin-bottom:18px">${panel('Goals by period', '<div class="tw"><table id="periods"></table></div>')}</div>`;
+      <div style="margin-bottom:18px">${panel('Goals by period', '<div class="tw"><table id="periods"></table></div>')}</div>
+      <div style="margin-bottom:18px">${panel('When goals happen', '<div class="pb"><div class="chart" id="heat"></div></div><div class="note">Every regulation goal in the division, by period and 3-minute stretch. Darker = more goals.</div>', { meta: 'Division-wide' })}</div>`;
   }
 
   function viewSkaters() {
@@ -497,10 +678,39 @@
       ], { key: 'gp' });
       const b = $('#set-mine'); if (b) b.addEventListener('click', () => { store.set('myTeam', String(id)); render(); });
     });
+    const teamGoals = (forTeam) => S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal' && (String(e.teamId) === String(id)) === forTeam && (String(g.home.id) === String(id) || String(g.away.id) === String(id))));
+    // weekend-by-weekend record
+    const wk = new Map();
+    for (const r of t.results) {
+      const k = weekKey(r.date), o = wk.get(k) || { id: k, gp: 0, w: 0, l: 0, t: 0, gf: 0, ga: 0 };
+      o.gp++; o[r.r.toLowerCase()]++; o.gf += r.gf; o.ga += r.ga; wk.set(k, o);
+    }
+    after(() => {
+      progChart($('#prog'), t);
+      heatmap($('#heat'), [
+        { label: 'Scored', color: 'var(--us)', goals: teamGoals(true) },
+        { label: 'Allowed', color: 'var(--red)', goals: teamGoals(false) },
+      ]);
+      const net = networkChart($('#net'), id);
+      const nm = $('#net-meta'); if (nm) nm.textContent = net.goals ? `${net.assisted} of ${net.goals} goals assisted` : '';
+      sortable($('#wk'), [...wk.values()], [
+        { key: 'id', label: 'Weekend', cls: 'l', val: (o) => o.id, desc: false, html: (o) => `<a class="lnk" href="#/weekend/${o.id}">${esc(weekLabel(o.id))}</a>` },
+        { key: 'gp', label: 'GP', val: (o) => o.gp },
+        { key: 'rec', label: 'W-L-T', val: (o) => o.w * 2 + o.t, html: (o) => `${o.w}-${o.l}-${o.t}` },
+        { key: 'gf', label: 'GF', val: (o) => o.gf }, { key: 'ga', label: 'GA', val: (o) => o.ga },
+        { key: 'diff', label: 'DIFF', val: (o) => o.gf - o.ga, html: (o) => `<span class="${o.gf > o.ga ? 'pos' : o.gf < o.ga ? 'neg' : ''}">${sign(o.gf - o.ga)}</span>` },
+      ], { key: 'id', dir: 1 });
+    });
     const action = isMine ? '<span class="tag-mine">My team</span>' : '<button class="btn" id="set-mine">Make this my team</button>';
     const upcoming = sched.filter(isUpcoming);
     return `
       ${hero(t, { action })}
+      <div style="margin-bottom:18px">${panel('Season progression', `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals for (running)</span><span><i style="background:var(--red)"></i>Goals against (running)</span><span><i style="background:var(--us);height:8px"></i>W</span><span><i style="background:#5A2A22;height:8px"></i>L</span></div><div class="chart" id="prog"></div></div>`, { gold: true, meta: `${t.gp} GP · by weekend` })}</div>
+      <div class="grid g-7-5">
+        ${panel('When goals happen', '<div class="pb"><div class="chart" id="heat"></div></div><div class="note">Regulation goals by period and 3-minute stretch. Darker = more goals.</div>', { meta: 'Scored vs allowed' })}
+        ${panel('By weekend', '<div class="tw"><table id="wk"></table></div>')}
+      </div>
+      <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div class="chart" id="net"></div></div><div class="note">Lines join a passer and scorer on the same goal — thicker means more goals together. Hover a player to see just their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>
       <div class="grid g-5-7">
         ${panel('By period', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { gold: true, meta: `${t.gp} GP` })}
         ${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team SV% ${rate(t.svPct)} · PIM ${t.pim}` })}
@@ -528,6 +738,7 @@
     const tied = S.skaters.filter((x) => x.pts === p.pts).length > 1;
     after(() => {
       logChart($('#elog'), p);
+      weekendChart($('#pwk'), p);
       $('#fav').addEventListener('click', () => {
         const s = favPlayers(); s.has(id) ? s.delete(id) : s.add(id); store.set('favPlayers', [...s]); render();
       });
@@ -556,7 +767,11 @@
           </tbody></table></div>
           <div class="warn" style="border-color:var(--us)">Point streak ${p.pointStreak.current} (best ${p.pointStreak.best}) · ${p.multiPointGames} multi-point games · ${p.ppg + p.ppa} power-play points · ${p.firstGoals} opening goals</div></div>
         </div>
-      </section>`;
+      </section>
+      <div class="grid g-7-5">
+        ${panel(`${esc(first)}'s season`, `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals</span><span><i style="background:var(--blue)"></i>Assists</span></div><div class="chart" id="pwk"></div></div>`, { gold: true, meta: 'Points by weekend' })}
+        ${panel('Firsts &amp; milestones', `<div class="pb">${firstsList(p.firsts.slice().reverse())}</div>`, { meta: `${p.firsts.length}` })}
+      </div>`;
   }
 
   function viewGame(id) {
@@ -578,7 +793,7 @@
         <div class="ph"><h2>Game summary</h2><span class="meta">${g.gameNumber ? `Game ${esc(g.gameNumber)} · ` : ''}${esc(g.rink)}</span></div>
         <div class="bug">
           <div class="side a ${tie || !hw ? 'win' : 'lose'}">${logo(a)}<div><div class="nm">${teamLink(a, a.short)}</div><div class="rc">${rec(a)}AWAY</div></div><span class="sc" data-count="${g.away.score}">0</span></div>
-          <div class="mid"><b>FINAL</b>${dt(g.date, { weekday: 'short', month: 'short', day: 'numeric' })}<span style="margin-top:2px">${tm(g.date)}</span></div>
+          <div class="mid"><b>FINAL</b>${g.comeback ? `<span class="chip mo" style="margin:0 0 6px">${esc(team(g[g.comeback].id).short)} comeback</span>` : ''}${dt(g.date, { weekday: 'short', month: 'short', day: 'numeric' })}<span style="margin-top:2px">${tm(g.date)}</span></div>
           <div class="side ${tie || hw ? 'win' : 'lose'}">${logo(h)}<div><div class="nm">${teamLink(h, h.short)}</div><div class="rc">${rec(h)}HOME</div></div><span class="sc" data-count="${g.home.score}">0</span></div>
         </div>
         <div class="game-body">
@@ -599,7 +814,7 @@
             <div class="sub">Scoring summary</div>
             <ol class="evs">${g.ev.map((e) => {
               const t = team(e.teamId), home = e.side === 'home';
-              if (e.type === 'goal') return `<li class="ev"><span class="pn">${esc(plabel(e.period))}</span><span class="tc">${esc(e.time)}</span><span class="who"><b>${playerLink(e.playerId, e.scorer.name)}</b>${e.tags.map((x) => `<span class="chip ${x === 'GWG' ? 'gwg' : ''}">${esc(x)}</span>`).join('')}<span>${esc(t.code)} · ${e.assists.length ? 'A: ' + e.assists.map((x) => playerLink(x.playerId, x.name)).join(', ') : 'Unassisted'}</span></span><span class="scr" style="color:${home ? 'var(--us)' : 'var(--red)'}">${e.score[1]}–${e.score[0]}</span></li>`;
+              if (e.type === 'goal') return `<li class="ev"><span class="pn">${esc(plabel(e.period))}</span><span class="tc">${esc(e.time)}</span><span class="who"><b>${playerLink(e.playerId, e.scorer.name)}</b>${e.tags.map((x) => `<span class="chip ${x === 'GWG' ? 'gwg' : ''}">${esc(x)}</span>`).join('')}${e.moment && e.moment !== 'Opening goal' ? `<span class="chip mo">${esc(e.moment)}</span>` : ''}<span>${esc(t.code)} ·${e.assists.length ? 'A: ' + e.assists.map((x) => playerLink(x.playerId, x.name)).join(', ') : 'Unassisted'}</span></span><span class="scr" style="color:${home ? 'var(--us)' : 'var(--red)'}">${e.score[1]}–${e.score[0]}</span></li>`;
               return `<li class="ev pen"><span class="pn">${esc(plabel(e.period))}</span><span class="tc">${esc(e.time)}</span><span class="who"><b>${esc(t.short)} penalty · ${e.minutes} min</b><span>${esc(e.infraction || '')}</span></span><span class="scr" style="color:var(--ink3);font-size:12px">PEN</span></li>`;
             }).join('') || '<li class="empty">No events recorded</li>'}</ol>
           </div>
@@ -611,11 +826,75 @@
       </div>`;
   }
 
+  function viewWeekend(key) {
+    const keys = [...S.weekends.keys()].sort();
+    const playedKeys = keys.filter((k) => S.weekends.get(k).items.some((s) => s.final));
+    if (!key) key = playedKeys.at(-1) || keys[0];
+    const W = S.weekends.get(key);
+    if (!W) return notFound();
+    const me = team(myTeamId());
+    const items = W.items.slice().sort((a, b) => a.start.localeCompare(b.start));
+    const finals = items.filter((s) => s.final), ids = new Set(finals.map((s) => s.id));
+    const games = finals.map((s) => gameById.get(s.id)).filter(Boolean);
+    const mine = items.filter((s) => involves(s, me.id));
+    const myFinals = mine.filter((s) => s.final);
+    const rec = { W: 0, L: 0, T: 0 }, gfga = [0, 0];
+    for (const s of myFinals) {
+      const home = String(s.home) === me.id, my = home ? s.homeScore : s.awayScore, op = home ? s.awayScore : s.homeScore;
+      rec[my > op ? 'W' : my < op ? 'L' : 'T']++; gfga[0] += my; gfga[1] += op;
+    }
+    // weekend scoring leaders
+    const tally = new Map();
+    for (const g of games) for (const r of g.skaters) {
+      if (!r.playerId || !(r.g + r.a)) continue;
+      const t = tally.get(r.playerId) || { ...playerById.get(r.playerId), g: 0, a: 0, pts: 0 };
+      t.g += r.g; t.a += r.a; t.pts += r.g + r.a; tally.set(r.playerId, t);
+    }
+    const leaders = [...tally.values()].filter((p) => p.id).sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));
+    let rk = 0, prev = null; leaders.forEach((p, i) => { if (p.pts !== prev) rk = i + 1; p.rank = rk; prev = p.pts; });
+    // moments: my team's firsts/milestones, then division highlights
+    // one line per player: "First goal, assist & multi-point game · 10th point"
+    const andJoin = (a) => (a.length > 1 ? `${a.slice(0, -1).join(', ')} & ${a.at(-1)}` : a[0]);
+    const myMoments = S.players.filter((p) => p.teamId === me.id).map((p) => {
+      const fs = p.firsts.filter((f) => ids.has(f.gameId));
+      if (!fs.length) return null;
+      const ORDER = ['goal', 'assist', 'multi-point game', 'hat trick', 'power-play goal', 'shorthanded goal'];
+      const firsts = fs.filter((f) => f.kind === 'first').map((f) => f.label.replace(/^First /, '').replace(/ of the season$/, ''))
+        .sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
+      const counts = new Map();
+      for (const f of fs.filter((x) => x.kind !== 'first')) counts.set(f.label, (counts.get(f.label) || 0) + 1);
+      const label = [firsts.length ? 'First ' + andJoin(firsts) : null, ...[...counts].map(([l, n]) => (n > 1 ? `${l} ×${n}` : l))].filter(Boolean).join(' · ');
+      return { ...fs[0], kind: firsts.length ? 'first' : 'milestone', label, player: p };
+    }).filter(Boolean).sort((a, b) => a.date.localeCompare(b.date) || a.player.name.localeCompare(b.player.name));
+    const div = [];
+    for (const g of games) {
+      const h = team(g.home.id), a = team(g.away.id);
+      if (g.comeback) { const w = g.comeback === 'home' ? h : a, l = g.comeback === 'home' ? a : h; div.push({ gameId: g.id, date: g.date, text: `${w.short} came from behind to beat ${l.short} ${Math.max(g.home.score, g.away.score)}–${Math.min(g.home.score, g.away.score)}` }); }
+      for (const [side, t, o] of [['home', h, a], ['away', a, h]]) if (g[side === 'home' ? 'away' : 'home'].score === 0) div.push({ gameId: g.id, date: g.date, text: `${t.short} shutout vs ${o.short}` });
+      for (const r of g.skaters) if (r.g >= 3) div.push({ gameId: g.id, date: g.date, text: `${r.name} hat trick (${team(r.teamId).short}, ${r.g} goals)`, playerId: r.playerId });
+    }
+    const idx = keys.indexOf(key), prevK = keys[idx - 1], nextK = keys[idx + 1];
+    const chips = keys.map((k) => `<a class="wkchip ${k === key ? 'on' : ''} ${S.weekends.get(k).items.some((s) => s.final) ? '' : 'up'}" href="#/weekend/${k}">${esc(weekLabel(k))}</a>`).join('');
+    after(() => { const on = $app.querySelector('.wkchip.on'); if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' }); });
+    return `
+      <div class="ptitle"><div><div class="k">Weekend · ${finals.length} of ${items.length} games final</div><h1>${esc(weekLabel(key))}</h1><div class="s">${W.items.length ? esc([...new Set(items.map((s) => s.location).filter(Boolean))].slice(0, 3).join(' · ')) : ''}</div></div>
+        <div style="display:flex;gap:8px">${prevK ? `<a class="btn" href="#/weekend/${prevK}">← Prev</a>` : ''}${nextK ? `<a class="btn" href="#/weekend/${nextK}">Next →</a>` : ''}</div></div>
+      <div class="wkbar">${chips}</div>
+      ${mine.length ? `<div style="margin-bottom:18px">${panel(`${esc(me.short)} this weekend`, `${myFinals.length ? `<div class="stats wkstats"><div class="st"><span class="l">Record</span><span class="v">${rec.W}-${rec.L}-${rec.T}</span></div><div class="st"><span class="l">Goals for</span><span class="v">${gfga[0]}</span></div><div class="st"><span class="l">Goals against</span><span class="v">${gfga[1]}</span></div><div class="st"><span class="l">Games</span><span class="v">${myFinals.length}/${mine.length}</span></div></div>` : ''}${gameCards(mine, me.id)}`, { gold: true, meta: `${mine.length} games` })}</div>` : ''}
+      ${finals.length ? `<div class="grid g-6-6">
+        ${panel(`${esc(me.short)} moments`, `<div class="pb">${firstsList(myMoments, { showPlayer: true })}</div>`, { gold: true, meta: 'Firsts &amp; milestones' })}
+        ${panel('Around the division', `<div class="pb">${div.length ? `<ol class="evs">${div.map((d) => `<li class="ev moment"><span class="pn">◆</span><span class="tc">${dt(d.date)}</span><span class="who"><b>${d.playerId ? playerLink(d.playerId, d.text) : esc(d.text)}</b></span><a class="scr lnk" href="#/game/${d.gameId}" style="font-size:12px">GAME →</a></li>`).join('')}</ol>` : '<div class="empty">No comebacks, shutouts or hat tricks</div>'}</div>`, { meta: 'Comebacks · shutouts · hat tricks' })}
+      </div>
+      <div style="margin-bottom:18px">${panel('Weekend scoring', `<div class="pb"><div class="leaders">${leaderRows(leaders.slice(0, 12), (p) => String(p.teamId) === me.id || favPlayers().has(p.id))}</div></div>`, { meta: 'Points this weekend' })}</div>` : ''}
+      <div style="margin-bottom:18px">${panel('All games', gameCards(items, null), { meta: `${items.length} games` })}</div>`;
+  }
+
   const notFound = () => `<div class="ptitle"><div><div class="k">404</div><h1>Not found</h1><div class="s"><a class="lnk" href="#/">Back to the scoreboard</a></div></div></div>`;
 
   // ------------------------------------------------------------ router
   const routes = [
     [/^\/?$/, viewHome], [/^\/standings$/, viewStandings], [/^\/skaters$/, viewSkaters], [/^\/schedule$/, viewSchedule],
+    [/^\/weekends?$/, () => viewWeekend()], [/^\/weekend\/(\d{4}-\d{2}-\d{2})$/, viewWeekend],
     [/^\/team\/(\w+)$/, viewTeam], [/^\/player\/(\d+)$/, viewPlayer], [/^\/game\/(\d+)$/, viewGame],
   ];
   let lastPath = null;
@@ -655,10 +934,57 @@
       return (pn - 1) * PER + (PER - rem);
     };
     for (const g of S.games) {
-      g.ev = g.events.map((e, i) => ({ ...e, i, t: clock(e.period, e.time) })).sort((a, b) => a.t - b.t || a.i - b.i);
+      g.ev = g.events.map((e, i) => ({
+        ...e, i, t: clock(e.period, e.time),
+        // e.g. "06:86" on a sheet: keep the event, but keep it out of timing analytics
+        badClock: !/^\d+:[0-5]\d$/.test(String(e.time || '')),
+        regulation: /^[123]$/.test(String(e.period)),
+      })).sort((a, b) => a.t - b.t || a.i - b.i);
+      // running score + moments: opening, tying and go-ahead goals; comeback wins
       let h = 0, a = 0;
-      for (const e of g.ev) if (e.type === 'goal') { e.side === 'home' ? h++ : a++; e.score = [h, a]; }
+      const trailed = { home: false, away: false };
+      for (const e of g.ev) {
+        if (e.type !== 'goal') continue;
+        const before = e.side === 'home' ? h - a : a - h, first = h + a === 0;
+        e.side === 'home' ? h++ : a++;
+        e.score = [h, a];
+        e.moment = first ? 'Opening goal' : before === -1 ? 'Tying goal' : before === 0 ? 'Go-ahead goal' : null;
+        if (h < a) trailed.home = true;
+        if (a < h) trailed.away = true;
+      }
+      const winner = g.home.score > g.away.score ? 'home' : g.away.score > g.home.score ? 'away' : null;
+      g.comeback = winner && trailed[winner] ? winner : null;
+      g.weekend = weekKey(g.date);
       gameById.set(g.id, g);
+    }
+    // weekends (Mon-start weeks; games are Fri-Sun) across the whole schedule
+    S.weekends = new Map();
+    for (const s of S.schedule) {
+      const k = weekKey(s.start);
+      const w = S.weekends.get(k) || { key: k, items: [], first: s.start, last: s.start };
+      w.items.push(s);
+      if (s.start < w.first) w.first = s.start;
+      if (s.start > w.last) w.last = s.start;
+      S.weekends.set(k, w);
+    }
+    // player firsts + milestones, from each player's chronological game log
+    for (const p of S.players) {
+      p.firsts = [];
+      const add = (label, l, kind) => p.firsts.push({ label, kind, gameId: l.gameId, date: l.date, opp: l.opp });
+      const seen = new Set(), tot = { g: 0, pts: 0 };
+      const once = (key, cond, label, l) => { if (cond && !seen.has(key)) { seen.add(key); add(label, l, 'first'); } };
+      for (const l of p.log) {
+        once('g', l.g > 0, 'First goal of the season', l);
+        once('a', l.a > 0, 'First assist of the season', l);
+        once('mp', l.pts >= 2, 'First multi-point game', l);
+        if (l.g >= 3) { if (seen.has('hat')) add('Hat trick', l, 'milestone'); else once('hat', true, 'First hat trick', l); }
+        once('ppg', l.ppg > 0, 'First power-play goal', l);
+        once('shg', l.shg > 0, 'First shorthanded goal', l);
+        const pg = tot.g, pp = tot.pts;
+        tot.g += l.g; tot.pts += l.pts;
+        for (const m of [10, 25, 50, 75, 100]) if (pp < m && tot.pts >= m) add(`${m}th point`, l, 'milestone');
+        for (const m of [10, 25, 50]) if (pg < m && tot.g >= m) add(`${m}th goal`, l, 'milestone');
+      }
     }
     // skater ranking (ties share a rank)
     S.skaters = S.players.filter((p) => !p.isGoalie || p.pts > 0).sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));

@@ -234,3 +234,20 @@ td.l .sub2{display:block;font-size:12px;color:var(--ink3);font-weight:400}
 }
 @media (max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}.st .v{font-size:32px}}
 .ev .who{min-width:0}
+
+/* ---------- analytics additions ---------- */
+.chip.mo{border-color:var(--blue);color:#8DB8FF}
+.bug .mid .chip.mo{display:inline-block;letter-spacing:.08em}
+.ev.moment{grid-template-columns:24px 56px 1fr auto}
+.ev.moment .pn{color:var(--us);font-size:14px}
+.wkbar{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:-4px 0 18px;padding-bottom:2px}
+.wkbar::-webkit-scrollbar{display:none}
+.wkchip{flex:none;font:700 13px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border:1px solid var(--line2);color:var(--ink2);transition:border-color .15s,color .15s,background .15s}
+.wkchip:hover{border-color:var(--us);color:var(--ink)}
+.wkchip.on{background:var(--us);border-color:var(--us);color:#111}
+.wkchip.up{color:var(--ink3);border-style:dashed}
+.wkstats{grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.wkstats .st:first-child{border-left:0}
+.chart .link{transition:opacity .15s}
+.chart .node{cursor:pointer}
+@media (max-width:520px){.wkstats{grid-template-columns:repeat(2,1fr)}}
