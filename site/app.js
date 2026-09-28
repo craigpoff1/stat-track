@@ -6,7 +6,6 @@
   const $app = document.getElementById('app');
   const teamById = new Map();
   const playerById = new Map();
-  const goalieById = new Map();
   const gameById = new Map();
 
   // ------------------------------------------------------------ utils
@@ -27,7 +26,6 @@
   const pct = (v, d = 3) => (v == null ? '–' : v.toFixed(d).replace(/^0\./, '.'));
   const pct100 = (v) => (v == null ? '–' : Math.round(v * 100) + '%');
   const num = (v, d = 2) => (v == null ? '–' : Number(v).toFixed(d));
-  const mmss = (sec) => `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
 
   const myTeamId = () => store.get('myTeam', S.meta.myTeamId);
   const favPlayers = () => new Set(store.get('favPlayers', []));
@@ -42,8 +40,7 @@
     return link ? `<a class="team-cell" href="#/team/${t.id}">${img}<span>${name}</span></a>` : `<span class="team-cell">${img}<span>${name}</span></span>`;
   }
   const shortName = (n) => n.replace(/\s+(Hockey Academy|Hockey Club|Hockey|Academy)$/i, '');
-  const playerLink = (id, name) => (id && playerById.has(id) && !playerById.get(id).isGoalie ? `<a href="#/player/${id}">${esc(name)}</a>`
-    : id && goalieById.has(id) ? `<a href="#/goalie/${id}">${esc(name)}</a>` : esc(name));
+  const playerLink = (id, name) => (id && playerById.has(id) ? `<a href="#/player/${id}">${esc(name)}</a>` : esc(name));
   const form = (s) => `<span class="form">${[...(s || '')].map((r) => `<span class="${r}">${r}</span>`).join('')}</span>`;
 
   // ------------------------------------------------------------ sortable tables
@@ -94,7 +91,7 @@
     return cls.join(' ');
   };
   const skaterCols = ({ showTeam = true } = {}) => [
-    { key: 'name', label: 'Player', cls: 'l stick', fmt: (p) => `${playerLink(p.id, p.name)}${favPlayers().has(p.id) ? ' ★' : ''}`, sortVal: (p) => p.name },
+    { key: 'name', label: 'Player', cls: 'l stick', fmt: (p) => `${playerLink(p.id, p.name)}${p.isGoalie ? '<span class="chip" title="Goalie">G</span>' : ''}${favPlayers().has(p.id) ? ' ★' : ''}`, sortVal: (p) => p.name },
     { key: 'number', label: '#', sortVal: (p) => Number(p.number) },
     ...(showTeam ? [{ key: 'team', label: 'Team', cls: 'l', fmt: (p) => teamCell(p.teamId, { short: true }), sortVal: (p) => p.team }] : []),
     { key: 'gp', label: 'GP' },
@@ -107,19 +104,6 @@
     { key: 'gwg', label: 'GWG', title: 'Game-winning goals' },
     { key: 'multiPointGames', label: 'MPG', title: 'Multi-point games' },
     { key: 'streak', label: 'STRK', title: 'Current point streak (games)', sortVal: (p) => p.pointStreak.current, fmt: (p) => p.pointStreak.current || '–' },
-    { key: 'pim', label: 'PIM' },
-  ];
-  const goalieCols = ({ showTeam = true } = {}) => [
-    { key: 'name', label: 'Goalie', cls: 'l stick', fmt: (g) => `<a href="#/goalie/${g.id}">${esc(g.name)}</a>`, sortVal: (g) => g.name },
-    ...(showTeam ? [{ key: 'team', label: 'Team', cls: 'l', fmt: (g) => teamCell(g.teamId, { short: true }), sortVal: (g) => g.team }] : []),
-    { key: 'gp', label: 'GP' },
-    { key: 'rec', label: 'W-L-T', fmt: (g) => `${g.w}-${g.l}-${g.t}`, sortVal: (g) => g.w * 2 + g.t },
-    { key: 'minutes', label: 'MIN' },
-    { key: 'shots', label: 'SA', title: 'Shots against' },
-    { key: 'ga', label: 'GA' },
-    { key: 'svPct', label: 'SV%', cls: 'strong', fmt: (g) => pct(g.svPct) },
-    { key: 'gaa', label: 'GAA', fmt: (g) => num(g.gaa), title: `Goals against per ${S.meta.regulationMinutes}-minute game` },
-    { key: 'so', label: 'SO' },
   ];
   const standingsCols = ({ full = false } = {}) => [
     { key: 'name', label: 'Team', cls: 'l stick', fmt: (t) => teamCell(t.id), sortVal: (t) => t.name },
@@ -136,6 +120,7 @@
       { key: 'awayRec', label: 'Away', fmt: (t) => `${t.away.w}-${t.away.l}-${t.away.t}`, sortVal: (t) => t.away.w * 2 + t.away.t },
       { key: 'ppPct', label: 'PP%', fmt: (t) => pct100(t.ppPct), title: 'Power-play goals ÷ opponent minor penalties' },
       { key: 'pkPct', label: 'PK%', fmt: (t) => pct100(t.pkPct) },
+      { key: 'svPct', label: 'SV%', fmt: (t) => pct(t.svPct), title: 'Team save % — shots on goal stopped' },
       { key: 'pim', label: 'PIM' },
     ] : []),
     { key: 'streak', label: 'STRK', sortVal: (t) => (t.streak?.[0] === 'W' ? 1 : -1) * parseInt(t.streak?.slice(1) || 0, 10) },
@@ -177,8 +162,6 @@
     const played = mySched.filter((s) => s.final);
     const upcoming = mySched.filter(isUpcoming);
     const skaters = S.players.filter((p) => !p.isGoalie || p.pts > 0);
-    const goalieMin = S.teams.length ? Math.max(1, Math.floor(S.meta.gamesPlayed / (S.teams.length / 2) * 0.4 * S.meta.regulationMinutes)) : 1;
-    const qualifiedG = S.goalies.filter((g) => g.minutes >= goalieMin);
     const favs = [...favPlayers()].map((id) => playerById.get(id)).filter(Boolean);
 
     const myCard = my ? `
@@ -229,9 +212,13 @@
           ${table('home-pts', skaterCols().filter((c) => ['name', 'team', 'gp', 'g', 'a', 'pts'].includes(c.key)), skaters, { sort: { key: 'pts', desc: true }, limit: 10, rank: true, rowClass: mineRow() })}
         </section>
         <section class="card">
-          <div class="card-head"><h2>Goalies</h2><a class="small" href="#/goalies">All goalies</a></div>
-          ${table('home-g', goalieCols().filter((c) => ['name', 'team', 'gp', 'svPct', 'gaa'].includes(c.key)), qualifiedG, { sort: { key: 'svPct', desc: true }, limit: 8, rank: true, rowClass: mineRow() })}
-          <p class="muted small">Min. ${goalieMin} minutes played.</p>
+          <div class="card-head"><h2>Team defense</h2><a class="small" href="#/standings">Standings</a></div>
+          ${table('home-def', [
+            { key: 'name', label: 'Team', cls: 'l stick', fmt: (t) => teamCell(t.id, { short: true }), sortVal: (t) => t.name },
+            { key: 'gaPerGame', label: 'GA/GP', fmt: (t) => num(t.gaPerGame, 1) },
+            { key: 'sa', label: 'SA', title: 'Shots against' },
+            { key: 'svPct', label: 'SV%', cls: 'strong', fmt: (t) => pct(t.svPct), title: 'Team save %' },
+          ], S.teams, { sort: { key: 'svPct', desc: true }, rank: true, rowClass: (t) => (String(t.id) === String(myTeamId()) ? 'mine' : '') })}
         </section>
       </div>`;
   }
@@ -254,12 +241,13 @@
       { key: 'shg', label: 'SHG' }, { key: 'shga', label: 'SHGA' },
       { key: 'sf', label: 'SF', title: 'Shots for' },
       { key: 'sa', label: 'SA', title: 'Shots against' },
+      { key: 'svPct', label: 'SV%', cls: 'strong', fmt: (t) => pct(t.svPct), title: 'Team save %' },
     ];
     const rc = (t) => (String(t.id) === String(myTeamId()) ? 'mine' : '');
     return `
       <div class="page-head"><div><h1>Standings</h1><div class="sub">${esc(S.meta.division)} · ${esc(S.meta.season)} · 2 pts for a win, 1 for a tie</div></div></div>
       <section class="card">${sortable('standings', standingsCols({ full: true }), S.teams, { rank: true, rowClass: rc })}</section>
-      <section class="card"><div class="card-head"><h2>Special teams</h2></div>${sortable('special', specialCols, S.teams, { sort: { key: 'ppPct', desc: true }, rowClass: rc })}
+      <section class="card"><div class="card-head"><h2>Special teams &amp; shots</h2></div>${sortable('special', specialCols, S.teams, { sort: { key: 'ppPct', desc: true }, rowClass: rc })}
         <p class="muted small">PP opportunities are counted from opponent minor/major penalties in the game timeline, so they're a close approximation — coincidental penalties still count.</p></section>
       <section class="card"><div class="card-head"><h2>Goals by period</h2></div>${sortable('periods', periodCols, S.teams, { rowClass: rc })}</section>`;
   }
@@ -287,13 +275,6 @@
       <p class="muted small">MPG = multi-point games. STRK = current point streak. GWG is as recorded by the league.</p>`;
   }
 
-  function viewGoalies() {
-    return `
-      <div class="page-head"><div><h1>Goalies</h1><div class="sub">${S.goalies.length} goalies</div></div></div>
-      <section class="card">${sortable('goalies', goalieCols(), S.goalies, { sort: { key: 'minutes', desc: true }, rank: true, rowClass: mineRow() })}</section>
-      <p class="note">Shots, saves and minutes come from the league's goalie reports, which are inconsistent game to game (some games log only a few goalie minutes). Treat SV% and GAA as approximate. W-L-T goes to the goalie with the most minutes in each game.</p>`;
-  }
-
   function viewSchedule() {
     const sel = store.get('schedTeam', String(myTeamId()));
     const items = S.schedule.filter((s) => !sel || involves(s, sel));
@@ -312,8 +293,7 @@
   function viewTeam(id) {
     const t = team(id);
     if (!t) return notFound();
-    const roster = S.players.filter((p) => String(p.teamId) === String(id) && (!p.isGoalie || p.pts > 0));
-    const gs = S.goalies.filter((g) => String(g.teamId) === String(id));
+    const roster = S.players.filter((p) => String(p.teamId) === String(id));
     const sched = S.schedule.filter((s) => involves(s, id));
     const isMine = String(id) === String(myTeamId());
     // head-to-head vs every opponent
@@ -332,12 +312,11 @@
       </div>
       <section class="card"><div class="tiles">
         ${tile(t.gf, 'Goals for')}${tile(t.ga, 'Goals against')}${tile(num(t.gfPerGame, 1), 'GF / game')}${tile(num(t.gaPerGame, 1), 'GA / game')}
-        ${tile(pct100(t.ppPct), `PP (${t.ppg}/${t.ppo})`)}${tile(pct100(t.pkPct), `PK (${t.tsh - t.ppga}/${t.tsh})`)}${tile(t.pim, 'PIM')}
+        ${tile(pct100(t.ppPct), `PP (${t.ppg}/${t.ppo})`)}${tile(pct100(t.pkPct), `PK (${t.tsh - t.ppga}/${t.tsh})`)}${tile(pct(t.svPct), 'Save %')}${tile(t.pim, 'PIM')}
         ${tile(`${t.home.w}-${t.home.l}-${t.home.t}`, 'Home')}${tile(`${t.away.w}-${t.away.l}-${t.away.t}`, 'Away')}
       </div></section>
       <section class="card"><div class="card-head"><h2>Skaters</h2></div>
         ${sortable('team-sk-' + id, skaterCols({ showTeam: false }), roster, { sort: { key: 'pts', desc: true }, rowClass: (p) => (favPlayers().has(p.id) ? 'fav' : '') })}</section>
-      <section class="card"><div class="card-head"><h2>Goalies</h2></div>${sortable('team-g-' + id, goalieCols({ showTeam: false }), gs, { sort: { key: 'minutes', desc: true } })}</section>
       <div class="grid g2">
         <section class="card"><div class="card-head"><h2>Results</h2></div>${gameList(sched.filter((s) => s.final).reverse(), id)}</section>
         <section class="card"><div class="card-head"><h2>Upcoming</h2></div>${gameList(sched.filter(isUpcoming).slice(0, 8), id)}</section>
@@ -352,7 +331,7 @@
 
   function viewPlayer(id) {
     const p = playerById.get(id);
-    if (!p || (p.isGoalie && goalieById.has(id))) return goalieById.has(id) ? viewGoalie(id) : notFound();
+    if (!p) return notFound();
     const t = team(p.teamId);
     const isFav = favPlayers().has(id);
     const teamRank = [...S.players].filter((x) => x.teamId === p.teamId).sort((a, b) => b.pts - a.pts || b.g - a.g).findIndex((x) => x.id === id) + 1;
@@ -365,14 +344,14 @@
       <div class="page-head">
         ${t?.logo ? `<img src="${esc(t.logo)}" alt="">` : ''}
         <div><h1>#${esc(p.number)} ${esc(p.name)}</h1><div class="sub">${teamCell(p.teamId)}</div></div>
-        <div style="margin-left:auto">${goalieById.has(id) ? `<a class="star" href="#/goalie/${id}">Goalie stats</a> ` : ''}<button class="star ${isFav ? 'on' : ''}" id="fav">${isFav ? '★ Following' : '☆ Follow'}</button></div>
+        <div style="margin-left:auto"><button class="star ${isFav ? 'on' : ''}" id="fav">${isFav ? '★ Following' : '☆ Follow'}</button></div>
       </div>
       <section class="card"><div class="tiles">
         ${tile(p.gp, 'Games')}${tile(p.g, 'Goals')}${tile(p.a, 'Assists')}${tile(p.pts, 'Points')}${tile(num(p.ptsPerGame), 'Points / game')}
         ${tile(`${ordinal(teamRank)}`, 'Team scoring')}${tile(`${S.players.filter((x) => x.pts === p.pts).length > 1 ? 'T-' : ''}${ordinal(leagueRank)}`, 'League scoring')}
         ${tile(pct100(p.teamGoalShare), 'Of team goals', 'Share of team goals this player scored or assisted on')}
         ${tile(p.ppg + p.ppa, 'PP points')}${tile(p.gwg, 'Game winners')}${tile(p.firstGoals, 'Opening goals')}
-        ${tile(`${p.pointStreak.current} / ${p.pointStreak.best}`, 'Point streak (now / best)')}${tile(p.pim, 'PIM')}
+        ${tile(`${p.pointStreak.current} / ${p.pointStreak.best}`, 'Point streak (now / best)')}${p.goalieGames ? tile(p.goalieGames, 'Games in goal') : ''}
       </div></section>
       <section class="card"><div class="card-head"><h2>Game log</h2></div>
         ${table('log-' + id, [
@@ -381,32 +360,8 @@
           { key: 'res', label: 'Result', fmt: (l) => gameResult(l.gameId, p.teamId), noSort: true },
           { key: 'g', label: 'G' }, { key: 'a', label: 'A' }, { key: 'pts', label: 'PTS', cls: 'strong' },
           { key: 'bar', label: '', noSort: true, cls: 'l', fmt: (l) => `<div class="bar" style="width:90px"><i style="width:${(l.pts / maxPts) * 100}%"></i></div>` },
-          { key: 'ppg', label: 'PPG' }, { key: 'gwg', label: 'GWG' }, { key: 'pim', label: 'PIM' },
+          { key: 'ppg', label: 'PPG' }, { key: 'gwg', label: 'GWG' },
         ], p.log.slice().reverse())}</section>`;
-  }
-
-  function viewGoalie(id) {
-    const g = goalieById.get(id);
-    if (!g) return notFound();
-    const t = team(g.teamId);
-    return `
-      <div class="page-head">
-        ${t?.logo ? `<img src="${esc(t.logo)}" alt="">` : ''}
-        <div><h1>#${esc(g.number)} ${esc(g.name)}</h1><div class="sub">Goalie · ${teamCell(g.teamId)}</div></div>
-      </div>
-      <section class="card"><div class="tiles">
-        ${tile(g.gp, 'Games')}${tile(`${g.w}-${g.l}-${g.t}`, 'W-L-T')}${tile(g.minutes, 'Minutes')}${tile(g.shots, 'Shots against')}
-        ${tile(g.saves, 'Saves')}${tile(pct(g.svPct), 'Save %')}${tile(num(g.gaa), 'GAA')}${tile(g.so, 'Shutouts')}
-      </div></section>
-      <section class="card"><div class="card-head"><h2>Game log</h2></div>
-        ${table('glog-' + id, [
-          { key: 'date', label: 'Date', cls: 'l', fmt: (l) => `<a href="#/game/${l.gameId}">${esc(fmtDay(l.date))}</a>` },
-          { key: 'opp', label: 'Opponent', cls: 'l', fmt: (l) => `${l.home ? 'vs' : '@'} ${teamCell(l.opp, { short: true })}` },
-          { key: 'decision', label: 'Dec', fmt: (l) => (l.decision ? `<span class="res-${l.decision}">${l.decision}</span>` : '–') },
-          { key: 'seconds', label: 'MIN', fmt: (l) => mmss(l.seconds) },
-          { key: 'shots', label: 'SA' }, { key: 'ga', label: 'GA' }, { key: 'saves', label: 'SV' },
-          { key: 'sv', label: 'SV%', fmt: (l) => pct(l.shots ? l.saves / l.shots : null) },
-        ], g.log.slice().reverse())}</section>`;
   }
 
   function viewGame(id) {
@@ -427,17 +382,13 @@
         const as_ = e.assists.length ? `<div class="muted small">Assists: ${e.assists.map((a) => playerLink(a.playerId, a.name)).join(', ')}</div>` : '<div class="muted small">Unassisted</div>';
         return `${per}<li><span class="t">${esc(e.time)}</span><div><strong>Goal</strong> · ${playerLink(e.playerId, e.scorer.name)} ${e.tags.map((t) => `<span class="chip">${esc(t)}</span>`).join('')}${as_}</div><div>${teamCell(e.teamId, { link: false, short: true })}</div></li>`;
       }
-      return `${per}<li class="pen"><span class="t">${esc(e.time)}</span><div>Penalty · ${playerLink(e.playerId, e.player.name)} <span class="muted">${esc(e.infraction || '')} (${e.minutes} min)</span></div><div>${teamCell(e.teamId, { link: false, short: true })}</div></li>`;
+      return `${per}<li class="pen"><span class="t">${esc(e.time)}</span><div>Penalty <span class="muted">${esc(e.infraction || '')} (${e.minutes} min)</span></div><div>${teamCell(e.teamId, { link: false, short: true })}</div></li>`;
     }).join('');
     const box = (teamId) => sortable(`box-${id}-${teamId}`, [
       { key: 'number', label: '#', sortVal: (r) => Number(r.number) },
       { key: 'name', label: 'Player', cls: 'l', fmt: (r) => playerLink(r.playerId, r.name) },
-      { key: 'g', label: 'G' }, { key: 'a', label: 'A' }, { key: 'pts', label: 'PTS', cls: 'strong', sortVal: (r) => r.g + r.a, fmt: (r) => r.g + r.a }, { key: 'pim', label: 'PIM' },
+      { key: 'g', label: 'G' }, { key: 'a', label: 'A' }, { key: 'pts', label: 'PTS', cls: 'strong', sortVal: (r) => r.g + r.a, fmt: (r) => r.g + r.a },
     ], g.skaters.filter((r) => String(r.teamId) === String(teamId)), { sort: { key: 'pts', desc: true }, rowClass: (r) => (favPlayers().has(r.playerId) ? 'fav' : '') });
-    const gbox = (teamId) => table(`gbox-${id}-${teamId}`, [
-      { key: 'name', label: 'Goalie', cls: 'l', fmt: (r) => playerLink(r.playerId, r.name) },
-      { key: 'seconds', label: 'MIN', fmt: (r) => mmss(r.seconds) }, { key: 'shots', label: 'SA' }, { key: 'ga', label: 'GA' }, { key: 'saves', label: 'SV' },
-    ], g.goalies.filter((r) => String(r.teamId) === String(teamId)));
     return `
       <div class="page-head"><div><h1>Game ${g.gameNumber ? '#' + g.gameNumber : ''}</h1><div class="sub">${esc(fmtDay(g.date))} · ${esc(fmtTime(g.date))} · ${esc(g.rink)}</div></div></div>
       <section class="card">
@@ -450,8 +401,8 @@
       <section class="card">${periodTable}</section>
       <section class="card"><div class="card-head"><h2>Timeline</h2></div><ul class="timeline">${tl || '<li class="empty">No events recorded.</li>'}</ul></section>
       <div class="grid g2">
-        <section class="card"><div class="card-head"><h2>${esc(teamName(as.id))}</h2></div>${box(as.id)}${gbox(as.id)}</section>
-        <section class="card"><div class="card-head"><h2>${esc(teamName(hs.id))}</h2></div>${box(hs.id)}${gbox(hs.id)}</section>
+        <section class="card"><div class="card-head"><h2>${esc(teamName(as.id))}</h2></div>${box(as.id)}</section>
+        <section class="card"><div class="card-head"><h2>${esc(teamName(hs.id))}</h2></div>${box(hs.id)}</section>
       </div>
       ${g.warnings.length ? `<p class="note">Data issues in the league's report for this game: ${g.warnings.map(esc).join('; ')}.</p>` : ''}`;
   }
@@ -477,9 +428,9 @@
 
   // ------------------------------------------------------------ router
   const routes = [
-    [/^\/?$/, viewHome], [/^\/standings$/, viewStandings], [/^\/skaters$/, viewSkaters], [/^\/goalies$/, viewGoalies],
+    [/^\/?$/, viewHome], [/^\/standings$/, viewStandings], [/^\/skaters$/, viewSkaters],
     [/^\/schedule$/, viewSchedule], [/^\/team\/(\d+)$/, viewTeam], [/^\/player\/(\d+)$/, viewPlayer],
-    [/^\/goalie\/(\d+)$/, viewGoalie], [/^\/game\/(\d+)$/, viewGame],
+    [/^\/game\/(\d+)$/, viewGame],
   ];
   let lastPath = null;
   function render() {
@@ -501,7 +452,6 @@
       S = data;
       S.teams.forEach((t) => teamById.set(String(t.id), t));
       S.players.forEach((p) => playerById.set(p.id, p));
-      S.goalies.forEach((g) => goalieById.set(g.id, g));
       S.games.forEach((g) => gameById.set(g.id, g));
       document.getElementById('brand-division').textContent = `${S.meta.division} Stats`;
       document.getElementById('brand-season').textContent = `${S.meta.league} · ${S.meta.season}`;

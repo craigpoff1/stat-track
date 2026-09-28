@@ -29,13 +29,20 @@ node scripts/build.mjs
 python -m http.server 8765 --directory site
 ```
 
+## What's published vs. kept
+
+These are 7-year-olds, so the public site shows **team-level** penalty minutes and save % only.
+Individual penalty minutes, penalty names, and individual goalie stats are still scraped and kept
+in `data/games/*.json` (for private questions), but `scripts/build.mjs` strips them from
+`site/data/stats.json`. Team save % excludes games where the sheet records fewer shots than goals.
+
 ## Configuration
 
 `scripts/config.mjs` holds the season, division and "my team" IDs. To track another division, change `divisionId` / `divisionName` (IDs are in the league site's URLs).
 
 ## Known data quirks (from the league's own reports)
 
-- Goalie minutes/shots are inconsistent between games, so SV% and GAA are approximate.
+- Goalie minutes are inconsistent between games; team shots come from each sheet's Shots table instead, and a few sheets omit it.
 - Occasional impossible clock times (e.g. `06:86`).
 - The league's standings PIM sometimes includes penalties not shown on the game sheets.
 - Game recaps on the league site are auto-written and sometimes contradict the box score; they're ignored.

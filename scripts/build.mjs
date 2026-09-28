@@ -29,6 +29,7 @@ function team(id, name, logo) {
       home: { w: 0, l: 0, t: 0 }, away: { w: 0, l: 0, t: 0 },
       ppg: 0, ppo: 0, ppga: 0, tsh: 0, shg: 0, shga: 0,
       sf: 0, sa: 0,
+      svShots: 0, svGa: 0, // shots/GA from games that have a Shots table, for team save %
       gfByPeriod: {}, gaByPeriod: {},
       results: [], // 'W' | 'L' | 'T', chronological
     });
@@ -114,6 +115,10 @@ for (const g of games) {
     if (g.shotsByPeriod?.length) {
       t.sf += g.shotsByPeriod.reduce((n, p) => n + p[s], 0);
       t.sa += g.shotsByPeriod.reduce((n, p) => n + p[other(s)], 0);
+      // Fewer shots than goals means the scorekeeper stopped tracking shots; leave it out of SV%.
+      const shotsAgainst = g.shotsByPeriod.reduce((n, p) => n + p[other(s)], 0);
+      if (shotsAgainst >= g[other(s)].score) { t.svShots += shotsAgainst; t.svGa += g[other(s)].score; }
+      else dataWarnings.push({ gameId: g.id, message: `${t.name}: ${shotsAgainst} shots against but ${g[other(s)].score} goals — excluded from save %` });
     } else {
       t.sa += g.goalies.filter((x) => x.side === s).reduce((n, x) => n + x.shots, 0);
       t.sf += g.goalies.filter((x) => x.side === other(s)).reduce((n, x) => n + x.shots, 0);
@@ -233,6 +238,7 @@ for (const t of teams.values()) {
   t.gaPerGame = round(t.gp ? t.ga / t.gp : 0, 2);
   t.ppPct = round(t.ppo ? t.ppg / t.ppo : null);
   t.pkPct = round(t.tsh ? 1 - t.ppga / t.tsh : null);
+  t.svPct = round(t.svShots ? 1 - t.svGa / t.svShots : null);
   t.last5 = t.results.slice(-5).map((r) => r.r).join('');
   const last = t.results.at(-1);
   if (last) {
@@ -268,6 +274,8 @@ const scheduleOut = schedule.map((s) => ({
   hasDetail: gameSummaries.some((g) => g.id === s.id),
 }));
 
+// Published data policy (owner decision 2026-09-27): individual penalty minutes and
+// individual goalie stats are kept in data/ but NOT published — team-level only.
 const out = {
   meta: {
     updatedAt: new Date().toISOString(),
@@ -282,9 +290,12 @@ const out = {
     regulationMinutes: config.regulationMinutes,
   },
   teams: standings,
-  players: [...players.values()],
-  goalies: [...goalies.values()],
-  games: gameSummaries,
+  players: [...players.values()].map(({ pim, log, ...p }) => ({ ...p, log: log.map(({ pim: _, ...l }) => l) })),
+  games: gameSummaries.map(({ goalies: _, ...g }) => ({
+    ...g,
+    skaters: g.skaters.map(({ pim, ...r }) => r),
+    events: g.events.map((e) => (e.type === 'penalty' ? { type: e.type, period: e.period, time: e.time, side: e.side, teamId: e.teamId, minutes: e.minutes, infraction: e.infraction } : e)),
+  })),
   schedule: scheduleOut,
   dataWarnings,
 };
