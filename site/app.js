@@ -1482,6 +1482,128 @@
       <div class="tmenu" id="tmenu" role="listbox" aria-label="Choose your team" ${open ? '' : 'hidden'}><div class="tmh">Choose your team</div>${opts}</div>
     </div>`;
   }
+  // ------------------------------------------------------------ global search
+  // Players (name / jersey #), teams, scouting reports and pages. Every query word must prefix-match
+  // a word of the result (so "eli p" finds Elias Poffenroth, "66" finds #66s). "/" or Ctrl/Cmd+K opens.
+  const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9# ]+/g, ' ');
+  let searchIndex = [], sActive = 0, sResults = [];
+  function buildSearchIndex() {
+    const me = myTeamId();
+    const words = (...xs) => norm(xs.join(' ')).split(/\s+/).filter(Boolean);
+    searchIndex = [
+      ...S.players.map((p) => {
+        const t = team(p.teamId);
+        return { type: 'player', id: p.id, label: p.name, sub: `#${p.number} · ${t.name}${p.isGoalie ? ' · Goalie' : goalieById.has(p.id) ? ' · Skater & goalie' : ''}`, extra: p.isGoalie ? '' : `${p.pts} PTS`, href: `#/player/${p.id}`, t, words: words(p.name, p.number, '#' + p.number, t.name, t.short, t.code, goalieById.has(p.id) ? 'goalie goalies' : ''), boost: (String(p.teamId) === me ? 3 : 0) + p.pts / 100 };
+      }),
+      ...S.teams.map((t) => ({ type: 'team', id: t.id, label: t.name, sub: `${ordinal(t.rank)} · ${t.w}-${t.l}-${t.t}`, href: `#/team/${t.id}`, t, words: words(t.name, t.short, t.code), boost: String(t.id) === me ? 2 : 0 })),
+      ...S.teams.map((t) => ({ type: 'scout', id: t.id, label: `Scouting report: ${t.short}`, sub: String(t.id) === me ? 'Self-scout' : 'Keys to the game, threats, goalies', href: `#/scout/${t.id}`, t, words: words(t.name, t.short, t.code, 'scout', 'scouting', 'report'), boost: 0 })),
+      ...[['Standings', '#/standings', 'table rank points'], ['Leaders', '#/skaters', 'scoring points goals goalies stats'], ['Weekends', '#/weekend', 'recap tournament'], ['Schedule', '#/schedule', 'games calendar upcoming results'], ['Scout', '#/scout', 'scouting report opponent']]
+        .map(([label, href, kw]) => ({ type: 'page', id: href, label, sub: 'Page', href, words: words(label, kw), boost: 0 })),
+    ];
+  }
+  function runSearch(q) {
+    const qs = norm(q).split(/\s+/).filter(Boolean);
+    if (!qs.length) return [];
+    const out = [];
+    for (const it of searchIndex) {
+      let score = 0, ok = true;
+      for (const w of qs) {
+        const bare = w.replace(/^#/, '');
+        let best = 0;
+        it.words.forEach((x, i) => {
+          if (x === w || x === bare) best = Math.max(best, 3 - Math.min(i, 2) * 0.2);
+          else if (x.startsWith(w) || (bare && x.startsWith(bare) && !/^\d+$/.test(bare))) best = Math.max(best, 2 - Math.min(i, 2) * 0.2);
+        });
+        if (!best) { ok = false; break; }
+        score += best;
+      }
+      if (ok) out.push({ it, score: score + it.boost + (it.type === 'team' ? 0.5 : it.type === 'scout' ? -0.6 : it.type === 'page' ? -0.3 : 0) });
+    }
+    out.sort((a, b) => b.score - a.score || a.it.label.localeCompare(b.it.label));
+    // keep each type together; order the groups by their best match (team + its scout report stay adjacent)
+    const cap = { player: 10, team: 4, scout: 2, page: 3 }, groups = new Map();
+    for (const r of out) { const g = groups.get(r.it.type) || groups.set(r.it.type, []).get(r.it.type); if (g.length < cap[r.it.type]) g.push(r); }
+    const order = [...groups.entries()].sort((a, b) => b[1][0].score - a[1][0].score);
+    const ti = order.findIndex(([k]) => k === 'team'), si = order.findIndex(([k]) => k === 'scout');
+    if (ti >= 0 && si > ti + 1) order.splice(ti + 1, 0, ...order.splice(si, 1));
+    return order.flatMap(([, g]) => g.map((x) => x.it));
+  }
+  function hilite(label, q) {
+    const qs = norm(q).split(/\s+/).filter(Boolean).map((w) => w.replace(/^#/, ''));
+    return label.split(/(\s+)/).map((part) => {
+      const n = norm(part).trim(), w = qs.find((x) => x && n.startsWith(x));
+      return w ? `<mark>${esc(part.slice(0, w.length))}</mark>${esc(part.slice(w.length))}` : esc(part);
+    }).join('');
+  }
+  function quickPicks() {
+    const me = team(myTeamId());
+    return [
+      { type: 'team', label: me.name, sub: 'Your team', href: '#/', t: me },
+      ...[...favPlayers()].map((id) => playerById.get(id)).map((p) => ({ type: 'player', label: p.name, sub: `#${p.number} · ${team(p.teamId).name} · Following`, extra: `${p.pts} PTS`, href: `#/player/${p.id}`, t: team(p.teamId) })),
+      { type: 'scout', label: 'Scouting report: next opponent', sub: 'Keys to the game', href: '#/scout' },
+      ...['Standings|#/standings', 'Leaders|#/skaters', 'Weekends|#/weekend', 'Schedule|#/schedule'].map((x) => { const [label, href] = x.split('|'); return { type: 'page', label, sub: 'Page', href }; }),
+    ];
+  }
+  const TYPE_LABEL = { player: 'Player', team: 'Team', scout: 'Scout', page: 'Page' };
+  function renderSearch() {
+    const box = document.getElementById('srch-res'), q = document.getElementById('srch-q').value;
+    sResults = q.trim() ? runSearch(q) : quickPicks();
+    sActive = 0;
+    if (!sResults.length) { box.innerHTML = `<div class="empty">No matches for “${esc(q)}”</div>`; return; }
+    let lastType = null;
+    box.innerHTML = (q.trim() ? '' : '<div class="srh">Quick picks</div>') + sResults.map((r, i) => {
+      const head = q.trim() && r.type !== lastType ? `<div class="srh">${TYPE_LABEL[r.type]}${r.type === 'player' ? 's' : r.type === 'team' ? 's' : ''}</div>` : '';
+      lastType = r.type;
+      const icon = r.t ? logo(r.t) : `<span class="logo sicon">${r.type === 'page' ? '≡' : '◎'}</span>`;
+      return `${head}<a class="sr ${i === 0 ? 'on' : ''}" href="${r.href}" data-i="${i}" role="option">${icon}<span class="sr-m"><b>${q.trim() ? hilite(r.label, q) : esc(r.label)}</b><span>${esc(r.sub)}</span></span>${r.extra ? `<span class="sr-x">${esc(r.extra)}</span>` : ''}</a>`;
+    }).join('');
+  }
+  function setActive(i) {
+    const items = [...document.querySelectorAll('#srch-res .sr')];
+    if (!items.length) return;
+    sActive = (i + items.length) % items.length;
+    items.forEach((el, j) => el.classList.toggle('on', j === sActive));
+    items[sActive].scrollIntoView({ block: 'nearest' });
+  }
+  function openSearch() {
+    const o = document.getElementById('srch'); if (!o || !S) return;
+    buildSearchIndex(); // cheap; keeps 'your team' boosts current after a team switch
+    o.hidden = false; document.body.classList.add('srch-open');
+    const q = document.getElementById('srch-q'); q.value = ''; renderSearch(); q.focus();
+  }
+  function closeSearch() { const o = document.getElementById('srch'); if (o) o.hidden = true; document.body.classList.remove('srch-open'); }
+  function initSearch() {
+    buildSearchIndex();
+    const o = document.createElement('div');
+    o.id = 'srch'; o.className = 'srch'; o.hidden = true;
+    o.innerHTML = `<div class="srch-box" role="dialog" aria-label="Search">
+      <div class="srch-in"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="srch-q" type="search" placeholder="Search players, #numbers, teams…" autocomplete="off" spellcheck="false" aria-controls="srch-res">
+        <button class="srch-x" type="button" aria-label="Close search">Esc</button></div>
+      <div class="srch-res" id="srch-res" role="listbox"></div>
+      <div class="srch-ft"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>/</kbd> or <kbd>Ctrl K</kbd> search</span></div></div>`;
+    document.body.appendChild(o);
+    const q = document.getElementById('srch-q');
+    q.addEventListener('input', renderSearch);
+    q.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') { e.preventDefault(); setActive(sActive + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(sActive - 1); }
+      else if (e.key === 'Enter') { e.preventDefault(); const a = document.querySelectorAll('#srch-res .sr')[sActive]; if (a) { closeSearch(); location.hash = a.getAttribute('href'); } }
+    });
+    o.addEventListener('click', (e) => {
+      if (e.target === o || e.target.closest('.srch-x')) { closeSearch(); return; }
+      if (e.target.closest('.sr')) closeSearch(); // the link itself navigates
+    });
+    o.addEventListener('mousemove', (e) => { const a = e.target.closest('.sr'); if (a) setActive(+a.dataset.i); });
+    document.getElementById('sbtn')?.addEventListener('click', openSearch);
+    document.addEventListener('keydown', (e) => {
+      const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '');
+      if ((e.key === 'k' && (e.ctrlKey || e.metaKey)) || (e.key === '/' && !typing)) { e.preventDefault(); openSearch(); }
+      else if (e.key === 'Escape' && !o.hidden) closeSearch();
+    });
+    window.addEventListener('hashchange', closeSearch);
+  }
+
   // one set of listeners for the bar + page-level helpers
   document.addEventListener('click', (e) => {
     const sel = e.target.closest('#tsel');
@@ -1659,6 +1781,7 @@
       prepare();
       chrome();
       tips();
+      initSearch();
       window.addEventListener('hashchange', render);
       render();
     })
