@@ -383,7 +383,12 @@ em.rk{font:700 11px var(--cond);font-style:normal;letter-spacing:.1em;color:var(
 
 /* ---------- home / away badge ---------- */
 .ha{display:inline-block;font:800 10px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;padding:3px 6px 2px;margin-right:8px;vertical-align:1px;border:1px solid}
-.ha.h{color:#111;background:var(--us);border-color:var(--us)}
-.ha.a{color:#8DB8FF;border-color:#3E8EF7;background:rgba(62,142,247,.1)}
+/* jersey colours: home = white, away = Stars green */
+.ha.h{color:#0B111C;background:#F4F6F9;border-color:#F4F6F9}
+.ha.a{color:#fff;background:#006847;border-color:#1F8A5F}
+.hl-h,.hl-a{display:inline-block;width:1.35em;text-align:center;font-weight:800;margin-left:2px}
+.hl-h{color:#0B111C;background:#F4F6F9}
+.hl-a{color:#fff;background:#006847}
+.wkchip.on .hl-h,.wkchip.on .hl-a{box-shadow:0 0 0 1px #111}
 .tb-item .ha{margin-right:0}
 .nextmeet{line-height:1.9}

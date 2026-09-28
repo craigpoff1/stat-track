@@ -78,7 +78,7 @@
     return a.getMonth() === b.getMonth() ? `${mon(a)} ${a.getDate()}–${b.getDate()}` : `${mon(a)} ${a.getDate()} – ${mon(b)} ${b.getDate()}`;
   };
   // HOME / AWAY badge from a team's point of view
-  const haBadge = (isHome) => `<span class="ha ${isHome ? 'h' : 'a'}">${isHome ? 'Home' : 'Away'}</span>`;
+  const haBadge = (isHome) => `<span class="ha ${isHome ? 'h' : 'a'}" title="${isHome ? 'Home — white jerseys' : 'Away — green jerseys'}">${isHome ? 'Home' : 'Away'}</span>`;
   const involves = (s, id) => String(s.home) === String(id) || String(s.away) === String(id);
   const isUpcoming = (s) => !s.final && localDate(s.end || s.start) >= new Date(Date.now() - 3 * 36e5);
 
@@ -1246,7 +1246,7 @@
       if (upOpps.length === 4) break;
     }
     const opts = [...S.teams].sort((a, b) => a.name.localeCompare(b.name)).map((o) => `<option value="${o.id}" ${o.id === t.id ? 'selected' : ''}>${o.id === me ? `Self-scout: ${esc(o.name)}` : esc(o.name)}</option>`).join('');
-    const chips = `${upOpps.map(([o, s]) => `<a class="wkchip ${o === t.id ? 'on' : ''}" href="#/scout/${o}">${esc(team(o).short)} · ${dt(s.start)} · ${String(s.home) === me ? 'H' : 'A'}</a>`).join('')}<a class="wkchip ${d.self ? 'on' : ''}" href="#/scout/${me}">Self-scout</a>`;
+    const chips = `${upOpps.map(([o, s]) => `<a class="wkchip ${o === t.id ? 'on' : ''}" href="#/scout/${o}">${esc(team(o).short)} · ${dt(s.start)} ${String(s.home) === me ? '<span class="hl-h" title="Home — white jerseys">H</span>' : '<span class="hl-a" title="Away — green jerseys">A</span>'}</a>`).join('')}<a class="wkchip ${d.self ? 'on' : ''}" href="#/scout/${me}">Self-scout</a>`;
     const tile = (l, v, s = '') => `<div class="st"><span class="l">${l}</span><span class="v">${v}</span><span class="s">${s}</span></div>`;
     const lastRes = t.results.filter((r) => weekKey(r.date) === d.lastWk), lwRec = rec(lastRes.reduce((a, r) => { a[r.r]++; return a; }, { W: 0, L: 0, T: 0 }));
     after(() => {
