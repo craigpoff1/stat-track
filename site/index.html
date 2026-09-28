@@ -13,17 +13,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ticker" aria-label="Latest finals"><div class="tag">HSL <span style="font-weight:600">FINALS</span></div><div class="rail"><div class="track" id="ticker"></div></div></div>
+  <div class="teambar" id="teambar"></div>
   <div class="wrap">
     <header class="mast">
       <a href="#/" class="brand"><span id="brand-league">HSL</span> <span>/</span> <span id="brand-division">2019 Major</span><small id="upd"></small></a>
-      <nav class="nav" id="nav">
-        <a href="#/">Scoreboard</a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#/" class="nav-team"><span class="nk">Team</span><span id="nav-team">Stars</span></a>
+        <span class="nsep" aria-hidden="true">League</span>
         <a href="#/standings">Standings</a>
         <a href="#/skaters">Leaders</a>
         <a href="#/weekend">Weekends</a>
         <a href="#/schedule">Schedule</a>
-        <a href="#/team/mine" id="nav-mine">My team</a>
       </nav>
     </header>
     <main id="app"><div class="loading">Loading stats…</div></main>

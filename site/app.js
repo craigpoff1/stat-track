@@ -689,37 +689,6 @@
     </section>`;
   }
 
-  function viewHome() {
-    const me = team(myTeamId());
-    const mySched = S.schedule.filter((s) => involves(s, me.id));
-    const played = mySched.filter((s) => s.final).slice(-4).reverse();
-    const latest = mySched.filter((s) => s.final && s.hasDetail).map((s) => gameById.get(s.id)).filter(Boolean).at(-1);
-    const upcoming = mySched.filter(isUpcoming);
-    const favs = favPlayers();
-    const followed = [...favs].map((id) => playerById.get(id)).sort((a, b) => b.pts - a.pts);
-    after(() => {
-      sortable($('#standings'), S.teams, standingsCols(false), { key: 'rank', dir: 1, rowCls: mineRow });
-      gdChart($('#gd'), me.id);
-      periodChart($('#byper'), me);
-      stChart($('#st'), me.id);
-    });
-    return `
-      ${hero(me)}
-      ${latest ? featuredGame(latest, me.id, `Last game · ${esc(me.short)}`) : ''}
-      <div class="grid g-7-5">
-        ${panel('Standings', '<div class="tw"><table id="standings"></table></div>', { meta: 'Tap a column to sort' })}
-        ${panel('Goal differential', '<div class="pb"><div class="chart" id="gd"></div></div>', { meta: 'GF − GA' })}
-      </div>
-      <div class="grid g-5-7">
-        ${panel(`${esc(me.short)} by period`, `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { gold: true, meta: `${me.gp} GP` })}
-        ${panel('Special teams', '<div class="pb"><div class="chart" id="st"></div></div>', { meta: 'PP% × PK%' })}
-      </div>
-      ${followed.length ? `<div style="margin-bottom:18px">${panel('Following', `<div class="pb"><div class="leaders">${leaderRows(followed, () => true)}</div></div>`, { gold: true, meta: 'Players you follow' })}</div>` : ''}
-      <div style="margin-bottom:18px">${panel('Points leaders', `<div class="pb"><div class="leaders">${leaderRows(S.skaters.slice(0, 12), (p) => favs.has(p.id) || String(p.teamId) === me.id)}</div></div>`, { meta: '<a class="lnk" href="#/skaters">All skaters →</a>' })}</div>
-      <div style="margin-bottom:18px">${panel(`Last results · ${esc(me.short)}`, gameCards(played, me.id), { meta: `<a class="lnk" href="#/weekend">Weekend recap →</a>` })}</div>
-      <div style="margin-bottom:18px">${panel(`Up next · ${esc(me.short)}`, gameCards(upcoming.slice(0, 4), me.id), { gold: true, meta: `${upcoming.length} remaining` })}</div>`;
-  }
-
   function viewStandings() {
     const periods = [...new Set(S.teams.flatMap((t) => Object.keys(t.gfByPeriod)))].sort();
     after(() => {
@@ -793,15 +762,17 @@
     const opts = [...S.teams].sort((a, b) => a.name.localeCompare(b.name)).map((t) => `<option value="${t.id}" ${f.team === String(t.id) ? 'selected' : ''}>${esc(t.name)}</option>`).join('');
     return `
       <div class="ptitle"><div><div class="k">${esc(S.meta.division)} · skaters</div><h1>Scoring leaders</h1><div class="s" id="sk-count"></div></div></div>
+      ${favs.size ? `<div style="margin-bottom:18px">${panel('Following', `<div class="pb"><div class="leaders">${leaderRows([...favs].map((id) => playerById.get(id)).sort((a, b) => b.pts - a.pts), () => true)}</div></div>`, { gold: true, meta: 'Players you follow · any team' })}</div>` : ''}
+      <div style="margin-bottom:18px">${panel('Points leaders', `<div class="pb"><div class="leaders">${leaderRows(S.skaters.slice(0, 12), (p) => favs.has(p.id) || String(p.teamId) === myTeamId())}</div></div>`, { meta: 'Top 12 in the division' })}</div>
       <div style="margin-bottom:18px">${panel('All skaters', `<div class="controls"><select id="sk-team" aria-label="Filter by team"><option value="">All teams</option>${opts}</select><input type="search" id="sk-q" placeholder="Search players" aria-label="Search players" value="${esc(f.q)}"></div><div class="tw"><table id="skaters"></table></div><div class="note">MPG = multi-point games · STRK = current point streak · GWG as recorded by the league.</div>`, { gold: true, reveal: false })}</div>`;
   }
 
   function viewSchedule() {
-    const sel = String(store.get('schedTeam', myTeamId()) || '');
+    const sel = String(store.get('schedTeam2', '') || '');
     const items = S.schedule.filter((s) => !sel || involves(s, sel));
     const past = items.filter((s) => s.final).reverse();
     const next = items.filter(isUpcoming);
-    after(() => $('#sc-team').addEventListener('change', (e) => { store.set('schedTeam', e.target.value); render(); }));
+    after(() => $('#sc-team').addEventListener('change', (e) => { store.set('schedTeam2', e.target.value); render(); }));
     const opts = [...S.teams].sort((a, b) => a.name.localeCompare(b.name)).map((t) => `<option value="${t.id}" ${sel === String(t.id) ? 'selected' : ''}>${esc(t.name)}</option>`).join('');
     return `
       <div class="ptitle"><div><div class="k">${esc(S.meta.season)} · ${esc(S.meta.division)}</div><h1>Schedule</h1><div class="s">${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final</div></div>
@@ -810,22 +781,69 @@
       <div style="margin-bottom:18px">${panel('Results', gameCards(past, sel || null), { meta: `${past.length} games` })}</div>`;
   }
 
+  // One team's weekend: record, goals, and each kid's firsts/milestones grouped into one line.
+  function teamWeekend(key, teamId) {
+    const W = S.weekends.get(key); if (!W) return null;
+    const items = W.items.slice().sort((a, b) => a.start.localeCompare(b.start));
+    const mine = items.filter((s) => involves(s, teamId)), myFinals = mine.filter((s) => s.final);
+    const ids = new Set(myFinals.map((s) => s.id));
+    const rec = { W: 0, L: 0, T: 0 }, gfga = [0, 0];
+    for (const s of myFinals) {
+      const home = String(s.home) === String(teamId), my = home ? s.homeScore : s.awayScore, op = home ? s.awayScore : s.homeScore;
+      rec[my > op ? 'W' : my < op ? 'L' : 'T']++; gfga[0] += my; gfga[1] += op;
+    }
+    const andJoin = (a) => (a.length > 1 ? `${a.slice(0, -1).join(', ')} & ${a.at(-1)}` : a[0]);
+    const ORDER = ['goal', 'assist', 'multi-point game', 'hat trick', 'power-play goal', 'shorthanded goal'];
+    const moments = S.players.filter((p) => String(p.teamId) === String(teamId)).map((p) => {
+      const fs = p.firsts.filter((f) => ids.has(f.gameId));
+      if (!fs.length) return null;
+      const firsts = fs.filter((f) => f.kind === 'first').map((f) => f.label.replace(/^First /, '').replace(/ of the season$/, '')).sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
+      const counts = new Map();
+      for (const f of fs.filter((x) => x.kind !== 'first')) counts.set(f.label, (counts.get(f.label) || 0) + 1);
+      const label = [firsts.length ? 'First ' + andJoin(firsts) : null, ...[...counts].map(([l, n]) => (n > 1 ? `${l} ×${n}` : l))].filter(Boolean).join(' · ');
+      return { ...fs[0], kind: firsts.length ? 'first' : 'milestone', label, player: p };
+    }).filter(Boolean).sort((a, b) => a.date.localeCompare(b.date) || a.player.name.localeCompare(b.player.name));
+    return { key, mine, myFinals, rec, gfga, moments };
+  }
+
+  // Team page — everything about one team, nothing league-wide. "/" is the selected team.
   function viewTeam(id) {
-    if (id === 'mine') { location.replace('#/team/' + myTeamId()); return ''; }
+    if (id === 'mine') { location.replace('#/'); return ''; }
     const t = teamById.get(String(id));
     if (!t) return notFound();
     const isMine = String(id) === myTeamId();
     const roster = S.players.filter((p) => String(p.teamId) === String(id));
     const sched = S.schedule.filter((s) => involves(s, id));
+    const upcoming = sched.filter(isUpcoming);
+    const latest = sched.filter((s) => s.final && s.hasDetail).map((s) => gameById.get(s.id)).filter(Boolean).at(-1);
+    const favs = favPlayers();
     const h2h = new Map();
     for (const r of t.results) {
       const o = h2h.get(r.opp) || { id: r.opp, gp: 0, w: 0, l: 0, t: 0, gf: 0, ga: 0 };
       o.gp++; o[r.r.toLowerCase()]++; o.gf += r.gf; o.ga += r.ga;
       h2h.set(r.opp, o);
     }
-    const favs = favPlayers();
+    const wk = new Map();
+    for (const r of t.results) {
+      const k = weekKey(r.date), o = wk.get(k) || { id: k, gp: 0, w: 0, l: 0, t: 0, gf: 0, ga: 0 };
+      o.gp++; o[r.r.toLowerCase()]++; o.gf += r.gf; o.ga += r.ga; wk.set(k, o);
+    }
+    const lastWk = [...wk.keys()].sort().at(-1);
+    const tw = lastWk ? teamWeekend(lastWk, id) : null;
+    // team scoring leaders (rank within the team; ties share)
+    const tLeaders = roster.filter((p) => !p.isGoalie || p.pts > 0).map((p) => ({ ...p })).sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));
+    { let rk = 0, prev = null; tLeaders.forEach((p, i) => { if (p.pts !== prev) rk = i + 1; p.rank = rk; prev = p.pts; }); }
+    const teamGoals = (forTeam) => S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal' && (String(e.teamId) === String(id)) === forTeam && (String(g.home.id) === String(id) || String(g.away.id) === String(id))));
     after(() => {
+      progChart($('#prog'), t);
       periodChart($('#byper'), t);
+      timingChart($('#heat'), {
+        up: { label: 'Scored', color: 'var(--us)', goals: teamGoals(true) },
+        down: { label: 'Allowed', color: 'var(--red)', goals: teamGoals(false) },
+        notes: $('#heat-notes'),
+      });
+      const net = networkChart($('#net'), id, { controls: $('#net-ctl') });
+      const nm = $('#net-meta'); if (nm) nm.textContent = net.goals ? `${net.assisted} of ${net.goals} goals assisted` : '';
       sortable($('#roster'), roster, [
         { key: 'name', label: 'Player', cls: 'l', val: (p) => p.name, desc: false, html: (p) => `${playerLink(p.id, p.name)}${p.isGoalie ? '<span class="chip" title="Goalie">G</span>' : ''}${favs.has(p.id) ? '<span class="chip gwg">★</span>' : ''}` },
         { key: 'num', label: '#', val: (p) => Number(p.number) || 0, desc: false },
@@ -843,24 +861,6 @@
         { key: 'gf', label: 'GF', val: (o) => o.gf }, { key: 'ga', label: 'GA', val: (o) => o.ga },
         { key: 'diff', label: 'DIFF', val: (o) => o.gf - o.ga, html: (o) => `<span class="${o.gf > o.ga ? 'pos' : o.gf < o.ga ? 'neg' : ''}">${sign(o.gf - o.ga)}</span>` },
       ], { key: 'gp' });
-      const b = $('#set-mine'); if (b) b.addEventListener('click', () => { store.set('myTeam', String(id)); render(); });
-    });
-    const teamGoals = (forTeam) => S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal' && (String(e.teamId) === String(id)) === forTeam && (String(g.home.id) === String(id) || String(g.away.id) === String(id))));
-    // weekend-by-weekend record
-    const wk = new Map();
-    for (const r of t.results) {
-      const k = weekKey(r.date), o = wk.get(k) || { id: k, gp: 0, w: 0, l: 0, t: 0, gf: 0, ga: 0 };
-      o.gp++; o[r.r.toLowerCase()]++; o.gf += r.gf; o.ga += r.ga; wk.set(k, o);
-    }
-    after(() => {
-      progChart($('#prog'), t);
-      timingChart($('#heat'), {
-        up: { label: 'Scored', color: 'var(--us)', goals: teamGoals(true) },
-        down: { label: 'Allowed', color: 'var(--red)', goals: teamGoals(false) },
-        notes: $('#heat-notes'),
-      });
-      const net = networkChart($('#net'), id, { controls: $('#net-ctl') });
-      const nm = $('#net-meta'); if (nm) nm.textContent = net.goals ? `${net.assisted} of ${net.goals} goals assisted` : '';
       sortable($('#wk'), [...wk.values()], [
         { key: 'id', label: 'Weekend', cls: 'l', val: (o) => o.id, desc: false, html: (o) => `<a class="lnk" href="#/weekend/${o.id}">${esc(weekLabel(o.id))}</a>` },
         { key: 'gp', label: 'GP', val: (o) => o.gp },
@@ -868,24 +868,31 @@
         { key: 'gf', label: 'GF', val: (o) => o.gf }, { key: 'ga', label: 'GA', val: (o) => o.ga },
         { key: 'diff', label: 'DIFF', val: (o) => o.gf - o.ga, html: (o) => `<span class="${o.gf > o.ga ? 'pos' : o.gf < o.ga ? 'neg' : ''}">${sign(o.gf - o.ga)}</span>` },
       ], { key: 'id', dir: 1 });
+      const b = $('#set-mine'); if (b) b.addEventListener('click', () => { setMyTeam(String(id)); });
     });
-    const action = isMine ? '<span class="tag-mine">My team</span>' : '<button class="btn" id="set-mine">Make this my team</button>';
-    const upcoming = sched.filter(isUpcoming);
+    const action = isMine ? '' : `<button class="btn" id="set-mine">Switch to ${esc(t.short)}</button>`;
+    const wkPanel = tw && tw.myFinals.length ? panel(`Weekend recap · ${esc(weekLabel(tw.key))}`, `
+        <div class="stats wkstats"><div class="st"><span class="l">Record</span><span class="v">${tw.rec.W}-${tw.rec.L}-${tw.rec.T}</span></div><div class="st"><span class="l">Goals for</span><span class="v">${tw.gfga[0]}</span></div><div class="st"><span class="l">Goals against</span><span class="v">${tw.gfga[1]}</span></div><div class="st"><span class="l">Games</span><span class="v">${tw.myFinals.length}</span></div></div>
+        <div class="pb"><div class="sub">Firsts &amp; milestones</div>${firstsList(tw.moments, { showPlayer: true })}</div>
+        <div class="note"><a class="lnk" href="#/weekend/${tw.key}">See the whole division that weekend →</a></div>`, { gold: true }) : '';
     return `
       ${hero(t, { action })}
+      ${latest ? featuredGame(latest, id, `Last game · ${esc(t.short)}`) : ''}
+      <div style="margin-bottom:18px">${panel(`Up next · ${esc(t.short)}`, gameCards(upcoming.slice(0, 4), id), { gold: true, meta: `${upcoming.length} remaining` })}</div>
+      ${wkPanel ? `<div style="margin-bottom:18px">${wkPanel}</div>` : ''}
+      <div style="margin-bottom:18px">${panel(`${esc(t.short)} scoring`, `<div class="pb"><div class="leaders">${leaderRows(tLeaders.slice(0, 12), (p) => favs.has(p.id))}</div></div>`, { meta: '<button class="lnk linkbtn" data-scroll="roster-anchor">Full roster ↓</button>' })}</div>
       <div style="margin-bottom:18px">${panel('Season progression', `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals for (running)</span><span><i style="background:var(--red)"></i>Goals against (running)</span><span><i style="background:var(--us);height:8px"></i>W</span><span><i style="background:#5A2A22;height:8px"></i>L</span></div><div class="chart" id="prog"></div></div>`, { gold: true, meta: `${t.gp} GP · by weekend` })}</div>
       <div class="grid g-7-5">
         ${panel('When goals happen', '<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Scored (up)</span><span><i style="background:var(--red)"></i>Allowed (down)</span></div><div class="chart" id="heat"></div><div id="heat-notes"></div></div>', { meta: '3-minute stretches' })}
-        ${panel('By weekend', '<div class="tw"><table id="wk"></table></div>')}
+        ${panel('By period', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { meta: `${t.gp} GP` })}
       </div>
       <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div id="net-ctl" class="net-ctl"></div><div class="chart" id="net"></div></div><div class="note">A line joins a passer and a scorer on the same goal. Hover a player to see only their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>
-      <div class="grid g-5-7">
-        ${panel('By period', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { gold: true, meta: `${t.gp} GP` })}
-        ${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team SV% ${rate(t.svPct)} · PIM ${t.pim}` })}
-      </div>
+      <div id="roster-anchor" style="margin-bottom:18px">${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team SV% ${rate(t.svPct)} · PIM ${t.pim}` })}</div>
       <div style="margin-bottom:18px">${panel('Results', gameCards(sched.filter((s) => s.final).reverse(), id), { meta: `${t.w}-${t.l}-${t.t}` })}</div>
-      <div style="margin-bottom:18px">${panel('Up next', gameCards(upcoming.slice(0, 8), id), { gold: true, meta: `${upcoming.length} remaining` })}</div>
-      <div style="margin-bottom:18px">${panel('Head to head', '<div class="tw"><table id="h2h"></table></div>')}</div>`;
+      <div class="grid g-6-6">
+        ${panel('By weekend', '<div class="tw"><table id="wk"></table></div>')}
+        ${panel('Head to head', '<div class="tw"><table id="h2h"></table></div>')}
+      </div>`;
   }
 
   function result(gameId, teamId) {
@@ -1009,13 +1016,6 @@
     const items = W.items.slice().sort((a, b) => a.start.localeCompare(b.start));
     const finals = items.filter((s) => s.final), ids = new Set(finals.map((s) => s.id));
     const games = finals.map((s) => gameById.get(s.id)).filter(Boolean);
-    const mine = items.filter((s) => involves(s, me.id));
-    const myFinals = mine.filter((s) => s.final);
-    const rec = { W: 0, L: 0, T: 0 }, gfga = [0, 0];
-    for (const s of myFinals) {
-      const home = String(s.home) === me.id, my = home ? s.homeScore : s.awayScore, op = home ? s.awayScore : s.homeScore;
-      rec[my > op ? 'W' : my < op ? 'L' : 'T']++; gfga[0] += my; gfga[1] += op;
-    }
     // weekend scoring leaders
     const tally = new Map();
     for (const g of games) for (const r of g.skaters) {
@@ -1025,20 +1025,6 @@
     }
     const leaders = [...tally.values()].filter((p) => p.id).sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));
     let rk = 0, prev = null; leaders.forEach((p, i) => { if (p.pts !== prev) rk = i + 1; p.rank = rk; prev = p.pts; });
-    // moments: my team's firsts/milestones, then division highlights
-    // one line per player: "First goal, assist & multi-point game · 10th point"
-    const andJoin = (a) => (a.length > 1 ? `${a.slice(0, -1).join(', ')} & ${a.at(-1)}` : a[0]);
-    const myMoments = S.players.filter((p) => p.teamId === me.id).map((p) => {
-      const fs = p.firsts.filter((f) => ids.has(f.gameId));
-      if (!fs.length) return null;
-      const ORDER = ['goal', 'assist', 'multi-point game', 'hat trick', 'power-play goal', 'shorthanded goal'];
-      const firsts = fs.filter((f) => f.kind === 'first').map((f) => f.label.replace(/^First /, '').replace(/ of the season$/, ''))
-        .sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
-      const counts = new Map();
-      for (const f of fs.filter((x) => x.kind !== 'first')) counts.set(f.label, (counts.get(f.label) || 0) + 1);
-      const label = [firsts.length ? 'First ' + andJoin(firsts) : null, ...[...counts].map(([l, n]) => (n > 1 ? `${l} ×${n}` : l))].filter(Boolean).join(' · ');
-      return { ...fs[0], kind: firsts.length ? 'first' : 'milestone', label, player: p };
-    }).filter(Boolean).sort((a, b) => a.date.localeCompare(b.date) || a.player.name.localeCompare(b.player.name));
     const div = [];
     for (const g of games) {
       const h = team(g.home.id), a = team(g.away.id);
@@ -1053,12 +1039,10 @@
       <div class="ptitle"><div><div class="k">Weekend · ${finals.length} of ${items.length} games final</div><h1>${esc(weekLabel(key))}</h1><div class="s">${W.items.length ? esc([...new Set(items.map((s) => s.location).filter(Boolean))].slice(0, 3).join(' · ')) : ''}</div></div>
         <div style="display:flex;gap:8px">${prevK ? `<a class="btn" href="#/weekend/${prevK}">← Prev</a>` : ''}${nextK ? `<a class="btn" href="#/weekend/${nextK}">Next →</a>` : ''}</div></div>
       <div class="wkbar">${chips}</div>
-      ${mine.length ? `<div style="margin-bottom:18px">${panel(`${esc(me.short)} this weekend`, `${myFinals.length ? `<div class="stats wkstats"><div class="st"><span class="l">Record</span><span class="v">${rec.W}-${rec.L}-${rec.T}</span></div><div class="st"><span class="l">Goals for</span><span class="v">${gfga[0]}</span></div><div class="st"><span class="l">Goals against</span><span class="v">${gfga[1]}</span></div><div class="st"><span class="l">Games</span><span class="v">${myFinals.length}/${mine.length}</span></div></div>` : ''}${gameCards(mine, me.id)}`, { gold: true, meta: `${mine.length} games` })}</div>` : ''}
       ${finals.length ? `<div class="grid g-6-6">
-        ${panel(`${esc(me.short)} moments`, `<div class="pb">${firstsList(myMoments, { showPlayer: true })}</div>`, { gold: true, meta: 'Firsts &amp; milestones' })}
-        ${panel('Around the division', `<div class="pb">${div.length ? `<ol class="evs">${div.map((d) => `<li class="ev moment"><span class="pn">◆</span><span class="tc">${dt(d.date)}</span><span class="who"><b>${d.playerId ? playerLink(d.playerId, d.text) : esc(d.text)}</b></span><a class="scr lnk" href="#/game/${d.gameId}" style="font-size:12px">GAME →</a></li>`).join('')}</ol>` : '<div class="empty">No comebacks, shutouts or hat tricks</div>'}</div>`, { meta: 'Comebacks · shutouts · hat tricks' })}
-      </div>
-      <div style="margin-bottom:18px">${panel('Weekend scoring', `<div class="pb"><div class="leaders">${leaderRows(leaders.slice(0, 12), (p) => String(p.teamId) === me.id || favPlayers().has(p.id))}</div></div>`, { meta: 'Points this weekend' })}</div>` : ''}
+        ${panel('Around the division', `<div class="pb">${div.length ? `<ol class="evs">${div.map((d) => `<li class="ev moment"><span class="pn">◆</span><span class="tc">${dt(d.date)}</span><span class="who"><b>${d.playerId ? playerLink(d.playerId, d.text) : esc(d.text)}</b></span><a class="scr lnk" href="#/game/${d.gameId}" style="font-size:12px">GAME →</a></li>`).join('')}</ol>` : '<div class="empty">No comebacks, shutouts or hat tricks</div>'}</div>`, { gold: true, meta: 'Comebacks · shutouts · hat tricks' })}
+        ${panel('Weekend scoring', `<div class="pb"><div class="leaders one">${leaderRows(leaders.slice(0, 10), (p) => String(p.teamId) === me.id)}</div></div>`, { meta: 'Points this weekend' })}
+      </div>` : ''}
       <div style="margin-bottom:18px">${panel('All games', gameCards(items, null), { meta: `${items.length} games` })}</div>`;
   }
 
@@ -1066,7 +1050,7 @@
 
   // ------------------------------------------------------------ router
   const routes = [
-    [/^\/?$/, viewHome], [/^\/standings$/, viewStandings], [/^\/skaters$/, viewSkaters], [/^\/schedule$/, viewSchedule],
+    [/^\/?$/, () => viewTeam(myTeamId())], [/^\/standings$/, viewStandings], [/^\/skaters$/, viewSkaters], [/^\/schedule$/, viewSchedule],
     [/^\/weekends?$/, () => viewWeekend()], [/^\/weekend\/(\d{4}-\d{2}-\d{2})$/, viewWeekend],
     [/^\/team\/(\w+)$/, viewTeam], [/^\/player\/(\d+)$/, viewPlayer], [/^\/game\/(\d+)$/, viewGame],
   ];
@@ -1083,11 +1067,66 @@
     const mine = '/team/' + myTeamId();
     document.querySelectorAll('#nav a').forEach((a) => {
       const h = a.getAttribute('href').slice(1);
-      const on = h === '/' ? path === '/' : h === '/team/mine' ? path === mine : path.startsWith(h);
+      const on = h === '/' ? path === '/' || path === mine : path.startsWith(h);
       a.classList.toggle('on', on);
     });
+    teamBar();
     if (path !== lastPath) { window.scrollTo(0, 0); lastPath = path; }
   }
+
+  // ------------------------------------------------------------ team bar (top strip): team switcher + last/next game
+  function setMyTeam(id) {
+    store.set('myTeam', String(id));
+    closeTeamMenu();
+    if (location.hash === '' || location.hash === '#/' || location.hash === '#') render(); else location.hash = '#/';
+  }
+  function closeTeamMenu() {
+    const m = document.getElementById('tmenu'), b = document.getElementById('tsel');
+    if (m) m.hidden = true;
+    if (b) b.setAttribute('aria-expanded', 'false');
+  }
+  function teamBar() {
+    const me = team(myTeamId()), el = document.getElementById('teambar');
+    const navTeam = document.getElementById('nav-team'); if (navTeam) navTeam.textContent = me.short;
+    const mine = S.schedule.filter((s) => involves(s, me.id));
+    const last = mine.filter((s) => s.final).at(-1), next = mine.find(isUpcoming);
+    const days = (s) => {
+      const a = new Date(); a.setHours(0, 0, 0, 0);
+      const b = localDate(s.start); b.setHours(0, 0, 0, 0);
+      const n = Math.round((b - a) / 864e5);
+      return n <= 0 ? 'today' : n === 1 ? 'tomorrow' : `in ${n} days`;
+    };
+    let lastHtml = '', nextHtml = '';
+    if (last) {
+      const home = String(last.home) === me.id, my = home ? last.homeScore : last.awayScore, op = home ? last.awayScore : last.homeScore, o = team(home ? last.away : last.home);
+      const r = my > op ? 'W' : my < op ? 'L' : 'T';
+      const inner = `<span class="k">Last</span><span class="rb ${r}">${r}</span><b>${my}–${op}</b> ${home ? 'vs' : '@'} ${esc(o.code)}`;
+      lastHtml = last.hasDetail ? `<a class="tb-item tb-last" href="#/game/${last.id}">${inner}</a>` : `<span class="tb-item tb-last">${inner}</span>`;
+    }
+    if (next) {
+      const home = String(next.home) === me.id, o = team(home ? next.away : next.home);
+      nextHtml = `<span class="tb-item tb-next"><span class="k">Next</span><b>${dt(next.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(next.start)}</b> ${home ? 'vs' : '@'} ${esc(o.short)}<span class="tb-loc"> · ${esc(next.location || '')}</span><span class="tb-days">${days(next)}</span></span>`;
+    }
+    const opts = [...S.teams].sort((a, b) => a.rank - b.rank).map((t) =>
+      `<button class="topt ${t.id === me.id ? 'on' : ''}" role="option" aria-selected="${t.id === me.id}" data-id="${t.id}">${logo(t)}<span class="tn2">${esc(t.name)}</span><span class="tr">${t.w}-${t.l}-${t.t}</span></button>`).join('');
+    const open = !document.getElementById('tmenu')?.hidden && document.getElementById('tmenu');
+    el.innerHTML = `<div class="wrap tb-in">
+      <button class="tsel" id="tsel" aria-haspopup="listbox" aria-expanded="${open ? 'true' : 'false'}" title="Switch team">${logo(me)}<span class="tsn">${esc(me.short)}</span><span class="car" aria-hidden="true">▾</span></button>
+      <div class="tb-info">${lastHtml}${nextHtml}</div>
+      <div class="tmenu" id="tmenu" role="listbox" aria-label="Choose your team" ${open ? '' : 'hidden'}><div class="tmh">Choose your team</div>${opts}</div>
+    </div>`;
+  }
+  // one set of listeners for the bar + page-level helpers
+  document.addEventListener('click', (e) => {
+    const sel = e.target.closest('#tsel');
+    if (sel) { const m = document.getElementById('tmenu'); m.hidden = !m.hidden; sel.setAttribute('aria-expanded', String(!m.hidden)); return; }
+    const opt = e.target.closest('.topt');
+    if (opt) { setMyTeam(opt.dataset.id); return; }
+    if (!e.target.closest('#tmenu')) closeTeamMenu();
+    const sc = e.target.closest('[data-scroll]');
+    if (sc) { e.preventDefault(); document.getElementById(sc.dataset.scroll)?.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' }); }
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeTeamMenu(); });
 
   // ------------------------------------------------------------ boot
   function prepare() {
@@ -1169,13 +1208,6 @@
     document.getElementById('brand-division').textContent = S.meta.division;
     document.getElementById('upd').textContent = `${S.meta.league} · ${S.meta.season} · Updated ${new Date(S.meta.updatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
     document.title = `${S.meta.division} · ${S.meta.league}`;
-    const finals = S.schedule.filter((x) => x.final).slice(-14).reverse();
-    const tk = finals.map((x) => {
-      const h = team(x.home), a = team(x.away), hw = x.homeScore > x.awayScore;
-      const inner = `<span class="f">FINAL</span><span class="${hw ? 'lo' : ''}">${esc(a.code)}</span> <b>${x.awayScore}</b><span class="${hw ? '' : 'lo'}">${esc(h.code)}</span> <b>${x.homeScore}</b>`;
-      return x.hasDetail ? `<a class="tk" href="#/game/${x.id}">${inner}</a>` : `<span class="tk">${inner}</span>`;
-    }).join('');
-    document.getElementById('ticker').innerHTML = tk + tk;
     const so = S.meta.scoreOnlyGames?.length;
     document.getElementById('foot').innerHTML = `Unofficial stats built from the <a class="lnk" href="${esc(S.meta.sourceUrl)}" target="_blank" rel="noopener">${esc(S.meta.league)}</a> published game sheets · ${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final${so ? ` · ${so} counted from the final score only (no game sheet yet)` : ''}.`;
   }
