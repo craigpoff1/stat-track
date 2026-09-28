@@ -29,12 +29,12 @@ node scripts/build.mjs
 python -m http.server 8765 --directory site
 ```
 
-## What's published vs. kept
+## What's published
 
-These are 7-year-olds, so the public site shows **team-level** penalty minutes and save % only.
-Individual penalty minutes, penalty names, and individual goalie stats are still scraped and kept
-in `data/games/*.json` (for private questions), but `scripts/build.mjs` strips them from
-`site/data/stats.json`. Team save % excludes games where the sheet records fewer shots than goals.
+The site is password-protected (see below), so the encrypted stats include individual penalty
+minutes, named penalties and goalie stats. Goalie lines are checked against each game sheet
+(goals against vs the score, shots vs the shots table, minutes); lines that don't add up are shown
+but left out of save % / GAA, with per-game notes on the site.
 
 ## Password
 
