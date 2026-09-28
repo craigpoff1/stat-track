@@ -2,8 +2,10 @@ name: Update stats and deploy
 
 on:
   schedule:
-    # Daily at 09:17 UTC (3:17 AM Mountain), after the previous day's games are posted.
-    - cron: '17 9 * * *'
+    # Games are Fri-Sun only. Run each game night (04:17 UTC Sat/Sun/Mon = ~10 PM Mountain
+    # Fri/Sat/Sun), plus a Monday-morning catch-up for late sheets and stat corrections.
+    - cron: '17 4 * * 6,0,1'
+    - cron: '17 15 * * 1'
   workflow_dispatch:
     inputs:
       refetch_all:
