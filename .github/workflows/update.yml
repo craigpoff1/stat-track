@@ -2,9 +2,9 @@ name: Update stats and deploy
 
 on:
   schedule:
-    # Games are Fri-Sun only. Run each game night (04:17 UTC Sat/Sun/Mon = ~10 PM Mountain
-    # Fri/Sat/Sun), plus a Monday-morning catch-up for late sheets and stat corrections.
-    - cron: '17 4 * * 6,0,1'
+    # Games can be any day of the week. Run nightly (04:17 UTC = ~10 PM MDT / 9 PM MST),
+    # plus a Monday-morning catch-up for late weekend sheets and stat corrections.
+    - cron: '17 4 * * *'
     - cron: '17 15 * * 1'
   workflow_dispatch:
     inputs:

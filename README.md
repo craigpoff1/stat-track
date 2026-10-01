@@ -18,7 +18,7 @@ league game pages    ──►                    ──► data/games/<id>.json
 - **Game stats** — each game page is server-rendered HTML with the timeline, box score and goalie lines. Parsed with cheerio.
 - **Scraping is incremental** — only new final games (plus anything played in the last 2 days, to catch stat corrections) are fetched.
 - **Site** — plain HTML/CSS/JS, no build step. Reads `site/data/stats.json`.
-- **Automation** — `.github/workflows/update.yml` runs every 2 hours, commits new data, and deploys `site/` to GitHub Pages.
+- **Automation** — `.github/workflows/update.yml` runs nightly (~10 PM Mountain) plus a Monday-morning catch-up, commits new data, and deploys `site/` to GitHub Pages.
 
 ## Run locally
 
