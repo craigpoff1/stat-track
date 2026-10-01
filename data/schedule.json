@@ -247,9 +247,9 @@
   "location": "Silent Ice Center - Hatch Co. Arena",
   "home": "Riggers Hockey Academy",
   "away": "Saints Pro Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 14,
+  "awayScore": 0
  },
  {
   "id": "2020154",
