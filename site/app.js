@@ -1163,7 +1163,8 @@
     const top2 = byG.slice(0, 2), top2Share = t.gf ? top2.reduce((n, p) => n + p.g, 0) / t.gf : 0;
     const scorers = skaters.filter((p) => p.g > 0).length;
     const lastWk = t.results.length ? weekKey(t.results.at(-1).date) : null;
-    const lwPts = (p) => p.log.filter((l) => weekKey(l.date) === lastWk).reduce((n, l) => n + l.pts, 0);
+    // rolling window: a player's last 4 games (≈ one showcase weekend, but stays current mid-weekend)
+    const l4Pts = (p) => p.log.slice(-4).reduce((n, l) => n + l.pts, 0);
     // duos from goal/assist pairs
     const pairs = new Map();
     for (const g of games) for (const e of g.ev) {
@@ -1231,7 +1232,7 @@
     const rinkRec = (teamId, rink) => { const r = sum((teamById.get(String(teamId))?.results || []).filter((x) => S.schedule.find((s) => s.id === x.gameId)?.location === rink)); return r.W + r.L + r.T ? r : null; };
 
     return {
-      t, self, me, games, byPts, byG, top2, top2Share, scorers, lastWk, lwPts, duos, tb, periods, pens, infractions, penPlayers, penByPeriod,
+      t, self, me, games, byPts, byG, top2, top2Share, scorers, lastWk, l4Pts, duos, tb, periods, pens, infractions, penPlayers, penByPeriod,
       script, sg, sh, shootPct, gls, glSec, common, h2h, nextMeet, nextGame, rinkFor, rinkRec,
       ranks: {
         gfpg: rankOf((o) => o.gfPerGame), gapg: rankOf((o) => o.gaPerGame, 'asc'), pp: rankOf((o) => o.ppPct), pk: rankOf((o) => o.pkPct),
@@ -1268,8 +1269,8 @@
     if (d.script.comebacks >= 2) add(0.55, `${We} don't quit — ${d.script.comebacks} comeback wins`, `Won ${d.script.comebacks} games after trailing.`);
     const tf = d.script.trailFirst, tfn = tf.W + tf.L + tf.T;
     if (tfn >= 2 && tf.W + tf.T === 0) add(0.55, `The first goal matters`, `${We}'re 0-${tf.L} when the other team scores first.`);
-    const hot = d.byPts.map((p) => ({ p, v: d.lwPts(p) })).filter((x) => x.v >= 5).sort((a, b) => b.v - a.v)[0];
-    if (hot) add(0.5 + hot.v / 40, `Hot hand: ${nm(hot.p)}`, `${hot.v} points last weekend.`);
+    const hot = d.byPts.map((p) => ({ p, v: d.l4Pts(p) })).filter((x) => x.v >= 5).sort((a, b) => b.v - a.v)[0];
+    if (hot) add(0.5 + hot.v / 40, `Hot hand: ${nm(hot.p)}`, `${hot.v} points in their last 4 games.`);
     if (d.duos[0] && d.duos[0].n >= 3) add(0.45 + d.duos[0].n / 40, `${self ? 'Our top connection:' : 'Watch the'} ${d.duos[0].ids.map((i) => playerById.get(i)?.name.split(' ')[0]).join('–')}${self ? '' : ' connection'}`, `Combined on ${d.duos[0].n} goals.`);
     return keys.sort((a, b) => b.score - a.score).slice(0, 5);
   }
@@ -1299,8 +1300,8 @@
     const opts = [...S.teams].sort((a, b) => a.name.localeCompare(b.name)).map((o) => `<option value="${o.id}" ${o.id === t.id ? 'selected' : ''}>${o.id === me ? `Self-scout: ${esc(o.name)}` : esc(o.name)}</option>`).join('');
     const chips = `${upOpps.map(([o, s]) => `<a class="wkchip ${o === t.id ? 'on' : ''}" href="#/scout/${o}">${esc(team(o).short)} · ${dt(s.start)} ${String(s.home) === me ? '<span class="hl-h" title="Home — white jerseys">H</span>' : '<span class="hl-a" title="Away — green jerseys">A</span>'}</a>`).join('')}<a class="wkchip ${d.self ? 'on' : ''}" href="#/scout/${me}">Self-scout</a>`;
     const tile = (l, v, s = '') => `<div class="st"><span class="l">${l}</span><span class="v">${v}</span><span class="s">${s}</span></div>`;
-    const last5 = t.results.slice(-5), l5Rec = rec(last5.reduce((a, r) => { a[r.r]++; return a; }, { W: 0, L: 0, T: 0 }));
-    const l5Goals = last5.reduce((a, r) => [a[0] + r.gf, a[1] + r.ga], [0, 0]);
+    const last4 = t.results.slice(-4), l4Rec = rec(last4.reduce((a, r) => { a[r.r]++; return a; }, { W: 0, L: 0, T: 0 }));
+    const l4Goals = last4.reduce((a, r) => [a[0] + r.gf, a[1] + r.ga], [0, 0]);
     after(() => {
       $('#sc-pick').addEventListener('change', (e) => { location.hash = `#/scout/${e.target.value}`; });
       periodChart($('#sc-per'), t);
@@ -1328,7 +1329,7 @@
         return `<div class="note nextmeet"><b>Next meeting:</b> ${haBadge(weHome)} ${dt(d.nextMeet.start, { weekday: 'short', month: 'short', day: 'numeric' })} · ${tm(d.nextMeet.start)} · ${esc(rink || '')}<br><b>Situational:</b> ${esc(t.short)} ${weHome ? 'on the road' : 'at home'} ${them.w}-${them.l}-${them.t} · ${esc(my.short)} ${weHome ? 'at home' : 'on the road'} ${us.w}-${us.l}-${us.t}${rt || ru ? `<br><b>At this rink:</b> ${esc(t.short)} ${rt ? rec(rt) : 'no games'} · ${esc(my.short)} ${ru ? rec(ru) : 'no games'}` : ''}</div>`;
       })() : '';
     const threats = d.byPts.slice(0, 8).map((p) => {
-      const lw = d.lwPts(p);
+      const lw = d.l4Pts(p);
       return `<tr><td class="l">${playerLink(p.id, p.name)}<span class="sub2">#${esc(p.number)}</span></td><td>${p.g}</td><td>${p.a}</td><td class="pts" style="font-size:16px">${p.pts}</td><td class="hm">${p.ptsPerGame.toFixed(2)}</td><td class="hm">${p.ppg}</td><td>${lw ? `${lw}${lw >= 5 ? '<span class="chip gwg">HOT</span>' : ''}` : '–'}</td></tr>`;
     }).join('');
     const gSec = (g) => (d.glSec ? Math.round((g.seconds / d.glSec) * 100) : 0);
@@ -1339,7 +1340,7 @@
     return `
       <div class="ptitle"><div><div class="k">Scouting report · ${d.self ? 'self-scout' : d.nextMeet ? `next opponent · ${esc(my.short)} ${String(d.nextMeet.home) === me ? 'home' : 'away'}` : 'opponent'} · ${n} GP</div>
         <h1 class="sc-h1">${logo(t)}${esc(t.name)}</h1>
-        <div class="s">${ordinal(t.rank)} · ${rec({ W: t.w, L: t.l, T: t.t })} · last 5 ${esc(t.last5 || '–')}</div></div>
+        <div class="s">${ordinal(t.rank)} · ${rec({ W: t.w, L: t.l, T: t.t })} · last 4 ${esc(t.results.slice(-4).map((r) => r.r).join('') || '–')}</div></div>
         <select id="sc-pick" aria-label="Scout a team">${opts}</select></div>
       <div class="wkbar">${chips}</div>
 
@@ -1349,7 +1350,7 @@
         ${tile('Record', rec({ W: t.w, L: t.l, T: t.t }), `${ordinal(t.rank)} in division`)}
         ${tile('GF / game', t.gfPerGame.toFixed(1), rk(d.ranks.gfpg) + ' offense')}
         ${tile('GA / game', t.gaPerGame.toFixed(1), rk(d.ranks.gapg) + ' defense')}
-        ${tile(last5.length < 5 ? `Last ${last5.length || ''} games` : 'Last 5 games', last5.length ? l5Rec : '—', last5.length ? `${L5(last5.map((r) => r.r).join(''))} ${l5Goals[0]}–${l5Goals[1]}` : '')}
+        ${tile(last4.length && last4.length < 4 ? `Last ${last4.length} game${last4.length === 1 ? '' : 's'}` : 'Last 4 games', last4.length ? l4Rec : '—', last4.length ? `${L5(last4.map((r) => r.r).join(''))} ${l4Goals[0]}–${l4Goals[1]}` : '')}
         ${tile('Power play', pctS(t.ppPct), `${t.ppg}/${t.ppo} · ${rk(d.ranks.pp)}`)}
         ${tile('Penalty kill', pctS(t.pkPct), `${t.tsh - t.ppga}/${t.tsh} · ${rk(d.ranks.pk)}`)}
       </div>`)}</div>
@@ -1360,7 +1361,7 @@
       </div>` : ''}
 
       <div class="grid g-7-5">
-        ${panel('Who to key on', `<div class="tw"><table class="gl"><thead><tr><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th><th class="hm">P/GP</th><th class="hm">PPG</th><th>Last wknd</th></tr></thead><tbody>${threats}</tbody></table></div>
+        ${panel('Who to key on', `<div class="tw"><table class="gl"><thead><tr><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th><th class="hm">P/GP</th><th class="hm">PPG</th><th title="Points in the player's last 4 games">Last 4 GP</th></tr></thead><tbody>${threats}</tbody></table></div>
           <div class="pb">${kv([
             ['Top two goal scorers', `${pctS(d.top2Share)} of goals`],
             ['Different goal scorers', d.scorers],
