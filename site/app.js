@@ -1299,7 +1299,8 @@
     const opts = [...S.teams].sort((a, b) => a.name.localeCompare(b.name)).map((o) => `<option value="${o.id}" ${o.id === t.id ? 'selected' : ''}>${o.id === me ? `Self-scout: ${esc(o.name)}` : esc(o.name)}</option>`).join('');
     const chips = `${upOpps.map(([o, s]) => `<a class="wkchip ${o === t.id ? 'on' : ''}" href="#/scout/${o}">${esc(team(o).short)} · ${dt(s.start)} ${String(s.home) === me ? '<span class="hl-h" title="Home — white jerseys">H</span>' : '<span class="hl-a" title="Away — green jerseys">A</span>'}</a>`).join('')}<a class="wkchip ${d.self ? 'on' : ''}" href="#/scout/${me}">Self-scout</a>`;
     const tile = (l, v, s = '') => `<div class="st"><span class="l">${l}</span><span class="v">${v}</span><span class="s">${s}</span></div>`;
-    const lastRes = t.results.filter((r) => weekKey(r.date) === d.lastWk), lwRec = rec(lastRes.reduce((a, r) => { a[r.r]++; return a; }, { W: 0, L: 0, T: 0 }));
+    const last5 = t.results.slice(-5), l5Rec = rec(last5.reduce((a, r) => { a[r.r]++; return a; }, { W: 0, L: 0, T: 0 }));
+    const l5Goals = last5.reduce((a, r) => [a[0] + r.gf, a[1] + r.ga], [0, 0]);
     after(() => {
       $('#sc-pick').addEventListener('change', (e) => { location.hash = `#/scout/${e.target.value}`; });
       periodChart($('#sc-per'), t);
@@ -1348,7 +1349,7 @@
         ${tile('Record', rec({ W: t.w, L: t.l, T: t.t }), `${ordinal(t.rank)} in division`)}
         ${tile('GF / game', t.gfPerGame.toFixed(1), rk(d.ranks.gfpg) + ' offense')}
         ${tile('GA / game', t.gaPerGame.toFixed(1), rk(d.ranks.gapg) + ' defense')}
-        ${tile('Last weekend', lwRec, d.lastWk ? esc(weekLabel(d.lastWk)) : '')}
+        ${tile(last5.length < 5 ? `Last ${last5.length || ''} games` : 'Last 5 games', last5.length ? l5Rec : '—', last5.length ? `${L5(last5.map((r) => r.r).join(''))} ${l5Goals[0]}–${l5Goals[1]}` : '')}
         ${tile('Power play', pctS(t.ppPct), `${t.ppg}/${t.ppo} · ${rk(d.ranks.pp)}`)}
         ${tile('Penalty kill', pctS(t.pkPct), `${t.tsh - t.ppga}/${t.tsh} · ${rk(d.ranks.pk)}`)}
       </div>`)}</div>
