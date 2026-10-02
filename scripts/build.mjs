@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { config } from './config.mjs';
 import { encryptJson } from './crypto.mjs';
+import { tournament } from './tournament.config.mjs';
 
 const DATA = path.resolve('data');
 const OUT = path.resolve('site/data');
@@ -317,6 +318,12 @@ const scheduleOut = schedule.map((s) => ({
 
 // Published data policy: the site is password-protected (stats.enc.json), so individual penalty
 // minutes and goalie stats are included (owner decision 2026-09-28).
+// One-off tournament area: opponent-league data saved by scripts/tournament.mjs (optional).
+const tournamentSources = [];
+for (const src of tournament.sources) {
+  try { tournamentSources.push(JSON.parse(await fs.readFile(path.join(DATA, 'tournament', `${src.id}.json`), 'utf8'))); } catch { /* not fetched yet */ }
+}
+
 const out = {
   meta: {
     updatedAt: new Date().toISOString(),
@@ -335,6 +342,7 @@ const out = {
   goalies: [...goalies.values()],
   games: gameSummaries,
   schedule: scheduleOut,
+  tournament: tournamentSources.length ? { key: tournament.key, name: tournament.name, approxDate: tournament.approxDate, focus: tournament.focus, sources: tournamentSources } : null,
   dataWarnings,
 };
 

@@ -1,0 +1,1253 @@
+{
+ "source": {
+  "id": "hpl",
+  "league": "HPL Winter League",
+  "region": "BC · Lower Mainland",
+  "division": "2019 AAA Division",
+  "url": "https://hpl-winter-league.kreezee-sports.com",
+  "platform": "Kreezee"
+ },
+ "fetchedAt": "2026-10-02T18:02:29.834Z",
+ "detail": "scores-only",
+ "teams": [
+  {
+   "id": "hpl:148553",
+   "name": "2019 Coyotes HC",
+   "logo": "https://cache.kreezee.com/images/teams/48314da7.png",
+   "roster": [
+    {
+     "name": "Zachary Zhang",
+     "number": "7",
+     "goalie": false
+    },
+    {
+     "name": "Saihaj Thukral",
+     "number": "9",
+     "goalie": false
+    },
+    {
+     "name": "Ashton Brannen",
+     "number": "11",
+     "goalie": false
+    },
+    {
+     "name": "Hayden Wollbaum",
+     "number": "14",
+     "goalie": false
+    },
+    {
+     "name": "Price van der Pauw",
+     "number": "15",
+     "goalie": false
+    },
+    {
+     "name": "Jett Ormsby",
+     "number": "16",
+     "goalie": false
+    },
+    {
+     "name": "Caleb Morris",
+     "number": "21",
+     "goalie": true
+    },
+    {
+     "name": "Cara Hung",
+     "number": "23",
+     "goalie": false
+    },
+    {
+     "name": "Renzo Pannu",
+     "number": "27",
+     "goalie": false
+    },
+    {
+     "name": "Paul Thomas",
+     "number": "71",
+     "goalie": false
+    },
+    {
+     "name": "Arlo Verge",
+     "number": "76",
+     "goalie": false
+    },
+    {
+     "name": "Giovanni Trapasso",
+     "number": "97",
+     "goalie": false
+    },
+    {
+     "name": "Theodore Mullen",
+     "number": "98",
+     "goalie": false
+    },
+    {
+     "name": "Chase Moniz",
+     "number": null,
+     "goalie": false
+    }
+   ],
+   "url": "https://hpl-winter-league.kreezee-sports.com/teams/148553"
+  },
+  {
+   "id": "hpl:148550",
+   "name": "2019 Beavers HC",
+   "logo": "https://cache.kreezee.com/images/teams/3d88f0c7.png",
+   "roster": [
+    {
+     "name": "Conor Smith",
+     "number": "2",
+     "goalie": false
+    },
+    {
+     "name": "Max Duval",
+     "number": "9",
+     "goalie": false
+    },
+    {
+     "name": "Yuvraj Tamber",
+     "number": "10",
+     "goalie": false
+    },
+    {
+     "name": "Sebastian Enns",
+     "number": "11",
+     "goalie": false
+    },
+    {
+     "name": "Mack Downey",
+     "number": "12",
+     "goalie": false
+    },
+    {
+     "name": "Xavier Athwal",
+     "number": "17",
+     "goalie": false
+    },
+    {
+     "name": "Braydon Nishi",
+     "number": "21",
+     "goalie": false
+    },
+    {
+     "name": "Jeffery Xue",
+     "number": "24",
+     "goalie": false
+    },
+    {
+     "name": "Cooper Dhanani",
+     "number": "28",
+     "goalie": false
+    },
+    {
+     "name": "Luca Cesarini-Pinkowski",
+     "number": "67",
+     "goalie": false
+    },
+    {
+     "name": "Jordan Bedwal",
+     "number": "71",
+     "goalie": false
+    },
+    {
+     "name": "Arsenio Du",
+     "number": "86",
+     "goalie": false
+    },
+    {
+     "name": "Bodhi Kilburn",
+     "number": "87",
+     "goalie": false
+    }
+   ],
+   "url": "https://hpl-winter-league.kreezee-sports.com/teams/148550"
+  },
+  {
+   "id": "hpl:148552",
+   "name": "2019 Lumberjacks HC",
+   "logo": "https://cache.kreezee.com/images/teams/f2c1e168.png",
+   "roster": [
+    {
+     "name": "Kaia Pryor",
+     "number": "8",
+     "goalie": false
+    },
+    {
+     "name": "Adrien Amado",
+     "number": "10",
+     "goalie": false
+    },
+    {
+     "name": "Luke Stoliker",
+     "number": "11",
+     "goalie": false
+    },
+    {
+     "name": "Dax Rauche",
+     "number": "14",
+     "goalie": false
+    },
+    {
+     "name": "Axel Shinske",
+     "number": "15",
+     "goalie": false
+    },
+    {
+     "name": "Vannie Li",
+     "number": "19",
+     "goalie": false
+    },
+    {
+     "name": "Vann Fraser",
+     "number": "24",
+     "goalie": false
+    },
+    {
+     "name": "Cole Gant",
+     "number": "25",
+     "goalie": false
+    },
+    {
+     "name": "Nixon Woods",
+     "number": "30",
+     "goalie": true
+    },
+    {
+     "name": "Preston Mills",
+     "number": "71",
+     "goalie": false
+    },
+    {
+     "name": "Aidan Naulakhia",
+     "number": "73",
+     "goalie": false
+    },
+    {
+     "name": "Amari Gill",
+     "number": "78",
+     "goalie": false
+    },
+    {
+     "name": "Luca McIvor",
+     "number": "96",
+     "goalie": false
+    },
+    {
+     "name": "Ben Chavarie",
+     "number": "97",
+     "goalie": false
+    },
+    {
+     "name": "Kaysen Gujral",
+     "number": "98",
+     "goalie": false
+    }
+   ],
+   "url": "https://hpl-winter-league.kreezee-sports.com/teams/148552"
+  },
+  {
+   "id": "hpl:148551",
+   "name": "2019 Bulldogs HC",
+   "logo": "https://cache.kreezee.com/images/teams/68bc622d.png",
+   "roster": [
+    {
+     "name": "Rocco Berner",
+     "number": "1",
+     "goalie": true
+    },
+    {
+     "name": "Bowen Fang",
+     "number": "5",
+     "goalie": false
+    },
+    {
+     "name": "Audrey Han",
+     "number": "6",
+     "goalie": false
+    },
+    {
+     "name": "David Mossop",
+     "number": "8",
+     "goalie": false
+    },
+    {
+     "name": "Jeremy Wang",
+     "number": "10",
+     "goalie": false
+    },
+    {
+     "name": "Cooper Chiang-Cleveland",
+     "number": "14",
+     "goalie": false
+    },
+    {
+     "name": "Ethan Walia",
+     "number": "22",
+     "goalie": false
+    },
+    {
+     "name": "Quinn Jang",
+     "number": "43",
+     "goalie": false
+    },
+    {
+     "name": "Oliver Lindsay",
+     "number": "44",
+     "goalie": true
+    },
+    {
+     "name": "Liam Tsue",
+     "number": "67",
+     "goalie": false
+    },
+    {
+     "name": "Levi Low",
+     "number": "88",
+     "goalie": false
+    },
+    {
+     "name": "Lukas Godfrey",
+     "number": "93",
+     "goalie": false
+    },
+    {
+     "name": "Xijia Hao",
+     "number": "99",
+     "goalie": false
+    }
+   ],
+   "url": "https://hpl-winter-league.kreezee-sports.com/teams/148551"
+  },
+  {
+   "id": "hpl:148548",
+   "name": "2019 Flyers HC",
+   "logo": "https://cache.kreezee.com/images/teams/c20cba96.png",
+   "roster": [
+    {
+     "name": "Griffin Allen",
+     "number": "1",
+     "goalie": false
+    },
+    {
+     "name": "Nohl Waites",
+     "number": "7",
+     "goalie": false
+    },
+    {
+     "name": "Max Stephanian",
+     "number": "8",
+     "goalie": false
+    },
+    {
+     "name": "Noah Ettles",
+     "number": "19",
+     "goalie": false
+    },
+    {
+     "name": "Archie Embley",
+     "number": "20",
+     "goalie": false
+    },
+    {
+     "name": "Bowen Kamlade",
+     "number": "22",
+     "goalie": false
+    },
+    {
+     "name": "Bazil Spicak",
+     "number": "23",
+     "goalie": false
+    },
+    {
+     "name": "Gwen O'Neill",
+     "number": "34",
+     "goalie": false
+    },
+    {
+     "name": "Avery Mok",
+     "number": "43",
+     "goalie": false
+    },
+    {
+     "name": "Logan Giordano",
+     "number": "44",
+     "goalie": false
+    },
+    {
+     "name": "Hayson Leung",
+     "number": "79",
+     "goalie": false
+    },
+    {
+     "name": "Kai Vallillee",
+     "number": "87",
+     "goalie": false
+    },
+    {
+     "name": "Edward dong",
+     "number": "88",
+     "goalie": false
+    },
+    {
+     "name": "Wyatt McIntosh",
+     "number": "93",
+     "goalie": false
+    },
+    {
+     "name": "Everett Chalazan",
+     "number": "96",
+     "goalie": false
+    },
+    {
+     "name": "Niam Dhaliwal",
+     "number": "97",
+     "goalie": false
+    }
+   ],
+   "url": "https://hpl-winter-league.kreezee-sports.com/teams/148548"
+  },
+  {
+   "id": "hpl:148549",
+   "name": "2019 Bandits HC",
+   "logo": "https://cache.kreezee.com/images/teams/ac86015f.png",
+   "roster": [
+    {
+     "name": "Gabriel Santiago",
+     "number": "6",
+     "goalie": false
+    },
+    {
+     "name": "Grant Gamu",
+     "number": "7",
+     "goalie": false
+    },
+    {
+     "name": "Brady Grewal",
+     "number": "12",
+     "goalie": false
+    },
+    {
+     "name": "Linden Penner",
+     "number": "16",
+     "goalie": false
+    },
+    {
+     "name": "Nathan Rivard",
+     "number": "29",
+     "goalie": false
+    },
+    {
+     "name": "Daryl Wong",
+     "number": "39",
+     "goalie": true
+    },
+    {
+     "name": "Jaxon Khuc",
+     "number": "40",
+     "goalie": false
+    },
+    {
+     "name": "Luca Vermeer",
+     "number": "43",
+     "goalie": false
+    },
+    {
+     "name": "Connor Tateyama",
+     "number": "47",
+     "goalie": false
+    },
+    {
+     "name": "Constance Jian",
+     "number": "67",
+     "goalie": false
+    },
+    {
+     "name": "Ashton Trklja",
+     "number": "71",
+     "goalie": false
+    },
+    {
+     "name": "Daniel Garipov",
+     "number": "75",
+     "goalie": false
+    },
+    {
+     "name": "Mylen Carganilla",
+     "number": "87",
+     "goalie": false
+    },
+    {
+     "name": "Bowen Hughes",
+     "number": "92",
+     "goalie": false
+    },
+    {
+     "name": "Eli Murray",
+     "number": "97",
+     "goalie": false
+    }
+   ],
+   "url": "https://hpl-winter-league.kreezee-sports.com/teams/148549"
+  }
+ ],
+ "games": [
+  {
+   "id": "hpl:744562",
+   "start": "2026-09-15T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148550",
+   "final": true,
+   "homeScore": 0,
+   "awayScore": 6,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744562"
+  },
+  {
+   "id": "hpl:744561",
+   "start": "2026-09-15T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148552",
+   "away": "hpl:148551",
+   "final": true,
+   "homeScore": 8,
+   "awayScore": 7,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744561"
+  },
+  {
+   "id": "hpl:744563",
+   "start": "2026-09-16T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148548",
+   "away": "hpl:148549",
+   "final": true,
+   "homeScore": 9,
+   "awayScore": 3,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744563"
+  },
+  {
+   "id": "hpl:744565",
+   "start": "2026-09-22T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148552",
+   "away": "hpl:148550",
+   "final": true,
+   "homeScore": 3,
+   "awayScore": 8,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744565"
+  },
+  {
+   "id": "hpl:744564",
+   "start": "2026-09-22T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148551",
+   "away": "hpl:148548",
+   "final": true,
+   "homeScore": 6,
+   "awayScore": 4,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744564"
+  },
+  {
+   "id": "hpl:744566",
+   "start": "2026-09-23T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148553",
+   "final": true,
+   "homeScore": 7,
+   "awayScore": 1,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744566"
+  },
+  {
+   "id": "hpl:744569",
+   "start": "2026-09-29T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148552",
+   "away": "hpl:148548",
+   "final": true,
+   "homeScore": 2,
+   "awayScore": 7,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744569"
+  },
+  {
+   "id": "hpl:744567",
+   "start": "2026-09-29T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148551",
+   "away": "hpl:148553",
+   "final": true,
+   "homeScore": 8,
+   "awayScore": 2,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744567"
+  },
+  {
+   "id": "hpl:744568",
+   "start": "2026-09-30T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148549",
+   "final": true,
+   "homeScore": 2,
+   "awayScore": 1,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744568"
+  },
+  {
+   "id": "hpl:744571",
+   "start": "2026-10-06T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148548",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744571"
+  },
+  {
+   "id": "hpl:744570",
+   "start": "2026-10-06T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148551",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744570"
+  },
+  {
+   "id": "hpl:744572",
+   "start": "2026-10-07T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148552",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744572"
+  },
+  {
+   "id": "hpl:744575",
+   "start": "2026-10-13T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148552",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744575"
+  },
+  {
+   "id": "hpl:744573",
+   "start": "2026-10-13T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148553",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744573"
+  },
+  {
+   "id": "hpl:744574",
+   "start": "2026-10-14T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148551",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744574"
+  },
+  {
+   "id": "hpl:744578",
+   "start": "2026-10-20T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148551",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744578"
+  },
+  {
+   "id": "hpl:744576",
+   "start": "2026-10-20T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148549",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744576"
+  },
+  {
+   "id": "hpl:744577",
+   "start": "2026-10-21T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744577"
+  },
+  {
+   "id": "hpl:744580",
+   "start": "2026-10-27T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148552",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744580"
+  },
+  {
+   "id": "hpl:744579",
+   "start": "2026-10-27T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148551",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744579"
+  },
+  {
+   "id": "hpl:744581",
+   "start": "2026-10-28T17:30:00",
+   "rink": "Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744581"
+  },
+  {
+   "id": "hpl:744583",
+   "start": "2026-11-03T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744583"
+  },
+  {
+   "id": "hpl:744582",
+   "start": "2026-11-03T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148548",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744582"
+  },
+  {
+   "id": "hpl:744584",
+   "start": "2026-11-04T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148551",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744584"
+  },
+  {
+   "id": "hpl:744587",
+   "start": "2026-11-10T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148552",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744587"
+  },
+  {
+   "id": "hpl:744585",
+   "start": "2026-11-10T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148549",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744585"
+  },
+  {
+   "id": "hpl:744586",
+   "start": "2026-11-11T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148548",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744586"
+  },
+  {
+   "id": "hpl:744589",
+   "start": "2026-11-17T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744589"
+  },
+  {
+   "id": "hpl:744588",
+   "start": "2026-11-17T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148548",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744588"
+  },
+  {
+   "id": "hpl:744590",
+   "start": "2026-11-18T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744590"
+  },
+  {
+   "id": "hpl:744593",
+   "start": "2026-11-24T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148548",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744593"
+  },
+  {
+   "id": "hpl:744591",
+   "start": "2026-11-24T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148552",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744591"
+  },
+  {
+   "id": "hpl:744592",
+   "start": "2026-11-25T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744592"
+  },
+  {
+   "id": "hpl:744595",
+   "start": "2026-12-01T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744595"
+  },
+  {
+   "id": "hpl:744594",
+   "start": "2026-12-01T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148551",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744594"
+  },
+  {
+   "id": "hpl:744596",
+   "start": "2026-12-02T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744596"
+  },
+  {
+   "id": "hpl:744598",
+   "start": "2026-12-08T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744598"
+  },
+  {
+   "id": "hpl:744597",
+   "start": "2026-12-08T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148548",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744597"
+  },
+  {
+   "id": "hpl:744599",
+   "start": "2026-12-09T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744599"
+  },
+  {
+   "id": "hpl:744601",
+   "start": "2026-12-15T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744601"
+  },
+  {
+   "id": "hpl:744600",
+   "start": "2026-12-15T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148551",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744600"
+  },
+  {
+   "id": "hpl:744602",
+   "start": "2026-12-16T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744602"
+  },
+  {
+   "id": "hpl:744605",
+   "start": "2027-01-05T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148548",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744605"
+  },
+  {
+   "id": "hpl:744603",
+   "start": "2027-01-05T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148552",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744603"
+  },
+  {
+   "id": "hpl:744604",
+   "start": "2027-01-06T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148551",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744604"
+  },
+  {
+   "id": "hpl:744608",
+   "start": "2027-01-12T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148551",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744608"
+  },
+  {
+   "id": "hpl:744606",
+   "start": "2027-01-12T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148549",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744606"
+  },
+  {
+   "id": "hpl:744607",
+   "start": "2027-01-13T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744607"
+  },
+  {
+   "id": "hpl:744610",
+   "start": "2027-01-19T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744610"
+  },
+  {
+   "id": "hpl:744609",
+   "start": "2027-01-19T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148548",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744609"
+  },
+  {
+   "id": "hpl:744611",
+   "start": "2027-01-20T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744611"
+  },
+  {
+   "id": "hpl:744613",
+   "start": "2027-01-26T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744613"
+  },
+  {
+   "id": "hpl:744612",
+   "start": "2027-01-26T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148551",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744612"
+  },
+  {
+   "id": "hpl:744614",
+   "start": "2027-01-27T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148548",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744614"
+  },
+  {
+   "id": "hpl:744616",
+   "start": "2027-02-02T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744616"
+  },
+  {
+   "id": "hpl:744615",
+   "start": "2027-02-02T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148553",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744615"
+  },
+  {
+   "id": "hpl:744617",
+   "start": "2027-02-03T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744617"
+  },
+  {
+   "id": "hpl:744619",
+   "start": "2027-02-09T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744619"
+  },
+  {
+   "id": "hpl:744618",
+   "start": "2027-02-09T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148553",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744618"
+  },
+  {
+   "id": "hpl:744620",
+   "start": "2027-02-10T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744620"
+  },
+  {
+   "id": "hpl:744623",
+   "start": "2027-02-16T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744623"
+  },
+  {
+   "id": "hpl:744621",
+   "start": "2027-02-16T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148552",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744621"
+  },
+  {
+   "id": "hpl:744622",
+   "start": "2027-02-17T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148553",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744622"
+  },
+  {
+   "id": "hpl:744625",
+   "start": "2027-02-23T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148550",
+   "away": "hpl:148552",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744625"
+  },
+  {
+   "id": "hpl:744624",
+   "start": "2027-02-23T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148548",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744624"
+  },
+  {
+   "id": "hpl:744626",
+   "start": "2027-02-24T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148549",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744626"
+  },
+  {
+   "id": "hpl:744629",
+   "start": "2027-03-02T18:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148553",
+   "away": "hpl:148551",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744629"
+  },
+  {
+   "id": "hpl:744627",
+   "start": "2027-03-02T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148552",
+   "away": "hpl:148548",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744627"
+  },
+  {
+   "id": "hpl:744628",
+   "start": "2027-03-03T17:30:00",
+   "rink": "Delta Planet Ice · Canadian Rink",
+   "home": "hpl:148549",
+   "away": "hpl:148550",
+   "final": false,
+   "homeScore": null,
+   "awayScore": null,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744628"
+  }
+ ]
+}
