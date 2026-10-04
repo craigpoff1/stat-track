@@ -29,9 +29,9 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
   external-league teams (`ext`, e.g. `hpl:148550`). `gameById` holds league + tournament games.
 - **Datasets:** the "Include tournament games" toggle must change *every* stat/insight, so read
   through `D()`: `D().games`, `D().players`, `D().skaters`, `D().playerOf(id)`, `D().goalies`,
-  `D().goalieOf(id)`, and `D().teamOf(team)` for team analytics (GF/GA, periods, PIM, shots, SV%,
-  PP/PK; ranks/averages via `S.teams.map(D().teamOf)`). Only standings/records/results/weekends/firsts
-  stay league-only (`S.teams`, `t.w/l/t/pts/rank`, `t.results`). Tournament goalie totals are built
+  `D().goalieOf(id)`, `D().finalsOf(teamId)` (results lists), and `D().teamOf(team)` for team totals
+  incl. W-L-T, home/away, `results`, streak (ranks/averages via `S.teams.map(D().teamOf)`). Only league
+  standings, points/rank, weekend recaps and firsts stay league-only (`S.teams`, `t.pts`, `t.rank`). Tournament goalie totals are built
   server-side (`goaliesInclTournaments`, same sheet checks) because goalie validation lives in build.
 - Team/league separation: Team section = selected team only; League tabs = league-wide; Tournaments =
   its own section. Ask before mixing.
@@ -69,7 +69,8 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
   for a lone goalie = full game; minutes over game length count as entered (flagged); under = excluded.
 - Rolling windows are "last 4 games" (≈ one showcase weekend). Standings keep "L5".
 - Updates run nightly (games happen on weekdays too) + Monday catch-up.
-- Tournaments: owner names events; "Include tournament games" toggle **off by default everywhere**;
+- Tournaments: owner names events; "Include tournament games" toggle **off by default everywhere**,
+  changes every record/stat/insight except league standings, points/rank, weekend recaps, firsts (ⓘ next to it explains);
   Stars' tournaments shown as a separate team-page section.
 - Weekend recap tone rules: first name + last initial, opponents by team only, no negative framing,
   goalies thanked never graded, no penalties by name, every scorer + goalies mentioned.
