@@ -13,7 +13,7 @@
   "name": "Bandits",
   "teamId": "407121",
   "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
-  "score": 4
+  "score": 3
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "label": "3",
    "home": 2,
-   "away": 2
+   "away": 1
   }
  ],
  "events": [
@@ -213,19 +213,6 @@
    "tags": [
     "GWG"
    ]
-  },
-  {
-   "type": "goal",
-   "period": "3",
-   "time": "08:15",
-   "side": "away",
-   "team": "Bandits",
-   "scorer": {
-    "number": "92",
-    "name": "Bowen Hughes"
-   },
-   "assists": [],
-   "tags": []
   },
   {
    "type": "goal",
@@ -520,9 +507,9 @@
    "playerId": "5172430",
    "number": "92",
    "name": "Bowen Hughes",
-   "g": 2,
+   "g": 1,
    "a": 0,
-   "pts": 2,
+   "pts": 1,
    "pim": 0
   },
   {
@@ -694,5 +681,5 @@
  "start": "2026-10-04T10:30:00",
  "gameNumber": 14,
  "playoff": true,
- "fetchedAt": "2026-10-04T17:51:41.469Z"
+ "fetchedAt": "2026-10-04T17:57:00.640Z"
 }
