@@ -487,3 +487,15 @@ body.srch-open{overflow:hidden}
 .champ{display:flex;align-items:center;gap:12px;font:800 italic 24px var(--cond);text-transform:uppercase}
 .champ .logo{width:40px;height:40px}
 div.ld{cursor:default}
+
+/* ---------- include-tournaments toggle ---------- */
+.tgl{flex:none;display:inline-flex;align-items:center;gap:8px;margin-left:auto;padding:0 14px;background:transparent;border:0;border-left:1px solid var(--line);color:var(--ink3);font:700 12px var(--cond);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.tgl:hover{color:var(--ink)}
+.tgl .sw{position:relative;width:28px;height:16px;border-radius:8px;background:var(--line2);transition:background .15s}
+.tgl .sw::after{content:'';position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:var(--ink2);transition:transform .15s,background .15s}
+.tgl.on{color:var(--us)}
+.tgl.on .sw{background:rgba(245,183,46,.35)}
+.tgl.on .sw::after{transform:translateX(12px);background:var(--us)}
+.incnote{margin:0 0 14px;padding:8px 12px;background:rgba(245,183,46,.08);border-left:3px solid var(--us);font-size:13px;color:var(--ink2)}
+.chip.trn{border-color:#8DB8FF;color:#8DB8FF}
+@media (max-width:720px){.tgl{padding:0 10px;font-size:0;gap:0}.tgl .sw{margin:0}}

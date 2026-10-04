@@ -4,6 +4,7 @@ import path from 'node:path';
 import { config } from './config.mjs';
 import { encryptJson } from './crypto.mjs';
 import { events as eventsConfig, externalLeagues } from './events.config.mjs';
+import { playerLinks } from './identity.config.mjs';
 
 const DATA = path.resolve('data');
 const OUT = path.resolve('site/data');
@@ -337,6 +338,7 @@ async function readJson(f) { try { return JSON.parse(await fs.readFile(f, 'utf8'
 
 const players_hsl = players; // event loop shadows "players" with its own map
 const eventsOut = [];
+const identityReview = [];
 for (const ev of eventsConfig) {
   const base = { id: ev.id, name: ev.name, season: ev.season, dates: ev.dates, datesApprox: !!ev.datesApprox, platform: ev.platform, leagues: ev.leagues || [], focus: ev.focus || [], url: ev.base || null, division: ev.divisionName || null };
   const sched = (await readJson(path.join(DATA, 'events', ev.id, 'schedule.json'))) || [];
@@ -405,6 +407,26 @@ for (const ev of eventsConfig) {
     if (!best) { const byKey = candidates.filter((c) => teamKey(c.name) === teamKey(t.name)); if (byKey.length === 1) best = { ...byKey[0], method: 'name' }; }
     t.link = best ? { kind: best.kind, id: best.id, name: best.name, method: best.method, matched: best.hit ?? null, of: names.length } : null;
   }
+  // Player identity: link each tournament player to the same kid in the league, within the matched
+  // HSL team. Exact name → link. Same jersey # and same last name → link. Anything else is left
+  // unlinked and listed for review (confirmed answers live in identity.config.mjs). Never guess.
+  for (const t of teams.values()) {
+    if (t.link?.kind !== 'hsl') continue;
+    const roster = [...players_hsl.values()].filter((p) => p.teamId === t.link.id);
+    const last = (n) => nm(String(n || '').trim().split(/\s+/).pop());
+    for (const p of [...players.values()].filter((x) => x.teamId === t.id)) {
+      if (p.id in playerLinks) { p.hslId = playerLinks[p.id]; p.idMethod = 'confirmed'; continue; }
+      const byName = roster.filter((r) => nm(r.name) === nm(p.name));
+      const byNum = roster.filter((r) => String(r.number) === String(p.number) && last(r.name) === last(p.name));
+      if (byName.length === 1) { p.hslId = byName[0].id; p.idMethod = 'name'; }
+      else if (byNum.length === 1) { p.hslId = byNum[0].id; p.idMethod = 'number + last name'; }
+      else {
+        p.hslId = null;
+        identityReview.push({ event: ev.name, team: t.name, player: p.name, number: p.number, id: p.id,
+          candidates: roster.filter((r) => String(r.number) === String(p.number) || last(r.name) === last(p.name)).map((r) => ({ id: r.id, name: r.name, number: r.number })) });
+      }
+    }
+  }
   const rr = [...teams.values()].sort((a, b) => b.rr.pts - a.rr.pts || b.rr.w - a.rr.w || (b.rr.gf - b.rr.ga) - (a.rr.gf - a.rr.ga) || b.rr.gf - a.rr.gf || a.name.localeCompare(b.name));
   rr.forEach((t, i) => (t.seed = i + 1));
   const lastFinal = schedule.filter((s) => s.final).at(-1), allDone = schedule.length && schedule.every((s) => s.final);
@@ -436,6 +458,7 @@ const out = {
   games: gameSummaries,
   schedule: scheduleOut,
   events: eventsOut,
+  identityReview,
   externalLeagues: leaguesOut,
   dataWarnings,
 };
@@ -461,5 +484,6 @@ if (password) {
   await fs.writeFile(plainFile, JSON.stringify(out)); // local dev only
   await fs.rm(encFile, { force: true });
 }
+if (identityReview.length) console.log(`identity review: ${identityReview.length} tournament player(s) not linked — see identityReview in stats / identity.config.mjs`);
 console.log(`built: ${standings.length} teams, ${players.size} players, ${goalies.size} goalies, ${gameSummaries.length} games, ${dataWarnings.length} data warnings`);
 for (const t of standings) console.log(`  ${String(t.rank).padStart(2)} ${t.name.padEnd(28)} ${t.gp} ${t.w}-${t.l}-${t.t} ${String(t.pts).padStart(2)}pts GF ${t.gf} GA ${t.ga} PIM ${t.pim}`);
