@@ -1,0 +1,426 @@
+{
+ "id": "2034541",
+ "dateText": "Saturday, October 3, 2026 @ 2:45 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "MOB Hockey",
+  "teamId": "407117",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 3
+ },
+ "away": {
+  "name": "Beavers",
+  "teamId": "n:beavers",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 4
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:31",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:13",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "9",
+    "name": "Hayes Leinberger"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:26",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "29",
+    "name": "Chase Myers"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Kanon Durdle"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:51",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "88",
+    "name": "Kanon Durdle"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Dawson Moore"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:30",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "89",
+    "name": "Weston MacKinnon"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:40",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:09",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:04",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "9",
+    "name": "Hayes Leinberger"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:56",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:02",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Yuvraj Tamber"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:48",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Cooper Dhanani"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:20",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "9",
+    "name": "Hayes Leinberger"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121177",
+   "number": "9",
+   "name": "Hayes Leinberger",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121225",
+   "number": "88",
+   "name": "Kanon Durdle",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121291",
+   "number": "29",
+   "name": "Chase Myers",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121214",
+   "number": "98",
+   "name": "Dawson Moore",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121224",
+   "number": "96",
+   "name": "Brooks Jones",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121194",
+   "number": "92",
+   "name": "Hayes Ward",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121226",
+   "number": "89",
+   "name": "Weston MacKinnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121213",
+   "number": "71",
+   "name": "Zane Janvier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121292",
+   "number": "6",
+   "name": "Keir Kendall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121216",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121217",
+   "number": "17",
+   "name": "Grayson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121197",
+   "number": "16",
+   "name": "Jack Harris",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121196",
+   "number": "12",
+   "name": "Wyatt Kaliszewski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121211",
+   "number": "11",
+   "name": "Tanner Corrigan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121285",
+   "number": "10",
+   "name": "Weston Vansickle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121216",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "seconds": 2700,
+   "ga": 4,
+   "shots": 30,
+   "saves": 26
+  }
+ ],
+ "warnings": [
+  "away: no box score on the sheet (team identified by name)",
+  "away: box score has 0 goals, final is 4"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 6,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 13
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 12
+  }
+ ],
+ "start": "2026-10-03T14:45:00",
+ "gameNumber": 11,
+ "playoff": false,
+ "fetchedAt": "2026-10-04T16:39:10.491Z"
+}

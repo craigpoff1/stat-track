@@ -1,0 +1,489 @@
+{
+ "id": "2034543",
+ "dateText": "Sunday, October 4, 2026 @ 9:00 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "407118",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/570ac70c-2b3f-40e7-81a3-11d7c924d049_AB75F072-C7D5-406B-A9ED-FA57388651AB.png",
+  "score": 3
+ },
+ "away": {
+  "name": "Beavers",
+  "teamId": "n:beavers",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 4
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 3,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "14:26",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Yuvraj Tamber"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:00",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Logan Rumley"
+   },
+   "minutes": 2,
+   "infraction": "Boarding"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:16",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Braydon Nishi"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:13",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Kasen Leard"
+   },
+   "assists": [
+    {
+     "number": "20",
+     "name": "Merrick Pobuda"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:37",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "89",
+    "name": "Spencer Priddle"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:06",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:50",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Kasen Leard"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Brody Wilkes"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:37",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:02",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Owen Yuskow"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:56",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Braydon Nishi"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:19",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:47",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Braydon Nishi"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:04",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Cooper Dhanani"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:33",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:08",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Xavier Athwal"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121202",
+   "number": "17",
+   "name": "Kasen Leard",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121193",
+   "number": "91",
+   "name": "Noah Kaiser",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121289",
+   "number": "98",
+   "name": "Cabot Doucet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121221",
+   "number": "9",
+   "name": "Hayes Kaiser",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121201",
+   "number": "89",
+   "name": "Spencer Priddle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121220",
+   "number": "88",
+   "name": "Braxton Wagner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121282",
+   "number": "82",
+   "name": "Avery Sahnan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121288",
+   "number": "8",
+   "name": "Jones Brezinski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121281",
+   "number": "77",
+   "name": "Henry Olineck",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121169",
+   "number": "71",
+   "name": "Owen Yuskow",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121204",
+   "number": "29",
+   "name": "Oliver Rook",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121198",
+   "number": "20",
+   "name": "Merrick Pobuda",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121171",
+   "number": "19",
+   "name": "Logan Rumley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121280",
+   "number": "13",
+   "name": "Kash Bala",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121259",
+   "number": "11",
+   "name": "Brody Wilkes",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121203",
+   "number": "1",
+   "name": "Ryan Roth",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121203",
+   "number": "1",
+   "name": "Ryan Roth",
+   "seconds": 2650,
+   "ga": 4,
+   "shots": 14,
+   "saves": 10
+  }
+ ],
+ "warnings": [
+  "away: no box score on the sheet (team identified by name)",
+  "home: goalie minutes total 44",
+  "away: box score has 0 goals, final is 4"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 8,
+   "away": 7
+  },
+  {
+   "label": "2",
+   "home": 12,
+   "away": 6
+  },
+  {
+   "label": "3",
+   "home": 11,
+   "away": 4
+  }
+ ],
+ "start": "2026-10-04T09:00:00",
+ "gameNumber": 13,
+ "playoff": true,
+ "fetchedAt": "2026-10-04T16:39:12.124Z"
+}

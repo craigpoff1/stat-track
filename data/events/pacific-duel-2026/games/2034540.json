@@ -1,0 +1,611 @@
+{
+ "id": "2034540",
+ "dateText": "Saturday, October 3, 2026 @ 1:15 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Young Kings Hockey",
+  "teamId": "407119",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 3
+ },
+ "away": {
+  "name": "Bandits",
+  "teamId": "407121",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 7
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:25",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "87",
+    "name": "Mylen Carganilla"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:24",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "8",
+    "name": "Brooks Bohner"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Drake Gemmill"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:17",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "98",
+    "name": "Colten Gauer"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:49",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "47",
+    "name": "Connor Tateyama"
+   },
+   "assists": [
+    {
+     "number": "67",
+     "name": "Constance Jian"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:46",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "97",
+    "name": "Eli Murray"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:47",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "16",
+    "name": "Linden Penner"
+   },
+   "assists": [
+    {
+     "number": "75",
+     "name": "Daniel Garipov"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:03",
+   "side": "away",
+   "team": "Bandits",
+   "player": {
+    "number": "6",
+    "name": "Gabriel Santiago"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:40",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "16",
+    "name": "Linden Penner"
+   },
+   "assists": [
+    {
+     "number": "6",
+     "name": "Gabriel Santiago"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:26",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "16",
+    "name": "Linden Penner"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:20",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "92",
+    "name": "Bowen Hughes"
+   },
+   "assists": [
+    {
+     "number": "16",
+     "name": "Linden Penner"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:44",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "98",
+    "name": "Colten Gauer"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:47",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "88",
+    "name": "Drake Gemmill"
+   },
+   "assists": [
+    {
+     "number": "20",
+     "name": "Colson Smith"
+    },
+    {
+     "number": "29",
+     "name": "Dominik Brkic"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:02",
+   "side": "away",
+   "team": "Bandits",
+   "player": {
+    "number": "71",
+    "name": "Ashton Trklja"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121200",
+   "number": "98",
+   "name": "Colten Gauer",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121172",
+   "number": "88",
+   "name": "Drake Gemmill",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121173",
+   "number": "8",
+   "name": "Brooks Bohner",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121218",
+   "number": "96",
+   "name": "Caden Conway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121283",
+   "number": "9",
+   "name": "Evan Goldie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121290",
+   "number": "79",
+   "name": "Hayes Conway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121279",
+   "number": "71",
+   "name": "Bostin Murray",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121215",
+   "number": "7",
+   "name": "Brady Cox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121278",
+   "number": "37",
+   "name": "Mason Odland",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121199",
+   "number": "34",
+   "name": "Brody Berezan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121222",
+   "number": "29",
+   "name": "Dominik Brkic",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121210",
+   "number": "23",
+   "name": "Paisley Goodstriker-Chalifoux",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121207",
+   "number": "20",
+   "name": "Colson Smith",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121284",
+   "number": "19",
+   "name": "Sawyer Carlson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121277",
+   "number": "17",
+   "name": "Hudson Nate",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121205",
+   "number": "13",
+   "name": "Brooks Hurt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172429",
+   "number": "16",
+   "name": "Linden Penner",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172427",
+   "number": "97",
+   "name": "Eli Murray",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172430",
+   "number": "92",
+   "name": "Bowen Hughes",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172432",
+   "number": "87",
+   "name": "Mylen Carganilla",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172424",
+   "number": "47",
+   "name": "Connor Tateyama",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172423",
+   "number": "75",
+   "name": "Daniel Garipov",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172428",
+   "number": "71",
+   "name": "Ashton Trklja",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172434",
+   "number": "67",
+   "name": "Constance Jian",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172433",
+   "number": "6",
+   "name": "Gabriel Santiago",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172426",
+   "number": "43",
+   "name": "Luca Vermeer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172431",
+   "number": "40",
+   "name": "Jaxon Khuc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172436",
+   "number": "39",
+   "name": "Daryl Wong",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172435",
+   "number": "29",
+   "name": "Nathan Rivard",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121278",
+   "number": "37",
+   "name": "Mason Odland",
+   "seconds": 2700,
+   "ga": 7,
+   "shots": 23,
+   "saves": 16
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172436",
+   "number": "39",
+   "name": "Daryl Wong",
+   "seconds": 2700,
+   "ga": 3,
+   "shots": 23,
+   "saves": 20
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 5,
+   "away": 7
+  },
+  {
+   "label": "2",
+   "home": 10,
+   "away": 8
+  },
+  {
+   "label": "3",
+   "home": 8,
+   "away": 8
+  }
+ ],
+ "start": "2026-10-03T13:15:00",
+ "gameNumber": 10,
+ "playoff": false,
+ "fetchedAt": "2026-10-04T16:39:09.663Z"
+}

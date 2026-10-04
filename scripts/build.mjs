@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { config } from './config.mjs';
 import { encryptJson } from './crypto.mjs';
-import { tournament } from './tournament.config.mjs';
+import { events as eventsConfig, externalLeagues } from './events.config.mjs';
 
 const DATA = path.resolve('data');
 const OUT = path.resolve('site/data');
@@ -78,6 +78,41 @@ function addResult(t, s, gf, ga, oppId, gameId, date) {
   t[r.toLowerCase()]++; t[s][r.toLowerCase()]++;
   t.pts += r === 'W' ? 2 : r === 'T' ? 1 : 0;
   t.results.push({ gameId, date, r, gf, ga, opp: oppId, home: s === 'home' });
+}
+
+// Check one team's goalie lines against the rest of the sheet (shared by league and event games).
+function checkGoalieSheet(g, s, gs, oppName) {
+  const o = other(s), oppScore = g[o].score;
+  const gaSum = gs.reduce((n, x) => n + x.ga, 0), saSum = gs.reduce((n, x) => n + x.shots, 0), secSum = gs.reduce((n, x) => n + x.seconds, 0);
+  const shotsTable = g.shotsByPeriod?.length ? g.shotsByPeriod.reduce((n, p) => n + p[o], 0) : null;
+  const regulation = g.periods.length <= 3;
+  const notes = []; // { text, kind: 'excluded' | 'assumed' | 'flag' }
+
+  const gaOk = gaSum === oppScore;
+  if (!gaOk) notes.push({ kind: 'excluded', text: `Goalie goals-against add up to ${gaSum}, but ${oppName} scored ${oppScore} — left out of save % and GAA` });
+  let svOk = gaOk;
+  if (gaOk) {
+    if (saSum < gaSum) { svOk = false; notes.push({ kind: 'excluded', text: `Fewer shots (${saSum}) than goals (${gaSum}) recorded — left out of save %` }); }
+    else if (shotsTable != null && Math.abs(saSum - shotsTable) > Math.max(3, 0.25 * shotsTable)) { svOk = false; notes.push({ kind: 'excluded', text: `Goalie shots (${saSum}) don't match the sheet's shots table (${shotsTable}) — left out of save %` }); }
+    else if (saSum === 0 && shotsTable == null) { svOk = false; notes.push({ kind: 'excluded', text: 'No shots recorded for this game — left out of save %' }); }
+  }
+  // minutes: blank for one goalie -> assume the full game; blank for two -> split unknown
+  let secs = gs.map((x) => x.seconds), minutesOk = true;
+  if (secSum === 0) {
+    if (gs.length === 1) { secs = [regSec]; notes.push({ kind: 'assumed', text: 'Minutes left blank — assumed the full game' }); }
+    else { minutesOk = false; notes.push({ kind: 'excluded', text: `Minutes left blank for ${gs.length} goalies — split unknown, left out of GAA and no win/loss credited` }); }
+  } else if (regulation && secSum - regSec > 60) {
+    // too many minutes: usually a mid-game change entered loosely — counted as entered (owner call)
+    notes.push({ kind: 'assumed', text: `Minutes add up to ${Math.round(secSum / 60)} in a ${regSec / 60}-minute game (likely a mid-game change) — counted as entered` });
+  } else if (regulation && regSec - secSum > 60) {
+    minutesOk = false;
+    notes.push({ kind: 'excluded', text: `Minutes add up to only ${Math.round(secSum / 60)} in a ${regSec / 60}-minute game — left out of GAA` });
+  }
+  // decision: most minutes, only when minutes can be trusted to rank goalies (a single goalie always can)
+  const canDecide = gs.length === 1 || secSum > 0;
+  const starterIdx = canDecide ? secs.indexOf(Math.max(...secs)) : -1;
+  const result = g[s].score > oppScore ? 'W' : g[s].score < oppScore ? 'L' : 'T';
+  return { notes, gaOk, svOk, minutesOk, secs, starterIdx, result, oppScore, o };
 }
 
 const gameSummaries = [];
@@ -175,36 +210,8 @@ for (const g of games) {
   for (const s of ['home', 'away']) {
     const gs = g.goalies.filter((x) => x.side === s && x.playerId);
     if (!gs.length) continue;
-    const t = side[s], o = other(s), oppName = side[o].name, oppScore = g[o].score;
-    const gaSum = gs.reduce((n, x) => n + x.ga, 0), saSum = gs.reduce((n, x) => n + x.shots, 0), secSum = gs.reduce((n, x) => n + x.seconds, 0);
-    const shotsTable = g.shotsByPeriod?.length ? g.shotsByPeriod.reduce((n, p) => n + p[o], 0) : null;
-    const regulation = g.periods.length <= 3;
-    const notes = []; // { text, kind: 'excluded' | 'assumed' | 'flag' }
-
-    const gaOk = gaSum === oppScore;
-    if (!gaOk) notes.push({ kind: 'excluded', text: `Goalie goals-against add up to ${gaSum}, but ${oppName} scored ${oppScore} — left out of save % and GAA` });
-    let svOk = gaOk;
-    if (gaOk) {
-      if (saSum < gaSum) { svOk = false; notes.push({ kind: 'excluded', text: `Fewer shots (${saSum}) than goals (${gaSum}) recorded — left out of save %` }); }
-      else if (shotsTable != null && Math.abs(saSum - shotsTable) > Math.max(3, 0.25 * shotsTable)) { svOk = false; notes.push({ kind: 'excluded', text: `Goalie shots (${saSum}) don't match the sheet's shots table (${shotsTable}) — left out of save %` }); }
-      else if (saSum === 0 && shotsTable == null) { svOk = false; notes.push({ kind: 'excluded', text: 'No shots recorded for this game — left out of save %' }); }
-    }
-    // minutes: blank for one goalie -> assume the full game; blank for two -> split unknown
-    let secs = gs.map((x) => x.seconds), minutesOk = true;
-    if (secSum === 0) {
-      if (gs.length === 1) { secs = [regSec]; notes.push({ kind: 'assumed', text: 'Minutes left blank — assumed the full game' }); }
-      else { minutesOk = false; notes.push({ kind: 'excluded', text: `Minutes left blank for ${gs.length} goalies — split unknown, left out of GAA and no win/loss credited` }); }
-    } else if (regulation && secSum - regSec > 60) {
-      // too many minutes: usually a mid-game change entered loosely — counted as entered (owner call)
-      notes.push({ kind: 'assumed', text: `Minutes add up to ${Math.round(secSum / 60)} in a ${regSec / 60}-minute game (likely a mid-game change) — counted as entered` });
-    } else if (regulation && regSec - secSum > 60) {
-      minutesOk = false;
-      notes.push({ kind: 'excluded', text: `Minutes add up to only ${Math.round(secSum / 60)} in a ${regSec / 60}-minute game — left out of GAA` });
-    }
-    // decision: most minutes, only when minutes can be trusted to rank goalies (a single goalie always can)
-    const canDecide = gs.length === 1 || secSum > 0;
-    const starterIdx = canDecide ? secs.indexOf(Math.max(...secs)) : -1;
-    const result = g[s].score > oppScore ? 'W' : g[s].score < oppScore ? 'L' : 'T';
+    const t = side[s], oppName = side[other(s)].name;
+    const { notes, gaOk, svOk, minutesOk, secs, starterIdx, result, oppScore, o } = checkGoalieSheet(g, s, gs, oppName);
     goalieNotes[t.id] = notes.map((n) => n.text);
 
     gs.forEach((row, i) => {
@@ -318,10 +325,96 @@ const scheduleOut = schedule.map((s) => ({
 
 // Published data policy: the site is password-protected (stats.enc.json), so individual penalty
 // minutes and goalie stats are included (owner decision 2026-09-28).
-// One-off tournament area: opponent-league data saved by scripts/tournament.mjs (optional).
-const tournamentSources = [];
-for (const src of tournament.sources) {
-  try { tournamentSources.push(JSON.parse(await fs.readFile(path.join(DATA, 'tournament', `${src.id}.json`), 'utf8'))); } catch { /* not fetched yet */ }
+// ---------------------------------------------------------------- events (non-season tournaments)
+// Event games are kept separate from the league: own teams, standings and player totals. They never
+// touch league standings. Team/player ids are the event site's; linking them to HSL ids is phase 2.
+async function readDirJson(dir) {
+  try { return await Promise.all((await fs.readdir(dir)).filter((f) => f.endsWith('.json')).map(async (f) => JSON.parse(await fs.readFile(path.join(dir, f), 'utf8')))); } catch { return []; }
+}
+const leaguesOut = [];
+for (const lg of externalLeagues) { const d = await readJson(path.join(DATA, 'leagues', `${lg.id}.json`)); if (d) leaguesOut.push(d); }
+async function readJson(f) { try { return JSON.parse(await fs.readFile(f, 'utf8')); } catch { return null; } }
+
+const players_hsl = players; // event loop shadows "players" with its own map
+const eventsOut = [];
+for (const ev of eventsConfig) {
+  const base = { id: ev.id, name: ev.name, season: ev.season, dates: ev.dates, datesApprox: !!ev.datesApprox, platform: ev.platform, leagues: ev.leagues || [], focus: ev.focus || [], url: ev.base || null, division: ev.divisionName || null };
+  const sched = (await readJson(path.join(DATA, 'events', ev.id, 'schedule.json'))) || [];
+  const sheets = new Map((await readDirJson(path.join(DATA, 'events', ev.id, 'games'))).map((g) => [g.id, g]));
+  if (!sched.length) { eventsOut.push({ ...base, teams: [], games: [], players: [], schedule: [] }); continue; }
+
+  const teams = new Map(), byName = new Map(), players = new Map();
+  const evTeam = (id, name, logo) => {
+    if (!teams.has(id)) teams.set(id, { id, name, logo: logo || null, gp: 0, w: 0, l: 0, t: 0, pts: 0, gf: 0, ga: 0, rr: { gp: 0, w: 0, l: 0, t: 0, pts: 0, gf: 0, ga: 0 }, results: [], boxMissing: 0 });
+    const t = teams.get(id); if (logo && !t.logo) t.logo = logo; byName.set(name, id); return t;
+  };
+  const games = [];
+  for (const g of [...sheets.values()].sort((a, b) => a.start.localeCompare(b.start))) {
+    const side = { home: evTeam(`${ev.id}:${g.home.teamId}`, g.home.name, g.home.logo), away: evTeam(`${ev.id}:${g.away.teamId}`, g.away.name, g.away.logo) };
+    const date = g.start.slice(0, 10), playoff = !!g.playoff;
+    for (const s of ['home', 'away']) {
+      const t = side[s], gf = g[s].score, ga = g[other(s)].score, r = gf > ga ? 'W' : gf < ga ? 'L' : 'T';
+      for (const bucket of playoff ? [t] : [t, t.rr]) { bucket.gp++; bucket.gf += gf; bucket.ga += ga; bucket[r.toLowerCase()]++; bucket.pts += r === 'W' ? 2 : r === 'T' ? 1 : 0; }
+      t.results.push({ gameId: g.id, date, r, gf, ga, opp: side[other(s)].id, home: s === 'home', playoff });
+      if (!g.skaters.some((x) => x.side === s)) t.boxMissing++;
+    }
+    const map = new Map();
+    const P = (id) => (id ? `${ev.id}:${id}` : null);
+    for (const x of g.skaters) { map.set(`${x.side}#${x.number}`, P(x.playerId)); map.set(`${x.side}@${(x.name || '').toLowerCase()}`, P(x.playerId)); }
+    const pid = (s, who) => (who?.number && map.get(`${s}#${who.number}`)) || (who?.name && map.get(`${s}@${who.name.toLowerCase()}`)) || null;
+    for (const x of g.skaters) {
+      if (!x.playerId) continue;
+      const t = side[x.side], xid = P(x.playerId);
+      const p = players.get(xid) || players.set(xid, { id: xid, name: x.name, number: x.number, teamId: t.id, gp: 0, g: 0, a: 0, pts: 0, pim: 0 }).get(xid);
+      p.gp++; p.g += x.g; p.a += x.a; p.pts += x.g + x.a; p.pim += x.pim;
+    }
+    const goalieNotes = {};
+    for (const s of ['home', 'away']) {
+      const gs = g.goalies.filter((x) => x.side === s && x.playerId);
+      if (gs.length) goalieNotes[side[s].id] = checkGoalieSheet(g, s, gs, side[other(s)].name).notes.map((n) => n.text);
+    }
+    games.push({
+      id: g.id, eventId: ev.id, playoff, gameNumber: g.gameNumber, date: g.start, rink: g.rink,
+      home: { id: side.home.id, score: g.home.score }, away: { id: side.away.id, score: g.away.score },
+      periods: g.periods, shotsByPeriod: g.shotsByPeriod || [],
+      events: g.events.map((e) => ({ ...e, teamId: side[e.side].id, playerId: e.type === 'goal' ? pid(e.side, e.scorer) : pid(e.side, e.player), assists: e.assists?.map((a) => ({ ...a, playerId: pid(e.side, a) })) })),
+      skaters: g.skaters.map(({ side: s, playerId, number, name, g: goals, a, pim }) => ({ teamId: side[s].id, playerId: P(playerId), number, name, g: goals, a, pim })),
+      goalies: g.goalies.map(({ side: s, playerId, number, name, seconds, ga, shots, saves }) => ({ teamId: side[s].id, playerId: P(playerId), number, name, seconds, ga, shots, saves })),
+      goalieNotes, warnings: g.warnings,
+    });
+  }
+  // schedule rows: real team names from the sheets where the calendar still shows placeholders
+  const schedule = sched.map((s) => {
+    const sheet = sheets.get(s.id);
+    const home = sheet ? `${ev.id}:${sheet.home.teamId}` : byName.has(s.home) ? byName.get(s.home) : s.home;
+    const away = sheet ? `${ev.id}:${sheet.away.teamId}` : byName.has(s.away) ? byName.get(s.away) : s.away;
+    return { id: s.id, gameNumber: s.gameNumber, start: s.start, end: s.end, location: s.location, playoff: !!s.playoff, home, away, final: s.final, homeScore: s.homeScore, awayScore: s.awayScore, hasDetail: !!sheet };
+  });
+  // Which home-league team is this? Roster overlap (names) is decisive; name matching is the fallback
+  // for sheets without box scores. HSL teams by id, external-league teams by their ids.
+  const nm = (x) => String(x || '').toLowerCase().replace(/[^a-z]/g, '');
+  const teamKey = (x) => String(x || '').toLowerCase().replace(/^\d{4}\s+/, '').replace(/\b(hc|hockey|academy|club)\b/g, '').replace(/[^a-z]/g, '');
+  const candidates = [
+    ...standings.map((t) => ({ kind: 'hsl', id: t.id, name: t.name, roster: new Set([...players_hsl.values()].filter((p) => p.teamId === t.id).map((p) => nm(p.name))) })),
+    ...leaguesOut.flatMap((lg) => lg.teams.map((t) => ({ kind: lg.source.id, id: t.id, name: t.name, roster: new Set(t.roster.map((p) => nm(p.name))) }))),
+  ];
+  for (const t of teams.values()) {
+    const names = [...players.values()].filter((p) => p.teamId === t.id).map((p) => nm(p.name));
+    let best = null;
+    if (names.length >= 4) for (const c of candidates) { const hit = names.filter((n) => c.roster.has(n)).length; if (hit / names.length >= 0.6 && (!best || hit > best.hit)) best = { ...c, hit, method: 'roster' }; }
+    if (!best) { const byKey = candidates.filter((c) => teamKey(c.name) === teamKey(t.name)); if (byKey.length === 1) best = { ...byKey[0], method: 'name' }; }
+    t.link = best ? { kind: best.kind, id: best.id, name: best.name, method: best.method, matched: best.hit ?? null, of: names.length } : null;
+  }
+  const rr = [...teams.values()].sort((a, b) => b.rr.pts - a.rr.pts || b.rr.w - a.rr.w || (b.rr.gf - b.rr.ga) - (a.rr.gf - a.rr.ga) || b.rr.gf - a.rr.gf || a.name.localeCompare(b.name));
+  rr.forEach((t, i) => (t.seed = i + 1));
+  const lastFinal = schedule.filter((s) => s.final).at(-1), allDone = schedule.length && schedule.every((s) => s.final);
+  const champGame = allDone ? schedule.filter((s) => s.playoff).at(-1) : null;
+  eventsOut.push({
+    ...base, rink: [...new Set(sched.map((s) => s.location).filter(Boolean))].join(' · '),
+    teams: rr, games, schedule, players: [...players.values()],
+    champion: champGame ? (champGame.homeScore > champGame.awayScore ? champGame.home : champGame.away) : null,
+    lastFinal: lastFinal?.start || null,
+  });
 }
 
 const out = {
@@ -342,7 +435,8 @@ const out = {
   goalies: [...goalies.values()],
   games: gameSummaries,
   schedule: scheduleOut,
-  tournament: tournamentSources.length ? { key: tournament.key, name: tournament.name, approxDate: tournament.approxDate, focus: tournament.focus, sources: tournamentSources } : null,
+  events: eventsOut,
+  externalLeagues: leaguesOut,
   dataWarnings,
 };
 

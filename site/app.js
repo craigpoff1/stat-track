@@ -55,7 +55,7 @@
   // Teams in the schedule we have no game sheet for yet are plain names; give them a stub.
   const team = (id) => teamById.get(String(id)) || { id: String(id), name: String(id), short: String(id), code: String(id).slice(0, 3).toUpperCase(), logo: null, stub: true };
   const logo = (t, cls = 'logo') => `<span class="${cls}" data-code="${esc(t.code)}">${t.logo ? `<img src="${esc(t.logo)}" alt="" loading="lazy" onerror="this.remove()">` : ''}</span>`;
-  const teamLink = (t, label = t.name) => (t.stub ? esc(label) : `<a class="lnk" href="#/${t.cup ? 'cup' : 'team'}/${t.id}">${esc(label)}</a>`);
+  const teamLink = (t, label = t.name) => (t.stub || (t.ext || t.eventId) && !t.href ? esc(label) : `<a class="lnk" href="${t.href || `#/team/${t.id}`}">${esc(label)}</a>`);
   // Tooltip attribute. The browser un-escapes attribute values and the tooltip sets innerHTML,
   // so the text is escaped once for the tooltip and once more for the attribute.
   const tip = (title, body) => `data-tip="${esc(`<b>${esc(title)}</b>${esc(body).split('\n').join('<br>')}`)}"`;
@@ -706,7 +706,8 @@
   function leaderRows(players, highlight) {
     return players.map((p) => {
       const t = team(p.teamId);
-      return `<a class="ld ${highlight(p) ? 'me' : ''}" href="#/player/${p.id}"><span class="n">${p.rank}</span>${logo(t)}<span class="nm"><b>${esc(p.name)}</b><span>#${esc(p.number)} · ${esc(t.short)}</span></span><span class="ga">${p.g}G ${p.a}A</span><span class="p">${p.pts}</span></a>`;
+      const tag = playerById.has(p.id) ? 'a' : 'div';
+      return `<${tag} class="ld ${highlight(p) ? 'me' : ''}" ${tag === 'a' ? `href="#/player/${p.id}"` : ''}><span class="n">${p.rank}</span>${logo(t)}<span class="nm"><b>${esc(p.name)}</b><span>#${esc(p.number)} · ${esc(t.short)}</span></span><span class="ga">${p.g}G ${p.a}A</span><span class="p">${p.pts}</span></${tag}>`;
     }).join('');
   }
 
@@ -1069,7 +1070,7 @@
     });
     return `
       <section class="panel" data-reveal style="margin-bottom:18px">
-        <div class="ph"><h2>Game summary</h2><span class="meta">${g.gameNumber ? `Game ${esc(g.gameNumber)} · ` : ''}${esc(g.rink)}</span></div>
+        <div class="ph"><h2 class="${g.eventName ? 'gold' : ''}">${g.eventName ? `${esc(g.eventName)}${g.playoff ? ' · playoff' : ''}` : 'Game summary'}</h2><span class="meta">${g.eventName ? `<a class="lnk" href="#/tournaments/${esc(g.eventId)}">Tournament →</a> · ` : ''}${g.gameNumber ? `Game ${esc(g.gameNumber)} · ` : ''}${esc(g.rink)}</span></div>
         <div class="bug">
           <div class="side a ${tie || !hw ? 'win' : 'lose'}">${logo(a)}<div><div class="nm">${teamLink(a, a.short)}</div><div class="rc">${rec(a)}AWAY</div></div><span class="sc" data-count="${g.away.score}">0</span></div>
           <div class="mid"><b>FINAL</b>${g.comeback ? `<span class="chip mo" style="margin:0 0 6px">${esc(team(g[g.comeback].id).short)} comeback</span>` : ''}${dt(g.date, { weekday: 'short', month: 'short', day: 'numeric' })}<span style="margin-top:2px">${tm(g.date)}</span></div>
@@ -1415,156 +1416,269 @@
       </div><div class="note">From the ${d.sg.length} game sheet${d.sg.length === 1 ? '' : 's'} that recorded shots. ${We === 'They' ? 'High shooting % = they finish their chances; high shots = they generate volume.' : ''}</div>`)}</div>`;
   }
 
-  // ------------------------------------------------------------ Challenge Cup (one-off tournament area)
-  // Opponents come from other leagues (scripts/tournament.mjs). HPL publishes scores and rosters only,
-  // so everything here is team-level and ranked within the opponent's own league.
-  let CUP = null;
-  function prepareCup() {
-    const T = S.tournament;
-    if (!T || !T.sources?.length) return;
-    const teams = [], games = [];
-    for (const src of T.sources) {
-      for (const g of src.games) games.push({ ...g, source: src.source, location: g.rink, hasDetail: false });
-      for (const t of src.teams) {
-        const short = t.name.replace(/^\d{4}\s+/, '').replace(/\s+(HC|Hockey Club|Hockey)$/i, '');
-        const ct = { ...t, short, code: short.replace(/[^A-Za-z]/g, '').slice(0, 3).toUpperCase(), cup: true, source: src.source,
-          gp: 0, w: 0, l: 0, t: 0, pts: 0, gf: 0, ga: 0, so: 0, home: { w: 0, l: 0, t: 0 }, away: { w: 0, l: 0, t: 0 }, results: [] };
-        teams.push(ct);
-        teamById.set(ct.id, ct); // lets team()/logo()/gameCards resolve them; links go to #/cup/<id>
-      }
-    }
-    for (const g of games.filter((x) => x.final)) {
-      for (const side of ['home', 'away']) {
-        const t = teamById.get(g[side]), oid = g[side === 'home' ? 'away' : 'home'];
-        const gf = g[side === 'home' ? 'homeScore' : 'awayScore'], ga = g[side === 'home' ? 'awayScore' : 'homeScore'];
-        const r = gf > ga ? 'W' : gf < ga ? 'L' : 'T';
-        t.gp++; t.gf += gf; t.ga += ga; t[r.toLowerCase()]++; t[side][r.toLowerCase()]++; t.pts += r === 'W' ? 2 : r === 'T' ? 1 : 0;
-        if (ga === 0) t.so++;
-        t.results.push({ gameId: g.id, date: g.start, r, gf, ga, opp: oid, home: side === 'home' });
-      }
-    }
-    for (const t of teams) {
-      t.diff = t.gf - t.ga;
-      t.gfPerGame = t.gp ? t.gf / t.gp : 0; t.gaPerGame = t.gp ? t.ga / t.gp : 0;
-      t.results.sort((a, b) => a.date.localeCompare(b.date));
-      t.last4 = t.results.slice(-4).map((r) => r.r).join('');
-      const last = t.results.at(-1);
-      if (last) { let n = 0; for (let i = t.results.length - 1; i >= 0 && t.results[i].r === last.r; i--) n++; t.streak = `${last.r}${n}`; }
-    }
-    teams.sort((a, b) => b.pts - a.pts || b.w - a.w || b.diff - a.diff || b.gf - a.gf || a.name.localeCompare(b.name));
-    teams.forEach((t, i) => (t.rank = i + 1));
-    const played = teams.filter((t) => t.gp);
-    CUP = {
-      name: T.name, approxDate: T.approxDate, teams, games,
-      focus: T.focus.filter((id) => teamById.has(id)),
-      sources: T.sources.map((s) => s.source),
-      avg: { gf: played.reduce((n, t) => n + t.gfPerGame, 0) / (played.length || 1), ga: played.reduce((n, t) => n + t.gaPerGame, 0) / (played.length || 1) },
-    };
+  // ------------------------------------------------------------ Tournaments (non-season events)
+  // Events have their own teams, games and player totals (never in league standings). External
+  // leagues (e.g. HPL) are opponent background data for scouting, scores/rosters only.
+  let EV = null; // { events: [...], byId, ext: { teams, games, avg } }
+  const shortName = (name) => name.replace(/^\d{4}\s+/, '').replace(/\s+(HC|Hockey Club|Hockey Academy|Hockey)$/i, '');
+  const codeOf = (short) => short.replace(/[^A-Za-z]/g, '').slice(0, 3).toUpperCase();
+  function blankRec() { return { gp: 0, w: 0, l: 0, t: 0, pts: 0, gf: 0, ga: 0, so: 0, home: { w: 0, l: 0, t: 0 }, away: { w: 0, l: 0, t: 0 }, results: [] }; }
+  function finishRec(t) {
+    t.diff = t.gf - t.ga; t.gfPerGame = t.gp ? t.gf / t.gp : 0; t.gaPerGame = t.gp ? t.ga / t.gp : 0;
+    t.results.sort((a, b) => a.date.localeCompare(b.date));
+    t.last4 = t.results.slice(-4).map((r) => r.r).join('');
+    const last = t.results.at(-1);
+    if (last) { let n = 0; for (let i = t.results.length - 1; i >= 0 && t.results[i].r === last.r; i--) n++; t.streak = `${last.r}${n}`; }
   }
+  function addResult2(t, s, gf, ga, opp, gameId, date, extra = {}) {
+    const r = gf > ga ? 'W' : gf < ga ? 'L' : 'T';
+    t.gp++; t.gf += gf; t.ga += ga; t[r.toLowerCase()]++; t[s][r.toLowerCase()]++; t.pts += r === 'W' ? 2 : r === 'T' ? 1 : 0;
+    if (ga === 0) t.so++;
+    t.results.push({ gameId, date, r, gf, ga, opp, home: s === 'home', ...extra });
+  }
+  function prepareEvents() {
+    const events = (S.events || []).map((e) => ({ ...e }));
+    if (!events.length) return;
+    // external leagues → teams with computed records (scores only)
+    const ext = { teams: [], games: [] };
+    for (const lg of S.externalLeagues || []) {
+      for (const g of lg.games) ext.games.push({ ...g, location: g.rink, hasDetail: false, source: lg.source });
+      for (const t0 of lg.teams) {
+        const short = shortName(t0.name);
+        const t = { ...t0, ...blankRec(), short, code: codeOf(short), ext: true, source: lg.source };
+        ext.teams.push(t); teamById.set(t.id, t);
+      }
+    }
+    for (const g of ext.games.filter((x) => x.final)) for (const s of ['home', 'away']) {
+      const t = teamById.get(g[s]); if (!t) continue;
+      addResult2(t, s, s === 'home' ? g.homeScore : g.awayScore, s === 'home' ? g.awayScore : g.homeScore, g[s === 'home' ? 'away' : 'home'], g.id, g.start);
+    }
+    ext.teams.forEach(finishRec);
+    const byLeague = {};
+    for (const t of ext.teams) (byLeague[t.source.id] ||= []).push(t);
+    for (const list of Object.values(byLeague)) {
+      list.sort((a, b) => b.pts - a.pts || b.w - a.w || b.diff - a.diff || b.gf - a.gf);
+      list.forEach((t, i) => (t.rank = i + 1));
+    }
+    const played = ext.teams.filter((t) => t.gp);
+    ext.avg = { gf: played.reduce((n, t) => n + t.gfPerGame, 0) / (played.length || 1), ga: played.reduce((n, t) => n + t.gaPerGame, 0) / (played.length || 1) };
 
-  // team-level keys: only fire on clear signals, always with evidence
-  function cupKeys(t) {
+    // events → register teams + game sheets (so game pages, team(), logos all work)
+    const today = new Date().toISOString().slice(0, 10);
+    for (const e of events) {
+      e.status = e.dates && today < e.dates[0] ? 'upcoming' : e.dates && today <= e.dates[1] ? 'live' : e.schedule?.length && e.schedule.every((s) => s.final) ? 'final' : e.games?.length ? 'live' : 'upcoming';
+      for (const t of e.teams || []) {
+        t.short = shortName(t.name); t.code = codeOf(t.short); t.eventId = e.id; t.href = `#/tournaments/${e.id}/${t.id}`;
+        t.home = { w: 0, l: 0, t: 0 }; t.away = { w: 0, l: 0, t: 0 }; // event teams: home/away not tracked
+        teamById.set(t.id, t);
+      }
+      for (const p of e.players || []) p.eventId = e.id;
+      for (const g of e.games || []) {
+        const PER = (S.meta.regulationMinutes || 45) / 3 * 60;
+        const clock = (period, time) => { const pn = /^\d+$/.test(period) ? Number(period) : 4; const [m, s2] = String(time).split(':').map(Number); return (pn - 1) * PER + (PER - Math.max(0, Math.min(PER, (m || 0) * 60 + Math.min(59, s2 || 0)))); };
+        g.ev = g.events.map((x, i) => ({ ...x, i, t: clock(x.period, x.time), badClock: !/^\d+:[0-5]\d$/.test(String(x.time || '')), regulation: /^[123]$/.test(String(x.period)) })).sort((a, b) => a.t - b.t || a.i - b.i);
+        let h = 0, a = 0; const trailed = { home: false, away: false };
+        for (const x of g.ev) { if (x.type !== 'goal') continue; const before = x.side === 'home' ? h - a : a - h, first = h + a === 0; x.side === 'home' ? h++ : a++; x.score = [h, a]; x.moment = first ? 'Opening goal' : before === -1 ? 'Tying goal' : before === 0 ? 'Go-ahead goal' : null; if (h < a) trailed.home = true; if (a < h) trailed.away = true; }
+        const winner = g.home.score > g.away.score ? 'home' : g.away.score > g.home.score ? 'away' : null;
+        g.comeback = winner && trailed[winner] ? winner : null;
+        g.weekend = weekKey(g.date);
+        g.eventName = e.name;
+        gameById.set(g.id, g);
+      }
+    }
+    // external teams link to the first event that scouts their league
+    for (const t of ext.teams) { const e = events.find((x) => (x.leagues || []).includes(t.source.id)); t.href = e ? `#/tournaments/${e.id}/${t.id}` : null; }
+    EV = { events, byId: new Map(events.map((e) => [e.id, e])), ext };
+  }
+  // the same real team across sources: event teams carry .link to their HSL / external-league team
+  const appearances = (teamId) => (EV?.events || []).flatMap((e) => (e.teams || []).filter((t) => t.link?.id === teamId).map((t) => ({ e, t })));
+
+  function extKeys(t) {
     const keys = [], add = (score, title, evidence) => keys.push({ score, title, evidence });
-    const n = t.gp, lg = t.source.league;
-    if (n < 2) return keys;
-    const rate = (x) => x.toFixed(1);
-    if (t.gfPerGame >= CUP.avg.gf * 1.25) add(0.6 + t.gfPerGame / 40, 'High-scoring team', `${rate(t.gfPerGame)} goals per game (${lg} average ${rate(CUP.avg.gf)}).`);
-    if (t.gfPerGame <= CUP.avg.gf * 0.7) add(0.5, 'Scores sparingly', `${rate(t.gfPerGame)} goals per game (${lg} average ${rate(CUP.avg.gf)}).`);
-    if (t.gaPerGame <= CUP.avg.ga * 0.7) add(0.6 + (CUP.avg.ga - t.gaPerGame) / 20, 'Tight defensively', `${rate(t.gaPerGame)} goals against per game (${lg} average ${rate(CUP.avg.ga)})${t.so ? `, ${t.so} shutout${t.so > 1 ? 's' : ''}` : ''}.`);
-    if (t.gaPerGame >= CUP.avg.ga * 1.3) add(0.55, 'Gives up goals', `${rate(t.gaPerGame)} goals against per game (${lg} average ${rate(CUP.avg.ga)}).`);
-    if (t.w === n) add(0.7, `Unbeaten in ${lg}`, `${t.w}-0-0, outscoring opponents ${t.gf}–${t.ga}.`);
-    if (t.l === n) add(0.5, `Still looking for a first ${lg} win`, `0-${t.l}, outscored ${t.gf}–${t.ga}.`);
-    const close = t.results.filter((r) => Math.abs(r.gf - r.ga) <= 1);
-    if (close.length >= 2) { const w = close.filter((r) => r.r === 'W').length; add(0.5, w === close.length ? 'Wins the close ones' : w === 0 ? 'Loses the close ones' : 'Plenty of close games', `${w}-${close.length - w} in one-goal games.`); }
-    const big = t.results.filter((r) => r.gf - r.ga >= 5).length;
-    if (big >= 2) add(0.45, 'Can run up the score', `${big} wins by 5 or more.`);
-    if (t.streak && parseInt(t.streak.slice(1), 10) >= 3) add(0.45, t.streak[0] === 'W' ? `On a ${t.streak.slice(1)}-game win streak` : `${t.streak.slice(1)} straight losses`, `Most recent results: ${t.last4.split('').join(' ')}.`);
-    const goalies = t.roster.filter((p) => p.goalie);
-    if (!goalies.length) add(0.3, 'No goalie listed on the roster', 'Their roster on the league site lists skaters only — goalie may rotate.');
+    const n = t.gp, lg = t.source.league, avg = EV.ext.avg, rate = (x) => x.toFixed(1);
+    if (n >= 2) {
+      if (t.gfPerGame >= avg.gf * 1.25) add(0.6 + t.gfPerGame / 40, 'High-scoring team', `${rate(t.gfPerGame)} goals per game (${lg} average ${rate(avg.gf)}).`);
+      if (t.gfPerGame <= avg.gf * 0.7) add(0.5, 'Scores sparingly', `${rate(t.gfPerGame)} goals per game (${lg} average ${rate(avg.gf)}).`);
+      if (t.gaPerGame <= avg.ga * 0.7) add(0.6 + (avg.ga - t.gaPerGame) / 20, 'Tight defensively', `${rate(t.gaPerGame)} goals against per game (${lg} average ${rate(avg.ga)})${t.so ? `, ${t.so} shutout${t.so > 1 ? 's' : ''}` : ''}.`);
+      if (t.gaPerGame >= avg.ga * 1.3) add(0.55, 'Gives up goals', `${rate(t.gaPerGame)} goals against per game (${lg} average ${rate(avg.ga)}).`);
+      if (t.w === n) add(0.7, `Unbeaten in ${lg}`, `${t.w}-0-0, outscoring opponents ${t.gf}–${t.ga}.`);
+      if (t.l === n) add(0.5, `Still looking for a first ${lg} win`, `0-${t.l}, outscored ${t.gf}–${t.ga}.`);
+      const close = t.results.filter((r) => Math.abs(r.gf - r.ga) <= 1);
+      if (close.length >= 2) { const w = close.filter((r) => r.r === 'W').length; add(0.5, w === close.length ? 'Wins the close ones' : w === 0 ? 'Loses the close ones' : 'Plenty of close games', `${w}-${close.length - w} in one-goal games.`); }
+      if (t.streak && parseInt(t.streak.slice(1), 10) >= 3) add(0.45, t.streak[0] === 'W' ? `On a ${t.streak.slice(1)}-game win streak` : `${t.streak.slice(1)} straight losses`, `Most recent results: ${t.last4.split('').join(' ')}.`);
+    }
+    // tournament evidence vs HSL teams is the only cross-league signal we have
+    for (const { e, t: et } of appearances(t.id)) {
+      const vsHsl = et.results.filter((r) => teamById.get(r.opp)?.link?.kind === 'hsl');
+      if (vsHsl.length) { const w = vsHsl.filter((r) => r.r === 'W').length, l = vsHsl.filter((r) => r.r === 'L').length; add(0.65, `${w}-${l} against HSL teams at the ${e.name}`, vsHsl.map((r) => `${r.r} ${r.gf}–${r.ga} vs ${teamById.get(r.opp).short}${r.playoff ? ' (playoff)' : ''}`).join(' · ') + '.'); }
+    }
+    const goalies = (t.roster || []).filter((p) => p.goalie);
+    if (!goalies.length) add(0.3, 'No goalie listed on their roster', 'The league roster lists skaters only — their goalie may rotate.');
     else if (goalies.length >= 2) add(0.3, `${goalies.length} goalies on the roster`, goalies.map((p) => `#${p.number} ${p.name}`).join(', ') + '.');
     return keys.sort((a, b) => b.score - a.score).slice(0, 5);
   }
 
-  function viewCup(id) {
-    if (!CUP) return `<div class="ptitle"><div><div class="k">Challenge Cup</div><h1>No tournament data yet</h1></div></div>`;
-    const isFocus = (tid) => CUP.focus.includes(tid);
-    const src = CUP.sources[0];
-    const chips = [...CUP.focus.map((f) => teamById.get(f)), ...CUP.teams.filter((t) => !isFocus(t.id))]
-      .map((t) => `<a class="wkchip ${t.id === id ? 'on' : ''} ${isFocus(t.id) ? '' : 'up'}" href="#/cup/${t.id}">${esc(t.short)}</a>`).join('');
-    const head = (title, kicker, sub) => `<div class="ptitle"><div><div class="k">${kicker}</div><h1 class="sc-h1">${title}</h1><div class="s">${sub}</div></div>
-        <a class="btn" href="#/cup">Overview</a></div>
-      <div class="wkbar"><a class="wkchip ${!id ? 'on' : ''}" href="#/cup">All</a>${chips}</div>`;
-    const caveat = `<div class="dnotes"><b>About this data:</b> ${esc(src.league)} (${esc(src.region)}) publishes schedules, final scores and rosters only — no goal scorers, shots, penalties or goalie stats — so these reports are team-level. Ranks and averages are within the ${esc(src.division)}; how that league compares with HSL can't be measured from the data.</div>`;
-    const recS = (t) => `${t.w}-${t.l}-${t.t}`;
-    const fmt1 = (x) => x.toFixed(1);
+  const statusChip = (e) => `<span class="evst ${e.status}">${e.status === 'live' ? 'Live' : e.status === 'final' ? 'Final' : 'Upcoming'}</span>`;
+  const evDates = (e) => (e.dates ? (e.dates[0] === e.dates[1] ? dt(e.dates[0], { month: 'short', day: 'numeric' }) : `${dt(e.dates[0], { month: 'short', day: 'numeric' })} – ${dt(e.dates[1], { month: 'short', day: 'numeric' })}`) + (e.datesApprox ? ' (approx.)' : '') : 'Dates TBC');
+  const linkTag = (t) => (t.link ? `<span class="lgtag ${t.link.kind}" title="Matched to ${esc(t.link.name)} by ${t.link.method}">${t.link.kind.toUpperCase()}</span>` : '');
+  const homeLinkOf = (t) => (t.link ? (t.link.kind === 'hsl' ? `#/team/${t.link.id}` : teamById.get(t.link.id)?.href) : null);
 
-    if (!id) {
-      after(() => {
-        sortable($('#cup-cmp'), CUP.focus.map((f) => teamById.get(f)), [
-          { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
-          { key: 'rec', label: 'Record', val: (t) => t.pts, html: (t) => recS(t) },
-          { key: 'rank', label: 'Rank', val: (t) => t.rank, desc: false, html: (t) => `${ordinal(t.rank)} / ${CUP.teams.length}` },
-          { key: 'gfpg', label: 'GF/GP', val: (t) => t.gfPerGame, html: (t) => fmt1(t.gfPerGame) },
-          { key: 'gapg', label: 'GA/GP', val: (t) => t.gaPerGame, desc: false, html: (t) => fmt1(t.gaPerGame) },
-          { key: 'diff', label: 'DIFF', val: (t) => t.diff, html: (t) => `<span class="${t.diff > 0 ? 'pos' : t.diff < 0 ? 'neg' : ''}">${sign(t.diff)}</span>` },
-          { key: 'l4', label: 'Last 4', sort: false, val: (t) => t.last4, html: (t) => L5(t.last4) },
-          { key: 'go', label: '', sort: false, val: () => '', html: (t) => `<a class="lnk" href="#/cup/${t.id}">Report →</a>` },
-        ], { key: 'rank', dir: 1 });
-        sortable($('#cup-st'), CUP.teams, [
-          { key: 'rank', label: '#', cls: 'rkc', val: (t) => t.rank, desc: false },
-          { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
-          { key: 'gp', label: 'GP', val: (t) => t.gp }, { key: 'w', label: 'W', val: (t) => t.w }, { key: 'l', label: 'L', val: (t) => t.l }, { key: 't', label: 'T', cls: 'hm', val: (t) => t.t },
-          { key: 'pts', label: 'PTS', val: (t) => t.pts, html: (t) => `<span class="pts">${t.pts}</span>` },
-          { key: 'gf', label: 'GF', cls: 'hm', val: (t) => t.gf }, { key: 'ga', label: 'GA', cls: 'hm', val: (t) => t.ga },
-          { key: 'diff', label: 'DIFF', val: (t) => t.diff, html: (t) => `<span class="${t.diff > 0 ? 'pos' : t.diff < 0 ? 'neg' : ''}">${sign(t.diff)}</span>` },
-          { key: 'l4', label: 'Last 4', sort: false, val: (t) => t.last4, html: (t) => L5(t.last4) },
-        ], { key: 'rank', dir: 1, rowCls: (t) => (isFocus(t.id) ? 'me' : '') });
-      });
-      const between = CUP.games.filter((g) => isFocus(g.home) && isFocus(g.away));
-      return `
-        ${head(esc(CUP.name), `One-off tournament · around ${esc(dt(CUP.approxDate, { month: 'long', day: 'numeric' }))}`, 'Opponent scouting from other leagues')}
-        <div style="margin-bottom:18px">${panel('Teams to watch', '<div class="tw"><table id="cup-cmp"></table></div>', { gold: true, meta: `${esc(src.league)} · ${esc(src.division)}` })}</div>
-        <div class="grid g-7-5">
-          ${panel(`${esc(src.league)} standings`, '<div class="tw"><table id="cup-st"></table></div>', { meta: `${CUP.games.filter((g) => g.final).length} games played` })}
-          ${panel('Head to head', between.length ? gameCards(between.filter((g) => g.final).reverse().concat(between.filter((g) => !g.final).slice(0, 4)), null) : '<div class="empty">They haven’t met yet</div>', { meta: 'Games between the teams to watch' })}
-        </div>
-        <div style="margin-bottom:18px">${caveat}</div>`;
-    }
+  function viewTournaments() {
+    if (!EV) return '<div class="ptitle"><div><div class="k">Tournaments</div><h1>No tournaments yet</h1></div></div>';
+    const me = team(myTeamId());
+    const cards = EV.events.slice().sort((a, b) => (b.dates?.[0] || '').localeCompare(a.dates?.[0] || '')).map((e) => {
+      const ours = (e.teams || []).find((t) => t.link?.id === me.id);
+      const champ = e.champion ? teamById.get(e.champion) : null;
+      const sub = e.teams?.length ? `${e.teams.length} teams · ${e.schedule.filter((s) => s.final).length}/${e.schedule.length} games played` : e.focus?.length ? `${e.focus.length} teams to watch · scouting from ${(e.leagues || []).map((l) => esc(EV.ext.teams.find((t) => t.source.id === l)?.source.league || l)).join(', ')}` : 'Schedule not published yet';
+      return `<a class="evcard" href="#/tournaments/${e.id}">
+        <div class="evc-top">${statusChip(e)}<span class="evc-d">${esc(evDates(e))}</span></div>
+        <div class="evc-n">${esc(e.name)} <small>${esc(e.season || '')}</small></div>
+        <div class="evc-s">${sub}</div>
+        <div class="evc-s">${esc(e.rink || e.division || '')}</div>
+        <div class="evc-b">${ours ? `<span class="tag-mine">${esc(me.short)} entered</span>` : `<span class="muted">${esc(me.short)} not entered</span>`}${champ ? ` · Champion: <b>${esc(champ.short)}</b>` : ''}</div></a>`;
+    }).join('');
+    return `<div class="ptitle"><div><div class="k">Non-season events</div><h1>Tournaments</h1><div class="s">Separate from league standings · tap an event</div></div></div>
+      <div class="evcards">${cards}</div>`;
+  }
 
-    const t = teamById.get(id);
-    if (!t || !t.cup) return notFound();
-    const keys = cupKeys(t), n = t.gp;
-    const theirGames = CUP.games.filter((g) => involves(g, t.id));
-    const played = theirGames.filter((g) => g.final), upcoming = theirGames.filter(isUpcoming);
-    const preCup = upcoming.filter((g) => g.start.slice(0, 10) <= CUP.approxDate);
-    const rank = (fn, dir = 'desc') => 1 + CUP.teams.filter((o) => o.gp && (dir === 'desc' ? fn(o) > fn(t) : fn(o) < fn(t))).length;
+  function viewEvent(eventId, teamId) {
+    const e = EV?.byId.get(eventId);
+    if (!e) return notFound();
+    if (teamId) return teamId.startsWith(e.id + ':') ? viewEventTeam(e, teamId) : viewExtTeam(e, teamId);
+    return e.teams?.length ? viewPlayedEvent(e) : viewScoutEvent(e);
+  }
+
+  function evHead(e, title, kicker, sub, chipsFor) {
+    const chips = chipsFor.map((t) => `<a class="wkchip ${t.on ? 'on' : ''} ${t.dim ? 'up' : ''}" href="${t.href}">${esc(t.label)}</a>`).join('');
+    return `<div class="ptitle"><div><div class="k">${kicker}</div><h1 class="sc-h1">${title}</h1><div class="s">${sub}</div></div><a class="btn" href="#/tournaments">All tournaments</a></div>
+      ${chips ? `<div class="wkbar">${chips}</div>` : ''}`;
+  }
+
+  function viewPlayedEvent(e) {
+    const rows = e.teams;
+    const players = (e.players || []).slice().sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));
+    let rk = 0, prev = null; players.forEach((p, i) => { if (p.pts !== prev) rk = i + 1; p.rank = rk; prev = p.pts; });
+    const missing = rows.filter((t) => t.boxMissing);
+    after(() => sortable($('#ev-st'), rows, [
+      { key: 'seed', label: '#', cls: 'rkc', val: (t) => t.seed, desc: false },
+      { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: (t) => `${tn(t)}${linkTag(t)}` },
+      { key: 'gp', label: 'GP', val: (t) => t.rr.gp }, { key: 'w', label: 'W', val: (t) => t.rr.w }, { key: 'l', label: 'L', val: (t) => t.rr.l }, { key: 't', label: 'T', cls: 'hm', val: (t) => t.rr.t },
+      { key: 'pts', label: 'PTS', val: (t) => t.rr.pts, html: (t) => `<span class="pts">${t.rr.pts}</span>` },
+      { key: 'gf', label: 'GF', cls: 'hm', val: (t) => t.rr.gf }, { key: 'ga', label: 'GA', cls: 'hm', val: (t) => t.rr.ga },
+      { key: 'diff', label: 'DIFF', val: (t) => t.rr.gf - t.rr.ga, html: (t) => { const d = t.rr.gf - t.rr.ga; return `<span class="${d > 0 ? 'pos' : d < 0 ? 'neg' : ''}">${sign(d)}</span>`; } },
+      { key: 'all', label: 'Overall', val: (t) => t.pts, html: (t) => `${t.w}-${t.l}-${t.t}` },
+    ], { key: 'seed', dir: 1, rowCls: (t) => (t.link?.id === myTeamId() ? 'me' : '') }));
+    const days = [...new Set(e.schedule.map((s) => s.start.slice(0, 10)))];
+    const champ = e.champion ? teamById.get(e.champion) : null;
+    return `
+      ${evHead(e, esc(e.name), `${esc(e.season)} · ${esc(evDates(e))} · ${statusChip(e)}`, `${esc(e.division || '')} · ${esc(e.rink || '')}`, e.teams.map((t) => ({ label: t.short, href: t.href })))}
+      ${champ ? `<div style="margin-bottom:18px">${panel('Champion', `<div class="pb"><div class="champ">${logo(champ)}<b>${esc(champ.name)}</b>${linkTag(champ)}</div></div>`, { gold: true })}</div>` : ''}
+      <div class="grid g-7-5">
+        ${panel('Round robin', '<div class="tw"><table id="ev-st"></table></div><div class="note">Seeds use our tiebreaks (points, wins, goal difference, goals) and may differ from the official bracket. HSL/HPL tags show each team’s home league, matched by roster.</div>', { gold: true, meta: `${e.teams.length} teams` })}
+        ${panel('Playoffs', gameCards(e.schedule.filter((s) => s.playoff), null), { meta: `${e.schedule.filter((s) => s.playoff && s.final).length}/${e.schedule.filter((s) => s.playoff).length} played` })}
+      </div>
+      <div style="margin-bottom:18px">${panel('Tournament scoring', `<div class="pb"><div class="leaders">${leaderRows(players.slice(0, 12), (p) => teamById.get(p.teamId)?.link?.id === myTeamId())}</div>${missing.length ? `<div class="dnotes sm"><b>Missing game sheets:</b> ${missing.map((t) => `${esc(t.short)} (${t.boxMissing} game${t.boxMissing > 1 ? 's' : ''} without a box score)`).join('; ')} — their scorers aren’t counted.</div>` : ''}</div>`, { meta: 'Points in this tournament' })}</div>
+      <div style="margin-bottom:18px">${panel('All games', `<div class="wkgroups">${days.map((d) => `<div class="wk-day">${dt(d, { weekday: 'long', month: 'short', day: 'numeric' })}</div>${gameCards(e.schedule.filter((s) => s.start.slice(0, 10) === d), null)}`).join('')}</div>`, { meta: `${e.schedule.length} games` })}</div>
+      ${e.url ? `<div class="note"><a class="lnk" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)} on the tournament site →</a></div>` : ''}`;
+  }
+
+  function viewEventTeam(e, teamId) {
+    const t = teamById.get(teamId);
+    if (!t) return notFound();
+    const sched = e.schedule.filter((s) => involves(s, t.id));
+    const players = (e.players || []).filter((p) => p.teamId === t.id).sort((a, b) => b.pts - a.pts || b.g - a.g);
+    let rk = 0, prev = null; players.forEach((p, i) => { if (p.pts !== prev) rk = i + 1; p.rank = rk; prev = p.pts; });
+    const home = homeLinkOf(t);
+    const tile = (l, v, s2 = '') => `<div class="st"><span class="l">${l}</span><span class="v">${v}</span><span class="s">${s2}</span></div>`;
+    return `
+      ${evHead(e, `${logo(t)}${esc(t.name)}`, `${esc(e.name)} · ${esc(e.season)}`, `Seed ${t.seed} · round robin ${t.rr.w}-${t.rr.l}-${t.rr.t} · overall ${t.w}-${t.l}-${t.t}`, e.teams.map((x) => ({ label: x.short, href: x.href, on: x.id === t.id })))}
+      <div style="margin-bottom:18px">${panel('At the tournament', `<div class="stats">
+        ${tile('Round robin', `${t.rr.w}-${t.rr.l}-${t.rr.t}`, `seed ${t.seed} of ${e.teams.length}`)}
+        ${tile('Overall', `${t.w}-${t.l}-${t.t}`, `${t.gp} games`)}
+        ${tile('Goals for', t.gf, `${(t.gp ? t.gf / t.gp : 0).toFixed(1)} / game`)}
+        ${tile('Goals against', t.ga, `${(t.gp ? t.ga / t.gp : 0).toFixed(1)} / game`)}
+        ${tile('Home league', t.link ? t.link.kind.toUpperCase() : '—', t.link ? `${home ? `<a class="lnk" href="${home}">${esc(t.link.name)} →</a>` : esc(t.link.name)}` : 'not matched')}
+      </div>`, { gold: true })}</div>
+      <div class="grid g-6-6">
+        ${panel('Games', gameCards(sched, t.id, { badges: false }), { meta: `${sched.length}` })}
+        ${panel('Scoring at the tournament', players.length ? `<div class="pb"><div class="leaders one">${leaderRows(players, () => false)}</div></div>` : `<div class="empty">${t.boxMissing ? 'Their game sheets have no box scores' : 'No scoring recorded'}</div>`, { meta: t.boxMissing ? `${t.boxMissing} sheet${t.boxMissing > 1 ? 's' : ''} without box scores` : '' })}
+      </div>`;
+  }
+
+  function viewScoutEvent(e) {
+    const focus = (e.focus || []).map((id) => teamById.get(id)).filter(Boolean);
+    const leagueTeams = EV.ext.teams.filter((t) => (e.leagues || []).includes(t.source.id));
+    const isFocus = (id) => (e.focus || []).includes(id);
+    const src = leagueTeams[0]?.source;
+    after(() => {
+      sortable($('#cup-cmp'), focus, [
+        { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
+        { key: 'rec', label: 'Record', val: (t) => t.pts, html: (t) => `${t.w}-${t.l}-${t.t}` },
+        { key: 'rank', label: 'Rank', val: (t) => t.rank, desc: false, html: (t) => `${ordinal(t.rank)} / ${leagueTeams.length}` },
+        { key: 'gfpg', label: 'GF/GP', val: (t) => t.gfPerGame, html: (t) => t.gfPerGame.toFixed(1) },
+        { key: 'gapg', label: 'GA/GP', val: (t) => t.gaPerGame, desc: false, html: (t) => t.gaPerGame.toFixed(1) },
+        { key: 'ev', label: 'Other events', sort: false, val: () => '', html: (t) => appearances(t.id).map(({ e: x, t: et }) => `${esc(x.name)} ${et.w}-${et.l}-${et.t}`).join('<br>') || '—' },
+        { key: 'go', label: '', sort: false, val: () => '', html: (t) => `<a class="lnk" href="${t.href}">Report →</a>` },
+      ], { key: 'rank', dir: 1 });
+      if (src) sortable($('#cup-st'), leagueTeams, [
+        { key: 'rank', label: '#', cls: 'rkc', val: (t) => t.rank, desc: false },
+        { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
+        { key: 'gp', label: 'GP', val: (t) => t.gp }, { key: 'w', label: 'W', val: (t) => t.w }, { key: 'l', label: 'L', val: (t) => t.l },
+        { key: 'pts', label: 'PTS', val: (t) => t.pts, html: (t) => `<span class="pts">${t.pts}</span>` },
+        { key: 'diff', label: 'DIFF', val: (t) => t.diff, html: (t) => `<span class="${t.diff > 0 ? 'pos' : t.diff < 0 ? 'neg' : ''}">${sign(t.diff)}</span>` },
+        { key: 'l4', label: 'Last 4', sort: false, val: (t) => t.last4, html: (t) => L5(t.last4) },
+      ], { key: 'rank', dir: 1, rowCls: (t) => (isFocus(t.id) ? 'me' : '') });
+    });
+    return `
+      ${evHead(e, esc(e.name), `${esc(e.season)} · ${esc(evDates(e))} · ${statusChip(e)}`, 'Opponent scouting · schedule not published yet',
+        [...focus, ...leagueTeams.filter((t) => !isFocus(t.id))].map((t) => ({ label: t.short, href: t.href, dim: !isFocus(t.id) })))}
+      <div style="margin-bottom:18px">${panel('Teams to watch', '<div class="tw"><table id="cup-cmp"></table></div>', { gold: true, meta: src ? `${esc(src.league)} · ${esc(src.division)}` : '' })}</div>
+      ${src ? `<div style="margin-bottom:18px">${panel(`${esc(src.league)} standings`, '<div class="tw"><table id="cup-st"></table></div>', { meta: `${EV.ext.games.filter((g) => g.final && g.source.id === src.id).length} games played` })}</div>
+      <div class="dnotes"><b>About this data:</b> ${esc(src.league)} publishes schedules, final scores and rosters only. Where these teams played other tournaments with full game sheets (e.g. the Pacific Duel), their reports include that too — the only direct evidence of how they compare with HSL teams.</div>` : ''}`;
+  }
+
+  function viewExtTeam(e, teamId) {
+    const t = teamById.get(teamId);
+    if (!t || !t.ext) return notFound();
+    const leagueTeams = EV.ext.teams.filter((x) => x.source.id === t.source.id);
+    const isFocus = (id) => (e.focus || []).includes(id);
+    const keys = extKeys(t), n = t.gp, avg = EV.ext.avg;
+    const games = EV.ext.games.filter((g) => involves(g, t.id));
+    const played = games.filter((g) => g.final), upcoming = games.filter(isUpcoming);
+    const rankBy = (fn, dir = 'desc') => 1 + leagueTeams.filter((o) => o.gp && (dir === 'desc' ? fn(o) > fn(t) : fn(o) < fn(t))).length;
     const tile = (l, v, s2 = '') => `<div class="st"><span class="l">${l}</span><span class="v">${v}</span><span class="s">${s2}</span></div>`;
     const l4 = t.results.slice(-4), l4r = l4.reduce((a, r) => { a[r.r]++; return a; }, { W: 0, L: 0, T: 0 }), l4g = l4.reduce((a, r) => [a[0] + r.gf, a[1] + r.ga], [0, 0]);
-    const vs = CUP.teams.filter((o) => o.id !== t.id).map((o) => {
-      const rs = t.results.filter((r) => r.opp === o.id);
-      return { o, rs, next: upcoming.find((g) => involves(g, o.id)) };
-    });
+    const apps = appearances(t.id);
     const keysHtml = keys.length ? `<ol class="keys">${keys.map((k) => `<li><b>${esc(k.title)}</b><span>${esc(k.evidence)}</span></li>`).join('')}</ol>` : `<div class="empty">${n < 2 ? 'Not enough games yet' : 'Nothing stands out yet'}</div>`;
     return `
-      ${head(`${logo(t)}${esc(t.name)}`, `${CUP.name} scouting · ${esc(t.source.league)} · ${n} GP`, `${ordinal(t.rank)} of ${CUP.teams.length} in ${esc(t.source.division)} · ${recS(t)} · last 4 ${esc(t.last4 || '–')}`)}
-      <div style="margin-bottom:18px">${panel('Keys', `<div class="pb">${keysHtml}</div>`, { gold: true, meta: `Based on ${n} game${n === 1 ? '' : 's'} · team-level only` })}</div>
+      ${evHead(e, `${logo(t)}${esc(t.name)}`, `${esc(e.name)} scouting · ${esc(t.source.league)} · ${n} GP`, `${ordinal(t.rank)} of ${leagueTeams.length} in ${esc(t.source.division)} · ${t.w}-${t.l}-${t.t} · last 4 ${esc(t.last4 || '–')}`,
+        [...(e.focus || []).map((id) => teamById.get(id)).filter(Boolean), ...leagueTeams.filter((x) => !isFocus(x.id))].map((x) => ({ label: x.short, href: x.href, on: x.id === t.id, dim: !isFocus(x.id) })))}
+      <div style="margin-bottom:18px">${panel('Keys', `<div class="pb">${keysHtml}</div>`, { gold: true, meta: `Based on ${n} league game${n === 1 ? '' : 's'}${apps.length ? ` + ${apps.length} tournament${apps.length > 1 ? 's' : ''}` : ''}` })}</div>
       <div style="margin-bottom:18px">${panel('Snapshot', `<div class="stats">
-        ${tile('Record', recS(t), `${ordinal(t.rank)} in ${esc(t.source.league)}`)}
-        ${tile('GF / game', n ? fmt1(t.gfPerGame) : '—', n ? `<em class="rk">${ordinal(rank((o) => o.gfPerGame))}</em> · avg ${fmt1(CUP.avg.gf)}` : '')}
-        ${tile('GA / game', n ? fmt1(t.gaPerGame) : '—', n ? `<em class="rk">${ordinal(rank((o) => o.gaPerGame, 'asc'))}</em> · avg ${fmt1(CUP.avg.ga)}` : '')}
+        ${tile('Record', `${t.w}-${t.l}-${t.t}`, `${ordinal(t.rank)} in ${esc(t.source.league)}`)}
+        ${tile('GF / game', n ? t.gfPerGame.toFixed(1) : '—', n ? `<em class="rk">${ordinal(rankBy((o) => o.gfPerGame))}</em> · avg ${avg.gf.toFixed(1)}` : '')}
+        ${tile('GA / game', n ? t.gaPerGame.toFixed(1) : '—', n ? `<em class="rk">${ordinal(rankBy((o) => o.gaPerGame, 'asc'))}</em> · avg ${avg.ga.toFixed(1)}` : '')}
         ${tile('Last 4 games', l4.length ? `${l4r.W}-${l4r.L}-${l4r.T}` : '—', l4.length ? `${L5(l4.map((r) => r.r).join(''))} ${l4g[0]}–${l4g[1]}` : '')}
         ${tile('Home / away', `${t.home.w}-${t.home.l}-${t.home.t}`, `away ${t.away.w}-${t.away.l}-${t.away.t}`)}
         ${tile('Shutouts', t.so, 'games allowing 0')}
       </div>`)}</div>
+      ${apps.map(({ e: x, t: et }) => {
+        const ps = (x.players || []).filter((p) => p.teamId === et.id).sort((a, b) => b.pts - a.pts || b.g - a.g);
+        let r2 = 0, pv = null; ps.forEach((p, i) => { if (p.pts !== pv) r2 = i + 1; p.rank = r2; pv = p.pts; });
+        return `<div style="margin-bottom:18px">${panel(`At the ${esc(x.name)}`, `<div class="grid g-6-6" style="margin:0;padding:14px 16px">
+          <div>${gameCards(x.schedule.filter((s) => involves(s, et.id)), et.id, { badges: false })}</div>
+          <div>${ps.length ? `<div class="sub">Their scorers</div><div class="leaders one">${leaderRows(ps.slice(0, 8), () => false)}</div>` : `<div class="empty">${et.boxMissing ? `Scorers weren’t recorded on their ${et.boxMissing} game sheet${et.boxMissing > 1 ? 's' : ''}` : 'No scoring recorded'}</div>`}</div>
+        </div>`, { gold: true, meta: `${et.w}-${et.l}-${et.t} · <a class="lnk" href="${et.href}">Event →</a>` })}</div>`;
+      }).join('')}
       <div class="grid g-6-6">
-        ${panel('Results', played.length ? gameCards(played.slice().reverse(), t.id, { badges: false }) : '<div class="empty">No games yet</div>', { meta: `${played.length} game${played.length === 1 ? '' : 's'} · tap for the league page` })}
-        ${panel('Against the rest of the division', `<div class="pb"><div class="kv">${vs.map(({ o, rs, next }) => `<div><span>${tn(o)}</span><b>${rs.length ? rs.map((r) => `<span class="rb ${r.r}">${r.r}</span>${r.gf}–${r.ga}`).join(' ') : `<small>${next ? `plays ${dt(next.start)}` : 'not yet'}</small>`}</b></div>`).join('')}</div></div>`, { meta: 'Common opponents within their league' })}
+        ${panel('League results', played.length ? gameCards(played.slice().reverse(), t.id, { badges: false }) : '<div class="empty">No games yet</div>', { meta: `${played.length} game${played.length === 1 ? '' : 's'} · tap for the league page` })}
+        ${panel('Against the rest of their league', `<div class="pb"><div class="kv">${leagueTeams.filter((o) => o.id !== t.id).map((o) => { const rs = t.results.filter((r) => r.opp === o.id), nx = upcoming.find((g) => involves(g, o.id)); return `<div><span>${tn(o)}</span><b>${rs.length ? rs.map((r) => `<span class="rb ${r.r}">${r.r}</span>${r.gf}–${r.ga}`).join(' ') : `<small>${nx ? `plays ${dt(nx.start)}` : 'not yet'}</small>`}</b></div>`; }).join('')}</div></div>`)}
       </div>
       <div class="grid g-6-6">
-        ${panel('Roster', `<div class="tw"><table class="gl"><thead><tr><th>#</th><th class="l">Player</th></tr></thead><tbody>${t.roster.map((p) => `<tr><td>${esc(p.number || '')}</td><td class="l">${esc(p.name)}${p.goalie ? '<span class="chip">G</span>' : ''}</td></tr>`).join('') || '<tr><td colspan="2" class="l empty">No roster published</td></tr>'}</tbody></table></div>`, { meta: `${t.roster.length} players` })}
-        ${panel(`Before the ${esc(CUP.name)}`, preCup.length ? gameCards(preCup, t.id, { badges: false }) : '<div class="empty">No more games scheduled before the tournament</div>', { meta: `${preCup.length} game${preCup.length === 1 ? '' : 's'} left` })}
+        ${panel('Roster', `<div class="tw"><table class="gl"><thead><tr><th>#</th><th class="l">Player</th></tr></thead><tbody>${(t.roster || []).map((p) => `<tr><td>${esc(p.number || '')}</td><td class="l">${esc(p.name)}${p.goalie ? '<span class="chip">G</span>' : ''}</td></tr>`).join('') || '<tr><td colspan="2" class="l empty">No roster published</td></tr>'}</tbody></table></div>`, { meta: `${(t.roster || []).length} players` })}
+        ${panel(`Before the ${esc(e.name)}`, (() => { const pre = upcoming.filter((g) => !e.dates || g.start.slice(0, 10) <= e.dates[0]); return pre.length ? gameCards(pre, t.id, { badges: false }) : '<div class="empty">No more games before the tournament</div>'; })(), {})}
       </div>
-      <div style="margin-bottom:18px">${caveat} <a class="lnk" href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)} on the ${esc(t.source.league)} site →</a></div>`;
+      <div class="dnotes"><b>About this data:</b> ${esc(t.source.league)} publishes scores and rosters only — no scorers, shots, penalties or goalie stats. Tournament game sheets (where they exist) fill some of that in. <a class="lnk" href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)} on the ${esc(t.source.league)} site →</a></div>`;
   }
 
   const notFound = () => `<div class="ptitle"><div><div class="k">404</div><h1>Not found</h1><div class="s"><a class="lnk" href="#/">Back to the scoreboard</a></div></div></div>`;
@@ -1574,7 +1688,8 @@
     [/^\/?$/, () => viewTeam(myTeamId())], [/^\/standings$/, viewStandings], [/^\/skaters$/, viewSkaters], [/^\/schedule$/, viewSchedule],
     [/^\/weekends?$/, () => viewWeekend()], [/^\/weekend\/(\d{4}-\d{2}-\d{2})$/, viewWeekend],
     [/^\/scout$/, () => viewScout()], [/^\/scout\/(\d+)$/, viewScout],
-    [/^\/cup$/, () => viewCup()], [/^\/cup\/([a-z]+:\d+)$/, viewCup],
+    [/^\/tournaments$/, viewTournaments], [/^\/tournaments\/([\w-]+)$/, (id) => viewEvent(id)], [/^\/tournaments\/([\w-]+)\/([\w:.-]+)$/, viewEvent],
+    [/^\/cup(?:\/(.*))?$/, (id) => { location.replace(`#/tournaments/challenge-cup-2026${id ? '/' + id : ''}`); return ''; }],
     [/^\/team\/(\w+)$/, viewTeam], [/^\/player\/(\d+)$/, viewPlayer], [/^\/game\/(\d+)$/, viewGame],
   ];
   let lastPath = null;
@@ -1654,7 +1769,11 @@
       }),
       ...S.teams.map((t) => ({ type: 'team', id: t.id, label: t.name, sub: `${ordinal(t.rank)} · ${t.w}-${t.l}-${t.t}`, href: `#/team/${t.id}`, t, words: words(t.name, t.short, t.code), boost: String(t.id) === me ? 2 : 0 })),
       ...S.teams.map((t) => ({ type: 'scout', id: t.id, label: `Scouting report: ${t.short}`, sub: String(t.id) === me ? 'Self-scout' : 'Keys to the game, threats, goalies', href: `#/scout/${t.id}`, t, words: words(t.name, t.short, t.code, 'scout', 'scouting', 'report'), boost: 0 })),
-      ...(CUP ? CUP.teams.map((t) => ({ type: 'cup', id: t.id, label: t.name, sub: `${CUP.name} · ${t.source.league} · ${t.w}-${t.l}-${t.t}`, href: `#/cup/${t.id}`, t, words: words(t.name, t.short, 'cup', 'challenge', 'tournament', t.source.league), boost: CUP.focus.includes(t.id) ? 0.5 : 0 })) : []),
+      ...(EV ? [
+        ...EV.events.map((e) => ({ type: 'cup', id: e.id, label: `${e.name} ${e.season || ''}`.trim(), sub: `Tournament · ${evDates(e)}`, href: `#/tournaments/${e.id}`, words: words(e.name, 'tournament', 'tournaments', e.season), boost: 0.3 })),
+        ...EV.ext.teams.filter((t) => t.href).map((t) => ({ type: 'cup', id: t.id, label: t.name, sub: `${t.source.league} · ${t.w}-${t.l}-${t.t} · scouting`, href: t.href, t, words: words(t.name, t.short, t.source.league, 'tournament'), boost: 0 })),
+        ...EV.events.flatMap((e) => (e.teams || []).map((t) => ({ type: 'cup', id: t.id, label: `${t.name} @ ${e.name}`, sub: `${t.w}-${t.l}-${t.t} at the ${e.name}`, href: t.href, t, words: words(t.name, t.short, e.name, 'tournament'), boost: -0.2 }))),
+      ] : []),
       ...[['Standings', '#/standings', 'table rank points'], ['Leaders', '#/skaters', 'scoring points goals goalies stats'], ['Weekends', '#/weekend', 'recap tournament'], ['Schedule', '#/schedule', 'games calendar upcoming results'], ['Scout', '#/scout', 'scouting report opponent']]
         .map(([label, href, kw]) => ({ type: 'page', id: href, label, sub: 'Page', href, words: words(label, kw), boost: 0 })),
     ];
@@ -1679,7 +1798,7 @@
     }
     out.sort((a, b) => b.score - a.score || a.it.label.localeCompare(b.it.label));
     // keep each type together; order the groups by their best match (team + its scout report stay adjacent)
-    const cap = { player: 10, team: 4, scout: 2, cup: 4, page: 3 }, groups = new Map();
+    const cap = { player: 10, team: 4, scout: 2, cup: 6, page: 3 }, groups = new Map();
     for (const r of out) { const g = groups.get(r.it.type) || groups.set(r.it.type, []).get(r.it.type); if (g.length < cap[r.it.type]) g.push(r); }
     const order = [...groups.entries()].sort((a, b) => b[1][0].score - a[1][0].score);
     const ti = order.findIndex(([k]) => k === 'team'), si = order.findIndex(([k]) => k === 'scout');
@@ -1702,7 +1821,7 @@
       ...['Standings|#/standings', 'Leaders|#/skaters', 'Weekends|#/weekend', 'Schedule|#/schedule'].map((x) => { const [label, href] = x.split('|'); return { type: 'page', label, sub: 'Page', href }; }),
     ];
   }
-  const TYPE_LABEL = { player: 'Player', team: 'Team', scout: 'Scout', cup: 'Challenge Cup', page: 'Page' };
+  const TYPE_LABEL = { player: 'Player', team: 'Team', scout: 'Scout', cup: 'Tournaments', page: 'Page' };
   function renderSearch() {
     const box = document.getElementById('srch-res'), q = document.getElementById('srch-q').value;
     sResults = q.trim() ? runSearch(q) : quickPicks();
@@ -1846,17 +1965,13 @@
       }
     }
     // skater ranking (ties share a rank)
-    prepareCup();
+    prepareEvents();
     S.skaters = S.players.filter((p) => !p.isGoalie || p.pts > 0).sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));
     let rk = 0, prev = null;
     S.skaters.forEach((p, i) => { if (p.pts !== prev) rk = i + 1; p.rank = rk; prev = p.pts; });
   }
 
   function chrome() {
-    if (CUP && !document.getElementById('nav-cup')) {
-      const scout = document.querySelector('#nav a[href="#/scout"]');
-      scout?.insertAdjacentHTML('afterend', `<a href="#/cup" id="nav-cup" class="nav-cup">${esc(CUP.name)}</a>`);
-    }
     document.getElementById('brand-division').textContent = S.meta.division;
     document.getElementById('upd').textContent = `${S.meta.league} · ${S.meta.season} · Updated ${new Date(S.meta.updatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
     document.title = `${S.meta.division} · ${S.meta.league}`;

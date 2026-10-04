@@ -50,6 +50,19 @@ derived key (not the password) in localStorage. The Action reads the password fr
 - This hides the stats, not the page shell (HTML/JS/CSS stay public). Keep the repo private too,
   since `data/` holds the raw scraped game files.
 
+## Tournaments (non-season events)
+
+`scripts/events.config.mjs` lists the tournaments to track (added only when asked) and external
+opponent leagues. `scripts/events.mjs` scrapes them nightly (never blocks the HSL update):
+
+- **RAMP events** (e.g. Pacific Duel on pacificduel.com): full game sheets via the same parser as
+  HSL, saved to `data/events/<event>/`. Playoff placeholder games ("Seed 1 vs Seed 4") are
+  remembered as playoff games.
+- **External leagues** (e.g. HPL on Kreezee): scores and rosters only (name/number/goalie — never
+  contact fields), saved to `data/leagues/`.
+- The build links each tournament team to its home-league team by roster overlap (name fallback).
+  Tournament games never count toward league standings.
+
 ## Configuration
 
 `scripts/config.mjs` holds the season, division and "my team" IDs. To track another division, change `divisionId` / `divisionName` (IDs are in the league site's URLs).

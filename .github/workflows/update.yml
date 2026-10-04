@@ -48,8 +48,8 @@ jobs:
       - name: Scrape league site
         run: node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }}
 
-      - name: Tournament opponent data (non-fatal)
-        run: node scripts/tournament.mjs || echo "tournament fetch failed; keeping last copy"
+      - name: Tournaments + opponent leagues (non-fatal)
+        run: node scripts/events.mjs || echo "events fetch failed; keeping last copies"
 
       - name: Build stats (encrypted)
         run: node scripts/build.mjs

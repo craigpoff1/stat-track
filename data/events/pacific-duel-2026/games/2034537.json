@@ -1,0 +1,536 @@
+{
+ "id": "2034537",
+ "dateText": "Saturday, October 3, 2026 @ 8:00 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Calgary Crusaders",
+  "teamId": "407116",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png",
+  "score": 1
+ },
+ "away": {
+  "name": "Bandits",
+  "teamId": "407121",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 3
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:09",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "67",
+    "name": "Constance Jian"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:16",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "75",
+    "name": "Daniel Garipov"
+   },
+   "assists": [
+    {
+     "number": "97",
+     "name": "Eli Murray"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:26",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:36",
+   "side": "away",
+   "team": "Bandits",
+   "scorer": {
+    "number": "29",
+    "name": "Nathan Rivard"
+   },
+   "assists": [
+    {
+     "number": "97",
+     "name": "Eli Murray"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:47",
+   "side": "away",
+   "team": "Bandits",
+   "player": {
+    "number": "87",
+    "name": "Mylen Carganilla"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:42",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Ryder Gotch"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:12",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "19",
+    "name": "Elias Morianos"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:26",
+   "side": "away",
+   "team": "Bandits",
+   "player": {
+    "number": "87",
+    "name": "Mylen Carganilla"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121219",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121180",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121313",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121209",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121274",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121227",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121179",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121273",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121178",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121208",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121286",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121276",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121275",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121175",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121295",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121195",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172423",
+   "number": "75",
+   "name": "Daniel Garipov",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172434",
+   "number": "67",
+   "name": "Constance Jian",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172435",
+   "number": "29",
+   "name": "Nathan Rivard",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172427",
+   "number": "97",
+   "name": "Eli Murray",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172430",
+   "number": "92",
+   "name": "Bowen Hughes",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172432",
+   "number": "87",
+   "name": "Mylen Carganilla",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172428",
+   "number": "71",
+   "name": "Ashton Trklja",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172433",
+   "number": "6",
+   "name": "Gabriel Santiago",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172424",
+   "number": "47",
+   "name": "Connor Tateyama",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172426",
+   "number": "43",
+   "name": "Luca Vermeer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172431",
+   "number": "40",
+   "name": "Jaxon Khuc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172436",
+   "number": "39",
+   "name": "Daryl Wong",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172429",
+   "number": "16",
+   "name": "Linden Penner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 2700,
+   "ga": 3,
+   "shots": 9,
+   "saves": 6
+  },
+  {
+   "side": "away",
+   "teamId": "407121",
+   "playerId": "5172436",
+   "number": "39",
+   "name": "Daryl Wong",
+   "seconds": 2700,
+   "ga": 3,
+   "shots": 9,
+   "saves": 6
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 5,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 5
+  }
+ ],
+ "start": "2026-10-03T08:00:00",
+ "gameNumber": 7,
+ "playoff": false,
+ "fetchedAt": "2026-10-04T16:39:07.192Z"
+}

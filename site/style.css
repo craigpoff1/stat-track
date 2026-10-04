@@ -465,3 +465,25 @@ body.srch-open{overflow:hidden}
 /* ---------- Challenge Cup ---------- */
 .nav-cup{color:var(--us)!important}
 .nav-cup.on{border-color:var(--us)}
+
+/* ---------- tournaments ---------- */
+.evcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:18px}
+.evcard{display:flex;flex-direction:column;gap:6px;padding:16px;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--line2);color:var(--ink);transition:border-color .15s,background .15s}
+.evcard:hover{background:var(--panel2);border-top-color:var(--us)}
+.evc-top{display:flex;justify-content:space-between;align-items:center}
+.evc-d{font:700 12px var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
+.evc-n{font:800 italic 26px/1 var(--cond);text-transform:uppercase}
+.evc-n small{font:600 13px var(--cond);color:var(--ink3);font-style:normal;letter-spacing:.1em}
+.evc-s{font-size:13px;color:var(--ink2)}
+.evc-b{margin-top:6px;font-size:13px;color:var(--ink2)}
+.evc-b .muted{color:var(--ink3)}
+.evst{display:inline-block;font:800 10px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;padding:4px 7px 3px;border:1px solid var(--line2);color:var(--ink2)}
+.evst.live{background:#3a1010;border-color:#FF5A36;color:#FF8A70}
+.evst.final{color:var(--ink3)}
+.evst.upcoming{border-color:var(--blue);color:#8DB8FF}
+.lgtag{display:inline-block;margin-left:6px;font:800 9px/1 var(--cond);letter-spacing:.12em;padding:3px 5px 2px;border:1px solid var(--line2);color:var(--ink3);vertical-align:2px}
+.lgtag.hsl{border-color:var(--us);color:var(--us)}
+.lgtag.hpl{border-color:var(--blue);color:#8DB8FF}
+.champ{display:flex;align-items:center;gap:12px;font:800 italic 24px var(--cond);text-transform:uppercase}
+.champ .logo{width:40px;height:40px}
+div.ld{cursor:default}

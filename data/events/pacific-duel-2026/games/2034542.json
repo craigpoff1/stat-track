@@ -1,0 +1,604 @@
+{
+ "id": "2034542",
+ "dateText": "Saturday, October 3, 2026 @ 4:15 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Calgary Crusaders",
+  "teamId": "407116",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png",
+  "score": 4
+ },
+ "away": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "407118",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/570ac70c-2b3f-40e7-81a3-11d7c924d049_AB75F072-C7D5-406B-A9ED-FA57388651AB.png",
+  "score": 5
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:15",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:13",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "34",
+    "name": "Owen Brito"
+   },
+   "assists": [
+    {
+     "number": "16",
+     "name": "Owen Roberts"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:11",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "89",
+    "name": "Spencer Priddle"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:20",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Logan Rumley"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Hayes Kaiser"
+    },
+    {
+     "number": "91",
+     "name": "Noah Kaiser"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:37",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Cabot Doucet"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Oliver Rook"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:02",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Kasen Leard"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Jones Brezinski"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:34",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:15",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:04",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:01",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121209",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121219",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121179",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121195",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121180",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121313",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121274",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121227",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121273",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121178",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121208",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121286",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121276",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121275",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121175",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121295",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121289",
+   "number": "98",
+   "name": "Cabot Doucet",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121193",
+   "number": "91",
+   "name": "Noah Kaiser",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121171",
+   "number": "19",
+   "name": "Logan Rumley",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121202",
+   "number": "17",
+   "name": "Kasen Leard",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121280",
+   "number": "13",
+   "name": "Kash Bala",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121221",
+   "number": "9",
+   "name": "Hayes Kaiser",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121201",
+   "number": "89",
+   "name": "Spencer Priddle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121220",
+   "number": "88",
+   "name": "Braxton Wagner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121282",
+   "number": "82",
+   "name": "Avery Sahnan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121288",
+   "number": "8",
+   "name": "Jones Brezinski",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121281",
+   "number": "77",
+   "name": "Henry Olineck",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121169",
+   "number": "71",
+   "name": "Owen Yuskow",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121174",
+   "number": "41",
+   "name": "Edward Szabo",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121204",
+   "number": "29",
+   "name": "Oliver Rook",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121198",
+   "number": "20",
+   "name": "Merrick Pobuda",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121259",
+   "number": "11",
+   "name": "Brody Wilkes",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 2700,
+   "ga": 5,
+   "shots": 16,
+   "saves": 11
+  },
+  {
+   "side": "away",
+   "teamId": "407118",
+   "playerId": "5121174",
+   "number": "41",
+   "name": "Edward Szabo",
+   "seconds": 2700,
+   "ga": 4,
+   "shots": 14,
+   "saves": 10
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 5,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 5,
+   "away": 9
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 5
+  }
+ ],
+ "start": "2026-10-03T16:15:00",
+ "gameNumber": 12,
+ "playoff": false,
+ "fetchedAt": "2026-10-04T16:39:11.307Z"
+}

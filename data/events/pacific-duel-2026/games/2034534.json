@@ -1,0 +1,667 @@
+{
+ "id": "2034534",
+ "dateText": "Friday, October 2, 2026 @ 2:15 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "MOB Hockey",
+  "teamId": "407117",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 3
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "407116",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png",
+  "score": 8
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:52",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "9",
+    "name": "Hayes Leinberger"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:58",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Doc Desmet"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:27",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "34",
+    "name": "Owen Brito"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Walker Snell"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:27",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "11",
+    "name": "Bodie Patterson"
+   },
+   "assists": [
+    {
+     "number": "89",
+     "name": "Ladd Periard"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:00",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "8",
+    "name": "Rylan Geeraert"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:27",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:23",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "19",
+    "name": "Irus Rorke"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Tanner Corrigan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:22",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "11",
+    "name": "Bodie Patterson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:05",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "17",
+    "name": "Denver Gagnon"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:48",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:31",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "16",
+    "name": "Owen Roberts"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Ryder Gotch"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:38",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "89",
+    "name": "Weston MacKinnon"
+   },
+   "minutes": 2,
+   "infraction": "Boarding"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:31",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:27",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "29",
+    "name": "Chase Myers"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:02",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "11",
+    "name": "Bodie Patterson"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121177",
+   "number": "9",
+   "name": "Hayes Leinberger",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121291",
+   "number": "29",
+   "name": "Chase Myers",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121212",
+   "number": "19",
+   "name": "Irus Rorke",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121214",
+   "number": "98",
+   "name": "Dawson Moore",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121224",
+   "number": "96",
+   "name": "Brooks Jones",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121194",
+   "number": "92",
+   "name": "Hayes Ward",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121226",
+   "number": "89",
+   "name": "Weston MacKinnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121225",
+   "number": "88",
+   "name": "Kanon Durdle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121213",
+   "number": "71",
+   "name": "Zane Janvier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121292",
+   "number": "6",
+   "name": "Keir Kendall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121216",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121217",
+   "number": "17",
+   "name": "Grayson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121197",
+   "number": "16",
+   "name": "Jack Harris",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121196",
+   "number": "12",
+   "name": "Wyatt Kaliszewski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121211",
+   "number": "11",
+   "name": "Tanner Corrigan",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121285",
+   "number": "10",
+   "name": "Weston Vansickle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121209",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121295",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121179",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121276",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121275",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121195",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121180",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121313",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121219",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121274",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121227",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121273",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121178",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121208",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121286",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121175",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121216",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "seconds": 1325,
+   "ga": 2,
+   "shots": 15,
+   "saves": 13
+  },
+  {
+   "side": "home",
+   "teamId": "407117",
+   "playerId": "5121196",
+   "number": "12",
+   "name": "Wyatt Kaliszewski",
+   "seconds": 1415,
+   "ga": 2,
+   "shots": 6,
+   "saves": 4
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 2700,
+   "ga": 8,
+   "shots": 21,
+   "saves": 13
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 46"
+ ],
+ "shotsByPeriod": [],
+ "start": "2026-10-02T14:15:00",
+ "gameNumber": 4,
+ "playoff": false,
+ "fetchedAt": "2026-10-04T16:39:04.698Z"
+}

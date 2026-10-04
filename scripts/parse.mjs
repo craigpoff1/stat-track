@@ -29,10 +29,11 @@ export function parseSchedule(icsText, divisionName) {
       const m = line.match(/^([A-Z-]+)(?:;[^:]*)?:(.*)$/);
       if (m) f[m[1]] = icsUnescape(m[2]);
     }
-    const idMatch = (f.UID || '').match(/leaguegame-(\d+)@/);
+    const idMatch = (f.UID || '').match(/(?:league|tournament)game-(\d+)@/);
     if (!idMatch) continue; // non-game calendar events
     let summary = f.SUMMARY || '';
-    if (summary.startsWith(divisionName + ':')) summary = summary.slice(divisionName.length + 1);
+    // league: "2019 Major: A vs B"; tournament: "Pacific Duel (HSL): 2019 Pacific Duel: A vs B"
+    if (summary.includes(': ')) summary = summary.slice(summary.lastIndexOf(': ') + 2);
     const [home, away] = summary.split(' vs ').map(clean);
     const desc = f.DESCRIPTION || '';
     const final = desc.match(/Final:\s*(\d+)\s*-\s*(\d+)/);
@@ -72,7 +73,7 @@ function headerCells($, table) {
   return $(table).find('thead th').map((_, th) => clean($(th).text())).get();
 }
 
-export function parseGame(html, id, { regulationMinutes = 45 } = {}) {
+export function parseGame(html, id, { regulationMinutes = 45, lenientTeamIds = false } = {}) {
   const $ = cheerio.load(html);
   const warnings = [];
 
@@ -191,6 +192,14 @@ export function parseGame(html, id, { regulationMinutes = 45 } = {}) {
 
   // --- structural checks. Throw rather than return a degraded game: a markup change on the
   // league site must fail the run loudly, not overwrite good data with nulls.
+  // Tournament sheets sometimes leave one team's box score empty (no player links to identify the
+  // team); there, fall back to a name-based id. League sheets stay strict.
+  if (lenientTeamIds) for (const s of ['home', 'away']) {
+    if (!game[s].teamId && game[s].name) {
+      game[s].teamId = 'n:' + game[s].name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      warnings.push(`${s}: no box score on the sheet (team identified by name)`);
+    }
+  }
   const missing = [];
   if (!game.status) missing.push('status');
   for (const s of ['home', 'away']) {

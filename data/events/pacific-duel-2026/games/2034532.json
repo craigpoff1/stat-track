@@ -1,0 +1,598 @@
+{
+ "id": "2034532",
+ "dateText": "Friday, October 2, 2026 @ 10:30 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Beavers",
+  "teamId": "n:beavers",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 4
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "407116",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png",
+  "score": 6
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:08",
+   "side": "home",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Conor Smith"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:02",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "16",
+    "name": "Owen Roberts"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:56",
+   "side": "home",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Mack Downey"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:55",
+   "side": "home",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:31",
+   "side": "home",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:53",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:31",
+   "side": "home",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Mack Downey"
+   },
+   "minutes": 2,
+   "infraction": "Holding Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:42",
+   "side": "home",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Arsenio Du"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:37",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Elias Morianos"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:15",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Owen Brito"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:01",
+   "side": "home",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Jeffery Xue"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:02",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:20",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "minutes": 2,
+   "infraction": "Holding Stick"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:31",
+   "side": "home",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Max Duval"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:02",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "11",
+    "name": "Bodie Patterson"
+   },
+   "assists": [],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:02",
+   "side": "home",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:20",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:13",
+   "side": "home",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:25",
+   "side": "home",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Yuvraj Tamber"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:36",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:20",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:49",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "16",
+    "name": "Owen Roberts"
+   },
+   "minutes": 2,
+   "infraction": "Charging Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:00",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "11",
+    "name": "Bodie Patterson"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121209",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121295",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121275",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121195",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121180",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121313",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121219",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121274",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121227",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121179",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121273",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121178",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121208",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121286",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121276",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121175",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "away",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 2700,
+   "ga": 4,
+   "shots": 22,
+   "saves": 18
+  }
+ ],
+ "warnings": [
+  "home: no box score on the sheet (team identified by name)",
+  "home: box score has 0 goals, final is 4"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 5,
+   "away": 8
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 10
+  },
+  {
+   "label": "3",
+   "home": 13,
+   "away": 3
+  }
+ ],
+ "start": "2026-10-02T10:30:00",
+ "gameNumber": 2,
+ "playoff": false,
+ "fetchedAt": "2026-10-04T16:39:03.039Z"
+}

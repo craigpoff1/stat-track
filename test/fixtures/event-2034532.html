@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+    <meta author="RAMP InterActive">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <base href="/">
+    <title>Pacific Duel</title>
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="preconnect" href="https://cloud3.rampinteractive.com" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="preconnect" href="https://fonts.googleapis.com" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo&#x2B;Narrow:ital,wght@0,400..700;1,400..700&amp;family=League&#x2B;Gothic:wdth@75..100&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;family=Work&#x2B;Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="https://use.typekit.net/uai7zfu.css" crossorigin="anonymous" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="/css/style.css?v=1.48" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="/varcss/colors/3477" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="/css/theme-extended.css?v=1.01" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="/css/bracket.css?v=1.1" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="/css/booking.css" /><link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="icon" href="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" /><title>Pacific Duel : by RAMP InterActive</title><meta property="og:site_name" content="Pacific Duel" /><meta property="og:type" content="website"><link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="/varcss/colors/3477" />
+    <link nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" rel="stylesheet" href="/css/theme-extended.css" />
+    <style nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=">
+        [x-cloak] {
+            display: none;
+        }
+    </style></head>
+<body id="assoc-brand-default" data-enhance-nav="false" class="scroll-smooth overflow-x-hidden" x-data="{navbarOpen: false, scrolledFromTop: false}" x-init="window.pageYOffset &gt;= 60 ? scrolledFromTop = true : scrolledFromTop = false" x-on:scroll.window="window.pageYOffset &gt;= 60 ? scrolledFromTop = true : scrolledFromTop = false"><section id="game-ticker-block"><div x-data="gameTickerScroller()" x-init="init()" class="game-ticker-v2" :class="{ &#x27;fade-left&#x27;: !atStart, &#x27;fade-right&#x27;: !atEnd }"><button class="game-ticker-v2-nav prev" x-show="hasOverflow" x-cloak :disabled="atStart" x-on:click="page(-1)" aria-label="Previous games">
+                &lsaquo;
+            </button>
+
+            <div class="game-ticker-v2-viewport" x-ref="viewport"><div class="game-ticker-v2-track"><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sun.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">4</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">9:00 a.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/570ac70c-2b3f-40e7-81a3-11d7c924d049_AB75F072-C7D5-406B-A9ED-FA57388651AB.png" class="game-ticker-team-logo" />
+                                                Riggers Hockey Academy</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Beavers</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">3</div>
+                                        <div class="game-ticker-score">4</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034543"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sun.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">4</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">10:30 a.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="game-ticker-team-logo" />
+                                                Calgary Crusaders</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Bandits</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034544"><h1>Preview</h1></a></div></div><div class="game-ticker-status-container bg-green-500"><div class="game-ticker-status">In Play</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sun.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">4</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">12:00 p.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Young Kings Hockey</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                MOB Hockey</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034545"><h1>Preview</h1></a></div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sun.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">4</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">1:30 p.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Beavers</div>
+                                            <div class="game-ticker-team"><img src="" class="game-ticker-team-logo" />
+                                                TBA</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034546"><h1>Preview</h1></a></div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">9</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">8:00 a.m.</span><span class="game-ticker-division" title="2014 Pacific Duel">2014 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Saints Pro Hockey Academy</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Stars Hockey Academy</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/34230/game/view/2059416"><h1>Preview</h1></a></div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">9</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">9:30 a.m.</span><span class="game-ticker-division" title="2014 Pacific Duel">2014 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Caps Hockey Club 14M</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Washington Wolverines</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/34230/game/view/2059417"><h1>Preview</h1></a></div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">9</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">11:00 a.m.</span><span class="game-ticker-division" title="2014 Pacific Duel">2014 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Wolverines Hockey Academy</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Caps Hockey Club</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/34230/game/view/2059418"><h1>Preview</h1></a></div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">9</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">12:30 p.m.</span><span class="game-ticker-division" title="2014 Pacific Duel">2014 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Lumberjacks</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Saints Pro Hockey Academy</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/34230/game/view/2059419"><h1>Preview</h1></a></div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">9</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">2:00 p.m.</span><span class="game-ticker-division" title="2014 Pacific Duel">2014 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Stars Hockey Academy</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Caps Hockey Club 14M</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/34230/game/view/2059420"><h1>Preview</h1></a></div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">9</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">3:30 p.m.</span><span class="game-ticker-division" title="2014 Pacific Duel">2014 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Washington Wolverines</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Wolverines Hockey Academy</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">0</div>
+                                        <div class="game-ticker-score">0</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/34230/game/view/2059421"><h1>Preview</h1></a></div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">2</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">2:15 p.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                MOB Hockey</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="game-ticker-team-logo" />
+                                                Calgary Crusaders</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">3</div>
+                                        <div class="game-ticker-score">8</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034534"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">2</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">3:45 p.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Bandits</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/570ac70c-2b3f-40e7-81a3-11d7c924d049_AB75F072-C7D5-406B-A9ED-FA57388651AB.png" class="game-ticker-team-logo" />
+                                                Riggers Hockey Academy</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">2</div>
+                                        <div class="game-ticker-score">8</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034535"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Fri.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">2</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">5:15 p.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Beavers</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Young Kings Hockey</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">5</div>
+                                        <div class="game-ticker-score">2</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034536"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sat.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">3</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">8:00 a.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="game-ticker-team-logo" />
+                                                Calgary Crusaders</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Bandits</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">1</div>
+                                        <div class="game-ticker-score">3</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034537"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sat.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">3</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">9:30 a.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/570ac70c-2b3f-40e7-81a3-11d7c924d049_AB75F072-C7D5-406B-A9ED-FA57388651AB.png" class="game-ticker-team-logo" />
+                                                Riggers Hockey Academy</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Beavers</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">5</div>
+                                        <div class="game-ticker-score">3</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034538"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sat.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">3</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">11:00 a.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Young Kings Hockey</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                MOB Hockey</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">6</div>
+                                        <div class="game-ticker-score">3</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034539"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sat.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">3</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">1:15 p.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Young Kings Hockey</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Bandits</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">3</div>
+                                        <div class="game-ticker-score">7</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034540"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sat.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">3</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">2:45 p.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                MOB Hockey</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="game-ticker-team-logo" />
+                                                Beavers</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">3</div>
+                                        <div class="game-ticker-score">4</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034541"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div><div class="game-ticker-card"><div class="game-ticker-date-container"><div class="game-ticker-date"><div class="game-ticker-day">Sat.</div>
+                                    <div class="game-ticker-month">Oct.</div>
+                                    <div class="game-ticker-day-date">3</div></div></div>
+
+                            <div class="relative flex flex-col grow group"><div class="game-ticker-time"><span class="game-ticker-time-value">4:15 p.m.</span><span class="game-ticker-division" title="2019 Pacific Duel">2019 Pacific Duel</span></div>
+                                <div class="game-ticker-summary"><div class="game-ticker-teams-container"><div class="game-ticker-teams"><div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="game-ticker-team-logo" />
+                                                Calgary Crusaders</div>
+                                            <div class="game-ticker-team"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/570ac70c-2b3f-40e7-81a3-11d7c924d049_AB75F072-C7D5-406B-A9ED-FA57388651AB.png" class="game-ticker-team-logo" />
+                                                Riggers Hockey Academy</div></div></div>
+                                    <div class="game-ticker-score-container"><div class="game-ticker-score">4</div>
+                                        <div class="game-ticker-score">5</div></div></div><div class="game-ticker-summary-overlay"><a href="/division/0/39834/game/view/2034542"><h1>Game Summary</h1></a></div></div><div class="game-ticker-status-container bg-lighttones-600"><div class="game-ticker-status">Final</div></div></div></div></div>
+
+            <button class="game-ticker-v2-nav next" x-show="hasOverflow" x-cloak :disabled="atEnd" x-on:click="page(1)" aria-label="Next games">
+                &rsaquo;
+            </button></div></section><header x-data="navShrink()" x-init="init()" class="sticky top-0 z-50"><div id="assoc-menu-block"><div class="assoc-menu-scroll" :style="navStyle"><div class="flex flex-row justify-between items-center"><div class="flex align-middle" x-data="{ assocMenuIsOpen: false }"><button type="button" x-on:click="assocMenuIsOpen = true" class="btn-topbar slide-in-right inline-block relative py-2 px-2">Divisions<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xml:space="preserve" fill="currentColor" class="inline w-3 h-3 mx-1 animate-bounce tranistion-all duration-200"><polygon points="0,5 12,18 24,5"></polygon></svg></button>
+                        <div x-show="assocMenuIsOpen" x-on:click.outside="assocMenuIsOpen = false" class="modal-pop" x-cloak><div x-on:click.outside="assocMenuIsOpen = false" class="modal-base max-w-2xl h-[90vh]" x-show="assocMenuIsOpen" x-transition:enter="ease-in-out duration-200" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in-out duration-200" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-90 translate-y-2"><div class="modal-close-container"><button x-on:click="assocMenuIsOpen = false" class="modal-close-btn" aria-label="Close Modal"><span class="sr-only">Close</span>
+                                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="square" stroke-linejoin="round" stroke-width="4" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+                                <div x-data="{ activeTab: 1 }" x-cloak><div class="flex w-full items-center text-center justify-center border-b-2 pane-primary py-4"><div class="inline-flex flex-wrap justify-center bg-midtones-200 rounded-full p-1"><button id="tab-1" class="flex-1 modal-tab-btn" :class="activeTab === 1 ? &#x27;bg-white text-midtones-900&#x27; : &#x27;text-midtones-600 hover:text-darktone&#x27;" x-on:click="activeTab = 1">Divisions</button></div></div>
+                                    <div class="w-full"><div class="relative flex flex-col"><article id="tabpanel-1" class="w-full" x-show="activeTab === 1" x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 transform order-first" x-transition:enter-start="opacity-0 -translate-y-8" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-300 transform absolute" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-12"><div x-data="{ expanded: false }" class="modal-menu-title-container"><button id="accordion-menu-title-34230" type="button" class="modal-menu-accordion modal-menu-accordion-title" x-on:click="expanded = !expanded" :aria-expanded="expanded" aria-controls="assoc-menu-text-34230"><span>2014 Pacific Duel</span>
+                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect></svg></button>
+            <div id="accordion-menu-drawer-34230" role="region" aria-labelledby="accordion-menu-title-34230" class="modal-menu-accordion-drawer" :class="expanded ? &#x27;grid-rows-[1fr] opacity-100&#x27; : &#x27;grid-rows-[0fr] opacity-0&#x27;"><div class="overflow-hidden px-2"><div class="div-schedule-links"><a href="/division/0/34230/masterschedule">Schedule</a><a href="/division/0/34230/standings">Standings</a><a href="/division/0/34230/leaders">Leaders</a><a href="/division/0/34230/rosters">Rosters</a></div>
+                    <ul class="flex flex-col mt-0"><a target="_parent" href="/team/14795/0/34230/412266/masterschedule" class="modal-submenu-item"><p>Saints Pro Hockey Academy</p></a><a target="_parent" href="/team/14795/0/34230/412267/masterschedule" class="modal-submenu-item"><p>Stars Hockey Academy</p></a><a target="_parent" href="/team/14795/0/34230/412268/masterschedule" class="modal-submenu-item"><p>Caps Hockey Club</p></a><a target="_parent" href="/team/14795/0/34230/412270/masterschedule" class="modal-submenu-item"><p>Wolverines Hockey Academy</p></a><a target="_parent" href="/team/14795/0/34230/412271/masterschedule" class="modal-submenu-item"><p>Caps Hockey Club 14M</p></a><a target="_parent" href="/team/14795/0/34230/412274/masterschedule" class="modal-submenu-item"><p>Washington Wolverines</p></a><a target="_parent" href="/team/14795/0/34230/412275/masterschedule" class="modal-submenu-item"><p>Lumberjacks</p></a></ul></div></div></div><div x-data="{ expanded: false }" class="modal-menu-title-container"><button id="accordion-menu-title-34231" type="button" class="modal-menu-accordion modal-menu-accordion-title" x-on:click="expanded = !expanded" :aria-expanded="expanded" aria-controls="assoc-menu-text-34231"><span>2015 Pacific Duel</span>
+                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect></svg></button>
+            <div id="accordion-menu-drawer-34231" role="region" aria-labelledby="accordion-menu-title-34231" class="modal-menu-accordion-drawer" :class="expanded ? &#x27;grid-rows-[1fr] opacity-100&#x27; : &#x27;grid-rows-[0fr] opacity-0&#x27;"><div class="overflow-hidden px-2"><div class="div-schedule-links"><a href="/division/0/34231/masterschedule">Schedule</a><a href="/division/0/34231/standings">Standings</a><a href="/division/0/34231/leaders">Leaders</a><a href="/division/0/34231/rosters">Rosters</a></div>
+                    <ul class="flex flex-col mt-0"></ul></div></div></div><div x-data="{ expanded: false }" class="modal-menu-title-container"><button id="accordion-menu-title-31640" type="button" class="modal-menu-accordion modal-menu-accordion-title" x-on:click="expanded = !expanded" :aria-expanded="expanded" aria-controls="assoc-menu-text-31640"><span>2016 Pacific Duel</span>
+                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect></svg></button>
+            <div id="accordion-menu-drawer-31640" role="region" aria-labelledby="accordion-menu-title-31640" class="modal-menu-accordion-drawer" :class="expanded ? &#x27;grid-rows-[1fr] opacity-100&#x27; : &#x27;grid-rows-[0fr] opacity-0&#x27;"><div class="overflow-hidden px-2"><div class="div-schedule-links"><a href="/division/0/31640/masterschedule">Schedule</a><a href="/division/0/31640/standings">Standings</a><a href="/division/0/31640/leaders">Leaders</a><a href="/division/0/31640/rosters">Rosters</a></div>
+                    <ul class="flex flex-col mt-0"></ul></div></div></div><div x-data="{ expanded: false }" class="modal-menu-title-container"><button id="accordion-menu-title-34233" type="button" class="modal-menu-accordion modal-menu-accordion-title" x-on:click="expanded = !expanded" :aria-expanded="expanded" aria-controls="assoc-menu-text-34233"><span>2017 Pacific Duel</span>
+                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect></svg></button>
+            <div id="accordion-menu-drawer-34233" role="region" aria-labelledby="accordion-menu-title-34233" class="modal-menu-accordion-drawer" :class="expanded ? &#x27;grid-rows-[1fr] opacity-100&#x27; : &#x27;grid-rows-[0fr] opacity-0&#x27;"><div class="overflow-hidden px-2"><div class="div-schedule-links"><a href="/division/0/34233/masterschedule">Schedule</a><a href="/division/0/34233/standings">Standings</a><a href="/division/0/34233/leaders">Leaders</a><a href="/division/0/34233/rosters">Rosters</a></div>
+                    <ul class="flex flex-col mt-0"></ul></div></div></div><div x-data="{ expanded: false }" class="modal-menu-title-container"><button id="accordion-menu-title-34234" type="button" class="modal-menu-accordion modal-menu-accordion-title" x-on:click="expanded = !expanded" :aria-expanded="expanded" aria-controls="assoc-menu-text-34234"><span>2018 Pacific Duel</span>
+                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect></svg></button>
+            <div id="accordion-menu-drawer-34234" role="region" aria-labelledby="accordion-menu-title-34234" class="modal-menu-accordion-drawer" :class="expanded ? &#x27;grid-rows-[1fr] opacity-100&#x27; : &#x27;grid-rows-[0fr] opacity-0&#x27;"><div class="overflow-hidden px-2"><div class="div-schedule-links"><a href="/division/0/34234/masterschedule">Schedule</a><a href="/division/0/34234/standings">Standings</a><a href="/division/0/34234/leaders">Leaders</a><a href="/division/0/34234/rosters">Rosters</a></div>
+                    <ul class="flex flex-col mt-0"><a target="_parent" href="/team/14795/0/34234/407106/masterschedule" class="modal-submenu-item"><p>Gorillas Hockey Academy</p></a><a target="_parent" href="/team/14795/0/34234/407107/masterschedule" class="modal-submenu-item"><p>Aces Hockey Academy</p></a><a target="_parent" href="/team/14795/0/34234/407108/masterschedule" class="modal-submenu-item"><p>Rebels Hockey Academy</p></a><a target="_parent" href="/team/14795/0/34234/407109/masterschedule" class="modal-submenu-item"><p>Sauce Hockey Academy</p></a><a target="_parent" href="/team/14795/0/34234/407110/masterschedule" class="modal-submenu-item"><p>Bandits</p></a><a target="_parent" href="/team/14795/0/34234/407112/masterschedule" class="modal-submenu-item"><p>Beavers</p></a></ul></div></div></div><div x-data="{ expanded: false }" class="modal-menu-title-container"><button id="accordion-menu-title-39834" type="button" class="modal-menu-accordion modal-menu-accordion-title" x-on:click="expanded = !expanded" :aria-expanded="expanded" aria-controls="assoc-menu-text-39834"><span>2019 Pacific Duel</span>
+                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect>
+                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}"></rect></svg></button>
+            <div id="accordion-menu-drawer-39834" role="region" aria-labelledby="accordion-menu-title-39834" class="modal-menu-accordion-drawer" :class="expanded ? &#x27;grid-rows-[1fr] opacity-100&#x27; : &#x27;grid-rows-[0fr] opacity-0&#x27;"><div class="overflow-hidden px-2"><div class="div-schedule-links"><a href="/division/0/39834/masterschedule">Schedule</a><a href="/division/0/39834/standings">Standings</a><a href="/division/0/39834/leaders">Leaders</a><a href="/division/0/39834/rosters">Rosters</a></div>
+                    <ul class="flex flex-col mt-0"><a target="_parent" href="/team/14795/0/39834/407116/masterschedule" class="modal-submenu-item"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" alt="Calgary Crusaders" id="Calgary Crusaders" class="inline h-5 w-5 m-1" /><p>Calgary Crusaders</p></a><a target="_parent" href="/team/14795/0/39834/407117/masterschedule" class="modal-submenu-item"><p>MOB Hockey</p></a><a target="_parent" href="/team/14795/0/39834/407118/masterschedule" class="modal-submenu-item"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/570ac70c-2b3f-40e7-81a3-11d7c924d049_AB75F072-C7D5-406B-A9ED-FA57388651AB.png" alt="Riggers Hockey Academy" id="Riggers Hockey Academy" class="inline h-5 w-5 m-1" /><p>Riggers Hockey Academy</p></a><a target="_parent" href="/team/14795/0/39834/407119/masterschedule" class="modal-submenu-item"><p>Young Kings Hockey</p></a><a target="_parent" href="/team/14795/0/39834/407120/masterschedule" class="modal-submenu-item"><p>Beavers</p></a><a target="_parent" href="/team/14795/0/39834/407121/masterschedule" class="modal-submenu-item"><p>Bandits</p></a></ul></div></div></div></article>
+                                            </div></div></div></div></div></div><div id="right-topbar" class="flex flew-row justify-between">
+                    <a class="btn-topbar" href="https://www.rampinteractive.com/login" target="_blank"><i data-lucide="circle-user" class="~h-6/7"></i></a></div></div></div></div><section class="user-menu-base"><div class="user-menu-scroll" :style="navStyle"><div class="hidden md:inline z-50"><a href="/"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" alt="Pacific Duel (HSL)" class="user-menu-scroll-logo" :style="logoStyle" /></a></div>
+            <div class="grow md:overflow-hidden content-center" x-data="navMenu()" x-init="init()" x-effect="document.body.style.overflow = mobileOpen ? &#x27;hidden&#x27; : &#x27;&#x27;" x-on:keydown.escape="closeMenus()" x-on:click.outside="closeMenus()"><div class="flex items-center justify-between md:hidden px-2"><div class="inline md:hidden mr-8 md:min-w-24 z-50"><a href="/"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" alt="Pacific Duel (HSL)" class="h-12 z-40 drop-shadow-none shadow-black md:drop-shadow-md md:-my-2 transition-all duration-300" /></a></div>
+                    
+                    <div class="flex"><button id="menu-btn" type="button" class="hamburger md:hidden focus:outline-none" x-on:click="toggleMobileMenu()" aria-label="Toggle menu"><span class="hamburger-top"></span>
+                            <span class="hamburger-mid"></span>
+                            <span class="hamburger-bot"></span></button></div></div>
+                
+                <nav class="hidden md:block content-center"><ul id="user-menu" class="user-menu-scroll-text" :style="linkStyle"><li class="block shrink-0 relative pr-1"><a href="/content/event-rules" target="_self" class="user-menu-item">Tournament Rules</a></li><li id="moreMenuLi" class="block shrink-0 relative pr-1"><button id="moreMenuButton" x-on:click="toggleSubmenu(&#x27;more&#x27;)" class="user-menu-item-more" :aria-expanded="(openMenu === &#x27;more&#x27;).toString()" aria-haspopup="true">More
+                                <svg :class="{ 'rotate-180': openMenu === 'more' }" class="w-4 h-4 ml-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></button></li></ul></nav><div x-show="openMenu === 'more'" x-transition.opacity x-cloak class="user-menu-mega-fullscreen" :class="{'md:top-12 lg:top-16': !scrolledFromTop, 'md:top-10 lg:top-14': scrolledFromTop}"><div class="user-menu-mega-inner"><template x-for="(item, idx) in overflowItems" :key="idx"><div x-html="item" class="whitespace-nowrap"></div></template>
+                        <template x-if="overflowItems.length === 0"><div class="user-menu-item-more">No extra items</div></template></div></div>
+                
+                <div id="mobile-menu" x-show="mobileOpen" x-transition.duration.500ms x-transition.origin.top.left><ul class="user-menu-mobile"><li class="user-menu-item"><a href="/content/event-rules" target="_self">Tournament Rules</a></li></ul></div></div></div></section></header>
+
+    <section id="content-block-section"><block class="content-block-blank"><div class="container"><nav id="breadcrumb" class="~text-[.65rem]/base text-darktone my-2 p-2" aria-label="breadcrumb"><ol class="flex flex-wrap text-right items-right justify-end gap-1"><li class="flex items-center gap-1 group"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-house h-4 group group-hover:text-lighttone transition-all duration-200"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                        <a href="/" class="group group-hover:text-lighttone transition-all duration-200">Home</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-chevron-right h-4"><path d="m9 18 6-6-6-6"></path></svg></li><li class="flex items-center gap-1 group"><a href="/division/0/39834" class="group group-hover:text-lighttone transition-all duration-200">2019 Pacific Duel</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="lucide lucide-chevron-right h-4"><path d="m9 18 6-6-6-6"></path></svg></li><li class="flex items-center gap-1 font-semibold" aria-current="page">Game</li></ol></nav></div></block><block class="content-block-blank mt-8 " style=""><div class="container"><div class="flex flex-row justify-between items-center"><h1 class="content-block-head-title">2019 Pacific Duel</h1></div>
+                <section class="container flex flex-row flex-wrap page-submenu-title"><a href="/division/0/39834/masterschedule" class="user-menu-item">Schedule</a><a href="/division/0/39834/standings" class="user-menu-item">Standings</a><a href="/division/0/39834/leaders" class="user-menu-item">Leaders</a><a href="/division/0/39834/rosters" class="user-menu-item">Rosters</a></section></div></block>
+                    <section id="content-block-section"><block class="content-block-blank  bg-fixed bg-cover" style="background-image:url(&#x27;https://cloud3.rampinteractive.com/_global/hockey/images/assoc-block-background-1.png&#x27;)"><div class="container"><div class="flex flex-col text-center ~text-xs/sm ~my-3/5"><div class="link-game-date-time">Friday, October 2, 2026 @ 10:30 a.m.</div>
+                    <div><i data-lucide="map-pinned" class="inline ~size-3/4 text-lighttone align-middle"></i><a href="http://www.rinkdb.com/v2/view/Canada/AB/MjAx" class="link-rinkdb-text" target="_blank">West Edmonton Mall - Ice Palace</a></div></div>
+
+                <section class="container bg-gradient-to-r from-transparent via-white to-transparent drop-shadow-md"><div class="grid gap-4 grid-cols-3 link-table-game-teamname ~p-4/16"><div class="link-table-game-teamname text-center"><button class="~p-1/3"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-10/20" /></button>
+                <div>Beavers</div>
+                <div>Home </div></div>
+            <div class="flex flex-col justify-between items-center content-center my-auto font-title text-darktone"><div class="block ~text-4xl/6xl">4 - 6</div><div class="game-page-marker game-page-marker-final">Final</div></div>
+            <div class="link-table-game-teamname text-center"><button class="~p-1/3"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-10/20" /></button>
+                <div>Calgary Crusaders</div>
+                <div>Away </div></div></div></section><section class="card-title-above-container card-title-above">Team Breakdown</section>
+    <section class="game-grade-bg" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div x-data="barStat(&#x27;3-2-0-0&#x27;,&#x27;2-2-0-0&#x27;,&#x27;Record&#x27;,55,45)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div>
+        <div x-data="barStat(&#x27;3&#x27;,&#x27;2&#x27;,&#x27;Wins&#x27;,60,40)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div>
+        <div x-data="barStat(&#x27;2&#x27;,&#x27;2&#x27;,&#x27;Losses&#x27;,50,50)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div>
+        <div x-data="barStat(&#x27;0&#x27;,&#x27;0&#x27;,&#x27;Ties&#x27;,50,50)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div>
+        <div x-data="barStat(&#x27;4.00&#x27;,&#x27;4.75&#x27;,&#x27;GF/GP&#x27;,51,49)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div>
+        <div x-data="barStat(&#x27;3.80&#x27;,&#x27;3.75&#x27;,&#x27;GA/GP&#x27;,44,56)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div></section>
+                    <section class="card-title-above-container card-title-above">Game Breakdown</section><section class="game-grade-bg" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div x-data="barStat(&#x27;4&#x27;,&#x27;6&#x27;,&#x27;Goals&#x27;,40,60)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div><div x-data="barStat(&#x27;22&#x27;,&#x27;21&#x27;,&#x27;Shots&#x27;,51,49)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div><div x-data="barStat(&#x27;14&#x27;,&#x27;12&#x27;,&#x27;PIM&#x27;,46,54)" x-intersect.once="animate()" class="my-3"><div class="flex justify-between text-sm font-semibold mb-1"><span x-text="teamA" class="h2h-stats"></span>
+        <span x-text="label" class="h2h-stats"></span>
+        <span x-text="teamB" class="h2h-stats"></span></div>
+    <div class="relative h2h-h h2h-track overflow-hidden"><div class="h2h-bar left-0 bg-lighttones-500" :style="`width: ${widthA}%`"><div class="absolute bg-none aspect-square h-full right-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="10.144 24 24 24 24 0 10.144 24"></polygon></svg></div></div>
+        <div class="h2h-bar right-0 bg-darktone" :style="`width: ${widthB}%`"><div class="absolute bg-none aspect-square h-full left-0">
+                <?xml version="1.0" encoding="UTF-8" ?>
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24"><polygon class="absolute w-full top-0 right-0 bottom-0 left-0 fill-white" points="13.856 0 0 0 0 24 13.856 0"></polygon></svg></div></div></div></div></section>
+                    
+                    <section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Scoring</h1>
+                <div x-data="data()" class="relative md:rounded-lg overflow-x-auto justify-normal text-justify"><table class="w-full table-auto text-center align-middle md:rounded-lg"><thead class="bg-gradient-to-br from-lighttones-700 to-lighttone text-white md:rounded-lg my-2"><th class="table-cell ~px-1/3 ~py-2/4 text-justify" colspan="2">Team</th>
+                        <th class="table-cell ~px-1/3 ~py-2/4">1</th>
+                        <th class="table-cell ~px-1/3 ~py-2/4">2</th>
+                        <th class="table-cell ~px-1/3 ~py-2/4">3</th><th class="table-cell ~px-1/3 ~py-2/4">T</th></thead>
+                        <tbody class="divide-y divide-gray-200 text-center text-darktone ~text-base/lg font-content font-semibold text-pretty" x-ref="tbody"><tr><td><button class="~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline h-10" /></button></td>
+                                <td class="text-justify table-cell ~text-xs/xl align-middle">Beavers</td>
+                                <td class="left-0 min-w-10">2</td>
+                                <td class="text-center px-2">1</td>
+                                <td>1</td><td>4</td></tr>
+                            <tr><td><button class="~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline h-10" /></button></td>
+                                <td class="text-justify table-cell ~text-xs/xl align-middle">Calgary Crusaders</td>
+                                <td class="left-0 min-w-10">1</td>
+                                <td class="text-center px-2">4</td>
+                                <td>1</td><td>6</td></tr></tbody>
+                        <tfoot></tfoot></table></div></div></div></section><section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">
+                    Shots
+                </h1>
+                <div x-data="data()" class="relative md:rounded-lg overflow-x-auto justify-normal text-justify"><table class="w-full table-auto text-center align-middle md:rounded-lg"><thead class="bg-gradient-to-br from-lighttones-700 to-lighttone text-white md:rounded-lg my-2"><th class="table-cell ~px-1/3 ~py-2/4 text-justify" colspan="2">Team</th>
+                        <th class="table-cell ~px-1/3 ~py-2/4">1</th>
+                        <th class="table-cell ~px-1/3 ~py-2/4">2</th>
+                        <th class="table-cell ~px-1/3 ~py-2/4">3</th><th class="table-cell ~px-1/3 ~py-2/4">T</th></thead>
+                        <tbody class="divide-y divide-gray-200 text-center text-darktone ~text-base/lg font-content font-semibold text-pretty" x-ref="tbody"><tr><td><button class="~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline h-10" /></button></td>
+                                <td class="text-justify table-cell ~text-xs/xl align-middle">Beavers</td>
+                                <td class="left-0 min-w-10">5</td>
+                                <td class="text-center px-2">4</td>
+                                <td>13</td><td>22</td></tr>
+                            <tr><td><button class="~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline h-10" /></button></td>
+                                <td class="text-justify table-cell ~text-xs/xl align-middle">Calgary Crusaders</td>
+                                <td class="left-0 min-w-10">8</td>
+                                <td class="text-center px-2">10</td>
+                                <td>3</td><td>21</td></tr></tbody></table></div></div></div></section>
+                    <section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Game Timeline</h1><h2 class="card-subtitle-table">Period 1</h2><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title">Conor Smith</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">12:08</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Hooking</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#16 Owen Roberts (1)
+</div><div><span class="goal">Goal</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">10:02</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (0)</div>
+                                                    <div class="font-bold">Calgary Crusaders (1)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title">Mack Downey</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">05:56</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Trip</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title"> (1)
+</div><div><span class="goal">Goal</span><span class="goal">SHG</span></div><div class="game-summary-card-subtitle"><span> (1)</span>, <span> (1)</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">04:55</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (1)</div>
+                                                    <div class="font-normal">Calgary Crusaders (1)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title"> (2)
+</div><div><span class="goal">Goal</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">01:31</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-bold">Beavers (2)</div>
+                                                    <div class="font-normal">Calgary Crusaders (1)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#10 Ryder Gotch</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">00:53</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Interference</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title">Mack Downey</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">00:31</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Holding Minor</div></div></div></div></div><h2 class="card-subtitle-table">Period 2</h2><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title">Arsenio Du</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">14:42</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Slash Minor</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#10 Ryder Gotch (1)
+</div><div><span class="goal">Goal</span><span class="goal">PPG</span></div><div class="game-summary-card-subtitle"><span>#19 Elias Morianos (1)</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">13:37</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (2)</div>
+                                                    <div class="font-normal">Calgary Crusaders (2)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#89 Ladd Periard (1)
+</div><div><span class="goal">Goal</span></div><div class="game-summary-card-subtitle"><span>#34 Owen Brito (1)</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">12:15</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (2)</div>
+                                                    <div class="font-bold">Calgary Crusaders (3)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title">Jeffery Xue</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">10:01</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Cross Check Minor</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#89 Ladd Periard (2)
+</div><div><span class="goal">Goal</span><span class="goal">PPG</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">09:02</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (2)</div>
+                                                    <div class="font-bold">Calgary Crusaders (4)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#88 Carson Taylor</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">07:20</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Holding Stick</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title">Max Duval</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">05:31</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Trip</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#11 Bodie Patterson (1)
+</div><div><span class="goal">Goal</span><span class="goal">PPG</span><span class="goal-team">GWG</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">04:02</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (2)</div>
+                                                    <div class="font-bold">Calgary Crusaders (5)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title"> (3)
+</div><div><span class="goal">Goal</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">03:02</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (3)</div>
+                                                    <div class="font-bold">Calgary Crusaders (5)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#89 Ladd Periard</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">00:20</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Slash Minor</div></div></div></div></div><h2 class="card-subtitle-table">Period 3</h2><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title"> (1)
+</div><div><span class="goal">Goal</span><span class="goal">PPG</span></div><div class="game-summary-card-subtitle"><span> (1)</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">14:13</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (4)</div>
+                                                    <div class="font-bold">Calgary Crusaders (5)</div></div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-home"><div class="title">Home</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Beavers</div><div class="game-summary-card-title">Yuvraj Tamber</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">12:25</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Rough</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#10 Ryder Gotch</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">11:36</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Trip</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#88 Carson Taylor</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">05:20</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Hooking</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="justify-between flex flex-row"><div><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#16 Owen Roberts</div></div>
+                                                    <div class="game-penalty">2:00</div></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">03:49</div></div>
+                                            <div class="box"><div class="header">Penalty</div>
+                                                <div class="time">Charging Minor</div></div></div></div></div><div class="game-summary-card"><div class="game-home-away game-away"><div class="title">Away</div></div><div class="game-summary-card-inner"><div class="flex text-darktone ~text-sm/base font-content text-pretty"><div class="content-center my-auto ~p-1/2"><img src="https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png" class="inline ~h-8/12" /></div>
+                                            <div class="grow text-justify content-center my-auto"><div class="game-summary-card-subtitle">Calgary Crusaders</div><div class="game-summary-card-title">#11 Bodie Patterson (2)
+</div><div><span class="goal">Goal</span></div></div></div>
+                                        <div class="game-summary-card-goal"><div class="box"><div class="header">Time</div>
+                                                <div class="time">00:00</div></div>
+                                            <div class="box"><div class="header">Score</div>
+                                                <div class="current-score"><div class="font-normal">Beavers (4)</div>
+                                                    <div class="font-bold">Calgary Crusaders (6)</div></div></div></div></div></div></div></div></section><section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Beavers</h1>
+
+                <div class="flex flex-col p-4 leading-normal"><div x-data="data()" class="relative rounded-lg overflow-x-auto justify-normal text-justify"><table class="w-full table-auto text-center align-middle rounded-lg"><thead class="bg-gray-200 rounded-lg my-2"><tr><th class="sticky sticky-head cursor-pointer select-none ~px-1/3 ~py-2/4 text-left">#</th>
+                                    <th class="sticky sticky-head cursor-pointer select-none ~px-1/3 ~py-2/4 text-left">Name</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">G</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">A</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">PTS</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">PIM</th></tr></thead>
+                            <tbody class="divide-y divide-gray-200 text-center text-darktone ~text-base/lg font-content font-semibold text-pretty" x-ref="tbody"></tbody></table></div></div></div></div></section>
+                        
+                        <section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Calgary Crusaders</h1>
+
+                <div class="flex flex-col p-4 leading-normal"><div x-data="data()" class="relative rounded-lg overflow-x-auto justify-normal text-justify"><table class="w-full table-auto text-center align-middle rounded-lg"><thead class="bg-gray-200 rounded-lg my-2"><tr><th class="sticky sticky-head cursor-pointer select-none ~px-1/3 ~py-2/4 text-left">#</th>
+                                    <th class="sticky sticky-head cursor-pointer select-none ~px-1/3 ~py-2/4 text-left">Name</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">G</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">A</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">PTS</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">PIM</th></tr></thead>
+                            <tbody class="divide-y divide-gray-200 text-center text-darktone ~text-base/lg font-content font-semibold text-pretty" x-ref="tbody"><tr><td class="font-bold">89</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121209" class="link-table-td">
+                                                Ladd Periard</a></td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">2</td>
+                                        <td>2</td></tr><tr><td class="font-bold">11</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121295" class="link-table-td">
+                                                Bodie Patterson</a></td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">2</td>
+                                        <td>0</td></tr><tr><td class="font-bold">16</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121275" class="link-table-td">
+                                                Owen Roberts</a></td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">1</td>
+                                        <td>2</td></tr><tr><td class="font-bold">10</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121195" class="link-table-td">
+                                                Ryder Gotch</a></td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">1</td>
+                                        <td>4</td></tr><tr><td class="font-bold">98</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121180" class="link-table-td">
+                                                Mason MacDonald</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">9</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121313" class="link-table-td">
+                                                Doc Desmet</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">88</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121219" class="link-table-td">
+                                                Carson Taylor</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>4</td></tr><tr><td class="font-bold">8</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121274" class="link-table-td">
+                                                Rylan Geeraert</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">71</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121227" class="link-table-td">
+                                                Cohen Waltho</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">34</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121179" class="link-table-td">
+                                                Owen Brito</a></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td class="bg-gray-200">1</td>
+                                        <td>0</td></tr><tr><td class="font-bold">31</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121273" class="link-table-td">
+                                                Colton Butt</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">20</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121178" class="link-table-td">
+                                                Finnley Nitchie</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">19</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121208" class="link-table-td">
+                                                Elias Morianos</a></td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td class="bg-gray-200">1</td>
+                                        <td>0</td></tr><tr><td class="font-bold">18</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121286" class="link-table-td">
+                                                Isaac Pannekoek</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">17</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121276" class="link-table-td">
+                                                Denver Gagnon</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">13</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121175" class="link-table-td">
+                                                Walker Snell</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr><tr><td class="font-bold">1</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121223" class="link-table-td">
+                                                rokko gyenis</a></td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td class="bg-gray-200">0</td>
+                                        <td>0</td></tr></tbody></table></div></div></div></div></section>
+                        <section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Calgary Crusaders</h1>
+
+                <div class="flex flex-col p-4 leading-normal"><div x-data="data()" class="relative rounded-lg overflow-x-auto justify-normal text-justify"><table class="w-full table-auto text-center align-middle rounded-lg"><thead class="bg-gray-200 rounded-lg my-2"><tr><th class="sticky sticky-head cursor-pointer select-none ~px-1/3 ~py-2/4 text-left">#</th>
+                                    <th class="sticky sticky-head cursor-pointer select-none ~px-1/3 ~py-2/4 text-left">Name</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">MP</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">GA</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">Shots</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">Saves</th>
+                                    <th class="cursor-pointer select-none ~px-1/3 ~py-2/4">Sav%</th></tr></thead>
+                            <tbody class="divide-y divide-gray-200 text-center text-darktone ~text-base/lg font-content font-semibold text-pretty" x-ref="tbody"><tr><td class="font-bold">1</td>
+                                        <td class="sticky sticky-shade text-left px-2"><a href="/team/14795/0/39834/407116/player/5121223" class="link-table-td">
+                                                rokko gyenis</a></td>
+                                        <td>45:00</td>
+                                        <td>4</td>
+                                        <td>22</td>
+                                        <td>18</td>
+                                        <td class="bg-gray-200">0.82</td></tr></tbody></table></div></div></div></div></section><section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Beavers  Staff</h1>
+                <div class="ramp-grid-cols-1-2-3 items-center justify-center gap-4"><section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Erik Kilburn</h1>
+                                    <table class="table-fixed w-full mx-auto"><thead></thead>
+                                        <tbody class="divide-y-2 divide-gray-100"><tr class="w-full table-row"><td class="text-center md:text-left ~text-base/lg font-content font-semibold text-slate-400">Manager</td></tr></tbody></table></div></div></section><section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Trevor Penrose</h1>
+                                    <table class="table-fixed w-full mx-auto"><thead></thead>
+                                        <tbody class="divide-y-2 divide-gray-100"><tr class="w-full table-row"><td class="text-center md:text-left ~text-base/lg font-content font-semibold text-slate-400">Head Coach</td></tr></tbody></table></div></div></section></div></div></div></section>
+                    <section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Calgary Crusaders  Staff</h1>
+                <div class="ramp-grid-cols-1-2-3 items-center justify-center gap-4"><section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Bryn Gagnon</h1>
+                                    <table class="table-fixed w-full mx-auto"><thead></thead>
+                                        <tbody class="divide-y-2 divide-gray-100"><tr class="w-full table-row"><td class="text-center md:text-left ~text-base/lg font-content font-semibold text-slate-400">Assistant Coach<br>
+                                                            <span x-data="{ revealed: false, email: atob(&#x27;YnJ5bi5nYWdub25AZ21haWwuY29t&#x27;) }"><a x-show="revealed" :href="'mailto:' + email" x-text="email"></a>
+        <a x-show="!revealed" x-on:click="revealed = true" class="cursor-pointer" title="Click to Reveal">b&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;@&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;</a></span><br>
+                                                            <span x-data="{ revealed: false, phone: atob(&#x27;NDAzLTQ5My03Nzgw&#x27;) }"><span x-show="revealed" x-text="phone"></span>
+        <span x-show="!revealed" x-on:click="revealed = true" class="cursor-pointer" title="Click to Reveal">
+            (•••) ••• ••••
+        </span></span></td></tr></tbody></table></div></div></section><section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Jamie Taylor</h1>
+                                    <table class="table-fixed w-full mx-auto"><thead></thead>
+                                        <tbody class="divide-y-2 divide-gray-100"><tr class="w-full table-row"><td class="text-center md:text-left ~text-base/lg font-content font-semibold text-slate-400">Assistant Coach<br>
+                                                            <span x-data="{ revealed: false, email: atob(&#x27;amFtaWV0QGphbWlldGF5bG9yODEuY29t&#x27;) }"><a x-show="revealed" :href="'mailto:' + email" x-text="email"></a>
+        <a x-show="!revealed" x-on:click="revealed = true" class="cursor-pointer" title="Click to Reveal">j&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;@&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;</a></span><br>
+                                                            <span x-data="{ revealed: false, phone: atob(&#x27;NDAzNDA0NjY5NA==&#x27;) }"><span x-show="revealed" x-text="phone"></span>
+        <span x-show="!revealed" x-on:click="revealed = true" class="cursor-pointer" title="Click to Reveal">
+            (•••) ••• ••••
+        </span></span></td></tr></tbody></table></div></div></section><section class="card-title-container" x-intersect="$el.classList.add(&#x27;scale-up&#x27;,&#x27;fade-in-up&#x27;)"><div class="flex flex-col p-4 leading-normal"><div class="justify-normal text-justify"><h1 class="card-title-table">Matt Gotch</h1>
+                                    <table class="table-fixed w-full mx-auto"><thead></thead>
+                                        <tbody class="divide-y-2 divide-gray-100"><tr class="w-full table-row"><td class="text-center md:text-left ~text-base/lg font-content font-semibold text-slate-400">Manager<br>
+                                                            <span x-data="{ revealed: false, email: atob(&#x27;bWF0dC5nb3RjaEBmb3JlbW9zdC5jYQ==&#x27;) }"><a x-show="revealed" :href="'mailto:' + email" x-text="email"></a>
+        <a x-show="!revealed" x-on:click="revealed = true" class="cursor-pointer" title="Click to Reveal">m&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;@&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;</a></span><br>
+                                                            <span x-data="{ revealed: false, phone: atob(&#x27;NDAzODUyMTc5NQ==&#x27;) }"><span x-show="revealed" x-text="phone"></span>
+        <span x-show="!revealed" x-on:click="revealed = true" class="cursor-pointer" title="Click to Reveal">
+            (•••) ••• ••••
+        </span></span></td></tr></tbody></table></div></div></section></div></div></div></section></div></block></section></section>
+<footer class="bg-[url(&#x27;../images/desktop/footer-background.jpg&#x27;)]" style="background-image:url(&#x27;https://cloud3.rampinteractive.com/_global/hockey/images/footer-background.jpg&#x27;)"><div class="footer-inner"><div class="~py-2/4w-full text-xs sm:~text-xs/sm sm:border-none md:~text-xs/base order-3 sm:order-2"><p></p><p>&#xA9; 2026 Pacific Duel. All Rights Reserved.</p></div>
+            <div class="~py-2/4w-full text-xs sm:~text-xs/sm sm:border-none md:~text-xs/base order-4 md:order-3"></div><div class="flex flex-row w-full ~py-2/4 ~gap-1/4 md:items-end md:justify-end md:text-right order-2 sm:order-3 md:order-4"><a href="https://twitter.com/pacificduel?s=11&amp;amp;amp;t=eB1DY5vD1VDX_8-ah8QJgQ" target="_blank" class="btn-social-media-sm"><i data-lucide="twitter" class="~h-6/7"></i></a><a href="https://www.instagram.com/pacificduel/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank" class="btn-social-media-sm"><i data-lucide="instagram" class="~h-6/7"></i></a></div></div>
+        </footer>
+<section id="ramp-footer-block"><div class="w-full bg-lighttone grade-dark-down bg-blend-overlay bg-cover"><div class="flex flex-row container justify-between w-full mx-auto ~p-2/3"><div>&#xA9; All Rights Reserved. 2026 RAMP InterActive</div>
+                <div>
+                    powered by
+                    <a href="https://www.rampinteractive.com" target="_blank"><img src="https://cloud3.rampinteractive.com/_global/ramp-logo-main-26.svg" alt="powered by RAMP" /></a></div></div></div></section>
+<script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="_framework/blazor.web.js"></script>
+    <script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="/js/circuitStaleness.js"></script><script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.14.9/dist/cdn.min.js" integrity="sha384-eA6&#x2B;k1peuuIgxPHwWoQHx6OoDZ7hFJ&#x2B;SKfMOhop5&#x2B;zMV4SWR5OWBMatbIdoqA4lZ" crossorigin="anonymous" defer></script>
+    <script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js" integrity="sha384-9Ax3MmS9AClxJyd5/zafcXXjxmwFhZCdsT6HJoJjarvCaAkJlk5QDzjLJm&#x2B;Wdx5F" crossorigin="anonymous" defer></script>
+    <script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js" integrity="sha384-TNfplqKj5j5vXPfD9WVi9CLTDFI8iOx7&#x2B;dbb1jRJD4K6phG1lw/MCYz2K/siy0FW" crossorigin="anonymous"></script>
+    <script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1.0.22" type="module" integrity="sha384-E7dy6eN&#x2B;cKffMM/2&#x2B;QF5MMP1q8KS0AT4IlmT4v3mG2mNZ7ISeLRPdlHrlWJK/8yx" crossorigin="anonymous"></script>
+    <script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="/js/jscript.js?v=1.20"></script>
+    <script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="/js/staticnav.js?v=1.2"></script>
+    <script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=" src="/js/marquee-slider.js?v=1.1"></script>
+    <script nonce="eI19ToUAMVUc0vNR9mWv&#x2B;62TFsPpp3IWWC4MHsZt7yU=">lucide.createIcons();</script></body></html><!--Blazor-Server-Component-State:CfDJ8P3cl91WQGVPgfDUqtv36uuaRHP7xxvJMLvG154mG//5CuWIoZHBjltLRSnStUNunHUnhEbDEGsb80uCzVRuiDUSy1T02a8W2rdN1CT55irvgocHI0fnImUooLw10AI9WZsyubFk/+Wo/kVWqPtG4nTVwrHR1au8s6yDjpVYsg1luUq37RqrRQGq7ZhYRvwqlH5OOyUS6fJXxJbAdtHJi0Dx9RiCBMufF0DE/MNTkSHr2F2nhCKKnmStYWnOMFEyaBdf9pz++m6uws7rr/s4W6hJtyE/3ckod+qrDRZRTYCDXl/fL17AbrCk394+TUBO1qe0jAr4TduSmQjwzto7I+U1WOvxfWznW96sjNRkBISTyaTBOaRfHUmNasGvtxLs3hnSiB2eEA66hbIbkYxKx+hnlNTrFblV6r+hUg2DnYYImAeOAgiei/Rh2z5H0YERp9ydAXtM3QVwRgYCeVPvo4ASaXgSez50VcwDXIYJP7zwtsj+2ltE0miL0gPmNikK2u7lLhxr1Wc5zPp5hmsEYwQ0DdT28FNxIRBm8eXZSvLslq9MY4D4fcyqPCVu5zFbY++4lYUR/gI+F7jYICSw4CgHTO2peifUFBno8CZoVwxN0iU5LHe6W3LN/4034jjwUaL4k8syPlQ2euV8GDpiepg97dcId/LWaChQOOK0G7swBE/C+WQoSpT5N4B/nHWA3vOAvu4NvtnEjo8mssIZQnwejFCkJwdSC3VuxomDWO7DMzCEqVAkB21RU3ZM95Mb3sVut0EP2Inrh+pZHvHPJd/Ubgx8KtlydGXna4VfaDabsSR/Gd3mt+KZ++93FN1kx/FocIzpn/9DJXjjY92xDrzbnwnzLGUDnsAfL5R1/ZYnzzvNzHNad4k+a5il/k2QF1FGeYBbmR79NsW4EAR2Nt+BSKrttBE1BPeaiy/c5s5tt/9XUTqu2xkEnle36pL6DWByOmFvkZ8RI8c2YBBWNHX7JC3DYKtHczjBWqWzqVQKV0VT2jKogvUSG1XX5yeWRmmL5cINn2+LAk96fHTJ9IXzFmPVZU4FOGVL9DMt2vtFT8bsCDBr9ZS8vR1YgTozAQXyhKj+iu/IozCSJYqQgbdOP359d2caM/SqmdGHd5IUSugd7WWK2rl9TGiyJ9MlCg==-->

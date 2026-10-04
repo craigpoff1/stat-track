@@ -1,0 +1,516 @@
+{
+ "id": "2034538",
+ "dateText": "Saturday, October 3, 2026 @ 9:30 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "407118",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/570ac70c-2b3f-40e7-81a3-11d7c924d049_AB75F072-C7D5-406B-A9ED-FA57388651AB.png",
+  "score": 5
+ },
+ "away": {
+  "name": "Beavers",
+  "teamId": "n:beavers",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 3
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:53",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "20",
+    "name": "Merrick Pobuda"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:37",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Kasen Leard"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:20",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Yuvraj Tamber"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:26",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Sebastian Enns"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:22",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Brody Wilkes"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:06",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:55",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Brody Wilkes"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:19",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "minutes": 2,
+   "infraction": "Bench / Too Many Players"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:46",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Cabot Doucet"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:46",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Braydon Nishi"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:56",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "89",
+    "name": "Spencer Priddle"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:46",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:14",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Kasen Leard"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Brody Wilkes"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:56",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:07",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Hayes Kaiser"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Owen Yuskow"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:57",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:18",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Kasen Leard"
+   },
+   "assists": [],
+   "tags": [
+    "Empty Net Goal"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121202",
+   "number": "17",
+   "name": "Kasen Leard",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121280",
+   "number": "13",
+   "name": "Kash Bala",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121221",
+   "number": "9",
+   "name": "Hayes Kaiser",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121289",
+   "number": "98",
+   "name": "Cabot Doucet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121193",
+   "number": "91",
+   "name": "Noah Kaiser",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121201",
+   "number": "89",
+   "name": "Spencer Priddle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121220",
+   "number": "88",
+   "name": "Braxton Wagner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121282",
+   "number": "82",
+   "name": "Avery Sahnan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121288",
+   "number": "8",
+   "name": "Jones Brezinski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121281",
+   "number": "77",
+   "name": "Henry Olineck",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121169",
+   "number": "71",
+   "name": "Owen Yuskow",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121204",
+   "number": "29",
+   "name": "Oliver Rook",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121198",
+   "number": "20",
+   "name": "Merrick Pobuda",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121171",
+   "number": "19",
+   "name": "Logan Rumley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121259",
+   "number": "11",
+   "name": "Brody Wilkes",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121203",
+   "number": "1",
+   "name": "Ryan Roth",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407118",
+   "playerId": "5121203",
+   "number": "1",
+   "name": "Ryan Roth",
+   "seconds": 2700,
+   "ga": 3,
+   "shots": 17,
+   "saves": 14
+  }
+ ],
+ "warnings": [
+  "away: no box score on the sheet (team identified by name)",
+  "away: box score has 0 goals, final is 3"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 5,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 2
+  }
+ ],
+ "start": "2026-10-03T09:30:00",
+ "gameNumber": 8,
+ "playoff": false,
+ "fetchedAt": "2026-10-04T16:39:07.999Z"
+}
