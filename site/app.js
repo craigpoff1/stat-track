@@ -179,7 +179,7 @@
 
   // ------------------------------------------------------------ charts
   function gdChart(el, myId) {
-    const rows = [...S.teams].sort((a, b) => b.diff - a.diff);
+    const rows = S.teams.map(D().teamOf).sort((a, b) => b.diff - a.diff);
     mount(el, (w) => {
       const rh = 30, top = 18, lab = 44, H = top + rows.length * rh + 4;
       const mx = Math.max(1, ...rows.map((t) => Math.abs(t.diff))), x = lin(-mx, mx, lab + 30, w - 30);
@@ -224,7 +224,7 @@
   }
 
   function stChart(el, myId) {
-    const withData = S.teams.filter((t) => t.ppPct != null && t.pkPct != null);
+    const withData = S.teams.map(D().teamOf).filter((t) => t.ppPct != null && t.pkPct != null);
     const avg = (k) => withData.reduce((n, t) => n + t[k], 0) / (withData.length || 1);
     mount(el, (w) => {
       if (!withData.length) return '<div class="empty">No penalties yet</div>';
@@ -739,24 +739,28 @@
     </section>`;
   }
 
+  // The Division table is the official league table (always league-only); the stat panels below it
+  // follow the tournament toggle (TA = toggle-aware team totals).
   function viewStandings() {
-    const periods = [...new Set(S.teams.flatMap((t) => Object.keys(t.gfByPeriod)))].sort();
+    const TA = S.teams.map(D().teamOf);
+    const periods = [...new Set(TA.flatMap((t) => Object.keys(t.gfByPeriod)))].sort();
     after(() => {
       sortable($('#standings'), S.teams, standingsCols(true), { key: 'rank', dir: 1, rowCls: mineRow });
       gdChart($('#gd'), myTeamId());
       stChart($('#st'), myTeamId());
-      timingChart($('#heat'), { up: { label: 'Goals scored', color: 'var(--blue)', goals: S.games.flatMap((g) => g.ev.filter((e) => e.type === 'goal')) }, notes: $('#heat-notes') });
-      sortable($('#special'), S.teams, [
+      timingChart($('#heat'), { up: { label: 'Goals scored', color: 'var(--blue)', goals: D().games.flatMap((g) => g.ev.filter((e) => e.type === 'goal')) }, notes: $('#heat-notes') });
+      sortable($('#special'), TA, [
         { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
         { key: 'ppg', label: 'PPG', val: (t) => t.ppg }, { key: 'ppo', label: 'PPO', val: (t) => t.ppo, title: 'Power-play opportunities' },
         { key: 'pp', label: 'PP%', val: (t) => t.ppPct, html: (t) => `<span class="pts" style="font-size:16px">${pct(t.ppPct)}</span>` },
         { key: 'tsh', label: 'TSH', cls: 'hm', val: (t) => t.tsh, title: 'Times shorthanded' }, { key: 'ppga', label: 'PPGA', cls: 'hm', val: (t) => t.ppga },
         { key: 'pk', label: 'PK%', val: (t) => t.pkPct, html: (t) => `<span class="pts" style="font-size:16px">${pct(t.pkPct)}</span>` },
+        { key: 'pim', label: 'PIM', val: (t) => t.pim, title: 'Team penalty minutes' },
         { key: 'shg', label: 'SHG', cls: 'hm', val: (t) => t.shg }, { key: 'sf', label: 'SF', cls: 'hm', val: (t) => t.sf, title: 'Shots for' },
         { key: 'sa', label: 'SA', cls: 'hm', val: (t) => t.sa, title: 'Shots against' },
         { key: 'sv', label: 'SV%', val: (t) => t.svPct, html: (t) => rate(t.svPct), title: 'Team save %' },
       ], { key: 'pp', rowCls: mineRow });
-      sortable($('#periods'), S.teams, [
+      sortable($('#periods'), TA, [
         { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
         ...periods.flatMap((p) => [
           { key: 'f' + p, label: `P${p} GF`, val: (t) => t.gfByPeriod[p] || 0 },
@@ -766,7 +770,8 @@
     });
     return `
       <div class="ptitle"><div><div class="k">${esc(S.meta.season)} · ${esc(S.meta.division)}</div><h1>Standings</h1><div class="s">2 pts win · 1 pt tie · tap any column to sort</div></div></div>
-      <div style="margin-bottom:18px">${panel('Division', '<div class="tw"><table id="standings"></table></div>', { gold: true, meta: `${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final` })}</div>
+      <div style="margin-bottom:18px">${panel('Division', '<div class="tw"><table id="standings"></table></div>', { gold: true, meta: `${incT() && DS?.all.tCount ? 'League games only · ' : ''}${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final` })}</div>
+      ${incNote()}
       <div class="grid g-6-6">
         ${panel('Goal differential', '<div class="pb"><div class="chart" id="gd"></div></div>', { meta: 'GF − GA' })}
         ${panel('Special teams', '<div class="pb"><div class="chart" id="st"></div></div>', { meta: 'PP% × PK%' })}

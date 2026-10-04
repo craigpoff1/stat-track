@@ -30,8 +30,9 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
 - **Datasets:** the "Include tournament games" toggle must change *every* stat/insight, so read
   through `D()`: `D().games`, `D().players`, `D().skaters`, `D().playerOf(id)`, `D().goalies`,
   `D().goalieOf(id)`, `D().finalsOf(teamId)` (results lists), and `D().teamOf(team)` for team totals
-  incl. W-L-T, home/away, `results`, streak (ranks/averages via `S.teams.map(D().teamOf)`). Only league
-  standings, points/rank, weekend recaps and firsts stay league-only (`S.teams`, `t.pts`, `t.rank`). Tournament goalie totals are built
+  incl. W-L-T, home/away, `results`, streak (ranks/averages via `S.teams.map(D().teamOf)`). Only the official
+  Division standings table, points/rank, weekend recaps and firsts stay league-only (`S.teams`, `t.pts`,
+  `t.rank`); the Standings page stat panels below the table follow the toggle. Tournament goalie totals are built
   server-side (`goaliesInclTournaments`, same sheet checks) because goalie validation lives in build.
 - Team/league separation: Team section = selected team only; League tabs = league-wide; Tournaments =
   its own section. Ask before mixing.
