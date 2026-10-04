@@ -618,10 +618,10 @@
   // ------------------------------------------------------------ shared blocks
   function hero(t, { action = '' } = {}) {
     // points/record/rank stay league-only; the analytics tiles (A) follow the tournament toggle
-    const A = D().teamOf(t);
+    const A = D().teamOf(t), R = divOf(t.id); // R: rank/points matching the Division table
     const diffRank = S.teams.map(D().teamOf).sort((a, b) => b.diff - a.diff).findIndex((x) => x.id === t.id) + 1;
     const stats = [
-      ['Points', counter(t.pts), `${pct(t.ptsPct, 0)} pts%`],
+      ['Points', counter(R.pts), `${pct(R.ptsPct, 0)} pts%`],
       ['Goals for', counter(A.gf), `${A.gfPerGame.toFixed(2)} / game`],
       ['Goals against', counter(A.ga), `${A.gaPerGame.toFixed(2)} / game`],
       ['Differential', counter(A.diff, 'sign'), `${ordinal(diffRank)} in division`],
@@ -630,8 +630,8 @@
     ];
     return `<section class="hero" data-reveal>
       ${action ? `<div class="act">${action}</div>` : ''}
-      <div class="plate wipe">${logo(t)}<div><div class="rk">#${t.rank} in division${A.streak ? ' · ' + esc(A.streak) : ''}</div><h1>${esc(t.name)}</h1>
-      <div class="rec"><b>${A.w}-${A.l}-${A.t}</b>${A.tGames ? ` <small>incl. tournaments · league ${t.w}-${t.l}-${t.t}</small>` : ''} &nbsp;·&nbsp; ${t.pts} PTS &nbsp;·&nbsp; Home ${A.home.w}-${A.home.l}-${A.home.t} &nbsp;·&nbsp; Away ${A.away.w}-${A.away.l}-${A.away.t}</div></div></div>
+      <div class="plate wipe">${logo(t)}<div><div class="rk">#${R.rank} in division${A.streak ? ' · ' + esc(A.streak) : ''}</div><h1>${esc(t.name)}</h1>
+      <div class="rec"><b>${A.w}-${A.l}-${A.t}</b>${A.tGames ? ` <small>incl. tournaments · league ${t.w}-${t.l}-${t.t}</small>` : ''} &nbsp;·&nbsp; ${R.pts} PTS &nbsp;·&nbsp; Home ${A.home.w}-${A.home.l}-${A.home.t} &nbsp;·&nbsp; Away ${A.away.w}-${A.away.l}-${A.away.t}</div></div></div>
       <div class="stats">${stats.map(([l, v, s]) => `<div class="st"><span class="l">${l}</span><span class="v">${v}</span><span class="s">${s}</span></div>`).join('')}</div>
     </section>`;
   }
@@ -666,6 +666,10 @@
       { key: 't', label: 'T', cls: full ? '' : 'hm hm2', val: (t) => t.t },
       { key: 'pts', label: 'PTS', val: (t) => t.pts, html: (t) => `<span class="pts">${t.pts}</span>` },
       { key: 'gf', label: 'GF', cls: 'hm', val: (t) => t.gf }, { key: 'ga', label: 'GA', cls: 'hm', val: (t) => t.ga },
+      ...(full ? [
+        { key: 'gfpg', label: 'GF/GP', cls: 'hm', val: (t) => (t.gp ? t.gf / t.gp : null), html: (t) => (t.gp ? (t.gf / t.gp).toFixed(1) : '—'), title: 'Goals for per game' },
+        { key: 'gapg', label: 'GA/GP', cls: 'hm', val: (t) => (t.gp ? t.ga / t.gp : null), html: (t) => (t.gp ? (t.ga / t.gp).toFixed(1) : '—'), title: 'Goals against per game' },
+      ] : []),
       { key: 'diff', label: 'DIFF', val: (t) => t.diff, html: (t) => `<span class="${t.diff > 0 ? 'pos' : t.diff < 0 ? 'neg' : ''}">${sign(t.diff)}</span>` },
       ...(full ? [
         { key: 'hm', label: 'Home', cls: 'hm', val: (t) => t.home.w * 2 + t.home.t, html: (t) => `${t.home.w}-${t.home.l}-${t.home.t}` },
@@ -676,6 +680,7 @@
       ...(full ? [
         { key: 'sv', label: 'SV%', cls: 'hm', val: (t) => t.svPct, html: (t) => rate(t.svPct), title: 'Team save %' },
         { key: 'pim', label: 'PIM', cls: 'hm', val: (t) => t.pim, title: 'Team penalty minutes' },
+        { key: 'pimpg', label: 'PIM/GP', val: (t) => (t.gp ? t.pim / t.gp : null), html: (t) => (t.gp ? (t.pim / t.gp).toFixed(1) : '—'), title: 'Penalty minutes per game' },
       ] : []),
       { key: 'l5', label: 'L5', sort: false, val: (t) => t.last5, html: (t) => L5(t.last5) },
     ];
@@ -739,13 +744,24 @@
     </section>`;
   }
 
-  // The Division table is the official league table (always league-only); the stat panels below it
-  // follow the tournament toggle (TA = toggle-aware team totals).
+  // Division rows: official league table, or (toggle on) re-ranked on records incl. tournament games.
+  // Team pages and scouting use divOf() so their rank/points always match this table.
+  function divRows() {
+    if (!(incT() && DS?.all.tCount)) return S.teams;
+    return S.teams.map(D().teamOf).map((t) => ({ ...t, pts: t.w * 2 + t.t, ptsPct: t.gp ? (t.w * 2 + t.t) / (t.gp * 2) : 0, last5: t.results.slice(-5).map((r) => r.r).join('') }))
+      .sort((a, b) => b.pts - a.pts || b.w - a.w || b.diff - a.diff || b.gf - a.gf || a.name.localeCompare(b.name))
+      .map((t, i) => ({ ...t, rank: i + 1 }));
+  }
+  const divOf = (id) => divRows().find((t) => String(t.id) === String(id)) || teamById.get(String(id));
+  // Everything follows the tournament toggle (TA = toggle-aware team totals). With it on, the Division
+  // table re-ranks on records incl. tournament games and says it is not the official league table.
   function viewStandings() {
     const TA = S.teams.map(D().teamOf);
+    const incOn = incT() && !!DS?.all.tCount;
+    const div = divRows();
     const periods = [...new Set(TA.flatMap((t) => Object.keys(t.gfByPeriod)))].sort();
     after(() => {
-      sortable($('#standings'), S.teams, standingsCols(true), { key: 'rank', dir: 1, rowCls: mineRow });
+      sortable($('#standings'), div, standingsCols(true), { key: 'rank', dir: 1, rowCls: mineRow });
       gdChart($('#gd'), myTeamId());
       stChart($('#st'), myTeamId());
       timingChart($('#heat'), { up: { label: 'Goals scored', color: 'var(--blue)', goals: D().games.flatMap((g) => g.ev.filter((e) => e.type === 'goal')) }, notes: $('#heat-notes') });
@@ -778,8 +794,8 @@
     });
     return `
       <div class="ptitle"><div><div class="k">${esc(S.meta.season)} · ${esc(S.meta.division)}</div><h1>Standings</h1><div class="s">2 pts win · 1 pt tie · tap any column to sort</div></div></div>
-      <div style="margin-bottom:18px">${panel('Division', '<div class="tw"><table id="standings"></table></div>', { gold: true, meta: `${incT() && DS?.all.tCount ? 'League games only · ' : ''}${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final` })}</div>
       ${incNote()}
+      <div style="margin-bottom:18px">${panel('Division', `<div class="tw"><table id="standings"></table></div>${incOn ? '<div class="note">Includes tournament games, so this is not the official league table. Turn the toggle off for official standings.</div>' : ''}`, { gold: true, meta: incOn ? 'Incl. tournament games' : `${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final` })}</div>
       <div class="grid g-6-6">
         ${panel('Goal differential', '<div class="pb"><div class="chart" id="gd"></div></div>', { meta: 'GF − GA' })}
         ${panel('Special teams', '<div class="pb"><div class="chart" id="st"></div></div>', { meta: 'PP% × PK%' })}
@@ -1370,7 +1386,7 @@
     return `
       <div class="ptitle"><div><div class="k">Scouting report · ${d.self ? 'self-scout' : d.nextMeet ? `next opponent · ${esc(my.short)} ${String(d.nextMeet.home) === me ? 'home' : 'away'}` : 'opponent'} · ${n} GP</div>
         <h1 class="sc-h1">${logo(t)}${esc(t.name)}</h1>
-        <div class="s">${ordinal(t.rank)} · ${rec({ W: A.w, L: A.l, T: A.t })}${A.tGames ? ` (league ${rec({ W: t.w, L: t.l, T: t.t })})` : ''} · last 4 ${esc(A.results.slice(-4).map((r) => r.r).join('') || '–')}</div></div>
+        <div class="s">${ordinal(divOf(t.id).rank)} · ${rec({ W: A.w, L: A.l, T: A.t })}${A.tGames ? ` (league ${rec({ W: t.w, L: t.l, T: t.t })})` : ''} · last 4 ${esc(A.results.slice(-4).map((r) => r.r).join('') || '–')}</div></div>
         <select id="sc-pick" aria-label="Scout a team">${opts}</select></div>
       <div class="wkbar">${chips}</div>
 
@@ -1378,7 +1394,7 @@
       <div style="margin-bottom:18px">${panel('Keys to the game', `<div class="pb">${keysHtml}</div>${nextHtml}`, { gold: true, meta: `Based on ${n} game${n === 1 ? '' : 's'}` })}</div>
 
       <div style="margin-bottom:18px">${panel('Snapshot', `<div class="stats">
-        ${tile('Record', rec({ W: A.w, L: A.l, T: A.t }), A.tGames ? `league ${rec({ W: t.w, L: t.l, T: t.t })} · ${ordinal(t.rank)}` : `${ordinal(t.rank)} in division`)}
+        ${tile('Record', rec({ W: A.w, L: A.l, T: A.t }), A.tGames ? `league ${rec({ W: t.w, L: t.l, T: t.t })} · ${ordinal(divOf(t.id).rank)}` : `${ordinal(divOf(t.id).rank)} in division`)}
         ${tile('GF / game', A.gfPerGame.toFixed(1), rk(d.ranks.gfpg) + ' offense')}
         ${tile('GA / game', A.gaPerGame.toFixed(1), rk(d.ranks.gapg) + ' defense')}
         ${tile(last4.length && last4.length < 4 ? `Last ${last4.length} game${last4.length === 1 ? '' : 's'}` : 'Last 4 games', last4.length ? l4Rec : '—', last4.length ? `${L5(last4.map((r) => r.r).join(''))} ${l4Goals[0]}–${l4Goals[1]}` : '')}
@@ -1562,7 +1578,7 @@
   const incNote = (teamId) => {
     if (!incT() || !DS?.all.tCount) return '';
     const n = teamId ? [...DS.all.mapped.values()].filter((g) => g.home.id === teamId || g.away.id === teamId).length : DS.all.tCount;
-    return n ? `<div class="incnote">Including ${n} tournament game${n === 1 ? '' : 's'} (${esc(DS.all.events.join(', '))}) · league standings unchanged · <button class="lnk linkbtn" data-inct="0">Turn off</button></div>` : '';
+    return n ? `<div class="incnote">Including ${n} tournament game${n === 1 ? '' : 's'} (${esc(DS.all.events.join(', '))}) · not official league standings · <button class="lnk linkbtn" data-inct="0">Turn off</button></div>` : '';
   };
   const tChip = (l) => (l.eventName ? `<span class="chip trn" title="${esc(l.eventName)}">${esc(l.eventName.split(' ').map((w) => w[0]).join(''))}</span>` : '');
 
@@ -1876,10 +1892,10 @@
   // what the toggle changes, in one tooltip (tap-to-pin on phones via the .dq icon)
   const tglHelp = () => dqIcon('Include tournament games', [
     `Adds ${DS.all.events.join(', ') || 'tournament'} games to:`,
-    '• Team records, results & head-to-head',
+    '• Standings, team records, results & head-to-head',
     '• Player & goalie stats and leaders',
     '• Team analytics & scouting reports',
-    'Never changes league standings, points & rank, weekend recaps, or firsts & milestones.',
+    'Turn off for official league standings. Weekend recaps and firsts & milestones stay league-only.',
   ]).replace('class="dq"', 'class="dq tgl-help"').replace('aria-label="Data notes"', 'aria-label="What does this toggle change?"');
   function teamBar() {
     const me = team(myTeamId()), el = document.getElementById('teambar');
@@ -1909,7 +1925,7 @@
     el.innerHTML = `<div class="wrap tb-in">
       <button class="tsel" id="tsel" aria-haspopup="listbox" aria-expanded="${open ? 'true' : 'false'}" title="Switch team">${logo(me)}<span class="tsn">${esc(me.short)}</span><span class="car" aria-hidden="true">▾</span></button>
       <div class="tb-info">${lastHtml}${nextHtml}</div>
-      ${DS?.all.tCount ? `<button class="tgl ${incT() ? 'on' : ''}" type="button" data-inct="${incT() ? 0 : 1}" aria-pressed="${incT()}" title="Include tournament games in records and stats (never league standings)"><span class="sw"></span><span class="tgl-ic" aria-hidden="true">🏆</span><span class="tgl-l">Tournament games</span></button>${tglHelp()}` : ''}
+      ${DS?.all.tCount ? `<button class="tgl ${incT() ? 'on' : ''}" type="button" data-inct="${incT() ? 0 : 1}" aria-pressed="${incT()}" title="Include tournament games in records and stats"><span class="sw"></span><span class="tgl-ic" aria-hidden="true">🏆</span><span class="tgl-l">Tournament games</span></button>${tglHelp()}` : ''}
       <div class="tmenu" id="tmenu" role="listbox" aria-label="Choose your team" ${open ? '' : 'hidden'}><div class="tmh">Choose your team</div>${opts}</div>
     </div>`;
   }

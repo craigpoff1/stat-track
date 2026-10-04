@@ -49,9 +49,9 @@ Tournament sites (RAMP) + HPL (Kreezee) ──► scripts/events.mjs ──► d
 
 **Everywhere:** global search (`/` or Ctrl/Cmd+K), player and game pages, home/away badges in jersey
 colours (home white, away green), and an **Include tournament games** toggle in the top bar (off by
-default; 🏆 on phones; ⓘ explains it) that adds tournament games to team records, results and
-head-to-head, player and goalie stats, leaders, team analytics and scouting — never league standings,
-points/rank, weekend recaps or firsts.
+default; 🏆 on phones; ⓘ explains it) that adds tournament games to standings (marked "not the official
+league table"), team records, results and head-to-head, player and goalie stats, leaders, team analytics
+and scouting. Weekend recaps and firsts stay league-only.
 
 ## Policies (owner decisions)
 
