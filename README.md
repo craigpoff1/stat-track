@@ -1,77 +1,98 @@
 # stat-track
 
-Unofficial stats site for the Hockey Super League **2019 Major** division, built from the league's published game sheets on [hockeysuperleague.ca](https://hockeysuperleague.ca/division/0/37783/masterschedule).
+Unofficial, password-protected stats site for the **Hockey Super League (HSL) 2019 Major** division,
+built for one team's families and coaches (Stars Hockey Academy). It scrapes the league's published
+game sheets, adds analytics the league doesn't offer, and folds in non-season tournaments.
+
+- **Live site:** https://craigpoff1.github.io/stat-track/ (team password required)
+- **Source data:** [hockeysuperleague.ca](https://hockeysuperleague.ca/division/0/37783/masterschedule) (RAMP InterActive)
+- **Hosting:** GitHub Pages, updated by GitHub Actions — nothing runs locally
 
 ## How it works
 
 ```
-league .ics calendar ──► scripts/scrape.mjs ──► data/schedule.json
-league game pages    ──►                    ──► data/games/<id>.json
-                                                     │
-                         scripts/build.mjs  ◄────────┘
-                                │
-                                ▼
-                     site/data/stats.json ──► site/ (static HTML + JS)
+HSL calendar (.ics) + game pages ──► scripts/scrape.mjs ──► data/schedule.json, data/games/<id>.json
+Tournament sites (RAMP) + HPL (Kreezee) ──► scripts/events.mjs ──► data/events/<event>/…, data/leagues/<league>.json
+                                                    │
+                                   scripts/build.mjs  (aggregate, validate, link identities, encrypt)
+                                                    │
+                                   site/data/stats.enc.json ──► site/ (static HTML/CSS/JS, decrypts in browser)
 ```
 
-- **Game discovery** — the division's calendar feed lists every game in the season with its ID and final score.
-- **Game stats** — each game page is server-rendered HTML with the timeline, box score and goalie lines. Parsed with cheerio.
-- **Scraping is incremental** — only new final games (plus anything played in the last 2 days, to catch stat corrections) are fetched.
-- **Site** — plain HTML/CSS/JS, no build step. Reads `site/data/stats.json`.
-- **Automation** — `.github/workflows/update.yml` runs nightly (~10 PM Mountain) plus a Monday-morning catch-up, commits new data, and deploys `site/` to GitHub Pages.
+| Piece | What it does |
+|---|---|
+| `scripts/scrape.mjs` | HSL: reads the division calendar, fetches new/changed final game pages (incremental; re-checks recent games for stat corrections). Fails loudly if the league's page layout changes. |
+| `scripts/parse.mjs` | Parsers for RAMP calendars and game sheets (header, scoring + shots by period, timeline, box score, goalies). Shared by HSL and RAMP tournament sites. |
+| `scripts/events.mjs` | Tournaments + external leagues (see below). Never fails the overall update. |
+| `scripts/build.mjs` | Standings, player/goalie/team stats, goalie-sheet validation, tournament standings, team/player identity linking, encryption. |
+| `scripts/config.mjs` | HSL season / division / "my team" ids. |
+| `scripts/events.config.mjs` | Tracked tournaments and external opponent leagues. |
+| `scripts/identity.config.mjs` | Confirmed tournament-player → league-player links for cases auto-matching couldn't decide. |
+| `site/` | `index.html`, `app.js` (all views, hash-routed, no framework), `style.css` ("Primetime" broadcast theme). |
+| `.github/workflows/update.yml` | Nightly ~10 PM Mountain + Monday-morning catch-up: test → scrape → events → build → commit data → deploy Pages. |
 
-## Run locally
+## The site
+
+**Team** (the selected team; switcher in the top bar, Stars by default)
+- **Team page** (`#/`): banner, last game (animated game-flow replay), up next, weekend recap with firsts,
+  team scoring, season progression, when goals happen, by period, linemates network, roster, goalies,
+  results (grouped by weekend), tournaments entered, by-weekend, head-to-head.
+- **Scout** (`#/scout/<team>`): live scouting report for any team — keys to the game (rule-based, with
+  evidence), snapshot, history vs us, common opponents, who to key on, goalies, timing, discipline,
+  game script, shots. Rolling "last 4 games" windows.
+
+**Events**
+- **Tournaments** (`#/tournaments`): non-season events. Played events get standings, playoffs,
+  scoring, game pages; upcoming events get opponent scouting (incl. external-league teams).
+
+**League** — Standings, Leaders (skaters + goalies), Weekends, Schedule (grouped by weekend).
+
+**Everywhere:** global search (`/` or Ctrl/Cmd+K), player and game pages, home/away badges in jersey
+colours (home white, away green), and an **Include tournament games** toggle in the top bar (off by
+default) that adds tournament games to player stats, team analytics and scouting — never standings.
+
+## Policies (owner decisions)
+
+- **Team vs league separation:** team pages show only that team; league tabs show league-wide data.
+  Agreed exceptions: highlighting the selected team in league tables, small rank annotations, and
+  "Following" (any team) on Leaders.
+- **Privacy:** the site is password-protected, so individual penalty minutes and goalie stats are
+  shown. Never publish unencrypted stats (CI refuses). External rosters keep name / number / goalie
+  only — never contact, birthday or address fields.
+- **Kids:** analytics are about teams and growth; no player-vs-player comparisons, no goalie shaming.
+- **Tournaments** never count toward league standings or records. Events are added only when the
+  owner names them.
+
+## Operating it
 
 ```bash
 npm install
-node scripts/scrape.mjs     # --all to re-fetch everything
-node scripts/build.mjs
+npm test                         # parser, crypto and tournament regression tests
+node scripts/scrape.mjs          # HSL (--all re-fetches every game)
+node scripts/events.mjs          # tournaments + external leagues (--all re-fetches event sheets)
+node scripts/build.mjs           # no SITE_PASSWORD → plain site/data/stats.json for local dev
 python -m http.server 8765 --directory site
 ```
 
-## What's published
+- **Manual update:** `gh workflow run update.yml` (add `-f refetch_all=true` for a full HSL re-fetch),
+  or Actions tab → *Update stats and deploy* → *Run workflow*.
+- **Password:** repository secret `SITE_PASSWORD` (set via GitHub Settings → Secrets → Actions).
+  Changing it signs every device out. Devices store the derived key, never the password.
+- **Add a tournament:** add an entry to `scripts/events.config.mjs` (RAMP sites: calendar URL from
+  the event's "Download calendar" link + division id). Teams link to their home league by roster.
+- **Identity review:** if the build prints `identity review: N …`, confirm those players and record
+  them in `scripts/identity.config.mjs`.
+- **Off-season:** GitHub disables scheduled workflows after 60 days without commits — re-enable in
+  the Actions tab.
+- **Repo visibility:** the repo is public; `data/` holds raw game files (also public on the league
+  sites). Making it private needs GitHub Pro to keep Pages.
 
-The site is password-protected (see below), so the encrypted stats include individual penalty
-minutes, named penalties and goalie stats. Goalie lines are checked against each game sheet
-(goals against vs the score, shots vs the shots table, minutes); lines that don't add up are shown
-but left out of save % / GAA, with per-game notes on the site.
+## Data quality (from the source sheets)
 
-## Password
-
-The published stats file is encrypted (AES-256-GCM, key from PBKDF2-SHA256 with 600k rounds). The
-site asks for the team password and decrypts in the browser; "Remember this device" stores the
-derived key (not the password) in localStorage. The Action reads the password from the
-`SITE_PASSWORD` repository secret and refuses to publish unencrypted if it's missing.
-
-- Set or change the password: `gh secret set SITE_PASSWORD`, then run the workflow. Changing it
-  signs every device out.
-- Local dev without a password writes plain `site/data/stats.json`; with `SITE_PASSWORD=...` it
-  writes `stats.enc.json` like CI.
-- This hides the stats, not the page shell (HTML/JS/CSS stay public). Keep the repo private too,
-  since `data/` holds the raw scraped game files.
-
-## Tournaments (non-season events)
-
-`scripts/events.config.mjs` lists the tournaments to track (added only when asked) and external
-opponent leagues. `scripts/events.mjs` scrapes them nightly (never blocks the HSL update):
-
-- **RAMP events** (e.g. Pacific Duel on pacificduel.com): full game sheets via the same parser as
-  HSL, saved to `data/events/<event>/`. Playoff placeholder games ("Seed 1 vs Seed 4") are
-  remembered as playoff games.
-- **External leagues** (e.g. HPL on Kreezee): scores and rosters only (name/number/goalie — never
-  contact fields), saved to `data/leagues/`.
-- The build links each tournament team to its home-league team by roster overlap (name fallback).
-  Tournament games never count toward league standings.
-
-## Configuration
-
-`scripts/config.mjs` holds the season, division and "my team" IDs. To track another division, change `divisionId` / `divisionName` (IDs are in the league site's URLs).
-
-## Known data quirks (from the league's own reports)
-
-- Goalie minutes are inconsistent between games; team shots come from each sheet's Shots table instead, and a few sheets omit it.
-- Occasional impossible clock times (e.g. `06:86`).
-- The league's standings PIM sometimes includes penalties not shown on the game sheets.
-- Game recaps on the league site are auto-written and sometimes contradict the box score; they're ignored.
-
-Each game's warnings are stored in `data/games/<id>.json` and shown on the game page.
+Game sheets are entered by volunteers. Known issues, all handled and shown on the site:
+- Goalie lines often don't add up (goals against ≠ score, blank minutes, shots vs shots table).
+  Bad lines are shown but left out of save % / GAA; a ⓘ icon explains each adjustment.
+- Occasional impossible clock times (e.g. `06:86`) — excluded from timing analytics.
+- Some sheets have no shots table; some tournament sheets have one team's box score empty.
+- League standings PIM can include penalties not on the sheets. League AI recaps are ignored.
+- HPL (Kreezee) publishes only scores and rosters — no scorers, shots, penalties or goalie stats.

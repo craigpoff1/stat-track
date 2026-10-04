@@ -1,5 +1,34 @@
 # stat-track: ideas beyond the MVP
 
+## Status (as of 2026-10-04)
+
+The original brainstorm below is kept for its reasoning. Since it was written the site became
+password-protected (so individual PIM/goalie stats are shown) and the scope grew. Current state:
+
+**Built**
+- Primetime theme; team switcher bar (last/next game); team vs league separation; global search.
+- Game pages with animated game-flow replay; game discoverability (mini sparklines, featured last game).
+- Charts & analytics items 1–6 below (game flow, season progression, weekends, goal timing — redesigned
+  as mirrored bars, linemates network with legend/filters/count badges, "my season" + firsts).
+- Scouting report (any team, self-scout, keys to the game, rolling last-4 windows, home/away + situational).
+- Goalie-sheet validation with ⓘ data notes; home/away jersey-colour badges; schedule grouped by weekend.
+- Tournaments section: Pacific Duel (RAMP, full sheets), Challenge Cup (scouting via HPL/Kreezee),
+  team + player identity linking, "Include tournament games" toggle (off by default).
+- Password protection (AES-GCM, in-browser decrypt); nightly + Monday catch-up updates.
+
+**Queued / discussed, not built** (rough priority)
+1. Manager tools: WhatsApp-ready weekend brief (times, arrive-by, rinks + map links, jersey colour),
+   schedule-change alerts (diff the calendar each run), showcase weekend planner.
+2. PWA (installable "app" icon, offline last stats) + Stars calendar feed (unencrypted, schedule-only,
+   unguessable URL — owner to approve that exception).
+3. AI weekend recaps / scouting summary (design in section 2 below; style rules agreed — see CLAUDE.md).
+4. Game-day card for the coach (one-screen keys + jersey + countdown).
+5. Challenge Cup: switch to its RAMP game sheets once published (likely pacificduel.com); confirm dates.
+6. Game-sheet volunteer guide + rotation; shareable player cards; end-of-season awards; trends.
+7. Repo private (needs GitHub Pro) — data/ holds raw game files.
+
+---
+
 Opinionated. Grounded in what the data actually contains as of 2026-09-27 (20 of 160 games,
 235 goals, 16 rinks across Alberta). Effort: **S** = an evening, **M** = a weekend, **L** = several weekends.
 
