@@ -176,9 +176,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Seed 2",
   "away": "Seed 3",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 7,
+  "awayScore": 4,
   "playoff": true
  },
  {
@@ -201,7 +201,7 @@
   "end": "2026-10-04T15:00:00",
   "location": "West Edmonton Mall - Ice Palace",
   "home": "SF Winner High Seed",
-  "away": "Away",
+  "away": "Calgary Crusaders",
   "final": false,
   "homeScore": null,
   "awayScore": null,
