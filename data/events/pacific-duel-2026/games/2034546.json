@@ -1,0 +1,520 @@
+{
+ "id": "2034546",
+ "dateText": "Sunday, October 4, 2026 @ 1:30 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final OT",
+ "home": {
+  "name": "Calgary Crusaders",
+  "teamId": "407116",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduelimages/team-logos/feb0af40-b6d9-4310-8b3f-79469f0977d8_Logo.png",
+  "score": 3
+ },
+ "away": {
+  "name": "Beavers",
+  "teamId": "n:beavers",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 4
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "OT",
+   "home": 0,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "14:28",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "17",
+    "name": "Denver Gagnon"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "13:02",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Yuvraj Tamber"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:33",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "minutes": 2,
+   "infraction": "Illegal Check To The Head"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:45",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:38",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:29",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:27",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:43",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:43",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Luca Cesarini-Pinkowski"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:07",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:44",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "20",
+    "name": "Finnley Nitchie"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:41",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:10",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:32",
+   "side": "away",
+   "team": "Beavers",
+   "player": {
+    "number": null,
+    "name": "Conor Smith"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:38",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Owen Brito"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:39",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "OT Period 4",
+   "time": "03:43",
+   "side": "away",
+   "team": "Beavers",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121195",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121219",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121180",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121313",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121209",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121274",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121227",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121179",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121273",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121178",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121208",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121286",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121276",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121275",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121175",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121295",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407116",
+   "playerId": "5121223",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 2777,
+   "ga": 4,
+   "shots": 25,
+   "saves": 21
+  }
+ ],
+ "warnings": [
+  "away: no box score on the sheet (team identified by name)",
+  "home: goalie minutes total 46",
+  "away: box score has 0 goals, final is 4"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 8
+  },
+  {
+   "label": "2",
+   "home": 3,
+   "away": 8
+  },
+  {
+   "label": "3",
+   "home": 9,
+   "away": 6
+  },
+  {
+   "label": "OT",
+   "home": 19,
+   "away": 3
+  }
+ ],
+ "start": "2026-10-04T13:30:00",
+ "gameNumber": 16,
+ "playoff": true,
+ "fetchedAt": "2026-10-04T22:15:06.415Z"
+}

@@ -1,0 +1,703 @@
+{
+ "id": "2034545",
+ "dateText": "Sunday, October 4, 2026 @ 12:00 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Young Kings Hockey",
+  "teamId": "407119",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 6
+ },
+ "away": {
+  "name": "MOB Hockey",
+  "teamId": "407117",
+  "logo": "https://cloud3.rampinteractive.com/hslpacificduel/css/img/assocLogo.svg",
+  "score": 2
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:06",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "16",
+    "name": "Jack Harris"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:18",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "13",
+    "name": "Brooks Hurt"
+   },
+   "assists": [
+    {
+     "number": "96",
+     "name": "Caden Conway"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:41",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "29",
+    "name": "Chase Myers"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:49",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "9",
+    "name": "Hayes Leinberger"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:28",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "71",
+    "name": "Zane Janvier"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:46",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "10",
+    "name": "Weston Vansickle"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:12",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "29",
+    "name": "Chase Myers"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:55",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "17",
+    "name": "Hudson Nate"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:15",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "88",
+    "name": "Drake Gemmill"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:50",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "98",
+    "name": "Colten Gauer"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:36",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "16",
+    "name": "Jack Harris"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:54",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "29",
+    "name": "Dominik Brkic"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:19",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "19",
+    "name": "Sawyer Carlson"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:03",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "98",
+    "name": "Colten Gauer"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Bostin Murray"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:48",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "88",
+    "name": "Drake Gemmill"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:48",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "89",
+    "name": "Weston MacKinnon"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:25",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "96",
+    "name": "Caden Conway"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:00",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "9",
+    "name": "Hayes Leinberger"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121200",
+   "number": "98",
+   "name": "Colten Gauer",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121172",
+   "number": "88",
+   "name": "Drake Gemmill",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121218",
+   "number": "96",
+   "name": "Caden Conway",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121205",
+   "number": "13",
+   "name": "Brooks Hurt",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121283",
+   "number": "9",
+   "name": "Evan Goldie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121173",
+   "number": "8",
+   "name": "Brooks Bohner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121290",
+   "number": "79",
+   "name": "Hayes Conway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121279",
+   "number": "71",
+   "name": "Bostin Murray",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121215",
+   "number": "7",
+   "name": "Brady Cox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121278",
+   "number": "37",
+   "name": "Mason Odland",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121199",
+   "number": "34",
+   "name": "Brody Berezan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121222",
+   "number": "29",
+   "name": "Dominik Brkic",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121210",
+   "number": "23",
+   "name": "Paisley Goodstriker-Chalifoux",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121207",
+   "number": "20",
+   "name": "Colson Smith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121284",
+   "number": "19",
+   "name": "Sawyer Carlson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121277",
+   "number": "17",
+   "name": "Hudson Nate",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121177",
+   "number": "9",
+   "name": "Hayes Leinberger",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121291",
+   "number": "29",
+   "name": "Chase Myers",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121214",
+   "number": "98",
+   "name": "Dawson Moore",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121224",
+   "number": "96",
+   "name": "Brooks Jones",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121194",
+   "number": "92",
+   "name": "Hayes Ward",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121226",
+   "number": "89",
+   "name": "Weston MacKinnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121225",
+   "number": "88",
+   "name": "Kanon Durdle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121213",
+   "number": "71",
+   "name": "Zane Janvier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121292",
+   "number": "6",
+   "name": "Keir Kendall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121216",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121217",
+   "number": "17",
+   "name": "Grayson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121197",
+   "number": "16",
+   "name": "Jack Harris",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121196",
+   "number": "12",
+   "name": "Wyatt Kaliszewski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121211",
+   "number": "11",
+   "name": "Tanner Corrigan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121285",
+   "number": "10",
+   "name": "Weston Vansickle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121199",
+   "number": "34",
+   "name": "Brody Berezan",
+   "seconds": 1381,
+   "ga": 0,
+   "shots": 8,
+   "saves": 8
+  },
+  {
+   "side": "home",
+   "teamId": "407119",
+   "playerId": "5121278",
+   "number": "37",
+   "name": "Mason Odland",
+   "seconds": 1379,
+   "ga": 2,
+   "shots": 10,
+   "saves": 8
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121216",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "seconds": 1379,
+   "ga": 2,
+   "shots": 13,
+   "saves": 11
+  },
+  {
+   "side": "away",
+   "teamId": "407117",
+   "playerId": "5121196",
+   "number": "12",
+   "name": "Wyatt Kaliszewski",
+   "seconds": 1381,
+   "ga": 4,
+   "shots": 20,
+   "saves": 16
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 46",
+  "away: goalie minutes total 46"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 9,
+   "away": 6
+  },
+  {
+   "label": "2",
+   "home": 9,
+   "away": 9
+  },
+  {
+   "label": "3",
+   "home": 15,
+   "away": 3
+  }
+ ],
+ "start": "2026-10-04T12:00:00",
+ "gameNumber": 15,
+ "playoff": true,
+ "fetchedAt": "2026-10-04T22:15:05.535Z"
+}

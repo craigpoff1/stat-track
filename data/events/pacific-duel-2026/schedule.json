@@ -189,9 +189,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Seed 5",
   "away": "Seed 6",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 2,
   "playoff": true
  },
  {
@@ -202,9 +202,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "SF Winner High Seed",
   "away": "Beavers",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 4,
   "playoff": true
  }
 ]
