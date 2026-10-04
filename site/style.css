@@ -498,4 +498,6 @@ div.ld{cursor:default}
 .tgl.on .sw::after{transform:translateX(12px);background:var(--us)}
 .incnote{margin:0 0 14px;padding:8px 12px;background:rgba(245,183,46,.08);border-left:3px solid var(--us);font-size:13px;color:var(--ink2)}
 .chip.trn{border-color:#8DB8FF;color:#8DB8FF}
-@media (max-width:720px){.tgl{padding:0 10px;font-size:0;gap:0}.tgl .sw{margin:0}}
+.tgl-ic{display:none;font-size:15px;line-height:1;filter:grayscale(1);opacity:.55;transition:filter .15s,opacity .15s}
+.tgl.on .tgl-ic{filter:none;opacity:1}
+@media (max-width:720px){.tgl{padding:0 10px;gap:6px}.tgl .sw{margin:0}.tgl-l{display:none}.tgl-ic{display:inline}}
