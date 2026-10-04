@@ -498,6 +498,7 @@ div.ld{cursor:default}
 .tgl.on .sw::after{transform:translateX(12px);background:var(--us)}
 .incnote{margin:0 0 14px;padding:8px 12px;background:rgba(245,183,46,.08);border-left:3px solid var(--us);font-size:13px;color:var(--ink2)}
 .chip.trn{border-color:#8DB8FF;color:#8DB8FF}
+.pgv{margin-left:5px;font-size:11px;color:var(--ink3);font-weight:500}
 .tgl-help{flex:none;margin:0 6px 0 -8px;color:var(--ink3)}
 .tgl-help:hover,.tgl-help:focus-visible{color:var(--ink)}
 .tgl-ic{display:none;font-size:15px;line-height:1;filter:grayscale(1);opacity:.55;transition:filter .15s,opacity .15s}

@@ -188,7 +188,7 @@
       rows.forEach((t, i) => {
         const y = top + i * rh, pos = t.diff >= 0, us = String(t.id) === String(myId);
         const col = us ? 'var(--us)' : pos ? 'var(--blue)' : 'var(--red)';
-        s += `<g class="row" ${tip(t.name, `${t.gf} GF · ${t.ga} GA · ${sign(t.diff)}`)}>
+        s += `<g class="row" ${tip(t.name, `${t.gf} GF · ${t.ga} GA · ${sign(t.diff)} in ${t.gp} GP (${sign(+(t.diff / Math.max(1, t.gp)).toFixed(1))} per game)`)}>
           <rect class="hit" x="0" y="${y}" width="${w}" height="${rh}"/>
           <text x="0" y="${y + rh / 2 + 5}" class="${us ? 't-us' : ''}">${esc(t.code)}</text>
           <path class="mk gb ${pos ? 'r' : 'lft'}" style="transition-delay:${i * 40}ms" fill="${col}" d="${hbar(x(0), x(t.diff), y + 7, rh - 14, 3)}"/>
@@ -749,22 +749,30 @@
       gdChart($('#gd'), myTeamId());
       stChart($('#st'), myTeamId());
       timingChart($('#heat'), { up: { label: 'Goals scored', color: 'var(--blue)', goals: D().games.flatMap((g) => g.ev.filter((e) => e.type === 'goal')) }, notes: $('#heat-notes') });
+      // per-game columns keep teams comparable when some include tournament games (more GP)
+      const pg = (k) => (t) => (t.gp ? t[k] / t.gp : null), pgH = (k) => (t) => (t.gp ? (t[k] / t.gp).toFixed(1) : '—');
       sortable($('#special'), TA, [
         { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
+        { key: 'gp', label: 'GP', val: (t) => t.gp },
         { key: 'ppg', label: 'PPG', val: (t) => t.ppg }, { key: 'ppo', label: 'PPO', val: (t) => t.ppo, title: 'Power-play opportunities' },
         { key: 'pp', label: 'PP%', val: (t) => t.ppPct, html: (t) => `<span class="pts" style="font-size:16px">${pct(t.ppPct)}</span>` },
         { key: 'tsh', label: 'TSH', cls: 'hm', val: (t) => t.tsh, title: 'Times shorthanded' }, { key: 'ppga', label: 'PPGA', cls: 'hm', val: (t) => t.ppga },
         { key: 'pk', label: 'PK%', val: (t) => t.pkPct, html: (t) => `<span class="pts" style="font-size:16px">${pct(t.pkPct)}</span>` },
-        { key: 'pim', label: 'PIM', val: (t) => t.pim, title: 'Team penalty minutes' },
+        { key: 'pim', label: 'PIM', cls: 'hm', val: (t) => t.pim, title: 'Team penalty minutes' },
+        { key: 'pimpg', label: 'PIM/GP', val: pg('pim'), html: pgH('pim'), title: 'Penalty minutes per game' },
         { key: 'shg', label: 'SHG', cls: 'hm', val: (t) => t.shg }, { key: 'sf', label: 'SF', cls: 'hm', val: (t) => t.sf, title: 'Shots for' },
+        { key: 'sfpg', label: 'SF/GP', val: pg('sf'), html: pgH('sf'), title: 'Shots for per game' },
         { key: 'sa', label: 'SA', cls: 'hm', val: (t) => t.sa, title: 'Shots against' },
+        { key: 'sapg', label: 'SA/GP', val: pg('sa'), html: pgH('sa'), title: 'Shots against per game' },
         { key: 'sv', label: 'SV%', val: (t) => t.svPct, html: (t) => rate(t.svPct), title: 'Team save %' },
       ], { key: 'pp', rowCls: mineRow });
+      const perG = (n, t) => `${n}<small class="pgv">${t.gp ? (n / t.gp).toFixed(1) : '—'}</small>`;
       sortable($('#periods'), TA, [
         { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
+        { key: 'gp', label: 'GP', val: (t) => t.gp },
         ...periods.flatMap((p) => [
-          { key: 'f' + p, label: `P${p} GF`, val: (t) => t.gfByPeriod[p] || 0 },
-          { key: 'a' + p, label: `P${p} GA`, cls: 'hm', val: (t) => t.gaByPeriod[p] || 0 },
+          { key: 'f' + p, label: `P${p} GF`, val: (t) => t.gfByPeriod[p] || 0, html: (t) => perG(t.gfByPeriod[p] || 0, t) },
+          { key: 'a' + p, label: `P${p} GA`, cls: 'hm', val: (t) => t.gaByPeriod[p] || 0, html: (t) => perG(t.gaByPeriod[p] || 0, t) },
         ]),
       ], { key: 'f' + (periods[0] || '1'), rowCls: mineRow });
     });
@@ -777,7 +785,7 @@
         ${panel('Special teams', '<div class="pb"><div class="chart" id="st"></div></div>', { meta: 'PP% × PK%' })}
       </div>
       <div style="margin-bottom:18px">${panel('Special teams &amp; shots', '<div class="tw"><table id="special"></table></div><div class="note">PP chances are counted from opponent minor/major penalties on the game sheet. Team save % leaves out sheets where shots weren\'t tracked.</div>')}</div>
-      <div style="margin-bottom:18px">${panel('Goals by period', '<div class="tw"><table id="periods"></table></div>')}</div>
+      <div style="margin-bottom:18px">${panel('Goals by period', '<div class="tw"><table id="periods"></table></div><div class="note">Totals, with per game in grey.</div>')}</div>
       <div style="margin-bottom:18px">${panel('When goals happen', '<div class="pb"><div class="legend"><span><i style="background:var(--blue)"></i>Goals in each 3-minute stretch</span></div><div class="chart" id="heat"></div><div id="heat-notes"></div></div>', { meta: 'Whole division · regulation' })}</div>`;
   }
 
