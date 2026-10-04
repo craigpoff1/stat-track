@@ -116,6 +116,27 @@ function checkGoalieSheet(g, s, gs, oppName) {
   return { notes, gaOk, svOk, minutesOk, secs, starterIdx, result, oppScore, o };
 }
 
+// Add one checked goalie line to a goalie's totals (league games, and tournament games for the
+// "Include tournament games" dataset). `at` = { gameId, date, opp, home, eventId?, eventName? }.
+function creditGoalie(gl, row, i, { notes, gaOk, svOk, minutesOk, secs, starterIdx, result, oppScore }, at) {
+  const isStarter = i === starterIdx;
+  gl.gp++;
+  gl.seconds += secs[i];
+  if (gaOk) gl.ga += row.ga;
+  if (svOk) { gl.gpSv++; gl.shots += row.shots; gl.saves += Math.max(0, row.saves); }
+  if (gaOk && minutesOk) { gl.gpGaa++; gl.gaaGa += row.ga; gl.gaaSec += secs[i]; }
+  const r = isStarter ? result : null;
+  if (r) gl[r.toLowerCase()]++;
+  if (isStarter && oppScore === 0) gl.so++;
+  if (notes.length) gl.flags.push({ ...at, notes: notes.map((n) => n.text), kinds: [...new Set(notes.map((n) => n.kind))] });
+  gl.log.push({ ...at, seconds: secs[i], rawSeconds: row.seconds, ga: row.ga, shots: row.shots, saves: Math.max(0, row.saves), decision: r, usedSv: svOk, usedGaa: gaOk && minutesOk, notes: notes.map((n) => n.text) });
+}
+function finishGoalie(gl) {
+  gl.svPct = round(gl.shots ? gl.saves / gl.shots : null);
+  gl.gaa = round(gl.gaaSec ? (gl.gaaGa * regSec) / gl.gaaSec : null, 2);
+  gl.minutes = Math.round(gl.seconds / 60);
+}
+
 const gameSummaries = [];
 const dataWarnings = [];
 
@@ -216,18 +237,7 @@ for (const g of games) {
     goalieNotes[t.id] = notes.map((n) => n.text);
 
     gs.forEach((row, i) => {
-      const gl = goalie(row, t.id, t.name);
-      const isStarter = i === starterIdx;
-      gl.gp++;
-      gl.seconds += secs[i];
-      if (gaOk) gl.ga += row.ga;
-      if (svOk) { gl.gpSv++; gl.shots += row.shots; gl.saves += Math.max(0, row.saves); }
-      if (gaOk && minutesOk) { gl.gpGaa++; gl.gaaGa += row.ga; gl.gaaSec += secs[i]; }
-      const r = isStarter ? result : null;
-      if (r) gl[r.toLowerCase()]++;
-      if (isStarter && oppScore === 0) gl.so++;
-      if (notes.length) gl.flags.push({ gameId: g.id, date, opp: side[o].id, notes: notes.map((n) => n.text), kinds: [...new Set(notes.map((n) => n.kind))] });
-      gl.log.push({ gameId: g.id, date, opp: side[o].id, home: s === 'home', seconds: secs[i], rawSeconds: row.seconds, ga: row.ga, shots: row.shots, saves: Math.max(0, row.saves), decision: r, usedSv: svOk, usedGaa: gaOk && minutesOk, notes: notes.map((n) => n.text) });
+      creditGoalie(goalie(row, t.id, t.name), row, i, { notes, gaOk, svOk, minutesOk, secs, starterIdx, result, oppScore }, { gameId: g.id, date, opp: side[o].id, home: s === 'home' });
       const p = players.get(row.playerId);
       if (p) p.goalieGames = (p.goalieGames || 0) + 1;
     });
@@ -307,11 +317,7 @@ for (const p of players.values()) {
   p.teamGoalShare = round(t?.gf ? p.pts / t.gf : 0); // share of team goals they had a point on
 }
 
-for (const gl of goalies.values()) {
-  gl.svPct = round(gl.shots ? gl.saves / gl.shots : null);
-  gl.gaa = round(gl.gaaSec ? (gl.gaaGa * regSec) / gl.gaaSec : null, 2);
-  gl.minutes = Math.round(gl.seconds / 60);
-}
+for (const gl of goalies.values()) finishGoalie(gl);
 
 const standings = [...teams.values()].sort((a, b) =>
   b.pts - a.pts || b.w - a.w || b.diff - a.diff || b.gf - a.gf || a.name.localeCompare(b.name));
@@ -339,6 +345,7 @@ async function readJson(f) { try { return JSON.parse(await fs.readFile(f, 'utf8'
 const players_hsl = players; // event loop shadows "players" with its own map
 const eventsOut = [];
 const identityReview = [];
+const goaliesAll = new Map(); // HSL goalie id -> league + tournament totals (only goalies with tournament games)
 for (const ev of eventsConfig) {
   const base = { id: ev.id, name: ev.name, season: ev.season, dates: ev.dates, datesApprox: !!ev.datesApprox, platform: ev.platform, leagues: ev.leagues || [], focus: ev.focus || [], url: ev.base || null, division: ev.divisionName || null };
   const sched = (await readJson(path.join(DATA, 'events', ev.id, 'schedule.json'))) || [];
@@ -350,7 +357,7 @@ for (const ev of eventsConfig) {
     if (!teams.has(id)) teams.set(id, { id, name, logo: logo || null, gp: 0, w: 0, l: 0, t: 0, pts: 0, gf: 0, ga: 0, rr: { gp: 0, w: 0, l: 0, t: 0, pts: 0, gf: 0, ga: 0 }, results: [], boxMissing: 0 });
     const t = teams.get(id); if (logo && !t.logo) t.logo = logo; byName.set(name, id); return t;
   };
-  const games = [];
+  const games = [], evGoalieLines = [];
   for (const g of [...sheets.values()].sort((a, b) => a.start.localeCompare(b.start))) {
     const side = { home: evTeam(`${ev.id}:${g.home.teamId}`, g.home.name, g.home.logo), away: evTeam(`${ev.id}:${g.away.teamId}`, g.away.name, g.away.logo) };
     const date = g.start.slice(0, 10), playoff = !!g.playoff;
@@ -373,7 +380,11 @@ for (const ev of eventsConfig) {
     const goalieNotes = {};
     for (const s of ['home', 'away']) {
       const gs = g.goalies.filter((x) => x.side === s && x.playerId);
-      if (gs.length) goalieNotes[side[s].id] = checkGoalieSheet(g, s, gs, side[other(s)].name).notes.map((n) => n.text);
+      if (!gs.length) continue;
+      const check = checkGoalieSheet(g, s, gs, side[other(s)].name);
+      goalieNotes[side[s].id] = check.notes.map((n) => n.text);
+      evGoalieLines.push({ teamId: side[s].id, gs: gs.map((x) => ({ ...x, playerId: P(x.playerId) })), check,
+        at: { gameId: g.id, date, opp: side[other(s)].id, home: s === 'home', eventId: ev.id, eventName: ev.name } });
     }
     games.push({
       id: g.id, eventId: ev.id, playoff, gameNumber: g.gameNumber, date: g.start, rink: g.rink,
@@ -427,6 +438,25 @@ for (const ev of eventsConfig) {
       }
     }
   }
+  // Tournament goalie lines for linked HSL goalies → the "Include tournament games" goalie totals.
+  // Same sheet checks as league games; never touches the league-only goalie stats.
+  for (const { teamId, gs, check, at } of evGoalieLines) {
+    const t = teams.get(teamId);
+    if (t?.link?.kind !== 'hsl') continue;
+    gs.forEach((row, i) => {
+      const hslId = players.get(row.playerId)?.hslId;
+      if (!hslId) return;
+      if (!goaliesAll.has(hslId)) {
+        const base = goalies.get(hslId), p = players_hsl.get(hslId);
+        goaliesAll.set(hslId, base ? structuredClone(base)
+          : { id: hslId, name: p?.name || row.name, number: p?.number || row.number, teamId: t.link.id, team: t.link.name,
+            gp: 0, seconds: 0, ga: 0, shots: 0, saves: 0, w: 0, l: 0, t: 0, so: 0, log: [], gpSv: 0, gpGaa: 0, gaaGa: 0, gaaSec: 0, flags: [] });
+      }
+      const gl = goaliesAll.get(hslId);
+      creditGoalie(gl, row, i, check, { ...at, opp: teams.get(at.opp)?.link?.kind === 'hsl' ? teams.get(at.opp).link.id : at.opp });
+      gl.tGames = (gl.tGames || 0) + 1;
+    });
+  }
   const rr = [...teams.values()].sort((a, b) => b.rr.pts - a.rr.pts || b.rr.w - a.rr.w || (b.rr.gf - b.rr.ga) - (a.rr.gf - a.rr.ga) || b.rr.gf - a.rr.gf || a.name.localeCompare(b.name));
   rr.forEach((t, i) => (t.seed = i + 1));
   const lastFinal = schedule.filter((s) => s.final).at(-1), allDone = schedule.length && schedule.every((s) => s.final);
@@ -455,6 +485,10 @@ const out = {
   teams: standings,
   players: [...players.values()],
   goalies: [...goalies.values()],
+  goaliesInclTournaments: [...goaliesAll.values()].map((gl) => {
+    gl.log.sort((a, b) => a.date.localeCompare(b.date)); gl.flags.sort((a, b) => a.date.localeCompare(b.date));
+    finishGoalie(gl); return gl;
+  }),
   games: gameSummaries,
   schedule: scheduleOut,
   events: eventsOut,

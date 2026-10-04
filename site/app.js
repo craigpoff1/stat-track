@@ -615,14 +615,16 @@
 
   // ------------------------------------------------------------ shared blocks
   function hero(t, { action = '' } = {}) {
-    const diffRank = [...S.teams].sort((a, b) => b.diff - a.diff).findIndex((x) => x.id === t.id) + 1;
+    // points/record/rank stay league-only; the analytics tiles (A) follow the tournament toggle
+    const A = D().teamOf(t);
+    const diffRank = S.teams.map(D().teamOf).sort((a, b) => b.diff - a.diff).findIndex((x) => x.id === t.id) + 1;
     const stats = [
       ['Points', counter(t.pts), `${pct(t.ptsPct, 0)} pts%`],
-      ['Goals for', counter(t.gf), `${t.gfPerGame.toFixed(2)} / game`],
-      ['Goals against', counter(t.ga), `${t.gaPerGame.toFixed(2)} / game`],
-      ['Differential', counter(t.diff, 'sign'), `${ordinal(diffRank)} in division`],
-      ['Power play', counter(t.ppPct, 'pct', 1), `${t.ppg} of ${t.ppo} chances`],
-      ['Penalty kill', counter(t.pkPct, 'pct', 1), `${t.tsh - t.ppga} of ${t.tsh} killed`],
+      ['Goals for', counter(A.gf), `${A.gfPerGame.toFixed(2)} / game`],
+      ['Goals against', counter(A.ga), `${A.gaPerGame.toFixed(2)} / game`],
+      ['Differential', counter(A.diff, 'sign'), `${ordinal(diffRank)} in division`],
+      ['Power play', counter(A.ppPct, 'pct', 1), `${A.ppg} of ${A.ppo} chances`],
+      ['Penalty kill', counter(A.pkPct, 'pct', 1), `${A.tsh - A.ppga} of ${A.tsh} killed`],
     ];
     return `<section class="hero" data-reveal>
       ${action ? `<div class="act">${action}</div>` : ''}
@@ -801,7 +803,7 @@
         { key: 'strk', label: 'STRK', val: (p) => p.pointStreak.current, html: (p) => p.pointStreak.current || '–', title: 'Current point streak' },
         { key: 'pim', label: 'PIM', cls: 'hm', val: (p) => p.pim, title: 'Penalty minutes' },
       ], { key: 'pts', rowCls: (p) => (favs.has(p.id) || String(p.teamId) === myTeamId() ? 'me' : ''), rowAttrs: (p) => `data-team="${esc(p.teamId)}" data-name="${esc(p.name.toLowerCase())}"` });
-      sortable($('#goalies'), S.goalies || [], goalieCols(true), { key: 'min', rowCls: (g) => (String(g.teamId) === myTeamId() ? 'me' : '') });
+      sortable($('#goalies'), D().goalies, goalieCols(true), { key: 'min', rowCls: (g) => (String(g.teamId) === myTeamId() ? 'me' : '') });
       const sel = $('#sk-team'), q = $('#sk-q');
       sel.addEventListener('change', () => { f.team = sel.value; store.set('skaterFilter', f); apply(); });
       q.addEventListener('input', () => { f.q = q.value; store.set('skaterFilter', f); apply(); });
@@ -814,7 +816,7 @@
       ${favs.size ? `<div style="margin-bottom:18px">${panel('Following', `<div class="pb"><div class="leaders">${leaderRows([...favs].map((id) => D().playerOf(id)).sort((a, b) => b.pts - a.pts), () => true)}</div></div>`, { gold: true, meta: 'Players you follow · any team' })}</div>` : ''}
       <div style="margin-bottom:18px">${panel('Points leaders', `<div class="pb"><div class="leaders">${leaderRows(D().skaters.slice(0, 12), (p) => favs.has(p.id) || String(p.teamId) === myTeamId())}</div></div>`, { meta: 'Top 12 in the division' })}</div>
       <div style="margin-bottom:18px">${panel('All skaters', `<div class="controls"><select id="sk-team" aria-label="Filter by team"><option value="">All teams</option>${opts}</select><input type="search" id="sk-q" placeholder="Search players" aria-label="Search players" value="${esc(f.q)}"></div><div class="tw"><table id="skaters"></table></div><div class="note">MPG = multi-point games · STRK = current point streak · GWG as recorded by the league.</div>`, { gold: true, reveal: false })}</div>
-      <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="goalies"></table></div><div class="note">${GOALIE_NOTE}</div>`, { meta: `${(S.goalies || []).length} goalies` })}</div>`;
+      <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="goalies"></table></div><div class="note">${GOALIE_NOTE}</div>`, { meta: `${D().goalies.length} goalies` })}</div>`;
   }
 
   // Games grouped into weekend blocks (collapsible), split by day inside. `perspective` adds that
@@ -896,6 +898,7 @@
     if (id === 'mine') { location.replace('#/'); return ''; }
     const t = teamById.get(String(id));
     if (!t) return notFound();
+    const A = D().teamOf(t); // analytics totals (toggle-aware); t keeps the league record/results
     const isMine = String(id) === myTeamId();
     const roster = D().players.filter((p) => String(p.teamId) === String(id));
     const sched = S.schedule.filter((s) => involves(s, id));
@@ -921,7 +924,7 @@
     const teamGoals = (forTeam) => D().games.flatMap((g) => g.ev.filter((e) => e.type === 'goal' && (String(e.teamId) === String(id)) === forTeam && (String(g.home.id) === String(id) || String(g.away.id) === String(id))));
     after(() => {
       progChart($('#prog'), t);
-      periodChart($('#byper'), D().periodsOf(t));
+      periodChart($('#byper'), A);
       timingChart($('#heat'), {
         up: { label: 'Scored', color: 'var(--us)', goals: teamGoals(true) },
         down: { label: 'Allowed', color: 'var(--red)', goals: teamGoals(false) },
@@ -940,7 +943,7 @@
         { key: 'strk', label: 'STRK', cls: 'hm', val: (p) => p.pointStreak.current, html: (p) => p.pointStreak.current || '–' },
         { key: 'pim', label: 'PIM', val: (p) => p.pim, title: 'Penalty minutes' },
       ], { key: 'pts', rowCls: (p) => (favs.has(p.id) ? 'me' : '') });
-      sortable($('#tgoal'), (S.goalies || []).filter((g) => String(g.teamId) === String(id)), goalieCols(false), { key: 'min' });
+      sortable($('#tgoal'), D().goalies.filter((g) => String(g.teamId) === String(id)), goalieCols(false), { key: 'min' });
       sortable($('#h2h'), [...h2h.values()], [
         { key: 'opp', label: 'Opponent', cls: 'l', val: (o) => team(o.id).name, desc: false, html: (o) => tn(team(o.id)) },
         { key: 'gp', label: 'GP', val: (o) => o.gp },
@@ -972,11 +975,11 @@
       <div style="margin-bottom:18px">${panel('Season progression', `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals for (running)</span><span><i style="background:var(--red)"></i>Goals against (running)</span><span><i style="background:var(--us);height:8px"></i>W</span><span><i style="background:#5A2A22;height:8px"></i>L</span></div><div class="chart" id="prog"></div></div>`, { gold: true, meta: `${t.gp} GP · by weekend` })}</div>
       <div class="grid g-7-5">
         ${panel('When goals happen', '<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Scored (up)</span><span><i style="background:var(--red)"></i>Allowed (down)</span></div><div class="chart" id="heat"></div><div id="heat-notes"></div></div>', { meta: '3-minute stretches' })}
-        ${panel('By period', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { meta: `${t.gp} GP` })}
+        ${panel('By period', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { meta: `${A.gp} GP` })}
       </div>
       <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div id="net-ctl" class="net-ctl"></div><div class="chart" id="net"></div></div><div class="note">A line joins a passer and a scorer on the same goal. Hover a player to see only their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>
-      <div id="roster-anchor" style="margin-bottom:18px">${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team PIM ${t.pim}` })}</div>
-      <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="tgoal"></table></div><div class="note">Team save % ${rate(t.svPct)} (from shots on goal). ${GOALIE_NOTE}</div>`)}</div>
+      <div id="roster-anchor" style="margin-bottom:18px">${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team PIM ${A.pim}` })}</div>
+      <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="tgoal"></table></div><div class="note">Team save % ${rate(A.svPct)} (from shots on goal). ${GOALIE_NOTE}</div>`)}</div>
       <div style="margin-bottom:18px">${panel('Results', weekendGroups(sched.filter((s) => s.final), id, { open: 1, newestFirst: true }), { meta: `${t.w}-${t.l}-${t.t} · league games` })}</div>
       ${(() => { const apps = appearances(t.id); return apps.length ? `<div style="margin-bottom:18px">${panel('Tournaments', `<div class="next wrap4">${apps.map(({ e, t: et }) => `<a class="nx" href="${et.href}"><div class="d">${statusChip(e)} ${esc(evDates(e))}</div><div class="o">${logo(et)}<span>${esc(e.name)}</span><span class="res ${et.w > et.l ? 'W' : et.w < et.l ? 'L' : 'T'}">${et.w}-${et.l}-${et.t}</span></div><div class="r">Seed ${et.seed} of ${e.teams.length}${e.champion === et.id ? ' · Champions' : ''}</div></a>`).join('')}</div>`, { gold: true, meta: 'Not counted in league records' })}</div>` : ''; })()}
       <div class="grid g-6-6">
@@ -999,6 +1002,7 @@
     const isFav = favPlayers().has(id);
     const [first, ...rest] = p.name.split(' ');
     const SK = D().skaters;
+    const tA = D().teamOf(t), share = tA.gf ? p.pts / tA.gf : 0; // share of team goals they had a point on
     const teamRank = SK.filter((x) => x.teamId === p.teamId).findIndex((x) => x.pts === p.pts) + 1;
     const rank = p.rank || SK.length;
     const tied = SK.filter((x) => x.pts === p.pts).length > 1;
@@ -1024,7 +1028,7 @@
           <div class="facts">
             <div><span>Pts / game</span><b data-count="${p.ptsPerGame}" data-dp="2">0</b><em>${tied ? 'T-' : ''}${ordinal(rank)} in division</em></div>
             <div><span>Team scoring</span><b>${teamRank ? ordinal(teamRank) : '—'}</b><em>on ${esc(t.short)}</em></div>
-            <div><span>Involvement</span><b data-count="${p.teamGoalShare}" data-fmt="pct" data-dp="0">0</b><em>of team goals</em></div>
+            <div><span>Involvement</span><b data-count="${share}" data-fmt="pct" data-dp="0">0</b><em>of team goals</em></div>
           </div>
           <div><div class="sub">Game log · points</div>
             <div class="legend"><span><i style="background:var(--us)"></i>Goals</span><span><i style="background:var(--blue)"></i>Assists</span></div>
@@ -1039,7 +1043,7 @@
         ${panel(`${esc(first)}'s season`, `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals</span><span><i style="background:var(--blue)"></i>Assists</span></div><div class="chart" id="pwk"></div></div>`, { gold: true, meta: 'Points by weekend' })}
         ${panel('Firsts &amp; milestones', `<div class="pb">${firstsList(p.firsts.slice().reverse())}</div>`, { meta: `${p.firsts.length}` })}
       </div>
-      ${goalieById.has(id) ? goaliePanel(goalieById.get(id)) : ''}`;
+      ${D().goalieOf(id) ? goaliePanel(D().goalieOf(id)) : ''}`;
   }
 
   function goaliePanel(gl) {
@@ -1047,7 +1051,7 @@
     return `<div style="margin-bottom:18px">${panel('In goal', `
       <div class="stats">${tiles.map(([l, v, sub]) => `<div class="st"><span class="l">${l}</span><span class="v">${esc(v)}</span>${sub ? `<span class="s">${esc(sub)}</span>` : ''}</div>`).join('')}</div>
       <div class="pb"><div class="tw"><table class="gl"><thead><tr><th class="l">Date</th><th class="l">Opp</th><th>Dec</th><th>MIN</th><th>SA</th><th>GA</th><th>SV%</th></tr></thead><tbody>
-        ${gl.log.slice().reverse().map((l) => `<tr class="${l.notes?.length ? 'flagged' : ''}"><td class="l"><a class="lnk" href="#/game/${l.gameId}">${dt(l.date)}</a>${l.notes?.length ? dqIcon(`${dt(l.date)} vs ${team(l.opp).short}`, l.notes) : ''}</td><td class="l">${l.home ? 'vs' : '@'} ${esc(team(l.opp).code)}</td><td>${l.decision ? `<span class="rb ${l.decision}">${l.decision}</span>` : '–'}</td><td>${l.rawSeconds === 0 && l.seconds ? `<span title="Assumed full game">${mmss(l.seconds)}*</span>` : l.rawSeconds === 0 ? '—' : mmss(l.seconds)}</td><td class="${l.usedSv ? '' : 'x'}">${l.shots}</td><td>${l.ga}</td><td class="${l.usedSv ? '' : 'x'}">${l.shots ? rate(l.saves / l.shots) : '—'}</td></tr>`).join('')}
+        ${gl.log.slice().reverse().map((l) => `<tr class="${l.notes?.length ? 'flagged' : ''}"><td class="l"><a class="lnk" href="#/game/${l.gameId}">${dt(l.date)}</a>${l.notes?.length ? dqIcon(`${dt(l.date)} vs ${team(l.opp).short}`, l.notes) : ''}</td><td class="l">${l.home ? 'vs' : '@'} ${esc(team(l.opp).code)}${tChip(l)}</td><td>${l.decision ? `<span class="rb ${l.decision}">${l.decision}</span>` : '–'}</td><td>${l.rawSeconds === 0 && l.seconds ? `<span title="Assumed full game">${mmss(l.seconds)}*</span>` : l.rawSeconds === 0 ? '—' : mmss(l.seconds)}</td><td class="${l.usedSv ? '' : 'x'}">${l.shots}</td><td>${l.ga}</td><td class="${l.usedSv ? '' : 'x'}">${l.shots ? rate(l.saves / l.shots) : '—'}</td></tr>`).join('')}
       </tbody></table></div>
       ${gl.flags?.length ? `<div class="dnotes"><div class="sub">Data notes</div><ul>${gl.flags.slice().reverse().map((f) => `<li><a class="lnk" href="#/game/${f.gameId}">${dt(f.date)} vs ${esc(team(f.opp).short)}</a> — ${f.notes.map(esc).join('; ')}</li>`).join('')}</ul><div class="s">Greyed numbers are shown as entered but left out of the totals. * = assumed.</div></div>` : ''}</div>
       <div class="note">${GOALIE_NOTE}</div>`, { gold: true, meta: `${gl.minutes} minutes` })}</div>`;
@@ -1227,7 +1231,7 @@
     const teamShootPct = (o) => { const gs = D().games.filter((g) => (String(g.home.id) === o.id || String(g.away.id) === o.id) && g.shotsByPeriod?.length); let sf = 0, gf = 0; for (const g of gs) { const s = String(g.home.id) === o.id ? 'home' : 'away'; sf += g.shotsByPeriod.reduce((n, p) => n + p[s], 0); gf += g[s].score; } return sf ? gf / sf : null; };
 
     // goalies
-    const gls = (S.goalies || []).filter((g) => String(g.teamId) === String(id)).sort((a, b) => b.seconds - a.seconds);
+    const gls = D().goalies.filter((g) => String(g.teamId) === String(id)).sort((a, b) => b.seconds - a.seconds);
     const glSec = gls.reduce((n, g) => n + g.seconds, 0);
 
     // common opponents + history vs my team
@@ -1433,7 +1437,7 @@
   const incT = () => !!store.get('incTourn', false);
   let DS = null;
   function buildDatasets() {
-    const league = { games: S.games, players: S.players, skaters: S.skaters, playerOf: (id) => playerById.get(id), teamOf: (t) => t, periodsOf: (t) => t, tCount: 0, mapped: new Map() };
+    const league = { games: S.games, players: S.players, skaters: S.skaters, playerOf: (id) => playerById.get(id), goalies: S.goalies || [], goalieOf: (id) => goalieById.get(id), teamOf: (t) => t, tCount: 0, mapped: new Map() };
     if (!EV) { DS = { league, all: league }; return; }
     const pmap = new Map(); // tournament player id -> HSL player id
     for (const e of EV.events) for (const p of e.players || []) if (p.hslId) pmap.set(p.id, p.hslId);
@@ -1518,7 +1522,11 @@
       q.svPct = q.svShots ? 1 - q.svGa / q.svShots : t.svPct;
       tCache.set(t.id, q); return q;
     };
-    const all = { games: [...S.games, ...mapped], players, skaters, playerOf: (id) => byId.get(id) || playerById.get(id), teamOf, periodsOf: teamOf, tCount: mapped.length, mapped: new Map(mapped.map((g) => [g.id, g])), events: [...new Set(mapped.map((g) => g.eventName))] };
+    // goalies: league totals, replaced by build-side league + tournament totals where a goalie played in a tournament
+    const gAll = new Map((S.goalies || []).map((g) => [g.id, g]));
+    for (const g of S.goaliesInclTournaments || []) gAll.set(g.id, g);
+    const goalies = [...gAll.values()];
+    const all = { games: [...S.games, ...mapped], players, skaters, playerOf: (id) => byId.get(id) || playerById.get(id), goalies, goalieOf: (id) => gAll.get(id), teamOf, tCount: mapped.length, mapped: new Map(mapped.map((g) => [g.id, g])), events: [...new Set(mapped.map((g) => g.eventName))] };
     DS = { league, all };
   }
   const D = () => (incT() && DS ? DS.all : DS.league);

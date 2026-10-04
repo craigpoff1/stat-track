@@ -27,9 +27,12 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
   double-escapes (attribute + innerHTML). Never write `data-tip="…"` by hand.
 - **Data:** `S` = decrypted stats.json. `teamById` also holds tournament teams (`eventId`, `href`) and
   external-league teams (`ext`, e.g. `hpl:148550`). `gameById` holds league + tournament games.
-- **Datasets:** read league-or-tournament-inclusive data through `D()` (`D().games`, `D().players`,
-  `D().skaters`, `D().playerOf(id)`, `D().periodsOf(team)`). Standings/records/results/weekends/firsts
-  must keep using league-only data (`S.games`, `S.teams`, `t.results`).
+- **Datasets:** the "Include tournament games" toggle must change *every* stat/insight, so read
+  through `D()`: `D().games`, `D().players`, `D().skaters`, `D().playerOf(id)`, `D().goalies`,
+  `D().goalieOf(id)`, and `D().teamOf(team)` for team analytics (GF/GA, periods, PIM, shots, SV%,
+  PP/PK; ranks/averages via `S.teams.map(D().teamOf)`). Only standings/records/results/weekends/firsts
+  stay league-only (`S.teams`, `t.w/l/t/pts/rank`, `t.results`). Tournament goalie totals are built
+  server-side (`goaliesInclTournaments`, same sheet checks) because goalie validation lives in build.
 - Team/league separation: Team section = selected team only; League tabs = league-wide; Tournaments =
   its own section. Ask before mixing.
 
