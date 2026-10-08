@@ -69,6 +69,14 @@ jobs:
             git pull --rebase && git push || (sleep 5 && git pull --rebase && git push)
           fi
 
+      # Pages serves files with max-age=600, so browsers keep an old app.js/style.css for up to 10 min
+      # after a deploy. A per-commit ?v= stamp makes every deploy fetch the new code immediately.
+      - name: Stamp asset versions
+        run: |
+          V="${GITHUB_SHA::8}"
+          sed -i -e "s#href=\"style.css\"#href=\"style.css?v=$V\"#" -e "s#src=\"app.js\"#src=\"app.js?v=$V\"#" site/index.html
+          grep -E "style.css|app.js" site/index.html
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
