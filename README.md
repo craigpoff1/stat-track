@@ -73,8 +73,12 @@ npm test                         # parser, crypto and tournament regression test
 node scripts/scrape.mjs          # HSL (--all re-fetches every game)
 node scripts/events.mjs          # tournaments + external leagues (--all re-fetches event sheets)
 node scripts/build.mjs           # no SITE_PASSWORD → plain site/data/stats.json for local dev
+DIVISION=2018 node scripts/scrape.mjs && DIVISION=2018 node scripts/build.mjs   # 2018 Major gallery
 python -m http.server 8765 --directory site
 ```
+
+- **2018 Major gallery** (`/2018/`): a simple standings + scoring-leaders page for the 2018 Major
+  division with a team filter, linked from the main site's footer. Same password; updated nightly.
 
 - **Manual update:** `gh workflow run update.yml` (add `-f refetch_all=true` for a full HSL re-fetch),
   or Actions tab → *Update stats and deploy* → *Run workflow*.

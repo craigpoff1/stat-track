@@ -2167,7 +2167,7 @@
     document.getElementById('upd').textContent = `${S.meta.league} · ${S.meta.season} · Updated ${new Date(S.meta.updatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`;
     document.title = `${S.meta.division} · ${S.meta.league}`;
     const so = S.meta.scoreOnlyGames?.length;
-    document.getElementById('foot').innerHTML = `Unofficial stats built from the <a class="lnk" href="${esc(S.meta.sourceUrl)}" target="_blank" rel="noopener">${esc(S.meta.league)}</a> published game sheets · ${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final${so ? ` · ${so} counted from the final score only (no game sheet yet)` : ''}.${savedKey() ? ' · <a class="lnk" href="#" id="lock">Lock this device</a>' : ''}`;
+    document.getElementById('foot').innerHTML = `Unofficial stats built from the <a class="lnk" href="${esc(S.meta.sourceUrl)}" target="_blank" rel="noopener">${esc(S.meta.league)}</a> published game sheets · ${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final${so ? ` · ${so} counted from the final score only (no game sheet yet)` : ''}.${savedKey() ? ' · <a class="lnk" href="#" id="lock">Lock this device</a>' : ''} · <a class="foot-x" href="2018/">2018 Major stats</a>`;
   }
 
   // ------------------------------------------------------------ password gate

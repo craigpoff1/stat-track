@@ -37,6 +37,15 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
 - Team/league separation: Team section = selected team only; League tabs = league-wide; Tournaments =
   its own section. Ask before mixing.
 
+## 2018 Major gallery (site/2018/)
+- Simple companion page: standings + scoring leaders for HSL **2018 Major (division 32765** — not
+  32764, a different "2018" group), with a team filter. Own small `site/2018/gallery.js`, shares
+  `style.css`. Linked subtly from the main footer ("2018 Major stats").
+- `scripts/config.mjs` has `divisions`; `DIVISION=2018 node scripts/scrape.mjs|build.mjs` uses
+  `data/divisions/2018/` → `site/2018/data/`. Secondary divisions skip tournaments/identity.
+- Same `SITE_PASSWORD` + salt, so the key a device saved on the main site decrypts it; no own gate
+  (locked visitors are sent to the main site). CI steps for 2018 are non-fatal by design.
+
 ## Build (scripts/build.mjs)
 - HSL aggregation → standings, players, goalies (validated by `checkGoalieSheet`, shared with events),
   then events (per-event teams/games/players, ids namespaced `"<event>:<id>"`), team links (roster

@@ -51,8 +51,17 @@ jobs:
       - name: Tournaments + opponent leagues (non-fatal)
         run: node scripts/events.mjs || echo "events fetch failed; keeping last copies"
 
+      # 2018 Major stat gallery (site/2018). Non-fatal: a problem there must never block the main site.
+      - name: Scrape 2018 Major (non-fatal)
+        run: DIVISION=2018 node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }} || echo "2018 scrape failed; keeping last copies"
+
       - name: Build stats (encrypted)
         run: node scripts/build.mjs
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+
+      - name: Build 2018 Major gallery (encrypted, non-fatal)
+        run: DIVISION=2018 node scripts/build.mjs || echo "2018 build failed; gallery keeps showing its error page"
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 
@@ -75,7 +84,8 @@ jobs:
         run: |
           V="${GITHUB_SHA::8}"
           sed -i -e "s#href=\"style.css\"#href=\"style.css?v=$V\"#" -e "s#src=\"app.js\"#src=\"app.js?v=$V\"#" site/index.html
-          grep -E "style.css|app.js" site/index.html
+          sed -i -e "s#href=\"../style.css\"#href=\"../style.css?v=$V\"#" -e "s#src=\"gallery.js\"#src=\"gallery.js?v=$V\"#" site/2018/index.html
+          grep -E "style.css|app.js|gallery.js" site/index.html site/2018/index.html
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

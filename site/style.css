@@ -508,3 +508,12 @@ div.ld{cursor:default}
 .tgl-ic{display:none;font-size:15px;line-height:1;filter:grayscale(1);opacity:.55;transition:filter .15s,opacity .15s}
 .tgl.on .tgl-ic{filter:none;opacity:1}
 @media (max-width:720px){.tgl{padding:0 10px;gap:6px}.tgl .sw{margin:0}.tgl-l{display:none}.tgl-ic{display:inline}}
+
+/* ---------- 2018 Major gallery (site/2018) + its footer link ---------- */
+.foot-x{color:var(--ink3);opacity:.8}.foot-x:hover{color:var(--ink2);opacity:1}
+.g-nav{display:flex!important;align-items:center}
+.g-nav a{font:700 13px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}.g-nav a:hover{color:var(--us)}
+.g-teams{flex-wrap:wrap;overflow:visible}
+.g-teams .wkchip{background:transparent;cursor:pointer}.g-teams .wkchip.on{background:var(--us)}
+@media (max-width:720px){.g-teams{flex-wrap:nowrap;overflow-x:auto}}
+.g-l5{font:700 12px var(--cond);letter-spacing:.08em;color:var(--ink3)}

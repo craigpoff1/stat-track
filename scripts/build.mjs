@@ -6,8 +6,11 @@ import { encryptJson } from './crypto.mjs';
 import { events as eventsConfig, externalLeagues } from './events.config.mjs';
 import { playerLinks } from './identity.config.mjs';
 
-const DATA = path.resolve('data');
-const OUT = path.resolve('site/data');
+// per division (DIVISION=<slug>, see config.mjs); tournaments/identity only for the main site
+const DATA = path.resolve(config.dataDir);
+const OUT = path.resolve(config.outDir);
+const eventsList = config.primary ? eventsConfig : [];
+const leagueSources = config.primary ? externalLeagues : [];
 
 const schedule = JSON.parse(await fs.readFile(path.join(DATA, 'schedule.json'), 'utf8'));
 const games = [];
@@ -339,14 +342,14 @@ async function readDirJson(dir) {
   try { return await Promise.all((await fs.readdir(dir)).filter((f) => f.endsWith('.json')).map(async (f) => JSON.parse(await fs.readFile(path.join(dir, f), 'utf8')))); } catch { return []; }
 }
 const leaguesOut = [];
-for (const lg of externalLeagues) { const d = await readJson(path.join(DATA, 'leagues', `${lg.id}.json`)); if (d) leaguesOut.push(d); }
+for (const lg of leagueSources) { const d = await readJson(path.join(DATA, 'leagues', `${lg.id}.json`)); if (d) leaguesOut.push(d); }
 async function readJson(f) { try { return JSON.parse(await fs.readFile(f, 'utf8')); } catch { return null; } }
 
 const players_hsl = players; // event loop shadows "players" with its own map
 const eventsOut = [];
 const identityReview = [];
 const goaliesAll = new Map(); // HSL goalie id -> league + tournament totals (only goalies with tournament games)
-for (const ev of eventsConfig) {
+for (const ev of eventsList) {
   const base = { id: ev.id, name: ev.name, season: ev.season, dates: ev.dates, datesApprox: !!ev.datesApprox, platform: ev.platform, leagues: ev.leagues || [], focus: ev.focus || [], url: ev.base || null, division: ev.divisionName || null };
   const sched = (await readJson(path.join(DATA, 'events', ev.id, 'schedule.json'))) || [];
   const sheets = new Map((await readDirJson(path.join(DATA, 'events', ev.id, 'games'))).map((g) => [g.id, g]));
@@ -475,7 +478,8 @@ const out = {
     league: config.leagueName,
     season: config.seasonName,
     division: config.divisionName,
-    myTeamId: String(config.myTeamId),
+    myTeamId: config.myTeamId ? String(config.myTeamId) : null,
+    slug: config.slug,
     sourceUrl: `${config.baseUrl}/division/0/${config.divisionId}/masterschedule`,
     gamesPlayed: gameSummaries.length + scoreOnly.length,
     scoreOnlyGames: scoreOnly,

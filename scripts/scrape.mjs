@@ -7,7 +7,7 @@ import path from 'node:path';
 import { config, scheduleIcsUrl, gameUrl } from './config.mjs';
 import { parseSchedule, parseGame } from './parse.mjs';
 
-const DATA = path.resolve('data');
+const DATA = path.resolve(config.dataDir); // per division (DIVISION=<slug>, see config.mjs)
 const GAMES = path.join(DATA, 'games');
 const DELAY_MS = 800; // be polite to the league site
 const UA = 'stat-track/1.0 (parent-run stats page; https://github.com/craigpoff1/stat-track)';
