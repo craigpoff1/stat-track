@@ -1,0 +1,799 @@
+{
+ "id": "2019821",
+ "dateText": "Saturday, September 19, 2026 @ 11:00 a.m.",
+ "rink": "Brandt Centre",
+ "status": "Final",
+ "home": {
+  "name": "Sauce Hockey Academy",
+  "teamId": "402368",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/17e9bc47-5a50-4d7e-8db2-416c7e6e3d17_Sauce Hockey Academy.png",
+  "score": 2
+ },
+ "away": {
+  "name": "Sask Super Selects",
+  "teamId": "402372",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/10720e6d-8633-426f-81cb-53d4a6557234_Sask Super Selects.png",
+  "score": 8
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:24",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Ryker Ellis"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:04",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cashel Martschuk"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:38",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "10",
+    "name": "Vaughn Berdusco"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:57",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "8",
+    "name": "August Kachur"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Theo Kolla"
+    },
+    {
+     "number": "26",
+     "name": "Canaan Dashney"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:39",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:29",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Theo Kolla"
+    }
+   ],
+   "tags": [
+    "SHG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:08",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:09",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "minutes": 2,
+   "infraction": "Holding Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:06",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Isamu Lysak"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:24",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Ryker Ellis"
+    },
+    {
+     "number": "4",
+     "name": "Zeke Loeppky"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:11",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Ryker Ellis"
+    },
+    {
+     "number": "26",
+     "name": "Canaan Dashney"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:59",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "8",
+    "name": "August Kachur"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "16:50",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Isamu Lysak"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "15:44",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "4",
+    "name": "Zeke Loeppky"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:54",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:38",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "26",
+    "name": "Canaan Dashney"
+   },
+   "minutes": 2,
+   "infraction": "Holding Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:37",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [
+    {
+     "number": "27",
+     "name": "Carson Condy"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:00",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:34",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:57",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "71",
+    "name": "jasper shirley"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:59",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [
+    {
+     "number": "26",
+     "name": "Canaan Dashney"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:31",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Jacob Brisebois"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Brendan Hughes"
+    },
+    {
+     "number": "28",
+     "name": "Beckham Block"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:52",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cashel Martschuk"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:16",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:32",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:26",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Cashel Martschuk"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:26",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cashel Martschuk"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061549",
+   "number": "19",
+   "name": "Cashel Martschuk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060551",
+   "number": "18",
+   "name": "Jacob Brisebois",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061974",
+   "number": "98",
+   "name": "Brendan Hughes",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062494",
+   "number": "94",
+   "name": "Halle Scarff",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060443",
+   "number": "8",
+   "name": "Owen Bruce",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061687",
+   "number": "77",
+   "name": "Kingston Fox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061098",
+   "number": "72",
+   "name": "Madden Proskurniak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061420",
+   "number": "71",
+   "name": "jasper shirley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062357",
+   "number": "48",
+   "name": "Luke Bateman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061680",
+   "number": "35",
+   "name": "Darcy Edgett",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061397",
+   "number": "28",
+   "name": "Beckham Block",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061782",
+   "number": "21",
+   "name": "Henry Anderson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061398",
+   "number": "17",
+   "name": "Ashton Ortman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061781",
+   "number": "16",
+   "name": "Remi (Remington) Voth",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061780",
+   "number": "11",
+   "name": "Isamu Lysak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060846",
+   "number": "10",
+   "name": "Vaughn Berdusco",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061828",
+   "number": "29",
+   "name": "Gunner Keays",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5062732",
+   "number": "91",
+   "name": "Lindon Barlage",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061284",
+   "number": "8",
+   "name": "August Kachur",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061805",
+   "number": "13",
+   "name": "Theo Kolla",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5060912",
+   "number": "9",
+   "name": "Gavin Potter",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061811",
+   "number": "64",
+   "name": "Everett Walton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5060723",
+   "number": "4",
+   "name": "Zeke Loeppky",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061068",
+   "number": "27",
+   "name": "Carson Condy",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5062016",
+   "number": "26",
+   "name": "Canaan Dashney",
+   "g": 0,
+   "a": 3,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5075320",
+   "number": "14",
+   "name": "Jersey Jones",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061040",
+   "number": "12",
+   "name": "Ryker Ellis",
+   "g": 0,
+   "a": 3,
+   "pts": 3,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061098",
+   "number": "72",
+   "name": "Madden Proskurniak",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 40,
+   "saves": 40
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 6,
+   "saves": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061068",
+   "number": "27",
+   "name": "Carson Condy",
+   "seconds": 0,
+   "ga": 2,
+   "shots": 5,
+   "saves": 3
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-09-19T11:00:00",
+ "gameNumber": 49,
+ "fetchedAt": "2026-10-08T23:29:39.824Z"
+}

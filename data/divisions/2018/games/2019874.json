@@ -1,0 +1,727 @@
+{
+ "id": "2019874",
+ "dateText": "Sunday, September 20, 2026 @ 8:00 a.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "Gorillas Hockey Academy",
+  "teamId": "402358",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/d99627bb-007b-44a0-8d46-95cfeebd4951_Gorillas Hockey Academy.png",
+  "score": 1
+ },
+ "away": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402367",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/f4fdeb85-eb35-4de7-a4b6-76222672d1ca_Rebels Hockey Academy.png",
+  "score": 11
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 4
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:16",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Emric Neurauter"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:39",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Kaysen Derosa"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:08",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "66",
+    "name": "Nash Maisonneuve"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:14",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "66",
+    "name": "Nash Maisonneuve"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Emric Neurauter"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "15:57",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Cruz Smith"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:58",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:04",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "87",
+    "name": "Jordan Watson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:49",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "29",
+    "name": "Emory Van"
+   },
+   "assists": [
+    {
+     "number": "87",
+     "name": "Jordan Watson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:18",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Greyson Lamouche"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:55",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Emric Neurauter"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Greyson Lamouche"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:57",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "66",
+    "name": "Nash Maisonneuve"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Emric Neurauter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:45",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "26",
+    "name": "Logan Bell"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "18:10",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "assists": [
+    {
+     "number": "96",
+     "name": "Bohen Anderson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:17",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "87",
+    "name": "Jordan Watson"
+   },
+   "assists": [
+    {
+     "number": "96",
+     "name": "Bohen Anderson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:08",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Cruz Smith"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:22",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:18",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Cruz Smith"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:28",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Emric Neurauter"
+   },
+   "assists": [
+    {
+     "number": "66",
+     "name": "Nash Maisonneuve"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:44",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:20",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "28",
+    "name": "Maxwell Doyle"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061184",
+   "number": "8",
+   "name": "Zyan Olynyk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061201",
+   "number": "88",
+   "name": "Jack Furlong",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5062703",
+   "number": "77",
+   "name": "Jaxon Achtymichuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5060979",
+   "number": "74",
+   "name": "Vincent Grimbly",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061993",
+   "number": "7",
+   "name": "Elias Woobin Jung",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5060877",
+   "number": "43",
+   "name": "Gabriel Welsh",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061638",
+   "number": "29",
+   "name": "Emerson Dolan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5062474",
+   "number": "28",
+   "name": "Maxwell Doyle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5062000",
+   "number": "26",
+   "name": "Logan Bell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061652",
+   "number": "18",
+   "name": "Cruz Smith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061227",
+   "number": "17",
+   "name": "Kaysen Derosa",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061922",
+   "number": "14",
+   "name": "Zachary Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061598",
+   "number": "13",
+   "name": "Mackenzie Clark",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5060815",
+   "number": "11",
+   "name": "Patrick Carroll",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062849",
+   "number": "66",
+   "name": "Nash Maisonneuve",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062963",
+   "number": "98",
+   "name": "Emric Neurauter",
+   "g": 2,
+   "a": 2,
+   "pts": 4,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062102",
+   "number": "87",
+   "name": "Jordan Watson",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062103",
+   "number": "96",
+   "name": "Bohen Anderson",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061850",
+   "number": "29",
+   "name": "Emory Van",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061846",
+   "number": "19",
+   "name": "Cameron York",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061268",
+   "number": "17",
+   "name": "Greyson Lamouche",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061734",
+   "number": "9",
+   "name": "Jett Friesen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062594",
+   "number": "88",
+   "name": "Kian Head",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5060594",
+   "number": "81",
+   "name": "Jack Scheideman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061845",
+   "number": "8",
+   "name": "Logan Brochu",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061851",
+   "number": "61",
+   "name": "Ellis Anaka",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062834",
+   "number": "4",
+   "name": "Noah Duthie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061876",
+   "number": "31",
+   "name": "Noah Verburg",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062810",
+   "number": "18",
+   "name": "Deacon Krol",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062580",
+   "number": "14",
+   "name": "Grayson Stojan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5060590",
+   "number": "13",
+   "name": "Harrison Clement",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5060979",
+   "number": "74",
+   "name": "Vincent Grimbly",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061876",
+   "number": "31",
+   "name": "Noah Verburg",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 15,
+   "away": 36
+  },
+  {
+   "label": "2",
+   "home": 15,
+   "away": 36
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 0
+  }
+ ],
+ "start": "2026-09-20T08:00:00",
+ "gameNumber": 102,
+ "fetchedAt": "2026-10-08T23:29:49.785Z"
+}

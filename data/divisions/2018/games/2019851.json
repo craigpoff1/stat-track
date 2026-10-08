@@ -1,0 +1,728 @@
+{
+ "id": "2019851",
+ "dateText": "Saturday, September 19, 2026 @ 4:00 p.m.",
+ "rink": "Co-Operators Centre #6 (Co-operators Arena)",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402369",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/de966e86-ca95-4940-be08-b62ef021fd74_Spartan Hockey Academy.png",
+  "score": 6
+ },
+ "away": {
+  "name": "Sask Super Selects",
+  "teamId": "402372",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/10720e6d-8633-426f-81cb-53d4a6557234_Sask Super Selects.png",
+  "score": 3
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:45",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:45",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:40",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "7",
+    "name": "Jagger Kildaw"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:16",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Porter"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:02",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Hutton Wickham"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:06",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:07",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:51",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "12",
+    "name": "Leo Belandis"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:01",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "7",
+    "name": "Jagger Kildaw"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:10",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Porter"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:25",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:07",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Lucas Rieder"
+   },
+   "assists": [
+    {
+     "number": "48",
+     "name": "Luke Desy"
+    }
+   ],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:39",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "47",
+    "name": "Bennett Mills"
+   },
+   "minutes": 2,
+   "infraction": "Boarding"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:27",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Gavin Potter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:45",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:23",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Porter"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Jagger Kildaw"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "16:09",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "21",
+    "name": "Camden Robichaud"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:02",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "71",
+    "name": "Sutton Tams"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:33",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Jagger Kildaw"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Gavin Porter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:05",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "14",
+    "name": "Jersey Jones"
+   },
+   "assists": [
+    {
+     "number": "91",
+     "name": "Lindon Barlage"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:56",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:49",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "71",
+    "name": "Sutton Tams"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:55",
+   "side": "away",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "8",
+    "name": "August Kachur"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:28",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Fallon Tams"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5062528",
+   "number": "18",
+   "name": "Gavin Porter",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060504",
+   "number": "9",
+   "name": "Lucas Rieder",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061049",
+   "number": "7",
+   "name": "Jagger Kildaw",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061711",
+   "number": "12",
+   "name": "Leo Belandis",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060826",
+   "number": "71",
+   "name": "Sutton Tams",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060512",
+   "number": "48",
+   "name": "Luke Desy",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061520",
+   "number": "47",
+   "name": "Bennett Mills",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060832",
+   "number": "38",
+   "name": "Jayse Grasdahl",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060866",
+   "number": "31",
+   "name": "Blake Bleile",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5062694",
+   "number": "3",
+   "name": "Keaton Craig",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060552",
+   "number": "29",
+   "name": "Easton Eagle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060838",
+   "number": "21",
+   "name": "Camden Robichaud",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060549",
+   "number": "17",
+   "name": "Fallon Tams",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061970",
+   "number": "13",
+   "name": "Leif Tomiuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060505",
+   "number": "11",
+   "name": "Hutton Wickham",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5075320",
+   "number": "14",
+   "name": "Jersey Jones",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061805",
+   "number": "13",
+   "name": "Theo Kolla",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061040",
+   "number": "12",
+   "name": "Ryker Ellis",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5062732",
+   "number": "91",
+   "name": "Lindon Barlage",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5060912",
+   "number": "9",
+   "name": "Gavin Potter",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061284",
+   "number": "8",
+   "name": "August Kachur",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061811",
+   "number": "64",
+   "name": "Everett Walton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5060723",
+   "number": "4",
+   "name": "Zeke Loeppky",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061828",
+   "number": "29",
+   "name": "Gunner Keays",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061068",
+   "number": "27",
+   "name": "Carson Condy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5062016",
+   "number": "26",
+   "name": "Canaan Dashney",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060866",
+   "number": "31",
+   "name": "Blake Bleile",
+   "seconds": 3300,
+   "ga": 3,
+   "shots": 20,
+   "saves": 17
+  },
+  {
+   "side": "away",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "seconds": 3300,
+   "ga": 6,
+   "shots": 20,
+   "saves": 14
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 55",
+  "away: goalie minutes total 55"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 11,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 9
+  }
+ ],
+ "start": "2026-09-19T16:00:00",
+ "gameNumber": 79,
+ "fetchedAt": "2026-10-08T23:29:45.283Z"
+}

@@ -1,0 +1,709 @@
+{
+ "id": "2019858",
+ "dateText": "Saturday, September 19, 2026 @ 5:00 p.m.",
+ "rink": "North County Recreation Complex",
+ "status": "Final",
+ "home": {
+  "name": "O2 Grizzlies",
+  "teamId": "402366",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/ffa3994f-f1d1-4189-871c-59df5cdd4b1e_O2 Grizzlies.png",
+  "score": 2
+ },
+ "away": {
+  "name": "Young Kings Hockey",
+  "teamId": "402371",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0fb8c71b-98d4-4866-ab88-20c422c00d87_Young Kings Hockey.png",
+  "score": 9
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:54",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:41",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:46",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "71",
+    "name": "Nixon Lafreniere"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:20",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:57",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "79",
+    "name": "Spencer Diaz"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:07",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "71",
+    "name": "Landon Miller"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:03",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "assists": [
+    {
+     "number": "91",
+     "name": "Charlie Cox"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:03",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "15",
+    "name": "Rylan Mclean"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Carter Weisgerber"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:54",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "71",
+    "name": "Nixon Lafreniere"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:47",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "9",
+    "name": "MCCOY FREEBURN"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:18",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:23",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "93",
+    "name": "Banks Fischer"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:29",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "71",
+    "name": "Landon Miller"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:35",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:09",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "71",
+    "name": "Nixon Lafreniere"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:02",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "75",
+    "name": "Rhett Lomness"
+   },
+   "assists": [
+    {
+     "number": "23",
+     "name": "Rhett Rhinas"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "19:10",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Boarding"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:57",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "17",
+    "name": "Kyren Dovichak"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Nixon Lafreniere"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:29",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "71",
+    "name": "Nixon Lafreniere"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Kyren Dovichak"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:03",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "9",
+    "name": "MCCOY FREEBURN"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Porter Curlew"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:36",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "12",
+    "name": "Connor Chisholm"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Nixon Lafreniere"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061460",
+   "number": "9",
+   "name": "MCCOY FREEBURN",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061117",
+   "number": "71",
+   "name": "Landon Miller",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5060621",
+   "number": "8",
+   "name": "Porter Curlew",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5060626",
+   "number": "67",
+   "name": "Rhys Dunn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061103",
+   "number": "44",
+   "name": "Wyatt Burns",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061473",
+   "number": "4",
+   "name": "Jaiden Sharma",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061279",
+   "number": "33",
+   "name": "Brooks Carver",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061914",
+   "number": "32",
+   "name": "Benett Lehouillier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5062617",
+   "number": "20",
+   "name": "Samuel Clark",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061573",
+   "number": "18",
+   "name": "Bauer Poulsen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061923",
+   "number": "17",
+   "name": "Ashton McFadden",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061410",
+   "number": "16",
+   "name": "Youngwoo Song",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061567",
+   "number": "13",
+   "name": "Holt Wiebach",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5062650",
+   "number": "12",
+   "name": "Marek Giroux-McKay",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5062217",
+   "number": "10",
+   "name": "Jones Desmeules",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061426",
+   "number": "71",
+   "name": "Nixon Lafreniere",
+   "g": 2,
+   "a": 2,
+   "pts": 4,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062643",
+   "number": "98",
+   "name": "Kashton Clarke",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062428",
+   "number": "79",
+   "name": "Spencer Diaz",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5060440",
+   "number": "75",
+   "name": "Rhett Lomness",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061467",
+   "number": "7",
+   "name": "Carter Weisgerber",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062191",
+   "number": "17",
+   "name": "Kyren Dovichak",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061688",
+   "number": "15",
+   "name": "Rylan Mclean",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5060442",
+   "number": "12",
+   "name": "Connor Chisholm",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062631",
+   "number": "93",
+   "name": "Banks Fischer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061127",
+   "number": "91",
+   "name": "Charlie Cox",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5060760",
+   "number": "29",
+   "name": "Maxton Burleigh",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062360",
+   "number": "23",
+   "name": "Rhett Rhinas",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061132",
+   "number": "20",
+   "name": "Kaique Thunder Chief",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062429",
+   "number": "11",
+   "name": "Beau Wiest",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062636",
+   "number": "10",
+   "name": "Leo Giesbrecht",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 11
+  },
+  {
+   "label": "2",
+   "home": 10,
+   "away": 11
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 10
+  }
+ ],
+ "start": "2026-09-19T17:00:00",
+ "gameNumber": 86,
+ "fetchedAt": "2026-10-08T23:29:47.957Z"
+}

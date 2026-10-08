@@ -1,0 +1,892 @@
+{
+ "id": "2019789",
+ "dateText": "Friday, September 18, 2026 @ 5:45 p.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402367",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/f4fdeb85-eb35-4de7-a4b6-76222672d1ca_Rebels Hockey Academy.png",
+  "score": 15
+ },
+ "away": {
+  "name": "Capital City Knights",
+  "teamId": "402361",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/25a07116-c159-4383-87ed-b29821cb31ce_Capital City Knights.jpg",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 4,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:20",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cameron York"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:40",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Elbow Minor"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:52",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "14",
+    "name": "Grayson Stojan"
+   },
+   "assists": [],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:12",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "assists": [
+    {
+     "number": "87",
+     "name": "Jordan Watson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:25",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:44",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "88",
+    "name": "Jayce Clarke"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:39",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "assists": [
+    {
+     "number": "87",
+     "name": "Jordan Watson"
+    },
+    {
+     "number": "96",
+     "name": "Bohen Anderson"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:33",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "16",
+    "name": "Braden Van Wieren"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:00",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:35",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "87",
+    "name": "Jordan Watson"
+   },
+   "assists": [
+    {
+     "number": "96",
+     "name": "Bohen Anderson"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "19:17",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:35",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Deacon Krol"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Greyson Lamouche"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:35",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Emric Neurauter"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:46",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Grayson Stojan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:41",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "16",
+    "name": "Braden Van Wieren"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:16",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "61",
+    "name": "Ellis Anaka"
+   },
+   "assists": [
+    {
+     "number": "4",
+     "name": "Noah Duthie"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:33",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Deacon Krol"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:06",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Emric Neurauter"
+    },
+    {
+     "number": "14",
+     "name": "Grayson Stojan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:15",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Grayson Stojan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:48",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:26",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "98",
+    "name": "Nate Ahlskog"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Braden Melenberg"
+    },
+    {
+     "number": "11",
+     "name": "Jacob Van Wieren"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:31",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "18",
+    "name": "Cormic Lacroix"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:00",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "16",
+    "name": "Braden Van Wieren"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:27",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "66",
+    "name": "Nash Maisonneuve"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:18",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:52",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Noah Duthie"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Deacon Krol"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:46",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "81",
+    "name": "Jack Scheideman"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:06",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:48",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cameron York"
+    },
+    {
+     "number": "87",
+     "name": "Jordan Watson"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:07",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Harrison Clement"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Deacon Krol"
+    },
+    {
+     "number": "4",
+     "name": "Noah Duthie"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5062103",
+   "number": "96",
+   "name": "Bohen Anderson",
+   "g": 5,
+   "a": 2,
+   "pts": 7,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5061846",
+   "number": "19",
+   "name": "Cameron York",
+   "g": 3,
+   "a": 2,
+   "pts": 5,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5062102",
+   "number": "87",
+   "name": "Jordan Watson",
+   "g": 1,
+   "a": 3,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5062849",
+   "number": "66",
+   "name": "Nash Maisonneuve",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5061851",
+   "number": "61",
+   "name": "Ellis Anaka",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5062834",
+   "number": "4",
+   "name": "Noah Duthie",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5062810",
+   "number": "18",
+   "name": "Deacon Krol",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5062580",
+   "number": "14",
+   "name": "Grayson Stojan",
+   "g": 1,
+   "a": 3,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5060590",
+   "number": "13",
+   "name": "Harrison Clement",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5062963",
+   "number": "98",
+   "name": "Emric Neurauter",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5061734",
+   "number": "9",
+   "name": "Jett Friesen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5062594",
+   "number": "88",
+   "name": "Kian Head",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5060594",
+   "number": "81",
+   "name": "Jack Scheideman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5061845",
+   "number": "8",
+   "name": "Logan Brochu",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5061876",
+   "number": "31",
+   "name": "Noah Verburg",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5061850",
+   "number": "29",
+   "name": "Emory Van",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402367",
+   "playerId": "5061268",
+   "number": "17",
+   "name": "Greyson Lamouche",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061788",
+   "number": "98",
+   "name": "Nate Ahlskog",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062541",
+   "number": "92",
+   "name": "Matthew Williams",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5060835",
+   "number": "88",
+   "name": "Jayce Clarke",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062187",
+   "number": "8",
+   "name": "Hendrix Rogers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061245",
+   "number": "71",
+   "name": "Macklin Vigneau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 8
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062987",
+   "number": "7",
+   "name": "Karson Ofukany",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061534",
+   "number": "31",
+   "name": "Logan Plante",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061250",
+   "number": "29",
+   "name": "Braden Melenberg",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061191",
+   "number": "18",
+   "name": "Cormic Lacroix",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062706",
+   "number": "17",
+   "name": "Jayce Kshyk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061793",
+   "number": "16",
+   "name": "Braden Van Wieren",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062848",
+   "number": "14",
+   "name": "William Ekholm Bjornstad",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061881",
+   "number": "12",
+   "name": "Evan Archer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5060706",
+   "number": "11",
+   "name": "Jacob Van Wieren",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 13,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 15,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 16,
+   "away": 5
+  }
+ ],
+ "start": "2026-09-18T17:45:00",
+ "gameNumber": 17,
+ "fetchedAt": "2026-10-08T23:29:34.282Z"
+}

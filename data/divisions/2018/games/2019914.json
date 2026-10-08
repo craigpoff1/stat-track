@@ -1,0 +1,616 @@
+{
+ "id": "2019914",
+ "dateText": "Sunday, September 20, 2026 @ 4:45 p.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "North Stars Hockey Academy",
+  "teamId": "402364",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/50534b6c-c2f8-47ed-a2b4-6af4afde02a0_North Stars Hockey Academy.png",
+  "score": 0
+ },
+ "away": {
+  "name": "Saints Pro Hockey Academy",
+  "teamId": "402357",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/073cdab6-4b48-4cdc-a752-9a9a66d5b4f1_Saints Pro Hockey Academy.png",
+  "score": 10
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:11",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "10",
+    "name": "Austyn Steele"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:00",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "29",
+    "name": "Owen Pawluk"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:44",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Hudson Poirier"
+   },
+   "assists": [
+    {
+     "number": "44",
+     "name": "Blake Kyle"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "16:25",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "15",
+    "name": "Cohen Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:00",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Hudson Poirier"
+   },
+   "minutes": 2,
+   "infraction": "Bench / Too Many Players"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:08",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "14",
+    "name": "Vaughn Jansen"
+   },
+   "assists": [
+    {
+     "number": "27",
+     "name": "Cooper Hohmann"
+    },
+    {
+     "number": "9",
+     "name": "Hudson Poirier"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:09",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": {
+    "number": "86",
+    "name": "Jaxon Smordin"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:07",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Chael Smith"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:37",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "15",
+    "name": "Gavin Kool kelly"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:25",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "14",
+    "name": "Vaughn Jansen"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Hudson Poirier"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:22",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "87",
+    "name": "Benjamin Hayward"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:16",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Daxyn Hoetmer"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Gavin Durrand"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:13",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "38",
+    "name": "Paisley Kolotylo"
+   },
+   "minutes": 2,
+   "infraction": "Holding Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:40",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Hudson Poirier"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Vaughn Jansen"
+    },
+    {
+     "number": "27",
+     "name": "Cooper Hohmann"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:20",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Hudson Poirier"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5060694",
+   "number": "98",
+   "name": "Ellis MacDougall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061156",
+   "number": "9",
+   "name": "Cameron Yin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062011",
+   "number": "88",
+   "name": "Oaklin Berlinic",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062466",
+   "number": "87",
+   "name": "Benjamin Hayward",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062475",
+   "number": "8",
+   "name": "Maximus Young",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062559",
+   "number": "7",
+   "name": "Calder Nahajowich",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5060784",
+   "number": "5",
+   "name": "Leo Halabi",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062001",
+   "number": "38",
+   "name": "Paisley Kolotylo",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061163",
+   "number": "34",
+   "name": "NATHAN KIM",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062573",
+   "number": "29",
+   "name": "Nash Ziegler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062667",
+   "number": "22",
+   "name": "Taylor Albers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061257",
+   "number": "2",
+   "name": "Ben Szmyrko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062677",
+   "number": "15",
+   "name": "Cohen Weisgerber",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062201",
+   "number": "10",
+   "name": "Wyatt Carstairs",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060885",
+   "number": "9",
+   "name": "Hudson Poirier",
+   "g": 3,
+   "a": 2,
+   "pts": 5,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061277",
+   "number": "14",
+   "name": "Vaughn Jansen",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061739",
+   "number": "7",
+   "name": "Chael Smith",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060600",
+   "number": "29",
+   "name": "Owen Pawluk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061952",
+   "number": "15",
+   "name": "Gavin Kool kelly",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5062539",
+   "number": "11",
+   "name": "Daxyn Hoetmer",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060607",
+   "number": "10",
+   "name": "Austyn Steele",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060973",
+   "number": "87",
+   "name": "Asher May",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060481",
+   "number": "86",
+   "name": "Jaxon Smordin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5115935",
+   "number": "56",
+   "name": "Harlyn Hayes",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061539",
+   "number": "44",
+   "name": "Blake Kyle",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5062181",
+   "number": "4",
+   "name": "Edison Manning",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5062821",
+   "number": "31",
+   "name": "Ryker Webster",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060691",
+   "number": "27",
+   "name": "Cooper Hohmann",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061677",
+   "number": "21",
+   "name": "Carter Ongkiko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060567",
+   "number": "19",
+   "name": "Evertt Liu",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5062298",
+   "number": "18",
+   "name": "Gavin Durrand",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-09-20T16:45:00",
+ "gameNumber": 142,
+ "fetchedAt": "2026-10-08T23:29:57.875Z"
+}

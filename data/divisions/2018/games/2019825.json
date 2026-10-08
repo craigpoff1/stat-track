@@ -1,0 +1,565 @@
+{
+ "id": "2019825",
+ "dateText": "Saturday, September 19, 2026 @ 11:30 a.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "MOB Hockey",
+  "teamId": "402363",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/9524d9af-b482-4d16-ac71-406bd1b04891_MOB Hockey.png",
+  "score": 9
+ },
+ "away": {
+  "name": "North Stars Academy Wild",
+  "teamId": "402365",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/972df715-0e29-4178-bc14-8d865109aaa4_North Stars Academy Wild.png",
+  "score": 2
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:19",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "55",
+    "name": "Owen Patey"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:01",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "10",
+    "name": "Kolt Martens"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Colten Dunn"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:30",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "71",
+    "name": "Colten Dunn"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Mason Blank"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:01",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "12",
+    "name": "Easton Paul"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:05",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "5",
+    "name": "Theodore Wells"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:31",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "11",
+    "name": "Mason Blank"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Alexander Borjas"
+    },
+    {
+     "number": "88",
+     "name": "Cameron Heath"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:26",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "88",
+    "name": "Beau Riddoch"
+   },
+   "assists": [
+    {
+     "number": "6",
+     "name": "Jack Stefanyk"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:12",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "24",
+    "name": "Beckam Merlo"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:45",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "5",
+    "name": "Theodore Wells"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Alexander Borjas"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:13",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "5",
+    "name": "Theodore Wells"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Colten Dunn"
+    },
+    {
+     "number": "21",
+     "name": "Chase Kern"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:55",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "7",
+    "name": "Kasen Mackenzie"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:21",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "5",
+    "name": "Theodore Wells"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5060821",
+   "number": "5",
+   "name": "Theodore Wells",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061624",
+   "number": "71",
+   "name": "Colten Dunn",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5060819",
+   "number": "7",
+   "name": "Kasen Mackenzie",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5062462",
+   "number": "24",
+   "name": "Beckam Merlo",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5062525",
+   "number": "11",
+   "name": "Mason Blank",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5062804",
+   "number": "10",
+   "name": "Kolt Martens",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061625",
+   "number": "91",
+   "name": "Lola Carruthers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061519",
+   "number": "88",
+   "name": "Cameron Heath",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5060539",
+   "number": "87",
+   "name": "Jake Boldt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061830",
+   "number": "55",
+   "name": "Owen Patey",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061918",
+   "number": "31",
+   "name": "Zander Pinksen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5062479",
+   "number": "21",
+   "name": "Chase Kern",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061917",
+   "number": "18",
+   "name": "Alexander Borjas",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061174",
+   "number": "15",
+   "name": "River Amyotte",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062805",
+   "number": "88",
+   "name": "Beau Riddoch",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061921",
+   "number": "12",
+   "name": "Easton Paul",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5060852",
+   "number": "87",
+   "name": "Ace Walgenbach",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5060875",
+   "number": "8",
+   "name": "Grayson Laughlin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062547",
+   "number": "72",
+   "name": "Brandtly O'Quinn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5092880",
+   "number": "71",
+   "name": "Kesler Atwater",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062538",
+   "number": "7",
+   "name": "Matthew Walmsley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062813",
+   "number": "6",
+   "name": "Jack Stefanyk",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061215",
+   "number": "44",
+   "name": "Dawson Hildebrandt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061007",
+   "number": "43",
+   "name": "Lincoln Derrick",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062098",
+   "number": "37",
+   "name": "James Cochrane",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062685",
+   "number": "22",
+   "name": "Jameson Hunker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062846",
+   "number": "16",
+   "name": "Wyatt Knowles",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062118",
+   "number": "15",
+   "name": "Cash Griffith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 8,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 15,
+   "away": 10
+  },
+  {
+   "label": "3",
+   "home": 10,
+   "away": 6
+  }
+ ],
+ "start": "2026-09-19T11:30:00",
+ "gameNumber": 53,
+ "fetchedAt": "2026-10-08T23:29:40.736Z"
+}

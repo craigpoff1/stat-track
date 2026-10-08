@@ -1,0 +1,888 @@
+{
+ "id": "2019798",
+ "dateText": "Friday, September 18, 2026 @ 7:30 p.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "Gorillas Hockey Academy",
+  "teamId": "402358",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/d99627bb-007b-44a0-8d46-95cfeebd4951_Gorillas Hockey Academy.png",
+  "score": 6
+ },
+ "away": {
+  "name": "MOB Hockey",
+  "teamId": "402363",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/9524d9af-b482-4d16-ac71-406bd1b04891_MOB Hockey.png",
+  "score": 8
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 4,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "14:45",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "43",
+    "name": "Gabriel Welsh"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "14:10",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Maxwell Doyle"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:48",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "88",
+    "name": "Jack Furlong"
+   },
+   "assists": [
+    {
+     "number": "43",
+     "name": "Gabriel Welsh"
+    },
+    {
+     "number": "17",
+     "name": "Kaysen Derosa"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:41",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "43",
+    "name": "Gabriel Welsh"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Zachary Walker"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:54",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Mackenzie Clark"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:30",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "71",
+    "name": "Colten Dunn"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:20",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "14",
+    "name": "Zachary Walker"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:22",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "18",
+    "name": "Alexander Borjas"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Cameron Heath"
+    },
+    {
+     "number": "87",
+     "name": "Jake Boldt"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:08",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Maxwell Doyle"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:50",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:44",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Mackenzie Clark"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Zachary Walker"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:03",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "71",
+    "name": "Colten Dunn"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Kolt Martens"
+    },
+    {
+     "number": "11",
+     "name": "Mason Blank"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "18:19",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "71",
+    "name": "Colten Dunn"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:26",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "5",
+    "name": "Theodore Wells"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Cameron Heath"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:50",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "10",
+    "name": "Kolt Martens"
+   },
+   "assists": [
+    {
+     "number": "87",
+     "name": "Jake Boldt"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:50",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Cruz Smith"
+   },
+   "minutes": 2,
+   "infraction": "Boarding"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:05",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:32",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "14",
+    "name": "Zachary Walker"
+   },
+   "assists": [
+    {
+     "number": "43",
+     "name": "Gabriel Welsh"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:17",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "88",
+    "name": "Cameron Heath"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:50",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "88",
+    "name": "Jack Furlong"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Elias Woobin Jung"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:05",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "11",
+    "name": "Mason Blank"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:52",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Maxwell Doyle"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:08",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "14",
+    "name": "Zachary Walker"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:57",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "87",
+    "name": "Jake Boldt"
+   },
+   "assists": [
+    {
+     "number": "21",
+     "name": "Chase Kern"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:08",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "26",
+    "name": "Logan Bell"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:59",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "10",
+    "name": "Kolt Martens"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Cameron Heath"
+    }
+   ],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:36",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "10",
+    "name": "Kolt Martens"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:56",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "26",
+    "name": "Logan Bell"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:37",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "10",
+    "name": "Kolt Martens"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:01",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "7",
+    "name": "Kasen Mackenzie"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Alexander Borjas"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:22",
+   "side": "home",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "43",
+    "name": "Gabriel Welsh"
+   },
+   "minutes": 2,
+   "infraction": "Holding Minor"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061201",
+   "number": "88",
+   "name": "Jack Furlong",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061184",
+   "number": "8",
+   "name": "Zyan Olynyk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5060877",
+   "number": "43",
+   "name": "Gabriel Welsh",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061922",
+   "number": "14",
+   "name": "Zachary Walker",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061598",
+   "number": "13",
+   "name": "Mackenzie Clark",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5062703",
+   "number": "77",
+   "name": "Jaxon Achtymichuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5060979",
+   "number": "74",
+   "name": "Vincent Grimbly",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061993",
+   "number": "7",
+   "name": "Elias Woobin Jung",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061638",
+   "number": "29",
+   "name": "Emerson Dolan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5062000",
+   "number": "26",
+   "name": "Logan Bell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061652",
+   "number": "18",
+   "name": "Cruz Smith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061227",
+   "number": "17",
+   "name": "Kaysen Derosa",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5062474",
+   "number": "13",
+   "name": "Maxwell Doyle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5060815",
+   "number": "11",
+   "name": "Patrick Carroll",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5062804",
+   "number": "10",
+   "name": "Kolt Martens",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5060539",
+   "number": "87",
+   "name": "Jake Boldt",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5061624",
+   "number": "71",
+   "name": "Colten Dunn",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5060819",
+   "number": "7",
+   "name": "Kasen Mackenzie",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5060821",
+   "number": "5",
+   "name": "Theodore Wells",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5061917",
+   "number": "18",
+   "name": "Alexander Borjas",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5062525",
+   "number": "11",
+   "name": "Mason Blank",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5061625",
+   "number": "91",
+   "name": "Lola Carruthers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5061519",
+   "number": "88",
+   "name": "Cameron Heath",
+   "g": 0,
+   "a": 3,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5061830",
+   "number": "55",
+   "name": "Owen Patey",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5061918",
+   "number": "31",
+   "name": "Zander Pinksen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5062462",
+   "number": "24",
+   "name": "Beckam Merlo",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5062479",
+   "number": "21",
+   "name": "Chase Kern",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5061174",
+   "number": "15",
+   "name": "River Amyotte",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402358",
+   "playerId": "5061638",
+   "number": "29",
+   "name": "Emerson Dolan",
+   "seconds": 3600,
+   "ga": 8,
+   "shots": 47,
+   "saves": 39
+  },
+  {
+   "side": "away",
+   "teamId": "402363",
+   "playerId": "5061918",
+   "number": "31",
+   "name": "Zander Pinksen",
+   "seconds": 3600,
+   "ga": 6,
+   "shots": 22,
+   "saves": 16
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 60",
+  "away: goalie minutes total 60"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 18
+  },
+  {
+   "label": "2",
+   "home": 8,
+   "away": 15
+  },
+  {
+   "label": "3",
+   "home": 7,
+   "away": 14
+  }
+ ],
+ "start": "2026-09-18T19:30:00",
+ "gameNumber": 26,
+ "fetchedAt": "2026-10-08T23:29:35.272Z"
+}

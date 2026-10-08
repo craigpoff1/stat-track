@@ -1,0 +1,723 @@
+{
+ "id": "2019909",
+ "dateText": "Sunday, September 20, 2026 @ 2:45 p.m.",
+ "rink": "Brandt Centre",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402369",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/de966e86-ca95-4940-be08-b62ef021fd74_Spartan Hockey Academy.png",
+  "score": 9
+ },
+ "away": {
+  "name": "Queen City Young Guns",
+  "teamId": "402370",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0daab77a-f942-4905-8755-9614e8a94401_Queen City Young Guns.png",
+  "score": 0
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 5,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:53",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Jagger Kildaw"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Sutton Tams"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:18",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Porter"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Jagger Kildaw"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:48",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "5",
+    "name": "Liam Aulie"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:13",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "5",
+    "name": "Liam Aulie"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:01",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Fallon Tams"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:15",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "38",
+    "name": "Jayse Grasdahl"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:02",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Sutton Tams"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Gavin Porter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:34",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Porter"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:13",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Leif Tomiuk"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Gavin Porter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "18:46",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "21",
+    "name": "Camden Robichaud"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:12",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "15",
+    "name": "Ezra Ebrahim"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:50",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Sutton Tams"
+   },
+   "assists": [
+    {
+     "number": "38",
+     "name": "Jayse Grasdahl"
+    },
+    {
+     "number": "9",
+     "name": "Lucas Rieder"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:37",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "9",
+    "name": "Xander Erdie"
+   },
+   "minutes": 2,
+   "infraction": "Bench / Too Many Players"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:49",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "47",
+    "name": "Bennett Mills"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "19:20",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Leif Tomiuk"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:36",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Lucas Rieder"
+   },
+   "assists": [
+    {
+     "number": "38",
+     "name": "Jayse Grasdahl"
+    },
+    {
+     "number": "21",
+     "name": "Camden Robichaud"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:53",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Porter"
+   },
+   "assists": [
+    {
+     "number": "48",
+     "name": "Luke Desy"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:05",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "9",
+    "name": "Xander Erdie"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:08",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Leif Tomiuk"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Gavin Porter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:41",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "5",
+    "name": "Liam Aulie"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5062528",
+   "number": "18",
+   "name": "Gavin Porter",
+   "g": 3,
+   "a": 3,
+   "pts": 6,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060826",
+   "number": "71",
+   "name": "Sutton Tams",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061970",
+   "number": "13",
+   "name": "Leif Tomiuk",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060504",
+   "number": "9",
+   "name": "Lucas Rieder",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061049",
+   "number": "7",
+   "name": "Jagger Kildaw",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060512",
+   "number": "48",
+   "name": "Luke Desy",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061520",
+   "number": "47",
+   "name": "Bennett Mills",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060832",
+   "number": "38",
+   "name": "Jayse Grasdahl",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060866",
+   "number": "31",
+   "name": "Blake Bleile",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5062694",
+   "number": "3",
+   "name": "Keaton Craig",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060552",
+   "number": "29",
+   "name": "Easton Eagle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060838",
+   "number": "21",
+   "name": "Camden Robichaud",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060549",
+   "number": "17",
+   "name": "Fallon Tams",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061711",
+   "number": "12",
+   "name": "Leo Belandis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060505",
+   "number": "11",
+   "name": "Hutton Wickham",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062223",
+   "number": "98",
+   "name": "Everett Fleischhaker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061275",
+   "number": "9",
+   "name": "Xander Erdie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060717",
+   "number": "87",
+   "name": "Nolan Leblanc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060716",
+   "number": "71",
+   "name": "Tyler Jonasson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061795",
+   "number": "7",
+   "name": "Ellie Zenzeluk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060721",
+   "number": "67",
+   "name": "Gunner Basler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060678",
+   "number": "66",
+   "name": "KJ Burns",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062281",
+   "number": "5",
+   "name": "Liam Aulie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060731",
+   "number": "4",
+   "name": "Henrick Schneider",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061806",
+   "number": "31",
+   "name": "Evander Flegel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060989",
+   "number": "29",
+   "name": "Hunter Pickering",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061824",
+   "number": "24",
+   "name": "Jett Rudnitski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061285",
+   "number": "22",
+   "name": "Kasen Sinclair",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060727",
+   "number": "15",
+   "name": "Ezra Ebrahim",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062215",
+   "number": "11",
+   "name": "Brixton Marceau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061799",
+   "number": "10",
+   "name": "MacArthur Gawley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060688",
+   "number": "1",
+   "name": "Clark Lees",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 12,
+   "away": 6
+  },
+  {
+   "label": "2",
+   "home": 9,
+   "away": 8
+  },
+  {
+   "label": "3",
+   "home": 11,
+   "away": 6
+  }
+ ],
+ "start": "2026-09-20T14:45:00",
+ "gameNumber": 137,
+ "fetchedAt": "2026-10-08T23:29:56.066Z"
+}

@@ -1,0 +1,690 @@
+{
+ "id": "2020012",
+ "dateText": "Saturday, October 3, 2026 @ 4:45 p.m.",
+ "rink": "Rockyford Sportsplex",
+ "status": "Final",
+ "home": {
+  "name": "Calgary Crusaders",
+  "teamId": "402362",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0cd48b9f-3336-4e7d-820f-93822f7dd4cf_Calgary Crusaders.png",
+  "score": 1
+ },
+ "away": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402369",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/de966e86-ca95-4940-be08-b62ef021fd74_Spartan Hockey Academy.png",
+  "score": 7
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:51",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Jagger Kildaw"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Gavin Porter"
+    },
+    {
+     "number": "13",
+     "name": "Leif Tomiuk"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:54",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "12",
+    "name": "Leo Belandis"
+   },
+   "assists": [
+    {
+     "number": "3",
+     "name": "Keaton Craig"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:04",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "38",
+    "name": "Jayse Grasdahl"
+   },
+   "assists": [
+    {
+     "number": "48",
+     "name": "Luke Desy"
+    },
+    {
+     "number": "71",
+     "name": "Sutton Tams"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:17",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "21",
+    "name": "Camden Robichaud"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Leo Belandis"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:13",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "38",
+    "name": "Jayse Grasdahl"
+   },
+   "assists": [
+    {
+     "number": "21",
+     "name": "Camden Robichaud"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:55",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "5",
+    "name": "Brayson Berlando"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:25",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "48",
+    "name": "Luke Desy"
+   },
+   "assists": [
+    {
+     "number": "47",
+     "name": "Bennett Mills"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "16:02",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "71",
+    "name": "Jack Johnston"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:24",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Hutton Wickham"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Lucas Rieder"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:18",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "47",
+    "name": "Bennett Mills"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:00",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "29",
+    "name": "Hank Snell"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:06",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Chase Doudelet"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:42",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "43",
+    "name": "Bodie McKean"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:42",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "3",
+    "name": "Keaton Craig"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:45",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "20",
+    "name": "Tommy Garrioch"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061208",
+   "number": "5",
+   "name": "Brayson Berlando",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061904",
+   "number": "95",
+   "name": "Wilkes Ashton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5062678",
+   "number": "9",
+   "name": "Thomas Doetzel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061654",
+   "number": "87",
+   "name": "Eddie Kennedy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061470",
+   "number": "8",
+   "name": "Weston Part",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061171",
+   "number": "72",
+   "name": "Cruz Blais",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061188",
+   "number": "71",
+   "name": "Jack Johnston",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061469",
+   "number": "7",
+   "name": "Joelle Part",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061513",
+   "number": "43",
+   "name": "Bodie McKean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061913",
+   "number": "32",
+   "name": "Leo Bautista",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5060495",
+   "number": "3",
+   "name": "Lincoln Balicki",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061143",
+   "number": "29",
+   "name": "Hank Snell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061492",
+   "number": "25",
+   "name": "Abel Whitlock",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061671",
+   "number": "21",
+   "name": "Walker Philpott",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5060503",
+   "number": "20",
+   "name": "Tommy Garrioch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061186",
+   "number": "2",
+   "name": "Colten Loschuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5060828",
+   "number": "11",
+   "name": "Jac Roberts",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5060489",
+   "number": "10",
+   "name": "Chase Doudelet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060832",
+   "number": "38",
+   "name": "Jayse Grasdahl",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5061049",
+   "number": "7",
+   "name": "Jagger Kildaw",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060512",
+   "number": "48",
+   "name": "Luke Desy",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060838",
+   "number": "21",
+   "name": "Camden Robichaud",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5061711",
+   "number": "12",
+   "name": "Leo Belandis",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060505",
+   "number": "11",
+   "name": "Hutton Wickham",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060504",
+   "number": "9",
+   "name": "Lucas Rieder",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060826",
+   "number": "71",
+   "name": "Sutton Tams",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5061520",
+   "number": "47",
+   "name": "Bennett Mills",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060866",
+   "number": "31",
+   "name": "Blake Bleile",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5062694",
+   "number": "3",
+   "name": "Keaton Craig",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060552",
+   "number": "29",
+   "name": "Easton Eagle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5062528",
+   "number": "18",
+   "name": "Gavin Porter",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060549",
+   "number": "17",
+   "name": "Fallon Tams",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5061970",
+   "number": "13",
+   "name": "Leif Tomiuk",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402362",
+   "playerId": "5061913",
+   "number": "32",
+   "name": "Leo Bautista",
+   "seconds": 3600,
+   "ga": 7,
+   "shots": 45,
+   "saves": 38
+  },
+  {
+   "side": "away",
+   "teamId": "402369",
+   "playerId": "5060552",
+   "number": "29",
+   "name": "Easton Eagle",
+   "seconds": 3600,
+   "ga": 1,
+   "shots": 18,
+   "saves": 17
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 60",
+  "away: goalie minutes total 60"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 6,
+   "away": 13
+  },
+  {
+   "label": "2",
+   "home": 6,
+   "away": 20
+  },
+  {
+   "label": "3",
+   "home": 6,
+   "away": 11
+  }
+ ],
+ "start": "2026-10-03T16:45:00",
+ "gameNumber": 240,
+ "fetchedAt": "2026-10-08T23:29:59.664Z"
+}

@@ -1,0 +1,729 @@
+{
+ "id": "2019911",
+ "dateText": "Sunday, September 20, 2026 @ 3:00 p.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "Aces Hockey Academy",
+  "teamId": "402359",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e70f74fc-7003-4dde-883c-b5c931abce4a_Aces Hockey Academy.png",
+  "score": 14
+ },
+ "away": {
+  "name": "Capital City Knights",
+  "teamId": "402361",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/25a07116-c159-4383-87ed-b29821cb31ce_Capital City Knights.jpg",
+  "score": 0
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:13",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "92",
+    "name": "Preston Baker"
+   },
+   "assists": [
+    {
+     "number": "23",
+     "name": "Brooks Duiker"
+    },
+    {
+     "number": "7",
+     "name": "Luke Runzer"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:08",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Thoren Milroy"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Jovanni Pellizzari"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:28",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:33",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "77",
+    "name": "Jordan Schoettler"
+   },
+   "assists": [
+    {
+     "number": "6",
+     "name": "Gavin Pettinato"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:21",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "23",
+    "name": "Brooks Duiker"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Luke Runzer"
+    },
+    {
+     "number": "10",
+     "name": "Austin Keough"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:51",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:51",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "23",
+    "name": "Brooks Duiker"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Luke Runzer"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:58",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Luke Runzer"
+   },
+   "assists": [
+    {
+     "number": "92",
+     "name": "Preston Baker"
+    },
+    {
+     "number": "10",
+     "name": "Austin Keough"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "16:01",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "18",
+    "name": "Cormic Lacroix"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:33",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "10",
+    "name": "Austin Keough"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:40",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Luke Runzer"
+   },
+   "assists": [
+    {
+     "number": "92",
+     "name": "Preston Baker"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:30",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:13",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:50",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Keir Fisher"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:50",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "16",
+    "name": "Braden Van Wieren"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:30",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "23",
+    "name": "Brooks Duiker"
+   },
+   "assists": [
+    {
+     "number": "92",
+     "name": "Preston Baker"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:00",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Jovanni Pellizzari"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:30",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Jovanni Pellizzari"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:15",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "92",
+    "name": "Preston Baker"
+   },
+   "assists": [
+    {
+     "number": "82",
+     "name": "Luciano Bit"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:15",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Alexander McNeill"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5076459",
+   "number": "82",
+   "name": "Luciano Bit",
+   "g": 4,
+   "a": 1,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5062824",
+   "number": "23",
+   "name": "Brooks Duiker",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061756",
+   "number": "92",
+   "name": "Preston Baker",
+   "g": 2,
+   "a": 3,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5062467",
+   "number": "7",
+   "name": "Luke Runzer",
+   "g": 2,
+   "a": 3,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061119",
+   "number": "98",
+   "name": "Keir Fisher",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5060996",
+   "number": "9",
+   "name": "Thoren Milroy",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061408",
+   "number": "77",
+   "name": "Jordan Schoettler",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061219",
+   "number": "72",
+   "name": "Mason Medeiros",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061450",
+   "number": "6",
+   "name": "Gavin Pettinato",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5060880",
+   "number": "29",
+   "name": "Andre Proulx",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061574",
+   "number": "19",
+   "name": "Jovanni Pellizzari",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061657",
+   "number": "18",
+   "name": "Alexander McNeill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5062621",
+   "number": "11",
+   "name": "Kale Duquette",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061956",
+   "number": "10",
+   "name": "Austin Keough",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061788",
+   "number": "98",
+   "name": "Nate Ahlskog",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062541",
+   "number": "92",
+   "name": "Matthew Williams",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5060835",
+   "number": "88",
+   "name": "Jayce Clarke",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062187",
+   "number": "8",
+   "name": "Hendrix Rogers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061245",
+   "number": "71",
+   "name": "Macklin Vigneau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062987",
+   "number": "7",
+   "name": "Karson Ofukany",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061534",
+   "number": "31",
+   "name": "Logan Plante",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061250",
+   "number": "29",
+   "name": "Braden Melenberg",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061191",
+   "number": "18",
+   "name": "Cormic Lacroix",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062706",
+   "number": "17",
+   "name": "Jayce Kshyk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061793",
+   "number": "16",
+   "name": "Braden Van Wieren",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062848",
+   "number": "14",
+   "name": "William Ekholm Bjornstad",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061881",
+   "number": "12",
+   "name": "Evan Archer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5060706",
+   "number": "11",
+   "name": "Jacob Van Wieren",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061219",
+   "number": "72",
+   "name": "Mason Medeiros",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5060880",
+   "number": "29",
+   "name": "Andre Proulx",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061534",
+   "number": "31",
+   "name": "Logan Plante",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 11,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 9,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 9,
+   "away": 3
+  }
+ ],
+ "start": "2026-09-20T15:00:00",
+ "gameNumber": 139,
+ "fetchedAt": "2026-10-08T23:29:56.995Z"
+}

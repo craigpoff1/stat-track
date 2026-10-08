@@ -1,0 +1,704 @@
+{
+ "id": "2019855",
+ "dateText": "Saturday, September 19, 2026 @ 4:45 p.m.",
+ "rink": "Co-Operators Centre #4 (Prairie Mobile Arena)",
+ "status": "Final",
+ "home": {
+  "name": "Sauce Hockey Academy",
+  "teamId": "402368",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/17e9bc47-5a50-4d7e-8db2-416c7e6e3d17_Sauce Hockey Academy.png",
+  "score": 4
+ },
+ "away": {
+  "name": "Queen City Young Guns",
+  "teamId": "402370",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0daab77a-f942-4905-8755-9614e8a94401_Queen City Young Guns.png",
+  "score": 10
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 5
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:42",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "24",
+    "name": "Jett Rudnitski"
+   },
+   "assists": [
+    {
+     "number": "22",
+     "name": "Kasen Sinclair"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:08",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "71",
+    "name": "Tyler Jonasson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:28",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "67",
+    "name": "Gunner Basler"
+   },
+   "assists": [
+    {
+     "number": "4",
+     "name": "Henrick Schneider"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:57",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "71",
+    "name": "Tyler Jonasson"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Ellie Zenzeluk"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:54",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "22",
+    "name": "Kasen Sinclair"
+   },
+   "minutes": 2,
+   "infraction": "Holding Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:16",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "77",
+    "name": "Kingston Fox"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:45",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:15",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "24",
+    "name": "Jett Rudnitski"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Ellie Zenzeluk"
+    },
+    {
+     "number": "10",
+     "name": "MacArthur Gawley"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:18",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Remi (Remington) Voth"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "18:03",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "66",
+    "name": "KJ Burns"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Brixton Marceau"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:01",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "9",
+    "name": "Xander Erdie"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Tyler Jonasson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:37",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:27",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "24",
+    "name": "Jett Rudnitski"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:05",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cashel Martschuk"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:00",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "71",
+    "name": "Tyler Jonasson"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:14",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "24",
+    "name": "Jett Rudnitski"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Xander Erdie"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:36",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "10",
+    "name": "MacArthur Gawley"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061974",
+   "number": "98",
+   "name": "Brendan Hughes",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061687",
+   "number": "77",
+   "name": "Kingston Fox",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061781",
+   "number": "16",
+   "name": "Remi (Remington) Voth",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062494",
+   "number": "94",
+   "name": "Halle Scarff",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060443",
+   "number": "8",
+   "name": "Owen Bruce",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061098",
+   "number": "72",
+   "name": "Madden Proskurniak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061420",
+   "number": "71",
+   "name": "jasper shirley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062357",
+   "number": "48",
+   "name": "Luke Bateman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061680",
+   "number": "35",
+   "name": "Darcy Edgett",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061397",
+   "number": "28",
+   "name": "Beckham Block",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061782",
+   "number": "21",
+   "name": "Henry Anderson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061549",
+   "number": "19",
+   "name": "Cashel Martschuk",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060551",
+   "number": "18",
+   "name": "Jacob Brisebois",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061398",
+   "number": "17",
+   "name": "Ashton Ortman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061780",
+   "number": "11",
+   "name": "Isamu Lysak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060846",
+   "number": "10",
+   "name": "Vaughn Berdusco",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061824",
+   "number": "24",
+   "name": "Jett Rudnitski",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060716",
+   "number": "71",
+   "name": "Tyler Jonasson",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061275",
+   "number": "9",
+   "name": "Xander Erdie",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060721",
+   "number": "67",
+   "name": "Gunner Basler",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060678",
+   "number": "66",
+   "name": "KJ Burns",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061799",
+   "number": "10",
+   "name": "MacArthur Gawley",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062223",
+   "number": "98",
+   "name": "Everett Fleischhaker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060717",
+   "number": "87",
+   "name": "Nolan Leblanc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061795",
+   "number": "7",
+   "name": "Ellie Zenzeluk",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062281",
+   "number": "5",
+   "name": "Liam Aulie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060731",
+   "number": "4",
+   "name": "Henrick Schneider",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061806",
+   "number": "31",
+   "name": "Evander Flegel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060989",
+   "number": "29",
+   "name": "Hunter Pickering",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061285",
+   "number": "22",
+   "name": "Kasen Sinclair",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060727",
+   "number": "15",
+   "name": "Ezra Ebrahim",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062215",
+   "number": "11",
+   "name": "Brixton Marceau",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060688",
+   "number": "1",
+   "name": "Clark Lees",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061680",
+   "number": "35",
+   "name": "Darcy Edgett",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 46,
+   "saves": 46
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060688",
+   "number": "1",
+   "name": "Clark Lees",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 30,
+   "saves": 30
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-09-19T16:45:00",
+ "gameNumber": 83,
+ "fetchedAt": "2026-10-08T23:29:47.064Z"
+}
