@@ -35,10 +35,13 @@ export const events = [
     id: 'challenge-cup-2026',
     name: 'Challenge Cup',
     season: '2026-27',
-    dates: ['2026-10-20', '2026-10-20'], // approximate — exact dates TBC
-    datesApprox: true,
-    platform: null, // likely pacificduel.com (RAMP) once published
+    dates: ['2026-10-23', '2026-10-25'],
+    platform: 'ramp',
+    base: 'https://www.challengecup.ca',
+    calendar: 'https://www.challengecup.ca/calendar/master-schedule/3193.ics?SID=14988&DID=40178&TournamentAID=3193&TZ=America%2FEdmonton',
+    divisionId: 40178,
+    divisionName: '2019 Alberta Challenge Cup',
     leagues: ['hpl'],
-    focus: ['hpl:148550', 'hpl:148552', 'hpl:148548'], // Beavers, Lumberjacks, Flyers
+    focus: ['hpl:148552', 'hpl:148548'], // Lumberjacks, Flyers (the BC teams entered)
   },
 ];

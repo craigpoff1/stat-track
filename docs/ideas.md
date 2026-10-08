@@ -12,8 +12,10 @@ password-protected (so individual PIM/goalie stats are shown) and the scope grew
   as mirrored bars, linemates network with legend/filters/count badges, "my season" + firsts).
 - Scouting report (any team, self-scout, keys to the game, rolling last-4 windows, home/away + situational).
 - Goalie-sheet validation with ⓘ data notes; home/away jersey-colour badges; schedule grouped by weekend.
-- Tournaments section: Pacific Duel (RAMP, full sheets), Challenge Cup (scouting via HPL/Kreezee),
-  team + player identity linking, "Include tournament games" toggle (off by default).
+- Tournaments section: Pacific Duel (RAMP, full sheets), Challenge Cup (challengecup.ca, RAMP,
+  Oct 23–25, Stars entered; BC opponents scouted via HPL/Kreezee), team + player identity linking,
+  "Include tournament games" toggle (off by default; changes all records/stats incl. standings,
+  flagged not official).
 - Password protection (AES-GCM, in-browser decrypt); nightly + Monday catch-up updates.
 
 **Queued / discussed, not built** (rough priority)
@@ -23,7 +25,7 @@ password-protected (so individual PIM/goalie stats are shown) and the scope grew
    unguessable URL — owner to approve that exception).
 3. AI weekend recaps / scouting summary (design in section 2 below; style rules agreed — see CLAUDE.md).
 4. Game-day card for the coach (one-screen keys + jersey + countdown).
-5. Challenge Cup: switch to its RAMP game sheets once published (likely pacificduel.com); confirm dates.
+5. Challenge Cup: show Stars' tournament games in the team page "Up next" before the event.
 6. Game-sheet volunteer guide + rotation; shareable player cards; end-of-season awards; trends.
 7. Repo private (needs GitHub Pro) — data/ holds raw game files.
 
