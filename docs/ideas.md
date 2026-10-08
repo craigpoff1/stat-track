@@ -25,7 +25,7 @@ password-protected (so individual PIM/goalie stats are shown) and the scope grew
    unguessable URL — owner to approve that exception).
 3. AI weekend recaps / scouting summary (design in section 2 below; style rules agreed — see CLAUDE.md).
 4. Game-day card for the coach (one-screen keys + jersey + countdown).
-5. Challenge Cup: show Stars' tournament games in the team page "Up next" before the event.
+5. (done) Tournament games appear in "Up next" + top-bar "Next" alongside league games.
 6. Game-sheet volunteer guide + rotation; shareable player cards; end-of-season awards; trends.
 7. Repo private (needs GitHub Pro) — data/ holds raw game files.
 

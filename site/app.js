@@ -704,7 +704,7 @@
         inner = `<div class="d">${p && badges ? haBadge(home) : ''}${d} · Final${tChip(x)}${g?.comeback ? ' · <span class="cbk">Comeback</span>' : ''}</div><div class="o">${logo(o)}${who}<span class="res ${r}">${r ? r + ' ' : ''}${my}–${op}</span></div><div class="r">${esc(x.location || '')}</div>
           ${g ? `<div class="cta">${miniFlow(g, p || x.away)}<span>Game flow &amp; summary <b>→</b></span></div>` : ''}`;
       } else {
-        inner = `<div class="d">${p && badges ? haBadge(home) : ''}${d} · ${tm(x.start)}</div><div class="o">${logo(o)}${who}</div><div class="r">${esc(x.location || '')}${o.stub ? '' : ` · opp ${o.w}-${o.l}-${o.t}`}</div>`;
+        inner = `<div class="d">${p && badges ? haBadge(home) : ''}${d} · ${tm(x.start)}${tChip(x)}</div><div class="o">${logo(o)}${who}</div><div class="r">${esc(x.location || '')}${o.stub ? '' : ` · opp ${o.w}-${o.l}-${o.t}`}</div>`;
       }
       if (x.final && x.hasDetail) return `<a class="nx" href="#/game/${x.id}">${inner}</a>`;
       if (x.url) return `<a class="nx" href="${esc(x.url)}" target="_blank" rel="noopener" title="Open on the league site">${inner}</a>`;
@@ -932,8 +932,7 @@
     const A = D().teamOf(t); // analytics totals (toggle-aware); t keeps the league record/results
     const isMine = String(id) === myTeamId();
     const roster = D().players.filter((p) => String(p.teamId) === String(id));
-    const sched = S.schedule.filter((s) => involves(s, id));
-    const upcoming = sched.filter(isUpcoming);
+    const upcoming = upcomingOf(id); // league + tournament games
     const latest = D().finalsOf(id).filter((s) => s.hasDetail).map((s) => D().mapped.get(s.id) || gameById.get(s.id)).filter(Boolean).at(-1);
     const favs = favPlayers();
     const h2h = new Map();
@@ -1662,8 +1661,17 @@
   const evNick = (n) => String(n || '').replace(/\b(hockey|academy|hc|club)\b/gi, ' ').trim().split(/\s+/).pop().toLowerCase();
   function evSchedule(e) {
     const pool = [...S.teams, ...(EV?.ext.teams || []).filter((t) => (e.leagues || []).includes(t.source.id))];
-    const resolve = (name) => { const m = pool.filter((t) => evNick(t.name) === evNick(name)); return m.length === 1 ? m[0].id : name; };
-    return (e.schedule || []).map((s) => ({ ...s, home: resolve(s.home), away: resolve(s.away), hasDetail: false }));
+    const resolve = (name) => {
+      const et = teamById.get(String(name)); if (et?.eventId) return et.link?.id || name; // mid-event: sheet-based event team id
+      const m = pool.filter((t) => evNick(t.name) === evNick(name)); return m.length === 1 ? m[0].id : name;
+    };
+    return (e.schedule || []).map((s) => ({ ...s, home: resolve(s.home), away: resolve(s.away), hasDetail: false, eventName: e.name }));
+  }
+  // A team's upcoming games: league schedule + tournament games it is entered in (always shown — it's
+  // the schedule, not stats, so it doesn't depend on the "Include tournament games" toggle).
+  function upcomingOf(id) {
+    const ev = (EV?.events || []).flatMap((e) => evSchedule(e).filter((s) => isUpcoming(s) && involves(s, id)));
+    return [...S.schedule.filter((s) => isUpcoming(s) && involves(s, id)), ...ev].sort((a, b) => a.start.localeCompare(b.start));
   }
   const appearances = (teamId) => (EV?.events || []).flatMap((e) => (e.teams || []).filter((t) => t.link?.id === teamId).map((t) => ({ e, t })));
 
@@ -1912,8 +1920,7 @@
   function teamBar() {
     const me = team(myTeamId()), el = document.getElementById('teambar');
     const navTeam = document.getElementById('nav-team'); if (navTeam) navTeam.textContent = me.short;
-    const mine = S.schedule.filter((s) => involves(s, me.id));
-    const last = D().finalsOf(me.id).at(-1), next = mine.find(isUpcoming);
+    const last = D().finalsOf(me.id).at(-1), next = upcomingOf(me.id)[0];
     const days = (s) => {
       const a = new Date(); a.setHours(0, 0, 0, 0);
       const b = localDate(s.start); b.setHours(0, 0, 0, 0);
