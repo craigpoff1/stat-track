@@ -1715,7 +1715,7 @@
     const cards = EV.events.slice().sort((a, b) => (b.dates?.[0] || '').localeCompare(a.dates?.[0] || '')).map((e) => {
       const ours = (e.teams || []).find((t) => t.link?.id === me.id) || (!e.teams?.length && evSchedule(e).some((x) => involves(x, me.id)));
       const champ = e.champion ? teamById.get(e.champion) : null;
-      const sub = e.teams?.length ? `${e.teams.length} teams · ${e.schedule.filter((s) => s.final).length}/${e.schedule.length} games played` : e.focus?.length ? `${e.focus.length} teams to watch · scouting from ${(e.leagues || []).map((l) => esc(EV.ext.teams.find((t) => t.source.id === l)?.source.league || l)).join(', ')}` : 'Schedule not published yet';
+      const sub = e.teams?.length ? `${e.teams.length} teams · ${e.schedule.filter((s) => s.final).length}/${e.schedule.length} games played` : e.focus?.length ? `Opponents scouted from ${(e.leagues || []).map((l) => esc(EV.ext.teams.find((t) => t.source.id === l)?.source.league || l)).join(', ')}` : 'Schedule not published yet';
       return `<a class="evcard" href="#/tournaments/${e.id}">
         <div class="evc-top">${statusChip(e)}<span class="evc-d">${esc(evDates(e))}</span></div>
         <div class="evc-n">${esc(e.name)} <small>${esc(e.season || '')}</small></div>
@@ -1797,15 +1797,6 @@
     const isFocus = (id) => (e.focus || []).includes(id);
     const src = leagueTeams[0]?.source;
     after(() => {
-      sortable($('#cup-cmp'), focus, [
-        { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
-        { key: 'rec', label: 'Record', val: (t) => t.pts, html: (t) => `${t.w}-${t.l}-${t.t}` },
-        { key: 'rank', label: 'Rank', val: (t) => t.rank, desc: false, html: (t) => `${ordinal(t.rank)} / ${leagueTeams.length}` },
-        { key: 'gfpg', label: 'GF/GP', val: (t) => t.gfPerGame, html: (t) => t.gfPerGame.toFixed(1) },
-        { key: 'gapg', label: 'GA/GP', val: (t) => t.gaPerGame, desc: false, html: (t) => t.gaPerGame.toFixed(1) },
-        { key: 'ev', label: 'Other events', sort: false, val: () => '', html: (t) => appearances(t.id).map(({ e: x, t: et }) => `${esc(x.name)} ${et.w}-${et.l}-${et.t}`).join('<br>') || '—' },
-        { key: 'go', label: '', sort: false, val: () => '', html: (t) => `<a class="lnk" href="${t.href}">Report →</a>` },
-      ], { key: 'rank', dir: 1 });
       if (src) sortable($('#cup-st'), leagueTeams, [
         { key: 'rank', label: '#', cls: 'rkc', val: (t) => t.rank, desc: false },
         { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: tn },
@@ -1819,10 +1810,9 @@
     const days = [...new Set(sched.map((s) => s.start.slice(0, 10)))];
     const schedHtml = sched.length ? days.map((d) => `<div class="wk-day">${dt(d, { weekday: 'long', month: 'short', day: 'numeric' })}</div>${gameCards(sched.filter((s) => s.start.startsWith(d)), myTeamId(), { scout: true })}`).join('') : '';
     return `
-      ${evHead(e, esc(e.name), `${esc(e.season)} · ${esc(evDates(e))} · ${statusChip(e)}`, sched.length ? `Schedule published · ${sched.length} games · opponent scouting below` : 'Opponent scouting · schedule not published yet',
+      ${evHead(e, esc(e.name), `${esc(e.season)} · ${esc(evDates(e))} · ${statusChip(e)}`, sched.length ? `Schedule published · ${sched.length} games` : 'Opponent scouting · schedule not published yet',
         [...focus, ...leagueTeams.filter((t) => !isFocus(t.id))].map((t) => ({ label: t.short, href: t.href, dim: !isFocus(t.id) })))}
       ${schedHtml ? `<div style="margin-bottom:18px">${panel('Schedule', `<div class="pb">${schedHtml}</div>`, { gold: true, meta: `${sched.length} games · ${esc(e.division || '')}` })}</div>` : ''}
-      <div style="margin-bottom:18px">${panel('Teams to watch', '<div class="tw"><table id="cup-cmp"></table></div>', { gold: true, meta: src ? `${esc(src.league)} · ${esc(src.division)}` : '' })}</div>
       ${src ? `<div style="margin-bottom:18px">${panel(`${esc(src.league)} standings`, '<div class="tw"><table id="cup-st"></table></div>', { meta: `${EV.ext.games.filter((g) => g.final && g.source.id === src.id).length} games played` })}</div>
       <div class="dnotes"><b>About this data:</b> ${esc(src.league)} publishes schedules, final scores and rosters only. Where these teams played other tournaments with full game sheets (e.g. the Pacific Duel), their reports include that too — the only direct evidence of how they compare with HSL teams.</div>` : ''}`;
   }
