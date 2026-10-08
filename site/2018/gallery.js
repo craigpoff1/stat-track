@@ -64,12 +64,16 @@
       const chips = [`<button type="button" class="wkchip ${sel ? '' : 'on'}" data-t="">All teams</button>`,
         ...[...teams].sort((a, b) => short(a.name).localeCompare(short(b.name))).map((t) => `<button type="button" class="wkchip ${sel === String(t.id) ? 'on' : ''}" data-t="${esc(t.id)}">${esc(short(t.name))}</button>`)].join('');
       const skaters = S.players.filter((p) => (!p.isGoalie || p.pts > 0) && (!sel || String(p.teamId) === sel));
+      const goalies = (S.goalies || []).filter((g) => !sel || String(g.teamId) === sel);
       $app.innerHTML = `
         <div class="ptitle"><div><div class="k">${esc(S.meta.season)} · ${esc(S.meta.league)}</div><h1>2018 Major</h1>
           <div class="s">${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final · tap a team to filter · tap a column to sort</div></div></div>
         <div class="wkbar g-teams" role="group" aria-label="Filter by team">${chips}</div>
         <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="gold">${tSel ? esc(short(tSel.name)) : 'Standings'}</h2><span class="meta">${tSel ? `${tSel.rank} of ${teams.length} in division` : `${teams.length} teams`}</span></div><div class="tw"><table id="g-st"></table></div></section></div>
-        <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="${tSel ? 'gold' : ''}">Scoring leaders</h2><span class="meta">${skaters.length} players${tSel ? ` · ${esc(short(tSel.name))}` : ''}</span></div><div class="tw"><table id="g-sk"></table></div></section></div>`;
+        <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="${tSel ? 'gold' : ''}">Scoring leaders</h2><span class="meta">${skaters.length} players${tSel ? ` · ${esc(short(tSel.name))}` : ''}</span></div><div class="tw"><table id="g-sk"></table></div></section></div>
+        <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="${tSel ? 'gold' : ''}">Goalies</h2><span class="meta">${goalies.length} goalies${tSel ? ` · ${esc(short(tSel.name))}` : ''}</span></div><div class="tw"><table id="g-gl"></table></div>
+          <div class="g-dn" id="g-dn" hidden></div>
+          <div class="note">${GOALIE_NOTE}</div></section></div>`;
       table(document.getElementById('g-st'), sel ? [byId.get(sel)] : teams, [
         { key: 'rank', label: '#', cls: 'rkc', val: (t) => t.rank, desc: false },
         { key: 'name', label: 'Team', cls: 'l', val: (t) => t.name, desc: false, html: (t) => `<span class="tn">${logo(t)}<span class="full">${esc(t.name)}</span><span class="cd">${esc(short(t.name))}</span></span>` },
@@ -93,7 +97,33 @@
         { key: 'ppg', label: 'PPG', cls: 'hm', val: (p) => p.ppg },
         { key: 'pim', label: 'PIM', val: (p) => p.pim, title: 'Penalty minutes' },
       ], { key: 'pts' });
+      // Same goalie-sheet checks as the main site (build.mjs): partial = stat based on fewer games
+      // than played; ⓘ lists which games were left out or assumed (tap to show, works on phones).
+      const partial = (n, of) => (n < of ? `<small class="part" title="Based on ${n} of ${of} games">${n}/${of}</small>` : '');
+      table(document.getElementById('g-gl'), goalies, [
+        { key: 'name', label: 'Goalie', cls: 'l', val: (g) => g.name, desc: false, html: (g) => `${esc(g.name)}${g.flags?.length ? `<button type="button" class="dq g-dq" data-g="${esc(g.id)}" aria-label="Data notes for ${esc(g.name)}">ⓘ</button>` : ''}<span class="sub2">#${esc(g.number)}${sel ? '' : ` · ${esc(short(byId.get(String(g.teamId))?.name || g.team || ''))}`}</span>` },
+        { key: 'gp', label: 'GP', val: (g) => g.gp },
+        { key: 'rec', label: 'W-L-T', cls: 'hm', val: (g) => g.w * 2 + g.t, html: (g) => `${g.w}-${g.l}-${g.t}` },
+        { key: 'min', label: 'MIN', cls: 'hm', val: (g) => g.seconds, html: (g) => g.minutes },
+        { key: 'sa', label: 'SA', cls: 'hm', val: (g) => g.shots, title: 'Shots against' },
+        { key: 'ga', label: 'GA', val: (g) => g.ga },
+        { key: 'sv', label: 'SV%', val: (g) => g.svPct, html: (g) => `<span class="pts" style="font-size:16px">${rate(g.svPct)}</span>${partial(g.gpSv, g.gp)}` },
+        { key: 'gaa', label: 'GAA', val: (g) => g.gaa, desc: false, html: (g) => `${g.gaa == null ? '—' : g.gaa.toFixed(2)}${partial(g.gpGaa, g.gp)}`, title: `Goals against per full ${S.meta.regulationMinutes}-minute game` },
+        { key: 'so', label: 'SO', cls: 'hm', val: (g) => g.so, title: 'Shutouts' },
+      ], { key: 'min' });
     };
+    const GOALIE_NOTE = `Goalie lines are volunteer-entered and checked against each game sheet: games where goals against don’t match the score, shots don’t match the shots table, or minutes are missing are left out of save % and GAA (tap ⓘ for which games). W-L-T goes to the goalie with the most minutes. 2018 Major games are ${S.meta.regulationMinutes} minutes (15 + 20 + 20).`;
+    const rate = (x) => (x == null ? '—' : x >= 1 ? '1.000' : x.toFixed(3).replace(/^0/, ''));
+    const gameDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    $app.addEventListener('click', (e) => {
+      const b = e.target.closest('.g-dq'); if (!b) return;
+      const g = (S.goalies || []).find((x) => String(x.id) === b.dataset.g), box = document.getElementById('g-dn');
+      if (!g || !box) return;
+      if (!box.hidden && box.dataset.g === b.dataset.g) { box.hidden = true; return; }
+      box.dataset.g = b.dataset.g; box.hidden = false;
+      box.innerHTML = `<b>Data notes — ${esc(g.name)}</b> <span class="muted">Save % from ${g.gpSv} of ${g.gp} games · GAA from ${g.gpGaa} of ${g.gp}</span><ul>${g.flags.map((f) => `<li>${esc(gameDate(f.date))} vs ${esc(short(byId.get(String(f.opp))?.name || ''))}: ${f.notes.map(esc).join('; ')}</li>`).join('')}</ul>`;
+      box.scrollIntoView({ block: 'nearest' });
+    });
     $app.addEventListener('click', (e) => {
       const c = e.target.closest('.g-teams [data-t]'); if (!c) return;
       sel = c.dataset.t; store.set('team', sel); draw();

@@ -517,3 +517,6 @@ div.ld{cursor:default}
 .g-teams .wkchip{background:transparent;cursor:pointer}.g-teams .wkchip.on{background:var(--us)}
 @media (max-width:720px){.g-teams{flex-wrap:nowrap;overflow-x:auto}}
 .g-l5{font:700 12px var(--cond);letter-spacing:.08em;color:var(--ink3)}
+.g-dn{margin:0 16px 4px;padding:10px 12px;border-left:3px solid #F2A93B;background:rgba(242,169,59,.07);font-size:13px;color:var(--ink2)}
+.g-dn ul{margin:6px 0 0 18px}.g-dn li{margin:2px 0}.g-dn .muted{color:var(--ink3);font-size:12px}
+.g-dq{font-size:13px;line-height:1}

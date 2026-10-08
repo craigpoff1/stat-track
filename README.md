@@ -77,7 +77,7 @@ DIVISION=2018 node scripts/scrape.mjs && DIVISION=2018 node scripts/build.mjs   
 python -m http.server 8765 --directory site
 ```
 
-- **2018 Major gallery** (`/2018/`): a simple standings + scoring-leaders page for the 2018 Major
+- **2018 Major gallery** (`/2018/`): a simple standings, scoring-leaders and goalies page for the 2018 Major
   division with a team filter, linked from the main site's footer. Same password; updated nightly.
 
 - **Manual update:** `gh workflow run update.yml` (add `-f refetch_all=true` for a full HSL re-fetch),

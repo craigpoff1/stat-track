@@ -24,6 +24,7 @@ export const divisions = {
     divisionId: 32765,      // not 32764 — that "2018" division is a different (Bow Valley, YYC Jays…) group
     divisionName: '2018 Major',
     myTeamId: null,
+    regulationMinutes: 55,  // 15 + 20 + 20 (P1 clocks top out at 15:00, P2/P3 at 20:00; goalie lines say 55) — not 2019's 3 x 15
     dataDir: 'data/divisions/2018', outDir: 'site/2018/data',
   },
 };

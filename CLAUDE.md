@@ -38,7 +38,7 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
   its own section. Ask before mixing.
 
 ## 2018 Major gallery (site/2018/)
-- Simple companion page: standings + scoring leaders for HSL **2018 Major (division 32765** — not
+- Simple companion page: standings, scoring leaders + goalies for HSL **2018 Major (division 32765** — not
   32764, a different "2018" group), with a team filter. Own small `site/2018/gallery.js`, shares
   `style.css`. Linked subtly from the main footer ("2018 Major stats").
 - `scripts/config.mjs` has `divisions`; `DIVISION=2018 node scripts/scrape.mjs|build.mjs` uses
