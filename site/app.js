@@ -688,7 +688,9 @@
   const mineRow = (t) => (String(t.id) === myTeamId() ? 'me' : '');
 
   // Game cards: upcoming (date/opponent/rink) or results (with W/L from a team's perspective)
-  function gameCards(items, perspective, { badges = true } = {}) {
+  // scout: upcoming games involving `perspective` link to the opponent's scouting report (HSL teams →
+  // #/scout, external-league teams → their tournament report) with an outlined "Scout X →" card.
+  function gameCards(items, perspective, { badges = true, scout = false } = {}) {
     if (!items.length) return '<div class="empty">No games</div>';
     return `<div class="next wrap4">${items.map((x) => {
       const p = perspective && involves(x, perspective) ? String(perspective) : null;
@@ -707,6 +709,8 @@
         inner = `<div class="d">${p && badges ? haBadge(home) : ''}${d} · ${tm(x.start)}${tChip(x)}</div><div class="o">${logo(o)}${who}</div><div class="r">${esc(x.location || '')}${o.stub ? '' : ` · opp ${o.w}-${o.l}-${o.t}`}</div>`;
       }
       if (x.final && x.hasDetail) return `<a class="nx" href="#/game/${x.id}">${inner}</a>`;
+      const scoutHref = scout && p && !x.final && !o.stub ? (o.ext ? (x.eventId ? `#/tournaments/${x.eventId}/${o.id}` : o.href) : o.eventId ? null : `#/scout/${o.id}`) : null;
+      if (scoutHref) return `<a class="nx scoutable" href="${esc(scoutHref)}" title="Scouting report: ${esc(o.name)}">${inner}<div class="cta"><span>Scout ${esc(o.short)} <b>→</b></span></div></a>`;
       if (x.url) return `<a class="nx" href="${esc(x.url)}" target="_blank" rel="noopener" title="Open on the league site">${inner}</a>`;
       return `<div class="nx">${inner}</div>`;
     }).join('')}</div>`;
@@ -1665,7 +1669,7 @@
       const et = teamById.get(String(name)); if (et?.eventId) return et.link?.id || name; // mid-event: sheet-based event team id
       const m = pool.filter((t) => evNick(t.name) === evNick(name)); return m.length === 1 ? m[0].id : name;
     };
-    return (e.schedule || []).map((s) => ({ ...s, home: resolve(s.home), away: resolve(s.away), hasDetail: false, eventName: e.name }));
+    return (e.schedule || []).map((s) => ({ ...s, home: resolve(s.home), away: resolve(s.away), hasDetail: false, eventName: e.name, eventId: e.id }));
   }
   // A team's upcoming games: league schedule + tournament games it is entered in (always shown — it's
   // the schedule, not stats, so it doesn't depend on the "Include tournament games" toggle).
@@ -1813,7 +1817,7 @@
     });
     const sched = evSchedule(e);
     const days = [...new Set(sched.map((s) => s.start.slice(0, 10)))];
-    const schedHtml = sched.length ? days.map((d) => `<div class="wk-day">${dt(d, { weekday: 'long', month: 'short', day: 'numeric' })}</div>${gameCards(sched.filter((s) => s.start.startsWith(d)), myTeamId())}`).join('') : '';
+    const schedHtml = sched.length ? days.map((d) => `<div class="wk-day">${dt(d, { weekday: 'long', month: 'short', day: 'numeric' })}</div>${gameCards(sched.filter((s) => s.start.startsWith(d)), myTeamId(), { scout: true })}`).join('') : '';
     return `
       ${evHead(e, esc(e.name), `${esc(e.season)} · ${esc(evDates(e))} · ${statusChip(e)}`, sched.length ? `Schedule published · ${sched.length} games · opponent scouting below` : 'Opponent scouting · schedule not published yet',
         [...focus, ...leagueTeams.filter((t) => !isFocus(t.id))].map((t) => ({ label: t.short, href: t.href, dim: !isFocus(t.id) })))}
