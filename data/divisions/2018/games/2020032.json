@@ -1,0 +1,722 @@
+{
+ "id": "2020032",
+ "dateText": "Friday, October 9, 2026 @ 2:45 p.m.",
+ "rink": "River Cree Twin Rinks South",
+ "status": "Final",
+ "home": {
+  "name": "Capital City Knights",
+  "teamId": "402361",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/25a07116-c159-4383-87ed-b29821cb31ce_Capital City Knights.jpg",
+  "score": 4
+ },
+ "away": {
+  "name": "Gorillas Hockey Academy",
+  "teamId": "402358",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/d99627bb-007b-44a0-8d46-95cfeebd4951_Gorillas Hockey Academy.png",
+  "score": 9
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 6
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "16:103",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "29",
+    "name": "Braden Melenberg"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "15:01",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "88",
+    "name": "Jack Furlong"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Elias Woobin Jung"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:01",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Cruz Smith"
+   },
+   "minutes": 2,
+   "infraction": "Illegal Check To The Head"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:52",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Kaysen Derosa"
+   },
+   "assists": [
+    {
+     "number": "91",
+     "name": "Liam Milsted"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:20",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Jayce Clarke"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:00",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "7",
+    "name": "Elias Woobin Jung"
+   },
+   "minutes": 5,
+   "infraction": "Check From Behind Major"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:32",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "98",
+    "name": "Nate Ahlskog"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:50",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Mackenzie Clark"
+   },
+   "assists": [
+    {
+     "number": "26",
+     "name": "Logan Bell"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:39",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "92",
+    "name": "Matthew Williams"
+   },
+   "minutes": 5,
+   "infraction": "Boarding Major"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:00",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "12",
+    "name": "Evan Archer"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:33",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "88",
+    "name": "Jack Furlong"
+   },
+   "assists": [
+    {
+     "number": "43",
+     "name": "Gabriel Welsh"
+    },
+    {
+     "number": "7",
+     "name": "Elias Woobin Jung"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:55",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "16",
+    "name": "Braden Van Wieren"
+   },
+   "assists": [
+    {
+     "number": "2",
+     "name": "Karson Ofukany"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:50",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "43",
+    "name": "Gabriel Welsh"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:09",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "88",
+    "name": "Jack Furlong"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Mackenzie Clark"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:05",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "43",
+    "name": "Gabriel Welsh"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:41",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:41",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:54",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "11",
+    "name": "Jacob Van Wieren"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Nate Ahlskog"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:23",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "43",
+    "name": "Gabriel Welsh"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Jack Furlong"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:27",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:53",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "26",
+    "name": "Logan Bell"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Patrick Carroll"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061788",
+   "number": "98",
+   "name": "Nate Ahlskog",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061245",
+   "number": "71",
+   "name": "Macklin Vigneau",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061793",
+   "number": "16",
+   "name": "Braden Van Wieren",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5060706",
+   "number": "11",
+   "name": "Jacob Van Wieren",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062541",
+   "number": "92",
+   "name": "Matthew Williams",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 5
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5060835",
+   "number": "88",
+   "name": "Jayce Clarke",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062187",
+   "number": "8",
+   "name": "Hendrix Rogers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061534",
+   "number": "31",
+   "name": "Logan Plante",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061250",
+   "number": "29",
+   "name": "Braden Melenberg",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062987",
+   "number": "2",
+   "name": "Karson Ofukany",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061191",
+   "number": "18",
+   "name": "Cormic Lacroix",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062706",
+   "number": "17",
+   "name": "Jayce Kshyk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062848",
+   "number": "14",
+   "name": "William Ekholm Bjornstad",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061881",
+   "number": "12",
+   "name": "Evan Archer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061201",
+   "number": "88",
+   "name": "Jack Furlong",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060877",
+   "number": "43",
+   "name": "Gabriel Welsh",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061184",
+   "number": "8",
+   "name": "Zyan Olynyk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062000",
+   "number": "26",
+   "name": "Logan Bell",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061227",
+   "number": "17",
+   "name": "Kaysen Derosa",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061598",
+   "number": "13",
+   "name": "Mackenzie Clark",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061234",
+   "number": "91",
+   "name": "Liam Milsted",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062703",
+   "number": "77",
+   "name": "Jaxon Achtymichuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060979",
+   "number": "74",
+   "name": "Vincent Grimbly",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061993",
+   "number": "7",
+   "name": "Elias Woobin Jung",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 5
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061638",
+   "number": "29",
+   "name": "Emerson Dolan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062474",
+   "number": "28",
+   "name": "Maxwell Doyle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061652",
+   "number": "18",
+   "name": "Cruz Smith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061922",
+   "number": "14",
+   "name": "Zachary Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060815",
+   "number": "11",
+   "name": "Patrick Carroll",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062187",
+   "number": "8",
+   "name": "Hendrix Rogers",
+   "seconds": 3300,
+   "ga": 0,
+   "shots": 24,
+   "saves": 24
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060979",
+   "number": "74",
+   "name": "Vincent Grimbly",
+   "seconds": 3300,
+   "ga": 0,
+   "shots": 32,
+   "saves": 32
+  }
+ ],
+ "warnings": [
+  "invalid clock time \"16:103\" in period 1"
+ ],
+ "shotsByPeriod": [],
+ "start": "2026-10-09T14:45:00",
+ "gameNumber": 260,
+ "fetchedAt": "2026-10-10T10:37:06.960Z"
+}
