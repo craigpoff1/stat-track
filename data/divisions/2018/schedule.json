@@ -475,9 +475,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "Aces Hockey Academy",
   "away": "Gorillas Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 14,
+  "awayScore": 1
  },
  {
   "id": "2020066",
@@ -487,9 +487,9 @@
   "location": "Hussar Arena",
   "home": "Spartan Hockey Academy",
   "away": "Young Kings Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 11,
+  "awayScore": 0
  },
  {
   "id": "2020068",
@@ -499,9 +499,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "North Stars Hockey Academy",
   "away": "Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 1,
+  "awayScore": 13
  },
  {
   "id": "2020077",
@@ -511,9 +511,9 @@
   "location": "Hussar Arena",
   "home": "O2 Grizzlies",
   "away": "Rebels Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 11
  },
  {
   "id": "2020079",
@@ -523,9 +523,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "Gorillas Hockey Academy",
   "away": "Capital City Knights",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 9,
+  "awayScore": 4
  },
  {
   "id": "2020083",
@@ -535,9 +535,9 @@
   "location": "Hussar Arena",
   "home": "Spartan Hockey Academy",
   "away": "Sauce Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 15,
+  "awayScore": 3
  },
  {
   "id": "2020084",
@@ -547,9 +547,9 @@
   "location": "River Cree Twin Rinks South",
   "home": "North Stars Academy Wild",
   "away": "MOB Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 5
  },
  {
   "id": "2020086",
@@ -559,9 +559,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "Stars Hockey Academy",
   "away": "Aces Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 5
  },
  {
   "id": "2020094",
@@ -571,9 +571,9 @@
   "location": "Hussar Arena",
   "home": "Rebels Hockey Academy",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 12,
+  "awayScore": 5
  },
  {
   "id": "2020103",
@@ -583,9 +583,9 @@
   "location": "Hussar Arena",
   "home": "Sauce Hockey Academy",
   "away": "Young Kings Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 6
  },
  {
   "id": "2020104",
@@ -595,9 +595,9 @@
   "location": "River Cree Twin Rinks South",
   "home": "MOB Hockey",
   "away": "North Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 12,
+  "awayScore": 1
  },
  {
   "id": "2020115",

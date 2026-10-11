@@ -1,0 +1,768 @@
+{
+ "id": "2020103",
+ "dateText": "Saturday, October 10, 2026 @ 4:45 p.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "Sauce Hockey Academy",
+  "teamId": "402368",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/17e9bc47-5a50-4d7e-8db2-416c7e6e3d17_Sauce Hockey Academy.png",
+  "score": 2
+ },
+ "away": {
+  "name": "Young Kings Hockey",
+  "teamId": "402371",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0fb8c71b-98d4-4866-ab88-20c422c00d87_Young Kings Hockey.png",
+  "score": 6
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "13:09",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cashel Martschuk"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:23",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:58",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:49",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "93",
+    "name": "Banks Fischer"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:59",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "77",
+    "name": "Kingston Fox"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:00",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "23",
+    "name": "Rhett Rhinas"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:00",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "18:46",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "79",
+    "name": "Spencer Diaz"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:12",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "91",
+    "name": "Charlie Cox"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:44",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "77",
+    "name": "Kingston Fox"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:13",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:29",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "79",
+    "name": "Spencer Diaz"
+   },
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:53",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Cashel Martschuk"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Vaughn Berdusco"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:38",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "48",
+    "name": "Luke Bateman"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:52",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:14",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "11",
+    "name": "Beau Wiest"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:33",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Vaughn Berdusco"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:05",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "12",
+    "name": "Connor Chisholm"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:36",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "77",
+    "name": "Kingston Fox"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:20",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "48",
+    "name": "Luke Bateman"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:55",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "48",
+    "name": "Luke Bateman"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:59",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "12",
+    "name": "Connor Chisholm"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:10",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:38",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:07",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "28",
+    "name": "Beckham Block"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:51",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:31",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Kashton Clarke"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061974",
+   "number": "98",
+   "name": "Brendan Hughes",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061549",
+   "number": "19",
+   "name": "Cashel Martschuk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062494",
+   "number": "94",
+   "name": "Halle Scarff",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062353",
+   "number": "9",
+   "name": "Nash Swelin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060443",
+   "number": "8",
+   "name": "Owen Bruce",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061687",
+   "number": "77",
+   "name": "Kingston Fox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061098",
+   "number": "72",
+   "name": "Madden Proskurniak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061420",
+   "number": "71",
+   "name": "jasper shirley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062357",
+   "number": "48",
+   "name": "Luke Bateman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061397",
+   "number": "28",
+   "name": "Beckham Block",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060551",
+   "number": "18",
+   "name": "Jacob Brisebois",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061398",
+   "number": "17",
+   "name": "Ashton Ortman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061781",
+   "number": "16",
+   "name": "Remi (Remington) Voth",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061780",
+   "number": "11",
+   "name": "Isamu Lysak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060846",
+   "number": "10",
+   "name": "Vaughn Berdusco",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061435",
+   "number": "61",
+   "name": "Nixon Greve",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062643",
+   "number": "98",
+   "name": "Kashton Clarke",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062631",
+   "number": "93",
+   "name": "Banks Fischer",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061467",
+   "number": "7",
+   "name": "Carter Weisgerber",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5060442",
+   "number": "12",
+   "name": "Connor Chisholm",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061127",
+   "number": "91",
+   "name": "Charlie Cox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062428",
+   "number": "79",
+   "name": "Spencer Diaz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5060440",
+   "number": "75",
+   "name": "Rhett Lomness",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061426",
+   "number": "71",
+   "name": "Nixon Lafreniere",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5060760",
+   "number": "29",
+   "name": "Maxton Burleigh",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062360",
+   "number": "23",
+   "name": "Rhett Rhinas",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061132",
+   "number": "20",
+   "name": "Kaique Thunder Chief",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062191",
+   "number": "17",
+   "name": "Kyren Dovichak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061688",
+   "number": "15",
+   "name": "Rylan Mclean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5062429",
+   "number": "11",
+   "name": "Beau Wiest",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061098",
+   "number": "72",
+   "name": "Madden Proskurniak",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402371",
+   "playerId": "5061132",
+   "number": "20",
+   "name": "Kaique Thunder Chief",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-10-10T16:45:00",
+ "gameNumber": 331,
+ "fetchedAt": "2026-10-11T10:50:09.984Z"
+}

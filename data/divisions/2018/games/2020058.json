@@ -1,0 +1,806 @@
+{
+ "id": "2020058",
+ "dateText": "Saturday, October 10, 2026 @ 8:15 a.m.",
+ "rink": "River Cree Twin Rinks North",
+ "status": "Final",
+ "home": {
+  "name": "Aces Hockey Academy",
+  "teamId": "402359",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e70f74fc-7003-4dde-883c-b5c931abce4a_Aces Hockey Academy.png",
+  "score": 14
+ },
+ "away": {
+  "name": "Gorillas Hockey Academy",
+  "teamId": "402358",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/d99627bb-007b-44a0-8d46-95cfeebd4951_Gorillas Hockey Academy.png",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 8,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:01",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Keir Fisher"
+    },
+    {
+     "number": "11",
+     "name": "Kale Duquette"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:46",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Kale Duquette"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:00",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "88",
+    "name": "Jack Furlong"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:25",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Keir Fisher"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "19:07",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Mackenzie Clark"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:14",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Ben Bushell"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Luke Runzer"
+    },
+    {
+     "number": "19",
+     "name": "Jovanni Pellizzari"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:36",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:55",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Laiken Laird"
+   },
+   "assists": [
+    {
+     "number": "6",
+     "name": "Gavin Pettinato"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:07",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Jovanni Pellizzari"
+   },
+   "assists": [
+    {
+     "number": "23",
+     "name": "Brooks Duiker"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:11",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Laiken Laird"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:15",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "6",
+    "name": "Gavin Pettinato"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Jovanni Pellizzari"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:02",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:02",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Keir Fisher"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:03",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Ben Bushell"
+   },
+   "assists": [
+    {
+     "number": "77",
+     "name": "Jordan Schoettler"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:18",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Luke Runzer"
+   },
+   "assists": [
+    {
+     "number": "23",
+     "name": "Brooks Duiker"
+    },
+    {
+     "number": "19",
+     "name": "Jovanni Pellizzari"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:30",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "assists": [
+    {
+     "number": "26",
+     "name": "Logan Bell"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:15",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Alexander McNeill"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:15",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Kaysen Derosa"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:30",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "43",
+    "name": "Gabriel Welsh"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:24",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "10",
+    "name": "Austin Keough"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:30",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Ben Bushell"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:30",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "28",
+    "name": "Maxwell Doyle"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:55",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "23",
+    "name": "Brooks Duiker"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Jovanni Pellizzari"
+    },
+    {
+     "number": "7",
+     "name": "Luke Runzer"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:10",
+   "side": "home",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Ben Bushell"
+   },
+   "assists": [
+    {
+     "number": "82",
+     "name": "Luciano Bit"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5076459",
+   "number": "82",
+   "name": "Luciano Bit",
+   "g": 4,
+   "a": 1,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061418",
+   "number": "71",
+   "name": "Ben Bushell",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5060502",
+   "number": "17",
+   "name": "Laiken Laird",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061119",
+   "number": "98",
+   "name": "Keir Fisher",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5062467",
+   "number": "7",
+   "name": "Luke Runzer",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061450",
+   "number": "6",
+   "name": "Gavin Pettinato",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5062824",
+   "number": "23",
+   "name": "Brooks Duiker",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061574",
+   "number": "19",
+   "name": "Jovanni Pellizzari",
+   "g": 1,
+   "a": 4,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061756",
+   "number": "92",
+   "name": "Preston Baker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5060996",
+   "number": "9",
+   "name": "Thoren Milroy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061408",
+   "number": "77",
+   "name": "Jordan Schoettler",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061219",
+   "number": "72",
+   "name": "Mason Medeiros",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061657",
+   "number": "18",
+   "name": "Alexander McNeill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5062621",
+   "number": "11",
+   "name": "Kale Duquette",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061956",
+   "number": "10",
+   "name": "Austin Keough",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061184",
+   "number": "8",
+   "name": "Zyan Olynyk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061234",
+   "number": "91",
+   "name": "Liam Milsted",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061201",
+   "number": "88",
+   "name": "Jack Furlong",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062703",
+   "number": "77",
+   "name": "Jaxon Achtymichuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060979",
+   "number": "74",
+   "name": "Vincent Grimbly",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061993",
+   "number": "7",
+   "name": "Elias Woobin Jung",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060877",
+   "number": "43",
+   "name": "Gabriel Welsh",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061638",
+   "number": "29",
+   "name": "Emerson Dolan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062474",
+   "number": "28",
+   "name": "Maxwell Doyle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062000",
+   "number": "26",
+   "name": "Logan Bell",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061652",
+   "number": "18",
+   "name": "Cruz Smith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061227",
+   "number": "17",
+   "name": "Kaysen Derosa",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061922",
+   "number": "14",
+   "name": "Zachary Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061598",
+   "number": "13",
+   "name": "Mackenzie Clark",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060815",
+   "number": "11",
+   "name": "Patrick Carroll",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402359",
+   "playerId": "5061219",
+   "number": "72",
+   "name": "Mason Medeiros",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061638",
+   "number": "29",
+   "name": "Emerson Dolan",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 15,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 15,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 10,
+   "away": 2
+  }
+ ],
+ "start": "2026-10-10T08:15:00",
+ "gameNumber": 286,
+ "fetchedAt": "2026-10-11T10:50:01.201Z"
+}

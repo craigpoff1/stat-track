@@ -1,0 +1,877 @@
+{
+ "id": "2020083",
+ "dateText": "Saturday, October 10, 2026 @ 1:15 p.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402369",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/de966e86-ca95-4940-be08-b62ef021fd74_Spartan Hockey Academy.png",
+  "score": 15
+ },
+ "away": {
+  "name": "Sauce Hockey Academy",
+  "teamId": "402368",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/17e9bc47-5a50-4d7e-8db2-416c7e6e3d17_Sauce Hockey Academy.png",
+  "score": 3
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 5,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 7,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "14:19",
+   "side": "away",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "21",
+    "name": "Henry Anderson"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:46",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "48",
+    "name": "Luke Desy"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Lucas Rieder"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:01",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "38",
+    "name": "Jayse Grasdahl"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Leo Belandis"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:32",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Leif Tomiuk"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Hutton Wickham"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:47",
+   "side": "away",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Ashton Ortman"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cashel Martschuk"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:21",
+   "side": "away",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "48",
+    "name": "Luke Bateman"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:19",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Lucas Rieder"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Jagger Kildaw"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:50",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "38",
+    "name": "Jayse Grasdahl"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:38",
+   "side": "away",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Isamu Lysak"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cashel Martschuk"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:24",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Leif Tomiuk"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Gavin Porter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:06",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "38",
+    "name": "Jayse Grasdahl"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Leo Belandis"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:16",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Lucas Rieder"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:35",
+   "side": "away",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Isamu Lysak"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:09",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Sutton Tams"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:45",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "3",
+    "name": "Keaton Craig"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:04",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Hutton Wickham"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:07",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "12",
+    "name": "Leo Belandis"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Sutton Tams"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:48",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "12",
+    "name": "Leo Belandis"
+   },
+   "minutes": 2,
+   "infraction": "Boarding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:48",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "38",
+    "name": "Jayse Grasdahl"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:48",
+   "side": "away",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "71",
+    "name": "jasper shirley"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:30",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Sutton Tams"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:27",
+   "side": "away",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Isamu Lysak"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:58",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Porter"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:03",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Porter"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Leif Tomiuk"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:18",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "38",
+    "name": "Jayse Grasdahl"
+   },
+   "assists": [
+    {
+     "number": "47",
+     "name": "Bennett Mills"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:49",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "48",
+    "name": "Luke Desy"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Jagger Kildaw"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:40",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Fallon Tams"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:11",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "47",
+    "name": "Bennett Mills"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060832",
+   "number": "38",
+   "name": "Jayse Grasdahl",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060826",
+   "number": "71",
+   "name": "Sutton Tams",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060512",
+   "number": "48",
+   "name": "Luke Desy",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5062528",
+   "number": "18",
+   "name": "Gavin Porter",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061970",
+   "number": "13",
+   "name": "Leif Tomiuk",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060504",
+   "number": "9",
+   "name": "Lucas Rieder",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060549",
+   "number": "17",
+   "name": "Fallon Tams",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061711",
+   "number": "12",
+   "name": "Leo Belandis",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060505",
+   "number": "11",
+   "name": "Hutton Wickham",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061049",
+   "number": "7",
+   "name": "Jagger Kildaw",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5061520",
+   "number": "47",
+   "name": "Bennett Mills",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060866",
+   "number": "31",
+   "name": "Blake Bleile",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5062694",
+   "number": "3",
+   "name": "Keaton Craig",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060552",
+   "number": "29",
+   "name": "Easton Eagle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060838",
+   "number": "21",
+   "name": "Camden Robichaud",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061974",
+   "number": "98",
+   "name": "Brendan Hughes",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061398",
+   "number": "17",
+   "name": "Ashton Ortman",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061780",
+   "number": "11",
+   "name": "Isamu Lysak",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5062494",
+   "number": "94",
+   "name": "Halle Scarff",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5062353",
+   "number": "9",
+   "name": "Nash Swelin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5060443",
+   "number": "8",
+   "name": "Owen Bruce",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061687",
+   "number": "77",
+   "name": "Kingston Fox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061098",
+   "number": "72",
+   "name": "Madden Proskurniak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061420",
+   "number": "71",
+   "name": "jasper shirley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5062357",
+   "number": "48",
+   "name": "Luke Bateman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061680",
+   "number": "35",
+   "name": "Darcy Edgett",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061397",
+   "number": "28",
+   "name": "Beckham Block",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061782",
+   "number": "21",
+   "name": "Henry Anderson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061549",
+   "number": "19",
+   "name": "Cashel Martschuk",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5060551",
+   "number": "18",
+   "name": "Jacob Brisebois",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061781",
+   "number": "16",
+   "name": "Remi (Remington) Voth",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5060846",
+   "number": "10",
+   "name": "Vaughn Berdusco",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402369",
+   "playerId": "5060866",
+   "number": "31",
+   "name": "Blake Bleile",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402368",
+   "playerId": "5061680",
+   "number": "35",
+   "name": "Darcy Edgett",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 11,
+   "away": 6
+  },
+  {
+   "label": "2",
+   "home": 13,
+   "away": 10
+  },
+  {
+   "label": "3",
+   "home": 21,
+   "away": 7
+  }
+ ],
+ "start": "2026-10-10T13:15:00",
+ "gameNumber": 311,
+ "fetchedAt": "2026-10-11T10:50:06.167Z"
+}

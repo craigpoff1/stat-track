@@ -1,0 +1,841 @@
+{
+ "id": "2020077",
+ "dateText": "Saturday, October 10, 2026 @ 11:30 a.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "O2 Grizzlies",
+  "teamId": "402366",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/ffa3994f-f1d1-4189-871c-59df5cdd4b1e_O2 Grizzlies.png",
+  "score": 2
+ },
+ "away": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402367",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/f4fdeb85-eb35-4de7-a4b6-76222672d1ca_Rebels Hockey Academy.png",
+  "score": 11
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:47",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Greyson Lamouche"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Emric Neurauter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:47",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "87",
+    "name": "Jordan Watson"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:36",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:07",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Greyson Lamouche"
+   },
+   "assists": [
+    {
+     "number": "66",
+     "name": "Nash Maisonneuve"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:39",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:02",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:11",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "13",
+    "name": "Holt Wiebach"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:44",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "67",
+    "name": "Rhys Dunn"
+   },
+   "minutes": 2,
+   "infraction": "Too Many Players - Bench Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:27",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:36",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Deacon Krol"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cameron York"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:07",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Greyson Lamouche"
+   },
+   "assists": [
+    {
+     "number": "66",
+     "name": "Nash Maisonneuve"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:12",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "71",
+    "name": "Landon Miller"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:01",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "20",
+    "name": "Samuel Clark"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:08",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:42",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Emric Neurauter"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:07",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Greyson Lamouche"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:18",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:21",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Deacon Krol"
+   },
+   "assists": [
+    {
+     "number": "96",
+     "name": "Bohen Anderson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:42",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "44",
+    "name": "Wyatt Burns"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:39",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:25",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "87",
+    "name": "Jordan Watson"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:42",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Emory Van"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:20",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Bohen Anderson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:55",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Charging - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:13",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Emric Neurauter"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Greyson Lamouche"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:49",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:40",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Cameron York"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:03",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "20",
+    "name": "Samuel Clark"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:37",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Emric Neurauter"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:47",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "44",
+    "name": "Wyatt Burns"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:47",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Harrison Clement"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:59",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Jett Friesen"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Greyson Lamouche"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5060621",
+   "number": "8",
+   "name": "Porter Curlew",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061460",
+   "number": "9",
+   "name": "MCCOY FREEBURN",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061117",
+   "number": "71",
+   "name": "Landon Miller",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5060626",
+   "number": "67",
+   "name": "Rhys Dunn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061103",
+   "number": "44",
+   "name": "Wyatt Burns",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061473",
+   "number": "4",
+   "name": "Jaiden Sharma",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061279",
+   "number": "33",
+   "name": "Brooks Carver",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061914",
+   "number": "32",
+   "name": "Benett Lehouillier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5062617",
+   "number": "20",
+   "name": "Samuel Clark",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061105",
+   "number": "19",
+   "name": "Mackenzie Gunther",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061573",
+   "number": "18",
+   "name": "Bauer Poulsen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061410",
+   "number": "16",
+   "name": "Youngwoo Song",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061567",
+   "number": "13",
+   "name": "Holt Wiebach",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5062217",
+   "number": "10",
+   "name": "Jones Desmeules",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061268",
+   "number": "17",
+   "name": "Greyson Lamouche",
+   "g": 4,
+   "a": 2,
+   "pts": 6,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062103",
+   "number": "96",
+   "name": "Bohen Anderson",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062810",
+   "number": "18",
+   "name": "Deacon Krol",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062963",
+   "number": "98",
+   "name": "Emric Neurauter",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061734",
+   "number": "9",
+   "name": "Jett Friesen",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062594",
+   "number": "88",
+   "name": "Kian Head",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062102",
+   "number": "87",
+   "name": "Jordan Watson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5060594",
+   "number": "81",
+   "name": "Jack Scheideman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061845",
+   "number": "8",
+   "name": "Logan Brochu",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062849",
+   "number": "66",
+   "name": "Nash Maisonneuve",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061851",
+   "number": "61",
+   "name": "Ellis Anaka",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062834",
+   "number": "4",
+   "name": "Noah Duthie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061876",
+   "number": "31",
+   "name": "Noah Verburg",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061850",
+   "number": "29",
+   "name": "Emory Van",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5061846",
+   "number": "19",
+   "name": "Cameron York",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5062580",
+   "number": "14",
+   "name": "Grayson Stojan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402367",
+   "playerId": "5060590",
+   "number": "13",
+   "name": "Harrison Clement",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-10-10T11:30:00",
+ "gameNumber": 305,
+ "fetchedAt": "2026-10-11T10:50:04.217Z"
+}

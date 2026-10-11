@@ -1,0 +1,679 @@
+{
+ "id": "2020068",
+ "dateText": "Saturday, October 10, 2026 @ 10:00 a.m.",
+ "rink": "River Cree Twin Rinks North",
+ "status": "Final",
+ "home": {
+  "name": "North Stars Hockey Academy",
+  "teamId": "402364",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/50534b6c-c2f8-47ed-a2b4-6af4afde02a0_North Stars Hockey Academy.png",
+  "score": 1
+ },
+ "away": {
+  "name": "Stars Hockey Academy",
+  "teamId": "402360",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/5231f365-88d9-4054-a7d9-aefccd7de470_Stars Hockey Academy.png",
+  "score": 13
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 5
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:21",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Johnny Stringile"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Luca Catellier"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:56",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "55",
+    "name": "Nash Lachapelle"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Luca Catellier"
+    },
+    {
+     "number": "21",
+     "name": "Austin Korpach"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:19",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "15",
+    "name": "Luca Catellier"
+   },
+   "assists": [
+    {
+     "number": "21",
+     "name": "Austin Korpach"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:02",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Hudson Zahara"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:55",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "55",
+    "name": "Nash Lachapelle"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Luca Catellier"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:47",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "55",
+    "name": "Nash Lachapelle"
+   },
+   "assists": [
+    {
+     "number": "21",
+     "name": "Austin Korpach"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:09",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "21",
+    "name": "Austin Korpach"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:14",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Griffin Grochowich"
+   },
+   "assists": [
+    {
+     "number": "21",
+     "name": "Austin Korpach"
+    },
+    {
+     "number": "71",
+     "name": "Cayden Sando"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:28",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "92",
+    "name": "Cole Taks"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:02",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Ellis MacDougall"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Cohen Weisgerber"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:53",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Cayden Sando"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:21",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "15",
+    "name": "Luca Catellier"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Hudson Zahara"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:44",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "21",
+    "name": "Austin Korpach"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Luca Catellier"
+    },
+    {
+     "number": "98",
+     "name": "Hudson Zahara"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:41",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "21",
+    "name": "Austin Korpach"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Luca Catellier"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:52",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "47",
+    "name": "Hudson Phillips"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5060694",
+   "number": "98",
+   "name": "Ellis MacDougall",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061156",
+   "number": "9",
+   "name": "Cameron Yin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062011",
+   "number": "88",
+   "name": "Oaklin Berlinic",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062466",
+   "number": "87",
+   "name": "Benjamin Hayward",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062475",
+   "number": "8",
+   "name": "Maximus Young",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5060799",
+   "number": "77",
+   "name": "Mason Paszko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062559",
+   "number": "7",
+   "name": "Calder Nahajowich",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5060784",
+   "number": "5",
+   "name": "Leo Halabi",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062001",
+   "number": "38",
+   "name": "Paisley Kolotylo",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061163",
+   "number": "34",
+   "name": "NATHAN KIM",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062573",
+   "number": "29",
+   "name": "Nash Ziegler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062667",
+   "number": "22",
+   "name": "Taylor Albers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061257",
+   "number": "2",
+   "name": "Ben Szmyrko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062677",
+   "number": "15",
+   "name": "Cohen Weisgerber",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062201",
+   "number": "10",
+   "name": "Wyatt Carstairs",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5062817",
+   "number": "55",
+   "name": "Nash Lachapelle",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5062622",
+   "number": "21",
+   "name": "Austin Korpach",
+   "g": 3,
+   "a": 4,
+   "pts": 7,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5062566",
+   "number": "15",
+   "name": "Luca Catellier",
+   "g": 2,
+   "a": 5,
+   "pts": 7,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5060647",
+   "number": "92",
+   "name": "Cole Taks",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5061529",
+   "number": "71",
+   "name": "Cayden Sando",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5061112",
+   "number": "47",
+   "name": "Hudson Phillips",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5062718",
+   "number": "19",
+   "name": "Johnny Stringile",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5062404",
+   "number": "11",
+   "name": "Griffin Grochowich",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5062402",
+   "number": "98",
+   "name": "Hudson Zahara",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5061839",
+   "number": "91",
+   "name": "Ryker Watson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5061411",
+   "number": "72",
+   "name": "Hayes Dutton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5061895",
+   "number": "50",
+   "name": "Kaysen Vandale",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5060898",
+   "number": "29",
+   "name": "Jordan Carroll",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5060891",
+   "number": "25",
+   "name": "Bowen Barley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5061114",
+   "number": "20",
+   "name": "Blake Werenka",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5060637",
+   "number": "13",
+   "name": "Sverre Dormer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5061129",
+   "number": "10",
+   "name": "Wyatt Robertson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061163",
+   "number": "34",
+   "name": "NATHAN KIM",
+   "seconds": 3300,
+   "ga": 0,
+   "shots": 40,
+   "saves": 40
+  },
+  {
+   "side": "away",
+   "teamId": "402360",
+   "playerId": "5061895",
+   "number": "50",
+   "name": "Kaysen Vandale",
+   "seconds": 3300,
+   "ga": 0,
+   "shots": 8,
+   "saves": 8
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-10-10T10:00:00",
+ "gameNumber": 296,
+ "fetchedAt": "2026-10-11T10:50:03.229Z"
+}
