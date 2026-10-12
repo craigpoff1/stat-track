@@ -259,9 +259,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "Capital City Knights",
   "away": "Riggers Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 0,
+  "awayScore": 12
  },
  {
   "id": "2020157",

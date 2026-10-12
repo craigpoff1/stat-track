@@ -607,9 +607,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "MOB Hockey",
   "away": "North Stars Academy Wild",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 2
  },
  {
   "id": "2020125",
@@ -631,9 +631,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "Stars Hockey Academy",
   "away": "North Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 12,
+  "awayScore": 1
  },
  {
   "id": "2020134",
@@ -643,9 +643,9 @@
   "location": "Hussar Arena",
   "home": "Young Kings Hockey",
   "away": "Spartan Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 9
  },
  {
   "id": "2020135",
@@ -655,9 +655,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "Capital City Knights",
   "away": "North Stars Academy Wild",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 5,
+  "awayScore": 9
  },
  {
   "id": "2020142",
@@ -667,9 +667,9 @@
   "location": "Hussar Arena",
   "home": "Calgary Crusaders",
   "away": "O2 Grizzlies",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 9,
+  "awayScore": 1
  },
  {
   "id": "2020143",
@@ -679,9 +679,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "Gorillas Hockey Academy",
   "away": "Aces Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 8
  },
  {
   "id": "2020148",
@@ -691,9 +691,9 @@
   "location": "Hussar Arena",
   "home": "Sauce Hockey Academy",
   "away": "Spartan Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 7,
+  "awayScore": 13
  },
  {
   "id": "2020149",
@@ -703,9 +703,9 @@
   "location": "River Cree Twin Rinks North",
   "home": "North Stars Hockey Academy",
   "away": "Capital City Knights",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 0,
+  "awayScore": 8
  },
  {
   "id": "2020168",

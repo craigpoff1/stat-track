@@ -7,7 +7,7 @@
   "url": "https://hpl-winter-league.kreezee-sports.com",
   "platform": "Kreezee"
  },
- "fetchedAt": "2026-10-11T10:49:40.546Z",
+ "fetchedAt": "2026-10-12T11:59:41.854Z",
  "detail": "scores-only",
  "teams": [
   {
@@ -82,6 +82,11 @@
     },
     {
      "name": "Chase Moniz",
+     "number": null,
+     "goalie": false
+    },
+    {
+     "name": "Richard Wang",
      "number": null,
      "goalie": false
     }

@@ -1,0 +1,726 @@
+{
+ "id": "2020149",
+ "dateText": "Sunday, October 11, 2026 @ 3:00 p.m.",
+ "rink": "River Cree Twin Rinks North",
+ "status": "Final",
+ "home": {
+  "name": "North Stars Hockey Academy",
+  "teamId": "402364",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/50534b6c-c2f8-47ed-a2b4-6af4afde02a0_North Stars Hockey Academy.png",
+  "score": 0
+ },
+ "away": {
+  "name": "Capital City Knights",
+  "teamId": "402361",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/25a07116-c159-4383-87ed-b29821cb31ce_Capital City Knights.jpg",
+  "score": 8
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "14:47",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Nash Ziegler"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:22",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "92",
+    "name": "Matthew Williams"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:25",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "14",
+    "name": "William Ekholm Bjornstad"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Jacob Van Wieren"
+    },
+    {
+     "number": "12",
+     "name": "Evan Archer"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:15",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "14",
+    "name": "William Ekholm Bjornstad"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Macklin Vigneau"
+    },
+    {
+     "number": "92",
+     "name": "Matthew Williams"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:33",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "11",
+    "name": "Jacob Van Wieren"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Jayce Kshyk"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:15",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "15",
+    "name": "Cohen Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:02",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "15",
+    "name": "Cohen Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:02",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "12",
+    "name": "Evan Archer"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:26",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "92",
+    "name": "Matthew Williams"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:26",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:49",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "12",
+    "name": "Evan Archer"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:06",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "2",
+    "name": "Karson Ofukany"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Evan Archer"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "18:47",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "92",
+    "name": "Matthew Williams"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:06",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Maximus Young"
+   },
+   "minutes": 2,
+   "infraction": "Boarding - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:38",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "18",
+    "name": "Cormic Lacroix"
+   },
+   "assists": [
+    {
+     "number": "16",
+     "name": "Braden Van Wieren"
+    },
+    {
+     "number": "14",
+     "name": "William Ekholm Bjornstad"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:06",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "88",
+    "name": "Oaklin Berlinic"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:09",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "16",
+    "name": "Braden Van Wieren"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:09",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "87",
+    "name": "Benjamin Hayward"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:55",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "2",
+    "name": "Karson Ofukany"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "William Ekholm Bjornstad"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:34",
+   "side": "home",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "2",
+    "name": "Ben Szmyrko"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:49",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "29",
+    "name": "Braden Melenberg"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Cormic Lacroix"
+    },
+    {
+     "number": "11",
+     "name": "Jacob Van Wieren"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:03",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "98",
+    "name": "Nate Ahlskog"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5060694",
+   "number": "98",
+   "name": "Ellis MacDougall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061156",
+   "number": "9",
+   "name": "Cameron Yin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062011",
+   "number": "88",
+   "name": "Oaklin Berlinic",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062466",
+   "number": "87",
+   "name": "Benjamin Hayward",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062475",
+   "number": "8",
+   "name": "Maximus Young",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5060799",
+   "number": "77",
+   "name": "Mason Paszko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062559",
+   "number": "7",
+   "name": "Calder Nahajowich",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5060784",
+   "number": "5",
+   "name": "Leo Halabi",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062001",
+   "number": "38",
+   "name": "Paisley Kolotylo",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061163",
+   "number": "34",
+   "name": "NATHAN KIM",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062573",
+   "number": "29",
+   "name": "Nash Ziegler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062667",
+   "number": "22",
+   "name": "Taylor Albers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061257",
+   "number": "2",
+   "name": "Ben Szmyrko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062677",
+   "number": "15",
+   "name": "Cohen Weisgerber",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5062201",
+   "number": "10",
+   "name": "Wyatt Carstairs",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062987",
+   "number": "2",
+   "name": "Karson Ofukany",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062848",
+   "number": "14",
+   "name": "William Ekholm Bjornstad",
+   "g": 2,
+   "a": 2,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061250",
+   "number": "29",
+   "name": "Braden Melenberg",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061191",
+   "number": "18",
+   "name": "Cormic Lacroix",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061881",
+   "number": "12",
+   "name": "Evan Archer",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5060706",
+   "number": "11",
+   "name": "Jacob Van Wieren",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061788",
+   "number": "98",
+   "name": "Nate Ahlskog",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062541",
+   "number": "92",
+   "name": "Matthew Williams",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5060835",
+   "number": "88",
+   "name": "Jayce Clarke",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062187",
+   "number": "8",
+   "name": "Hendrix Rogers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061245",
+   "number": "71",
+   "name": "Macklin Vigneau",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061534",
+   "number": "31",
+   "name": "Logan Plante",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5062706",
+   "number": "17",
+   "name": "Jayce Kshyk",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061793",
+   "number": "16",
+   "name": "Braden Van Wieren",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402364",
+   "playerId": "5061163",
+   "number": "34",
+   "name": "NATHAN KIM",
+   "seconds": 3300,
+   "ga": 8,
+   "shots": 14,
+   "saves": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402361",
+   "playerId": "5061534",
+   "number": "31",
+   "name": "Logan Plante",
+   "seconds": 3300,
+   "ga": 0,
+   "shots": 8,
+   "saves": 8
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-10-11T15:00:00",
+ "gameNumber": 377,
+ "fetchedAt": "2026-10-12T12:00:15.694Z"
+}

@@ -1,0 +1,718 @@
+{
+ "id": "2020135",
+ "dateText": "Sunday, October 11, 2026 @ 11:30 a.m.",
+ "rink": "River Cree Twin Rinks North",
+ "status": "Final",
+ "home": {
+  "name": "Capital City Knights",
+  "teamId": "402361",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/25a07116-c159-4383-87ed-b29821cb31ce_Capital City Knights.jpg",
+  "score": 5
+ },
+ "away": {
+  "name": "North Stars Academy Wild",
+  "teamId": "402365",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/972df715-0e29-4178-bc14-8d865109aaa4_North Stars Academy Wild.png",
+  "score": 9
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 4
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:22",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "12",
+    "name": "Easton Paul"
+   },
+   "assists": [
+    {
+     "number": "81",
+     "name": "Jack Jorgenson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:47",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "92",
+    "name": "Matthew Williams"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:19",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "17",
+    "name": "Jayce Kshyk"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Jacob Van Wieren"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:45",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "92",
+    "name": "Matthew Williams"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:38",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "12",
+    "name": "Easton Paul"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:44",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "88",
+    "name": "Beau Riddoch"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Easton Paul"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:28",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "17",
+    "name": "Jayce Kshyk"
+   },
+   "assists": [
+    {
+     "number": "2",
+     "name": "Karson Ofukany"
+    },
+    {
+     "number": "11",
+     "name": "Jacob Van Wieren"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:11",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "12",
+    "name": "Easton Paul"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Beau Riddoch"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:27",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "7",
+    "name": "Matthew Walmsley"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Easton Paul"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:57",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:00",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "92",
+    "name": "Matthew Williams"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:09",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "87",
+    "name": "Ace Walgenbach"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:59",
+   "side": "home",
+   "team": "Capital City Knights",
+   "player": {
+    "number": "71",
+    "name": "Macklin Vigneau"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "16:54",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "12",
+    "name": "Easton Paul"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:03",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "11",
+    "name": "Jacob Van Wieren"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Braden Melenberg"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:00",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "81",
+    "name": "Jack Jorgenson"
+   },
+   "assists": [
+    {
+     "number": "87",
+     "name": "Ace Walgenbach"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:28",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "16",
+    "name": "Braden Van Wieren"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:24",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "81",
+    "name": "Jack Jorgenson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:05",
+   "side": "home",
+   "team": "Capital City Knights",
+   "scorer": {
+    "number": "11",
+    "name": "Jacob Van Wieren"
+   },
+   "assists": [
+    {
+     "number": "2",
+     "name": "Karson Ofukany"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:30",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "37",
+    "name": "James Cochrane"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Cash Griffith"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:46",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "15",
+    "name": "Cash Griffith"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:40",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "12",
+    "name": "Easton Paul"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062706",
+   "number": "17",
+   "name": "Jayce Kshyk",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5060706",
+   "number": "11",
+   "name": "Jacob Van Wieren",
+   "g": 2,
+   "a": 2,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061793",
+   "number": "16",
+   "name": "Braden Van Wieren",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061788",
+   "number": "98",
+   "name": "Nate Ahlskog",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062541",
+   "number": "92",
+   "name": "Matthew Williams",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5060835",
+   "number": "88",
+   "name": "Jayce Clarke",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062187",
+   "number": "8",
+   "name": "Hendrix Rogers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061245",
+   "number": "71",
+   "name": "Macklin Vigneau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061534",
+   "number": "31",
+   "name": "Logan Plante",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061250",
+   "number": "29",
+   "name": "Braden Melenberg",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062987",
+   "number": "2",
+   "name": "Karson Ofukany",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061191",
+   "number": "18",
+   "name": "Cormic Lacroix",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062848",
+   "number": "14",
+   "name": "William Ekholm Bjornstad",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5061881",
+   "number": "12",
+   "name": "Evan Archer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061921",
+   "number": "12",
+   "name": "Easton Paul",
+   "g": 4,
+   "a": 2,
+   "pts": 6,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5237629",
+   "number": "81",
+   "name": "Jack Jorgenson",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062805",
+   "number": "88",
+   "name": "Beau Riddoch",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062538",
+   "number": "7",
+   "name": "Matthew Walmsley",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062098",
+   "number": "37",
+   "name": "James Cochrane",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5060852",
+   "number": "87",
+   "name": "Ace Walgenbach",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5060875",
+   "number": "8",
+   "name": "Grayson Laughlin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062547",
+   "number": "72",
+   "name": "Brandtly O'Quinn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062813",
+   "number": "6",
+   "name": "Jack Stefanyk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061215",
+   "number": "44",
+   "name": "Dawson Hildebrandt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061007",
+   "number": "43",
+   "name": "Lincoln Derrick",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062685",
+   "number": "22",
+   "name": "Jameson Hunker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062846",
+   "number": "16",
+   "name": "Wyatt Knowles",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062118",
+   "number": "15",
+   "name": "Cash Griffith",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402361",
+   "playerId": "5062187",
+   "number": "8",
+   "name": "Hendrix Rogers",
+   "seconds": 3300,
+   "ga": 9,
+   "shots": 30,
+   "saves": 21
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061215",
+   "number": "44",
+   "name": "Dawson Hildebrandt",
+   "seconds": 3300,
+   "ga": 5,
+   "shots": 22,
+   "saves": 17
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-10-11T11:30:00",
+ "gameNumber": 363,
+ "fetchedAt": "2026-10-12T12:00:11.828Z"
+}
