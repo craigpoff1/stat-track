@@ -619,9 +619,9 @@
   "location": "Hussar Arena",
   "home": "Rebels Hockey Academy",
   "away": "O2 Grizzlies",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 9,
+  "awayScore": 5
  },
  {
   "id": "2020126",
