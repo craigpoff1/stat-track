@@ -324,6 +324,18 @@
   "awayScore": null
  },
  {
+  "id": "2020175",
+  "gameNumber": 410,
+  "start": "2026-10-17T08:30:00",
+  "end": "2026-10-17T09:45:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Rebels Hockey Academy",
+  "away": "Stars Hockey Academy",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
   "id": "2020177",
   "gameNumber": 405,
   "start": "2026-10-17T09:30:00",
@@ -331,18 +343,6 @@
   "location": "Hussar Arena",
   "home": "Calgary Crusaders",
   "away": "Spartan Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
-  "id": "2020182",
-  "gameNumber": 410,
-  "start": "2026-10-17T10:15:00",
-  "end": "2026-10-17T11:30:00",
-  "location": "West Edmonton Mall - Ice Palace",
-  "home": "Rebels Hockey Academy",
-  "away": "Stars Hockey Academy",
   "final": false,
   "homeScore": null,
   "awayScore": null
@@ -396,6 +396,18 @@
   "awayScore": null
  },
  {
+  "id": "2020199",
+  "gameNumber": 432,
+  "start": "2026-10-17T15:00:00",
+  "end": "2026-10-17T16:15:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Saints Pro Hockey Academy",
+  "away": "Stars Hockey Academy",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
   "id": "2020201",
   "gameNumber": 429,
   "start": "2026-10-17T15:30:00",
@@ -403,18 +415,6 @@
   "location": "Hussar Arena",
   "home": "Young Kings Hockey",
   "away": "Capital City Knights",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
-  "id": "2020204",
-  "gameNumber": 432,
-  "start": "2026-10-17T16:45:00",
-  "end": "2026-10-17T18:00:00",
-  "location": "West Edmonton Mall - Ice Palace",
-  "home": "Saints Pro Hockey Academy",
-  "away": "Stars Hockey Academy",
   "final": false,
   "homeScore": null,
   "awayScore": null
@@ -432,6 +432,18 @@
   "awayScore": null
  },
  {
+  "id": "2020214",
+  "gameNumber": 450,
+  "start": "2026-10-18T08:30:00",
+  "end": "2026-10-18T10:00:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "MOB Hockey",
+  "away": "Riggers Hockey Academy",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
   "id": "2020218",
   "gameNumber": 446,
   "start": "2026-10-18T09:30:00",
@@ -439,18 +451,6 @@
   "location": "Hussar Arena",
   "home": "Spartan Hockey Academy",
   "away": "Capital City Knights",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
-  "id": "2020222",
-  "gameNumber": 450,
-  "start": "2026-10-18T10:15:00",
-  "end": "2026-10-18T11:30:00",
-  "location": "West Edmonton Mall - Ice Palace",
-  "home": "MOB Hockey",
-  "away": "Riggers Hockey Academy",
   "final": false,
   "homeScore": null,
   "awayScore": null
@@ -468,6 +468,18 @@
   "awayScore": null
  },
  {
+  "id": "2020227",
+  "gameNumber": 462,
+  "start": "2026-10-18T11:45:00",
+  "end": "2026-10-18T13:15:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Stars Hockey Academy",
+  "away": "MOB Hockey",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
   "id": "2020230",
   "gameNumber": 458,
   "start": "2026-10-18T12:30:00",
@@ -475,18 +487,6 @@
   "location": "Hussar Arena",
   "home": "Spartan Hockey Academy",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
-  "id": "2020234",
-  "gameNumber": 462,
-  "start": "2026-10-18T13:30:00",
-  "end": "2026-10-18T14:45:00",
-  "location": "West Edmonton Mall - Ice Palace",
-  "home": "Stars Hockey Academy",
-  "away": "MOB Hockey",
   "final": false,
   "homeScore": null,
   "awayScore": null
