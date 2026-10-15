@@ -7,7 +7,7 @@
   "url": "https://hpl-winter-league.kreezee-sports.com",
   "platform": "Kreezee"
  },
- "fetchedAt": "2026-10-14T09:31:21.749Z",
+ "fetchedAt": "2026-10-15T09:09:30.398Z",
  "detail": "scores-only",
  "teams": [
   {
@@ -645,8 +645,8 @@
    "home": "hpl:148553",
    "away": "hpl:148548",
    "final": true,
-   "homeScore": 6,
-   "awayScore": 0,
+   "homeScore": 0,
+   "awayScore": 6,
    "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744573"
   },
   {
@@ -655,9 +655,9 @@
    "rink": "Delta Planet Ice · Canadian Rink",
    "home": "hpl:148551",
    "away": "hpl:148550",
-   "final": false,
-   "homeScore": null,
-   "awayScore": null,
+   "final": true,
+   "homeScore": 5,
+   "awayScore": 2,
    "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744574"
   },
   {
