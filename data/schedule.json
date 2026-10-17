@@ -319,9 +319,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Saints Pro Hockey Academy",
   "away": "Riggers Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 0,
+  "awayScore": 18
  },
  {
   "id": "2020175",
@@ -331,9 +331,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Rebels Hockey Academy",
   "away": "Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 11
  },
  {
   "id": "2020177",
@@ -343,9 +343,9 @@
   "location": "Hussar Arena",
   "home": "Calgary Crusaders",
   "away": "Spartan Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 5,
+  "awayScore": 3
  },
  {
   "id": "2020185",
@@ -355,9 +355,9 @@
   "location": "Hussar Arena",
   "home": "HC Calgary Bandits",
   "away": "Young Kings Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 12
  },
  {
   "id": "2020190",
