@@ -439,9 +439,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "MOB Hockey",
   "away": "Riggers Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 0,
+  "awayScore": 4
  },
  {
   "id": "2020218",
@@ -475,9 +475,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Stars Hockey Academy",
   "away": "MOB Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 1
  },
  {
   "id": "2020230",
