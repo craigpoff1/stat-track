@@ -751,9 +751,9 @@
   "location": "Martensville Sports Center",
   "home": "Sask Super Selects",
   "away": "Saints Pro Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 7
  },
  {
   "id": "2020216",

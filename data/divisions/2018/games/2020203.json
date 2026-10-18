@@ -1,0 +1,824 @@
+{
+ "id": "2020203",
+ "dateText": "Saturday, October 17, 2026 @ 4:45 p.m.",
+ "rink": "Martensville Sports Center",
+ "status": "Final",
+ "home": {
+  "name": "Sask Super Selects",
+  "teamId": "402372",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/10720e6d-8633-426f-81cb-53d4a6557234_Sask Super Selects.png",
+  "score": 6
+ },
+ "away": {
+  "name": "Saints Pro Hockey Academy",
+  "teamId": "402357",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/073cdab6-4b48-4cdc-a752-9a9a66d5b4f1_Saints Pro Hockey Academy.png",
+  "score": 7
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:41",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Theo Kolla"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "13:34",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:17",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Durrand"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Austyn Steele"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:13",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "minutes": 2,
+   "infraction": "Checking to the Head - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:48",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "29",
+    "name": "Owen Pawluk"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Daxyn Hoetmer"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:30",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:09",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": {
+    "number": "56",
+    "name": "Harlyn Hayes"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:44",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [
+    {
+     "number": "26",
+     "name": "Canaan Dashney"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:36",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Hudson Poirier"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:16",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "15",
+    "name": "Gavin Kool kelly"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Vaughn Jansen"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:25",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Gavin Durrand"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:53",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Ryker Ellis"
+    },
+    {
+     "number": "14",
+     "name": "Jersey Jones"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:30",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Gavin Durrand"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:09",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Owen Pawluk"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:31",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "assists": [
+    {
+     "number": "91",
+     "name": "Lindon Barlage"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:14",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Owen Pawluk"
+   },
+   "minutes": 2,
+   "infraction": "Handling the Puck - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:45",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:34",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Chael Smith"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Hudson Poirier"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:59",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "64",
+    "name": "Everett Walton"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:19",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Owen Pawluk"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:23",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Ryker Ellis"
+    },
+    {
+     "number": "14",
+     "name": "Jersey Jones"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:45",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": {
+    "number": "15",
+    "name": "Gavin Kool kelly"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:18",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:02",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:37",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "26",
+    "name": "Canaan Dashney"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:26",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": {
+    "number": "9",
+    "name": "Hudson Poirier"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Gavin Durrand"
+    }
+   ],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061828",
+   "number": "29",
+   "name": "Gunner Keays",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5062732",
+   "number": "91",
+   "name": "Lindon Barlage",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061805",
+   "number": "13",
+   "name": "Theo Kolla",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061040",
+   "number": "12",
+   "name": "Ryker Ellis",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5060912",
+   "number": "9",
+   "name": "Gavin Potter",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061284",
+   "number": "8",
+   "name": "August Kachur",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061811",
+   "number": "64",
+   "name": "Everett Walton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5060723",
+   "number": "4",
+   "name": "Zeke Loeppky",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061068",
+   "number": "27",
+   "name": "Carson Condy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5062016",
+   "number": "26",
+   "name": "Canaan Dashney",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5075320",
+   "number": "14",
+   "name": "Jersey Jones",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060885",
+   "number": "9",
+   "name": "Hudson Poirier",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5062298",
+   "number": "18",
+   "name": "Gavin Durrand",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061739",
+   "number": "7",
+   "name": "Chael Smith",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060600",
+   "number": "29",
+   "name": "Owen Pawluk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061952",
+   "number": "15",
+   "name": "Gavin Kool kelly",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060973",
+   "number": "87",
+   "name": "Asher May",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060481",
+   "number": "86",
+   "name": "Jaxon Smordin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5115935",
+   "number": "56",
+   "name": "Harlyn Hayes",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061539",
+   "number": "44",
+   "name": "Blake Kyle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5062181",
+   "number": "4",
+   "name": "Edison Manning",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5062821",
+   "number": "31",
+   "name": "Ryker Webster",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060691",
+   "number": "27",
+   "name": "Cooper Hohmann",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061677",
+   "number": "21",
+   "name": "Carter Ongkiko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060567",
+   "number": "19",
+   "name": "Evertt Liu",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061277",
+   "number": "14",
+   "name": "Vaughn Jansen",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5062539",
+   "number": "11",
+   "name": "Daxyn Hoetmer",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5060607",
+   "number": "10",
+   "name": "Austyn Steele",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "seconds": 1200,
+   "ga": 1,
+   "shots": 7,
+   "saves": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061068",
+   "number": "27",
+   "name": "Carson Condy",
+   "seconds": 2400,
+   "ga": 6,
+   "shots": 11,
+   "saves": 5
+  },
+  {
+   "side": "away",
+   "teamId": "402357",
+   "playerId": "5061677",
+   "number": "21",
+   "name": "Carter Ongkiko",
+   "seconds": 3600,
+   "ga": 6,
+   "shots": 25,
+   "saves": 19
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 60",
+  "away: goalie minutes total 60"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 9,
+   "away": 6
+  },
+  {
+   "label": "2",
+   "home": 9,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 7,
+   "away": 7
+  }
+ ],
+ "start": "2026-10-17T16:45:00",
+ "gameNumber": 431,
+ "fetchedAt": "2026-10-18T02:38:09.378Z"
+}

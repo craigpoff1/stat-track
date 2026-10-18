@@ -307,9 +307,9 @@
   "location": "Hussar Arena",
   "home": "Capital City Knights",
   "away": "Young Kings Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 0,
+  "awayScore": 12
  },
  {
   "id": "2020171",
