@@ -78,7 +78,7 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
 - Goalie validation rules: GA must equal opponent score; shots ±25%/3 of shots table; blank minutes
   for a lone goalie = full game; minutes over game length count as entered (flagged); under = excluded.
 - Rolling windows are "last 4 games" (≈ one showcase weekend). Standings keep "L5".
-- Updates run nightly (games happen on weekdays too) + Monday catch-up.
+- Updates run nightly (games happen on weekdays too) + Monday catch-up + every 2 h on Fri–Sun daytime (game days). Manual: GitHub Actions → Run workflow (works from a phone).
 - Tournaments: owner names events; "Include tournament games" toggle **off by default everywhere**,
   changes every record/stat/insight incl. standings (flagged "not official") except weekend recaps and firsts (ⓘ explains);
   Stars' tournaments shown as a separate team-page section.

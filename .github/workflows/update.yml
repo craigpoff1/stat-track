@@ -6,6 +6,10 @@ on:
     # plus a Monday-morning catch-up for late weekend sheets and stat corrections.
     - cron: '17 4 * * *'
     - cron: '17 15 * * 1'
+    # Game days (showcase weekends / tournaments run Fri-Sun): every 2 h, ~10 AM-8 PM Mountain,
+    # so results land the same day without anyone's laptop. UTC: 16-22h Fri-Sun, 00-02h the next day.
+    - cron: '17 16,18,20,22 * * 5,6,0'
+    - cron: '17 0,2 * * 6,0,1'
   workflow_dispatch:
     inputs:
       refetch_all:
