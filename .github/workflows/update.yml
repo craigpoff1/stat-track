@@ -19,11 +19,16 @@ on:
   push:
     branches: [main]
     paths: ['site/**', 'scripts/**', 'test/**', '.github/workflows/**']
+  # Phone-friendly manual pull: comment "/update" on any issue (the pinned "Request a stats update"
+  # issue). Only the repo owner's comments run it — the repo is public.
+  issue_comment:
+    types: [created]
 
 permissions:
   contents: write   # commit refreshed data back to the repo
   pages: write
   id-token: write
+  issues: write     # reply on the /update issue
 
 concurrency:
   group: update-stats
@@ -31,12 +36,19 @@ concurrency:
 
 jobs:
   update:
+    if: github.event_name != 'issue_comment' || (github.event.comment.user.login == 'craigpoff1' && startsWith(github.event.comment.body, '/update'))
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
+      - name: Acknowledge /update request
+        if: github.event_name == 'issue_comment'
+        run: gh api -X POST repos/${{ github.repository }}/issues/comments/${{ github.event.comment.id }}/reactions -f content=eyes
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -97,3 +109,11 @@ jobs:
           path: site
       - id: deploy
         uses: actions/deploy-pages@v4
+
+      - name: Reply on the /update issue
+        if: always() && github.event_name == 'issue_comment'
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then MSG="✅ Updated — refresh the site to see the latest games."; else MSG="⚠️ The update failed — details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"; fi
+          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body "$MSG"
+        env:
+          GH_TOKEN: ${{ github.token }}
