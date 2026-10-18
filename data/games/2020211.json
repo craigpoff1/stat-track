@@ -1,0 +1,728 @@
+{
+ "id": "2020211",
+ "dateText": "Sunday, October 18, 2026 @ 7:00 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Stars Hockey Academy",
+  "teamId": "402384",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e647604b-2cfb-4299-9509-1fbf5d5f034d_Stars Hockey Academy.png",
+  "score": 14
+ },
+ "away": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402389",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e4190762-7ba9-4471-81f8-e1bd679cd552_Rebels Hockey Academy.png",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:20",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "21",
+    "name": "True Peters"
+   },
+   "assists": [
+    {
+     "number": "66",
+     "name": "Tucker Dorran"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:39",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Hayden Sullivan"
+   },
+   "assists": [
+    {
+     "number": "27",
+     "name": "Indie Dube"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:17",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "27",
+    "name": "Indie Dube"
+   },
+   "assists": [
+    {
+     "number": "63",
+     "name": "George Turnbull"
+    },
+    {
+     "number": "96",
+     "name": "Hayden Sullivan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:20",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Owen Faith"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:20",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Bowen Neurauter"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:50",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:15",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "66",
+    "name": "Tucker Dorran"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:54",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "66",
+    "name": "Tucker Dorran"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Owen Faith"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:49",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "86",
+    "name": "Brock Rumsey"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:03",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Elias Poffenroth"
+   },
+   "assists": [
+    {
+     "number": "93",
+     "name": "Rhett Osmond"
+    },
+    {
+     "number": "13",
+     "name": "Noah Tsoulamanis"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:03",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Hayden Sullivan"
+   },
+   "assists": [
+    {
+     "number": "63",
+     "name": "George Turnbull"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:00",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "27",
+    "name": "Indie Dube"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:15",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:40",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "66",
+    "name": "Tucker Dorran"
+   },
+   "assists": [
+    {
+     "number": "93",
+     "name": "Rhett Osmond"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:44",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "27",
+    "name": "Indie Dube"
+   },
+   "assists": [
+    {
+     "number": "63",
+     "name": "George Turnbull"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:50",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "86",
+    "name": "Brock Rumsey"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Owen Faith"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:06",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "27",
+    "name": "Indie Dube"
+   },
+   "assists": [
+    {
+     "number": "63",
+     "name": "George Turnbull"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:18",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Elias Poffenroth"
+   },
+   "assists": [
+    {
+     "number": "66",
+     "name": "Tucker Dorran"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:03",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "player": {
+    "number": "86",
+    "name": "Brock Rumsey"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5060833",
+   "number": "27",
+   "name": "Indie Dube",
+   "g": 4,
+   "a": 1,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5062565",
+   "number": "66",
+   "name": "Tucker Dorran",
+   "g": 3,
+   "a": 2,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061590",
+   "number": "96",
+   "name": "Hayden Sullivan",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5062492",
+   "number": "86",
+   "name": "Brock Rumsey",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061199",
+   "number": "11",
+   "name": "Elias Poffenroth",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061801",
+   "number": "21",
+   "name": "True Peters",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061195",
+   "number": "93",
+   "name": "Rhett Osmond",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061964",
+   "number": "87",
+   "name": "Colin Fuller",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061634",
+   "number": "8",
+   "name": "Owen Faith",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5060683",
+   "number": "7",
+   "name": "Charles Rendle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5060676",
+   "number": "63",
+   "name": "George Turnbull",
+   "g": 0,
+   "a": 4,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5060666",
+   "number": "37",
+   "name": "Jack Whittle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5060836",
+   "number": "29",
+   "name": "Owen McEachern",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061908",
+   "number": "2",
+   "name": "Liam Fulgencio",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061193",
+   "number": "19",
+   "name": "Nate Walsh",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5061792",
+   "number": "13",
+   "name": "Noah Tsoulamanis",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061024",
+   "number": "98",
+   "name": "Kyler Moore",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061989",
+   "number": "9",
+   "name": "Nolan Stewart",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062953",
+   "number": "89",
+   "name": "Emerson Fowler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5060693",
+   "number": "87",
+   "name": "Kolton Hessler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062975",
+   "number": "77",
+   "name": "Novik Master",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061884",
+   "number": "7",
+   "name": "Shea Chapman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062968",
+   "number": "67",
+   "name": "Reid Whiteway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062807",
+   "number": "66",
+   "name": "Rayland Gordon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062976",
+   "number": "4",
+   "name": "Ryan Bailey",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061995",
+   "number": "36",
+   "name": "Mila MacLean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061996",
+   "number": "3",
+   "name": "Rowen Sivorot",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5060990",
+   "number": "29",
+   "name": "Nash Bauer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5061992",
+   "number": "27",
+   "name": "Weston McLaughlin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062967",
+   "number": "13",
+   "name": "Bowen Neurauter",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402384",
+   "playerId": "5060836",
+   "number": "29",
+   "name": "Owen McEachern",
+   "seconds": 2700,
+   "ga": 1,
+   "shots": 7,
+   "saves": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402389",
+   "playerId": "5062975",
+   "number": "77",
+   "name": "Novik Master",
+   "seconds": 2700,
+   "ga": 14,
+   "shots": 34,
+   "saves": 20
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 15,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 12,
+   "away": 1
+  }
+ ],
+ "start": "2026-10-18T07:00:00",
+ "gameNumber": 439,
+ "fetchedAt": "2026-10-18T15:11:55.915Z"
+}

@@ -607,17 +607,6 @@
   {
    "side": "home",
    "teamId": "402383",
-   "playerId": "5061135",
-   "number": "37",
-   "name": "Bellamy Tkachuk",
-   "seconds": 1320,
-   "ga": 0,
-   "shots": 18,
-   "saves": 18
-  },
-  {
-   "side": "home",
-   "teamId": "402383",
    "playerId": "5061075",
    "number": "40",
    "name": "Madeleine Melanson",
@@ -625,6 +614,17 @@
    "ga": 0,
    "shots": 15,
    "saves": 15
+  },
+  {
+   "side": "home",
+   "teamId": "402383",
+   "playerId": "5061135",
+   "number": "37",
+   "name": "Bellamy Tkachuk",
+   "seconds": 1320,
+   "ga": 0,
+   "shots": 18,
+   "saves": 18
   },
   {
    "side": "away",
@@ -660,5 +660,5 @@
  ],
  "start": "2026-10-17T15:00:00",
  "gameNumber": 432,
- "fetchedAt": "2026-10-18T00:02:24.839Z"
+ "fetchedAt": "2026-10-18T15:11:53.941Z"
 }

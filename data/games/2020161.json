@@ -670,17 +670,6 @@
   {
    "side": "home",
    "teamId": "402387",
-   "playerId": "5061455",
-   "number": "1",
-   "name": "rokko gyenis",
-   "seconds": 1800,
-   "ga": 0,
-   "shots": 3,
-   "saves": 3
-  },
-  {
-   "side": "home",
-   "teamId": "402387",
    "playerId": "5060486",
    "number": "31",
    "name": "Colton Butt",
@@ -688,6 +677,17 @@
    "ga": 0,
    "shots": 1,
    "saves": 1
+  },
+  {
+   "side": "home",
+   "teamId": "402387",
+   "playerId": "5061455",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 1800,
+   "ga": 0,
+   "shots": 3,
+   "saves": 3
   },
   {
    "side": "away",
@@ -721,5 +721,5 @@
  ],
  "start": "2026-10-16T16:15:00",
  "gameNumber": 389,
- "fetchedAt": "2026-10-18T00:02:19.973Z"
+ "fetchedAt": "2026-10-18T15:11:47.826Z"
 }

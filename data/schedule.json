@@ -427,9 +427,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Stars Hockey Academy",
   "away": "Rebels Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 14,
+  "awayScore": 1
  },
  {
   "id": "2020214",
