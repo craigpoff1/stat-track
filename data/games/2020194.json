@@ -1,0 +1,701 @@
+{
+ "id": "2020194",
+ "dateText": "Saturday, October 17, 2026 @ 1:30 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402389",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e4190762-7ba9-4471-81f8-e1bd679cd552_Rebels Hockey Academy.png",
+  "score": 5
+ },
+ "away": {
+  "name": "MOB Hockey",
+  "teamId": "402388",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/20299e0a-3462-42fa-97f9-a52c826508c8_MOB Hockey.png",
+  "score": 6
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:44",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "29",
+    "name": "Chase Myers"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:54",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "9",
+    "name": "Hayes Leinberger"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:39",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "29",
+    "name": "Chase Myers"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:12",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "96",
+    "name": "Brooks Jones"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:42",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:04",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "29",
+    "name": "Chase Myers"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Zane Janvier"
+    },
+    {
+     "number": "92",
+     "name": "Hayes Ward"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:22",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:54",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Bowen Neurauter"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:23",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "89",
+    "name": "Weston MacKinnon"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:44",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "71",
+    "name": "Zane Janvier"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:01",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "98",
+    "name": "Dawson Moore"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Kanon Durdle"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:57",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:46",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Bowen Neurauter"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:36",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "71",
+    "name": "Zane Janvier"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:42",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "19",
+    "name": "Irus Rorke"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:55",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "92",
+    "name": "Hayes Ward"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:45",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Ryan Bailey"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Kyler Moore"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:06",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "98",
+    "name": "Dawson Moore"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:37",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Bowen Neurauter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:49",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:36",
+   "side": "home",
+   "team": "Rebels Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Kyler Moore"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061024",
+   "number": "98",
+   "name": "Kyler Moore",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062976",
+   "number": "4",
+   "name": "Ryan Bailey",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061989",
+   "number": "9",
+   "name": "Nolan Stewart",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062953",
+   "number": "89",
+   "name": "Emerson Fowler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5060693",
+   "number": "87",
+   "name": "Kolton Hessler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062975",
+   "number": "77",
+   "name": "Novik Master",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061884",
+   "number": "7",
+   "name": "Shea Chapman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062968",
+   "number": "67",
+   "name": "Reid Whiteway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062807",
+   "number": "66",
+   "name": "Rayland Gordon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061995",
+   "number": "36",
+   "name": "Mila MacLean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061996",
+   "number": "3",
+   "name": "Rowen Sivorot",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5060990",
+   "number": "29",
+   "name": "Nash Bauer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5061992",
+   "number": "27",
+   "name": "Weston McLaughlin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402389",
+   "playerId": "5062967",
+   "number": "13",
+   "name": "Bowen Neurauter",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5062637",
+   "number": "29",
+   "name": "Chase Myers",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5061893",
+   "number": "98",
+   "name": "Dawson Moore",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5061497",
+   "number": "9",
+   "name": "Hayes Leinberger",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5061887",
+   "number": "19",
+   "name": "Irus Rorke",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5061456",
+   "number": "96",
+   "name": "Brooks Jones",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5061452",
+   "number": "92",
+   "name": "Hayes Ward",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5061568",
+   "number": "89",
+   "name": "Weston MacKinnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5061462",
+   "number": "88",
+   "name": "Kanon Durdle",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5061891",
+   "number": "71",
+   "name": "Zane Janvier",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5062640",
+   "number": "6",
+   "name": "Keir Kendall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5062431",
+   "number": "28",
+   "name": "Cooper LeBlanc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5062647",
+   "number": "21",
+   "name": "Carson Snooks",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5062433",
+   "number": "17",
+   "name": "Grayson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5060768",
+   "number": "16",
+   "name": "Jack Harris",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5060762",
+   "number": "12",
+   "name": "Wyatt Kaliszewski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5062419",
+   "number": "11",
+   "name": "Tanner Corrigan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402388",
+   "playerId": "5060665",
+   "number": "10",
+   "name": "Weston Vansickle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 4,
+   "away": 15
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 13
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 9
+  }
+ ],
+ "start": "2026-10-17T13:30:00",
+ "gameNumber": 422,
+ "fetchedAt": "2026-10-18T00:02:22.809Z"
+}

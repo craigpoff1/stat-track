@@ -1,0 +1,592 @@
+{
+ "id": "2020196",
+ "dateText": "Saturday, October 17, 2026 @ 2:00 p.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402391",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/90f85aab-1980-4034-adc8-0f06d76702a3_Spartan Hockey Academy.png",
+  "score": 4
+ },
+ "away": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402385",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/388dc9f4-4c10-4318-91bf-cbcf3d9492c3_HC Calgary Bandits.png",
+  "score": 3
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:34",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Hank Heal"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Hayes Gavin"
+    },
+    {
+     "number": "17",
+     "name": "Jace Piche"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:57",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "87",
+    "name": "Kleve Rozwadowski"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:45",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "2",
+    "name": "Wyatt May"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Hayes Gavin"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:10",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "87",
+    "name": "Kleve Rozwadowski"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:51",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Hank Heal"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Hayes Gavin"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:34",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "2",
+    "name": "Wyatt May"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct - Bench Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:34",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "10",
+    "name": "Wyatt Hamilton"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct - Bench Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:15",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "7",
+    "name": "Hayes Gavin"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:50",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "42",
+    "name": "Maisie Futers"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:49",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "87",
+    "name": "Kleve Rozwadowski"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:45",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "19",
+    "name": "Landon Iuliano"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:17",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "96",
+    "name": "Hank Heal"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:44",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "61",
+    "name": "Prym Rozwadowski"
+   },
+   "assists": [
+    {
+     "number": "42",
+     "name": "Maisie Futers"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061252",
+   "number": "96",
+   "name": "Hank Heal",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062613",
+   "number": "2",
+   "name": "Wyatt May",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062455",
+   "number": "82",
+   "name": "Lucas Balfour",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062443",
+   "number": "8",
+   "name": "Oscar LaGarde",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061479",
+   "number": "71",
+   "name": "Niko Doenz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061653",
+   "number": "7",
+   "name": "Hayes Gavin",
+   "g": 0,
+   "a": 3,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5060903",
+   "number": "68",
+   "name": "Fischer Lewko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062715",
+   "number": "44",
+   "name": "Jack Gaulton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061584",
+   "number": "35",
+   "name": "Noah Auger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062451",
+   "number": "32",
+   "name": "Eli Koscianski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061158",
+   "number": "29",
+   "name": "Lochlan Evans",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5060825",
+   "number": "20",
+   "name": "Matteo Park",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5060823",
+   "number": "19",
+   "name": "Pryce Park",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5061650",
+   "number": "18",
+   "name": "Nash Gavin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5062447",
+   "number": "17",
+   "name": "Jace Piche",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402391",
+   "playerId": "5060863",
+   "number": "11",
+   "name": "Sterling Fyten",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061236",
+   "number": "87",
+   "name": "Kleve Rozwadowski",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062318",
+   "number": "61",
+   "name": "Prym Rozwadowski",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5060809",
+   "number": "8",
+   "name": "Liam Desy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062156",
+   "number": "60",
+   "name": "Cooper Pilgrim",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062860",
+   "number": "59",
+   "name": "Kobe Voyer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061822",
+   "number": "45",
+   "name": "Manakveer Grewal",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5060571",
+   "number": "42",
+   "name": "Maisie Futers",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062701",
+   "number": "4",
+   "name": "Ryder O'Reilly",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061272",
+   "number": "32",
+   "name": "Carter Thompson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062052",
+   "number": "29",
+   "name": "Beau Pestun",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061720",
+   "number": "23",
+   "name": "Amirah Khangura",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5060805",
+   "number": "21",
+   "name": "Leo Renaud",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5060778",
+   "number": "19",
+   "name": "Landon Iuliano",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061616",
+   "number": "16",
+   "name": "Huxley Copeland",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5061506",
+   "number": "12",
+   "name": "Abbas Karachiwala",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402385",
+   "playerId": "5062058",
+   "number": "10",
+   "name": "Wyatt Hamilton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-10-17T14:00:00",
+ "gameNumber": 424,
+ "fetchedAt": "2026-10-18T00:02:23.813Z"
+}
