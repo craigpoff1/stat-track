@@ -775,9 +775,9 @@
   "location": "Martensville Sports Center",
   "home": "Sask Super Selects",
   "away": "Queen City Young Guns",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 12,
+  "awayScore": 6
  },
  {
   "id": "2020231",

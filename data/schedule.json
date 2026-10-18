@@ -487,9 +487,9 @@
   "location": "Hussar Arena",
   "home": "Spartan Hockey Academy",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 7
  },
  {
   "id": "2020461",
