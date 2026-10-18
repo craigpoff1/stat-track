@@ -763,9 +763,9 @@
   "location": "Martensville Sports Center",
   "home": "Queen City Young Guns",
   "away": "Saints Pro Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 9,
+  "awayScore": 6
  },
  {
   "id": "2020229",
