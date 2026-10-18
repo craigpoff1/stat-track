@@ -29,7 +29,8 @@ export function parseSchedule(icsText, divisionName) {
       const m = line.match(/^([A-Z-]+)(?:;[^:]*)?:(.*)$/);
       if (m) f[m[1]] = icsUnescape(m[2]);
     }
-    const idMatch = (f.UID || '').match(/(?:league|tournament)game-(\d+)@/);
+    // "leaguegame-2019918@rampinteractive.com" until 2026-10-18, then plain "leaguegame-2019918"
+    const idMatch = (f.UID || '').trim().match(/^(?:league|tournament)game-(\d+)(?:@|$)/);
     if (!idMatch) continue; // non-game calendar events
     let summary = f.SUMMARY || '';
     // league: "2019 Major: A vs B"; tournament: "Pacific Duel (HSL): 2019 Pacific Duel: A vs B"

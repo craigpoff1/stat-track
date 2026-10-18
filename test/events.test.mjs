@@ -24,3 +24,11 @@ test('tournament calendar: tournamentgame UIDs and prefixed summaries', () => {
   const [g] = parseSchedule(ics, '2019 Pacific Duel');
   assert.deepEqual([g.id, g.home, g.away, g.homeScore, g.awayScore, g.final], ['2034531', 'Bandits', 'MOB Hockey', 5, 6, true]);
 });
+
+// RAMP dropped the "@rampinteractive.com" suffix from calendar UIDs on 2026-10-18; both forms must parse.
+test('calendar UIDs with and without the @domain suffix', () => {
+  const ev = (uid) => ['BEGIN:VEVENT', 'DESCRIPTION:Game #146\\nFinal: 1 - 8', 'DTSTART;TZID=America/Edmonton:20260925T163000',
+    'SUMMARY:2019 Major: Capital City Knights vs HC Calgary Bandits', `UID:${uid}`, 'END:VEVENT'];
+  const ics = ['BEGIN:VCALENDAR', ...ev('leaguegame-2019918'), ...ev('leaguegame-2019922@rampinteractive.com'), ...ev('tournamentgame-2078913'), ...ev('leaguegame-20199x'), 'END:VCALENDAR'].join('\r\n');
+  assert.deepEqual(parseSchedule(ics, '2019 Major').map((g) => g.id), ['2019918', '2019922', '2078913']);
+});
