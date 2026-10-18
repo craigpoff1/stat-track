@@ -1,0 +1,962 @@
+{
+ "id": "2020231",
+ "dateText": "Sunday, October 18, 2026 @ 1:00 p.m.",
+ "rink": "Vauxhall Recreation Centre",
+ "status": "Final",
+ "home": {
+  "name": "Young Kings Hockey",
+  "teamId": "402371",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0fb8c71b-98d4-4866-ab88-20c422c00d87_Young Kings Hockey.png",
+  "score": 5
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "402362",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0cd48b9f-3336-4e7d-820f-93822f7dd4cf_Calgary Crusaders.png",
+  "score": 10
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 4,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:01",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "23",
+    "name": "Rhett Rhinas"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Kyren Dovichak"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:45",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "71",
+    "name": "Jack Johnston"
+   },
+   "assists": [
+    {
+     "number": "20",
+     "name": "Tommy Garrioch"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:37",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "93",
+    "name": "Banks Fischer"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:40",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:10",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "23",
+    "name": "Rhett Rhinas"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Carter Weisgerber"
+    },
+    {
+     "number": "93",
+     "name": "Banks Fischer"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:18",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Chase Doudelet"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Weston Part"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:57",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "assists": [
+    {
+     "number": "61",
+     "name": "Nixon Greve"
+    },
+    {
+     "number": "79",
+     "name": "Spencer Diaz"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:12",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "15",
+    "name": "Rylan Mclean"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:51",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "5",
+    "name": "Brayson Berlando"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Weston Part"
+    },
+    {
+     "number": "25",
+     "name": "Abel Whitlock"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:46",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:26",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Beau Wiest"
+    },
+    {
+     "number": "79",
+     "name": "Spencer Diaz"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:07",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "95",
+    "name": "Wilkes Ashton"
+   },
+   "assists": [
+    {
+     "number": "25",
+     "name": "Abel Whitlock"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "18:20",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:26",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "20",
+    "name": "Tommy Garrioch"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:22",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:02",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "11",
+    "name": "Beau Wiest"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:52",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "43",
+    "name": "Bodie McKean"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Weston Part"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:33",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:32",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "21",
+    "name": "Walker Philpott"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Hank Snell"
+    }
+   ],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:22",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "21",
+    "name": "Walker Philpott"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:09",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "75",
+    "name": "Rhett Lomness"
+   },
+   "assists": [
+    {
+     "number": "23",
+     "name": "Rhett Rhinas"
+    },
+    {
+     "number": "12",
+     "name": "Connor Chisholm"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:49",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "23",
+    "name": "Rhett Rhinas"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:19",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "9",
+    "name": "Thomas Doetzel"
+   },
+   "assists": [
+    {
+     "number": "21",
+     "name": "Walker Philpott"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:48",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "20",
+    "name": "Tommy Garrioch"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:50",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:05",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "20",
+    "name": "Tommy Garrioch"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Chase Doudelet"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:23",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "72",
+    "name": "Cruz Blais"
+   },
+   "assists": [
+    {
+     "number": "20",
+     "name": "Tommy Garrioch"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:03",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "25",
+    "name": "Abel Whitlock"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:29",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:38",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "93",
+    "name": "Banks Fischer"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:13",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Chase Doudelet"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:02",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "71",
+    "name": "Nixon Lafreniere"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062360",
+   "number": "23",
+   "name": "Rhett Rhinas",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5060440",
+   "number": "75",
+   "name": "Rhett Lomness",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061467",
+   "number": "7",
+   "name": "Carter Weisgerber",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 8
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061435",
+   "number": "61",
+   "name": "Nixon Greve",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062643",
+   "number": "98",
+   "name": "Kashton Clarke",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062631",
+   "number": "93",
+   "name": "Banks Fischer",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061127",
+   "number": "91",
+   "name": "Charlie Cox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062428",
+   "number": "79",
+   "name": "Spencer Diaz",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061426",
+   "number": "71",
+   "name": "Nixon Lafreniere",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5060760",
+   "number": "29",
+   "name": "Maxton Burleigh",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061132",
+   "number": "20",
+   "name": "Kaique Thunder Chief",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062191",
+   "number": "17",
+   "name": "Kyren Dovichak",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061688",
+   "number": "15",
+   "name": "Rylan Mclean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5060442",
+   "number": "12",
+   "name": "Connor Chisholm",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062429",
+   "number": "11",
+   "name": "Beau Wiest",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5060503",
+   "number": "20",
+   "name": "Tommy Garrioch",
+   "g": 2,
+   "a": 2,
+   "pts": 4,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061904",
+   "number": "95",
+   "name": "Wilkes Ashton",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5062678",
+   "number": "9",
+   "name": "Thomas Doetzel",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061171",
+   "number": "72",
+   "name": "Cruz Blais",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061188",
+   "number": "71",
+   "name": "Jack Johnston",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061208",
+   "number": "5",
+   "name": "Brayson Berlando",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061513",
+   "number": "43",
+   "name": "Bodie McKean",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061671",
+   "number": "21",
+   "name": "Walker Philpott",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5060489",
+   "number": "10",
+   "name": "Chase Doudelet",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061654",
+   "number": "87",
+   "name": "Eddie Kennedy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061470",
+   "number": "8",
+   "name": "Weston Part",
+   "g": 0,
+   "a": 3,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061469",
+   "number": "7",
+   "name": "Joelle Part",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061913",
+   "number": "32",
+   "name": "Leo Bautista",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5060495",
+   "number": "3",
+   "name": "Lincoln Balicki",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061143",
+   "number": "29",
+   "name": "Hank Snell",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061492",
+   "number": "25",
+   "name": "Abel Whitlock",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061186",
+   "number": "2",
+   "name": "Colten Loschuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5060828",
+   "number": "11",
+   "name": "Jac Roberts",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061132",
+   "number": "20",
+   "name": "Kaique Thunder Chief",
+   "seconds": 2700,
+   "ga": 10,
+   "shots": 41,
+   "saves": 31
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061913",
+   "number": "32",
+   "name": "Leo Bautista",
+   "seconds": 1370,
+   "ga": 1,
+   "shots": 8,
+   "saves": 7
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061186",
+   "number": "2",
+   "name": "Colten Loschuk",
+   "seconds": 1330,
+   "ga": 4,
+   "shots": 18,
+   "saves": 14
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 45",
+  "away: goalie minutes total 45"
+ ],
+ "shotsByPeriod": [],
+ "start": "2026-10-18T13:00:00",
+ "gameNumber": 459,
+ "fetchedAt": "2026-10-18T22:10:23.905Z"
+}

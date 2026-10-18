@@ -787,9 +787,9 @@
   "location": "Vauxhall Recreation Centre",
   "home": "Young Kings Hockey",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 5,
+  "awayScore": 10
  },
  {
   "id": "2020294",
