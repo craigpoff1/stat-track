@@ -716,11 +716,14 @@
     }).join('')}</div>`;
   }
 
-  function leaderRows(players, highlight) {
+  // Tied ranks read "T3" (sports-style: ties share a rank, the next rank skips). `pool` = the full
+  // ranked list the shown rows come from, so a tie with someone outside a top-12 slice still shows.
+  const rankLabel = (p, pool) => (p.rank != null && pool.filter((x) => x.rank === p.rank).length > 1 ? `T${p.rank}` : p.rank ?? '');
+  function leaderRows(players, highlight, pool = players) {
     return players.map((p) => {
       const t = team(p.teamId);
       const tag = playerById.has(p.id) ? 'a' : 'div';
-      return `<${tag} class="ld ${highlight(p) ? 'me' : ''}" ${tag === 'a' ? `href="#/player/${p.id}"` : ''}><span class="n">${p.rank}</span>${logo(t)}<span class="nm"><b>${esc(p.name)}</b><span>#${esc(p.number)} · ${esc(t.short)}${p.gp != null ? ` · ${p.gp} GP` : ''}</span></span><span class="ga">${p.g}G ${p.a}A</span><span class="p">${p.pts}</span></${tag}>`;
+      return `<${tag} class="ld ${highlight(p) ? 'me' : ''}" ${tag === 'a' ? `href="#/player/${p.id}"` : ''}><span class="n">${rankLabel(p, pool)}</span>${logo(t)}<span class="nm"><b>${esc(p.name)}</b><span>#${esc(p.number)} · ${esc(t.short)}${p.gp != null ? ` · ${p.gp} GP` : ''}</span></span><span class="ga">${p.g}G ${p.a}A</span><span class="p">${p.pts}</span></${tag}>`;
     }).join('');
   }
 
@@ -824,7 +827,7 @@
     };
     after(() => {
       sortable($('#skaters'), D().skaters, [
-        { key: 'rank', label: '#', cls: 'rkc', val: (p) => p.rank, desc: false, title: 'Scoring rank — place in the division by points (ties share a rank)' },
+        { key: 'rank', label: '#', cls: 'rkc', val: (p) => p.rank, html: (p) => rankLabel(p, D().skaters), desc: false, title: 'Scoring rank — place in the division by points (T = tied)' },
         { key: 'name', label: 'Player', cls: 'l sk-name', val: (p) => p.name, desc: false, html: (p) => `${playerLink(p.id, p.name)}${favs.has(p.id) ? '<span class="chip gwg">★</span>' : ''}${p.tGames && incT() ? `<span class="chip trn" title="Includes ${p.tGames} tournament game${p.tGames > 1 ? 's' : ''}">+${p.tGames}T</span>` : ''}<span class="sub2">#${esc(p.number)}<span class="m-only"> · ${esc(team(p.teamId).code)}</span></span>` },
         { key: 'team', label: 'Team', cls: 'l hm', val: (p) => team(p.teamId).short, desc: false, html: (p) => { const t = team(p.teamId); return `<span class="tn">${logo(t)}<span class="full">${esc(t.short)}</span><span class="cd">${esc(t.code)}</span></span>`; } },
         { key: 'gp', label: 'GP', val: (p) => p.gp, title: 'Games played' },
@@ -848,8 +851,8 @@
     return `
       <div class="ptitle"><div><div class="k">${esc(S.meta.division)} · skaters</div><h1>Scoring leaders</h1><div class="s" id="sk-count"></div></div></div>
       ${incNote()}
-      ${favs.size ? `<div style="margin-bottom:18px">${panel('Following', `<div class="pb"><div class="leaders">${leaderRows([...favs].map((id) => D().playerOf(id)).sort((a, b) => b.pts - a.pts), () => true)}</div></div>`, { gold: true, meta: 'Players you follow · any team' })}</div>` : ''}
-      <div style="margin-bottom:18px">${panel('Points leaders', `<div class="pb"><div class="leaders">${leaderRows(D().skaters.slice(0, 12), (p) => favs.has(p.id) || String(p.teamId) === myTeamId())}</div></div>`, { meta: 'Top 12 in the division' })}</div>
+      ${favs.size ? `<div style="margin-bottom:18px">${panel('Following', `<div class="pb"><div class="leaders">${leaderRows([...favs].map((id) => D().playerOf(id)).sort((a, b) => b.pts - a.pts), () => true, D().skaters)}</div></div>`, { gold: true, meta: 'Players you follow · any team' })}</div>` : ''}
+      <div style="margin-bottom:18px">${panel('Points leaders', `<div class="pb"><div class="leaders">${leaderRows(D().skaters.slice(0, 12), (p) => favs.has(p.id) || String(p.teamId) === myTeamId(), D().skaters)}</div></div>`, { meta: 'Top 12 in the division' })}</div>
       <div style="margin-bottom:18px">${panel('All skaters', `<div class="controls"><select id="sk-team" aria-label="Filter by team"><option value="">All teams</option>${opts}</select><input type="search" id="sk-q" placeholder="Search players" aria-label="Search players" value="${esc(f.q)}"></div><div class="tw"><table id="skaters"></table></div><div class="note">MPG = multi-point games · STRK = current point streak · GWG as recorded by the league.</div>`, { gold: true, reveal: false })}</div>
       <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="goalies"></table></div><div class="note">${GOALIE_NOTE}</div>`, { meta: `${D().goalies.length} goalies` })}</div>`;
   }
@@ -1005,7 +1008,7 @@
       ${latest ? featuredGame(latest, id, `Last game · ${esc(t.short)}`) : ''}
       <div style="margin-bottom:18px">${panel(`Up next · ${esc(t.short)}`, gameCards(upcoming.slice(0, 4), id), { gold: true, meta: `${upcoming.length} remaining` })}</div>
       ${wkPanel ? `<div style="margin-bottom:18px">${wkPanel}</div>` : ''}
-      <div style="margin-bottom:18px">${panel(`${esc(t.short)} scoring`, `<div class="pb"><div class="leaders">${leaderRows(tLeaders.slice(0, 12), (p) => favs.has(p.id))}</div></div>`, { meta: '<button class="lnk linkbtn" data-scroll="roster-anchor">Full roster ↓</button>' })}</div>
+      <div style="margin-bottom:18px">${panel(`${esc(t.short)} scoring`, `<div class="pb"><div class="leaders">${leaderRows(tLeaders.slice(0, 12), (p) => favs.has(p.id), tLeaders)}</div></div>`, { meta: '<button class="lnk linkbtn" data-scroll="roster-anchor">Full roster ↓</button>' })}</div>
       <div style="margin-bottom:18px">${panel('Season progression', `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals for (running)</span><span><i style="background:var(--red)"></i>Goals against (running)</span><span><i style="background:var(--us);height:8px"></i>W</span><span><i style="background:#5A2A22;height:8px"></i>L</span></div><div class="chart" id="prog"></div></div>`, { gold: true, meta: `${A.gp} GP · by weekend` })}</div>
       <div class="grid g-7-5">
         ${panel('When goals happen', '<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Scored (up)</span><span><i style="background:var(--red)"></i>Allowed (down)</span></div><div class="chart" id="heat"></div><div id="heat-notes"></div></div>', { meta: '3-minute stretches' })}
@@ -1184,7 +1187,7 @@
       <div class="wkbar">${chips}</div>
       ${finals.length ? `<div class="grid g-6-6">
         ${panel('Around the division', `<div class="pb">${div.length ? `<ol class="evs">${div.map((d) => `<li class="ev moment"><span class="pn">◆</span><span class="tc">${dt(d.date)}</span><span class="who"><b>${d.playerId ? playerLink(d.playerId, d.text) : esc(d.text)}</b></span><a class="scr lnk" href="#/game/${d.gameId}" style="font-size:12px">GAME →</a></li>`).join('')}</ol>` : '<div class="empty">No comebacks, shutouts or hat tricks</div>'}</div>`, { gold: true, meta: 'Comebacks · shutouts · hat tricks' })}
-        ${panel('Weekend scoring', `<div class="pb"><div class="leaders one">${leaderRows(leaders.slice(0, 10), (p) => String(p.teamId) === me.id)}</div></div>`, { meta: 'Points this weekend' })}
+        ${panel('Weekend scoring', `<div class="pb"><div class="leaders one">${leaderRows(leaders.slice(0, 10), (p) => String(p.teamId) === me.id, leaders)}</div></div>`, { meta: 'Points this weekend' })}
       </div>` : ''}
       <div style="margin-bottom:18px">${panel('All games', gameCards(items, null), { meta: `${items.length} games` })}</div>`;
   }
@@ -1764,7 +1767,7 @@
         ${panel('Round robin', '<div class="tw"><table id="ev-st"></table></div><div class="note">Seeds use our tiebreaks (points, wins, goal difference, goals) and may differ from the official bracket. HSL/HPL tags show each team’s home league, matched by roster.</div>', { gold: true, meta: `${e.teams.length} teams` })}
         ${panel('Playoffs', gameCards(e.schedule.filter((s) => s.playoff), null), { meta: `${e.schedule.filter((s) => s.playoff && s.final).length}/${e.schedule.filter((s) => s.playoff).length} played` })}
       </div>
-      <div style="margin-bottom:18px">${panel('Tournament scoring', `<div class="pb"><div class="leaders">${leaderRows(players.slice(0, 12), (p) => teamById.get(p.teamId)?.link?.id === myTeamId())}</div>${missing.length ? `<div class="dnotes sm"><b>Missing game sheets:</b> ${missing.map((t) => `${esc(t.short)} (${t.boxMissing} game${t.boxMissing > 1 ? 's' : ''} without a box score)`).join('; ')} — their scorers aren’t counted.</div>` : ''}</div>`, { meta: 'Points in this tournament' })}</div>
+      <div style="margin-bottom:18px">${panel('Tournament scoring', `<div class="pb"><div class="leaders">${leaderRows(players.slice(0, 12), (p) => teamById.get(p.teamId)?.link?.id === myTeamId(), players)}</div>${missing.length ? `<div class="dnotes sm"><b>Missing game sheets:</b> ${missing.map((t) => `${esc(t.short)} (${t.boxMissing} game${t.boxMissing > 1 ? 's' : ''} without a box score)`).join('; ')} — their scorers aren’t counted.</div>` : ''}</div>`, { meta: 'Points in this tournament' })}</div>
       <div style="margin-bottom:18px">${panel('All games', `<div class="wkgroups">${days.map((d) => `<div class="wk-day">${dt(d, { weekday: 'long', month: 'short', day: 'numeric' })}</div>${gameCards(e.schedule.filter((s) => s.start.slice(0, 10) === d), null)}`).join('')}</div>`, { meta: `${e.schedule.length} games` })}</div>
       ${e.url ? `<div class="note"><a class="lnk" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)} on the tournament site →</a></div>` : ''}`;
   }
@@ -1848,7 +1851,7 @@
         let r2 = 0, pv = null; ps.forEach((p, i) => { if (p.pts !== pv) r2 = i + 1; p.rank = r2; pv = p.pts; });
         return `<div style="margin-bottom:18px">${panel(`At the ${esc(x.name)}`, `<div class="grid g-6-6" style="margin:0;padding:14px 16px">
           <div>${gameCards(x.schedule.filter((s) => involves(s, et.id)), et.id, { badges: false })}</div>
-          <div>${ps.length ? `<div class="sub">Their scorers</div><div class="leaders one">${leaderRows(ps.slice(0, 8), () => false)}</div>` : `<div class="empty">${et.boxMissing ? `Scorers weren’t recorded on their ${et.boxMissing} game sheet${et.boxMissing > 1 ? 's' : ''}` : 'No scoring recorded'}</div>`}</div>
+          <div>${ps.length ? `<div class="sub">Their scorers</div><div class="leaders one">${leaderRows(ps.slice(0, 8), () => false, ps)}</div>` : `<div class="empty">${et.boxMissing ? `Scorers weren’t recorded on their ${et.boxMissing} game sheet${et.boxMissing > 1 ? 's' : ''}` : 'No scoring recorded'}</div>`}</div>
         </div>`, { gold: true, meta: `${et.w}-${et.l}-${et.t} · <a class="lnk" href="${et.href}">Event →</a>` })}</div>`;
       }).join('')}
       <div class="grid g-6-6">

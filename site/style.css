@@ -108,7 +108,7 @@ tr.me td:first-child{box-shadow:inset 3px 0 0 var(--us)}
 .chart g.pt:hover .dot{r:7}
 /* ---------- leaders ---------- */
 .leaders{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(6,auto);grid-auto-flow:column;gap:0 28px}
-.ld{display:grid;grid-template-columns:28px 26px 1fr 64px 40px;align-items:center;gap:8px;height:44px;border-bottom:1px solid var(--line);font-size:14px}
+.ld{display:grid;grid-template-columns:34px 26px 1fr 64px 40px;align-items:center;gap:8px;height:44px;border-bottom:1px solid var(--line);font-size:14px}
 .ld .n{font:700 15px var(--cond);color:var(--ink3);text-align:right}
 .ld .logo{width:24px;height:24px}
 .ld .nm{min-width:0}.ld .nm b{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ld .nm span{font-size:12px;color:var(--ink3)}
