@@ -720,7 +720,7 @@
     return players.map((p) => {
       const t = team(p.teamId);
       const tag = playerById.has(p.id) ? 'a' : 'div';
-      return `<${tag} class="ld ${highlight(p) ? 'me' : ''}" ${tag === 'a' ? `href="#/player/${p.id}"` : ''}><span class="n">${p.rank}</span>${logo(t)}<span class="nm"><b>${esc(p.name)}</b><span>#${esc(p.number)} · ${esc(t.short)} · ${p.gp} GP</span></span><span class="ga">${p.g}G ${p.a}A</span><span class="p">${p.pts}</span></${tag}>`;
+      return `<${tag} class="ld ${highlight(p) ? 'me' : ''}" ${tag === 'a' ? `href="#/player/${p.id}"` : ''}><span class="n">${p.rank}</span>${logo(t)}<span class="nm"><b>${esc(p.name)}</b><span>#${esc(p.number)} · ${esc(t.short)}${p.gp != null ? ` · ${p.gp} GP` : ''}</span></span><span class="ga">${p.g}G ${p.a}A</span><span class="p">${p.pts}</span></${tag}>`;
     }).join('');
   }
 
@@ -1162,11 +1162,11 @@
     // weekend scoring leaders
     const tally = new Map();
     for (const g of games) for (const r of g.skaters) {
-      if (!r.playerId || !(r.g + r.a)) continue;
-      const t = tally.get(r.playerId) || { ...playerById.get(r.playerId), g: 0, a: 0, pts: 0 };
-      t.g += r.g; t.a += r.a; t.pts += r.g + r.a; tally.set(r.playerId, t);
+      if (!r.playerId) continue;
+      const t = tally.get(r.playerId) || { ...playerById.get(r.playerId), g: 0, a: 0, pts: 0, gp: 0 }; // gp = games this weekend
+      t.gp++; t.g += r.g; t.a += r.a; t.pts += r.g + r.a; tally.set(r.playerId, t);
     }
-    const leaders = [...tally.values()].filter((p) => p.id).sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));
+    const leaders = [...tally.values()].filter((p) => p.id && p.pts > 0).sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));
     let rk = 0, prev = null; leaders.forEach((p, i) => { if (p.pts !== prev) rk = i + 1; p.rank = rk; prev = p.pts; });
     const div = [];
     for (const g of games) {
@@ -1379,7 +1379,7 @@
       })() : '';
     const threats = d.byPts.slice(0, 8).map((p) => {
       const lw = d.l4Pts(p);
-      return `<tr><td class="l">${playerLink(p.id, p.name)}<span class="sub2">#${esc(p.number)}</span></td><td>${p.g}</td><td>${p.a}</td><td class="pts" style="font-size:16px">${p.pts}</td><td class="hm">${p.ptsPerGame.toFixed(2)}</td><td class="hm">${p.ppg}</td><td>${lw ? `${lw}${lw >= 5 ? '<span class="chip gwg">HOT</span>' : ''}` : '–'}</td></tr>`;
+      return `<tr><td class="l">${playerLink(p.id, p.name)}<span class="sub2">#${esc(p.number)}</span></td><td>${p.gp}</td><td>${p.g}</td><td>${p.a}</td><td class="pts" style="font-size:16px">${p.pts}</td><td class="hm">${p.ptsPerGame.toFixed(2)}</td><td class="hm">${p.ppg}</td><td>${lw ? `${lw}${lw >= 5 ? '<span class="chip gwg">HOT</span>' : ''}` : '–'}</td></tr>`;
     }).join('');
     const gSec = (g) => (d.glSec ? Math.round((g.seconds / d.glSec) * 100) : 0);
     const goalieRows = d.gls.map((g) => `<tr><td class="l">${playerLink(g.id, g.name)}${goalieFlag(g)}<span class="sub2">#${esc(g.number)}</span></td><td>${g.gp}</td><td>${gSec(g)}%</td><td>${g.w}-${g.l}-${g.t}</td><td>${rate(g.svPct)}${partial(g.gpSv, g.gp)}</td><td>${g.gaa == null ? '—' : g.gaa.toFixed(2)}${partial(g.gpGaa, g.gp)}</td></tr>`).join('');
@@ -1411,7 +1411,7 @@
       </div>` : ''}
 
       <div class="grid g-7-5">
-        ${panel('Who to key on', `<div class="tw"><table class="gl"><thead><tr><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th><th class="hm">P/GP</th><th class="hm">PPG</th><th title="Points in the player's last 4 games">Last 4 GP</th></tr></thead><tbody>${threats}</tbody></table></div>
+        ${panel('Who to key on', `<div class="tw"><table class="gl"><thead><tr><th class="l">Player</th><th title="Games played">GP</th><th>G</th><th>A</th><th>PTS</th><th class="hm">P/GP</th><th class="hm">PPG</th><th title="Points in the player's last 4 games">Last 4 GP</th></tr></thead><tbody>${threats}</tbody></table></div>
           <div class="pb">${kv([
             ['Top two goal scorers', `${pctS(d.top2Share)} of goals`],
             ['Different goal scorers', d.scorers],
