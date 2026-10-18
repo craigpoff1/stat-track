@@ -520,3 +520,8 @@ div.ld{cursor:default}
 .g-dn{margin:0 16px 4px;padding:10px 12px;border-left:3px solid #F2A93B;background:rgba(242,169,59,.07);font-size:13px;color:var(--ink2)}
 .g-dn ul{margin:6px 0 0 18px}.g-dn li{margin:2px 0}.g-dn .muted{color:var(--ink3);font-size:12px}
 .g-dq{font-size:13px;line-height:1}
+
+/* Leaders → All skaters on phones: team code moves under the name so PTS fits on screen */
+.m-only{display:none}
+@media (max-width:720px){.m-only{display:inline}#skaters td.sk-name{max-width:118px;overflow:hidden;text-overflow:ellipsis}}
+.ld .nm span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

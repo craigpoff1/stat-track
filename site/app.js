@@ -824,9 +824,9 @@
     };
     after(() => {
       sortable($('#skaters'), D().skaters, [
-        { key: 'rank', label: '#', cls: 'rkc', val: (p) => p.rank, desc: false },
-        { key: 'name', label: 'Player', cls: 'l', val: (p) => p.name, desc: false, html: (p) => `${playerLink(p.id, p.name)}${favs.has(p.id) ? '<span class="chip gwg">★</span>' : ''}${p.tGames && incT() ? `<span class="chip trn" title="Includes ${p.tGames} tournament game${p.tGames > 1 ? 's' : ''}">+${p.tGames}T</span>` : ''}<span class="sub2">#${esc(p.number)}</span>` },
-        { key: 'team', label: 'Team', cls: 'l', val: (p) => team(p.teamId).short, desc: false, html: (p) => { const t = team(p.teamId); return `<span class="tn">${logo(t)}<span class="full">${esc(t.short)}</span><span class="cd">${esc(t.code)}</span></span>`; } },
+        { key: 'rank', label: '#', cls: 'rkc', val: (p) => p.rank, desc: false, title: 'Scoring rank — place in the division by points (ties share a rank)' },
+        { key: 'name', label: 'Player', cls: 'l sk-name', val: (p) => p.name, desc: false, html: (p) => `${playerLink(p.id, p.name)}${favs.has(p.id) ? '<span class="chip gwg">★</span>' : ''}${p.tGames && incT() ? `<span class="chip trn" title="Includes ${p.tGames} tournament game${p.tGames > 1 ? 's' : ''}">+${p.tGames}T</span>` : ''}<span class="sub2">#${esc(p.number)}<span class="m-only"> · ${esc(team(p.teamId).code)}</span></span>` },
+        { key: 'team', label: 'Team', cls: 'l hm', val: (p) => team(p.teamId).short, desc: false, html: (p) => { const t = team(p.teamId); return `<span class="tn">${logo(t)}<span class="full">${esc(t.short)}</span><span class="cd">${esc(t.code)}</span></span>`; } },
         { key: 'gp', label: 'GP', val: (p) => p.gp, title: 'Games played' },
         { key: 'g', label: 'G', val: (p) => p.g }, { key: 'a', label: 'A', val: (p) => p.a },
         { key: 'pts', label: 'PTS', val: (p) => p.pts, html: (p) => `<span class="pts">${p.pts}</span>` },
@@ -835,7 +835,7 @@
         { key: 'shg', label: 'SHG', cls: 'hm', val: (p) => p.shg, title: 'Shorthanded goals' },
         { key: 'gwg', label: 'GWG', cls: 'hm', val: (p) => p.gwg, title: 'Game-winning goals (as recorded by the league)' },
         { key: 'mpg', label: 'MPG', cls: 'hm', val: (p) => p.multiPointGames, title: 'Multi-point games' },
-        { key: 'strk', label: 'STRK', val: (p) => p.pointStreak.current, html: (p) => p.pointStreak.current || '–', title: 'Current point streak' },
+        { key: 'strk', label: 'STRK', cls: 'hm', val: (p) => p.pointStreak.current, html: (p) => p.pointStreak.current || '–', title: 'Current point streak' },
         { key: 'pim', label: 'PIM', cls: 'hm', val: (p) => p.pim, title: 'Penalty minutes' },
       ], { key: 'pts', rowCls: (p) => (favs.has(p.id) || String(p.teamId) === myTeamId() ? 'me' : ''), rowAttrs: (p) => `data-team="${esc(p.teamId)}" data-name="${esc(p.name.toLowerCase())}"` });
       sortable($('#goalies'), D().goalies, goalieCols(true), { key: 'min', rowCls: (g) => (String(g.teamId) === myTeamId() ? 'me' : '') });
@@ -1502,7 +1502,8 @@
       }
     }
     const players = S.players.map((p) => {
-      const add = extra.get(p.id); if (!add) return p;
+      // always a copy: the ranking below writes p.rank, and must not overwrite the league ranks in S.players
+      const add = extra.get(p.id); if (!add) return { ...p };
       const log = [...p.log, ...add].sort((x, y) => x.date.localeCompare(y.date));
       const sum = (k) => log.reduce((n, l) => n + (l[k] || 0), 0);
       const q = { ...p, log, gp: log.length, g: sum('g'), a: sum('a'), pts: sum('pts'), pim: sum('pim'), ppg: sum('ppg'), shg: sum('shg'), gwg: sum('gwg'), tGames: add.length };
