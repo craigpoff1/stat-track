@@ -93,8 +93,8 @@
         { key: 'gp', label: 'GP', val: (p) => p.gp },
         { key: 'g', label: 'G', val: (p) => p.g }, { key: 'a', label: 'A', val: (p) => p.a },
         { key: 'pts', label: 'PTS', val: (p) => p.pts, html: (p) => `<span class="pts">${p.pts}</span>` },
-        { key: 'ppgp', label: 'P/GP', cls: 'hm', val: (p) => p.ptsPerGame, html: (p) => (p.ptsPerGame ?? 0).toFixed(2) },
-        { key: 'ppg', label: 'PPG', cls: 'hm', val: (p) => p.ppg },
+        { key: 'ppgp', label: 'P/GP', title: 'Points per game', val: (p) => p.ptsPerGame, html: (p) => (p.ptsPerGame ?? 0).toFixed(2) },
+        { key: 'ppg', label: 'PPG', cls: 'hm', val: (p) => p.ppg, title: 'Power-play goals' },
         { key: 'pim', label: 'PIM', val: (p) => p.pim, title: 'Penalty minutes' },
       ], { key: 'pts' });
       // Same goalie-sheet checks as the main site (build.mjs): partial = stat based on fewer games
