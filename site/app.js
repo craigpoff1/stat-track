@@ -720,7 +720,7 @@
     return players.map((p) => {
       const t = team(p.teamId);
       const tag = playerById.has(p.id) ? 'a' : 'div';
-      return `<${tag} class="ld ${highlight(p) ? 'me' : ''}" ${tag === 'a' ? `href="#/player/${p.id}"` : ''}><span class="n">${p.rank}</span>${logo(t)}<span class="nm"><b>${esc(p.name)}</b><span>#${esc(p.number)} · ${esc(t.short)}</span></span><span class="ga">${p.g}G ${p.a}A</span><span class="p">${p.pts}</span></${tag}>`;
+      return `<${tag} class="ld ${highlight(p) ? 'me' : ''}" ${tag === 'a' ? `href="#/player/${p.id}"` : ''}><span class="n">${p.rank}</span>${logo(t)}<span class="nm"><b>${esc(p.name)}</b><span>#${esc(p.number)} · ${esc(t.short)} · ${p.gp} GP</span></span><span class="ga">${p.g}G ${p.a}A</span><span class="p">${p.pts}</span></${tag}>`;
     }).join('');
   }
 
@@ -827,7 +827,7 @@
         { key: 'rank', label: '#', cls: 'rkc', val: (p) => p.rank, desc: false },
         { key: 'name', label: 'Player', cls: 'l', val: (p) => p.name, desc: false, html: (p) => `${playerLink(p.id, p.name)}${favs.has(p.id) ? '<span class="chip gwg">★</span>' : ''}${p.tGames && incT() ? `<span class="chip trn" title="Includes ${p.tGames} tournament game${p.tGames > 1 ? 's' : ''}">+${p.tGames}T</span>` : ''}<span class="sub2">#${esc(p.number)}</span>` },
         { key: 'team', label: 'Team', cls: 'l', val: (p) => team(p.teamId).short, desc: false, html: (p) => { const t = team(p.teamId); return `<span class="tn">${logo(t)}<span class="full">${esc(t.short)}</span><span class="cd">${esc(t.code)}</span></span>`; } },
-        { key: 'gp', label: 'GP', cls: 'hm', val: (p) => p.gp },
+        { key: 'gp', label: 'GP', val: (p) => p.gp, title: 'Games played' },
         { key: 'g', label: 'G', val: (p) => p.g }, { key: 'a', label: 'A', val: (p) => p.a },
         { key: 'pts', label: 'PTS', val: (p) => p.pts, html: (p) => `<span class="pts">${p.pts}</span>` },
         { key: 'ppgp', label: 'P/GP', cls: 'hm', val: (p) => p.ptsPerGame, html: (p) => p.ptsPerGame.toFixed(2) },
