@@ -451,9 +451,9 @@
   "location": "Hussar Arena",
   "home": "Spartan Hockey Academy",
   "away": "Capital City Knights",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 10,
+  "awayScore": 0
  },
  {
   "id": "2020225",
@@ -463,9 +463,9 @@
   "location": "Hussar Arena",
   "home": "Young Kings Hockey",
   "away": "HC Calgary Bandits",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 3
  },
  {
   "id": "2020227",
