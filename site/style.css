@@ -525,3 +525,4 @@ div.ld{cursor:default}
 .m-only{display:none}
 @media (max-width:720px){.m-only{display:inline}#skaters td.sk-name{max-width:118px;overflow:hidden;text-overflow:ellipsis}}
 .ld .nm span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fs-gl{margin:8px 0 2px;font-size:13px;color:var(--ink2)}.fs-gl .k{font:700 11px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-right:4px}.fs-gl small{color:var(--ink3)}

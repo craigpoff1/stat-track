@@ -744,6 +744,7 @@
           <div class="fs-row">${logo(U)}<span class="nm">${esc(U.short)}</span><span class="sc">${g[us].score}</span></div>
           <div class="fs-row lo">${logo(O)}<span class="nm">${esc(O.short)}</span><span class="sc">${g[them].score}</span></div>
           <div class="fs-res"><span class="res ${r}">${r === 'W' ? 'Win' : r === 'L' ? 'Loss' : 'Tie'}</span>${g.comeback === us ? ' · comeback' : ''}${moments ? ` · ${moments} tying/go-ahead goal${moments > 1 ? 's' : ''}` : ''}</div>
+          ${(() => { const gl = (g.goalies || []).filter((x) => String(x.teamId) === String(U.id)); return gl.length ? `<div class="fs-gl"><span class="k">In goal</span> ${gl.map((x) => `${playerLink(x.playerId, x.name)}${x.shots ? ` <small>${Math.max(0, x.saves)} saves</small>` : ''}`).join(' · ')}</div>` : ''; })()}
           <div class="feat-act"><a class="btn on" href="#/game/${g.id}">Full game summary →</a><button class="btn" id="feat-replay">↻ Replay</button></div>
         </div>
         <div class="feat-chart"><div class="legend"><span><i style="background:var(--us)"></i>${esc(U.short)}</span><span><i style="background:var(--red)"></i>${esc(O.short)}</span><span><i style="background:var(--ink3);opacity:.5"></i>Power play</span></div><div class="chart" id="feat-flow"></div></div>
@@ -1102,11 +1103,16 @@
     const pim = (side) => g.events.filter((e) => e.type === 'penalty' && e.side === side).reduce((n, e) => n + (e.minutes || 0), 0);
     const def = (side, o) => { const sa = shots(o), ga = g[o].score; return { sa, ga, sv: sa && sa >= ga ? 1 - ga / sa : null, pim: pim(side) }; };
     const TH = def('home', 'away'), TA = def('away', 'home');
+    // Goalies from the sheet, both teams (away first, like the score bug). Lines that fail the sheet checks
+    // (see build.mjs checkGoalieSheet) get the same ⓘ data note as everywhere else.
+    const gRows = (t) => (g.goalies || []).filter((x) => String(x.teamId) === String(t.id));
+    const goalieTable = (g.goalies || []).length ? `<div class="sub" style="margin-top:18px">Goalies</div>
+            <div class="tw"><table class="gl"><thead><tr><th class="l">Goalie</th><th class="hm">MIN</th><th title="Shots against">SA</th><th title="Saves">SV</th><th title="Goals against">GA</th><th>SV%</th></tr></thead><tbody>${[a, h].map((t) => { const rows = gRows(t), notes = g.goalieNotes?.[t.id] || []; return rows.length ? rows.map((x, i) => `<tr><td class="l">${playerLink(x.playerId, x.name)}${i === 0 && notes.length ? dqIcon(`Sheet check — ${t.short}`, notes) : ''}<span class="sub2">${esc(t.short)}${x.number ? ` · #${esc(x.number)}` : ''}</span></td><td class="hm">${x.seconds ? mmss(x.seconds) : '—'}</td><td>${x.shots}</td><td>${Math.max(0, x.saves)}</td><td>${x.ga}</td><td>${x.shots ? rate(Math.max(0, x.saves) / x.shots) : '—'}</td></tr>`).join('') : `<tr><td class="l" colspan="6"><span class="muted">${esc(t.short)}: no goalie listed on the sheet</span></td></tr>`; }).join('')}</tbody></table></div>` : `<div class="sub" style="margin-top:18px">Goalies</div><div class="empty" style="padding-left:0">Not recorded on this game sheet</div>`;
     const rec = (t) => (t.stub ? '' : `${t.w}-${t.l}-${t.t} · `);
     const flags = g.warnings.filter((w) => !/goalie/i.test(w));
     const box = (teamId) => g.skaters.filter((r) => String(r.teamId) === String(teamId)).sort((x, y) => (y.g + y.a) - (x.g + x.a) || y.g - x.g);
     const boxTable = (t) => `<div class="tw"><table class="gl"><thead><tr><th>#</th><th class="l">Player</th><th>G</th><th>A</th><th>PTS</th><th>PIM</th></tr></thead><tbody>${box(t.id).map((r) => `<tr><td>${esc(r.number)}</td><td class="l">${playerLink(r.playerId, r.name)}</td><td>${r.g}</td><td>${r.a}</td><td class="pts" style="font-size:16px">${r.g + r.a}</td><td>${r.pim || 0}</td></tr>`).join('')}</tbody></table></div>
-      ${(g.goalies || []).some((x) => String(x.teamId) === String(t.id)) ? `<div class="sub" style="margin-top:14px">In goal</div><div class="tw"><table class="gl"><thead><tr><th class="l">Goalie</th><th>MIN</th><th>SA</th><th>GA</th><th>SV</th><th>SV%</th></tr></thead><tbody>${g.goalies.filter((x) => String(x.teamId) === String(t.id)).map((x) => `<tr><td class="l">${playerLink(x.playerId, x.name)}</td><td>${mmss(x.seconds)}</td><td>${x.shots}</td><td>${x.ga}</td><td>${Math.max(0, x.saves)}</td><td>${x.shots ? rate(Math.max(0, x.saves) / x.shots) : '—'}</td></tr>`).join('')}</tbody></table></div>${g.goalieNotes?.[t.id]?.length ? `<div class="dnotes sm"><b>Goalie sheet issues:</b> ${g.goalieNotes[t.id].map(esc).join('; ')}</div>` : ''}` : ''}`;
+      `;
     const plabel = (l) => (/^\d+$/.test(l) ? 'P' + l : l);
     const focus = involves({ home: g.home.id, away: g.away.id }, myTeamId()) ? myTeamId() : g.home.id;
     const fu = String(focus) === String(g.away.id) ? a : h, fo = fu === h ? a : h;
@@ -1134,6 +1140,7 @@
             <div class="tw"><table><thead><tr><th class="l">Team</th><th>Shots against</th><th>GA</th><th>Team SV%</th><th>PIM</th></tr></thead><tbody>
               ${[[a, TA], [h, TH]].map(([t, x]) => `<tr><td class="l"><span class="tn">${logo(t)}<span>${esc(t.short)}</span></span></td><td>${x.sa ?? '—'}</td><td>${x.ga}</td><td>${rate(x.sv)}</td><td>${x.pim}</td></tr>`).join('')}
             </tbody></table></div>
+            ${goalieTable}
             ${flags.length ? `<div class="warn">Source data flag: ${flags.map(esc).join(' · ')}</div>` : ''}
           </div>
           <div>
