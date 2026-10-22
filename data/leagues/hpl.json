@@ -7,7 +7,7 @@
   "url": "https://hpl-winter-league.kreezee-sports.com",
   "platform": "Kreezee"
  },
- "fetchedAt": "2026-10-21T09:22:09.734Z",
+ "fetchedAt": "2026-10-22T09:24:56.375Z",
  "detail": "scores-only",
  "teams": [
   {
@@ -688,9 +688,9 @@
    "rink": "Delta Planet Ice · Canadian Rink",
    "home": "hpl:148553",
    "away": "hpl:148550",
-   "final": false,
-   "homeScore": null,
-   "awayScore": null,
+   "final": true,
+   "homeScore": 1,
+   "awayScore": 7,
    "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744577"
   },
   {
@@ -727,19 +727,19 @@
    "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744581"
   },
   {
-   "id": "hpl:744583",
-   "start": "2026-11-03T18:30:00",
-   "rink": "Delta Planet Ice · Canadian Rink",
-   "home": "hpl:148549",
-   "away": "hpl:148550",
+   "id": "hpl:744584",
+   "start": "2026-11-05T17:15:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148551",
+   "away": "hpl:148553",
    "final": false,
    "homeScore": null,
    "awayScore": null,
-   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744583"
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744584"
   },
   {
    "id": "hpl:744582",
-   "start": "2026-11-03T18:45:00",
+   "start": "2026-11-05T18:45:00",
    "rink": "Coquitlam Planet Ice · Rink 4",
    "home": "hpl:148548",
    "away": "hpl:148552",
@@ -749,15 +749,15 @@
    "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744582"
   },
   {
-   "id": "hpl:744584",
-   "start": "2026-11-04T17:30:00",
+   "id": "hpl:744583",
+   "start": "2026-11-05T18:45:00",
    "rink": "Delta Planet Ice · Canadian Rink",
-   "home": "hpl:148551",
-   "away": "hpl:148553",
+   "home": "hpl:148549",
+   "away": "hpl:148550",
    "final": false,
    "homeScore": null,
    "awayScore": null,
-   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744584"
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744583"
   },
   {
    "id": "hpl:744587",
