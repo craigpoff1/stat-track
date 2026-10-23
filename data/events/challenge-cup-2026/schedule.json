@@ -20,9 +20,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Riggers",
   "away": "Lumberjacks",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 2,
   "playoff": false
  },
  {

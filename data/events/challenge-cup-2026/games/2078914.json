@@ -1,0 +1,736 @@
+{
+ "id": "2078914",
+ "dateText": "Friday, October 23, 2026 @ 9:30 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "415996",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCupimages/team-logos/4ce28705-5eaa-49cb-9e44-16c41c1833b4_CC47B961-1A0B-4ABA-AEC8-D80B58F0E5F2.png",
+  "score": 6
+ },
+ "away": {
+  "name": "2019 Lumberjacks HC",
+  "teamId": "415998",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 2
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:20",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "13",
+    "name": "Kash Bala"
+   },
+   "assists": [
+    {
+     "number": "77",
+     "name": "Henry Olineck"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:08",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Brody Wilkes"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:18",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "89",
+    "name": "Spencer Priddle"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:43",
+   "side": "away",
+   "team": "2019 Lumberjacks HC",
+   "scorer": {
+    "number": "73",
+    "name": "Aidan Naulakhia"
+   },
+   "assists": [
+    {
+     "number": "25",
+     "name": "Cole Gant"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:37",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Hayes Kaiser"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:11",
+   "side": "away",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "97",
+    "name": "Ben Chavarie"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:15",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "71",
+    "name": "Owen Yuskow"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:21",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Jones Brezinski"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:27",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Hayes Kaiser"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:04",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Cabot Doucet"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:49",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:35",
+   "side": "away",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "78",
+    "name": "Amari Gill"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:58",
+   "side": "away",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "96",
+    "name": "Luca McIvor"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:29",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "89",
+    "name": "Spencer Priddle"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Hayes Kaiser"
+    }
+   ],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:09",
+   "side": "away",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "19",
+    "name": "Vannie Li"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:50",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [
+    {
+     "number": "1",
+     "name": "RYAN ROTH"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:13",
+   "side": "away",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "25",
+    "name": "Cole Gant"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:51",
+   "side": "away",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "78",
+    "name": "Amari Gill"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:19",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Logan Rumley"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:58",
+   "side": "away",
+   "team": "2019 Lumberjacks HC",
+   "scorer": {
+    "number": "8",
+    "name": "Kaia Pryor"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:30",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Noah Kaiser"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Brody Wilkes"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272949",
+   "number": "91",
+   "name": "Noah Kaiser",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272965",
+   "number": "89",
+   "name": "Spencer Priddle",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272889",
+   "number": "13",
+   "name": "Kash Bala",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272919",
+   "number": "98",
+   "name": "Cabot Doucet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5273020",
+   "number": "9",
+   "name": "Hayes Kaiser",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272951",
+   "number": "88",
+   "name": "Braxton Wagner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272891",
+   "number": "82",
+   "name": "Avery Sahnan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272918",
+   "number": "8",
+   "name": "Jones Brezinski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272890",
+   "number": "77",
+   "name": "Henry Olineck",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5273016",
+   "number": "71",
+   "name": "Owen Yuskow",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5273271",
+   "number": "29",
+   "name": "Oliver Rook",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5273019",
+   "number": "20",
+   "name": "Merrick Pobuda",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5273018",
+   "number": "19",
+   "name": "Logan Rumley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272966",
+   "number": "17",
+   "name": "Kasen Leard",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5272969",
+   "number": "11",
+   "name": "Brody Wilkes",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5273270",
+   "number": "1",
+   "name": "RYAN ROTH",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272834",
+   "number": "8",
+   "name": "Kaia Pryor",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272843",
+   "number": "73",
+   "name": "Aidan Naulakhia",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272847",
+   "number": "98",
+   "name": "Kaysen Gujral",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272846",
+   "number": "97",
+   "name": "Ben Chavarie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272845",
+   "number": "96",
+   "name": "Luca McIvor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272844",
+   "number": "78",
+   "name": "Amari Gill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272842",
+   "number": "71",
+   "name": "Preston Mills",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272848",
+   "number": "30",
+   "name": "Nixon Woods",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272841",
+   "number": "25",
+   "name": "Cole Gant",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272840",
+   "number": "24",
+   "name": "Vann Fraser",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272839",
+   "number": "19",
+   "name": "Vannie Li",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272838",
+   "number": "15",
+   "name": "Axel Shinske",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272837",
+   "number": "14",
+   "name": "Dax Rauche",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272836",
+   "number": "11",
+   "name": "Luke Stoliker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272835",
+   "number": "10",
+   "name": "Adrien Amado",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "415996",
+   "playerId": "5273270",
+   "number": "1",
+   "name": "RYAN ROTH",
+   "seconds": 2700,
+   "ga": 2,
+   "shots": 26,
+   "saves": 24
+  },
+  {
+   "side": "away",
+   "teamId": "415998",
+   "playerId": "5272848",
+   "number": "30",
+   "name": "Nixon Woods",
+   "seconds": 2700,
+   "ga": 6,
+   "shots": 15,
+   "saves": 9
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 4,
+   "away": 13
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 6
+  },
+  {
+   "label": "3",
+   "home": 7,
+   "away": 2
+  }
+ ],
+ "start": "2026-10-23T09:30:00",
+ "gameNumber": 2,
+ "playoff": false,
+ "fetchedAt": "2026-10-23T17:05:32.157Z"
+}
