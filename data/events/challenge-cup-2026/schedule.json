@@ -7,9 +7,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Calgary Crusaders",
   "away": "Airdrie Stars",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 10,
   "playoff": false
  },
  {
