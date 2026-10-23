@@ -1,0 +1,673 @@
+{
+ "id": "2078915",
+ "dateText": "Friday, October 23, 2026 @ 11:00 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "2019 Flyers HC",
+  "teamId": "n:2019-flyers-hc",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 8
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "415995",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 6
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:22",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Doc Desmet"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:18",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "98",
+    "name": "Mason MacDonald"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:18",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Max Stephanian"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:48",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:23",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:37",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Bowen Kamlade"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:37",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "98",
+    "name": "Mason MacDonald"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:31",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:09",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:07",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "34",
+    "name": "Owen Brito"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:19",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Isaac Pannekoek"
+    },
+    {
+     "number": "8",
+     "name": "Rylan Geeraert"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:08",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "19",
+    "name": "Elias Morianos"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:34",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:37",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "20",
+     "name": "Finnley Nitchie"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:27",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:01",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Bowen Kamlade"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:54",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:41",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:18",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Walker Snell"
+    },
+    {
+     "number": "9",
+     "name": "Doc Desmet"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:06",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:02",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:54",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:32",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:13",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Avery Mok"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:07",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "11",
+    "name": "Bodie Patterson"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272893",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272977",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272975",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272896",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272953",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272894",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273057",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272972",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272961",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273296",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272979",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273021",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273113",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272962",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273250",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273258",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272976",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272976",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 2700,
+   "ga": 8,
+   "shots": 37,
+   "saves": 29
+  }
+ ],
+ "warnings": [
+  "home: no box score on the sheet (team identified by name)",
+  "home: box score has 0 goals, final is 8"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 11,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 12,
+   "away": 7
+  },
+  {
+   "label": "3",
+   "home": 12,
+   "away": 3
+  }
+ ],
+ "start": "2026-10-23T11:00:00",
+ "gameNumber": 3,
+ "playoff": false,
+ "fetchedAt": "2026-10-23T19:57:51.845Z"
+}

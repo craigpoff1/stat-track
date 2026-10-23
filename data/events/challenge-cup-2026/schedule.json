@@ -33,9 +33,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Flyers",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 8,
+  "awayScore": 6,
   "playoff": false
  },
  {
@@ -46,9 +46,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Airdrie Stars",
   "away": "Riggers",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 5,
+  "awayScore": 3,
   "playoff": false
  },
  {
