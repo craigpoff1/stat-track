@@ -709,7 +709,9 @@
         inner = `<div class="d">${p && badges ? haBadge(home) : ''}${d} · ${tm(x.start)}${tChip(x)}</div><div class="o">${logo(o)}${who}</div><div class="r">${esc(x.location || '')}${o.stub ? '' : ` · opp ${o.w}-${o.l}-${o.t}`}</div>`;
       }
       if (x.final && x.hasDetail) return `<a class="nx" href="#/game/${x.id}">${inner}</a>`;
-      const scoutHref = scout && p && !x.final && !o.stub ? (o.ext ? (x.eventId ? `#/tournaments/${x.eventId}/${o.id}` : o.href) : o.eventId ? null : `#/scout/${o.id}`) : null;
+      // tournament teams scout as their home-league selves: HSL → #/scout, external league → its report in this event
+      const evScout = (t) => (t.link?.kind === 'hsl' ? `#/scout/${t.link.id}` : t.link ? `#/tournaments/${t.eventId}/${t.link.id}` : null);
+      const scoutHref = scout && p && !x.final && !o.stub ? (o.ext ? (x.eventId ? `#/tournaments/${x.eventId}/${o.id}` : o.href) : o.eventId ? evScout(o) : `#/scout/${o.id}`) : null;
       if (scoutHref) return `<a class="nx scoutable" href="${esc(scoutHref)}" title="Scouting report: ${esc(o.name)}">${inner}<div class="cta"><span>Scout ${esc(o.short)} <b>→</b></span></div></a>`;
       if (x.url) return `<a class="nx" href="${esc(x.url)}" target="_blank" rel="noopener" title="Open on the league site">${inner}</a>`;
       return `<div class="nx">${inner}</div>`;
@@ -1767,15 +1769,37 @@
     ], { key: 'seed', dir: 1, rowCls: (t) => (t.link?.id === myTeamId() ? 'me' : '') }));
     const days = [...new Set(e.schedule.map((s) => s.start.slice(0, 10)))];
     const champ = e.champion ? teamById.get(e.champion) : null;
+    // our team at this event (cards are drawn from its side; upcoming games link to scouting)
+    const ours = e.teams.find((t) => t.link?.id === myTeamId()), persp = ours?.id || null;
+    const ourGames = ours ? e.schedule.filter((s) => involves(s, ours.id)) : [];
+    // "if the round robin ended now": fill "Seed N" placeholders once every team has played
+    const rrLeft = e.schedule.filter((s) => !s.playoff && !s.final).length;
+    const bySeed = new Map(e.teams.map((t) => [t.seed, t]));
+    const seedName = (x) => { const m = /^Seed (\d+)$/i.exec(String(x)); const t = m && bySeed.get(Number(m[1])); return t ? `${esc(x)} <b>${esc(t.short)}</b>` : esc(team(x).short); };
+    const projHtml = rrLeft && e.teams.every((t) => t.rr.gp > 0) && e.schedule.some((s) => s.playoff && /^Seed \d+$/i.test(`${s.home}`))
+      ? `<div class="dnotes sm"><b>If the round robin ended now:</b><ul>${e.schedule.filter((s) => s.playoff && !s.final).map((s) => `<li>${dt(s.start, { weekday: 'short' })} ${tm(s.start)} · ${seedName(s.away)} vs ${seedName(s.home)}</li>`).join('')}</ul><span class="muted">${rrLeft} round-robin game${rrLeft > 1 ? 's' : ''} still to play.</span></div>` : '';
+    // goalies at the event, from the sheets: lines that fail the sheet checks are left out of SV% (n/m marker)
+    const gTot = new Map();
+    for (const g of e.games || []) for (const x of g.goalies || []) {
+      if (!x.playerId) continue;
+      const t = gTot.get(x.playerId) || gTot.set(x.playerId, { id: x.playerId, name: x.name, number: x.number, teamId: x.teamId, gp: 0, gpSv: 0, sa: 0, sv: 0, ga: 0 }).get(x.playerId);
+      const bad = (g.goalieNotes?.[x.teamId] || []).some((n) => /left out of save/.test(n));
+      t.gp++;
+      if (!bad) { t.gpSv++; t.sa += x.shots; t.sv += Math.max(0, x.saves); t.ga += x.ga; }
+    }
+    const eGoalies = [...gTot.values()].sort((a, b) => b.gp - a.gp || b.sa - a.sa);
+    const goalieHtml = eGoalies.length ? `<div class="tw"><table class="gl"><thead><tr><th class="l">Goalie</th><th>GP</th><th title="Shots against">SA</th><th title="Saves">SV</th><th title="Goals against">GA</th><th>SV%</th></tr></thead><tbody>${eGoalies.map((x) => { const t = team(x.teamId); return `<tr class="${t.link?.id === myTeamId() ? 'me' : ''}"><td class="l">${playerLink((e.players || []).find((p) => p.id === x.id)?.hslId || x.id, x.name)}<span class="sub2">${esc(t.short)}${x.number ? ` · #${esc(x.number)}` : ''}</span></td><td>${x.gp}</td><td>${x.gpSv ? x.sa : '—'}</td><td>${x.gpSv ? x.sv : '—'}</td><td>${x.gpSv ? x.ga : '—'}</td><td>${x.sa ? rate(x.sv / x.sa) : '—'}${x.gpSv < x.gp ? `<small class="part" title="Save % from ${x.gpSv} of ${x.gp} games">${x.gpSv}/${x.gp}</small>` : ''}</td></tr>`; }).join('')}</tbody></table></div><div class="note">From the tournament game sheets. Games whose goalie lines don’t add up are left out of the totals (the small n/m shows how many counted).</div>` : '<div class="empty">No goalie lines on the sheets yet</div>';
     return `
       ${evHead(e, esc(e.name), `${esc(e.season)} · ${esc(evDates(e))} · ${statusChip(e)}`, `${esc(e.division || '')} · ${esc(e.rink || '')}`, e.teams.map((t) => ({ label: t.short, href: t.href })))}
+      ${ours ? `<div style="margin-bottom:18px">${panel(`${esc(team(myTeamId()).short)} at the ${esc(e.name)}`, `<div class="stats wkstats"><div class="st"><span class="l">Record</span><span class="v">${ours.w}-${ours.l}-${ours.t}</span><span class="s">${ours.rr.gp ? `seed ${ours.seed} of ${e.teams.length} now` : ''}</span></div><div class="st"><span class="l">Goals for</span><span class="v">${ours.gf}</span></div><div class="st"><span class="l">Goals against</span><span class="v">${ours.ga}</span></div><div class="st"><span class="l">Games left</span><span class="v">${ourGames.filter((s) => !s.final).length}</span><span class="s">+ playoffs</span></div></div><div class="pb">${gameCards(ourGames, persp, { scout: true })}</div>`, { gold: true, meta: 'Tap an upcoming game to scout the opponent' })}</div>` : ''}
       ${champ ? `<div style="margin-bottom:18px">${panel('Champion', `<div class="pb"><div class="champ">${logo(champ)}<b>${esc(champ.name)}</b>${linkTag(champ)}</div></div>`, { gold: true })}</div>` : ''}
       <div class="grid g-7-5">
         ${panel('Round robin', '<div class="tw"><table id="ev-st"></table></div><div class="note">Seeds use our tiebreaks (points, wins, goal difference, goals) and may differ from the official bracket. HSL/HPL tags show each team’s home league, matched by roster.</div>', { gold: true, meta: `${e.teams.length} teams` })}
-        ${panel('Playoffs', gameCards(e.schedule.filter((s) => s.playoff), null), { meta: `${e.schedule.filter((s) => s.playoff && s.final).length}/${e.schedule.filter((s) => s.playoff).length} played` })}
+        ${panel('Playoffs', gameCards(e.schedule.filter((s) => s.playoff), persp, { scout: true }) + projHtml, { meta: `${e.schedule.filter((s) => s.playoff && s.final).length}/${e.schedule.filter((s) => s.playoff).length} played` })}
       </div>
       <div style="margin-bottom:18px">${panel('Tournament scoring', `<div class="pb"><div class="leaders">${leaderRows(players.slice(0, 12), (p) => teamById.get(p.teamId)?.link?.id === myTeamId(), players)}</div>${missing.length ? `<div class="dnotes sm"><b>Missing game sheets:</b> ${missing.map((t) => `${esc(t.short)} (${t.boxMissing} game${t.boxMissing > 1 ? 's' : ''} without a box score)`).join('; ')} — their scorers aren’t counted.</div>` : ''}</div>`, { meta: 'Points in this tournament' })}</div>
-      <div style="margin-bottom:18px">${panel('All games', `<div class="wkgroups">${days.map((d) => `<div class="wk-day">${dt(d, { weekday: 'long', month: 'short', day: 'numeric' })}</div>${gameCards(e.schedule.filter((s) => s.start.slice(0, 10) === d), null)}`).join('')}</div>`, { meta: `${e.schedule.length} games` })}</div>
+      <div style="margin-bottom:18px">${panel('Goalies', goalieHtml, { meta: `${eGoalies.length} goalie${eGoalies.length === 1 ? '' : 's'}` })}</div>
+      <div style="margin-bottom:18px">${panel('All games', `<div class="wkgroups">${days.map((d) => `<div class="wk-day">${dt(d, { weekday: 'long', month: 'short', day: 'numeric' })}</div>${gameCards(e.schedule.filter((s) => s.start.slice(0, 10) === d), persp, { scout: true })}`).join('')}</div>`, { meta: `${e.schedule.length} games` })}</div>
       ${e.url ? `<div class="note"><a class="lnk" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)} on the tournament site →</a></div>` : ''}`;
   }
 

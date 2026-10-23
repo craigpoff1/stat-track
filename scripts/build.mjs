@@ -357,9 +357,14 @@ for (const ev of eventsList) {
 
   const teams = new Map(), byName = new Map(), players = new Map();
   const evTeam = (id, name, logo) => {
+    // a sheet with an empty box score gives a name-based id ("<event>:n:beavers"); use the real team
+    if (String(id).includes(':n:') && byName.has(name)) id = byName.get(name);
     if (!teams.has(id)) teams.set(id, { id, name, logo: logo || null, gp: 0, w: 0, l: 0, t: 0, pts: 0, gf: 0, ga: 0, rr: { gp: 0, w: 0, l: 0, t: 0, pts: 0, gf: 0, ga: 0 }, results: [], boxMissing: 0 });
     const t = teams.get(id); if (logo && !t.logo) t.logo = logo; byName.set(name, id); return t;
   };
+  // every entered team (from the event's team list, scraped by events.mjs), so standings show teams
+  // that haven't played yet; sheets then add logos and results
+  for (const t of (await readJson(path.join(DATA, 'events', ev.id, 'teams.json'))) || []) evTeam(`${ev.id}:${t.id}`, t.name);
   const games = [], evGoalieLines = [];
   for (const g of [...sheets.values()].sort((a, b) => a.start.localeCompare(b.start))) {
     const side = { home: evTeam(`${ev.id}:${g.home.teamId}`, g.home.name, g.home.logo), away: evTeam(`${ev.id}:${g.away.teamId}`, g.away.name, g.away.logo) };
@@ -400,10 +405,19 @@ for (const ev of eventsList) {
     });
   }
   // schedule rows: real team names from the sheets where the calendar still shows placeholders
+  // calendars use short names ("Airdrie Stars", "Flyers"): exact name, else unique nickname (last word);
+  // placeholders ("Seed 2", "Winner SF") stay as text
+  const nick = (n) => String(n || '').replace(/\b(hockey|academy|hc|club)\b/gi, ' ').trim().split(/\s+/).pop().toLowerCase();
+  const byCalName = (n) => {
+    if (byName.has(n)) return byName.get(n);
+    const m = [...teams.values()].filter((t) => nick(t.name) === nick(n));
+    return m.length === 1 ? m[0].id : n;
+  };
+  const gameSides = new Map(games.map((g) => [g.id, g]));
   const schedule = sched.map((s) => {
-    const sheet = sheets.get(s.id);
-    const home = sheet ? `${ev.id}:${sheet.home.teamId}` : byName.has(s.home) ? byName.get(s.home) : s.home;
-    const away = sheet ? `${ev.id}:${sheet.away.teamId}` : byName.has(s.away) ? byName.get(s.away) : s.away;
+    const sheet = sheets.get(s.id), gm = gameSides.get(s.id);
+    const home = gm ? gm.home.id : byCalName(s.home);
+    const away = gm ? gm.away.id : byCalName(s.away);
     return { id: s.id, gameNumber: s.gameNumber, start: s.start, end: s.end, location: s.location, playoff: !!s.playoff, home, away, final: s.final, homeScore: s.homeScore, awayScore: s.awayScore, hasDetail: !!sheet };
   });
   // Which home-league team is this? Roster overlap (names) is decisive; name matching is the fallback

@@ -41,6 +41,15 @@ async function rampEvent(ev) {
   });
   if (!schedule.length) throw new Error('empty schedule');
   await fs.writeFile(path.join(dir, 'schedule.json'), JSON.stringify(schedule, null, 1));
+  // Entered teams (RAMP ids = the ids on game sheets), so standings list every team before it has
+  // played. Calendars only carry short/placeholder names. Non-fatal: keep the last copy on failure.
+  try {
+    const html = await get(`${ev.base}/division/0/${ev.divisionId}/standings`);
+    const re = new RegExp(`href="/team/\\d+/0/${ev.divisionId}/(\\d+)/[a-z]+"[^>]*>(?:\\s*<[^>]+>)*\\s*([^<]{2,80}?)\\s*<`, 'g');
+    const teams = new Map();
+    for (const m of html.matchAll(re)) if (!teams.has(m[1])) teams.set(m[1], { id: m[1], name: m[2].replace(/&amp;/g, '&').trim() });
+    if (teams.size) await fs.writeFile(path.join(dir, 'teams.json'), JSON.stringify([...teams.values()], null, 1));
+  } catch (err) { console.error(`  ${ev.name} team list: ${err.message}`); }
   let fetched = 0;
   for (const g of schedule.filter((x) => x.final)) {
     const file = path.join(gdir, `${g.id}.json`), have = await readJson(file);
