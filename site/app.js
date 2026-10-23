@@ -1650,6 +1650,10 @@
     for (const e of events) {
       e.status = e.dates && today < e.dates[0] ? 'upcoming' : e.dates && today <= e.dates[1] ? 'live' : e.schedule?.length && e.schedule.every((s) => s.final) ? 'final' : e.games?.length ? 'live' : 'upcoming';
       for (const t of e.teams || []) {
+        // RAMP event sheets give every team the event's own logo (".../assocLogo.svg"): use the team's
+        // home-league logo (HSL or external league, via the roster/name link) and never the event's
+        const homeT = t.link ? teamById.get(String(t.link.id)) : null;
+        t.logo = homeT?.logo || (/assocLogo/i.test(t.logo || '') ? null : t.logo);
         t.short = shortName(t.name); t.code = codeOf(t.short); t.eventId = e.id; t.href = `#/tournaments/${e.id}/${t.id}`;
         t.home = { w: 0, l: 0, t: 0 }; t.away = { w: 0, l: 0, t: 0 }; // event teams: home/away not tracked
         teamById.set(t.id, t);
