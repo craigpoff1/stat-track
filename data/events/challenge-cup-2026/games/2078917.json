@@ -1,0 +1,476 @@
+{
+ "id": "2078917",
+ "dateText": "Friday, October 23, 2026 @ 2:00 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "2019 Lumberjacks HC",
+  "teamId": "415998",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 0
+ },
+ "away": {
+  "name": "2019 Flyers HC",
+  "teamId": "n:2019-flyers-hc",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 7
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "13:14",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "14",
+    "name": "Dax Rauche"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:41",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "97",
+    "name": "Ben Chavarie"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:10",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:38",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:01",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "19",
+    "name": "Vannie Li"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:58",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Gwen O'Neill"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:49",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "24",
+    "name": "Vann Fraser"
+   },
+   "minutes": 2,
+   "infraction": "Boarding"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:26",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:30",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "14",
+    "name": "Dax Rauche"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:13",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:55",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:25",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:47",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:42",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "78",
+    "name": "Amari Gill"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:09",
+   "side": "away",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Gwen O'Neill"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272847",
+   "number": "98",
+   "name": "Kaysen Gujral",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272846",
+   "number": "97",
+   "name": "Ben Chavarie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272845",
+   "number": "96",
+   "name": "Luca McIvor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272834",
+   "number": "8",
+   "name": "Kaia Pryor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272844",
+   "number": "78",
+   "name": "Amari Gill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272843",
+   "number": "73",
+   "name": "Aidan Naulakhia",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272842",
+   "number": "71",
+   "name": "Preston Mills",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272848",
+   "number": "30",
+   "name": "Nixon Woods",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272841",
+   "number": "25",
+   "name": "Cole Gant",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272840",
+   "number": "24",
+   "name": "Vann Fraser",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272839",
+   "number": "19",
+   "name": "Vannie Li",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272838",
+   "number": "15",
+   "name": "Axel Shinske",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272837",
+   "number": "14",
+   "name": "Dax Rauche",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272836",
+   "number": "11",
+   "name": "Luke Stoliker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272835",
+   "number": "10",
+   "name": "Adrien Amado",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272848",
+   "number": "30",
+   "name": "Nixon Woods",
+   "seconds": 2700,
+   "ga": 7,
+   "shots": 26,
+   "saves": 19
+  }
+ ],
+ "warnings": [
+  "away: no box score on the sheet (team identified by name)",
+  "away: box score has 0 goals, final is 7"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 6
+  },
+  {
+   "label": "2",
+   "home": 6,
+   "away": 10
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 9
+  }
+ ],
+ "start": "2026-10-23T14:00:00",
+ "gameNumber": 5,
+ "playoff": false,
+ "fetchedAt": "2026-10-23T22:49:28.716Z"
+}
