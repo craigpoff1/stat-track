@@ -1759,6 +1759,9 @@
 
   function viewPlayedEvent(e) {
     const rows = e.teams;
+    // round-robin penalty minutes per team, from the penalties on the game sheets
+    const rrPim = new Map();
+    for (const g of e.games || []) if (!g.playoff) for (const x of g.events || []) if (x.type === 'penalty') rrPim.set(x.teamId, (rrPim.get(x.teamId) || 0) + (x.minutes || 0));
     const players = (e.players || []).slice().sort((a, b) => b.pts - a.pts || b.g - a.g || a.name.localeCompare(b.name));
     let rk = 0, prev = null; players.forEach((p, i) => { if (p.pts !== prev) rk = i + 1; p.rank = rk; prev = p.pts; });
     const missing = rows.filter((t) => t.boxMissing);
@@ -1769,7 +1772,8 @@
       { key: 'pts', label: 'PTS', val: (t) => t.rr.pts, html: (t) => `<span class="pts">${t.rr.pts}</span>` },
       { key: 'gf', label: 'GF', cls: 'hm', val: (t) => t.rr.gf }, { key: 'ga', label: 'GA', cls: 'hm', val: (t) => t.rr.ga },
       { key: 'diff', label: 'DIFF', val: (t) => t.rr.gf - t.rr.ga, html: (t) => { const d = t.rr.gf - t.rr.ga; return `<span class="${d > 0 ? 'pos' : d < 0 ? 'neg' : ''}">${sign(d)}</span>`; } },
-      { key: 'all', label: 'Overall', val: (t) => t.pts, html: (t) => `${t.w}-${t.l}-${t.t}` },
+      { key: 'pim', label: 'PIM', val: (t) => rrPim.get(t.id) || 0, title: 'Penalty minutes in the round robin' },
+      { key: 'all', label: 'Overall', cls: 'hm', val: (t) => t.pts, html: (t) => `${t.w}-${t.l}-${t.t}` },
     ], { key: 'seed', dir: 1, rowCls: (t) => (t.link?.id === myTeamId() ? 'me' : '') }));
     const days = [...new Set(e.schedule.map((s) => s.start.slice(0, 10)))];
     const champ = e.champion ? teamById.get(e.champion) : null;
