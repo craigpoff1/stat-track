@@ -98,9 +98,9 @@
   "location": "Silent Ice Center - Hesco Arena",
   "home": "Calgary Crusaders",
   "away": "Riggers",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 4,
   "playoff": false
  },
  {
@@ -111,9 +111,9 @@
   "location": "Silent Ice Center - Hesco Arena",
   "home": "Flyers",
   "away": "Airdrie Stars",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 10,
+  "awayScore": 1,
   "playoff": false
  },
  {
