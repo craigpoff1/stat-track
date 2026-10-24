@@ -72,9 +72,9 @@
   "location": "Silent Ice Center - Hesco Arena",
   "home": "Riggers",
   "away": "Flyers",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 4,
   "playoff": false
  },
  {
