@@ -150,9 +150,9 @@
   "location": "Silent Ice Center - Hesco Arena",
   "home": "Seed 4",
   "away": "Seed 5",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 5,
+  "awayScore": 2,
   "playoff": true
  },
  {

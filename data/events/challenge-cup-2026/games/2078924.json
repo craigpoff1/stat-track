@@ -1,0 +1,625 @@
+{
+ "id": "2078924",
+ "dateText": "Sunday, October 25, 2026 @ 11:15 a.m.",
+ "rink": "Silent Ice Center - Hesco Arena",
+ "status": "Final",
+ "home": {
+  "name": "2019 Lumberjacks HC",
+  "teamId": "415998",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 5
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "415995",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 2
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:16",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "19",
+    "name": "Elias Morianos"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:37",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Ryder Gotch"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:13",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "89",
+    "name": "Ladd Periard"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Walker Snell"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:13",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "scorer": {
+    "number": "25",
+    "name": "Cole Gant"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:49",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "scorer": {
+    "number": "73",
+    "name": "Aidan Naulakhia"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Vannie Li"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:49",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "88",
+    "name": "Carson Taylor"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:32",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "scorer": {
+    "number": "97",
+    "name": "Ben Chavarie"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:37",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "11",
+    "name": "Bodie Patterson"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:59",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "17",
+    "name": "Denver Gagnon"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:00",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "scorer": {
+    "number": "8",
+    "name": "Kaia Pryor"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Vannie Li"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:27",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "13",
+    "name": "Walker Snell"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:57",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "scorer": {
+    "number": "25",
+    "name": "Cole Gant"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:53",
+   "side": "home",
+   "team": "2019 Lumberjacks HC",
+   "player": {
+    "number": "97",
+    "name": "Ben Chavarie"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272841",
+   "number": "25",
+   "name": "Cole Gant",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272846",
+   "number": "97",
+   "name": "Ben Chavarie",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272834",
+   "number": "8",
+   "name": "Kaia Pryor",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272843",
+   "number": "73",
+   "name": "Aidan Naulakhia",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272847",
+   "number": "98",
+   "name": "Kaysen Gujral",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272845",
+   "number": "96",
+   "name": "Luca McIvor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272844",
+   "number": "78",
+   "name": "Amari Gill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272842",
+   "number": "71",
+   "name": "Preston Mills",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272848",
+   "number": "30",
+   "name": "Nixon Woods",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272840",
+   "number": "24",
+   "name": "Vann Fraser",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272839",
+   "number": "19",
+   "name": "Vannie Li",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272838",
+   "number": "15",
+   "name": "Axel Shinske",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272837",
+   "number": "14",
+   "name": "Dax Rauche",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272836",
+   "number": "11",
+   "name": "Luke Stoliker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272835",
+   "number": "10",
+   "name": "Adrien Amado",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272893",
+   "number": "89",
+   "name": "Ladd Periard",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272977",
+   "number": "19",
+   "name": "Elias Morianos",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272896",
+   "number": "98",
+   "name": "Mason MacDonald",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272953",
+   "number": "9",
+   "name": "Doc Desmet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272894",
+   "number": "88",
+   "name": "Carson Taylor",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273057",
+   "number": "8",
+   "name": "Rylan Geeraert",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272972",
+   "number": "71",
+   "name": "Cohen Waltho",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272961",
+   "number": "34",
+   "name": "Owen Brito",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273296",
+   "number": "31",
+   "name": "Colton Butt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272979",
+   "number": "20",
+   "name": "Finnley Nitchie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273021",
+   "number": "18",
+   "name": "Isaac Pannekoek",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273113",
+   "number": "17",
+   "name": "Denver Gagnon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272962",
+   "number": "16",
+   "name": "Owen Roberts",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273250",
+   "number": "13",
+   "name": "Walker Snell",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5273258",
+   "number": "11",
+   "name": "Bodie Patterson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272975",
+   "number": "10",
+   "name": "Ryder Gotch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272976",
+   "number": "1",
+   "name": "rokko gyenis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "415998",
+   "playerId": "5272848",
+   "number": "30",
+   "name": "Nixon Woods",
+   "seconds": 2700,
+   "ga": 2,
+   "shots": 14,
+   "saves": 12
+  },
+  {
+   "side": "away",
+   "teamId": "415995",
+   "playerId": "5272976",
+   "number": "1",
+   "name": "rokko gyenis",
+   "seconds": 2700,
+   "ga": 5,
+   "shots": 30,
+   "saves": 25
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 9,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 12,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 9,
+   "away": 7
+  }
+ ],
+ "start": "2026-10-25T11:15:00",
+ "gameNumber": 12,
+ "playoff": true,
+ "fetchedAt": "2026-10-25T19:04:49.964Z"
+}
