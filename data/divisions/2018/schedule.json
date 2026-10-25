@@ -799,9 +799,9 @@
   "location": "Vauxhall Recreation Centre",
   "home": "Young Kings Hockey",
   "away": "Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 1,
+  "awayScore": 8
  },
  {
   "id": "2020309",

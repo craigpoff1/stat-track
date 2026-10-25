@@ -163,9 +163,9 @@
   "location": "Silent Ice Center - Hesco Arena",
   "home": "Seed 1",
   "away": "Winner SF",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 7,
+  "awayScore": 2,
   "playoff": true
  }
 ]

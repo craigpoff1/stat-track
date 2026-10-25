@@ -1,0 +1,534 @@
+{
+ "id": "2078925",
+ "dateText": "Sunday, October 25, 2026 @ 2:15 p.m.",
+ "rink": "Silent Ice Center - Hesco Arena",
+ "status": "Final",
+ "home": {
+  "name": "2019 Flyers HC",
+  "teamId": "n:2019-flyers-hc",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 7
+ },
+ "away": {
+  "name": "Stars Hockey Academy",
+  "teamId": "415994",
+  "logo": "https://cloud3.rampinteractive.com/HSLChallengeCup/css/img/assocLogo.svg",
+  "score": 2
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:17",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "66",
+    "name": "Tucker Dorran"
+   },
+   "assists": [
+    {
+     "number": "93",
+     "name": "Rhett Osmond"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:32",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:02",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Owen Faith"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:56",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:19",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": {
+    "number": "21",
+    "name": "True Peters"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:19",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Bowen Kamlade"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:48",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": {
+    "number": "7",
+    "name": "Charles Rendle"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:55",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:29",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:37",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": {
+    "number": "21",
+    "name": "True Peters"
+   },
+   "assists": [
+    {
+     "number": "66",
+     "name": "Tucker Dorran"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:19",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:27",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Wyatt McIntosh"
+   },
+   "minutes": 2,
+   "infraction": "Interference"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:02",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    },
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:27",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "scorer": {
+    "number": null,
+    "name": ""
+   },
+   "assists": [
+    {
+     "number": null,
+     "name": ""
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:30",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Max Stephanian"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:19",
+   "side": "home",
+   "team": "2019 Flyers HC",
+   "player": {
+    "number": null,
+    "name": "Nohl Waites"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:19",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": {
+    "number": "21",
+    "name": "True Peters"
+   },
+   "minutes": 2,
+   "infraction": "Rough"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273309",
+   "number": "66",
+   "name": "Tucker Dorran",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273299",
+   "number": "21",
+   "name": "True Peters",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273251",
+   "number": "96",
+   "name": "Hayden Sullivan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273257",
+   "number": "93",
+   "name": "Rhett Osmond",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273083",
+   "number": "87",
+   "name": "Colin Fuller",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272914",
+   "number": "86",
+   "name": "Brock Rumsey",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272915",
+   "number": "8",
+   "name": "Owen Faith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273129",
+   "number": "7",
+   "name": "Charles Rendle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273127",
+   "number": "63",
+   "name": "George Turnbull",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272950",
+   "number": "37",
+   "name": "Jack Whittle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272895",
+   "number": "29",
+   "name": "Owen McEachern",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272963",
+   "number": "27",
+   "name": "Indie Dube",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272978",
+   "number": "2",
+   "name": "Liam Fulgencio",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273256",
+   "number": "19",
+   "name": "Nate Walsh",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5273298",
+   "number": "13",
+   "name": "Noah Tsoulamanis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272964",
+   "number": "11",
+   "name": "Elias Poffenroth",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272950",
+   "number": "37",
+   "name": "Jack Whittle",
+   "seconds": 2700,
+   "ga": 7,
+   "shots": 28,
+   "saves": 21
+  },
+  {
+   "side": "away",
+   "teamId": "415994",
+   "playerId": "5272895",
+   "number": "29",
+   "name": "Owen McEachern",
+   "seconds": 0,
+   "ga": 0,
+   "shots": 0,
+   "saves": 0
+  }
+ ],
+ "warnings": [
+  "home: no box score on the sheet (team identified by name)",
+  "home: box score has 0 goals, final is 7"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 14,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 3,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 11,
+   "away": 2
+  }
+ ],
+ "start": "2026-10-25T14:15:00",
+ "gameNumber": 13,
+ "playoff": true,
+ "fetchedAt": "2026-10-25T22:35:41.309Z"
+}
