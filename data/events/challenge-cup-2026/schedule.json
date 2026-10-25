@@ -124,9 +124,9 @@
   "location": "West Edmonton Mall - Ice Palace",
   "home": "Lumberjacks",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null,
+  "final": true,
+  "homeScore": 7,
+  "awayScore": 6,
   "playoff": false
  },
  {
