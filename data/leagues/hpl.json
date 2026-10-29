@@ -7,7 +7,7 @@
   "url": "https://hpl-winter-league.kreezee-sports.com",
   "platform": "Kreezee"
  },
- "fetchedAt": "2026-10-28T10:35:10.115Z",
+ "fetchedAt": "2026-10-29T10:54:10.727Z",
  "detail": "scores-only",
  "teams": [
   {
@@ -721,9 +721,9 @@
    "rink": "Canadian Rink",
    "home": "hpl:148549",
    "away": "hpl:148553",
-   "final": false,
-   "homeScore": null,
-   "awayScore": null,
+   "final": true,
+   "homeScore": 8,
+   "awayScore": 2,
    "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744581"
   },
   {
