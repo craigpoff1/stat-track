@@ -1,0 +1,783 @@
+{
+ "id": "2020332",
+ "dateText": "Saturday, October 31, 2026 @ 8:45 a.m.",
+ "rink": "Banff Recreation Centre - Arena 1",
+ "status": "Final",
+ "home": {
+  "name": "MOB Hockey",
+  "teamId": "402363",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/9524d9af-b482-4d16-ac71-406bd1b04891_MOB Hockey.png",
+  "score": 7
+ },
+ "away": {
+  "name": "O2 Grizzlies",
+  "teamId": "402366",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/ffa3994f-f1d1-4189-871c-59df5cdd4b1e_O2 Grizzlies.png",
+  "score": 4
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "14:08",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:05",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "5",
+    "name": "Theodore Wells"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:45",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "91",
+    "name": "Lola Carruthers"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Kasen Mackenzie"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:15",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "7",
+    "name": "Kasen Mackenzie"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:54",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "5",
+    "name": "Theodore Wells"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:26",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:04",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "55",
+    "name": "Owen Patey"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:51",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "12",
+    "name": "Marek Giroux-McKay"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:54",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:06",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Checking to the Head - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:15",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "10",
+    "name": "Kolt Martens"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:52",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "71",
+    "name": "Landon Miller"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:53",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "17",
+    "name": "Ashton McFadden"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:28",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "5",
+    "name": "Theodore Wells"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:13",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "10",
+    "name": "Kolt Martens"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:29",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "11",
+    "name": "Mason Blank"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:10",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "55",
+    "name": "Owen Patey"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:53",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "24",
+    "name": "Beckam Merlo"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Cameron Heath"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:09",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "87",
+    "name": "Jake Boldt"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Cameron Heath"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:58",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "10",
+    "name": "Jones Desmeules"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:57",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "87",
+    "name": "Jake Boldt"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:10",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "15",
+    "name": "River Amyotte"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:56",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": {
+    "number": "88",
+    "name": "Cameron Heath"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:50",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "71",
+    "name": "Landon Miller"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Porter Curlew"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:09",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": {
+    "number": "7",
+    "name": "Kasen Mackenzie"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:59",
+   "side": "away",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "18",
+    "name": "Bauer Poulsen"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "MCCOY FREEBURN"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5060539",
+   "number": "87",
+   "name": "Jake Boldt",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5060821",
+   "number": "5",
+   "name": "Theodore Wells",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061625",
+   "number": "91",
+   "name": "Lola Carruthers",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061519",
+   "number": "88",
+   "name": "Cameron Heath",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5062462",
+   "number": "24",
+   "name": "Beckam Merlo",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061624",
+   "number": "71",
+   "name": "Colten Dunn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5060819",
+   "number": "7",
+   "name": "Kasen Mackenzie",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061830",
+   "number": "55",
+   "name": "Owen Patey",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061918",
+   "number": "31",
+   "name": "Zander Pinksen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5062479",
+   "number": "21",
+   "name": "Chase Kern",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061917",
+   "number": "18",
+   "name": "Alexander Borjas",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061174",
+   "number": "15",
+   "name": "River Amyotte",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5062525",
+   "number": "11",
+   "name": "Mason Blank",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5062804",
+   "number": "10",
+   "name": "Kolt Martens",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5060621",
+   "number": "8",
+   "name": "Porter Curlew",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061117",
+   "number": "71",
+   "name": "Landon Miller",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061573",
+   "number": "18",
+   "name": "Bauer Poulsen",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5062650",
+   "number": "12",
+   "name": "Marek Giroux-McKay",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061460",
+   "number": "9",
+   "name": "MCCOY FREEBURN",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5060626",
+   "number": "67",
+   "name": "Rhys Dunn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061103",
+   "number": "44",
+   "name": "Wyatt Burns",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061473",
+   "number": "4",
+   "name": "Jaiden Sharma",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061279",
+   "number": "33",
+   "name": "Brooks Carver",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061914",
+   "number": "32",
+   "name": "Benett Lehouillier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5062617",
+   "number": "20",
+   "name": "Samuel Clark",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061105",
+   "number": "19",
+   "name": "Mackenzie Gunther",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061923",
+   "number": "17",
+   "name": "Ashton McFadden",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061410",
+   "number": "16",
+   "name": "Youngwoo Song",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061567",
+   "number": "13",
+   "name": "Holt Wiebach",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5062217",
+   "number": "10",
+   "name": "Jones Desmeules",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402363",
+   "playerId": "5061918",
+   "number": "31",
+   "name": "Zander Pinksen",
+   "seconds": 3300,
+   "ga": 4,
+   "shots": 17,
+   "saves": 13
+  },
+  {
+   "side": "away",
+   "teamId": "402366",
+   "playerId": "5061279",
+   "number": "33",
+   "name": "Brooks Carver",
+   "seconds": 3300,
+   "ga": 7,
+   "shots": 43,
+   "saves": 36
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 9,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 10,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 24,
+   "away": 11
+  }
+ ],
+ "start": "2026-10-31T08:45:00",
+ "gameNumber": 560,
+ "fetchedAt": "2026-10-31T20:00:56.774Z"
+}

@@ -1,0 +1,778 @@
+{
+ "id": "2020338",
+ "dateText": "Saturday, October 31, 2026 @ 10:30 a.m.",
+ "rink": "Banff Recreation Centre - Arena 1",
+ "status": "Final",
+ "home": {
+  "name": "Young Kings Hockey",
+  "teamId": "402371",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0fb8c71b-98d4-4866-ab88-20c422c00d87_Young Kings Hockey.png",
+  "score": 5
+ },
+ "away": {
+  "name": "Queen City Young Guns",
+  "teamId": "402370",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0daab77a-f942-4905-8755-9614e8a94401_Queen City Young Guns.png",
+  "score": 4
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:53",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "87",
+    "name": "Nolan Leblanc"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:22",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "67",
+    "name": "Gunner Basler"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Ezra Ebrahim"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:03",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "66",
+    "name": "KJ Burns"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:25",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "23",
+    "name": "Rhett Rhinas"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:49",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:49",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:49",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "22",
+    "name": "Kasen Sinclair"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:48",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "17",
+    "name": "Kyren Dovichak"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:03",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Carter Weisgerber"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "16:33",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "11",
+    "name": "Beau Wiest"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:11",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "66",
+    "name": "KJ Burns"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Ezra Ebrahim"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:27",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "23",
+    "name": "Rhett Rhinas"
+   },
+   "minutes": 2,
+   "infraction": "Checking to the Head - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:19",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "7",
+    "name": "Carter Weisgerber"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Maxton Burleigh"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:32",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "98",
+    "name": "Kashton Clarke"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:40",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "scorer": {
+    "number": "24",
+    "name": "Jett Rudnitski"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:42",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "5",
+    "name": "Liam Aulie"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:24",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "71",
+    "name": "Tyler Jonasson"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:15",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "11",
+    "name": "Beau Wiest"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:37",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "scorer": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Leo Giesbrecht"
+    }
+   ],
+   "tags": [
+    "SHG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:01",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "23",
+    "name": "Rhett Rhinas"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:21",
+   "side": "away",
+   "team": "Queen City Young Guns",
+   "player": {
+    "number": "15",
+    "name": "Ezra Ebrahim"
+   },
+   "minutes": 2,
+   "infraction": "Holding the Stick - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:21",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:03",
+   "side": "home",
+   "team": "Young Kings Hockey",
+   "player": {
+    "number": "61",
+    "name": "Nixon Greve"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061435",
+   "number": "61",
+   "name": "Nixon Greve",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061467",
+   "number": "7",
+   "name": "Carter Weisgerber",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062360",
+   "number": "23",
+   "name": "Rhett Rhinas",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062191",
+   "number": "17",
+   "name": "Kyren Dovichak",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062643",
+   "number": "98",
+   "name": "Kashton Clarke",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062631",
+   "number": "93",
+   "name": "Banks Fischer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061127",
+   "number": "91",
+   "name": "Charlie Cox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062428",
+   "number": "79",
+   "name": "Spencer Diaz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5060440",
+   "number": "75",
+   "name": "Rhett Lomness",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061426",
+   "number": "71",
+   "name": "Nixon Lafreniere",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5060760",
+   "number": "29",
+   "name": "Maxton Burleigh",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061132",
+   "number": "20",
+   "name": "Kaique Thunder Chief",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061688",
+   "number": "15",
+   "name": "Rylan Mclean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5060442",
+   "number": "12",
+   "name": "Connor Chisholm",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062429",
+   "number": "11",
+   "name": "Beau Wiest",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5062636",
+   "number": "10",
+   "name": "Leo Giesbrecht",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060717",
+   "number": "87",
+   "name": "Nolan Leblanc",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060721",
+   "number": "67",
+   "name": "Gunner Basler",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060678",
+   "number": "66",
+   "name": "KJ Burns",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061824",
+   "number": "24",
+   "name": "Jett Rudnitski",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062223",
+   "number": "98",
+   "name": "Everett Fleischhaker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061275",
+   "number": "9",
+   "name": "Xander Erdie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060716",
+   "number": "71",
+   "name": "Tyler Jonasson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061795",
+   "number": "7",
+   "name": "Ellie Zenzeluk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062281",
+   "number": "5",
+   "name": "Liam Aulie",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060731",
+   "number": "4",
+   "name": "Henrick Schneider",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061806",
+   "number": "31",
+   "name": "Evander Flegel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060989",
+   "number": "29",
+   "name": "Hunter Pickering",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061285",
+   "number": "22",
+   "name": "Kasen Sinclair",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060727",
+   "number": "15",
+   "name": "Ezra Ebrahim",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5062215",
+   "number": "11",
+   "name": "Brixton Marceau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5061799",
+   "number": "10",
+   "name": "MacArthur Gawley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060688",
+   "number": "1",
+   "name": "Clark Lees",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402371",
+   "playerId": "5061132",
+   "number": "20",
+   "name": "Kaique Thunder Chief",
+   "seconds": 3300,
+   "ga": 4,
+   "shots": 38,
+   "saves": 34
+  },
+  {
+   "side": "away",
+   "teamId": "402370",
+   "playerId": "5060688",
+   "number": "1",
+   "name": "Clark Lees",
+   "seconds": 3300,
+   "ga": 5,
+   "shots": 33,
+   "saves": 28
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 11
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 14
+  },
+  {
+   "label": "3",
+   "home": 19,
+   "away": 13
+  }
+ ],
+ "start": "2026-10-31T10:30:00",
+ "gameNumber": 566,
+ "fetchedAt": "2026-10-31T20:00:58.646Z"
+}
