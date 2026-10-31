@@ -1,0 +1,749 @@
+{
+ "id": "2020311",
+ "dateText": "Friday, October 30, 2026 @ 4:00 p.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final SO",
+ "home": {
+  "name": "Sask Super Selects",
+  "teamId": "402372",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/10720e6d-8633-426f-81cb-53d4a6557234_Sask Super Selects.png",
+  "score": 14
+ },
+ "away": {
+  "name": "North Stars Hockey Academy",
+  "teamId": "402364",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/50534b6c-c2f8-47ed-a2b4-6af4afde02a0_North Stars Hockey Academy.png",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 6,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:49",
+   "side": "away",
+   "team": "North Stars Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Calder Nahajowich"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:54",
+   "side": "away",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "88",
+    "name": "Oaklin Berlinic"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:01",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:47",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "August Kachur"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:04",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:17",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "9",
+    "name": "Gavin Potter"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Gunner Keays"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:29",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "August Kachur"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:08",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:11",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Ryker Ellis"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:47",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "14",
+    "name": "Jersey Jones"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Gunner Keays"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:26",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:05",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Ryker Ellis"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:44",
+   "side": "away",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Nash Ziegler"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:05",
+   "side": "away",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "15",
+    "name": "Cohen Weisgerber"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:32",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Jersey Jones"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:05",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "9",
+    "name": "Gavin Potter"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Theo Kolla"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:48",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:58",
+   "side": "away",
+   "team": "North Stars Hockey Academy",
+   "player": {
+    "number": "7",
+    "name": "Calder Nahajowich"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:39",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "9",
+    "name": "Gavin Potter"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Ryker Ellis"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:34",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "8",
+    "name": "August Kachur"
+   },
+   "assists": [
+    {
+     "number": "4",
+     "name": "Zeke Loeppky"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:02",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "minutes": 2,
+   "infraction": "Head-Butting - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:48",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:14",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "8",
+    "name": "August Kachur"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:27",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5062732",
+   "number": "91",
+   "name": "Lindon Barlage",
+   "g": 6,
+   "a": 0,
+   "pts": 6,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5060912",
+   "number": "9",
+   "name": "Gavin Potter",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061040",
+   "number": "12",
+   "name": "Ryker Ellis",
+   "g": 2,
+   "a": 3,
+   "pts": 5,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061284",
+   "number": "8",
+   "name": "August Kachur",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061828",
+   "number": "29",
+   "name": "Gunner Keays",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5075320",
+   "number": "14",
+   "name": "Jersey Jones",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061811",
+   "number": "64",
+   "name": "Everett Walton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5060723",
+   "number": "4",
+   "name": "Zeke Loeppky",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061068",
+   "number": "27",
+   "name": "Carson Condy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5062016",
+   "number": "26",
+   "name": "Canaan Dashney",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061805",
+   "number": "13",
+   "name": "Theo Kolla",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062559",
+   "number": "7",
+   "name": "Calder Nahajowich",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5060694",
+   "number": "98",
+   "name": "Ellis MacDougall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5061156",
+   "number": "9",
+   "name": "Cameron Yin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062011",
+   "number": "88",
+   "name": "Oaklin Berlinic",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062466",
+   "number": "87",
+   "name": "Benjamin Hayward",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062475",
+   "number": "8",
+   "name": "Maximus Young",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5060799",
+   "number": "77",
+   "name": "Mason Paszko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5060784",
+   "number": "5",
+   "name": "Leo Halabi",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062001",
+   "number": "38",
+   "name": "Paisley Kolotylo",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5061163",
+   "number": "34",
+   "name": "NATHAN KIM",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062573",
+   "number": "29",
+   "name": "Nash Ziegler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062667",
+   "number": "22",
+   "name": "Taylor Albers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5061257",
+   "number": "2",
+   "name": "Ben Szmyrko",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062677",
+   "number": "15",
+   "name": "Cohen Weisgerber",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5062201",
+   "number": "10",
+   "name": "Wyatt Carstairs",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061068",
+   "number": "27",
+   "name": "Carson Condy",
+   "seconds": 0,
+   "ga": 1,
+   "shots": 5,
+   "saves": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402364",
+   "playerId": "5061163",
+   "number": "34",
+   "name": "NATHAN KIM",
+   "seconds": 0,
+   "ga": 14,
+   "shots": 18,
+   "saves": 4
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 7,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 11,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 18,
+   "away": 5
+  }
+ ],
+ "start": "2026-10-30T16:00:00",
+ "gameNumber": 539,
+ "fetchedAt": "2026-10-31T01:37:08.036Z"
+}
