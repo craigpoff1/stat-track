@@ -859,9 +859,9 @@
   "location": "Banff Recreation Centre - Arena 1",
   "home": "Queen City Young Guns",
   "away": "Young Kings Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 7,
+  "awayScore": 5
  },
  {
   "id": "2020323",
@@ -871,9 +871,9 @@
   "location": "Morinville Silent Ice Gardens",
   "home": "Saints Pro Hockey Academy",
   "away": "Capital City Knights",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 10,
+  "awayScore": 3
  },
  {
   "id": "2020326",
