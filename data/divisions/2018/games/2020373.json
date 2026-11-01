@@ -1,0 +1,807 @@
+{
+ "id": "2020373",
+ "dateText": "Sunday, November 1, 2026 @ 12:15 p.m.",
+ "rink": "Banff Recreation Centre - Arena 1",
+ "status": "Final",
+ "home": {
+  "name": "O2 Grizzlies",
+  "teamId": "402366",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/ffa3994f-f1d1-4189-871c-59df5cdd4b1e_O2 Grizzlies.png",
+  "score": 4
+ },
+ "away": {
+  "name": "North Stars Academy Wild",
+  "teamId": "402365",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/972df715-0e29-4178-bc14-8d865109aaa4_North Stars Academy Wild.png",
+  "score": 10
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "18:35",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "43",
+    "name": "Lincoln Derrick"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "18:01",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "15",
+    "name": "Cash Griffith"
+   },
+   "assists": [
+    {
+     "number": "37",
+     "name": "James Cochrane"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "17:12",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "87",
+    "name": "Ace Walgenbach"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Beau Riddoch"
+    },
+    {
+     "number": "12",
+     "name": "Easton Paul"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "16:03",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "20",
+    "name": "Samuel Clark"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Marek Giroux-McKay"
+    },
+    {
+     "number": "19",
+     "name": "Mackenzie Gunther"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:15",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "88",
+    "name": "Beau Riddoch"
+   },
+   "minutes": 2,
+   "infraction": "Too Many Players - Bench Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:15",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "71",
+    "name": "Landon Miller"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:30",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "19",
+    "name": "Mackenzie Gunther"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:37",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "15:04",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "81",
+    "name": "Jack Jorgenson"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:42",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "15",
+    "name": "Cash Griffith"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:21",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "6",
+    "name": "Jack Stefanyk"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Easton Paul"
+    },
+    {
+     "number": "7",
+     "name": "Matthew Walmsley"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:26",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "12",
+    "name": "Easton Paul"
+   },
+   "assists": [
+    {
+     "number": "81",
+     "name": "Jack Jorgenson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:12",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "19",
+    "name": "Mackenzie Gunther"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:52",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "88",
+    "name": "Beau Riddoch"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:19",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "6",
+    "name": "Jack Stefanyk"
+   },
+   "assists": [
+    {
+     "number": "16",
+     "name": "Wyatt Knowles"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "19:39",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "18",
+    "name": "Bauer Poulsen"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "19:39",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "7",
+    "name": "Matthew Walmsley"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "18:57",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "8",
+    "name": "Porter Curlew"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:07",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "33",
+    "name": "Brooks Carver"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "16:09",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "12",
+    "name": "Marek Giroux-McKay"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:26",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "81",
+    "name": "Jack Jorgenson"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Grayson Laughlin"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:15",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": {
+    "number": "12",
+    "name": "Marek Giroux-McKay"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Mackenzie Gunther"
+    },
+    {
+     "number": "20",
+     "name": "Samuel Clark"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:34",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "16",
+    "name": "Wyatt Knowles"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:53",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": {
+    "number": "44",
+    "name": "Wyatt Burns"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:06",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "7",
+    "name": "Matthew Walmsley"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:35",
+   "side": "away",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "12",
+    "name": "Easton Paul"
+   },
+   "assists": [
+    {
+     "number": "6",
+     "name": "Jack Stefanyk"
+    },
+    {
+     "number": "8",
+     "name": "Grayson Laughlin"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061117",
+   "number": "71",
+   "name": "Landon Miller",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5062617",
+   "number": "20",
+   "name": "Samuel Clark",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061105",
+   "number": "19",
+   "name": "Mackenzie Gunther",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5062650",
+   "number": "12",
+   "name": "Marek Giroux-McKay",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061460",
+   "number": "9",
+   "name": "MCCOY FREEBURN",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5060621",
+   "number": "8",
+   "name": "Porter Curlew",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5060626",
+   "number": "67",
+   "name": "Rhys Dunn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061103",
+   "number": "44",
+   "name": "Wyatt Burns",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061473",
+   "number": "4",
+   "name": "Jaiden Sharma",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061279",
+   "number": "33",
+   "name": "Brooks Carver",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061914",
+   "number": "32",
+   "name": "Benett Lehouillier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061573",
+   "number": "18",
+   "name": "Bauer Poulsen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061923",
+   "number": "17",
+   "name": "Ashton McFadden",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061410",
+   "number": "16",
+   "name": "Youngwoo Song",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5061567",
+   "number": "13",
+   "name": "Holt Wiebach",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402366",
+   "playerId": "5062217",
+   "number": "10",
+   "name": "Jones Desmeules",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062813",
+   "number": "6",
+   "name": "Jack Stefanyk",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062118",
+   "number": "15",
+   "name": "Cash Griffith",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061921",
+   "number": "12",
+   "name": "Easton Paul",
+   "g": 2,
+   "a": 2,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062805",
+   "number": "88",
+   "name": "Beau Riddoch",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5060852",
+   "number": "87",
+   "name": "Ace Walgenbach",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5237629",
+   "number": "81",
+   "name": "Jack Jorgenson",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061007",
+   "number": "43",
+   "name": "Lincoln Derrick",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5060875",
+   "number": "8",
+   "name": "Grayson Laughlin",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062547",
+   "number": "72",
+   "name": "Brandtly O'Quinn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5092880",
+   "number": "71",
+   "name": "Kesler Atwater",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062538",
+   "number": "7",
+   "name": "Matthew Walmsley",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5061215",
+   "number": "44",
+   "name": "Dawson Hildebrandt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062098",
+   "number": "37",
+   "name": "James Cochrane",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062685",
+   "number": "22",
+   "name": "Jameson Hunker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402365",
+   "playerId": "5062846",
+   "number": "16",
+   "name": "Wyatt Knowles",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 13,
+   "away": 16
+  },
+  {
+   "label": "3",
+   "home": 10,
+   "away": 17
+  }
+ ],
+ "start": "2026-11-01T12:15:00",
+ "gameNumber": 601,
+ "fetchedAt": "2026-11-01T20:32:24.028Z"
+}

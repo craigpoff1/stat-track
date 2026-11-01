@@ -1003,9 +1003,9 @@
   "location": "Banff Recreation Centre - Arena 1",
   "home": "Spartan Hockey Academy",
   "away": "MOB Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 10,
+  "awayScore": 2
  },
  {
   "id": "2020358",
@@ -1015,9 +1015,9 @@
   "location": "Morinville Silent Ice Gardens",
   "home": "North Stars Hockey Academy",
   "away": "Saints Pro Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 9
  },
  {
   "id": "2020361",
@@ -1027,9 +1027,9 @@
   "location": "Banff Recreation Centre - Arena 1",
   "home": "Queen City Young Guns",
   "away": "Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 11
  },
  {
   "id": "2020364",
@@ -1039,9 +1039,9 @@
   "location": "Morinville Silent Ice Gardens",
   "home": "Sask Super Selects",
   "away": "Aces Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 5,
+  "awayScore": 8
  },
  {
   "id": "2020366",
@@ -1051,9 +1051,9 @@
   "location": "Banff Recreation Centre - Arena 1",
   "home": "Gorillas Hockey Academy",
   "away": "Spartan Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 1,
+  "awayScore": 12
  },
  {
   "id": "2020373",
@@ -1063,9 +1063,9 @@
   "location": "Banff Recreation Centre - Arena 1",
   "home": "O2 Grizzlies",
   "away": "North Stars Academy Wild",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 10
  },
  {
   "id": "2020377",

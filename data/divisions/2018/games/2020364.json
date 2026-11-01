@@ -1,0 +1,795 @@
+{
+ "id": "2020364",
+ "dateText": "Sunday, November 1, 2026 @ 9:45 a.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "Sask Super Selects",
+  "teamId": "402372",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/10720e6d-8633-426f-81cb-53d4a6557234_Sask Super Selects.png",
+  "score": 5
+ },
+ "away": {
+  "name": "Aces Hockey Academy",
+  "teamId": "402359",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e70f74fc-7003-4dde-883c-b5c931abce4a_Aces Hockey Academy.png",
+  "score": 8
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 4
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "13:42",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "64",
+    "name": "Everett Walton"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:27",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Luke Runzer"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Keir Fisher"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:55",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Luke Runzer"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Keir Fisher"
+    },
+    {
+     "number": "19",
+     "name": "Jovanni Pellizzari"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:11",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Luke Runzer"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Kale Duquette"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:14",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "19",
+    "name": "Jovanni Pellizzari"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:14",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:14",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "26",
+    "name": "Canaan Dashney"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:16",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Gavin Potter"
+    },
+    {
+     "number": "64",
+     "name": "Everett Walton"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:11",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [
+    {
+     "number": "13",
+     "name": "Theo Kolla"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:54",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Thoren Milroy"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:54",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:27",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "7",
+    "name": "Luke Runzer"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:48",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "4",
+    "name": "Zeke Loeppky"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:53",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:59",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:19",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Jersey Jones"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:32",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Thoren Milroy"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:34",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "scorer": {
+    "number": "8",
+    "name": "August Kachur"
+   },
+   "assists": [
+    {
+     "number": "91",
+     "name": "Lindon Barlage"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:07",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Jovanni Pellizzari"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:39",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:34",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "23",
+    "name": "Brooks Duiker"
+   },
+   "assists": [
+    {
+     "number": "82",
+     "name": "Luciano Bit"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:35",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "26",
+    "name": "Canaan Dashney"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:09",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "98",
+    "name": "Keir Fisher"
+   },
+   "assists": [
+    {
+     "number": "23",
+     "name": "Brooks Duiker"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:49",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "29",
+    "name": "Gunner Keays"
+   },
+   "minutes": 2,
+   "infraction": "Boarding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:02",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "6",
+    "name": "Gavin Pettinato"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:51",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:51",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "91",
+    "name": "Lindon Barlage"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:15",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Keir Fisher"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:53",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "13",
+    "name": "Theo Kolla"
+   },
+   "minutes": 2,
+   "infraction": "Checking to the Head - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:36",
+   "side": "away",
+   "team": "Aces Hockey Academy",
+   "scorer": {
+    "number": "82",
+    "name": "Luciano Bit"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:47",
+   "side": "home",
+   "team": "Sask Super Selects",
+   "player": {
+    "number": "12",
+    "name": "Ryker Ellis"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061828",
+   "number": "29",
+   "name": "Gunner Keays",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061284",
+   "number": "8",
+   "name": "August Kachur",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061040",
+   "number": "12",
+   "name": "Ryker Ellis",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5062732",
+   "number": "91",
+   "name": "Lindon Barlage",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5060912",
+   "number": "9",
+   "name": "Gavin Potter",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061811",
+   "number": "64",
+   "name": "Everett Walton",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5060723",
+   "number": "4",
+   "name": "Zeke Loeppky",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5062016",
+   "number": "26",
+   "name": "Canaan Dashney",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5075320",
+   "number": "14",
+   "name": "Jersey Jones",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061805",
+   "number": "13",
+   "name": "Theo Kolla",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5062467",
+   "number": "7",
+   "name": "Luke Runzer",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5076459",
+   "number": "82",
+   "name": "Luciano Bit",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5061119",
+   "number": "98",
+   "name": "Keir Fisher",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5062824",
+   "number": "23",
+   "name": "Brooks Duiker",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5061756",
+   "number": "92",
+   "name": "Preston Baker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5060996",
+   "number": "9",
+   "name": "Thoren Milroy",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5061219",
+   "number": "72",
+   "name": "Mason Medeiros",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5061418",
+   "number": "71",
+   "name": "Ben Bushell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5061450",
+   "number": "6",
+   "name": "Gavin Pettinato",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5060880",
+   "number": "29",
+   "name": "Andre Proulx",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5061574",
+   "number": "19",
+   "name": "Jovanni Pellizzari",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5061657",
+   "number": "18",
+   "name": "Alexander McNeill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5062621",
+   "number": "11",
+   "name": "Kale Duquette",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402359",
+   "playerId": "5061956",
+   "number": "10",
+   "name": "Austin Keough",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402372",
+   "playerId": "5061807",
+   "number": "43",
+   "name": "Tristen Bulmer",
+   "seconds": 3300,
+   "ga": 8,
+   "shots": 0,
+   "saves": -8
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-11-01T09:45:00",
+ "gameNumber": 592,
+ "fetchedAt": "2026-11-01T20:32:22.118Z"
+}
