@@ -1,0 +1,655 @@
+{
+ "id": "2020379",
+ "dateText": "Sunday, November 1, 2026 @ 2:00 p.m.",
+ "rink": "Banff Recreation Centre - Arena 1",
+ "status": "Final",
+ "home": {
+  "name": "Sauce Hockey Academy",
+  "teamId": "402368",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/17e9bc47-5a50-4d7e-8db2-416c7e6e3d17_Sauce Hockey Academy.png",
+  "score": 4
+ },
+ "away": {
+  "name": "Gorillas Hockey Academy",
+  "teamId": "402358",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/d99627bb-007b-44a0-8d46-95cfeebd4951_Gorillas Hockey Academy.png",
+  "score": 2
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:36",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Ashton Ortman"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:53",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "77",
+    "name": "Kingston Fox"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:26",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Cashel Martschuk"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Isamu Lysak"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "19:37",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Zyan Olynyk"
+   },
+   "minutes": 2,
+   "infraction": "Checking to the Head - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "19:09",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "28",
+    "name": "Maxwell Doyle"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:41",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "77",
+    "name": "Jaxon Achtymichuk"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:33",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "11",
+    "name": "Isamu Lysak"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Owen Bruce"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:15",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "8",
+    "name": "Owen Bruce"
+   },
+   "assists": [
+    {
+     "number": "28",
+     "name": "Beckham Block"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:03",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "77",
+    "name": "Jaxon Achtymichuk"
+   },
+   "minutes": 5,
+   "infraction": "Checking to the Head - Major (5 min) + Game Misc (add GM)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:16",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Brendan Hughes"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:39",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "player": {
+    "number": "13",
+    "name": "Mackenzie Clark"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "18:48",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "43",
+    "name": "Gabriel Welsh"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Jack Furlong"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:01",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Remi (Remington) Voth"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:43",
+   "side": "away",
+   "team": "Gorillas Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Kaysen Derosa"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Elias Woobin Jung"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:04",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Isamu Lysak"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:33",
+   "side": "home",
+   "team": "Sauce Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Isamu Lysak"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060443",
+   "number": "8",
+   "name": "Owen Bruce",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061549",
+   "number": "19",
+   "name": "Cashel Martschuk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061781",
+   "number": "16",
+   "name": "Remi (Remington) Voth",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061780",
+   "number": "11",
+   "name": "Isamu Lysak",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061974",
+   "number": "98",
+   "name": "Brendan Hughes",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062494",
+   "number": "94",
+   "name": "Halle Scarff",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062353",
+   "number": "9",
+   "name": "Nash Swelin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061687",
+   "number": "77",
+   "name": "Kingston Fox",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061098",
+   "number": "72",
+   "name": "Madden Proskurniak",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061420",
+   "number": "71",
+   "name": "jasper shirley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5062357",
+   "number": "48",
+   "name": "Luke Bateman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061680",
+   "number": "35",
+   "name": "Darcy Edgett",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061397",
+   "number": "28",
+   "name": "Beckham Block",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061782",
+   "number": "21",
+   "name": "Henry Anderson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060551",
+   "number": "18",
+   "name": "Jacob Brisebois",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061398",
+   "number": "17",
+   "name": "Ashton Ortman",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5060846",
+   "number": "10",
+   "name": "Vaughn Berdusco",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060877",
+   "number": "43",
+   "name": "Gabriel Welsh",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061227",
+   "number": "17",
+   "name": "Kaysen Derosa",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061234",
+   "number": "91",
+   "name": "Liam Milsted",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061201",
+   "number": "88",
+   "name": "Jack Furlong",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061184",
+   "number": "8",
+   "name": "Zyan Olynyk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062703",
+   "number": "77",
+   "name": "Jaxon Achtymichuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 7
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060979",
+   "number": "74",
+   "name": "Vincent Grimbly",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061993",
+   "number": "7",
+   "name": "Elias Woobin Jung",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061638",
+   "number": "29",
+   "name": "Emerson Dolan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062474",
+   "number": "28",
+   "name": "Maxwell Doyle",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5062000",
+   "number": "26",
+   "name": "Logan Bell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061652",
+   "number": "18",
+   "name": "Cruz Smith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061922",
+   "number": "14",
+   "name": "Zachary Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061598",
+   "number": "13",
+   "name": "Mackenzie Clark",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5060815",
+   "number": "11",
+   "name": "Patrick Carroll",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402368",
+   "playerId": "5061680",
+   "number": "35",
+   "name": "Darcy Edgett",
+   "seconds": 0,
+   "ga": 2,
+   "shots": 29,
+   "saves": 27
+  },
+  {
+   "side": "away",
+   "teamId": "402358",
+   "playerId": "5061638",
+   "number": "29",
+   "name": "Emerson Dolan",
+   "seconds": 0,
+   "ga": 4,
+   "shots": 27,
+   "saves": 23
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-11-01T14:00:00",
+ "gameNumber": 607,
+ "fetchedAt": "2026-11-02T01:31:03.416Z"
+}

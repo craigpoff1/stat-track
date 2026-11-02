@@ -1075,9 +1075,9 @@
   "location": "Morinville Silent Ice Gardens",
   "home": "Rebels Hockey Academy",
   "away": "Aces Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 4
  },
  {
   "id": "2020379",
@@ -1087,9 +1087,9 @@
   "location": "Banff Recreation Centre - Arena 1",
   "home": "Sauce Hockey Academy",
   "away": "Gorillas Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 2
  },
  {
   "id": "2020381",
@@ -1099,9 +1099,9 @@
   "location": "Morinville Silent Ice Gardens",
   "home": "Capital City Knights",
   "away": "Saints Pro Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 5,
+  "awayScore": 6
  },
  {
   "id": "2020383",
@@ -1111,9 +1111,9 @@
   "location": "Banff Recreation Centre - Arena 1",
   "home": "North Stars Academy Wild",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 4
  },
  {
   "id": "2020449",

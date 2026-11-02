@@ -1,0 +1,660 @@
+{
+ "id": "2020383",
+ "dateText": "Sunday, November 1, 2026 @ 3:45 p.m.",
+ "rink": "Banff Recreation Centre - Arena 1",
+ "status": "Final",
+ "home": {
+  "name": "North Stars Academy Wild",
+  "teamId": "402365",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/972df715-0e29-4178-bc14-8d865109aaa4_North Stars Academy Wild.png",
+  "score": 3
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "402362",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0cd48b9f-3336-4e7d-820f-93822f7dd4cf_Calgary Crusaders.png",
+  "score": 4
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:01",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "11",
+    "name": "Jac Roberts"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Weston Part"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:21",
+   "side": "home",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "8",
+    "name": "Grayson Laughlin"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:55",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "72",
+    "name": "Cruz Blais"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:02",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "25",
+    "name": "Abel Whitlock"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:43",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "71",
+    "name": "Jack Johnston"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:16",
+   "side": "home",
+   "team": "North Stars Academy Wild",
+   "player": {
+    "number": "16",
+    "name": "Wyatt Knowles"
+   },
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:43",
+   "side": "home",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "22",
+    "name": "Jameson Hunker"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:07",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "20",
+    "name": "Tommy Garrioch"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:18",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "10",
+    "name": "Chase Doudelet"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:54",
+   "side": "home",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "37",
+    "name": "James Cochrane"
+   },
+   "assists": [
+    {
+     "number": "6",
+     "name": "Jack Stefanyk"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:28",
+   "side": "home",
+   "team": "North Stars Academy Wild",
+   "scorer": {
+    "number": "16",
+    "name": "Wyatt Knowles"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:45",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "20",
+    "name": "Tommy Garrioch"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Jack Johnston"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:07",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "43",
+    "name": "Bodie McKean"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:30",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": {
+    "number": "8",
+    "name": "Weston Part"
+   },
+   "minutes": 2,
+   "infraction": "Illegal Equipment - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:58",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "87",
+    "name": "Eddie Kennedy"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:55",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": {
+    "number": "20",
+    "name": "Tommy Garrioch"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062098",
+   "number": "37",
+   "name": "James Cochrane",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062685",
+   "number": "22",
+   "name": "Jameson Hunker",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062846",
+   "number": "16",
+   "name": "Wyatt Knowles",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062805",
+   "number": "88",
+   "name": "Beau Riddoch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5060852",
+   "number": "87",
+   "name": "Ace Walgenbach",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5237629",
+   "number": "81",
+   "name": "Jack Jorgenson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5060875",
+   "number": "8",
+   "name": "Grayson Laughlin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062547",
+   "number": "72",
+   "name": "Brandtly O'Quinn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5092880",
+   "number": "71",
+   "name": "Kesler Atwater",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062538",
+   "number": "7",
+   "name": "Matthew Walmsley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062813",
+   "number": "6",
+   "name": "Jack Stefanyk",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5061215",
+   "number": "44",
+   "name": "Dawson Hildebrandt",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5061007",
+   "number": "43",
+   "name": "Lincoln Derrick",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062118",
+   "number": "15",
+   "name": "Cash Griffith",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5061921",
+   "number": "12",
+   "name": "Easton Paul",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5060503",
+   "number": "20",
+   "name": "Tommy Garrioch",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061654",
+   "number": "87",
+   "name": "Eddie Kennedy",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5060828",
+   "number": "11",
+   "name": "Jac Roberts",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061904",
+   "number": "95",
+   "name": "Wilkes Ashton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5062678",
+   "number": "9",
+   "name": "Thomas Doetzel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061470",
+   "number": "8",
+   "name": "Weston Part",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061171",
+   "number": "72",
+   "name": "Cruz Blais",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061188",
+   "number": "71",
+   "name": "Jack Johnston",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061469",
+   "number": "7",
+   "name": "Joelle Part",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061208",
+   "number": "5",
+   "name": "Brayson Berlando",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061513",
+   "number": "43",
+   "name": "Bodie McKean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061913",
+   "number": "32",
+   "name": "Leo Bautista",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5060495",
+   "number": "3",
+   "name": "Lincoln Balicki",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061143",
+   "number": "29",
+   "name": "Hank Snell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061492",
+   "number": "25",
+   "name": "Abel Whitlock",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061671",
+   "number": "21",
+   "name": "Walker Philpott",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061186",
+   "number": "2",
+   "name": "Colten Loschuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5060489",
+   "number": "10",
+   "name": "Chase Doudelet",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402365",
+   "playerId": "5062547",
+   "number": "72",
+   "name": "Brandtly O'Quinn",
+   "seconds": 3300,
+   "ga": 4,
+   "shots": 0,
+   "saves": -4
+  },
+  {
+   "side": "away",
+   "teamId": "402362",
+   "playerId": "5061913",
+   "number": "32",
+   "name": "Leo Bautista",
+   "seconds": 3300,
+   "ga": 3,
+   "shots": 0,
+   "saves": -3
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-11-01T15:45:00",
+ "gameNumber": 611,
+ "fetchedAt": "2026-11-02T01:31:05.234Z"
+}
