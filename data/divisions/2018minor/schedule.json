@@ -547,9 +547,9 @@
   "location": "Silent Ice Center - Hesco Arena",
   "home": "Riggers Hockey Academy",
   "away": "Northern Hockey Club",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 1,
+  "awayScore": 27
  },
  {
   "id": "2020427",
