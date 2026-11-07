@@ -1,6 +1,6 @@
 // League + divisions this site tracks. IDs come from hockeysuperleague.ca URLs.
-// The main site is 2019 Major. Extra divisions (e.g. 2018 Major) get a simpler stat gallery under
-// site/<slug>/ — pick one with DIVISION=<slug> for scrape.mjs / build.mjs (default: the main site).
+// The main site is 2019 Major. Extra divisions (2018 Major + 2018 Minor) feed the simpler stat gallery
+// under site/2018/ — pick one with DIVISION=<slug> for scrape.mjs / build.mjs (default: the main site).
 const league = {
   baseUrl: 'https://hockeysuperleague.ca',
   leagueName: 'Hockey Super League',
@@ -26,6 +26,16 @@ export const divisions = {
     myTeamId: null,
     regulationMinutes: 55,  // 15 + 20 + 20 (P1 clocks top out at 15:00, P2/P3 at 20:00; goalie lines say 55) — not 2019's 3 x 15
     dataDir: 'data/divisions/2018', outDir: 'site/2018/data',
+  },
+  // HSL lists this one as just "2018" (the Bow Valley, YYC Jays… group); we call it 2018 Minor.
+  // Shown on the same 2018 page as Major, behind a Major / Minor switch.
+  '2018minor': {
+    ...league, slug: '2018minor', primary: false,
+    divisionId: 32764,
+    divisionName: '2018 Minor',
+    myTeamId: null,
+    regulationMinutes: 55,  // assumed same as 2018 Major (15 + 20 + 20) — check goalie notes after the first build
+    dataDir: 'data/divisions/2018minor', outDir: 'site/2018/data/minor',
   },
 };
 

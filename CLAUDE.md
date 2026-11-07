@@ -38,11 +38,13 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
   its own section. Ask before mixing.
 
 ## 2018 Major gallery (site/2018/)
-- Simple companion page: standings, scoring leaders + goalies for HSL **2018 Major (division 32765** — not
-  32764, a different "2018" group), with a team filter. Own small `site/2018/gallery.js`, shares
-  `style.css`. Linked subtly from the main footer ("2018 Major stats").
+- Simple companion page: standings, scoring leaders + goalies for HSL **2018 Major (division 32765)** and
+  **2018 Minor (division 32764**, listed on HSL as plain "2018"), behind a Major / Minor switch (`#major` /
+  `#minor` deep links; team filter remembered per division). Own small `site/2018/gallery.js`, shares
+  `style.css`. Linked subtly from the main footer ("2018 Major & Minor stats").
 - `scripts/config.mjs` has `divisions`; `DIVISION=2018 node scripts/scrape.mjs|build.mjs` uses
-  `data/divisions/2018/` → `site/2018/data/`. Secondary divisions skip tournaments/identity.
+  `data/divisions/2018/` → `site/2018/data/`; `DIVISION=2018minor` uses `data/divisions/2018minor/` →
+  `site/2018/data/minor/`. Minor's 55-minute game length is assumed (same as Major) — confirm from goalie notes. Secondary divisions skip tournaments/identity.
 - Same `SITE_PASSWORD` + salt, so the key a device saved on the main site decrypts it; no own gate
   (locked visitors are sent to the main site). CI steps for 2018 are non-fatal by design.
 

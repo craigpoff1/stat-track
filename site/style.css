@@ -514,6 +514,7 @@ div.ld{cursor:default}
 .g-nav{display:flex!important;align-items:center}
 .g-nav a{font:700 13px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}.g-nav a:hover{color:var(--us)}
 .g-teams{flex-wrap:wrap;overflow:visible}
+.g-div{display:flex;gap:6px;margin:0 0 14px}.g-div .btn{text-decoration:none}
 .g-teams .wkchip{background:transparent;cursor:pointer}.g-teams .wkchip.on{background:var(--us)}
 @media (max-width:720px){.g-teams{flex-wrap:nowrap;overflow-x:auto}}
 .g-l5{font:700 12px var(--cond);letter-spacing:.08em;color:var(--ink3)}

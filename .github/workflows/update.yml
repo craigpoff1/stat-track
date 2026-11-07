@@ -71,6 +71,9 @@ jobs:
       - name: Scrape 2018 Major (non-fatal)
         run: DIVISION=2018 node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }} || echo "2018 scrape failed; keeping last copies"
 
+      - name: Scrape 2018 Minor (non-fatal)
+        run: DIVISION=2018minor node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }} || echo "2018 Minor scrape failed; keeping last copies"
+
       - name: Build stats (encrypted)
         run: node scripts/build.mjs
         env:
@@ -78,6 +81,11 @@ jobs:
 
       - name: Build 2018 Major gallery (encrypted, non-fatal)
         run: DIVISION=2018 node scripts/build.mjs || echo "2018 build failed; gallery keeps showing its error page"
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+
+      - name: Build 2018 Minor gallery (encrypted, non-fatal)
+        run: DIVISION=2018minor node scripts/build.mjs || echo "2018 Minor build failed; its tab shows an error"
         env:
           SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 

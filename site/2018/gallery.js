@@ -1,7 +1,9 @@
-// 2018 Major stat gallery — a deliberately simple companion to the main (2019) site: standings and
-// scoring leaders for the whole division, with a team filter that narrows both tables.
-// Data: data/stats.enc.json, built by `DIVISION=2018 node scripts/build.mjs` and encrypted with the
-// same password + salt as the main site, so a device unlocked there opens this page directly.
+// 2018 stat gallery — a deliberately simple companion to the main (2019) site: standings and
+// scoring leaders for a whole division, with a team filter that narrows the tables. Two divisions
+// behind a Major / Minor switch (#major / #minor links open one directly):
+//   Major: data/stats.enc.json        (DIVISION=2018 node scripts/build.mjs)
+//   Minor: data/minor/stats.enc.json  (DIVISION=2018minor node scripts/build.mjs)
+// Encrypted with the same password + salt as the main site, so a device unlocked there opens this page.
 (() => {
   const $app = document.getElementById('app');
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -9,6 +11,10 @@
   const pct = (x) => (x == null ? '—' : `${(x * 100).toFixed(1)}%`);
   const short = (n) => String(n).replace(/\b(Hockey Academy|Hockey Club|Hockey|Academy)\b/g, ' ').replace(/\s+/g, ' ').trim();
   const logo = (t) => `<span class="logo">${t?.logo ? `<img src="${esc(t.logo)}" alt="" loading="lazy" onerror="this.remove()">` : ''}</span>`;
+  const DIVS = {
+    major: { label: '2018 Major', dir: 'data/' },
+    minor: { label: '2018 Minor', dir: 'data/minor/' },
+  };
   const store = {
     get: (k, d) => { try { const v = localStorage.getItem('st:g2018:' + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
     set: (k, v) => { try { localStorage.setItem('st:g2018:' + k, JSON.stringify(v)); } catch { /* private mode */ } },
@@ -18,9 +24,9 @@
   const KEY_STORE = 'st:siteKey';
   const b64d = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
   const savedKey = () => { try { return localStorage.getItem(KEY_STORE) || sessionStorage.getItem(KEY_STORE); } catch { return null; } };
-  async function load() {
-    const enc = await fetch('data/stats.enc.json', { cache: 'no-cache' });
-    if (!enc.ok) { const r = await fetch('data/stats.json', { cache: 'no-cache' }); if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }
+  async function load(dir) {
+    const enc = await fetch(dir + 'stats.enc.json', { cache: 'no-cache' });
+    if (!enc.ok) { const r = await fetch(dir + 'stats.json', { cache: 'no-cache' }); if (!r.ok) throw Object.assign(new Error('HTTP ' + r.status), { status: r.status }); return r.json(); }
     const env = await enc.json(), raw = savedKey();
     if (!raw) return null;
     try {
@@ -54,9 +60,14 @@
   }
 
   // ---------------------------------------------------------------- page
+  // Major / Minor switch, shown on every state of the page (loaded, locked, not built yet)
+  const divBar = () => `<div class="g-div" role="group" aria-label="Division">${Object.entries(DIVS).map(([k, d]) => `<a class="btn ${k === div ? 'on' : ''}" href="#${k}" data-div="${k}" ${k === div ? 'aria-current="page"' : ''}>${d.label}</a>`).join('')}</div>`;
+  let div = 'major', onClick = null; // onClick: the loaded page's click handler (replaced on each render)
+  const tKey = () => (div === 'major' ? 'team' : 'team:' + div); // team ids differ per division
+
   function render(S) {
     const teams = S.teams, byId = new Map(teams.map((t) => [String(t.id), t]));
-    let sel = String(store.get('team', '') || '');
+    let sel = String(store.get(tKey(), '') || '');
     if (sel && !byId.has(sel)) sel = '';
     const perGP = (n, gp) => (gp ? n / gp : null);
     const draw = () => {
@@ -65,8 +76,8 @@
         ...[...teams].sort((a, b) => short(a.name).localeCompare(short(b.name))).map((t) => `<button type="button" class="wkchip ${sel === String(t.id) ? 'on' : ''}" data-t="${esc(t.id)}">${esc(short(t.name))}</button>`)].join('');
       const skaters = S.players.filter((p) => (!p.isGoalie || p.pts > 0) && (!sel || String(p.teamId) === sel));
       const goalies = (S.goalies || []).filter((g) => !sel || String(g.teamId) === sel);
-      $app.innerHTML = `
-        <div class="ptitle"><div><div class="k">${esc(S.meta.season)} · ${esc(S.meta.league)}</div><h1>2018 Major</h1>
+      $app.innerHTML = `${divBar()}
+        <div class="ptitle"><div><div class="k">${esc(S.meta.season)} · ${esc(S.meta.league)}</div><h1>${esc(S.meta.division)}</h1>
           <div class="s">${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final · tap a team to filter · tap a column to sort</div></div></div>
         <div class="wkbar g-teams" role="group" aria-label="Filter by team">${chips}</div>
         <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="gold">${tSel ? esc(short(tSel.name)) : 'Standings'}</h2><span class="meta">${tSel ? `${tSel.rank} of ${teams.length} in division` : `${teams.length} teams`}</span></div><div class="tw"><table id="g-st"></table></div></section></div>
@@ -112,10 +123,12 @@
         { key: 'so', label: 'SO', cls: 'hm', val: (g) => g.so, title: 'Shutouts' },
       ], { key: 'min' });
     };
-    const GOALIE_NOTE = `Goalie lines are volunteer-entered and checked against each game sheet: games where goals against don’t match the score, shots don’t match the shots table, or minutes are missing are left out of save % and GAA (tap ⓘ for which games). W-L-T goes to the goalie with the most minutes. 2018 Major games are ${S.meta.regulationMinutes} minutes (15 + 20 + 20).`;
+    const GOALIE_NOTE = `Goalie lines are volunteer-entered and checked against each game sheet: games where goals against don’t match the score, shots don’t match the shots table, or minutes are missing are left out of save % and GAA (tap ⓘ for which games). W-L-T goes to the goalie with the most minutes. ${esc(S.meta.division)} games are counted as ${S.meta.regulationMinutes} minutes.`;
     const rate = (x) => (x == null ? '—' : x >= 1 ? '1.000' : x.toFixed(3).replace(/^0/, ''));
     const gameDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    $app.addEventListener('click', (e) => {
+    onClick = (e) => {
+      const c = e.target.closest('.g-teams [data-t]');
+      if (c) { sel = c.dataset.t; store.set(tKey(), sel); draw(); return; }
       const b = e.target.closest('.g-dq'); if (!b) return;
       const g = (S.goalies || []).find((x) => String(x.id) === b.dataset.g), box = document.getElementById('g-dn');
       if (!g || !box) return;
@@ -123,23 +136,39 @@
       box.dataset.g = b.dataset.g; box.hidden = false;
       box.innerHTML = `<b>Data notes — ${esc(g.name)}</b> <span class="muted">Save % from ${g.gpSv} of ${g.gp} games · GAA from ${g.gpGaa} of ${g.gp}</span><ul>${g.flags.map((f) => `<li>${esc(gameDate(f.date))} vs ${esc(short(byId.get(String(f.opp))?.name || ''))}: ${f.notes.map(esc).join('; ')}</li>`).join('')}</ul>`;
       box.scrollIntoView({ block: 'nearest' });
-    });
-    $app.addEventListener('click', (e) => {
-      const c = e.target.closest('.g-teams [data-t]'); if (!c) return;
-      sel = c.dataset.t; store.set('team', sel); draw();
-    });
+    };
     draw();
     const upd = new Date(S.meta.updatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
     document.getElementById('upd').textContent = `${S.meta.league} · ${S.meta.season} · Updated ${upd}`;
     document.getElementById('foot').innerHTML = `Unofficial stats built from the <a class="lnk" href="${esc(S.meta.sourceUrl)}" target="_blank" rel="noopener">${esc(S.meta.league)}</a> published game sheets · ${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final · <a class="lnk" href="../">2019 Major site</a>`;
   }
 
-  load()
-    .then((S) => {
-      if (S) return render(S);
-      $app.innerHTML = `<div class="ptitle"><div><div class="k">Team access</div><h1>Unlock first</h1>
-        <div class="s">These stats use the same team password as the 2019 Major site.</div></div></div>
-        <p><a class="btn on" href="../">Unlock on the main site →</a></p><p class="note" style="padding-left:0">Then come back to this page (or use the "2018 Major stats" link at the bottom of the main site).</p>`;
-    })
-    .catch((err) => { $app.innerHTML = `<div class="ptitle"><div><div class="k">Error</div><h1>Couldn't load stats</h1><div class="s">${esc(err.message)}</div></div></div>`; });
+  $app.addEventListener('click', (e) => { if (onClick) onClick(e); });
+  let seq = 0; // ignore a slow load that finishes after the user already switched division
+  function go() {
+    const h = location.hash.slice(1);
+    div = DIVS[h] ? h : DIVS[store.get('div')] ? store.get('div') : 'major';
+    store.set('div', div);
+    document.getElementById('upd').textContent = ''; document.getElementById('foot').textContent = '';
+    onClick = null;
+    const my = ++seq, d = DIVS[div];
+    document.title = `${d.label} Stats`;
+    $app.innerHTML = `${divBar()}<div class="loading">Loading ${esc(d.label)} stats…</div>`;
+    load(d.dir)
+      .then((S) => {
+        if (my !== seq) return;
+        if (S) return render(S);
+        $app.innerHTML = `${divBar()}<div class="ptitle"><div><div class="k">Team access</div><h1>Unlock first</h1>
+          <div class="s">These stats use the same team password as the 2019 Major site.</div></div></div>
+          <p><a class="btn on" href="../">Unlock on the main site →</a></p><p class="note" style="padding-left:0">Then come back to this page (or use the "2018 stats" link at the bottom of the main site).</p>`;
+      })
+      .catch((err) => {
+        if (my !== seq) return;
+        $app.innerHTML = err.status === 404
+          ? `${divBar()}<div class="ptitle"><div><div class="k">Coming soon</div><h1>No ${esc(d.label)} stats yet</h1><div class="s">They appear after the next nightly update.</div></div></div>`
+          : `${divBar()}<div class="ptitle"><div><div class="k">Error</div><h1>Couldn't load stats</h1><div class="s">${esc(err.message)}</div></div></div>`;
+      });
+  }
+  window.addEventListener('hashchange', go);
+  go();
 })();
