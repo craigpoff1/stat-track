@@ -168,6 +168,7 @@
   function mount(el, draw) {
     if (!el) return; let w = 0;
     const run = () => { const nw = Math.round(el.clientWidth); if (nw && nw !== w) { w = nw; el.innerHTML = draw(nw); } };
+    el._draw = run; el.classList.add('mounted'); // a chart in a hidden tab has no width yet; showTeamTab redraws it
     run();
     if ('ResizeObserver' in window) new ResizeObserver(() => { clearTimeout(el._t); el._t = setTimeout(run, 120); }).observe(el);
   }
@@ -935,6 +936,18 @@
   }
 
   // Team page — everything about one team, nothing league-wide. "/" is the selected team.
+  // Team page tabs: in-memory, so a reload starts on Overview but re-renders (toggle, team switch) keep the tab.
+  const TEAM_TABS = [['overview', 'Overview'], ['stats', 'Stats'], ['roster', 'Roster'], ['results', 'Results']];
+  let teamTab = 'overview';
+  function showTeamTab(key) {
+    teamTab = key;
+    document.querySelectorAll('[data-ttab]').forEach((b) => { if (b.closest('.ttabs')) b.setAttribute('aria-selected', String(b.dataset.ttab === key)); });
+    document.querySelectorAll('.tpane').forEach((p) => { p.hidden = p.dataset.pane !== key; });
+    document.querySelectorAll(`.tpane[data-pane="${key}"] .mounted`).forEach((el) => el._draw && el._draw());
+    // The bar is sticky, so measure the spot just above it: if we're scrolled past it, start the new tab at its top.
+    const top = document.getElementById('ttabs-top');
+    if (top && top.getBoundingClientRect().top < 0) window.scrollTo(0, scrollY + top.getBoundingClientRect().top);
+  }
   function viewTeam(id) {
     if (id === 'mine') { location.replace('#/'); return ''; }
     const t = teamById.get(String(id));
@@ -1005,27 +1018,34 @@
         <div class="stats wkstats"><div class="st"><span class="l">Record</span><span class="v">${tw.rec.W}-${tw.rec.L}-${tw.rec.T}</span></div><div class="st"><span class="l">Goals for</span><span class="v">${tw.gfga[0]}</span></div><div class="st"><span class="l">Goals against</span><span class="v">${tw.gfga[1]}</span></div><div class="st"><span class="l">Games</span><span class="v">${tw.myFinals.length}</span></div></div>
         <div class="pb"><div class="sub">Firsts &amp; milestones</div>${firstsList(tw.moments, { showPlayer: true })}</div>
         <div class="note"><a class="lnk" href="#/weekend/${tw.key}">See the whole division that weekend →</a></div>`, { gold: true }) : '';
+    const pane = (key, html) => `<div class="tpane" data-pane="${key}" role="tabpanel"${teamTab === key ? '' : ' hidden'}>${html}</div>`;
+    const tabs = `<div id="ttabs-top"></div><div class="ttabs" role="tablist">${TEAM_TABS.map(([k, l]) => `<button role="tab" data-ttab="${k}" aria-selected="${teamTab === k}">${l}</button>`).join('')}</div>`;
     return `
       ${hero(t, { action })}
       ${incNote(t.id)}
+      ${tabs}
+      ${pane('overview', `
       ${latest ? featuredGame(latest, id, `Last game · ${esc(t.short)}`) : ''}
       <div style="margin-bottom:18px">${panel(`Up next · ${esc(t.short)}`, gameCards(upcoming.slice(0, 4), id), { gold: true, meta: `${upcoming.length} remaining` })}</div>
       ${wkPanel ? `<div style="margin-bottom:18px">${wkPanel}</div>` : ''}
-      <div style="margin-bottom:18px">${panel(`${esc(t.short)} scoring`, `<div class="pb"><div class="leaders">${leaderRows(tLeaders.slice(0, 12), (p) => favs.has(p.id), tLeaders)}</div></div>`, { meta: '<button class="lnk linkbtn" data-scroll="roster-anchor">Full roster ↓</button>' })}</div>
+      <div style="margin-bottom:18px">${panel(`${esc(t.short)} scoring`, `<div class="pb"><div class="leaders">${leaderRows(tLeaders.slice(0, 12), (p) => favs.has(p.id), tLeaders)}</div></div>`, { meta: '<button class="lnk linkbtn" data-ttab="roster">Full roster →</button>' })}</div>`)}
+      ${pane('stats', `
       <div style="margin-bottom:18px">${panel('Season progression', `<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Goals for (running)</span><span><i style="background:var(--red)"></i>Goals against (running)</span><span><i style="background:var(--us);height:8px"></i>W</span><span><i style="background:#5A2A22;height:8px"></i>L</span></div><div class="chart" id="prog"></div></div>`, { gold: true, meta: `${A.gp} GP · by weekend` })}</div>
       <div class="grid g-7-5">
         ${panel('When goals happen', '<div class="pb"><div class="legend"><span><i style="background:var(--us)"></i>Scored (up)</span><span><i style="background:var(--red)"></i>Allowed (down)</span></div><div class="chart" id="heat"></div><div id="heat-notes"></div></div>', { meta: '3-minute stretches' })}
         ${panel('By period', `<div class="pb"><div class="legend"><span><i style="background:var(--red)"></i>Goals against</span><span><i style="background:var(--us)"></i>Goals for</span></div><div class="chart" id="byper"></div></div>`, { meta: `${A.gp} GP` })}
       </div>
-      <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div id="net-ctl" class="net-ctl"></div><div class="chart" id="net"></div></div><div class="note">A line joins a passer and a scorer on the same goal. Hover a player to see only their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>
-      <div id="roster-anchor" style="margin-bottom:18px">${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team PIM ${A.pim}` })}</div>
-      <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="tgoal"></table></div><div class="note">Team save % ${rate(A.svPct)} (from shots on goal). ${GOALIE_NOTE}</div>`)}</div>
+      <div style="margin-bottom:18px">${panel('Linemates', '<div class="pb"><div id="net-ctl" class="net-ctl"></div><div class="chart" id="net"></div></div><div class="note">A line joins a passer and a scorer on the same goal. Hover a player to see only their connections. Fills in as the season goes on.</div>', { meta: '<span id="net-meta"></span>' })}</div>`)}
+      ${pane('roster', `
+      <div style="margin-bottom:18px">${panel('Roster', '<div class="tw"><table id="roster"></table></div>', { meta: `Team PIM ${A.pim}` })}</div>
+      <div style="margin-bottom:18px">${panel('Goalies', `<div class="tw"><table id="tgoal"></table></div><div class="note">Team save % ${rate(A.svPct)} (from shots on goal). ${GOALIE_NOTE}</div>`)}</div>`)}
+      ${pane('results', `
       <div style="margin-bottom:18px">${panel('Results', weekendGroups(D().finalsOf(id), id, { open: 1, newestFirst: true }), { meta: `${A.w}-${A.l}-${A.t} · ${A.tGames ? 'incl. tournaments' : 'league games'}` })}</div>
       ${(() => { const apps = appearances(t.id); return apps.length ? `<div style="margin-bottom:18px">${panel('Tournaments', `<div class="next wrap4">${apps.map(({ e, t: et }) => `<a class="nx" href="${et.href}"><div class="d">${statusChip(e)} ${esc(evDates(e))}</div><div class="o">${logo(et)}<span>${esc(e.name)}</span><span class="res ${et.w > et.l ? 'W' : et.w < et.l ? 'L' : 'T'}">${et.w}-${et.l}-${et.t}</span></div><div class="r">Seed ${et.seed} of ${e.teams.length}${e.champion === et.id ? ' · Champions' : ''}</div></a>`).join('')}</div>`, { gold: true, meta: 'Not counted in league records' })}</div>` : ''; })()}
       <div class="grid g-6-6">
         ${panel('By weekend', '<div class="tw"><table id="wk"></table></div>')}
         ${panel('Head to head', '<div class="tw"><table id="h2h"></table></div>')}
-      </div>`;
+      </div>`)}`;
   }
 
   function result(gameId, teamId) {
@@ -1919,6 +1939,7 @@
   function render() {
     const path = location.hash.replace(/^#/, '') || '/';
     hooks = [];
+    if (!/^\/?$|^\/team\//.test(path)) teamTab = 'overview'; // leaving team pages: "Team" opens on Overview again
     let html = notFound();
     for (const [re, fn] of routes) { const m = path.match(re); if (m) { html = fn(...m.slice(1)); break; } }
     if (!html) return; // view redirected
@@ -2121,6 +2142,8 @@
     if (!e.target.closest('#tmenu')) closeTeamMenu();
     const tg = e.target.closest('[data-inct]');
     if (tg) { store.set('incTourn', tg.dataset.inct === '1'); render(); return; }
+    const tt = e.target.closest('[data-ttab]');
+    if (tt) { e.preventDefault(); showTeamTab(tt.dataset.ttab); return; }
     const sc = e.target.closest('[data-scroll]');
     if (sc) { e.preventDefault(); document.getElementById(sc.dataset.scroll)?.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' }); }
   });

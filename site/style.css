@@ -526,3 +526,10 @@ div.ld{cursor:default}
 @media (max-width:720px){.m-only{display:inline}#skaters td.sk-name{max-width:118px;overflow:hidden;text-overflow:ellipsis}}
 .ld .nm span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fs-gl{margin:8px 0 2px;font-size:13px;color:var(--ink2)}.fs-gl .k{font:700 11px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-right:4px}.fs-gl small{color:var(--ink3)}
+/* ---------- team page tabs ---------- */
+.ttabs{position:sticky;top:0;z-index:20;display:flex;gap:2px;margin:0 0 18px;background:var(--bg);border-bottom:1px solid var(--line);font-family:var(--cond);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:15px}
+.ttabs button{flex:0 0 auto;padding:12px 16px 10px;background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;color:var(--ink2);font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;transition:color .15s,border-color .15s}
+.ttabs button:hover{color:var(--ink)}
+.ttabs button[aria-selected="true"]{color:var(--ink);border-color:var(--us)}
+.ttabs button:focus-visible{outline:2px solid var(--us);outline-offset:-2px}
+@media (max-width:720px){.ttabs{margin:0 -16px 16px;padding:0 4px}.ttabs button{flex:1 1 0;padding:12px 4px 10px;font-size:14px}}
