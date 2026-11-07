@@ -16,8 +16,10 @@ function icsUnescape(v) {
 
 // "20260927T080000" (local, TZID given) -> "2026-09-27T08:00:00"
 function icsLocal(v) {
-  const m = v.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})/);
-  return m ? `${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}:${m[6]}` : v;
+  const m = v.match(/^(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2}))?/);
+  if (!m) return v;
+  // All-day entries (placeholder games with no time yet) stay date-only; the site shows "Time TBD".
+  return m[4] ? `${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}:${m[6]}` : `${m[1]}-${m[2]}-${m[3]}`;
 }
 
 export function parseSchedule(icsText, divisionName) {

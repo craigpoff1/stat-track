@@ -25,7 +25,7 @@
     return new Date(y, m - 1, day, h, mi);
   }
   const dt = (s, o = { month: 'short', day: 'numeric' }) => localDate(s).toLocaleDateString('en-CA', o);
-  const tm = (s) => localDate(s).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  const tm = (s) => (String(s).includes('T') ? localDate(s).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : 'Time TBD');
   const rate = (x) => (x == null ? '—' : x >= 1 ? '1.000' : x.toFixed(3).replace(/^0/, ''));
   const pct = (x, dp = 1) => (x == null ? '—' : (x * 100).toFixed(dp) + '%');
   const sign = (n) => (n > 0 ? '+' + n : n < 0 ? '−' + Math.abs(n) : '0');

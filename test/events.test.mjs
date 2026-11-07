@@ -25,6 +25,16 @@ test('tournament calendar: tournamentgame UIDs and prefixed summaries', () => {
   assert.deepEqual([g.id, g.home, g.away, g.homeScore, g.awayScore, g.final], ['2034531', 'Bandits', 'MOB Hockey', 5, 6, true]);
 });
 
+// Placeholder games (e.g. playoff slots) come as all-day events: DTSTART;VALUE=DATE:20270501, no time.
+test('date-only calendar entries become an ISO date without a time', () => {
+  const ics = [
+    'BEGIN:VCALENDAR', 'BEGIN:VEVENT', 'DESCRIPTION:Game #707', 'DTSTART;VALUE=DATE:20270501',
+    'SUMMARY:2019 Major: Capital City Knights vs HC Calgary Bandits', 'UID:leaguegame-2020479', 'END:VEVENT', 'END:VCALENDAR',
+  ].join('\r\n');
+  const [g] = parseSchedule(ics, '2019 Major');
+  assert.equal(g.start, '2027-05-01');
+});
+
 // RAMP dropped the "@rampinteractive.com" suffix from calendar UIDs on 2026-10-18; both forms must parse.
 test('calendar UIDs with and without the @domain suffix', () => {
   const ev = (uid) => ['BEGIN:VEVENT', 'DESCRIPTION:Game #146\\nFinal: 1 - 8', 'DTSTART;TZID=America/Edmonton:20260925T163000',
