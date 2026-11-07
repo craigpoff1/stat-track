@@ -144,7 +144,8 @@ const gameSummaries = [];
 const dataWarnings = [];
 
 for (const g of games) {
-  if (g.status !== 'Final' || !g.home.teamId || !g.away.teamId) {
+  // "Final", "Final OT", "Final SO" — scorekeepers mark overtime/shootout games this way
+  if (!/^Final\b/.test(g.status || '') || !g.home.teamId || !g.away.teamId) {
     dataWarnings.push({ gameId: g.id, message: `skipped: status ${g.status}, teams ${g.home.teamId}/${g.away.teamId}` });
     continue;
   }
