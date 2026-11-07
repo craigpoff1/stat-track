@@ -1,0 +1,668 @@
+{
+ "id": "2020419",
+ "dateText": "Saturday, November 7, 2026 @ 1:45 p.m.",
+ "rink": "East Calgary Twin Arena Blue",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402378",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/6328b806-13ae-465b-a6ae-a17ff44dbfb0_Spartan Hockey Academy.png",
+  "score": 2
+ },
+ "away": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402373",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/cec76136-a07c-4e79-a639-794d7a811a07_HC Calgary Bandits.png",
+  "score": 8
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 5
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:33",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "34",
+    "name": "Ellie Ferguson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:00",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "4",
+    "name": "Sutter Rice"
+   },
+   "assists": [
+    {
+     "number": "9",
+     "name": "Zakk Head"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:01",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Dominic Longeau"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:05",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "94",
+    "name": "Jordyn Wall"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "15:57",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "22",
+    "name": "Gabriel Parks"
+   },
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:57",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "93",
+    "name": "Elliot Eaton"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "10:30",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Austin Sundquist"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:57",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "71",
+    "name": "Hayden Baba"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:15",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "18",
+    "name": "Abigail Stajkowski"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:08",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "9",
+    "name": "Zakk Head"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Abigail Stajkowski"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:14",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:35",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "34",
+    "name": "Ellie Ferguson"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:01",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "22",
+    "name": "Gabriel Parks"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:35",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Austin Mitchell"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:09",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "8",
+    "name": "Beckham Buchanan"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:45",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:18",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "22",
+    "name": "Gabriel Parks"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:45",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "9",
+    "name": "Zakk Head"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:45",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Austin Sundquist"
+   },
+   "minutes": 5,
+   "infraction": "Body Checking - Major (5 min) In-Game - NOT 2014s"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062405",
+   "number": "91",
+   "name": "Dominic Longeau",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5061412",
+   "number": "16",
+   "name": "Austin Mitchell",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062687",
+   "number": "93",
+   "name": "Elliot Eaton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062578",
+   "number": "8",
+   "name": "Hersh Wolch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060643",
+   "number": "71",
+   "name": "Hayden Baba",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060531",
+   "number": "63",
+   "name": "Nolan Meas",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062618",
+   "number": "5",
+   "name": "Cresten Desrosiers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062577",
+   "number": "44",
+   "name": "Jett Wolch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062571",
+   "number": "42",
+   "name": "Jacky Futers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060649",
+   "number": "4",
+   "name": "Rycker Kawula",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062515",
+   "number": "31",
+   "name": "Cooper Holmen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060827",
+   "number": "19",
+   "name": "Raiden Quefelec",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060630",
+   "number": "18",
+   "name": "Knox Buchanan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060631",
+   "number": "17",
+   "name": "Austin Sundquist",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 7
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062514",
+   "number": "15",
+   "name": "Hayes Pokolm",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062670",
+   "number": "10",
+   "name": "Calvin Copp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061002",
+   "number": "9",
+   "name": "Zakk Head",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061606",
+   "number": "34",
+   "name": "Ellie Ferguson",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061911",
+   "number": "10",
+   "name": "Carter Pi",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060763",
+   "number": "4",
+   "name": "Sutter Rice",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062671",
+   "number": "18",
+   "name": "Abigail Stajkowski",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5092064",
+   "number": "94",
+   "name": "Jordyn Wall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062180",
+   "number": "8",
+   "name": "Beckham Buchanan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061496",
+   "number": "77",
+   "name": "Carter Wood",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060902",
+   "number": "71",
+   "name": "Rory Powell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060811",
+   "number": "43",
+   "name": "Aubree Tobin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060844",
+   "number": "32",
+   "name": "Vaughn Lally",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062672",
+   "number": "30",
+   "name": "Madison Stajkowski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062189",
+   "number": "23",
+   "name": "Ava Rees",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062469",
+   "number": "22",
+   "name": "Gabriel Parks",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061579",
+   "number": "12",
+   "name": "Beckett Habberfield",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062515",
+   "number": "31",
+   "name": "Cooper Holmen",
+   "seconds": 3300,
+   "ga": 8,
+   "shots": 26,
+   "saves": 18
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060844",
+   "number": "32",
+   "name": "Vaughn Lally",
+   "seconds": 3300,
+   "ga": 2,
+   "shots": 22,
+   "saves": 20
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-11-07T13:45:00",
+ "gameNumber": 647,
+ "fetchedAt": "2026-11-07T22:49:13.599Z"
+}

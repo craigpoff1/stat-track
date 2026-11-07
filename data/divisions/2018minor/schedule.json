@@ -523,9 +523,9 @@
   "location": "East Calgary Twin Arena Red",
   "home": "Bow Valley Jr. Bigfoot",
   "away": "YYC Jays",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 13
  },
  {
   "id": "2020419",
@@ -535,9 +535,9 @@
   "location": "East Calgary Twin Arena Blue",
   "home": "Spartan Hockey Academy",
   "away": "HC Calgary Bandits",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 8
  },
  {
   "id": "2020422",
