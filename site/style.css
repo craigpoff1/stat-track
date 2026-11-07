@@ -533,3 +533,17 @@ div.ld{cursor:default}
 .ttabs button[aria-selected="true"]{color:var(--ink);border-color:var(--us)}
 .ttabs button:focus-visible{outline:2px solid var(--us);outline-offset:-2px}
 @media (max-width:720px){.ttabs{margin:0 -16px 16px;padding:0 4px}.ttabs button{flex:1 1 0;padding:12px 4px 10px;font-size:14px}}
+/* ---------- compact team banner on phones: tabs + next game reach the first screen ---------- */
+@media (max-width:520px){
+  .hero{margin:4px 0 14px}
+  .hero .plate{gap:12px;padding:12px 14px}
+  .hero .logo{width:44px;height:44px}
+  .hero .rk{font-size:11px;letter-spacing:.16em}
+  .hero h1{font-size:26px;line-height:.95}
+  .hero .rec{font-size:14px;margin-top:3px;letter-spacing:.02em}
+  .hero .stats{grid-template-columns:repeat(3,1fr)}
+  .hero .st{padding:8px 10px}
+  .hero .st .l{font-size:10px;letter-spacing:.1em}
+  .hero .st .v{font-size:24px;margin-top:2px}
+  .hero .st .s{font-size:11px;margin-top:1px}
+}
