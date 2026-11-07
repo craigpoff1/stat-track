@@ -1,0 +1,685 @@
+{
+ "id": "2020392",
+ "dateText": "Friday, November 6, 2026 @ 4:45 p.m.",
+ "rink": "Silent Ice Center - Hatch Co. Arena",
+ "status": "Final",
+ "home": {
+  "name": "South Sask Academy",
+  "teamId": "402377",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e513f1eb-1607-430a-80d1-2c55526f29b9_South Sask Academy.png",
+  "score": 5
+ },
+ "away": {
+  "name": "Wolverines Hockey Academy",
+  "teamId": "402379",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/f7347df2-5cbb-4bda-9254-f5b9b6876b62_Wolverines Hockey Academy.png",
+  "score": 7
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:46",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Riley Leier"
+    },
+    {
+     "number": "94",
+     "name": "Atlas Kittler"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:51",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [
+    {
+     "number": "24",
+     "name": "Noah Harvey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "19:50",
+   "side": "home",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:09",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "79",
+    "name": "Jude Choufi"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:06",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Luciano Dinino"
+   },
+   "assists": [
+    {
+     "number": "79",
+     "name": "Jude Choufi"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:13",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Hartley Nixon"
+   },
+   "assists": [
+    {
+     "number": "79",
+     "name": "Jude Choufi"
+    },
+    {
+     "number": "11",
+     "name": "Anze Neurauter"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:24",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "79",
+    "name": "Jude Choufi"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Jaizley Arcand Auigbelle"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:44",
+   "side": "home",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:59",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Nathan Neis"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:02",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "15",
+    "name": "Logan Kelloway"
+   },
+   "assists": [
+    {
+     "number": "3",
+     "name": "bennett gosling"
+    },
+    {
+     "number": "24",
+     "name": "Noah Harvey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "16:21",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Nathan Neis"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:06",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Emerson Erdman"
+   },
+   "assists": [
+    {
+     "number": "24",
+     "name": "Noah Harvey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:01",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "2",
+    "name": "Cooper Carson"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Jaizley Arcand Auigbelle"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:07",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Luciano Dinino"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Jaizley Arcand Auigbelle"
+    },
+    {
+     "number": "79",
+     "name": "Jude Choufi"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:31",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "93",
+    "name": "Nixon Townsend"
+   },
+   "assists": [
+    {
+     "number": "14",
+     "name": "Jax Berry"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:03",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "53",
+    "name": "Bodhi Chan"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:56",
+   "side": "home",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:56",
+   "side": "home",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062315",
+   "number": "3",
+   "name": "bennett gosling",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062758",
+   "number": "91",
+   "name": "Emerson Erdman",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062749",
+   "number": "53",
+   "name": "Bodhi Chan",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062106",
+   "number": "15",
+   "name": "Logan Kelloway",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062015",
+   "number": "98",
+   "name": "Riley Leier",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061323",
+   "number": "94",
+   "name": "Atlas Kittler",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062740",
+   "number": "71",
+   "name": "Barrett Pennington",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062890",
+   "number": "34",
+   "name": "Jason Connatty",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061322",
+   "number": "33",
+   "name": "Lowen McLean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062950",
+   "number": "29",
+   "name": "Emma Church",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061051",
+   "number": "24",
+   "name": "Noah Harvey",
+   "g": 0,
+   "a": 3,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062829",
+   "number": "79",
+   "name": "Jude Choufi",
+   "g": 2,
+   "a": 3,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061025",
+   "number": "16",
+   "name": "Luciano Dinino",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060536",
+   "number": "93",
+   "name": "Nixon Townsend",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062709",
+   "number": "2",
+   "name": "Cooper Carson",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060561",
+   "number": "18",
+   "name": "Hartley Nixon",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061239",
+   "number": "98",
+   "name": "Finn Brown",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062945",
+   "number": "92",
+   "name": "Pierce Waldenberger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061516",
+   "number": "9",
+   "name": "Luke Bensmiller",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062596",
+   "number": "8",
+   "name": "Kane Plaizier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061233",
+   "number": "74",
+   "name": "Vaughn Badry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062230",
+   "number": "71",
+   "name": "Kane Figiel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061235",
+   "number": "67",
+   "name": "Tucker Coueslan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060843",
+   "number": "29",
+   "name": "Nathan Neis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060753",
+   "number": "14",
+   "name": "Jax Berry",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060528",
+   "number": "11",
+   "name": "Anze Neurauter",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062585",
+   "number": "10",
+   "name": "Jaizley Arcand Auigbelle",
+   "g": 0,
+   "a": 3,
+   "pts": 3,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061322",
+   "number": "33",
+   "name": "Lowen McLean",
+   "seconds": 3300,
+   "ga": 7,
+   "shots": 17,
+   "saves": 10
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061239",
+   "number": "98",
+   "name": "Finn Brown",
+   "seconds": 3300,
+   "ga": 5,
+   "shots": 38,
+   "saves": 33
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 13,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 11,
+   "away": 11
+  },
+  {
+   "label": "3",
+   "home": 14,
+   "away": 4
+  }
+ ],
+ "start": "2026-11-06T16:45:00",
+ "gameNumber": 620,
+ "fetchedAt": "2026-11-07T19:47:20.814Z"
+}

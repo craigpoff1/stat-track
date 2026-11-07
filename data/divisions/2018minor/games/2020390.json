@@ -1,0 +1,554 @@
+{
+ "id": "2020390",
+ "dateText": "Friday, November 6, 2026 @ 3:15 p.m.",
+ "rink": "East Calgary Twin Arena Red",
+ "status": "Final OT",
+ "home": {
+  "name": "Coast 2 Coast",
+  "teamId": "402380",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/80c8fe05-e431-4114-8ef1-f4009a377bd9_Coast 2 Coast.png",
+  "score": 1
+ },
+ "away": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402373",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/cec76136-a07c-4e79-a639-794d7a811a07_HC Calgary Bandits.png",
+  "score": 5
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 1
+  },
+  {
+   "label": "OT",
+   "home": 0,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:54",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:54",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "77",
+    "name": "Carter Wood"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:42",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "19",
+    "name": "Cooper Huggins"
+   },
+   "assists": [
+    {
+     "number": "24",
+     "name": "Colby Leist"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:36",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "71",
+    "name": "Rory Powell"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:11",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [
+    {
+     "number": "77",
+     "name": "Carter Wood"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:20",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "71",
+    "name": "Rory Powell"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Ellie Ferguson"
+    },
+    {
+     "number": "43",
+     "name": "Aubree Tobin"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "16:08",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "8",
+    "name": "Rhett Evans"
+   },
+   "minutes": 5,
+   "infraction": "Body Checking - Major (5 min) In-Game - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "16:08",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "77",
+    "name": "Carter Wood"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "16:08",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "8",
+    "name": "Rhett Evans"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:57",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062531",
+   "number": "19",
+   "name": "Cooper Huggins",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062083",
+   "number": "98",
+   "name": "Oliver Speltz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061179",
+   "number": "9",
+   "name": "Leo Bryant",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062551",
+   "number": "88",
+   "name": "Nathaniel Wong",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062550",
+   "number": "8",
+   "name": "Rhett Evans",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 7
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062796",
+   "number": "7",
+   "name": "Bayne Talley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062797",
+   "number": "5",
+   "name": "Jay Gardner",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061640",
+   "number": "48",
+   "name": "Colt Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062529",
+   "number": "43",
+   "name": "Rigel Flewelling",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062006",
+   "number": "30",
+   "name": "Hunter Martel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062561",
+   "number": "27",
+   "name": "Kaiden Lopez",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061187",
+   "number": "24",
+   "name": "Colby Leist",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061194",
+   "number": "18",
+   "name": "Knox Leganchuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061636",
+   "number": "16",
+   "name": "Hunter Hanz Yahn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5060560",
+   "number": "10",
+   "name": "Henri Gaudry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061911",
+   "number": "10",
+   "name": "Carter Pi",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060902",
+   "number": "71",
+   "name": "Rory Powell",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5092064",
+   "number": "94",
+   "name": "Jordyn Wall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061002",
+   "number": "9",
+   "name": "Zakk Head",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062180",
+   "number": "8",
+   "name": "Beckham Buchanan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061496",
+   "number": "77",
+   "name": "Carter Wood",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060811",
+   "number": "43",
+   "name": "Aubree Tobin",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060763",
+   "number": "4",
+   "name": "Sutter Rice",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061606",
+   "number": "34",
+   "name": "Ellie Ferguson",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5060844",
+   "number": "32",
+   "name": "Vaughn Lally",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062672",
+   "number": "30",
+   "name": "Madison Stajkowski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062189",
+   "number": "23",
+   "name": "Ava Rees",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062469",
+   "number": "22",
+   "name": "Gabriel Parks",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5062671",
+   "number": "18",
+   "name": "Abigail Stajkowski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402373",
+   "playerId": "5061579",
+   "number": "12",
+   "name": "Beckett Habberfield",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 4,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 9,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 7
+  },
+  {
+   "label": "OT",
+   "home": 15,
+   "away": 16
+  }
+ ],
+ "start": "2026-11-06T15:15:00",
+ "gameNumber": 618,
+ "fetchedAt": "2026-11-07T19:47:19.872Z"
+}

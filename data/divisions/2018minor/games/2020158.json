@@ -1,0 +1,861 @@
+{
+ "id": "2020158",
+ "dateText": "Friday, October 16, 2026 @ 3:00 p.m.",
+ "rink": "Banff Recreation Centre - Arena 1",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402378",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/6328b806-13ae-465b-a6ae-a17ff44dbfb0_Spartan Hockey Academy.png",
+  "score": 2
+ },
+ "away": {
+  "name": "YYC Jays",
+  "teamId": "402381",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/8f2daa78-4247-4c8c-9cae-5c0537a89749_YYC Jays.png",
+  "score": 12
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 8
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "20:00",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "15",
+    "name": "Hayes Pokolm"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Knox Buchanan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:00",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "21",
+    "name": "Jasper Seymour"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:30",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "2",
+    "name": "Leo Ferner"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:15",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "17",
+    "name": "Linden Timberlake"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:02",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "19",
+    "name": "Nash Hamill"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:44",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "87",
+    "name": "Gibson Niemiec"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Linden Timberlake"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:24",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "18",
+    "name": "Maverick Clayton"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Noah Bond"
+    },
+    {
+     "number": "8",
+     "name": "Coen Jordan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:30",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Dominic Longeau"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:32",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "17",
+    "name": "Linden Timberlake"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:11",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Austin Sundquist"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:54",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "21",
+    "name": "Jasper Seymour"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:27",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "63",
+    "name": "Nolan Meas"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:27",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "71",
+    "name": "Jack Edmonstone"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:22",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "16",
+    "name": "Lochlan Harding"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:50",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "2",
+    "name": "Leo Ferner"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:15",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "16",
+    "name": "Lochlan Harding"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:24",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "4",
+    "name": "Rycker Kawula"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:03",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "10",
+    "name": "Jett Eisenkirch"
+   },
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:25",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Knox Buchanan"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:37",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "19",
+    "name": "Nash Hamill"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:52",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "7",
+    "name": "Noah Bond"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Maverick Clayton"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:52",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Austin Sundquist"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:32",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "67",
+    "name": "Bodie McNabb"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:30",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "10",
+    "name": "Jett Eisenkirch"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:40",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "84",
+    "name": "Oliver Morris"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:36",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "67",
+    "name": "Bodie McNabb"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:30",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "48",
+    "name": "Owen Stewart"
+   },
+   "assists": [
+    {
+     "number": "87",
+     "name": "Gibson Niemiec"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:00",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "18",
+    "name": "Maverick Clayton"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:00",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Austin Sundquist"
+   },
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:10",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "67",
+    "name": "Bodie McNabb"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Noah Bond"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062405",
+   "number": "91",
+   "name": "Dominic Longeau",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062514",
+   "number": "15",
+   "name": "Hayes Pokolm",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062687",
+   "number": "93",
+   "name": "Elliot Eaton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062578",
+   "number": "8",
+   "name": "Hersh Wolch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060643",
+   "number": "71",
+   "name": "Hayden Baba",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060531",
+   "number": "63",
+   "name": "Nolan Meas",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062618",
+   "number": "5",
+   "name": "Cresten Desrosiers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062577",
+   "number": "44",
+   "name": "Jett Wolch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062571",
+   "number": "42",
+   "name": "Jacky Futers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060649",
+   "number": "4",
+   "name": "Rycker Kawula",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062515",
+   "number": "31",
+   "name": "Cooper Holmen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060827",
+   "number": "19",
+   "name": "Raiden Quefelec",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060630",
+   "number": "18",
+   "name": "Knox Buchanan",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060631",
+   "number": "17",
+   "name": "Austin Sundquist",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5061412",
+   "number": "16",
+   "name": "Austin Mitchell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062670",
+   "number": "10",
+   "name": "Calvin Copp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062004",
+   "number": "21",
+   "name": "Jasper Seymour",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062818",
+   "number": "16",
+   "name": "Lochlan Harding",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061732",
+   "number": "87",
+   "name": "Gibson Niemiec",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061722",
+   "number": "7",
+   "name": "Noah Bond",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061719",
+   "number": "67",
+   "name": "Bodie McNabb",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061260",
+   "number": "48",
+   "name": "Owen Stewart",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061916",
+   "number": "2",
+   "name": "Leo Ferner",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5060713",
+   "number": "19",
+   "name": "Nash Hamill",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061267",
+   "number": "18",
+   "name": "Maverick Clayton",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062815",
+   "number": "17",
+   "name": "Linden Timberlake",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5060824",
+   "number": "84",
+   "name": "Oliver Morris",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062707",
+   "number": "8",
+   "name": "Coen Jordan",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061863",
+   "number": "72",
+   "name": "Louie Boudreau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5060889",
+   "number": "71",
+   "name": "Jack Edmonstone",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061721",
+   "number": "35",
+   "name": "Matthew Kolenick",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062820",
+   "number": "29",
+   "name": "Eli York Sotiropoulos",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061931",
+   "number": "10",
+   "name": "Jett Eisenkirch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062515",
+   "number": "31",
+   "name": "Cooper Holmen",
+   "seconds": 3300,
+   "ga": 12,
+   "shots": 39,
+   "saves": 27
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061721",
+   "number": "35",
+   "name": "Matthew Kolenick",
+   "seconds": 3300,
+   "ga": 2,
+   "shots": 14,
+   "saves": 12
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-10-16T15:00:00",
+ "gameNumber": 386,
+ "fetchedAt": "2026-11-07T19:47:11.254Z"
+}

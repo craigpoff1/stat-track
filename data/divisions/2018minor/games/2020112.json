@@ -1,0 +1,815 @@
+{
+ "id": "2020112",
+ "dateText": "Sunday, October 11, 2026 @ 7:00 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "South Sask Academy",
+  "teamId": "402377",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e513f1eb-1607-430a-80d1-2c55526f29b9_South Sask Academy.png",
+  "score": 18
+ },
+ "away": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "402376",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/7958d08c-c616-4088-8632-c7a93d035055_Riggers Hockey Academy.png",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 6,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 8,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:54",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "53",
+    "name": "Bodhi Chan"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Jason Connatty"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:57",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "15",
+    "name": "Logan Kelloway"
+   },
+   "assists": [
+    {
+     "number": "94",
+     "name": "Atlas Kittler"
+    },
+    {
+     "number": "24",
+     "name": "Noah Harvey"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:48",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "44",
+    "name": "Timo Jordan"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:42",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "assists": [
+    {
+     "number": "91",
+     "name": "Emerson Erdman"
+    },
+    {
+     "number": "34",
+     "name": "Jason Connatty"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:25",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:33",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "24",
+    "name": "Noah Harvey"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Logan Kelloway"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:56",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "4",
+    "name": "Treycen Zorn"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:40",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Kinsleigh Gill"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:11",
+   "side": "home",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:22",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "4",
+    "name": "Treycen Zorn"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:45",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "assists": [
+    {
+     "number": "53",
+     "name": "Bodhi Chan"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:46",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [
+    {
+     "number": "24",
+     "name": "Noah Harvey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:34",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [
+    {
+     "number": "24",
+     "name": "Noah Harvey"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:36",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Riley Leier"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:42",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "assists": [
+    {
+     "number": "94",
+     "name": "Atlas Kittler"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:19",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [
+    {
+     "number": "98",
+     "name": "Riley Leier"
+    },
+    {
+     "number": "91",
+     "name": "Emerson Erdman"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:53",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "15",
+    "name": "Logan Kelloway"
+   },
+   "assists": [
+    {
+     "number": "94",
+     "name": "Atlas Kittler"
+    },
+    {
+     "number": "3",
+     "name": "bennett gosling"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:58",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "38",
+    "name": "hudsyn hagel"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:32",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Jason Connatty"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:46",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Jason Connatty"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:53",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:55",
+   "side": "home",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:52",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "38",
+    "name": "hudsyn hagel"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:50",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Emerson Erdman"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:29",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "94",
+    "name": "Atlas Kittler"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Emma Church"
+    },
+    {
+     "number": "3",
+     "name": "bennett gosling"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:06",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "53",
+    "name": "Bodhi Chan"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Jason Connatty"
+    },
+    {
+     "number": "98",
+     "name": "Riley Leier"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062740",
+   "number": "71",
+   "name": "Barrett Pennington",
+   "g": 7,
+   "a": 0,
+   "pts": 7,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062315",
+   "number": "3",
+   "name": "bennett gosling",
+   "g": 4,
+   "a": 2,
+   "pts": 6,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062749",
+   "number": "53",
+   "name": "Bodhi Chan",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062106",
+   "number": "15",
+   "name": "Logan Kelloway",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061323",
+   "number": "94",
+   "name": "Atlas Kittler",
+   "g": 1,
+   "a": 3,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062758",
+   "number": "91",
+   "name": "Emerson Erdman",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061051",
+   "number": "24",
+   "name": "Noah Harvey",
+   "g": 1,
+   "a": 3,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062015",
+   "number": "98",
+   "name": "Riley Leier",
+   "g": 0,
+   "a": 3,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062890",
+   "number": "34",
+   "name": "Jason Connatty",
+   "g": 0,
+   "a": 5,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061322",
+   "number": "33",
+   "name": "Lowen McLean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062950",
+   "number": "29",
+   "name": "Emma Church",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060997",
+   "number": "38",
+   "name": "hudsyn hagel",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5061000",
+   "number": "98",
+   "name": "Rhyor Tremblay",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060955",
+   "number": "86",
+   "name": "Branson Nickerson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062229",
+   "number": "81",
+   "name": "Soren Desjarlais",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060964",
+   "number": "7",
+   "name": "Dallas Grayston",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060971",
+   "number": "44",
+   "name": "Timo Jordan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062839",
+   "number": "4",
+   "name": "Treycen Zorn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060705",
+   "number": "31",
+   "name": "Colt Bruno",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060702",
+   "number": "29",
+   "name": "Kinsleigh Gill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062710",
+   "number": "24",
+   "name": "Theodore North",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5061784",
+   "number": "18",
+   "name": "Brock Cutknife",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062587",
+   "number": "16",
+   "name": "Declan Blue",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062936",
+   "number": "12",
+   "name": "Matteo Olson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062214",
+   "number": "11",
+   "name": "Wilbur Henry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061322",
+   "number": "33",
+   "name": "Lowen McLean",
+   "seconds": 3300,
+   "ga": 1,
+   "shots": 9,
+   "saves": 8
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060705",
+   "number": "31",
+   "name": "Colt Bruno",
+   "seconds": 1620,
+   "ga": 10,
+   "shots": 30,
+   "saves": 20
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062710",
+   "number": "24",
+   "name": "Theodore North",
+   "seconds": 1560,
+   "ga": 28,
+   "shots": 8,
+   "saves": -20
+  }
+ ],
+ "warnings": [
+  "away: goalie minutes total 53"
+ ],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 25,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 17,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 16,
+   "away": 3
+  }
+ ],
+ "start": "2026-10-11T07:00:00",
+ "gameNumber": 340,
+ "fetchedAt": "2026-11-07T19:47:06.446Z"
+}

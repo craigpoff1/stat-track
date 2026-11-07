@@ -7,7 +7,7 @@
   "url": "https://hpl-winter-league.kreezee-sports.com",
   "platform": "Kreezee"
  },
- "fetchedAt": "2026-11-07T14:59:40.787Z",
+ "fetchedAt": "2026-11-07T19:46:42.442Z",
  "detail": "scores-only",
  "teams": [
   {
@@ -738,17 +738,6 @@
    "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744584"
   },
   {
-   "id": "hpl:744582",
-   "start": "2026-11-05T18:45:00",
-   "rink": "Coquitlam Planet Ice · Rink 4",
-   "home": "hpl:148548",
-   "away": "hpl:148552",
-   "final": true,
-   "homeScore": 5,
-   "awayScore": 3,
-   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744582"
-  },
-  {
    "id": "hpl:744583",
    "start": "2026-11-05T18:45:00",
    "rink": "Delta Planet Ice · Canadian Rink",
@@ -758,6 +747,17 @@
    "homeScore": 4,
    "awayScore": 7,
    "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744583"
+  },
+  {
+   "id": "hpl:744582",
+   "start": "2026-11-05T18:45:00",
+   "rink": "Coquitlam Planet Ice · Rink 4",
+   "home": "hpl:148548",
+   "away": "hpl:148552",
+   "final": true,
+   "homeScore": 5,
+   "awayScore": 3,
+   "url": "https://hpl-winter-league.kreezee-sports.com/scores/game-744582"
   },
   {
    "id": "hpl:744587",

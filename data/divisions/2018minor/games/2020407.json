@@ -1,0 +1,828 @@
+{
+ "id": "2020407",
+ "dateText": "Saturday, November 7, 2026 @ 10:00 a.m.",
+ "rink": "East Calgary Twin Arena Red",
+ "status": "Final",
+ "home": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402373",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/cec76136-a07c-4e79-a639-794d7a811a07_HC Calgary Bandits.png",
+  "score": 3
+ },
+ "away": {
+  "name": "YYC Jays",
+  "teamId": "402381",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/8f2daa78-4247-4c8c-9cae-5c0537a89749_YYC Jays.png",
+  "score": 11
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 6
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 4
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:50",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:07",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "8",
+    "name": "Coen Jordan"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Noah Bond"
+    },
+    {
+     "number": "10",
+     "name": "Jett Eisenkirch"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:56",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "84",
+    "name": "Oliver Morris"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:43",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "77",
+    "name": "Carter Wood"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:03",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "87",
+    "name": "Gibson Niemiec"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:55",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "87",
+    "name": "Gibson Niemiec"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:00",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "7",
+    "name": "Noah Bond"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:11",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "2",
+    "name": "Leo Ferner"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:44",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "18",
+    "name": "Abigail Stajkowski"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Carter Pi"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:25",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "9",
+    "name": "Zakk Head"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Carter Pi"
+    },
+    {
+     "number": "18",
+     "name": "Abigail Stajkowski"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:09",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "77",
+    "name": "Carter Wood"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:10",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "7",
+    "name": "Noah Bond"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Coen Jordan"
+    },
+    {
+     "number": "2",
+     "name": "Leo Ferner"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:12",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "18",
+    "name": "Maverick Clayton"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:30",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "48",
+    "name": "Owen Stewart"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:57",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "7",
+    "name": "Noah Bond"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Eli York Sotiropoulos"
+    },
+    {
+     "number": "16",
+     "name": "Lochlan Harding"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:00",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "22",
+    "name": "Gabriel Parks"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:50",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "2",
+    "name": "Leo Ferner"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:05",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "22",
+    "name": "Gabriel Parks"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:48",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "77",
+    "name": "Carter Wood"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:04",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "19",
+    "name": "Nash Hamill"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Jett Eisenkirch"
+    },
+    {
+     "number": "7",
+     "name": "Noah Bond"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:18",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "18",
+    "name": "Maverick Clayton"
+   },
+   "assists": [
+    {
+     "number": "87",
+     "name": "Gibson Niemiec"
+    },
+    {
+     "number": "10",
+     "name": "Jett Eisenkirch"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:20",
+   "side": "away",
+   "team": "YYC Jays",
+   "player": {
+    "number": "71",
+    "name": "Jack Edmonstone"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:07",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "71",
+    "name": "Jack Edmonstone"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Jett Eisenkirch"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:40",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "12",
+    "name": "Beckett Habberfield"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Beckham Buchanan"
+    },
+    {
+     "number": "4",
+     "name": "Sutter Rice"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:57",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "22",
+    "name": "Gabriel Parks"
+   },
+   "minutes": 2,
+   "infraction": "Too Many Players - Bench Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:10",
+   "side": "away",
+   "team": "YYC Jays",
+   "scorer": {
+    "number": "7",
+    "name": "Noah Bond"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061002",
+   "number": "9",
+   "name": "Zakk Head",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062671",
+   "number": "18",
+   "name": "Abigail Stajkowski",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061579",
+   "number": "12",
+   "name": "Beckett Habberfield",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5092064",
+   "number": "94",
+   "name": "Jordyn Wall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062180",
+   "number": "8",
+   "name": "Beckham Buchanan",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061496",
+   "number": "77",
+   "name": "Carter Wood",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060902",
+   "number": "71",
+   "name": "Rory Powell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060811",
+   "number": "43",
+   "name": "Aubree Tobin",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060763",
+   "number": "4",
+   "name": "Sutter Rice",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061606",
+   "number": "34",
+   "name": "Ellie Ferguson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060844",
+   "number": "32",
+   "name": "Vaughn Lally",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062672",
+   "number": "30",
+   "name": "Madison Stajkowski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062189",
+   "number": "23",
+   "name": "Ava Rees",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062469",
+   "number": "22",
+   "name": "Gabriel Parks",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061911",
+   "number": "10",
+   "name": "Carter Pi",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061722",
+   "number": "7",
+   "name": "Noah Bond",
+   "g": 4,
+   "a": 2,
+   "pts": 6,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061732",
+   "number": "87",
+   "name": "Gibson Niemiec",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061267",
+   "number": "18",
+   "name": "Maverick Clayton",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062707",
+   "number": "8",
+   "name": "Coen Jordan",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5060889",
+   "number": "71",
+   "name": "Jack Edmonstone",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5060713",
+   "number": "19",
+   "name": "Nash Hamill",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5060824",
+   "number": "84",
+   "name": "Oliver Morris",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061863",
+   "number": "72",
+   "name": "Louie Boudreau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061260",
+   "number": "48",
+   "name": "Owen Stewart",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061721",
+   "number": "35",
+   "name": "Matthew Kolenick",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062820",
+   "number": "29",
+   "name": "Eli York Sotiropoulos",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062004",
+   "number": "21",
+   "name": "Jasper Seymour",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061916",
+   "number": "2",
+   "name": "Leo Ferner",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062815",
+   "number": "17",
+   "name": "Linden Timberlake",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5062818",
+   "number": "16",
+   "name": "Lochlan Harding",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061931",
+   "number": "10",
+   "name": "Jett Eisenkirch",
+   "g": 0,
+   "a": 4,
+   "pts": 4,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062672",
+   "number": "30",
+   "name": "Madison Stajkowski",
+   "seconds": 3300,
+   "ga": 11,
+   "shots": 24,
+   "saves": 13
+  },
+  {
+   "side": "away",
+   "teamId": "402381",
+   "playerId": "5061863",
+   "number": "72",
+   "name": "Louie Boudreau",
+   "seconds": 3300,
+   "ga": 3,
+   "shots": 13,
+   "saves": 10
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-11-07T10:00:00",
+ "gameNumber": 635,
+ "fetchedAt": "2026-11-07T19:47:23.647Z"
+}

@@ -1,0 +1,789 @@
+{
+ "id": "2020033",
+ "dateText": "Friday, October 9, 2026 @ 3:00 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Northern Hockey Club",
+  "teamId": "402375",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/502019a5-6690-4385-b873-10405c0c7b14_Northern Hockey Club.png",
+  "score": 10
+ },
+ "away": {
+  "name": "Coast 2 Coast",
+  "teamId": "402380",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/80c8fe05-e431-4114-8ef1-f4009a377bd9_Coast 2 Coast.png",
+  "score": 12
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 3,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 6,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:58",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:21",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "9",
+    "name": "Leo Bryant"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:05",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "19",
+    "name": "Cooper Huggins"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:01",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:21",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Nathaniel Wong"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:31",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "7",
+    "name": "Bayne Talley"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:53",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "minutes": 2,
+   "infraction": "Holding Minor"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:12",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Bayne Talley"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:30",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "18",
+    "name": "Revy Jeffery"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "16:39",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "player": {
+    "number": "22",
+    "name": "Raiden Pomerleau"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:50",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "8",
+    "name": "Ace Dallaire"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:05",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:14",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "7",
+    "name": "Bayne Talley"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:04",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [
+    {
+     "number": "43",
+     "name": "Rigel Flewelling"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:24",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "98",
+    "name": "Oliver Speltz"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:59",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:41",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "player": {
+    "number": "3",
+    "name": "Shea Burgess"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:42",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "21",
+    "name": "Boston Weber"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:42",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "minutes": 0,
+   "infraction": "Penalty Shot"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:23",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "98",
+    "name": "Oliver Speltz"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:46",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:52",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cooper Huggins"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:09",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "43",
+    "name": "Rigel Flewelling"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:34",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:50",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:06",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "24",
+    "name": "Drew Brown"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Revy Jeffery"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:48",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "3",
+    "name": "Shea Burgess"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:12",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:42",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [
+    {
+     "number": "5",
+     "name": "Jay Gardner"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061514",
+   "number": "5",
+   "name": "Cash Blackburn",
+   "g": 5,
+   "a": 0,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060448",
+   "number": "8",
+   "name": "Ace Dallaire",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061691",
+   "number": "3",
+   "name": "Shea Burgess",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062401",
+   "number": "24",
+   "name": "Drew Brown",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062858",
+   "number": "21",
+   "name": "Boston Weber",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061910",
+   "number": "18",
+   "name": "Revy Jeffery",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061402",
+   "number": "71",
+   "name": "Harvey Melnyk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062506",
+   "number": "7",
+   "name": "Brennan Whitford",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060634",
+   "number": "53",
+   "name": "Kesler Johnston",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061162",
+   "number": "30",
+   "name": "Bennett Turchyn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060628",
+   "number": "29",
+   "name": "Tyson Ruby",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061557",
+   "number": "22",
+   "name": "Raiden Pomerleau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061104",
+   "number": "2",
+   "name": "Beau Brown",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062414",
+   "number": "17",
+   "name": "Daxton Williamson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061690",
+   "number": "16",
+   "name": "Rhett Burgess",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062797",
+   "number": "5",
+   "name": "Jay Gardner",
+   "g": 4,
+   "a": 1,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061187",
+   "number": "24",
+   "name": "Colby Leist",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061179",
+   "number": "9",
+   "name": "Leo Bryant",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062796",
+   "number": "7",
+   "name": "Bayne Talley",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062529",
+   "number": "43",
+   "name": "Rigel Flewelling",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062531",
+   "number": "19",
+   "name": "Cooper Huggins",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062083",
+   "number": "98",
+   "name": "Oliver Speltz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062551",
+   "number": "88",
+   "name": "Nathaniel Wong",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061640",
+   "number": "48",
+   "name": "Colt Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062006",
+   "number": "30",
+   "name": "Hunter Martel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062561",
+   "number": "27",
+   "name": "Kaiden Lopez",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061194",
+   "number": "18",
+   "name": "Knox Leganchuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061636",
+   "number": "16",
+   "name": "Hunter Hanz Yahn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5060560",
+   "number": "10",
+   "name": "Henri Gaudry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 0
+  }
+ ],
+ "start": "2026-10-09T15:00:00",
+ "gameNumber": 261,
+ "fetchedAt": "2026-11-07T19:47:00.757Z"
+}

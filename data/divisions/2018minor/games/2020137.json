@@ -1,0 +1,628 @@
+{
+ "id": "2020137",
+ "dateText": "Sunday, October 11, 2026 @ 12:00 p.m.",
+ "rink": "East Calgary Twin Arena Blue",
+ "status": "Final",
+ "home": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402373",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/cec76136-a07c-4e79-a639-794d7a811a07_HC Calgary Bandits.png",
+  "score": 7
+ },
+ "away": {
+  "name": "Bow Valley Jr. Bigfoot",
+  "teamId": "402374",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/1b4b4baa-a0c9-4191-ac6c-cdca47605653_Bow Valley Jr. Bigfoot.png",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:20",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [
+    {
+     "number": "77",
+     "name": "Carter Wood"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:26",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:03",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "22",
+    "name": "Gabriel Parks"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:10",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "43",
+    "name": "Aubree Tobin"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "16:02",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "19",
+    "name": "Quinn Garcia"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:18",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "19",
+    "name": "Quinn Garcia"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:04",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [
+    {
+     "number": "34",
+     "name": "Ellie Ferguson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:16",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "71",
+    "name": "Rory Powell"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:06",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "8",
+    "name": "Beckham Buchanan"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:07",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "12",
+    "name": "Beckett Habberfield"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Beckham Buchanan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "18:41",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Abigail Stajkowski"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:44",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": {
+    "number": "18",
+    "name": "Abigail Stajkowski"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:27",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "9",
+    "name": "Zakk Head"
+   },
+   "assists": [
+    {
+     "number": "4",
+     "name": "Sutter Rice"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:58",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "scorer": {
+    "number": "11",
+    "name": "Bennett Helfrich"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Nolan Scott"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061911",
+   "number": "10",
+   "name": "Carter Pi",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061002",
+   "number": "9",
+   "name": "Zakk Head",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060811",
+   "number": "43",
+   "name": "Aubree Tobin",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061579",
+   "number": "12",
+   "name": "Beckett Habberfield",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5092064",
+   "number": "94",
+   "name": "Jordyn Wall",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062180",
+   "number": "8",
+   "name": "Beckham Buchanan",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061496",
+   "number": "77",
+   "name": "Carter Wood",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060902",
+   "number": "71",
+   "name": "Rory Powell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060763",
+   "number": "4",
+   "name": "Sutter Rice",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5061606",
+   "number": "34",
+   "name": "Ellie Ferguson",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060844",
+   "number": "32",
+   "name": "Vaughn Lally",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062672",
+   "number": "30",
+   "name": "Madison Stajkowski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062189",
+   "number": "23",
+   "name": "Ava Rees",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062469",
+   "number": "22",
+   "name": "Gabriel Parks",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5062671",
+   "number": "18",
+   "name": "Abigail Stajkowski",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062549",
+   "number": "11",
+   "name": "Bennett Helfrich",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060798",
+   "number": "93",
+   "name": "Nash Gourley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060812",
+   "number": "91",
+   "name": "Wayne Proceviat",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060742",
+   "number": "88",
+   "name": "Augustus Aminzadah",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060817",
+   "number": "77",
+   "name": "Anakin Tays",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061524",
+   "number": "71",
+   "name": "Rhett Donnan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061798",
+   "number": "6",
+   "name": "Jacob Avery",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061254",
+   "number": "32",
+   "name": "Jetlen Redden",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061601",
+   "number": "29",
+   "name": "Nolan Scott",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062544",
+   "number": "22",
+   "name": "Briggs Glencross",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062108",
+   "number": "20",
+   "name": "Alexander Gorenc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062218",
+   "number": "19",
+   "name": "Quinn Garcia",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062779",
+   "number": "18",
+   "name": "Luke Seidel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062094",
+   "number": "10",
+   "name": "Dawson Yankilevich",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060794",
+   "number": "1",
+   "name": "Fletcher Kasper",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402373",
+   "playerId": "5060844",
+   "number": "32",
+   "name": "Vaughn Lally",
+   "seconds": 3300,
+   "ga": 1,
+   "shots": 21,
+   "saves": 20
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061254",
+   "number": "32",
+   "name": "Jetlen Redden",
+   "seconds": 3300,
+   "ga": 7,
+   "shots": 32,
+   "saves": 25
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 12,
+   "away": 5
+  },
+  {
+   "label": "2",
+   "home": 12,
+   "away": 9
+  },
+  {
+   "label": "3",
+   "home": 9,
+   "away": 6
+  }
+ ],
+ "start": "2026-10-11T12:00:00",
+ "gameNumber": 365,
+ "fetchedAt": "2026-11-07T19:47:08.377Z"
+}

@@ -1,0 +1,540 @@
+{
+ "id": "2019849",
+ "dateText": "Saturday, September 19, 2026 @ 3:45 p.m.",
+ "rink": "East Calgary Twin Arena Blue",
+ "status": "Final",
+ "home": {
+  "name": "South Sask Academy",
+  "teamId": "402377",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e513f1eb-1607-430a-80d1-2c55526f29b9_South Sask Academy.png",
+  "score": 4
+ },
+ "away": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402378",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/6328b806-13ae-465b-a6ae-a17ff44dbfb0_Spartan Hockey Academy.png",
+  "score": 5
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:47",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:35",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "63",
+    "name": "Nolan Meas"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:33",
+   "side": "home",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "71",
+    "name": "Barrett Pennington"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:27",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "8",
+    "name": "Hersh Wolch"
+   },
+   "assists": [
+    {
+     "number": "16",
+     "name": "Austin Mitchell"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:31",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "63",
+    "name": "Nolan Meas"
+   },
+   "assists": [
+    {
+     "number": "16",
+     "name": "Austin Mitchell"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:33",
+   "side": "home",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "94",
+    "name": "Atlas Kittler"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:57",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "16",
+    "name": "Austin Mitchell"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "18:34",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:56",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Austin Mitchell"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:06",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "91",
+    "name": "Emerson Erdman"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "08:54",
+   "side": "home",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:15",
+   "side": "away",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "63",
+    "name": "Nolan Meas"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062315",
+   "number": "3",
+   "name": "bennett gosling",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062758",
+   "number": "91",
+   "name": "Emerson Erdman",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062015",
+   "number": "98",
+   "name": "Riley Leier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061323",
+   "number": "94",
+   "name": "Atlas Kittler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062740",
+   "number": "71",
+   "name": "Barrett Pennington",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062749",
+   "number": "53",
+   "name": "Bodhi Chan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062890",
+   "number": "34",
+   "name": "Jason Connatty",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061322",
+   "number": "33",
+   "name": "Lowen McLean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062950",
+   "number": "29",
+   "name": "Emma Church",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061051",
+   "number": "24",
+   "name": "Noah Harvey",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5062106",
+   "number": "15",
+   "name": "Logan Kelloway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5060531",
+   "number": "63",
+   "name": "Nolan Meas",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062578",
+   "number": "8",
+   "name": "Hersh Wolch",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5061412",
+   "number": "16",
+   "name": "Austin Mitchell",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062687",
+   "number": "93",
+   "name": "Elliot Eaton",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062405",
+   "number": "91",
+   "name": "Dominic Longeau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5060643",
+   "number": "71",
+   "name": "Hayden Baba",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062618",
+   "number": "5",
+   "name": "Cresten Desrosiers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062577",
+   "number": "44",
+   "name": "Jett Wolch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062571",
+   "number": "42",
+   "name": "Jacky Futers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5060649",
+   "number": "4",
+   "name": "Rycker Kawula",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062515",
+   "number": "31",
+   "name": "Cooper Holmen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5060827",
+   "number": "19",
+   "name": "Raiden Quefelec",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5060630",
+   "number": "18",
+   "name": "Knox Buchanan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062514",
+   "number": "15",
+   "name": "Hayes Pokolm",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062670",
+   "number": "10",
+   "name": "Calvin Copp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402377",
+   "playerId": "5061322",
+   "number": "33",
+   "name": "Lowen McLean",
+   "seconds": 3300,
+   "ga": 5,
+   "shots": 29,
+   "saves": 24
+  },
+  {
+   "side": "away",
+   "teamId": "402378",
+   "playerId": "5062515",
+   "number": "31",
+   "name": "Cooper Holmen",
+   "seconds": 3300,
+   "ga": 4,
+   "shots": 22,
+   "saves": 18
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 13
+  },
+  {
+   "label": "2",
+   "home": 12,
+   "away": 6
+  },
+  {
+   "label": "3",
+   "home": 6,
+   "away": 10
+  }
+ ],
+ "start": "2026-09-19T15:45:00",
+ "gameNumber": 77,
+ "fetchedAt": "2026-11-07T19:46:52.040Z"
+}

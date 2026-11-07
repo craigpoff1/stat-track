@@ -1,0 +1,687 @@
+{
+ "id": "2020081",
+ "dateText": "Saturday, October 10, 2026 @ 12:15 p.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Coast 2 Coast",
+  "teamId": "402380",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/80c8fe05-e431-4114-8ef1-f4009a377bd9_Coast 2 Coast.png",
+  "score": 5
+ },
+ "away": {
+  "name": "Wolverines Hockey Academy",
+  "teamId": "402379",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/f7347df2-5cbb-4bda-9254-f5b9b6876b62_Wolverines Hockey Academy.png",
+  "score": 3
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:18",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:22",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "2",
+    "name": "Cooper Carson"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:19",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "98",
+    "name": "Oliver Speltz"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:13",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "92",
+    "name": "Pierce Waldenberger"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "15:47",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "92",
+    "name": "Pierce Waldenberger"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:39",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "2",
+    "name": "Cooper Carson"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:01",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:52",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "16",
+    "name": "Luciano Dinino"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:52",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "19",
+    "name": "Cooper Huggins"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:41",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "2",
+    "name": "Cooper Carson"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:12",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "16",
+    "name": "Hunter Hanz Yahn"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cooper Huggins"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:48",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "16",
+    "name": "Luciano Dinino"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:57",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:50",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "19",
+    "name": "Cooper Huggins"
+   },
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:01",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "2",
+    "name": "Cooper Carson"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:09",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:32",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:42",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:47",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Hartley Nixon"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Jaizley Arcand Auigbelle"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:00",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "92",
+    "name": "Pierce Waldenberger"
+   },
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:07",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [
+    {
+     "number": "43",
+     "name": "Rigel Flewelling"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:01",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062797",
+   "number": "5",
+   "name": "Jay Gardner",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061187",
+   "number": "24",
+   "name": "Colby Leist",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061636",
+   "number": "16",
+   "name": "Hunter Hanz Yahn",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062083",
+   "number": "98",
+   "name": "Oliver Speltz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061179",
+   "number": "9",
+   "name": "Leo Bryant",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062551",
+   "number": "88",
+   "name": "Nathaniel Wong",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062796",
+   "number": "7",
+   "name": "Bayne Talley",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061640",
+   "number": "48",
+   "name": "Colt Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062529",
+   "number": "43",
+   "name": "Rigel Flewelling",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062006",
+   "number": "30",
+   "name": "Hunter Martel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062561",
+   "number": "27",
+   "name": "Kaiden Lopez",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062531",
+   "number": "19",
+   "name": "Cooper Huggins",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061194",
+   "number": "18",
+   "name": "Knox Leganchuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5060560",
+   "number": "10",
+   "name": "Henri Gaudry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062709",
+   "number": "2",
+   "name": "Cooper Carson",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060561",
+   "number": "18",
+   "name": "Hartley Nixon",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061239",
+   "number": "98",
+   "name": "Finn Brown",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062945",
+   "number": "92",
+   "name": "Pierce Waldenberger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 6
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061516",
+   "number": "9",
+   "name": "Luke Bensmiller",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062596",
+   "number": "8",
+   "name": "Kane Plaizier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062829",
+   "number": "79",
+   "name": "Jude Choufi",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061233",
+   "number": "74",
+   "name": "Vaughn Badry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062230",
+   "number": "71",
+   "name": "Kane Figiel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061235",
+   "number": "67",
+   "name": "Tucker Coueslan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060843",
+   "number": "29",
+   "name": "Nathan Neis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061025",
+   "number": "16",
+   "name": "Luciano Dinino",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060753",
+   "number": "14",
+   "name": "Jax Berry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060528",
+   "number": "11",
+   "name": "Anze Neurauter",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062585",
+   "number": "10",
+   "name": "Jaizley Arcand Auigbelle",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 11,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 25,
+   "away": 9
+  },
+  {
+   "label": "3",
+   "home": 18,
+   "away": 8
+  }
+ ],
+ "start": "2026-10-10T12:15:00",
+ "gameNumber": 309,
+ "fetchedAt": "2026-11-07T19:47:03.583Z"
+}

@@ -1,0 +1,800 @@
+{
+ "id": "2019872",
+ "dateText": "Sunday, September 20, 2026 @ 8:00 a.m.",
+ "rink": "Cenovus Energy Hub - Coop Community Ice",
+ "status": "Final",
+ "home": {
+  "name": "Northern Hockey Club",
+  "teamId": "402375",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/502019a5-6690-4385-b873-10405c0c7b14_Northern Hockey Club.png",
+  "score": 7
+ },
+ "away": {
+  "name": "Wolverines Hockey Academy",
+  "teamId": "402379",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/f7347df2-5cbb-4bda-9254-f5b9b6876b62_Wolverines Hockey Academy.png",
+  "score": 4
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:21",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "7",
+    "name": "Brennan Whitford"
+   },
+   "assists": [
+    {
+     "number": "21",
+     "name": "Boston Weber"
+    },
+    {
+     "number": "18",
+     "name": "Revy Jeffery"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:30",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Nathan Neis"
+   },
+   "minutes": 2,
+   "infraction": "Trip"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:03",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "player": {
+    "number": "18",
+    "name": "Revy Jeffery"
+   },
+   "minutes": 2,
+   "infraction": "Slash Minor"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:35",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [
+    {
+     "number": "3",
+     "name": "Shea Burgess"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "18:54",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "player": {
+    "number": "71",
+    "name": "Harvey Melnyk"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:42",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "21",
+    "name": "Boston Weber"
+   },
+   "assists": [
+    {
+     "number": "16",
+     "name": "Rhett Burgess"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:39",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "14",
+    "name": "Jax Berry"
+   },
+   "assists": [
+    {
+     "number": "93",
+     "name": "Nixon Townsend"
+    },
+    {
+     "number": "10",
+     "name": "Jaizley Arcand Auigbelle"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:39",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "24",
+    "name": "Drew Brown"
+   },
+   "assists": [
+    {
+     "number": "5",
+     "name": "Cash Blackburn"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "16:21",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "9",
+    "name": "Luke Bensmiller"
+   },
+   "minutes": 2,
+   "infraction": "Body Check"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "15:55",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "player": {
+    "number": "8",
+    "name": "Ace Dallaire"
+   },
+   "minutes": 2,
+   "infraction": "Hooking"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:50",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Luciano Dinino"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Nathan Neis"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:56",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:09",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "8",
+    "name": "Ace Dallaire"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Harvey Melnyk"
+    },
+    {
+     "number": "24",
+     "name": "Drew Brown"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:14",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "2",
+    "name": "Cooper Carson"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Hartley Nixon"
+    },
+    {
+     "number": "92",
+     "name": "Pierce Waldenberger"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:40",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:08",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "79",
+    "name": "Jude Choufi"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:01",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "92",
+    "name": "Pierce Waldenberger"
+   },
+   "minutes": 2,
+   "infraction": "Cross Check Minor"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061514",
+   "number": "5",
+   "name": "Cash Blackburn",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060448",
+   "number": "8",
+   "name": "Ace Dallaire",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062506",
+   "number": "7",
+   "name": "Brennan Whitford",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062401",
+   "number": "24",
+   "name": "Drew Brown",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062858",
+   "number": "21",
+   "name": "Boston Weber",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061402",
+   "number": "71",
+   "name": "Harvey Melnyk",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060634",
+   "number": "53",
+   "name": "Kesler Johnston",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061691",
+   "number": "3",
+   "name": "Shea Burgess",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060628",
+   "number": "29",
+   "name": "Tyson Ruby",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061557",
+   "number": "22",
+   "name": "Raiden Pomerleau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061104",
+   "number": "2",
+   "name": "Beau Brown",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061910",
+   "number": "18",
+   "name": "Revy Jeffery",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061690",
+   "number": "16",
+   "name": "Rhett Burgess",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062829",
+   "number": "79",
+   "name": "Jude Choufi",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062829",
+   "number": "79",
+   "name": "Jude Choufi",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062709",
+   "number": "2",
+   "name": "Cooper Carson",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061025",
+   "number": "16",
+   "name": "Luciano Dinino",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061025",
+   "number": "16",
+   "name": "Luciano Dinino",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060753",
+   "number": "14",
+   "name": "Jax Berry",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060753",
+   "number": "14",
+   "name": "Jax Berry",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060536",
+   "number": "93",
+   "name": "Nixon Townsend",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060536",
+   "number": "93",
+   "name": "Nixon Townsend",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062945",
+   "number": "92",
+   "name": "Pierce Waldenberger",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062945",
+   "number": "92",
+   "name": "Pierce Waldenberger",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061516",
+   "number": "9",
+   "name": "Luke Bensmiller",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061516",
+   "number": "9",
+   "name": "Luke Bensmiller",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062596",
+   "number": "8",
+   "name": "Kane Plaizier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062596",
+   "number": "8",
+   "name": "Kane Plaizier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061233",
+   "number": "74",
+   "name": "Vaughn Badry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061233",
+   "number": "74",
+   "name": "Vaughn Badry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062230",
+   "number": "71",
+   "name": "Kane Figiel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062230",
+   "number": "71",
+   "name": "Kane Figiel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061235",
+   "number": "67",
+   "name": "Tucker Coueslan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061235",
+   "number": "67",
+   "name": "Tucker Coueslan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060843",
+   "number": "29",
+   "name": "Nathan Neis",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060843",
+   "number": "29",
+   "name": "Nathan Neis",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060561",
+   "number": "18",
+   "name": "Hartley Nixon",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060561",
+   "number": "18",
+   "name": "Hartley Nixon",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5060528",
+   "number": "11",
+   "name": "Anze Neurauter",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062585",
+   "number": "10",
+   "name": "Jaizley Arcand Auigbelle",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5062585",
+   "number": "10",
+   "name": "Jaizley Arcand Auigbelle",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060628",
+   "number": "29",
+   "name": "Tyson Ruby",
+   "seconds": 3300,
+   "ga": 0,
+   "shots": 33,
+   "saves": 33
+  },
+  {
+   "side": "away",
+   "teamId": "402379",
+   "playerId": "5061233",
+   "number": "74",
+   "name": "Vaughn Badry",
+   "seconds": 3300,
+   "ga": 0,
+   "shots": 29,
+   "saves": 29
+  }
+ ],
+ "warnings": [
+  "away: box score has 7 goals, final is 4"
+ ],
+ "shotsByPeriod": [],
+ "start": "2026-09-20T08:00:00",
+ "gameNumber": 100,
+ "fetchedAt": "2026-11-07T19:46:54.899Z"
+}

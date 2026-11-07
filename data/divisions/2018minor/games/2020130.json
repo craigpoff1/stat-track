@@ -1,0 +1,881 @@
+{
+ "id": "2020130",
+ "dateText": "Sunday, October 11, 2026 @ 10:30 a.m.",
+ "rink": "West Edmonton Mall - Ice Palace",
+ "status": "Final",
+ "home": {
+  "name": "Coast 2 Coast",
+  "teamId": "402380",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/80c8fe05-e431-4114-8ef1-f4009a377bd9_Coast 2 Coast.png",
+  "score": 19
+ },
+ "away": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "402376",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/7958d08c-c616-4088-8632-c7a93d035055_Riggers Hockey Academy.png",
+  "score": 5
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 6,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 10,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:50",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "19",
+    "name": "Cooper Huggins"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Knox Leganchuk"
+    },
+    {
+     "number": "5",
+     "name": "Jay Gardner"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:02",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "16",
+    "name": "Hunter Hanz Yahn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:12",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [
+    {
+     "number": "7",
+     "name": "Bayne Talley"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:56",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "10",
+    "name": "Henri Gaudry"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cooper Huggins"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:59",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:21",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "10",
+    "name": "Henri Gaudry"
+   },
+   "assists": [
+    {
+     "number": "16",
+     "name": "Hunter Hanz Yahn"
+    },
+    {
+     "number": "7",
+     "name": "Bayne Talley"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "04:41",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Treycen Zorn"
+   },
+   "assists": [
+    {
+     "number": "44",
+     "name": "Timo Jordan"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:00",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "81",
+    "name": "Soren Desjarlais"
+   },
+   "minutes": 2,
+   "infraction": "Too Many Players - Bench Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:00",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Wilbur Henry"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "19:20",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Treycen Zorn"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Wilbur Henry"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:46",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cooper Huggins"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:46",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Knox Leganchuk"
+    },
+    {
+     "number": "98",
+     "name": "Oliver Speltz"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:20",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "86",
+    "name": "Branson Nickerson"
+   },
+   "assists": [
+    {
+     "number": "11",
+     "name": "Wilbur Henry"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:17",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "16",
+    "name": "Hunter Hanz Yahn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:12",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "18",
+    "name": "Knox Leganchuk"
+   },
+   "assists": [
+    {
+     "number": "48",
+     "name": "Colt Walker"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:30",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "24",
+    "name": "Colby Leist"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:06",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "9",
+    "name": "Leo Bryant"
+   },
+   "assists": [
+    {
+     "number": "88",
+     "name": "Nathaniel Wong"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:04",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "16",
+    "name": "Hunter Hanz Yahn"
+   },
+   "assists": [
+    {
+     "number": "5",
+     "name": "Jay Gardner"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:51",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "16",
+    "name": "Hunter Hanz Yahn"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Henri Gaudry"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:32",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "9",
+    "name": "Leo Bryant"
+   },
+   "assists": [
+    {
+     "number": "19",
+     "name": "Cooper Huggins"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:01",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "19",
+    "name": "Cooper Huggins"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:00",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "43",
+    "name": "Rigel Flewelling"
+   },
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:00",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "minutes": 2,
+   "infraction": "Boarding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:00",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "12",
+    "name": "Matteo Olson"
+   },
+   "minutes": 2,
+   "infraction": "Too Many Players - Bench Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "19:27",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "11",
+    "name": "Wilbur Henry"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:24",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "88",
+    "name": "Nathaniel Wong"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct - Bench Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:43",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "43",
+    "name": "Rigel Flewelling"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:38",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Treycen Zorn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:53",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "98",
+    "name": "Rhyor Tremblay"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:22",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": {
+    "number": "4",
+    "name": "Treycen Zorn"
+   },
+   "assists": [
+    {
+     "number": "12",
+     "name": "Matteo Olson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:25",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "9",
+    "name": "Leo Bryant"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Henri Gaudry"
+    },
+    {
+     "number": "5",
+     "name": "Jay Gardner"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:10",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "16",
+    "name": "Hunter Hanz Yahn"
+   },
+   "assists": [
+    {
+     "number": "24",
+     "name": "Colby Leist"
+    },
+    {
+     "number": "18",
+     "name": "Knox Leganchuk"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061636",
+   "number": "16",
+   "name": "Hunter Hanz Yahn",
+   "g": 5,
+   "a": 1,
+   "pts": 6,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061179",
+   "number": "9",
+   "name": "Leo Bryant",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061187",
+   "number": "24",
+   "name": "Colby Leist",
+   "g": 3,
+   "a": 1,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062797",
+   "number": "5",
+   "name": "Jay Gardner",
+   "g": 2,
+   "a": 3,
+   "pts": 5,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062531",
+   "number": "19",
+   "name": "Cooper Huggins",
+   "g": 2,
+   "a": 3,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5060560",
+   "number": "10",
+   "name": "Henri Gaudry",
+   "g": 2,
+   "a": 2,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062529",
+   "number": "43",
+   "name": "Rigel Flewelling",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061194",
+   "number": "18",
+   "name": "Knox Leganchuk",
+   "g": 1,
+   "a": 3,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062083",
+   "number": "98",
+   "name": "Oliver Speltz",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062551",
+   "number": "88",
+   "name": "Nathaniel Wong",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062796",
+   "number": "7",
+   "name": "Bayne Talley",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5061640",
+   "number": "48",
+   "name": "Colt Walker",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062006",
+   "number": "30",
+   "name": "Hunter Martel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062561",
+   "number": "27",
+   "name": "Kaiden Lopez",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062839",
+   "number": "4",
+   "name": "Treycen Zorn",
+   "g": 4,
+   "a": 0,
+   "pts": 4,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060955",
+   "number": "86",
+   "name": "Branson Nickerson",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5061000",
+   "number": "98",
+   "name": "Rhyor Tremblay",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062229",
+   "number": "81",
+   "name": "Soren Desjarlais",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060964",
+   "number": "7",
+   "name": "Dallas Grayston",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060971",
+   "number": "44",
+   "name": "Timo Jordan",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060997",
+   "number": "38",
+   "name": "hudsyn hagel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060705",
+   "number": "31",
+   "name": "Colt Bruno",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060702",
+   "number": "29",
+   "name": "Kinsleigh Gill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062710",
+   "number": "24",
+   "name": "Theodore North",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5061784",
+   "number": "18",
+   "name": "Brock Cutknife",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062936",
+   "number": "12",
+   "name": "Matteo Olson",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062214",
+   "number": "11",
+   "name": "Wilbur Henry",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 4
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 12,
+   "away": 6
+  },
+  {
+   "label": "2",
+   "home": 18,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 13,
+   "away": 2
+  }
+ ],
+ "start": "2026-10-11T10:30:00",
+ "gameNumber": 358,
+ "fetchedAt": "2026-11-07T19:47:07.430Z"
+}
