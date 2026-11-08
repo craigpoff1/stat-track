@@ -559,9 +559,9 @@
   "location": "Silent Ice Center - Hesco Arena",
   "home": "Wolverines Hockey Academy",
   "away": "South Sask Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 8
  },
  {
   "id": "2020428",
@@ -571,9 +571,9 @@
   "location": "East Calgary Twin Arena Red",
   "home": "Coast 2 Coast",
   "away": "Bow Valley Jr. Bigfoot",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 9,
+  "awayScore": 1
  },
  {
   "id": "2020440",
