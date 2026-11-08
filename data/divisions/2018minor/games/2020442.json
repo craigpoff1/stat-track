@@ -1,0 +1,842 @@
+{
+ "id": "2020442",
+ "dateText": "Sunday, November 8, 2026 @ 10:00 a.m.",
+ "rink": "East Calgary Twin Arena Red",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402378",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/6328b806-13ae-465b-a6ae-a17ff44dbfb0_Spartan Hockey Academy.png",
+  "score": 9
+ },
+ "away": {
+  "name": "Bow Valley Jr. Bigfoot",
+  "teamId": "402374",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/1b4b4baa-a0c9-4191-ac6c-cdca47605653_Bow Valley Jr. Bigfoot.png",
+  "score": 5
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:01",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "91",
+    "name": "Dominic Longeau"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:47",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "63",
+    "name": "Nolan Meas"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:44",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Austin Mitchell"
+   },
+   "assists": [
+    {
+     "number": "71",
+     "name": "Hayden Baba"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:22",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "scorer": {
+    "number": "2",
+    "name": "Owen Faith"
+   },
+   "assists": [
+    {
+     "number": "93",
+     "name": "Nash Gourley"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:24",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "77",
+    "name": "Anakin Tays"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:38",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "44",
+    "name": "Jett Wolch"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:33",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "77",
+    "name": "Anakin Tays"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:54",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "63",
+    "name": "Nolan Meas"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:43",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Austin Mitchell"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:47",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "scorer": {
+    "number": "11",
+    "name": "Bennett Helfrich"
+   },
+   "assists": [
+    {
+     "number": "29",
+     "name": "Nolan Scott"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:45",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "98",
+    "name": "Wells Callihoo"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:03",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "18",
+    "name": "Knox Buchanan"
+   },
+   "minutes": 2,
+   "infraction": "High-Sticking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:15",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "20",
+    "name": "Alexander Gorenc"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:55",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Hayden Baba"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:17",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "scorer": {
+    "number": "2",
+    "name": "Owen Faith"
+   },
+   "assists": [
+    {
+     "number": "6",
+     "name": "Jacob Avery"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "02:17",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "8",
+    "name": "Hersh Wolch"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:51",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Raiden Quefelec"
+   },
+   "assists": [
+    {
+     "number": "15",
+     "name": "Hayes Pokolm"
+    }
+   ],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "18:38",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "16",
+    "name": "Austin Mitchell"
+   },
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "17:30",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "93",
+    "name": "Nash Gourley"
+   },
+   "minutes": 2,
+   "infraction": "Checking to the Head - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "16:07",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Austin Mitchell"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Austin Sundquist"
+    }
+   ],
+   "tags": [
+    "PPG",
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:57",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "scorer": {
+    "number": "2",
+    "name": "Owen Faith"
+   },
+   "assists": [
+    {
+     "number": "28",
+     "name": "Elias Poffenroth"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:20",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "98",
+    "name": "Wells Callihoo"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:37",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Knox Buchanan"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:10",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "player": {
+    "number": "28",
+    "name": "Elias Poffenroth"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:02",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Austin Sundquist"
+   },
+   "assists": [
+    {
+     "number": "42",
+     "name": "Jacky Futers"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:41",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "93",
+    "name": "Elliot Eaton"
+   },
+   "assists": [
+    {
+     "number": "18",
+     "name": "Knox Buchanan"
+    },
+    {
+     "number": "17",
+     "name": "Austin Sundquist"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:21",
+   "side": "away",
+   "team": "Bow Valley Jr. Bigfoot",
+   "scorer": {
+    "number": "28",
+    "name": "Elias Poffenroth"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Dawson Yankilevich"
+    }
+   ],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5061412",
+   "number": "16",
+   "name": "Austin Mitchell",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062687",
+   "number": "93",
+   "name": "Elliot Eaton",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060643",
+   "number": "71",
+   "name": "Hayden Baba",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062577",
+   "number": "44",
+   "name": "Jett Wolch",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060827",
+   "number": "19",
+   "name": "Raiden Quefelec",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060630",
+   "number": "18",
+   "name": "Knox Buchanan",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060631",
+   "number": "17",
+   "name": "Austin Sundquist",
+   "g": 1,
+   "a": 2,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062405",
+   "number": "91",
+   "name": "Dominic Longeau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062578",
+   "number": "8",
+   "name": "Hersh Wolch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060531",
+   "number": "63",
+   "name": "Nolan Meas",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062618",
+   "number": "5",
+   "name": "Cresten Desrosiers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062571",
+   "number": "42",
+   "name": "Jacky Futers",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060649",
+   "number": "4",
+   "name": "Rycker Kawula",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062515",
+   "number": "31",
+   "name": "Cooper Holmen",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062514",
+   "number": "15",
+   "name": "Hayes Pokolm",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062670",
+   "number": "10",
+   "name": "Calvin Copp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061634",
+   "number": "2",
+   "name": "Owen Faith",
+   "g": 3,
+   "a": 0,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061199",
+   "number": "28",
+   "name": "Elias Poffenroth",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062549",
+   "number": "11",
+   "name": "Bennett Helfrich",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061607",
+   "number": "98",
+   "name": "Wells Callihoo",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060798",
+   "number": "93",
+   "name": "Nash Gourley",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060812",
+   "number": "91",
+   "name": "Wayne Proceviat",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060742",
+   "number": "88",
+   "name": "Augustus Aminzadah",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060817",
+   "number": "77",
+   "name": "Anakin Tays",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061798",
+   "number": "6",
+   "name": "Jacob Avery",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061254",
+   "number": "32",
+   "name": "Jetlen Redden",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5061601",
+   "number": "29",
+   "name": "Nolan Scott",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062544",
+   "number": "22",
+   "name": "Briggs Glencross",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062108",
+   "number": "20",
+   "name": "Alexander Gorenc",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062218",
+   "number": "19",
+   "name": "Quinn Garcia",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5062094",
+   "number": "10",
+   "name": "Dawson Yankilevich",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060794",
+   "number": "1",
+   "name": "Fletcher Kasper",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062515",
+   "number": "31",
+   "name": "Cooper Holmen",
+   "seconds": 3600,
+   "ga": 5,
+   "shots": 27,
+   "saves": 22
+  },
+  {
+   "side": "away",
+   "teamId": "402374",
+   "playerId": "5060794",
+   "number": "1",
+   "name": "Fletcher Kasper",
+   "seconds": 3300,
+   "ga": 9,
+   "shots": 34,
+   "saves": 25
+  }
+ ],
+ "warnings": [
+  "home: goalie minutes total 60"
+ ],
+ "shotsByPeriod": [],
+ "start": "2026-11-08T10:00:00",
+ "gameNumber": 670,
+ "fetchedAt": "2026-11-08T20:30:23.470Z"
+}

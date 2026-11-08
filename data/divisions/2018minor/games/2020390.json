@@ -2,18 +2,18 @@
  "id": "2020390",
  "dateText": "Friday, November 6, 2026 @ 3:15 p.m.",
  "rink": "East Calgary Twin Arena Red",
- "status": "Final OT",
+ "status": "Final",
  "home": {
   "name": "Coast 2 Coast",
   "teamId": "402380",
   "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/80c8fe05-e431-4114-8ef1-f4009a377bd9_Coast 2 Coast.png",
-  "score": 1
+  "score": 2
  },
  "away": {
   "name": "HC Calgary Bandits",
   "teamId": "402373",
   "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/cec76136-a07c-4e79-a639-794d7a811a07_HC Calgary Bandits.png",
-  "score": 5
+  "score": 6
  },
  "periods": [
   {
@@ -28,13 +28,8 @@
   },
   {
    "label": "3",
-   "home": 0,
-   "away": 1
-  },
-  {
-   "label": "OT",
-   "home": 0,
-   "away": 0
+   "home": 1,
+   "away": 2
   }
  ],
  "events": [
@@ -190,9 +185,46 @@
    "tags": [
     "PPG"
    ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:30",
+   "side": "away",
+   "team": "HC Calgary Bandits",
+   "scorer": {
+    "number": "10",
+    "name": "Carter Pi"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:11",
+   "side": "home",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "assists": [],
+   "tags": []
   }
  ],
  "skaters": [
+  {
+   "side": "home",
+   "teamId": "402380",
+   "playerId": "5062797",
+   "number": "5",
+   "name": "Jay Gardner",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
   {
    "side": "home",
    "teamId": "402380",
@@ -254,17 +286,6 @@
    "playerId": "5062796",
    "number": "7",
    "name": "Bayne Talley",
-   "g": 0,
-   "a": 0,
-   "pts": 0,
-   "pim": 0
-  },
-  {
-   "side": "home",
-   "teamId": "402380",
-   "playerId": "5062797",
-   "number": "5",
-   "name": "Jay Gardner",
    "g": 0,
    "a": 0,
    "pts": 0,
@@ -364,9 +385,9 @@
    "playerId": "5061911",
    "number": "10",
    "name": "Carter Pi",
-   "g": 3,
+   "g": 4,
    "a": 0,
-   "pts": 3,
+   "pts": 4,
    "pim": 0
   },
   {
@@ -541,14 +562,9 @@
    "label": "3",
    "home": 2,
    "away": 7
-  },
-  {
-   "label": "OT",
-   "home": 15,
-   "away": 16
   }
  ],
  "start": "2026-11-06T15:15:00",
  "gameNumber": 618,
- "fetchedAt": "2026-11-08T11:16:42.633Z"
+ "fetchedAt": "2026-11-08T20:30:19.298Z"
 }

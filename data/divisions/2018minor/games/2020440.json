@@ -1,0 +1,600 @@
+{
+ "id": "2020440",
+ "dateText": "Sunday, November 8, 2026 @ 9:45 a.m.",
+ "rink": "Silent Ice Center - Hatch Co. Arena",
+ "status": "Final",
+ "home": {
+  "name": "Northern Hockey Club",
+  "teamId": "402375",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/502019a5-6690-4385-b873-10405c0c7b14_Northern Hockey Club.png",
+  "score": 10
+ },
+ "away": {
+  "name": "South Sask Academy",
+  "teamId": "402377",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e513f1eb-1607-430a-80d1-2c55526f29b9_South Sask Academy.png",
+  "score": 2
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 6,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:12",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [
+    {
+     "number": "17",
+     "name": "Daxton Williamson"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:12",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "21",
+    "name": "Boston Weber"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:40",
+   "side": "away",
+   "team": "South Sask Academy",
+   "player": {
+    "number": "29",
+    "name": "Emma Church"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:18",
+   "side": "away",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "53",
+    "name": "Bodhi Chan"
+   },
+   "assists": [
+    {
+     "number": "91",
+     "name": "Emerson Erdman"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:50",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "17",
+    "name": "Daxton Williamson"
+   },
+   "assists": [
+    {
+     "number": "5",
+     "name": "Cash Blackburn"
+    },
+    {
+     "number": "2",
+     "name": "Beau Brown"
+    }
+   ],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:56",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "8",
+    "name": "Ace Dallaire"
+   },
+   "assists": [
+    {
+     "number": "53",
+     "name": "Kesler Johnston"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:12",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "18",
+    "name": "Revy Jeffery"
+   },
+   "assists": [
+    {
+     "number": "5",
+     "name": "Cash Blackburn"
+    },
+    {
+     "number": "22",
+     "name": "Raiden Pomerleau"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "05:14",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "player": {
+    "number": "53",
+    "name": "Kesler Johnston"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:15",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "7",
+    "name": "Brennan Whitford"
+   },
+   "assists": [
+    {
+     "number": "5",
+     "name": "Cash Blackburn"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:35",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "53",
+    "name": "Kesler Johnston"
+   },
+   "assists": [
+    {
+     "number": "8",
+     "name": "Ace Dallaire"
+    },
+    {
+     "number": "16",
+     "name": "Rhett Burgess"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:23",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "3",
+    "name": "Shea Burgess"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:01",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "71",
+    "name": "Harvey Melnyk"
+   },
+   "assists": [
+    {
+     "number": "24",
+     "name": "Drew Brown"
+    },
+    {
+     "number": "21",
+     "name": "Boston Weber"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:56",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "scorer": {
+    "number": "5",
+    "name": "Cash Blackburn"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:33",
+   "side": "away",
+   "team": "South Sask Academy",
+   "scorer": {
+    "number": "3",
+    "name": "bennett gosling"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "02:17",
+   "side": "home",
+   "team": "Northern Hockey Club",
+   "player": {
+    "number": "3",
+    "name": "Shea Burgess"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061514",
+   "number": "5",
+   "name": "Cash Blackburn",
+   "g": 2,
+   "a": 3,
+   "pts": 5,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060448",
+   "number": "8",
+   "name": "Ace Dallaire",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061402",
+   "number": "71",
+   "name": "Harvey Melnyk",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062506",
+   "number": "7",
+   "name": "Brennan Whitford",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060634",
+   "number": "53",
+   "name": "Kesler Johnston",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061691",
+   "number": "3",
+   "name": "Shea Burgess",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062858",
+   "number": "21",
+   "name": "Boston Weber",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061910",
+   "number": "18",
+   "name": "Revy Jeffery",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062414",
+   "number": "17",
+   "name": "Daxton Williamson",
+   "g": 1,
+   "a": 1,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061162",
+   "number": "30",
+   "name": "Bennett Turchyn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5060628",
+   "number": "29",
+   "name": "Tyson Ruby",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5062401",
+   "number": "24",
+   "name": "Drew Brown",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061557",
+   "number": "22",
+   "name": "Raiden Pomerleau",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061104",
+   "number": "2",
+   "name": "Beau Brown",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402375",
+   "playerId": "5061690",
+   "number": "16",
+   "name": "Rhett Burgess",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5062749",
+   "number": "53",
+   "name": "Bodhi Chan",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5062315",
+   "number": "3",
+   "name": "bennett gosling",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5062015",
+   "number": "98",
+   "name": "Riley Leier",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5061323",
+   "number": "94",
+   "name": "Atlas Kittler",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5062758",
+   "number": "91",
+   "name": "Emerson Erdman",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5062740",
+   "number": "71",
+   "name": "Barrett Pennington",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5062890",
+   "number": "34",
+   "name": "Jason Connatty",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5061322",
+   "number": "33",
+   "name": "Lowen McLean",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5062950",
+   "number": "29",
+   "name": "Emma Church",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5061051",
+   "number": "24",
+   "name": "Noah Harvey",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402377",
+   "playerId": "5062106",
+   "number": "15",
+   "name": "Logan Kelloway",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 9
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 9
+  }
+ ],
+ "start": "2026-11-08T09:45:00",
+ "gameNumber": 668,
+ "fetchedAt": "2026-11-08T20:30:22.427Z"
+}

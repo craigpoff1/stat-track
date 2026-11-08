@@ -440,8 +440,8 @@
   "home": "Coast 2 Coast",
   "away": "HC Calgary Bandits",
   "final": true,
-  "homeScore": 1,
-  "awayScore": 5
+  "homeScore": 2,
+  "awayScore": 6
  },
  {
   "id": "2020392",
@@ -583,9 +583,9 @@
   "location": "Silent Ice Center - Hatch Co. Arena",
   "home": "Northern Hockey Club",
   "away": "South Sask Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 10,
+  "awayScore": 2
  },
  {
   "id": "2020442",
@@ -595,9 +595,9 @@
   "location": "East Calgary Twin Arena Red",
   "home": "Spartan Hockey Academy",
   "away": "Bow Valley Jr. Bigfoot",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 9,
+  "awayScore": 5
  },
  {
   "id": "2020444",
