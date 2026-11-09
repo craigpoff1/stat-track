@@ -7,7 +7,7 @@
   "url": "https://hpl-winter-league.kreezee-sports.com",
   "platform": "Kreezee"
  },
- "fetchedAt": "2026-11-09T12:52:53.832Z",
+ "fetchedAt": "2026-11-09T23:46:39.104Z",
  "detail": "scores-only",
  "teams": [
   {
@@ -784,7 +784,7 @@
   {
    "id": "hpl:744586",
    "start": "2026-11-11T17:30:00",
-   "rink": "Delta Planet Ice · Canadian Rink",
+   "rink": "Delta Planet Ice · NEED TO RESCHEDULE GAME - Canadian Rink",
    "home": "hpl:148548",
    "away": "hpl:148550",
    "final": false,

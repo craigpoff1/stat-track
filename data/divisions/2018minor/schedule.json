@@ -660,18 +660,6 @@
   "awayScore": null
  },
  {
-  "id": "2020511",
-  "gameNumber": 739,
-  "start": "2026-11-20T17:15:00",
-  "end": "2026-11-20T18:45:00",
-  "location": "Duncan Murray Recreation Centre - Steve Hotchkiss Rink",
-  "home": "Bow Valley Jr. Bigfoot",
-  "away": "Northern Hockey Club",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
   "id": "2020518",
   "gameNumber": 746,
   "start": "2026-11-20T18:45:00",
@@ -679,18 +667,6 @@
   "location": "Red Knight Arena (CFB Moose Jaw)",
   "home": "Riggers Hockey Academy",
   "away": "HC Calgary Bandits",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
-  "id": "2020529",
-  "gameNumber": 757,
-  "start": "2026-11-21T08:00:00",
-  "end": "2026-11-21T09:30:00",
-  "location": "Duncan Murray Recreation Centre - Bill Thompson Rink",
-  "home": "Northern Hockey Club",
-  "away": "Spartan Hockey Academy",
   "final": false,
   "homeScore": null,
   "awayScore": null
@@ -708,18 +684,6 @@
   "awayScore": null
  },
  {
-  "id": "2020550",
-  "gameNumber": 778,
-  "start": "2026-11-21T11:30:00",
-  "end": "2026-11-21T13:00:00",
-  "location": "Duncan Murray Recreation Centre - Bill Thompson Rink",
-  "home": "Spartan Hockey Academy",
-  "away": "Wolverines Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
   "id": "2020563",
   "gameNumber": 791,
   "start": "2026-11-21T14:15:00",
@@ -727,18 +691,6 @@
   "location": "Red Knight Arena (CFB Moose Jaw)",
   "home": "YYC Jays",
   "away": "HC Calgary Bandits",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
-  "id": "2020565",
-  "gameNumber": 793,
-  "start": "2026-11-21T15:00:00",
-  "end": "2026-11-21T16:30:00",
-  "location": "Duncan Murray Recreation Centre - Bill Thompson Rink",
-  "home": "Wolverines Hockey Academy",
-  "away": "Bow Valley Jr. Bigfoot",
   "final": false,
   "homeScore": null,
   "awayScore": null
@@ -756,30 +708,6 @@
   "awayScore": null
  },
  {
-  "id": "2020583",
-  "gameNumber": 811,
-  "start": "2026-11-21T18:30:00",
-  "end": "2026-11-21T20:00:00",
-  "location": "Duncan Murray Recreation Centre - Bill Thompson Rink",
-  "home": "Northern Hockey Club",
-  "away": "Bow Valley Jr. Bigfoot",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
-  "id": "2020593",
-  "gameNumber": 821,
-  "start": "2026-11-22T08:00:00",
-  "end": "2026-11-22T09:30:00",
-  "location": "Duncan Murray Recreation Centre - Bill Thompson Rink",
-  "home": "Northern Hockey Club",
-  "away": "Spartan Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
   "id": "2020594",
   "gameNumber": 822,
   "start": "2026-11-22T08:00:00",
@@ -792,18 +720,6 @@
   "awayScore": null
  },
  {
-  "id": "2020605",
-  "gameNumber": 833,
-  "start": "2026-11-22T09:45:00",
-  "end": "2026-11-22T11:15:00",
-  "location": "Duncan Murray Recreation Centre - Bill Thompson Rink",
-  "home": "Bow Valley Jr. Bigfoot",
-  "away": "Wolverines Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
   "id": "2020618",
   "gameNumber": 846,
   "start": "2026-11-22T12:00:00",
@@ -811,18 +727,6 @@
   "location": "Red Knight Arena (CFB Moose Jaw)",
   "home": "Riggers Hockey Academy",
   "away": "South Sask Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
- },
- {
-  "id": "2020622",
-  "gameNumber": 850,
-  "start": "2026-11-22T13:15:00",
-  "end": "2026-11-22T14:45:00",
-  "location": "Duncan Murray Recreation Centre - Bill Thompson Rink",
-  "home": "Wolverines Hockey Academy",
-  "away": "Spartan Hockey Academy",
   "final": false,
   "homeScore": null,
   "awayScore": null
@@ -1056,6 +960,54 @@
   "awayScore": null
  },
  {
+  "id": "2020550",
+  "gameNumber": 778,
+  "start": "2026-12-11T15:45:00",
+  "end": "2026-12-11T17:15:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Spartan Hockey Academy",
+  "away": "Wolverines Hockey Academy",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
+  "id": "2020511",
+  "gameNumber": 739,
+  "start": "2026-12-11T17:30:00",
+  "end": "2026-12-11T19:00:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Bow Valley Jr. Bigfoot",
+  "away": "Northern Hockey Club",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
+  "id": "2020565",
+  "gameNumber": 793,
+  "start": "2026-12-12T07:30:00",
+  "end": "2026-12-12T09:00:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Wolverines Hockey Academy",
+  "away": "Bow Valley Jr. Bigfoot",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
+  "id": "2020529",
+  "gameNumber": 757,
+  "start": "2026-12-12T09:15:00",
+  "end": "2026-12-12T10:45:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Northern Hockey Club",
+  "away": "Spartan Hockey Academy",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
   "id": "2020817",
   "gameNumber": 1045,
   "start": "2026-12-12T14:30:00",
@@ -1063,6 +1015,54 @@
   "location": "Nexsource 2",
   "home": "YYC Jays",
   "away": "Riggers Hockey Academy",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
+  "id": "2020583",
+  "gameNumber": 811,
+  "start": "2026-12-12T15:30:00",
+  "end": "2026-12-12T17:00:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Northern Hockey Club",
+  "away": "Bow Valley Jr. Bigfoot",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
+  "id": "2020622",
+  "gameNumber": 850,
+  "start": "2026-12-12T17:15:00",
+  "end": "2026-12-12T18:45:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Wolverines Hockey Academy",
+  "away": "Spartan Hockey Academy",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
+  "id": "2020593",
+  "gameNumber": 821,
+  "start": "2026-12-13T07:30:00",
+  "end": "2026-12-13T09:00:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Northern Hockey Club",
+  "away": "Spartan Hockey Academy",
+  "final": false,
+  "homeScore": null,
+  "awayScore": null
+ },
+ {
+  "id": "2020605",
+  "gameNumber": 833,
+  "start": "2026-12-13T11:00:00",
+  "end": "2026-12-13T12:30:00",
+  "location": "West Edmonton Mall - Ice Palace",
+  "home": "Bow Valley Jr. Bigfoot",
+  "away": "Wolverines Hockey Academy",
   "final": false,
   "homeScore": null,
   "awayScore": null
