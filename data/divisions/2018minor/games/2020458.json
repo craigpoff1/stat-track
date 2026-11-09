@@ -1,0 +1,711 @@
+{
+ "id": "2020458",
+ "dateText": "Sunday, November 8, 2026 @ 3:30 p.m.",
+ "rink": "East Calgary Twin Arena Blue",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402378",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/6328b806-13ae-465b-a6ae-a17ff44dbfb0_Spartan Hockey Academy.png",
+  "score": 5
+ },
+ "away": {
+  "name": "Coast 2 Coast",
+  "teamId": "402380",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/80c8fe05-e431-4114-8ef1-f4009a377bd9_Coast 2 Coast.png",
+  "score": 5
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:41",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "88",
+    "name": "Nathaniel Wong"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:16",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "9",
+    "name": "Leo Bryant"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:20",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "98",
+    "name": "Oliver Speltz"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:01",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "17",
+    "name": "Austin Sundquist"
+   },
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:12",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "8",
+    "name": "Rhett Evans"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:30",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "10",
+    "name": "Calvin Copp"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:10",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "19",
+    "name": "Cooper Huggins"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Henri Gaudry"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "19:30",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "71",
+    "name": "Hayden Baba"
+   },
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:08",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "19",
+    "name": "Raiden Quefelec"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:00",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "18",
+    "name": "Knox Buchanan"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "15:27",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "5",
+    "name": "Cresten Desrosiers"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:36",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "17",
+    "name": "Austin Sundquist"
+   },
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "07:04",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "7",
+    "name": "Bayne Talley"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "03:10",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "71",
+    "name": "Hayden Baba"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "02:35",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": {
+    "number": "93",
+    "name": "Elliot Eaton"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:43",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "5",
+    "name": "Jay Gardner"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:21",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "16",
+    "name": "Hunter Hanz Yahn"
+   },
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:24",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "scorer": {
+    "number": "7",
+    "name": "Bayne Talley"
+   },
+   "assists": [
+    {
+     "number": "24",
+     "name": "Colby Leist"
+    },
+    {
+     "number": "5",
+     "name": "Jay Gardner"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:58",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "8",
+    "name": "Rhett Evans"
+   },
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "03:08",
+   "side": "away",
+   "team": "Coast 2 Coast",
+   "player": {
+    "number": "43",
+    "name": "Rigel Flewelling"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:47",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": {
+    "number": "63",
+    "name": "Nolan Meas"
+   },
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062687",
+   "number": "93",
+   "name": "Elliot Eaton",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060643",
+   "number": "71",
+   "name": "Hayden Baba",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060827",
+   "number": "19",
+   "name": "Raiden Quefelec",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060630",
+   "number": "18",
+   "name": "Knox Buchanan",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060631",
+   "number": "17",
+   "name": "Austin Sundquist",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062405",
+   "number": "91",
+   "name": "Dominic Longeau",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062578",
+   "number": "8",
+   "name": "Hersh Wolch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060531",
+   "number": "63",
+   "name": "Nolan Meas",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062618",
+   "number": "5",
+   "name": "Cresten Desrosiers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062577",
+   "number": "44",
+   "name": "Jett Wolch",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062571",
+   "number": "42",
+   "name": "Jacky Futers",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5060649",
+   "number": "4",
+   "name": "Rycker Kawula",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062451",
+   "number": "32",
+   "name": "Eli Koscianski",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5061412",
+   "number": "16",
+   "name": "Austin Mitchell",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062514",
+   "number": "15",
+   "name": "Hayes Pokolm",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062670",
+   "number": "10",
+   "name": "Calvin Copp",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061179",
+   "number": "9",
+   "name": "Leo Bryant",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062551",
+   "number": "88",
+   "name": "Nathaniel Wong",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062796",
+   "number": "7",
+   "name": "Bayne Talley",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062531",
+   "number": "19",
+   "name": "Cooper Huggins",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061636",
+   "number": "16",
+   "name": "Hunter Hanz Yahn",
+   "g": 1,
+   "a": 0,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062083",
+   "number": "98",
+   "name": "Oliver Speltz",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062550",
+   "number": "8",
+   "name": "Rhett Evans",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062797",
+   "number": "5",
+   "name": "Jay Gardner",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061640",
+   "number": "48",
+   "name": "Colt Walker",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062529",
+   "number": "43",
+   "name": "Rigel Flewelling",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062006",
+   "number": "30",
+   "name": "Hunter Martel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062561",
+   "number": "27",
+   "name": "Kaiden Lopez",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061187",
+   "number": "24",
+   "name": "Colby Leist",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5061194",
+   "number": "18",
+   "name": "Knox Leganchuk",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5060560",
+   "number": "10",
+   "name": "Henri Gaudry",
+   "g": 0,
+   "a": 1,
+   "pts": 1,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402378",
+   "playerId": "5062451",
+   "number": "32",
+   "name": "Eli Koscianski",
+   "seconds": 3300,
+   "ga": 5,
+   "shots": 27,
+   "saves": 22
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062561",
+   "number": "27",
+   "name": "Kaiden Lopez",
+   "seconds": 1320,
+   "ga": 0,
+   "shots": 4,
+   "saves": 4
+  },
+  {
+   "side": "away",
+   "teamId": "402380",
+   "playerId": "5062006",
+   "number": "30",
+   "name": "Hunter Martel",
+   "seconds": 1980,
+   "ga": 5,
+   "shots": 21,
+   "saves": 16
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "start": "2026-11-08T15:30:00",
+ "gameNumber": 686,
+ "fetchedAt": "2026-11-09T01:45:33.354Z"
+}

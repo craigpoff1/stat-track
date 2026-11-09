@@ -1123,9 +1123,9 @@
   "location": "Silent Ice Center - Hatch Co. Arena",
   "home": "Capital City Knights",
   "away": "North Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 9,
+  "awayScore": 4
  },
  {
   "id": "2020432",

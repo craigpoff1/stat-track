@@ -1,0 +1,602 @@
+{
+ "id": "2020450",
+ "dateText": "Sunday, November 8, 2026 @ 1:15 p.m.",
+ "rink": "Silent Ice Center - Hatch Co. Arena",
+ "status": "Final",
+ "home": {
+  "name": "Wolverines Hockey Academy",
+  "teamId": "402379",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/f7347df2-5cbb-4bda-9254-f5b9b6876b62_Wolverines Hockey Academy.png",
+  "score": 10
+ },
+ "away": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "402376",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/7958d08c-c616-4088-8632-c7a93d035055_Riggers Hockey Academy.png",
+  "score": 0
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 5,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 2,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:22",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "2",
+    "name": "Cooper Carson"
+   },
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:31",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "10",
+    "name": "Jaizley Arcand Auigbelle"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:27",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "29",
+    "name": "Kinsleigh Gill"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:22",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "player": {
+    "number": "93",
+    "name": "Nixon Townsend"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:25",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "67",
+    "name": "Tucker Coueslan"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:16",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "79",
+    "name": "Jude Choufi"
+   },
+   "assists": [
+    {
+     "number": "93",
+     "name": "Nixon Townsend"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "15:31",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": {
+    "number": "81",
+    "name": "Soren Desjarlais"
+   },
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:33",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "79",
+    "name": "Jude Choufi"
+   },
+   "assists": [
+    {
+     "number": "93",
+     "name": "Nixon Townsend"
+    }
+   ],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:38",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "67",
+    "name": "Tucker Coueslan"
+   },
+   "assists": [
+    {
+     "number": "10",
+     "name": "Jaizley Arcand Auigbelle"
+    }
+   ],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "04:43",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Luciano Dinino"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:14",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "10",
+    "name": "Jaizley Arcand Auigbelle"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:39",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "16",
+    "name": "Luciano Dinino"
+   },
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "14:40",
+   "side": "home",
+   "team": "Wolverines Hockey Academy",
+   "scorer": {
+    "number": "2",
+    "name": "Cooper Carson"
+   },
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5062829",
+   "number": "79",
+   "name": "Jude Choufi",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5061235",
+   "number": "67",
+   "name": "Tucker Coueslan",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5062709",
+   "number": "2",
+   "name": "Cooper Carson",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5061025",
+   "number": "16",
+   "name": "Luciano Dinino",
+   "g": 2,
+   "a": 0,
+   "pts": 2,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5062585",
+   "number": "10",
+   "name": "Jaizley Arcand Auigbelle",
+   "g": 2,
+   "a": 1,
+   "pts": 3,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5061239",
+   "number": "98",
+   "name": "Finn Brown",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5060536",
+   "number": "93",
+   "name": "Nixon Townsend",
+   "g": 0,
+   "a": 2,
+   "pts": 2,
+   "pim": 2
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5062945",
+   "number": "92",
+   "name": "Pierce Waldenberger",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5061516",
+   "number": "9",
+   "name": "Luke Bensmiller",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5061233",
+   "number": "74",
+   "name": "Vaughn Badry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5062230",
+   "number": "71",
+   "name": "Kane Figiel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5060843",
+   "number": "29",
+   "name": "Nathan Neis",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5060561",
+   "number": "18",
+   "name": "Hartley Nixon",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5060753",
+   "number": "14",
+   "name": "Jax Berry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5060528",
+   "number": "11",
+   "name": "Anze Neurauter",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5061000",
+   "number": "98",
+   "name": "Rhyor Tremblay",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5061802",
+   "number": "93",
+   "name": "Marshall Rolston",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060955",
+   "number": "86",
+   "name": "Branson Nickerson",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062229",
+   "number": "81",
+   "name": "Soren Desjarlais",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060964",
+   "number": "7",
+   "name": "Dallas Grayston",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060971",
+   "number": "44",
+   "name": "Timo Jordan",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062839",
+   "number": "4",
+   "name": "Treycen Zorn",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060997",
+   "number": "38",
+   "name": "hudsyn hagel",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060705",
+   "number": "31",
+   "name": "Colt Bruno",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060702",
+   "number": "29",
+   "name": "Kinsleigh Gill",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 2
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062710",
+   "number": "24",
+   "name": "Theodore North",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5061784",
+   "number": "18",
+   "name": "Brock Cutknife",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062587",
+   "number": "16",
+   "name": "Declan Blue",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062214",
+   "number": "11",
+   "name": "Wilbur Henry",
+   "g": 0,
+   "a": 0,
+   "pts": 0,
+   "pim": 0
+  }
+ ],
+ "goalies": [
+  {
+   "side": "home",
+   "teamId": "402379",
+   "playerId": "5061233",
+   "number": "74",
+   "name": "Vaughn Badry",
+   "seconds": 3300,
+   "ga": 0,
+   "shots": 15,
+   "saves": 15
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5060705",
+   "number": "31",
+   "name": "Colt Bruno",
+   "seconds": 1569,
+   "ga": 4,
+   "shots": 19,
+   "saves": 15
+  },
+  {
+   "side": "away",
+   "teamId": "402376",
+   "playerId": "5062710",
+   "number": "24",
+   "name": "Theodore North",
+   "seconds": 1731,
+   "ga": 6,
+   "shots": 23,
+   "saves": 17
+  }
+ ],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 15,
+   "away": 6
+  },
+  {
+   "label": "2",
+   "home": 15,
+   "away": 6
+  },
+  {
+   "label": "3",
+   "home": 12,
+   "away": 3
+  }
+ ],
+ "start": "2026-11-08T13:15:00",
+ "gameNumber": 678,
+ "fetchedAt": "2026-11-09T01:45:32.400Z"
+}

@@ -607,9 +607,9 @@
   "location": "East Calgary Twin Arena Blue",
   "home": "YYC Jays",
   "away": "Coast 2 Coast",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 10,
+  "awayScore": 2
  },
  {
   "id": "2020450",
@@ -619,9 +619,9 @@
   "location": "Silent Ice Center - Hatch Co. Arena",
   "home": "Wolverines Hockey Academy",
   "away": "Riggers Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 10,
+  "awayScore": 0
  },
  {
   "id": "2020458",
@@ -631,9 +631,9 @@
   "location": "East Calgary Twin Arena Blue",
   "home": "Spartan Hockey Academy",
   "away": "Coast 2 Coast",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 5,
+  "awayScore": 5
  },
  {
   "id": "2020496",
