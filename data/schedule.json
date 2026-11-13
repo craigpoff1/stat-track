@@ -499,9 +499,9 @@
   "location": "Silent Ice Center - Hatch Co. Arena",
   "home": "Riggers Hockey Academy",
   "away": "MOB Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 1
  },
  {
   "id": "2020461",
