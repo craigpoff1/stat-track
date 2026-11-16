@@ -1135,9 +1135,9 @@
   "location": "Hussar Arena",
   "home": "O2 Grizzlies",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 1,
+  "awayScore": 6
  },
  {
   "id": "2020508",

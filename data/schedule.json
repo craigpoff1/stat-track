@@ -511,9 +511,9 @@
   "location": "Hussar Arena",
   "home": "Stars Hockey Academy",
   "away": "Young Kings Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 1
  },
  {
   "id": "2020463",
@@ -523,9 +523,9 @@
   "location": "Hussar Arena",
   "home": "Rebels Hockey Academy",
   "away": "Spartan Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 9
  },
  {
   "id": "2020465",
@@ -535,9 +535,9 @@
   "location": "Hussar Arena",
   "home": "HC Calgary Bandits",
   "away": "Saints Pro Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 1
  },
  {
   "id": "2020466",
@@ -547,9 +547,9 @@
   "location": "Morinville Silent Ice Gardens",
   "home": "Capital City Knights",
   "away": "MOB Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 0,
+  "awayScore": 9
  },
  {
   "id": "2020470",
@@ -559,9 +559,9 @@
   "location": "Hussar Arena",
   "home": "Spartan Hockey Academy",
   "away": "Rebels Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 10,
+  "awayScore": 5
  },
  {
   "id": "2020473",
@@ -571,9 +571,9 @@
   "location": "Hussar Arena",
   "home": "Calgary Crusaders",
   "away": "Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 2,
+  "awayScore": 3
  },
  {
   "id": "2020474",
@@ -583,9 +583,9 @@
   "location": "Hussar Arena",
   "home": "HC Calgary Bandits",
   "away": "Rebels Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 6,
+  "awayScore": 8
  },
  {
   "id": "2020477",
@@ -595,9 +595,9 @@
   "location": "Hussar Arena",
   "home": "Calgary Crusaders",
   "away": "Young Kings Hockey",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 6
  },
  {
   "id": "2020480",
@@ -607,9 +607,9 @@
   "location": "Hussar Arena",
   "home": "Saints Pro Hockey Academy",
   "away": "Spartan Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 1,
+  "awayScore": 7
  },
  {
   "id": "2020482",
@@ -619,9 +619,9 @@
   "location": "Hussar Arena",
   "home": "Young Kings Hockey",
   "away": "Stars Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 6
  },
  {
   "id": "2020485",
@@ -631,9 +631,9 @@
   "location": "Hussar Arena",
   "home": "Saints Pro Hockey Academy",
   "away": "HC Calgary Bandits",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 5
  },
  {
   "id": "2020488",
@@ -643,9 +643,9 @@
   "location": "Morinville Silent Ice Gardens",
   "home": "MOB Hockey",
   "away": "Riggers Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 6
  },
  {
   "id": "2020489",
@@ -667,9 +667,9 @@
   "location": "Hussar Arena",
   "home": "Young Kings Hockey",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 3,
+  "awayScore": 3
  },
  {
   "id": "2020492",
@@ -679,9 +679,9 @@
   "location": "Hussar Arena",
   "home": "Spartan Hockey Academy",
   "away": "Saints Pro Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 12,
+  "awayScore": 2
  },
  {
   "id": "2020494",
@@ -691,9 +691,9 @@
   "location": "Hussar Arena",
   "home": "Stars Hockey Academy",
   "away": "Calgary Crusaders",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 1,
+  "awayScore": 3
  },
  {
   "id": "2020471",
@@ -703,9 +703,9 @@
   "location": "Morinville Silent Ice Gardens",
   "home": "MOB Hockey",
   "away": "Capital City Knights",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 8,
+  "awayScore": 2
  },
  {
   "id": "2020497",

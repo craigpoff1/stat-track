@@ -643,9 +643,9 @@
   "location": "Silent Ice Center - Hatch Co. Arena",
   "home": "Riggers Hockey Academy",
   "away": "Wolverines Hockey Academy",
-  "final": false,
-  "homeScore": null,
-  "awayScore": null
+  "final": true,
+  "homeScore": 4,
+  "awayScore": 15
  },
  {
   "id": "2020509",
