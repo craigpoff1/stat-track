@@ -76,14 +76,19 @@
         ...[...teams].sort((a, b) => short(a.name).localeCompare(short(b.name))).map((t) => `<button type="button" class="wkchip ${sel === String(t.id) ? 'on' : ''}" data-t="${esc(t.id)}">${esc(short(t.name))}</button>`)].join('');
       const skaters = S.players.filter((p) => (!p.isGoalie || p.pts > 0) && (!sel || String(p.teamId) === sel));
       const goalies = (S.goalies || []).filter((g) => !sel || String(g.teamId) === sel);
+      // HSL stopped publishing player names in Nov 2026: later games add to standings, not to player stats.
+      const thru = S.meta.teamOnlyGames && S.meta.playerStatsThrough
+        ? new Date(...S.meta.playerStatsThrough.split('-').map((n, i) => (i === 1 ? n - 1 : +n))).toLocaleDateString('en-CA', { month: 'short', day: 'numeric' }) : null;
+      const frozen = thru ? `<div class="note frozen">Player stats are through ${esc(thru)}: the league stopped publishing player names after that. Standings are still current.</div>` : '';
       $app.innerHTML = `${divBar()}
         <div class="ptitle"><div><div class="k">${esc(S.meta.season)} · ${esc(S.meta.league)}</div><h1>${esc(S.meta.division)}</h1>
           <div class="s">${S.meta.gamesPlayed} of ${S.meta.gamesScheduled} games final · tap a team to filter · tap a column to sort</div></div></div>
         <div class="wkbar g-teams" role="group" aria-label="Filter by team">${chips}</div>
         <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="gold">${tSel ? esc(short(tSel.name)) : 'Standings'}</h2><span class="meta">${tSel ? `${tSel.rank} of ${teams.length} in division` : `${teams.length} teams`}</span></div><div class="tw"><table id="g-st"></table></div></section></div>
-        <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="${tSel ? 'gold' : ''}">Scoring leaders</h2><span class="meta">${skaters.length} players${tSel ? ` · ${esc(short(tSel.name))}` : ''}</span></div><div class="tw"><table id="g-sk"></table></div></section></div>
+        <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="${tSel ? 'gold' : ''}">Scoring leaders</h2><span class="meta">${skaters.length} players${tSel ? ` · ${esc(short(tSel.name))}` : ''}</span></div><div class="tw"><table id="g-sk"></table></div>${frozen}</section></div>
         <div style="margin-bottom:18px"><section class="panel"><div class="ph"><h2 class="${tSel ? 'gold' : ''}">Goalies</h2><span class="meta">${goalies.length} goalies${tSel ? ` · ${esc(short(tSel.name))}` : ''}</span></div><div class="tw"><table id="g-gl"></table></div>
           <div class="g-dn" id="g-dn" hidden></div>
+          ${frozen}
           <div class="note">${GOALIE_NOTE}</div></section></div>`;
       table(document.getElementById('g-st'), sel ? [byId.get(sel)] : teams, [
         { key: 'rank', label: '#', cls: 'rkc', val: (t) => t.rank, desc: false },
