@@ -1,15 +1,10 @@
 name: Update stats and deploy
 
 on:
-  schedule:
-    # Games can be any day of the week. Run nightly (04:17 UTC = ~10 PM MDT / 9 PM MST),
-    # plus a Monday-morning catch-up for late weekend sheets and stat corrections.
-    - cron: '17 4 * * *'
-    - cron: '17 15 * * 1'
-    # Game days (showcase weekends / tournaments run Fri-Sun): every 2 h, ~10 AM-8 PM Mountain,
-    # so results land the same day without anyone's laptop. UTC: 16-22h Fri-Sun, 00-02h the next day.
-    - cron: '17 16,18,20,22 * * 5,6,0'
-    - cron: '17 0,2 * * 6,0,1'
+  # Scheduled pulls removed 2026-11-16: HSL stopped publishing game stats (game pages no longer
+  # carry box scores; every run from Nov 14 failed the structure check). The old schedule was
+  # nightly 04:17 UTC, Monday 15:17 UTC, and every 2 h on Fri-Sun game days — restore from git
+  # history if the league starts publishing again. Manual runs, /update and deploys still work.
   workflow_dispatch:
     inputs:
       refetch_all:
@@ -61,8 +56,10 @@ jobs:
       - name: Parser regression tests
         run: npm test
 
-      - name: Scrape league site
-        run: node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }}
+      # Non-fatal since HSL stopped publishing (2026-11-16): a failed game is never written (parse
+      # throws first), so the build keeps the last good data and site deploys still go out.
+      - name: Scrape league site (non-fatal)
+        run: node scripts/scrape.mjs ${{ inputs.refetch_all && '--all' || '' }} || echo "::warning::league scrape failed; keeping last copies"
 
       - name: Tournaments + opponent leagues (non-fatal)
         run: node scripts/events.mjs || echo "events fetch failed; keeping last copies"
