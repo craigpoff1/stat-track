@@ -1,0 +1,323 @@
+{
+ "id": "2020474",
+ "dateText": "Saturday, November 14, 2026 @ 11:45 a.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402385",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/388dc9f4-4c10-4318-91bf-cbcf3d9492c3_HC Calgary Bandits.png",
+  "score": 6
+ },
+ "away": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402389",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e4190762-7ba9-4471-81f8-e1bd679cd552_Rebels Hockey Academy.png",
+  "score": 8
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 3,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 3
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:24",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "11:49",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:12",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:10",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:53",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "01:56",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:06",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "12:47",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "12:31",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "11:35",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:47",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:09",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:53",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:18",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "03:33",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:06",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:57",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:49",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:07",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:04",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:55",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "13:41",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:30",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:37",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:23",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "04:55",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:12",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "teamOnly": true,
+ "start": "2026-11-14T11:45:00",
+ "gameNumber": 702,
+ "fetchedAt": "2026-11-16T15:58:40.362Z"
+}

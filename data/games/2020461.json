@@ -1,0 +1,195 @@
+{
+ "id": "2020461",
+ "dateText": "Friday, November 13, 2026 @ 2:45 p.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "Stars Hockey Academy",
+  "teamId": "402384",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e647604b-2cfb-4299-9509-1fbf5d5f034d_Stars Hockey Academy.png",
+  "score": 6
+ },
+ "away": {
+  "name": "Young Kings Hockey",
+  "teamId": "402392",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/4e595bc0-9a33-4549-83e4-cfb247d8ff45_Young Kings Hockey.png",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:40",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:06",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:27",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "03:00",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:21",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:44",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:19",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Boarding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:20",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:43",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:05",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:42",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "01:42",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Boarding - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "00:56",
+   "side": "home",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 7
+  },
+  {
+   "label": "2",
+   "home": 8,
+   "away": 16
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 10
+  }
+ ],
+ "teamOnly": true,
+ "start": "2026-11-13T14:45:00",
+ "gameNumber": 689,
+ "fetchedAt": "2026-11-16T15:58:34.708Z"
+}

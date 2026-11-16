@@ -1,0 +1,225 @@
+{
+ "id": "2020488",
+ "dateText": "Saturday, November 14, 2026 @ 6:30 p.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "MOB Hockey",
+  "teamId": "402388",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/20299e0a-3462-42fa-97f9-a52c826508c8_MOB Hockey.png",
+  "score": 3
+ },
+ "away": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "402390",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/b5fda34c-1619-4945-9848-0c7306bd5f27_Riggers Hockey Academy.png",
+  "score": 6
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "18:57",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "13:22",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "10:34",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:53",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:33",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:06",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:34",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:18",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "14:42",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:58",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:02",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:01",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:08",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Unsportsmanlike Conduct - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:25",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:53",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:06",
+   "side": "away",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 3,
+   "away": 10
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 7
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 10
+  }
+ ],
+ "teamOnly": true,
+ "start": "2026-11-14T18:30:00",
+ "gameNumber": 716,
+ "fetchedAt": "2026-11-16T15:58:45.062Z"
+}

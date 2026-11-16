@@ -1,0 +1,175 @@
+{
+ "id": "2020465",
+ "dateText": "Friday, November 13, 2026 @ 5:45 p.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "HC Calgary Bandits",
+  "teamId": "402385",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/388dc9f4-4c10-4318-91bf-cbcf3d9492c3_HC Calgary Bandits.png",
+  "score": 3
+ },
+ "away": {
+  "name": "Saints Pro Hockey Academy",
+  "teamId": "402383",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/4a596d15-bb5b-4be5-970f-3b1d406dfe79_Saints Pro Hockey Academy.png",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:03",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "11:51",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:23",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:40",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "09:48",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:30",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:03",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:40",
+   "side": "away",
+   "team": "Saints Pro Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "00:58",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "06:13",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "01:26",
+   "side": "home",
+   "team": "HC Calgary Bandits",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "Empty Net Goal"
+   ]
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 4,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 9,
+   "away": 9
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 5
+  }
+ ],
+ "teamOnly": true,
+ "start": "2026-11-13T17:45:00",
+ "gameNumber": 693,
+ "fetchedAt": "2026-11-16T15:58:36.576Z"
+}

@@ -1,0 +1,269 @@
+{
+ "id": "2020470",
+ "dateText": "Saturday, November 14, 2026 @ 8:45 a.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "Spartan Hockey Academy",
+  "teamId": "402391",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/90f85aab-1980-4034-adc8-0f06d76702a3_Spartan Hockey Academy.png",
+  "score": 10
+ },
+ "away": {
+  "name": "Rebels Hockey Academy",
+  "teamId": "402389",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e4190762-7ba9-4471-81f8-e1bd679cd552_Rebels Hockey Academy.png",
+  "score": 5
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 6,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 1
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "12:37",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:29",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:23",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:24",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:17",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:21",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:57",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:50",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:34",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "07:15",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:07",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "05:36",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:43",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:34",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:57",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:04",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "13:18",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:19",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "09:04",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Interference - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "07:38",
+   "side": "away",
+   "team": "Rebels Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:05",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:54",
+   "side": "home",
+   "team": "Spartan Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "teamOnly": true,
+ "start": "2026-11-14T08:45:00",
+ "gameNumber": 698,
+ "fetchedAt": "2026-11-16T15:58:38.464Z"
+}

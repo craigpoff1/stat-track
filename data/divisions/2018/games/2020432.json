@@ -1,0 +1,207 @@
+{
+ "id": "2020432",
+ "dateText": "Sunday, November 15, 2026 @ 3:00 p.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "O2 Grizzlies",
+  "teamId": "402366",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/ffa3994f-f1d1-4189-871c-59df5cdd4b1e_O2 Grizzlies.png",
+  "score": 1
+ },
+ "away": {
+  "name": "Calgary Crusaders",
+  "teamId": "402362",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/0cd48b9f-3336-4e7d-820f-93822f7dd4cf_Calgary Crusaders.png",
+  "score": 6
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:05",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Holding - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:25",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "18:47",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "17:21",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:02",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "17:02",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "16:41",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:52",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:30",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:31",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "18:40",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:11",
+   "side": "home",
+   "team": "O2 Grizzlies",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:07",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "08:35",
+   "side": "away",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 8
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 18
+  },
+  {
+   "label": "3",
+   "home": 5,
+   "away": 10
+  }
+ ],
+ "teamOnly": true,
+ "start": "2026-11-15T15:00:00",
+ "gameNumber": 660,
+ "fetchedAt": "2026-11-16T15:58:56.055Z"
+}

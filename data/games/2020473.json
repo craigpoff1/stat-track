@@ -1,0 +1,173 @@
+{
+ "id": "2020473",
+ "dateText": "Saturday, November 14, 2026 @ 10:15 a.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "Calgary Crusaders",
+  "teamId": "402387",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/7c6c2a27-5023-4ba3-92d6-57e3541fbeaa_Calgary Crusaders.png",
+  "score": 2
+ },
+ "away": {
+  "name": "Stars Hockey Academy",
+  "teamId": "402384",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/e647604b-2cfb-4299-9509-1fbf5d5f034d_Stars Hockey Academy.png",
+  "score": 3
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 0
+  },
+  {
+   "label": "2",
+   "home": 1,
+   "away": 2
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:55",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:04",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "02:30",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:06",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:55",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:35",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:05",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:38",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:11",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:57",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:20",
+   "side": "away",
+   "team": "Stars Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 5,
+   "away": 6
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 8
+  },
+  {
+   "label": "3",
+   "home": 4,
+   "away": 9
+  }
+ ],
+ "teamOnly": true,
+ "start": "2026-11-14T10:15:00",
+ "gameNumber": 701,
+ "fetchedAt": "2026-11-16T15:58:39.394Z"
+}

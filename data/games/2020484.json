@@ -1,0 +1,203 @@
+{
+ "id": "2020484",
+ "dateText": "Friday, November 13, 2026 @ 1:00 p.m.",
+ "rink": "Silent Ice Center - Hatch Co. Arena",
+ "status": "Final",
+ "home": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "402390",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/b5fda34c-1619-4945-9848-0c7306bd5f27_Riggers Hockey Academy.png",
+  "score": 6
+ },
+ "away": {
+  "name": "MOB Hockey",
+  "teamId": "402388",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/20299e0a-3462-42fa-97f9-a52c826508c8_MOB Hockey.png",
+  "score": 1
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 6,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 0,
+   "away": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:00",
+   "side": "away",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:36",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "10:13",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "09:49",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:33",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:38",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:06",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:34",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:26",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:06",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:58",
+   "side": "away",
+   "team": "MOB Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "02:58",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "00:47",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "00:03",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Slashing - Minor (2 min)"
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 5,
+   "away": 10
+  },
+  {
+   "label": "2",
+   "home": 4,
+   "away": 16
+  },
+  {
+   "label": "3",
+   "home": 3,
+   "away": 14
+  }
+ ],
+ "teamOnly": true,
+ "start": "2026-11-13T13:00:00",
+ "gameNumber": 712,
+ "fetchedAt": "2026-11-16T15:58:33.766Z"
+}

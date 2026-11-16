@@ -1,0 +1,207 @@
+{
+ "id": "2020471",
+ "dateText": "Sunday, November 15, 2026 @ 4:00 p.m.",
+ "rink": "Morinville Silent Ice Gardens",
+ "status": "Final",
+ "home": {
+  "name": "MOB Hockey",
+  "teamId": "402388",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/20299e0a-3462-42fa-97f9-a52c826508c8_MOB Hockey.png",
+  "score": 8
+ },
+ "away": {
+  "name": "Capital City Knights",
+  "teamId": "402386",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/c439e010-e73d-46da-bbd4-3cb9a8d15405_Capital City Knights.jpg",
+  "score": 2
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 1,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 6,
+   "away": 0
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 1
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:33",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "09:34",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "06:05",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "05:17",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "07:21",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:45",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:54",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:39",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "01:30",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "01:26",
+   "side": "away",
+   "team": "Capital City Knights",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:24",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:15",
+   "side": "away",
+   "team": "Capital City Knights",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "05:08",
+   "side": "home",
+   "team": "MOB Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "04:22",
+   "side": "home",
+   "team": "MOB Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 11,
+   "away": 3
+  },
+  {
+   "label": "2",
+   "home": 14,
+   "away": 5
+  },
+  {
+   "label": "3",
+   "home": 10,
+   "away": 5
+  }
+ ],
+ "teamOnly": true,
+ "start": "2026-11-15T16:00:00",
+ "gameNumber": 699,
+ "fetchedAt": "2026-11-16T15:58:49.442Z"
+}

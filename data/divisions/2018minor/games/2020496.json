@@ -1,0 +1,337 @@
+{
+ "id": "2020496",
+ "dateText": "Sunday, November 15, 2026 @ 3:30 p.m.",
+ "rink": "Silent Ice Center - Hatch Co. Arena",
+ "status": "Final",
+ "home": {
+  "name": "Riggers Hockey Academy",
+  "teamId": "402376",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/7958d08c-c616-4088-8632-c7a93d035055_Riggers Hockey Academy.png",
+  "score": 4
+ },
+ "away": {
+  "name": "Wolverines Hockey Academy",
+  "teamId": "402379",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/f7347df2-5cbb-4bda-9254-f5b9b6876b62_Wolverines Hockey Academy.png",
+  "score": 15
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 0,
+   "away": 4
+  },
+  {
+   "label": "2",
+   "home": 3,
+   "away": 4
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 7
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:10",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "14:02",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "08:16",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "07:35",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "03:04",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "01:10",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "19:24",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "18:41",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "15:51",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "14:13",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "13:45",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "13:03",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:19",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "10:33",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "08:44",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "06:35",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "05:32",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "19:51",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "17:56",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "15:33",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "12:56",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:35",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "09:49",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "07:41",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:31",
+   "side": "home",
+   "team": "Riggers Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:31",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "05:31",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "03:15",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "02:24",
+   "side": "away",
+   "team": "Wolverines Hockey Academy",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [],
+ "teamOnly": true,
+ "start": "2026-11-15T15:30:00",
+ "gameNumber": 724,
+ "fetchedAt": "2026-11-16T15:58:57.659Z"
+}

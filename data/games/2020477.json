@@ -1,0 +1,277 @@
+{
+ "id": "2020477",
+ "dateText": "Saturday, November 14, 2026 @ 1:15 p.m.",
+ "rink": "Hussar Arena",
+ "status": "Final",
+ "home": {
+  "name": "Calgary Crusaders",
+  "teamId": "402387",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/7c6c2a27-5023-4ba3-92d6-57e3541fbeaa_Calgary Crusaders.png",
+  "score": 3
+ },
+ "away": {
+  "name": "Young Kings Hockey",
+  "teamId": "402392",
+  "logo": "https://cloud3.rampinteractive.com/hsleague/images/team-logos/4e595bc0-9a33-4549-83e4-cfb247d8ff45_Young Kings Hockey.png",
+  "score": 6
+ },
+ "periods": [
+  {
+   "label": "1",
+   "home": 2,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 0,
+   "away": 3
+  },
+  {
+   "label": "3",
+   "home": 1,
+   "away": 2
+  }
+ ],
+ "events": [
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "13:22",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "12:44",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "08:41",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "1",
+   "time": "06:44",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "SHG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "1",
+   "time": "04:30",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "11:30",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "09:48",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:08",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "08:03",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "06:29",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "penalty",
+   "period": "2",
+   "time": "04:54",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "2",
+   "time": "00:24",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "GWG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "14:09",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Roughing - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "12:21",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Body Checking - Minor (2 min) - NOT 2014s"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "11:47",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "scorer": null,
+   "assists": [],
+   "tags": [
+    "PPG"
+   ]
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "11:23",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Hooking - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "10:30",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "10:30",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Tripping - Minor (2 min)"
+  },
+  {
+   "type": "goal",
+   "period": "3",
+   "time": "06:10",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "scorer": null,
+   "assists": [],
+   "tags": []
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:03",
+   "side": "home",
+   "team": "Calgary Crusaders",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  },
+  {
+   "type": "penalty",
+   "period": "3",
+   "time": "00:03",
+   "side": "away",
+   "team": "Young Kings Hockey",
+   "player": null,
+   "minutes": 2,
+   "infraction": "Cross-Checking - Minor (2 min)"
+  }
+ ],
+ "skaters": [],
+ "goalies": [],
+ "warnings": [],
+ "shotsByPeriod": [
+  {
+   "label": "1",
+   "home": 9,
+   "away": 1
+  },
+  {
+   "label": "2",
+   "home": 7,
+   "away": 8
+  },
+  {
+   "label": "3",
+   "home": 9,
+   "away": 4
+  }
+ ],
+ "teamOnly": true,
+ "start": "2026-11-14T13:15:00",
+ "gameNumber": 705,
+ "fetchedAt": "2026-11-16T15:58:41.308Z"
+}
