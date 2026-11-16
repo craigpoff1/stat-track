@@ -29,7 +29,7 @@ Tournament sites (RAMP) + HPL (Kreezee) ──► scripts/events.mjs ──► d
 | `scripts/events.config.mjs` | Tracked tournaments and external opponent leagues. |
 | `scripts/identity.config.mjs` | Confirmed tournament-player → league-player links for cases auto-matching couldn't decide. |
 | `site/` | `index.html`, `app.js` (all views, hash-routed, no framework), `style.css` ("Primetime" broadcast theme). |
-| `.github/workflows/update.yml` | Nightly ~10 PM Mountain + Monday-morning catch-up: test → scrape → events → build → commit data → deploy Pages. |
+| `.github/workflows/update.yml` | Runs on push, manual dispatch or `/update` (scheduled pulls stopped 2026-11-16 when HSL stopped publishing game stats): test → scrape → events → build → commit data → deploy Pages. |
 
 ## The site
 
@@ -78,7 +78,7 @@ python -m http.server 8765 --directory site
 ```
 
 - **2018 Major gallery** (`/2018/`): a simple standings, scoring-leaders and goalies page for the 2018 Major
-  division with a team filter, linked from the main site's footer. Same password; updated nightly.
+  division with a team filter, linked from the main site's footer. Same password; updated whenever the workflow runs.
 
 - **Manual update:** `gh workflow run update.yml` (add `-f refetch_all=true` for a full HSL re-fetch),
   or Actions tab → *Update stats and deploy* → *Run workflow*.

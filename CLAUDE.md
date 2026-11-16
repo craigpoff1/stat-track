@@ -10,7 +10,7 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
 - Repo: github.com/craigpoff1/stat-track (public). Deploys from `main` via `.github/workflows/update.yml`.
 
 ## Workflow rules
-- **The nightly bot commits `data/`** ("Update game data"). Always `git pull --rebase` before pushing;
+- **The bot commits `data/`** on every run (push, manual, /update) ("Update game data"). Always `git pull --rebase` before pushing;
   commit first if you have changes (`pull --rebase` refuses with a dirty tree). Never force-push.
 - If a rebase conflicts on a `data/` file, regenerate it (`node scripts/events.mjs` / `scrape.mjs`)
   rather than hand-merging JSON.
@@ -80,7 +80,7 @@ overview; this file is the working knowledge: conventions, decisions, and traps.
 - Goalie validation rules: GA must equal opponent score; shots ±25%/3 of shots table; blank minutes
   for a lone goalie = full game; minutes over game length count as entered (flagged); under = excluded.
 - Rolling windows are "last 4 games" (≈ one showcase weekend). Standings keep "L5".
-- Updates run nightly (games happen on weekdays too) + Monday catch-up + every 2 h on Fri–Sun daytime (game days). Manual: GitHub Actions → Run workflow (works from a phone).
+- **HSL stopped publishing game stats (mid-Nov 2026)**: game pages lost their box scores (another parent group now runs hslstats.com). Scheduled pulls removed 2026-11-16; the league scrape is non-fatal. The calendar still has final scores, so a manual run or `/update` refreshes standings/records/results (score-only); player and goalie stats are as of Oct 18. Old schedule (nightly + Monday + Fri–Sun every 2 h) is in git history.
 - Tournaments: owner names events; "Include tournament games" toggle **off by default everywhere**,
   changes every record/stat/insight incl. standings (flagged "not official") except weekend recaps and firsts (ⓘ explains);
   Stars' tournaments shown as a separate team-page section.
