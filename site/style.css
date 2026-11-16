@@ -548,3 +548,6 @@ div.ld{cursor:default}
   .hero .st .v{font-size:24px;margin-top:2px}
   .hero .st .s{font-size:11px;margin-top:1px}
 }
+/* ---------- "player stats frozen" notes (HSL stopped publishing names, Nov 2026) ---------- */
+.note.frozen{color:var(--ink2);border-left:3px solid var(--us);background:rgba(245,183,46,.06);padding:10px 14px;margin:0}
+.panel .note.frozen{margin:0 16px 14px}

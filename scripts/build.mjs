@@ -150,6 +150,11 @@ for (const g of games) {
     continue;
   }
   for (const w of g.warnings) dataWarnings.push({ gameId: g.id, message: w });
+  // Saved sheets are kept when the league page loses its box score; flag a later calendar correction.
+  const cal = schedule.find((s) => s.id === g.id);
+  if (cal?.final && (cal.homeScore !== g.home.score || cal.awayScore !== g.away.score)) {
+    dataWarnings.push({ gameId: g.id, message: `calendar now says ${cal.homeScore}-${cal.awayScore}; the saved game sheet says ${g.home.score}-${g.away.score} (sheet kept)` });
+  }
   const date = g.start.slice(0, 10);
   const side = {
     home: team(g.home.teamId, g.home.name, g.home.logo),
@@ -174,7 +179,10 @@ for (const g of games) {
       t.gfByPeriod[p.label] = (t.gfByPeriod[p.label] || 0) + p[s];
       t.gaByPeriod[p.label] = (t.gaByPeriod[p.label] || 0) + p[other(s)];
     }
-    t.pim += g.skaters.filter((x) => x.side === s).reduce((n, x) => n + x.pim, 0);
+    // Team-only sheets (HSL since Nov 2026) have no box score: team PIM comes from the penalty timeline.
+    t.pim += g.teamOnly
+      ? g.events.filter((e) => e.type === 'penalty' && e.side === s).reduce((n, e) => n + (e.minutes || 0), 0)
+      : g.skaters.filter((x) => x.side === s).reduce((n, x) => n + x.pim, 0);
     // Shots: the "Shots" by-period table when present; goalie reports are far less complete.
     if (g.shotsByPeriod?.length) {
       t.sf += g.shotsByPeriod.reduce((n, p) => n + p[s], 0);
@@ -261,6 +269,7 @@ for (const g of games) {
     skaters: g.skaters.map(({ side: s, playerId, number, name, g: goals, a, pim }) => ({ teamId: side[s].id, playerId, number, name, g: goals, a, pim })),
     goalies: g.goalies.map(({ side: s, playerId, number, name, seconds, ga, shots, saves }) => ({ teamId: side[s].id, playerId, number, name, seconds, ga, shots, saves })),
     goalieNotes,
+    teamOnly: !!g.teamOnly,
     warnings: g.warnings,
   });
 }
@@ -498,6 +507,9 @@ const out = {
     sourceUrl: `${config.baseUrl}/division/0/${config.divisionId}/masterschedule`,
     gamesPlayed: gameSummaries.length + scoreOnly.length,
     scoreOnlyGames: scoreOnly,
+    // Date of the last league game with a box score; later games are team-only (or score-only).
+    playerStatsThrough: gameSummaries.filter((g) => !g.teamOnly && g.skaters.length).at(-1)?.date?.slice(0, 10) || null,
+    teamOnlyGames: gameSummaries.filter((g) => g.teamOnly).length,
     gamesScheduled: schedule.length,
     regulationMinutes: config.regulationMinutes,
   },

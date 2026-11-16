@@ -76,7 +76,21 @@ function headerCells($, table) {
   return $(table).find('thead th').map((_, th) => clean($(th).text())).get();
 }
 
-export function parseGame(html, id, { regulationMinutes = 45, lenientTeamIds = false } = {}) {
+// True when writing `next` over the saved game `have` would throw away player detail. HSL stopped
+// publishing names in Nov 2026 and stripped them from old pages too, so a re-fetch must never
+// replace a saved box score with a team-only copy.
+// Decided on the data, not on the teamOnly flag: per side, a saved box score or goalie lines must
+// never be replaced by a copy without them (a partial strip would otherwise slip past).
+export function dropsPlayerDetail(have, next) {
+  if (!have) return false;
+  const has = (g, key, side) => (g?.[key] || []).some((r) => r.side === side);
+  return ['home', 'away'].some((s) => ['skaters', 'goalies'].some((k) => has(have, k, s) && !has(next, k, s)));
+}
+
+// teamIdByName: { "Team name": "teamId" }. Team-only mode for pages with no box score and no goalie
+// lines (HSL since Nov 2026): teams are identified by name, players are never credited. Without the
+// map (tournament sheets, tests) parsing is unchanged. scrape.mjs always passes it for league pages.
+export function parseGame(html, id, { regulationMinutes = 45, lenientTeamIds = false, teamIdByName = null } = {}) {
   const $ = cheerio.load(html);
   const warnings = [];
 
@@ -203,6 +217,24 @@ export function parseGame(html, id, { regulationMinutes = 45, lenientTeamIds = f
       warnings.push(`${s}: no box score on the sheet (team identified by name)`);
     }
   }
+  game.teamOnly = !game.skaters.length && !game.goalies.length;
+  if (game.teamOnly && teamIdByName && !lenientTeamIds) {
+    for (const s of ['home', 'away']) if (!game[s].teamId && game[s].name) game[s].teamId = teamIdByName[game[s].name] || null;
+  }
+  if (game.teamOnly && teamIdByName && !lenientTeamIds) {
+    // The league's team-only format: goal cards have an empty title, penalties say "Bench Penalty".
+    // Named cards with no box score mean the layout changed, not that names were withheld.
+    const named = game.events.filter((e) => (e.type === 'goal' ? e.scorer?.name || e.assists.some((a) => a.name)
+      : e.player?.name && !/^bench penalty$/i.test(e.player.name)));
+    if (named.length) throw new Error(`page structure not recognized (no box score, but ${named.length} timeline card(s) name a player)`);
+  }
+  if (game.teamOnly) {
+    // The cards still render, with an empty title on goals and "Bench Penalty" on every penalty.
+    for (const e of game.events) {
+      if (e.type === 'goal') { if (!e.scorer?.name) e.scorer = null; e.assists = e.assists.filter((a) => a.name); }
+      else if (!e.player?.name || /^bench penalty$/i.test(e.player.name)) e.player = null;
+    }
+  }
   const missing = [];
   if (!game.status) missing.push('status');
   for (const s of ['home', 'away']) {
@@ -211,6 +243,15 @@ export function parseGame(html, id, { regulationMinutes = 45, lenientTeamIds = f
     if (game[s].score == null) missing.push(`${s} score`);
   }
   if (missing.length) throw new Error(`page structure not recognized (missing ${missing.join(', ')})`);
+  // A team-only page is only worth keeping with its by-period scoring; without it, it's hollow.
+  if (game.teamOnly && teamIdByName && !lenientTeamIds) {
+    if (!game.periods.length) throw new Error('page structure not recognized (team-only page with no scoring by period)');
+    // The timeline is the only source of PIM and PP/PK here, so it must account for every goal.
+    for (const s of ['home', 'away']) {
+      const tl = game.events.filter((e) => e.type === 'goal' && e.side === s).length;
+      if (tl !== game[s].score) throw new Error(`page structure not recognized (team-only timeline has ${tl} ${s} goals, final is ${game[s].score})`);
+    }
+  }
 
   // --- consistency checks against the official final
   for (const side of ['home', 'away']) {
@@ -220,7 +261,7 @@ export function parseGame(html, id, { regulationMinutes = 45, lenientTeamIds = f
     const box = game.skaters.filter((s) => s.side === side).reduce((n, s) => n + s.g, 0);
     const tl = game.events.filter((e) => e.type === 'goal' && e.side === side).length;
     if (tl !== final) warnings.push(`${side}: timeline has ${tl} goals, final is ${final}`);
-    if (box !== final) warnings.push(`${side}: box score has ${box} goals, final is ${final}`);
+    if (box !== final && !game.teamOnly) warnings.push(`${side}: box score has ${box} goals, final is ${final}`);
     const gSec = game.goalies.filter((g) => g.side === side).reduce((n, g) => n + g.seconds, 0);
     if (gSec && gSec !== regulationMinutes * 60) warnings.push(`${side}: goalie minutes total ${Math.round(gSec / 60)}`);
   }

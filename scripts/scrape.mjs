@@ -5,7 +5,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { config, scheduleIcsUrl, gameUrl } from './config.mjs';
-import { parseSchedule, parseGame } from './parse.mjs';
+import { parseSchedule, parseGame, dropsPlayerDetail } from './parse.mjs';
 
 const DATA = path.resolve(config.dataDir); // per division (DIVISION=<slug>, see config.mjs)
 const GAMES = path.join(DATA, 'games');
@@ -38,6 +38,14 @@ async function readJson(file) {
 
 await fs.mkdir(GAMES, { recursive: true });
 
+// Team name -> id from the sheets we already have. HSL pages stopped carrying player links (the only
+// place team ids appeared) in Nov 2026, so team-only pages are matched to a team by its exact name.
+const teamIdByName = {};
+for (const f of await fs.readdir(GAMES)) {
+  const g = f.endsWith('.json') ? await readJson(path.join(GAMES, f)) : null;
+  for (const s of ['home', 'away']) if (g?.[s]?.name && g[s].teamId && !String(g[s].teamId).startsWith('n:')) teamIdByName[g[s].name] = g[s].teamId;
+}
+
 const schedule = parseSchedule(await get(scheduleIcsUrl()), config.divisionName);
 if (!schedule.length) throw new Error('Schedule came back empty — did the calendar URL or format change?');
 await fs.writeFile(path.join(DATA, 'schedule.json'), JSON.stringify(schedule, null, 1));
@@ -57,8 +65,25 @@ for (const g of schedule.filter((g) => g.final)) {
     || recentAndDue;
   if (!refetchAll && !stale) continue;
   try {
-    const game = parseGame(await get(gameUrl(g.id)), g.id, config);
-    if (!game.skaters.length) throw new Error('no box score found on page');
+    const game = parseGame(await get(gameUrl(g.id)), g.id, { ...config, teamIdByName });
+    // The page must be the game the calendar says it is (teams matched by exact name).
+    if (game.home.name !== g.home || game.away.name !== g.away) throw new Error(`page shows ${game.home.name} vs ${game.away.name}, calendar says ${g.home} vs ${g.away}`);
+    // A page that isn't the team-only format must still have a box score (catches partial strips).
+    if (!game.teamOnly && !game.skaters.length) throw new Error('no box score found on page');
+    if (dropsPlayerDetail(have, game)) {
+      // Our saved copy has player detail the league no longer shows: keep it. If the calendar has
+      // since corrected the score, record that rather than letting standings drift silently.
+      const scoreMoved = have.home.score !== g.homeScore || have.away.score !== g.awayScore;
+      if (scoreMoved) {
+        failures[g.id] = { firstSeen: failures[g.id]?.firstSeen || new Date().toISOString(), lastError: `calendar score ${g.homeScore}-${g.awayScore} differs from the saved sheet (${have.home.score}-${have.away.score}); kept the saved box score` };
+        console.error(`  ${g.id} kept saved box score, but the calendar score changed to ${g.homeScore}-${g.awayScore}`);
+      } else {
+        delete failures[g.id];
+        console.log(`  ${g.id} kept saved box score (the league page no longer has it)`);
+      }
+      await sleep(DELAY_MS);
+      continue;
+    }
     game.start = g.start;
     game.gameNumber = g.gameNumber;
     game.fetchedAt = new Date().toISOString();
